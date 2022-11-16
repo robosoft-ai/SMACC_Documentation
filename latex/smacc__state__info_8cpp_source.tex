@@ -1,0 +1,112 @@
+\hypertarget{smacc__state__info_8cpp_source}{}\doxysection{smacc\+\_\+state\+\_\+info.\+cpp}
+\label{smacc__state__info_8cpp_source}\index{smacc/src/smacc/smacc\_state\_info.cpp@{smacc/src/smacc/smacc\_state\_info.cpp}}
+\mbox{\hyperlink{smacc__state__info_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{introspection_8h}{smacc/introspection/introspection.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{common_8h}{smacc/common.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00005}00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00007}00007 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc_1_1introspection}{smacc::introspection}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00009}00009 std::map<const std::type\_info *, std::vector<ClientBehaviorInfoEntry>> \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ad3d8b3450060cb0b91f38fb2fe0a7678}{SmaccStateInfo::staticBehaviorInfo}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00010}00010 std::map<const std::type\_info *, std::vector<std::shared\_ptr<smacc::introspection::SmaccStateReactorInfo>>> \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_abd1d6ca5060c87f6bd11fde3e5b2ac4d}{SmaccStateInfo::stateReactorsInfo}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00011}00011 std::map<const std::type\_info *, std::vector<std::shared\_ptr<SmaccEventGeneratorInfo>>> \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ae38b8c98fb7808cc67b67e1f97ddbf74}{SmaccStateInfo::eventGeneratorsInfo}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00013}\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a262bc6242d8a3b2c29c34b4cf325dfb4}{00013}} \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a262bc6242d8a3b2c29c34b4cf325dfb4}{SmaccStateInfo::SmaccStateInfo}}(\textcolor{keyword}{const} std::type\_info *tid, std::shared\_ptr<SmaccStateInfo> parentState, std::shared\_ptr<SmaccStateMachineInfo> stateMachineInfo)}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00014}00014 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00015}00015     \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a37d0d0bce171b57b8d3a39f44ab45248}{tid\_}} = tid;}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00016}00016     \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_afa49a141d2ccdb3d6f9676ed380ce006}{parentState\_}} = parentState;}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00017}00017     \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a74685e4540842ee292a80a1db44818bb}{stateMachine\_}} = stateMachineInfo;}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00019}00019     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_afa49a141d2ccdb3d6f9676ed380ce006}{parentState\_}} != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00020}00020         \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a7e97a482ca49057f27e638268d1a3189}{depth\_}} = parentState-\/>depth\_ + 1;}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00021}00021 \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00023}\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a3702387afa5f45d2df894113c71bac41}{00023}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a3702387afa5f45d2df894113c71bac41}{SmaccStateInfo::getAncestors}}(std::list<const SmaccStateInfo*> \&ancestorsList)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00024}00024 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00025}00025     ancestorsList.push\_front(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00026}00026     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_afa49a141d2ccdb3d6f9676ed380ce006}{parentState\_}} != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00027}00027     \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00028}00028         this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_afa49a141d2ccdb3d6f9676ed380ce006}{parentState\_}}-\/>getAncestors(ancestorsList);}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00029}00029     \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00030}00030 \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00032}\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a360141a4883f0122a9f5e8b7de456084}{00032}} \mbox{\hyperlink{namespacesmacc_1_1introspection_a710cf406873961567c11027582c7f720}{SmaccStateType}} \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a360141a4883f0122a9f5e8b7de456084}{SmaccStateInfo::getStateLevel}}()}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00033}00033 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00034}00034     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a73eac049e8149b6eaeec735101c32ef9}{children\_}}.size() == 0)}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00036}00036         \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_afa49a141d2ccdb3d6f9676ed380ce006}{parentState\_}} != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00037}00037         \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00038}00038             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a710cf406873961567c11027582c7f720a6d39c20504d2f2afe9c8c27351e61d20}{SmaccStateType::SUPERSTATE\_ROUTINE}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00039}00039         \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00040}00040         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00041}00041         \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00042}00042             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a710cf406873961567c11027582c7f720a2b848a8cc886d253d21a77c43cd50aae}{SmaccStateType::STATE}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00043}00043         \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00045}00045     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00046}00046     \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00047}00047         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a710cf406873961567c11027582c7f720a4da54a31b31f1c863864fdee05fc35c8}{SmaccStateType::SUPERSTATE}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00051}\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a22e625806a74808ee272df5c034d122e}{00051}} std::string \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a22e625806a74808ee272df5c034d122e}{SmaccStateInfo::getFullPath}}()}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00052}00052 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00053}00053     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_afa49a141d2ccdb3d6f9676ed380ce006}{parentState\_}} == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00054}00054         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a39d7f8a587087b6abd0752058e2d8301}{toShortName}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00055}00055     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00056}00056         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_afa49a141d2ccdb3d6f9676ed380ce006}{parentState\_}}-\/>getFullPath() + \textcolor{stringliteral}{"{}/"{}} + this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a39d7f8a587087b6abd0752058e2d8301}{toShortName}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00057}00057 \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00059}\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a39d7f8a587087b6abd0752058e2d8301}{00059}} \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a39d7f8a587087b6abd0752058e2d8301}{SmaccStateInfo::toShortName}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00060}00060 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00061}00061     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_acf0014a819c23caad085ba6df13a17bf}{demangledStateName}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00062}00062 \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00064}\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a76899507f734e549df07363ba910e94d}{00064}} std::string \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_a76899507f734e549df07363ba910e94d}{SmaccStateInfo::getDemangledFullName}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00065}00065 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00066}00066     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_aef6053863f757bf9af16fe4da75c51de}{fullStateName}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00067}00067 \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00068}00068 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00069}\mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_a322035851e387c9cb58bc1cfe4c68544}{00069}} \mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_a322035851e387c9cb58bc1cfe4c68544}{SmaccEventInfo::SmaccEventInfo}}(std::shared\_ptr<TypeInfo> eventType)}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00070}00070 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00071}00071     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}CREATING EVENT INFO: "{}} << \mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_af3bdf1abf797864e681662d92a5515f9}{eventType}}-\/>getFullName());}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00073}00073     this-\/>eventType = \mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_af3bdf1abf797864e681662d92a5515f9}{eventType}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00074}00074 \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00076}\mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_af9e90a557f8f62069a17234f79bcefa0}{00076}} std::string \mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_af9e90a557f8f62069a17234f79bcefa0}{SmaccEventInfo::getEventSourceName}}()}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00077}00077 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00078}00078     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_af3bdf1abf797864e681662d92a5515f9}{eventType}}-\/>templateParameters.size() > 0)}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00079}00079     \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00080}00080         \textcolor{keyword}{auto} eventsourcename = \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_af3bdf1abf797864e681662d92a5515f9}{eventType}}-\/>templateParameters[0]-\/>getFullName().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00081}00081         \textcolor{keywordflow}{return} eventsourcename;}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00082}00082     \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00083}00083     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00084}00084     \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00085}00085         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00086}00086     \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00087}00087 \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00089}\mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_ae0ed6a9506dbe526269a0bd956a71044}{00089}} std::string \mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_ae0ed6a9506dbe526269a0bd956a71044}{SmaccEventInfo::getEventTypeName}}()}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00090}00090 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00091}00091     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_af3bdf1abf797864e681662d92a5515f9}{eventType}}-\/>getNonTemplatedTypeName().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00092}00092 \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00094}\mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_a7a507eea65876ba22033300f316cae89}{00094}} std::string \mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_a7a507eea65876ba22033300f316cae89}{SmaccEventInfo::getOrthogonalName}}()}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00095}00095 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00096}00096     \textcolor{keywordflow}{if} (\mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_af3bdf1abf797864e681662d92a5515f9}{eventType}}-\/>templateParameters.size() > 1)}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00097}00097     \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00098}00098         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccEventInfo_af3bdf1abf797864e681662d92a5515f9}{eventType}}-\/>templateParameters[1]-\/>getFullName().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00099}00099     \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00100}00100     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00101}00101     \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00102}00102         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00103}00103     \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00104}00104 \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{smacc__state__info_8cpp_source_l00106}00106 \} \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

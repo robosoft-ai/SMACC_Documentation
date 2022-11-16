@@ -1,0 +1,83 @@
+\hypertarget{st__forward_8h_source}{}\doxysection{st\+\_\+forward.\+h}
+\label{st__forward_8h_source}\index{smacc\_sm\_reference\_library/sm\_fetch\_two\_table\_pick\_n\_place\_1/include/sm\_fetch\_two\_table\_pick\_n\_place\_1/states/st\_forward.h@{smacc\_sm\_reference\_library/sm\_fetch\_two\_table\_pick\_n\_place\_1/include/sm\_fetch\_two\_table\_pick\_n\_place\_1/states/st\_forward.h}}
+\mbox{\hyperlink{st__forward_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00002}00002 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1}{sm\_fetch\_two\_table\_pick\_n\_place\_1}}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00003}00003 \{}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00004}00004   \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00005}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable}{00005}}   \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable}{StForwardNextTable}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<StForwardNextTable, SmFetchTwoTablePickNPlace1>}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00006}00006   \{}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00007}00007     \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00009}00009     \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00010}00010     \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00011}00011         Transition<EvCbSuccess<CbNavigateGlobalPosition, OrNavigation>, \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1SS2_1_1SsPlaceObject}{SS2::SsPlaceObject}}, \mbox{\hyperlink{classSUCCESS}{SUCCESS}}>,}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00012}00012         Transition<EvCbFailure<CbNavigateGlobalPosition, OrNavigation>, \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StUndoIncorrectForward}{StUndoIncorrectForward}}, \mbox{\hyperlink{classABORT}{ABORT}}>>}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00013}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_a39ccca708ce11206c24873c140667b75}{00013}}         \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_a39ccca708ce11206c24873c140667b75}{reactions}};}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00015}00015     \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00016}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_a73fcf4091decc1ba1129a547a50f6ff3}{00016}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_a73fcf4091decc1ba1129a547a50f6ff3}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00017}00017     \{}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00018}00018       configure\_orthogonal<OrNavigation, CbNavigateGlobalPosition>();}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00019}00019       \textcolor{comment}{//configure\_orthogonal<OrNavigation, CbNavigateForward>();}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00022}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_a06a2121565cde48bb62e3037c17418a7}{00022}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_a06a2121565cde48bb62e3037c17418a7}{runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00024}00024       \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_a7b7d04ab57af4686b394afda86c891af}{configureGlobalNavigation}}();}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00025}00025       \textcolor{comment}{//configureForwardBehavior();}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00028}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_a7b7d04ab57af4686b394afda86c891af}{00028}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_a7b7d04ab57af4686b394afda86c891af}{configureGlobalNavigation}}()}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00029}00029     \{}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00030}00030       \mbox{\hyperlink{classcl__move__base__z_1_1ClMoveBaseZ}{ClMoveBaseZ}} *moveBaseClient\_;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00031}00031       this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a7f95c9f0a6ea2d6f18d1aec0519de4ac}{requiresClient}}(moveBaseClient\_);}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00033}00033       \textcolor{keyword}{auto} pose = moveBaseClient\_-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{Pose}}>();}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00034}00034       \textcolor{keyword}{auto} currentPose = pose-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{toPoseMsg}}();}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00036}00036       geometry\_msgs::Point goalPosition;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00037}00037       goalPosition.z = 0;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00038}00038       goalPosition.y = 0;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00039}00039       \textcolor{keywordtype}{double} yaw = 0;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00040}00040       \textcolor{keywordtype}{double} forwardOffset = 1.2;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00041}00041       \textcolor{keywordflow}{if} (currentPose.position.x < -\/0.2) \textcolor{comment}{// robot is at negative x-\/axis side}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00042}00042       \{}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00043}00043         \textcolor{comment}{// target is at positive side, at point x=0}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00044}00044         goalPosition.x = forwardOffset;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00045}00045         yaw = 0;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00046}00046       \}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00047}00047       \textcolor{keywordflow}{else} \textcolor{comment}{// the robot in at positive x-\/axis side}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00048}00048       \{}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00049}00049         \textcolor{comment}{// target is at negative x-\/axis side at point x = -\/1}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00050}00050         goalPosition.x = -\/forwardOffset;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00051}00051         yaw = -\/M\_PI;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00052}00052       \}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00054}00054       \textcolor{keyword}{auto} globalNavigationBh = this-\/>getOrthogonal<OrNavigation>()-\/>getClientBehavior<\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition}{CbNavigateGlobalPosition}}>();}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00055}00055       globalNavigationBh-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_a51a0266fd9a63e99f26e88933529c559}{goalPosition}} = goalPosition;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00056}00056       globalNavigationBh-\/>goalYaw = yaw;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00057}00057     \}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00059}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_ae2358c473474c13a9cf8c017ec7e7735}{00059}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable_ae2358c473474c13a9cf8c017ec7e7735}{configureForwardBehavior}}()}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00060}00060     \{}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00061}00061       \mbox{\hyperlink{classcl__move__base__z_1_1ClMoveBaseZ}{ClMoveBaseZ}} *moveBaseClient\_;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00062}00062       this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a7f95c9f0a6ea2d6f18d1aec0519de4ac}{requiresClient}}(moveBaseClient\_);}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00064}00064       \textcolor{keyword}{auto} pose = moveBaseClient\_-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{Pose}}>();}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00065}00065       \textcolor{keyword}{auto} currentPose = pose-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{toPoseMsg}}();}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00067}00067       \textcolor{keyword}{auto} offset = 0.15;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00068}00068       \textcolor{keyword}{auto} forwardDistance = 2.0;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00069}00069       \textcolor{keywordtype}{double} dist;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00071}00071       dist = forwardDistance + offset;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00073}00073       \textcolor{keyword}{auto} forwardBh = this-\/>getOrthogonal<OrNavigation>()-\/>getClientBehavior<\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward}{CbNavigateForward}}>();}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00074}00074       forwardBh-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a41bc9c319c64be6302f7365173ccd2c5}{forwardDistance}} = dist;}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00075}00075     \}}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00076}00076   \};}
+\DoxyCodeLine{\Hypertarget{st__forward_8h_source_l00077}00077 \} \textcolor{comment}{// namespace sm\_fetch\_two\_table\_pick\_n\_place\_1}}
+
+\end{DoxyCode}

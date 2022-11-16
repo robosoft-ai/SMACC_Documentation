@@ -1,0 +1,23 @@
+\hypertarget{or__services_8h_source}{}\doxysection{or\+\_\+services.\+h}
+\label{or__services_8h_source}\index{smacc\_sm\_reference\_library/sm\_atomic\_services/include/sm\_atomic\_services/orthogonals/or\_services.h@{smacc\_sm\_reference\_library/sm\_atomic\_services/include/sm\_atomic\_services/orthogonals/or\_services.h}}
+\mbox{\hyperlink{or__services_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00002}00002 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__orthogonal_8h}{smacc/smacc\_orthogonal.h}}>}}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00004}00004 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__atomic__services}{sm\_atomic\_services}}}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00006}\mbox{\hyperlink{classsm__atomic__services_1_1OrServices}{00006}}     \textcolor{keyword}{class }\mbox{\hyperlink{classsm__atomic__services_1_1OrServices}{OrServices}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1Orthogonal}{smacc::Orthogonal}}<OrServices>}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00007}00007     \{}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00008}\mbox{\hyperlink{classsm__atomic__services_1_1OrServices_ac0f0a4989a6609cd1520a3c78600dcbe}{00008}}         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsm__atomic__services_1_1OrServices_ac0f0a4989a6609cd1520a3c78600dcbe}{onInitialize}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00009}00009 \textcolor{keyword}{        }\{}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00010}00010             \textcolor{keyword}{auto} service\_server\_client = this-\/>createClient<ClServiceServer>(\textcolor{stringliteral}{"{}service"{}});}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00011}00011             service\_server\_client-\/>initialize();}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00013}00013             \textcolor{keyword}{auto} service\_client = this-\/>createClient<ClServiceClient>(\textcolor{stringliteral}{"{}service"{}});}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00014}00014             service\_client-\/>initialize();}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00015}00015         \}}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00016}00016     \};}
+\DoxyCodeLine{\Hypertarget{or__services_8h_source_l00017}00017 \}}
+
+\end{DoxyCode}

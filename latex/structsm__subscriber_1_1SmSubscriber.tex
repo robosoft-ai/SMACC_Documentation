@@ -1,0 +1,73 @@
+\hypertarget{structsm__subscriber_1_1SmSubscriber}{}\doxysection{sm\+\_\+subscriber\+::Sm\+Subscriber Struct Reference}
+\label{structsm__subscriber_1_1SmSubscriber}\index{sm\_subscriber::SmSubscriber@{sm\_subscriber::SmSubscriber}}
+
+
+{\ttfamily \#include $<$sm\+\_\+subscriber.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+subscriber\+::Sm\+Subscriber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structsm__subscriber_1_1SmSubscriber__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+subscriber\+::Sm\+Subscriber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsm__subscriber_1_1SmSubscriber__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structsm__subscriber_1_1SmSubscriber_ae32eb6aee71a536eff03a5fdb8c8554a}{on\+Initialize}} () override
+\begin{DoxyCompactList}\small\item\em this function should be implemented by the user to create the orthogonals \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sm__subscriber_8h_source_l00031}{31}} of file \mbox{\hyperlink{sm__subscriber_8h_source}{sm\+\_\+subscriber.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsm__subscriber_1_1SmSubscriber_ae32eb6aee71a536eff03a5fdb8c8554a}\label{structsm__subscriber_1_1SmSubscriber_ae32eb6aee71a536eff03a5fdb8c8554a}} 
+\index{sm\_subscriber::SmSubscriber@{sm\_subscriber::SmSubscriber}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!sm\_subscriber::SmSubscriber@{sm\_subscriber::SmSubscriber}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+subscriber\+::\+Sm\+Subscriber\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+this function should be implemented by the user to create the orthogonals 
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ac2982c6c8283663e5e1e8a7c82f511ec}{smacc\+::\+ISmacc\+State\+Machine}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__subscriber_8h_source_l00035}{35}} of file \mbox{\hyperlink{sm__subscriber_8h_source}{sm\+\_\+subscriber.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036   \{}
+\DoxyCodeLine{00037     this-\/>createOrthogonal<OrSubscriber>();}
+\DoxyCodeLine{00038     this-\/>createOrthogonal<OrTimer>();}
+\DoxyCodeLine{00039   \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+subscriber/include/sm\+\_\+subscriber/\mbox{\hyperlink{sm__subscriber_8h}{sm\+\_\+subscriber.\+h}}\end{DoxyCompactItemize}

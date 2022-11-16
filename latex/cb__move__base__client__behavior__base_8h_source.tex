@@ -1,0 +1,46 @@
+\hypertarget{cb__move__base__client__behavior__base_8h_source}{}\doxysection{cb\+\_\+move\+\_\+base\+\_\+client\+\_\+behavior\+\_\+base.\+h}
+\label{cb__move__base__client__behavior__base_8h_source}\index{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/client\_behaviors/cb\_move\_base\_client\_behavior\_base.h@{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/client\_behaviors/cb\_move\_base\_client\_behavior\_base.h}}
+\mbox{\hyperlink{cb__move__base__client__behavior__base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00006}00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{planner__switcher_8h}{move\_base\_z\_client\_plugin/components/planner\_switcher/planner\_switcher.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{move__base__z__client__plugin_8h}{move\_base\_z\_client\_plugin/move\_base\_z\_client\_plugin.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__asynchronous__client__behavior_8h}{smacc/smacc\_asynchronous\_client\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <visualization\_msgs/MarkerArray.h>}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <tf/transform\_listener.h>}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <boost/optional.hpp>}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00015}00015 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00017}\mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase}{00017}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase}{CbMoveBaseClientBehaviorBase}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior}{smacc::SmaccAsyncClientBehavior}}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00018}00018 \{}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00019}00019 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00020}00020   \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} TSourceObject>}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00021}\mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ae9e4d5856a88c367edd755cdd00b377f}{00021}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ae9e4d5856a88c367edd755cdd00b377f}{onOrthogonalAllocation}}()}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00022}00022   \{}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00023}00023     smacc::SmaccAsyncClientBehavior::onOrthogonalAllocation<TOrthogonal, TSourceObject>();}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00024}00024     this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a32b16e99e3b4cb289414203dc861a440}{requiresClient}}(\mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}});}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00025}00025     \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_af6d77c27d21b2e4f621f53c5f1df088b}{onSucceeded}}(\&\mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_a12109fd9132a93140e4f022ee052e2ed}{CbMoveBaseClientBehaviorBase::propagateSuccessEvent}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00026}00026     \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a75c58162621a705bfd11efdf068eb06b}{onAborted}}(\&\mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_a8a1d14d98893dc21c4cb2b28c35e9b09}{CbMoveBaseClientBehaviorBase::propagateFailureEvent}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00028}00028     ros::NodeHandle nh;}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00029}00029     \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_aff48fc567ae025b196efd8895b7fb35d}{visualizationMarkersPub\_}} = nh.advertise<visualization\_msgs::MarkerArray>(\textcolor{stringliteral}{"{}move\_base\_z/visualization\_markers"{}}, 1);}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00030}00030   \}}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00032}00032 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00033}\mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{00033}}   \mbox{\hyperlink{classcl__move__base__z_1_1ClMoveBaseZ}{ClMoveBaseZ}}* \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}};}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00034}\mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_aff48fc567ae025b196efd8895b7fb35d}{00034}}   ros::Publisher \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_aff48fc567ae025b196efd8895b7fb35d}{visualizationMarkersPub\_}};}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00036}00036 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00037}00037   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_a12109fd9132a93140e4f022ee052e2ed}{propagateSuccessEvent}}(\mbox{\hyperlink{classcl__move__base__z_1_1ClMoveBaseZ_a99373d0c15ae96684462d8677f5fd632}{ClMoveBaseZ::ResultConstPtr}}\& \mbox{\hyperlink{namespacefake__cube__perception__node_a36e88703ab69fd35065e8a8d9344903e}{r}});}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00038}00038   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_a8a1d14d98893dc21c4cb2b28c35e9b09}{propagateFailureEvent}}(\mbox{\hyperlink{classcl__move__base__z_1_1ClMoveBaseZ_a99373d0c15ae96684462d8677f5fd632}{ClMoveBaseZ::ResultConstPtr}}\& \mbox{\hyperlink{namespacefake__cube__perception__node_a36e88703ab69fd35065e8a8d9344903e}{r}});}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00039}00039 \};}
+\DoxyCodeLine{\Hypertarget{cb__move__base__client__behavior__base_8h_source_l00040}00040 \}  \textcolor{comment}{// namespace cl\_move\_base\_z}}
+
+\end{DoxyCode}

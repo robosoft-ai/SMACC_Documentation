@@ -1,0 +1,45 @@
+\hypertarget{cb__timer__countdown__once_8h_source}{}\doxysection{cb\+\_\+timer\+\_\+countdown\+\_\+once.\+h}
+\label{cb__timer__countdown__once_8h_source}\index{smacc\_client\_library/ros\_timer\_client/include/ros\_timer\_client/client\_behaviors/cb\_timer\_countdown\_once.h@{smacc\_client\_library/ros\_timer\_client/include/ros\_timer\_client/client\_behaviors/cb\_timer\_countdown\_once.h}}
+\mbox{\hyperlink{cb__timer__countdown__once_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cl__ros__timer_8h}{ros\_timer\_client/cl\_ros\_timer.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00006}00006 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__ros__timer}{cl\_ros\_timer}}}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00008}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce}{00008}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce}{CbTimerCountdownOnce}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1SmaccClientBehavior}{smacc::SmaccClientBehavior}}}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00010}00010 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00011}00011     \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a41161c36e1c3b1767c02884d28649ccd}{CbTimerCountdownOnce}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} triggerTickCount);}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00013}00013     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a613662c4a4106ece0ce1dee198d1aba2}{onEntry}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00014}00014     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_ab602b778a299b42e8cc9f4bf3da0a234}{onExit}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00016}00016     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} TSourceObject>}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00017}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_abbc5d0f2e8bc5d89bf02ff80ef37319a}{00017}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_abbc5d0f2e8bc5d89bf02ff80ef37319a}{onOrthogonalAllocation}}()}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00019}00019         this-\/>\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a5ab3b0a0aa38f28bc3091583d30fe003}{postCountDownEvent\_}} = [=]() \{}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00020}00020             this-\/>\textcolor{keyword}{template} postEvent<EvTimer<TSourceObject, TOrthogonal>>();}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00021}00021         \};}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00024}00024     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00025}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a1e20a8c9a9907db8a1d7dacf8c60ad27}{00025}}     boost::signals2::connection \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a1e20a8c9a9907db8a1d7dacf8c60ad27}{onTimerTick}}(\textcolor{keywordtype}{void} (T::*\mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(), T *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00026}00026     \{}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00027}00027         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_ac948b5efd5c9a397319668378463eadd}{onTimerTick\_}}, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00030}00030 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00031}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_aea7372342782a0b6a1ba50b07ccb0962}{00031}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_aea7372342782a0b6a1ba50b07ccb0962}{tickCounter\_}};}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00032}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_aa3ab9c795f42141990ca69749a1ec010}{00032}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_aa3ab9c795f42141990ca69749a1ec010}{tickTriggerCount\_}};}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00034}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a2a969a829fcb39abcc0380ee420e3300}{00034}}     \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer}{ClRosTimer}} *\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a2a969a829fcb39abcc0380ee420e3300}{timerClient\_}};}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00035}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a5ab3b0a0aa38f28bc3091583d30fe003}{00035}}     std::function<void()> \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a5ab3b0a0aa38f28bc3091583d30fe003}{postCountDownEvent\_}};}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00036}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_ac948b5efd5c9a397319668378463eadd}{00036}}     \mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc::SmaccSignal}}<void()> \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_ac948b5efd5c9a397319668378463eadd}{onTimerTick\_}};}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00037}00037     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a2b02bbde9c9321781b70b9371b22673a}{onClientTimerTickCallback}}();}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00038}00038 \};}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__once_8h_source_l00039}00039 \} \textcolor{comment}{// namespace cl\_ros\_timer}}
+
+\end{DoxyCode}

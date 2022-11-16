@@ -1,0 +1,687 @@
+\hypertarget{microstrain__mips__client_8h_source}{}\doxysection{microstrain\+\_\+mips\+\_\+client.\+h}
+\label{microstrain__mips__client_8h_source}\index{smacc\_client\_library/microstrain\_mips\_client/include/microstrain\_mips\_client/microstrain\_mips\_client.h@{smacc\_client\_library/microstrain\_mips\_client/include/microstrain\_mips\_client/microstrain\_mips\_client.h}}
+\mbox{\hyperlink{microstrain__mips__client_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00002}00002 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cp__topic__subscriber_8h}{smacc/client\_base\_components/cp\_topic\_subscriber.h}}>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <boost/optional/optional\_io.hpp>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <microstrain\_mips/SetGyroBiasModel.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <microstrain\_mips/SetSensorVehicleFrameTrans.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <microstrain\_mips/SetTareOrientation.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <microstrain\_mips/SetComplementaryFilter.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <microstrain\_mips/SetFilterHeading.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <microstrain\_mips/SetAccelBias.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <microstrain\_mips/SetAccelNoise.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <microstrain\_mips/SetEstimationControlFlags.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <microstrain\_mips/SetAccelBiasModel.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <microstrain\_mips/SetConingScullingComp.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <microstrain\_mips/SetSensorVehicleFrameOffset.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <microstrain\_mips/SetGyroNoise.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <microstrain\_mips/SetFilterEuler.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00020}00020 \textcolor{preprocessor}{\#include <microstrain\_mips/SetReferencePosition.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00021}00021 \textcolor{preprocessor}{\#include <microstrain\_mips/SetMagDipAdaptiveVals.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00022}00022 \textcolor{preprocessor}{\#include <microstrain\_mips/SetZeroAngleUpdateThreshold.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <microstrain\_mips/SetHardIronValues.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00024}00024 \textcolor{preprocessor}{\#include <microstrain\_mips/SetMagNoise.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00025}00025 \textcolor{preprocessor}{\#include <microstrain\_mips/SetMagAdaptiveVals.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00026}00026 \textcolor{preprocessor}{\#include <microstrain\_mips/SetSoftIronMatrix.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <microstrain\_mips/SetDynamicsMode.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00028}00028 \textcolor{preprocessor}{\#include <microstrain\_mips/SetAccelAdaptiveVals.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00029}00029 \textcolor{preprocessor}{\#include <microstrain\_mips/SetGyroBias.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00031}00031 \textcolor{preprocessor}{\#include <std\_msgs/Empty.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00032}00032 \textcolor{preprocessor}{\#include <std\_srvs/Empty.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <std\_srvs/Trigger.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <sensor\_msgs/Imu.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00036}00036 \textcolor{preprocessor}{\#include <microstrain\_mips/status\_msg.h>}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00038}\mbox{\hyperlink{namespacecl__microstrain__mips}{00038}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__microstrain__mips}{cl\_microstrain\_mips}}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00039}00039 \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00040}00040 \textcolor{keyword}{using namespace }microstrain\_mips;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00042}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips}{00042}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips}{ClMicrostainMips}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1ISmaccClient}{smacc::ISmaccClient}}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00044}00044 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00045}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a46c4caa433f40536bab99a0ecaf9e1ab}{00045}}     boost::optional<std::string> \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a46c4caa433f40536bab99a0ecaf9e1ab}{nodeName\_}};}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00047}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a71648a9d970672d017c90bd3724b1104}{00047}}     \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc::components::CpTopicSubscriber<sensor\_msgs::Imu>}} *\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a71648a9d970672d017c90bd3724b1104}{imuSubscriber}};}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00048}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae53fdf79a14adb9c3eff4a8966a092ff}{00048}}     \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc::components::CpTopicSubscriber<sensor\_msgs::Imu>}} *\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae53fdf79a14adb9c3eff4a8966a092ff}{imuFilteredSubscriber}};}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00049}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0da593a071ac7ff8dd842b934120e315}{00049}}     \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc::components::CpTopicSubscriber<microstrain\_mips::status\_msg>}} *\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0da593a071ac7ff8dd842b934120e315}{statusSubscriber}};}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00051}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac4708eb9946be3b716442e12f7296b2c}{00051}}     \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac4708eb9946be3b716442e12f7296b2c}{ClMicrostainMips}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00052}00052     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00053}00053         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}{initialized\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00054}00054     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00056}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ab52b739d8230f932ad3042fcd1b697f4}{00056}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ab52b739d8230f932ad3042fcd1b697f4}{initialize}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00057}00057 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00058}00058         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}{initialized\_}})}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00059}00059         \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00060}00060             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a46c4caa433f40536bab99a0ecaf9e1ab}{nodeName\_}})}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00061}00061             \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00062}00062                 ROS\_ERROR(\textcolor{stringliteral}{"{}service client with no service name set. Skipping."{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00063}00063             \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00064}00064             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00065}00065             \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00066}00066                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}["{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}() << \textcolor{stringliteral}{"{}] Client Service: "{}} << *nodeName\_);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00067}00067                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}{initialized\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00069}00069                 std::string namebase = *\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a46c4caa433f40536bab99a0ecaf9e1ab}{nodeName\_}} + \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00071}00071                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d9eb5c291d70a2fb1b9bde4392e1d48}{resetFilterSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Empty>(namebase + \textcolor{stringliteral}{"{}reset\_kf"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00072}00072                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a905c9403005198bb4dd62918721b7d10}{deviceReportSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}device\_report"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00073}00073                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a584ea1089a89cd1039494d0fce19485c}{gyroBiasCaptureSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}gyro\_bias\_capture"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00074}00074                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2e46116a0dbc6acdf6384467d0c3a50d}{setSoftIronMatrixSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetSoftIronMatrix>(namebase + \textcolor{stringliteral}{"{}set\_soft\_iron\_matrix"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00075}00075                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a54045931a06f909418ac284235c5dd5a}{setComplementaryFilterSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetComplementaryFilter>(namebase + \textcolor{stringliteral}{"{}set\_complementary\_filter"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00076}00076                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4e88ebd03c7a774e958f8902c18e7f69}{setFilterEulerSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetFilterEuler>(namebase + \textcolor{stringliteral}{"{}set\_filter\_euler"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00077}00077                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abe64faba505dfdab0b78b7cf31f9609d}{setFilterHeadingSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetFilterHeading>(namebase + \textcolor{stringliteral}{"{}set\_filter\_heading"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00078}00078                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8d7c0f0a94dd6a25cac0130f8d9f55ff}{setAccelBiasModelSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetAccelBiasModel>(namebase + \textcolor{stringliteral}{"{}set\_accel\_bias\_model"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00079}00079                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0e22727b68e51261aa65605f236419e6}{setAccelAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetAccelAdaptiveVals>(namebase + \textcolor{stringliteral}{"{}set\_accel\_adaptive\_vals"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00080}00080                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac020b44e78addaa26beb44081d99f194}{setSensorVehicleFrameTransSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetSensorVehicleFrameTrans>(namebase + \textcolor{stringliteral}{"{}set\_sensor\_vehicle\_frame\_trans"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00081}00081                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a977cce1917e12d96f614266baa4ae55d}{setSensorVehicleFrameOffsetSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetSensorVehicleFrameOffset>(namebase + \textcolor{stringliteral}{"{}set\_sensor\_vehicle\_frame\_offset"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00082}00082                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae2ea11655cba06e49307780d1f95e197}{setAccelBiasSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetAccelBiasModel>(namebase + \textcolor{stringliteral}{"{}set\_accel\_bias"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00083}00083                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a29fcea0897ca3bd7a036ab5c1856b86c}{setGyroBiasSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetGyroBias>(namebase + \textcolor{stringliteral}{"{}set\_gyro\_bias"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00084}00084                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abab500a095515c133d5edfea23736fad}{setHardIronValuesSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetHardIronValues>(namebase + \textcolor{stringliteral}{"{}set\_hard\_iron\_values"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00086}00086                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a79547e77f9122ca67610f153657ec8ac}{getAccelBiasSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_accel\_bias"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00087}00087                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2f3eaec7f31a54d833773ebb5eb03b64}{getGyroBiasSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_gyro\_bias"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00088}00088                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a11169f770102e9cff7f3b45c96fb4881}{getHardIronValuesSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_hard\_iron\_values"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00089}00089                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7210454a851669073d06d82511014ecc}{getSoftIronMatrixSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_soft\_iron\_matrix"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00090}00090                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abeafc4f48f26ddd264e61b6cf97c779f}{getSensorVehicleFrameTransSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_sensor\_vehicle\_frame\_trans"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00091}00091                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a39aa3d9d1bbe86d90548f7422aa0b4a4}{getComplementaryFilterSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_complementary\_filter"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00093}00093                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a778117029f93a6cff9c5e2a0dac9742b}{setReferencePositionSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetReferencePosition>(namebase + \textcolor{stringliteral}{"{}set\_reference\_position"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00094}00094                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1f9b56f826c67a2e1d8a33e0879053bc}{getReferencePositionSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_reference\_position"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00095}00095                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae24545c615e2be170adced3999d94d84}{setConingScullingCompSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetConingScullingComp>(namebase + \textcolor{stringliteral}{"{}set\_coning\_sculling\_comp"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00096}00096                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a877393b5cf4c313e0e433e9c92163265}{getConingScullingCompSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_coning\_sculling\_comp"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00098}00098                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2eeff01aea4a41fd5d24ff2f77daf584}{setEstimationControlFlagsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetEstimationControlFlags>(namebase + \textcolor{stringliteral}{"{}set\_estimation\_control\_flags"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00099}00099                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a64039ee26cf8a290b3c22b787b8868a5}{getEstimationControlFlagsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_estimation\_control\_flags"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00101}00101                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a43a684f4010debc4a2ba17d9784712d6}{setDynamicsModeSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetDynamicsMode>(namebase + \textcolor{stringliteral}{"{}set\_dynamics\_mode"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00102}00102                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ab2d9efccc6237800a890135a4249eaf8}{getBasicStatusSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_basic\_status"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00103}00103                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d4329c798aa4b7cab1320f35f270192}{getDiagnosticReportSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_diagnostic\_report"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00105}00105                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a88ffc1e573993764bb130c97cc64fe08}{setZeroAngleUpdateThresholdSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetZeroAngleUpdateThreshold>(namebase + \textcolor{stringliteral}{"{}set\_zero\_angle\_update\_threshold"{}}); \textcolor{comment}{//  -\/}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00106}00106                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae720970f4114e7b6524b59df405ede83}{getZeroAngleUpdateThresholdSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_zero\_angle\_update\_threshold"{}});                             \textcolor{comment}{//  -\/}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00108}00108                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_affd28a64d0ee9bcdb116d974f5e19ec6}{setTareOrientationSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetTareOrientation>(namebase + \textcolor{stringliteral}{"{}set\_tare\_orientation"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00110}00110                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aed9dd96ff81966ea1fce03173a05bcd8}{setAccelNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetAccelNoise>(namebase + \textcolor{stringliteral}{"{}set\_accel\_noise"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00111}00111                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae34d6cfd5e2e990d2fa3afab20ca9c01}{getAccelNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_accel\_noise"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00113}00113                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a712c389ca54fa2ebe89ffd601b03bd37}{setGyroNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetGyroNoise>(namebase + \textcolor{stringliteral}{"{}set\_gyro\_noise"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00114}00114                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7876569caf3e8169a1972ad8a591c772}{getGyroNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_gyro\_noise"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00116}00116                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0a6ed1132b9cca45536598e78c8b23cc}{setMagNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetMagNoise>(namebase + \textcolor{stringliteral}{"{}set\_mag\_noise"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00117}00117                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a858136430bc226e36390517f28687a2a}{getMagNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_mag\_noise"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00119}00119                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a96fa3777b87a5d8abcb0f5fe6d740934}{setGyroBiasModelSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetGyroBiasModel>(namebase + \textcolor{stringliteral}{"{}set\_gyro\_bias\_model"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00120}00120                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4caf935b9d839aa586b562982cfc3adb}{getGyroBiasModelSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_gyro\_bias\_model"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00122}00122                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a828f3b0adbfb1e6082fcaa1ce22928c0}{getAccelAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_accel\_adaptive\_vals"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00124}00124                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aeb9fb755367cd253b65bf826e421cc05}{setMagAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetMagAdaptiveVals>(namebase + \textcolor{stringliteral}{"{}set\_mag\_adaptive\_vals"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00125}00125                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a799d76ddd2e92c3624d51ffb7c4b8c89}{getMagAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_mag\_adaptive\_vals"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00127}00127                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3618b27ce1ed75f2e498c0bc6a36599d}{setMagDipAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetMagDipAdaptiveVals>(namebase + \textcolor{stringliteral}{"{}set\_mag\_dip\_adaptive\_vals"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00128}00128                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5516ee2ad71621f728245d0854104dc7}{getAccelBiasModelSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_accel\_bias\_model"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00130}00130                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aa5a412d1343febccf6bda432eacb0581}{getMagDipAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_mag\_dip\_adaptive\_vals"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00131}00131                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a12957749416c955e1b0132cb2213f879}{getSensorVehicleFrameOffsetSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_sensor\_vehicle\_frame\_offset"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00132}00132                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5ded1b1b3506d16e56d312b3d1a7fe13}{getGynamicsModeSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_dynamics\_mode"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00133}00133             \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00134}00134         \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00135}00135     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00137}00137     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} TSourceObject>}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00138}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a47e6c127c560cf2e1443ef0d7368f4ad}{00138}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a47e6c127c560cf2e1443ef0d7368f4ad}{onOrthogonalAllocation}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00139}00139     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00140}00140         this-\/>imuSubscriber = this-\/>createComponent<TSourceObject, TOrthogonal, smacc::components::CpTopicSubscriber<sensor\_msgs::Imu>>(\textcolor{stringliteral}{"{}imu/data"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00141}00141         this-\/>imuFilteredSubscriber = this-\/>createComponent<TSourceObject, TOrthogonal, smacc::components::CpTopicSubscriber<sensor\_msgs::Imu>>(\textcolor{stringliteral}{"{}filtered/imu/data"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00142}00142         this-\/>statusSubscriber = this-\/>createComponent<TSourceObject, TOrthogonal, smacc::components::CpTopicSubscriber<microstrain\_mips::status\_msg>>(\textcolor{stringliteral}{"{}imu/data"{}});}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00143}00143     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00145}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad53d21cfe5e6f8089ff00583d364d0e5}{00145}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad53d21cfe5e6f8089ff00583d364d0e5}{resetFilter}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00146}00146     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00147}00147         std\_srvs::Empty::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00148}00148         std\_srvs::Empty::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00150}00150         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d9eb5c291d70a2fb1b9bde4392e1d48}{resetFilterSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00151}00151     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00153}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4987d87f50c6ce20102f6e3359619b88}{00153}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4987d87f50c6ce20102f6e3359619b88}{deviceReport}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00154}00154     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00155}00155         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00156}00156         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00158}00158         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a905c9403005198bb4dd62918721b7d10}{deviceReportSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00159}00159         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00160}00160     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00162}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ada40a42a0d479c9651bc4a735a76ce39}{00162}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ada40a42a0d479c9651bc4a735a76ce39}{gyroBiasCapture}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00163}00163     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00164}00164         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00165}00165         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00167}00167         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a584ea1089a89cd1039494d0fce19485c}{gyroBiasCaptureSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00168}00168         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00169}00169     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00171}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a24996ea87cf409ae0a912931dc088eb2}{00171}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a24996ea87cf409ae0a912931dc088eb2}{setSoftIronMatrix}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&soft\_iron\_1, \textcolor{keyword}{const} geometry\_msgs::Vector3 \&soft\_iron\_2, \textcolor{keyword}{const} geometry\_msgs::Vector3 \&soft\_iron\_3)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00172}00172     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00173}00173         SetSoftIronMatrix::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00174}00174         SetSoftIronMatrix::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00175}00175         req.soft\_iron\_1 = soft\_iron\_1;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00176}00176         req.soft\_iron\_2 = soft\_iron\_2;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00177}00177         req.soft\_iron\_3 = soft\_iron\_3;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00179}00179         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2e46116a0dbc6acdf6384467d0c3a50d}{setSoftIronMatrixSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00180}00180         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00181}00181     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00183}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4dfbed2e601dd990b5fd89fb670656b9}{00183}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4dfbed2e601dd990b5fd89fb670656b9}{setComplementaryFilter}}(int8\_t north\_comp\_enable, int8\_t up\_comp\_enable, \textcolor{keywordtype}{float} north\_comp\_time\_const, \textcolor{keywordtype}{float} up\_comp\_time\_const)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00184}00184     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00185}00185         SetComplementaryFilter::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00186}00186         SetComplementaryFilter::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00188}00188         req.north\_comp\_enable = north\_comp\_enable;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00189}00189         req.up\_comp\_enable = up\_comp\_enable;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00190}00190         req.north\_comp\_time\_const = north\_comp\_time\_const;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00191}00191         req.up\_comp\_time\_const = up\_comp\_time\_const;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00193}00193         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a54045931a06f909418ac284235c5dd5a}{setComplementaryFilterSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00194}00194         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00195}00195     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00197}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_af5d9e53254b967a2bc02343c2010a47b}{00197}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_af5d9e53254b967a2bc02343c2010a47b}{setFilterEulerService}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&angle)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00198}00198     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00199}00199         SetFilterEuler::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00200}00200         SetFilterEuler::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00201}00201         req.angle = angle;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00202}00202 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00203}00203         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4e88ebd03c7a774e958f8902c18e7f69}{setFilterEulerSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00204}00204         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00205}00205     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00207}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_addede8b2d6eac488ff9de6acd0b28fa7}{00207}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_addede8b2d6eac488ff9de6acd0b28fa7}{setFilterHeading}}(\textcolor{keywordtype}{float} angle)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00208}00208     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00209}00209         SetFilterHeading::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00210}00210         SetFilterHeading::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00211}00211         req.angle = angle;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00212}00212 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00213}00213         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abe64faba505dfdab0b78b7cf31f9609d}{setFilterHeadingSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00214}00214         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00215}00215     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00217}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a809131028b774a3026a3f6894db0dc8f}{00217}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a809131028b774a3026a3f6894db0dc8f}{setAccelBiasModel}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&noise\_vector, \textcolor{keyword}{const} geometry\_msgs::Vector3 \&beta\_vector)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00218}00218     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00219}00219         SetAccelBiasModel::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00220}00220         SetAccelBiasModel::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00221}00221         req.noise\_vector = noise\_vector;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00222}00222         req.beta\_vector = beta\_vector;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00223}00223 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00224}00224         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8d7c0f0a94dd6a25cac0130f8d9f55ff}{setAccelBiasModelSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00225}00225         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00226}00226     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00228}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4687c5a4ea6de01c41d96f3aeb58fa24}{00228}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4687c5a4ea6de01c41d96f3aeb58fa24}{setAccelAdaptiveVals}}(\textcolor{keywordtype}{float} enable, \textcolor{keywordtype}{float} low\_pass\_cutoff, \textcolor{keywordtype}{float} min\_1sigma, \textcolor{keywordtype}{float} low\_limit, \textcolor{keywordtype}{float} high\_limit, \textcolor{keywordtype}{float} low\_limit\_1sigma, \textcolor{keywordtype}{float} high\_limit\_1sigma)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00229}00229     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00230}00230         SetAccelAdaptiveVals::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00231}00231         SetAccelAdaptiveVals::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00232}00232 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00233}00233         req.enable = enable;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00234}00234         req.low\_pass\_cutoff = low\_pass\_cutoff;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00235}00235         req.min\_1sigma = min\_1sigma;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00236}00236         req.low\_limit = low\_limit;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00237}00237         req.high\_limit = high\_limit;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00238}00238         req.low\_limit\_1sigma = low\_limit\_1sigma;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00239}00239         req.high\_limit\_1sigma = high\_limit\_1sigma;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00241}00241         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0e22727b68e51261aa65605f236419e6}{setAccelAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00242}00242         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00243}00243     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00245}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4dd8966794ba1697319f0f1812160405}{00245}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4dd8966794ba1697319f0f1812160405}{setSensorVehicleFrameTrans}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&angle)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00246}00246     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00247}00247         SetSensorVehicleFrameTrans::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00248}00248         SetSensorVehicleFrameTrans::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00249}00249         req.angle = angle;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00250}00250 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00251}00251         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac020b44e78addaa26beb44081d99f194}{setSensorVehicleFrameTransSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00252}00252         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00253}00253     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00255}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2b2786c142088f7d8e0fba6fc67d3a88}{00255}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2b2786c142088f7d8e0fba6fc67d3a88}{setSensorVehicleFrameOffset}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&offset)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00256}00256     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00257}00257         SetSensorVehicleFrameOffset::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00258}00258         SetSensorVehicleFrameOffset::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00259}00259         req.offset = offset;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00260}00260 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00261}00261         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a977cce1917e12d96f614266baa4ae55d}{setSensorVehicleFrameOffsetSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00262}00262         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00263}00263     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00264}00264 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00265}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a535b7afce9ff4288c94077fe8fc30f79}{00265}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a535b7afce9ff4288c94077fe8fc30f79}{setAccelBias}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&bias)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00266}00266     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00267}00267         SetAccelBias::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00268}00268         SetAccelBias::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00269}00269         req.bias = bias;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00270}00270 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00271}00271         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae2ea11655cba06e49307780d1f95e197}{setAccelBiasSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00272}00272         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00273}00273     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00274}00274 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00275}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aabb65ca3b2e8be4a1ad2284d543ddd9c}{00275}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aabb65ca3b2e8be4a1ad2284d543ddd9c}{setGyroBias}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&bias)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00276}00276     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00277}00277         SetGyroBias::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00278}00278         SetGyroBias::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00279}00279         req.bias = bias;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00280}00280 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00281}00281         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a29fcea0897ca3bd7a036ab5c1856b86c}{setGyroBiasSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00282}00282         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00283}00283     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00284}00284 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00285}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6f9ae5ca80db4a93db8b01192d38b426}{00285}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6f9ae5ca80db4a93db8b01192d38b426}{setHardIronValues}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&bias)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00286}00286     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00287}00287         SetHardIronValues::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00288}00288         SetHardIronValues::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00289}00289         req.bias = bias;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00290}00290 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00291}00291         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abab500a095515c133d5edfea23736fad}{setHardIronValuesSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00292}00292         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00293}00293     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00294}00294 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00295}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a97ef55f8b10be52f44ae585ccd4e7db9}{00295}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a97ef55f8b10be52f44ae585ccd4e7db9}{getAccelBias}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00296}00296     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00297}00297         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00298}00298         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00299}00299 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00300}00300         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a79547e77f9122ca67610f153657ec8ac}{getAccelBiasSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00301}00301         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00302}00302     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00303}00303 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00304}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaa1e9015c879e48776a803f55add33e2}{00304}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaa1e9015c879e48776a803f55add33e2}{getGyroBias}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00305}00305     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00306}00306         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00307}00307         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00308}00308 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00309}00309         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2f3eaec7f31a54d833773ebb5eb03b64}{getGyroBiasSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00310}00310         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00311}00311     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00312}00312 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00313}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aa138907ebb7fb634373f948028202749}{00313}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aa138907ebb7fb634373f948028202749}{getHardIronValues}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00314}00314     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00315}00315         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00316}00316         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00317}00317 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00318}00318         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a11169f770102e9cff7f3b45c96fb4881}{getHardIronValuesSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00319}00319         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00320}00320     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00321}00321 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00322}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad605051aea5b2fe25de85314deb1aa39}{00322}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad605051aea5b2fe25de85314deb1aa39}{getSoftIronMatrix}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00323}00323     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00324}00324         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00325}00325         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00326}00326 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00327}00327         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7210454a851669073d06d82511014ecc}{getSoftIronMatrixSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00328}00328         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00329}00329     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00330}00330 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00331}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a184450cf337fe02c9ef4101520d9f9a5}{00331}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a184450cf337fe02c9ef4101520d9f9a5}{getSensorVehicleFrameTrans}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00332}00332     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00333}00333         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00334}00334         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00335}00335 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00336}00336         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abeafc4f48f26ddd264e61b6cf97c779f}{getSensorVehicleFrameTransSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00337}00337         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00338}00338     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00339}00339 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00340}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaff58eafdd41438a7af7c6adee3b2d5b}{00340}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaff58eafdd41438a7af7c6adee3b2d5b}{getComplementaryFilter}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00341}00341     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00342}00342         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00343}00343         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00344}00344 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00345}00345         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a39aa3d9d1bbe86d90548f7422aa0b4a4}{getComplementaryFilterSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00346}00346         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00347}00347     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00348}00348 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00349}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2dae9cbd60e135e149117d6af14e6b27}{00349}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2dae9cbd60e135e149117d6af14e6b27}{setReferencePosition}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&position)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00350}00350     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00351}00351         SetReferencePosition::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00352}00352         SetReferencePosition::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00353}00353         req.position = position;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00354}00354 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00355}00355         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a778117029f93a6cff9c5e2a0dac9742b}{setReferencePositionSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00356}00356         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00357}00357     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00358}00358 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00359}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1bb67145e871d3ce3637a713559a0121}{00359}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1bb67145e871d3ce3637a713559a0121}{getReferencePosition}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00360}00360     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00361}00361         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00362}00362         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00363}00363 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00364}00364         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1f9b56f826c67a2e1d8a33e0879053bc}{getReferencePositionSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00365}00365         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00366}00366     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00367}00367 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00368}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a981895d2724594166bcf22247382ddcf}{00368}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a981895d2724594166bcf22247382ddcf}{setConingScullingComp}}(int8\_t enable)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00369}00369     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00370}00370         SetConingScullingComp::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00371}00371         SetConingScullingComp::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00372}00372         req.enable = enable;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00373}00373 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00374}00374         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae24545c615e2be170adced3999d94d84}{setConingScullingCompSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00375}00375         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00376}00376     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00377}00377 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00378}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6826c989f0b2a29b87c6e78140dfe6d1}{00378}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6826c989f0b2a29b87c6e78140dfe6d1}{getConingScullingComp}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00379}00379     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00380}00380         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00381}00381         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00382}00382 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00383}00383         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a877393b5cf4c313e0e433e9c92163265}{getConingScullingCompSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00384}00384         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00385}00385     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00386}00386 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00387}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8b5a76095196ef5a351804991ea9e23f}{00387}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8b5a76095196ef5a351804991ea9e23f}{setEstimationControlFlags}}(int8\_t flag)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00388}00388     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00389}00389         SetEstimationControlFlags::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00390}00390         SetEstimationControlFlags::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00391}00391         req.flag = flag;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00392}00392 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00393}00393         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2eeff01aea4a41fd5d24ff2f77daf584}{setEstimationControlFlagsSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00394}00394         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00395}00395     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00396}00396 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00397}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad0a8eda5c19617250d3392593d0c8986}{00397}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad0a8eda5c19617250d3392593d0c8986}{getEstimationControlFlags}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00398}00398     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00399}00399         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00400}00400         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00401}00401 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00402}00402         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a64039ee26cf8a290b3c22b787b8868a5}{getEstimationControlFlagsSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00403}00403         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00404}00404     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00405}00405 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00406}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaa5987561df8840ec12ca1eecb852ad9}{00406}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaa5987561df8840ec12ca1eecb852ad9}{setDynamicsMode}}(int8\_t mode)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00407}00407     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00408}00408         SetDynamicsMode::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00409}00409         SetDynamicsMode::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00410}00410         req.mode = mode;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00411}00411 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00412}00412         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a43a684f4010debc4a2ba17d9784712d6}{setDynamicsModeSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00413}00413         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00414}00414     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00415}00415 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00416}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7ba22bfed70ee5796d9776b9438d0908}{00416}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7ba22bfed70ee5796d9776b9438d0908}{getBasicStatus}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00417}00417     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00418}00418         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00419}00419         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00420}00420 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00421}00421         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ab2d9efccc6237800a890135a4249eaf8}{getBasicStatusSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00422}00422         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00423}00423     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00424}00424 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00425}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_adbe8f64e2f6e4d48cd0efc84924b4d08}{00425}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_adbe8f64e2f6e4d48cd0efc84924b4d08}{getDiagnosticReport}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00426}00426     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00427}00427         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00428}00428         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00429}00429 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00430}00430         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d4329c798aa4b7cab1320f35f270192}{getDiagnosticReportSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00431}00431         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00432}00432     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00433}00433 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00434}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a75ba5fe4116ece2f23f9f92f7ab96435}{00434}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a75ba5fe4116ece2f23f9f92f7ab96435}{setZeroAngleUpdateThreshold}}(int8\_t enable, \textcolor{keywordtype}{float} threshold)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00435}00435     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00436}00436         SetZeroAngleUpdateThreshold::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00437}00437         SetZeroAngleUpdateThreshold::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00438}00438         req.enable = enable;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00439}00439         req.threshold = threshold;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00440}00440 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00441}00441         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a88ffc1e573993764bb130c97cc64fe08}{setZeroAngleUpdateThresholdSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00442}00442         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00443}00443     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00444}00444 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00445}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_afca57a1888e4e57f6dba69083e53442d}{00445}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_afca57a1888e4e57f6dba69083e53442d}{getZeroAngleUpdateThreshold}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00446}00446     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00447}00447         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00448}00448         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00449}00449 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00450}00450         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae720970f4114e7b6524b59df405ede83}{getZeroAngleUpdateThresholdSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00451}00451         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00452}00452     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00453}00453 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00454}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a84173859b79a7bad8861b7ea14f15c6a}{00454}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a84173859b79a7bad8861b7ea14f15c6a}{setTareOrientation}}(int8\_t axis)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00455}00455     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00456}00456         SetTareOrientation::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00457}00457         SetTareOrientation::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00458}00458         req.axis = axis;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00459}00459 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00460}00460         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_affd28a64d0ee9bcdb116d974f5e19ec6}{setTareOrientationSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00461}00461         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00462}00462     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00463}00463 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00464}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_af003ab445879e23f969cca8e767a70f3}{00464}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_af003ab445879e23f969cca8e767a70f3}{setAccelNoise}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&noise)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00465}00465     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00466}00466         SetAccelNoise::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00467}00467         SetAccelNoise::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00468}00468         req.noise = noise;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00469}00469 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00470}00470         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aed9dd96ff81966ea1fce03173a05bcd8}{setAccelNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00471}00471         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00472}00472     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00473}00473 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00474}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6b75108e49aca71fdff9ac7fd83aecc0}{00474}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6b75108e49aca71fdff9ac7fd83aecc0}{getAccelNoise}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00475}00475     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00476}00476         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00477}00477         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00478}00478 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00479}00479         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae34d6cfd5e2e990d2fa3afab20ca9c01}{getAccelNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00480}00480         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00481}00481     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00482}00482 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00483}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a26f7969c967cc7f83f556f566254e0ff}{00483}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a26f7969c967cc7f83f556f566254e0ff}{setGyroNoise}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&noise)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00484}00484     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00485}00485         SetGyroNoise::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00486}00486         SetGyroNoise::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00487}00487         req.noise = noise;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00488}00488 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00489}00489         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a712c389ca54fa2ebe89ffd601b03bd37}{setGyroNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00490}00490         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00491}00491     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00492}00492 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00493}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7e54b1b4fb3ccdc5d2a845e52caf2f17}{00493}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7e54b1b4fb3ccdc5d2a845e52caf2f17}{getGyroNoise}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00494}00494     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00495}00495         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00496}00496         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00497}00497 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00498}00498         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7876569caf3e8169a1972ad8a591c772}{getGyroNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00499}00499         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00500}00500     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00501}00501 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00502}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6c9825168b47aa42091e410da90f43c8}{00502}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6c9825168b47aa42091e410da90f43c8}{setMagNoise}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&noise)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00503}00503     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00504}00504         SetMagNoise::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00505}00505         SetMagNoise::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00506}00506 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00507}00507         req.noise = noise;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00508}00508 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00509}00509         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0a6ed1132b9cca45536598e78c8b23cc}{setMagNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00510}00510         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00511}00511     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00512}00512 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00513}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaa3a569e4b555b0db5b3f3d02ae1b33e}{00513}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaa3a569e4b555b0db5b3f3d02ae1b33e}{getMagNoise}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00514}00514     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00515}00515         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00516}00516         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00517}00517 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00518}00518         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a858136430bc226e36390517f28687a2a}{getMagNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00519}00519         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00520}00520     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00521}00521 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00522}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac0a42062a2938fca9c982668909f7bff}{00522}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac0a42062a2938fca9c982668909f7bff}{setGyroBiasModel}}(\textcolor{keyword}{const} geometry\_msgs::Vector3 \&noise\_vector, \textcolor{keyword}{const} geometry\_msgs::Vector3 \&beta\_vector)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00523}00523     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00524}00524         SetGyroBiasModel::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00525}00525         SetGyroBiasModel::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00526}00526         req.noise\_vector = noise\_vector;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00527}00527         req.beta\_vector = beta\_vector;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00528}00528 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00529}00529         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a96fa3777b87a5d8abcb0f5fe6d740934}{setGyroBiasModelSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00530}00530         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00531}00531     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00532}00532 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00533}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a9a4353f87640e524750cf919bdcdbf2d}{00533}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a9a4353f87640e524750cf919bdcdbf2d}{getGyroBiasModel}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00534}00534     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00535}00535         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00536}00536         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00537}00537 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00538}00538         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4caf935b9d839aa586b562982cfc3adb}{getGyroBiasModelSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00539}00539         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00540}00540     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00541}00541 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00542}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aac0a271bd226038aca61077c08c6427b}{00542}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aac0a271bd226038aca61077c08c6427b}{getAccelAdaptiveVals}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00543}00543     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00544}00544         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00545}00545         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00546}00546 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00547}00547         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a828f3b0adbfb1e6082fcaa1ce22928c0}{getAccelAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00548}00548         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00549}00549     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00550}00550 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00551}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad28163dc7afc33064b337f6a76b99389}{00551}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad28163dc7afc33064b337f6a76b99389}{setMagAdaptiveVals}}(\textcolor{keywordtype}{float} enable, \textcolor{keywordtype}{float} low\_pass\_cutoff, \textcolor{keywordtype}{float} min\_1sigma, \textcolor{keywordtype}{float} low\_limit, \textcolor{keywordtype}{float} high\_limit, \textcolor{keywordtype}{float} low\_limit\_1sigma, \textcolor{keywordtype}{float} high\_limit\_1sigma)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00552}00552     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00553}00553         SetMagAdaptiveVals::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00554}00554         SetMagAdaptiveVals::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00555}00555 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00556}00556         req.enable = enable;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00557}00557         req.low\_pass\_cutoff = low\_pass\_cutoff;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00558}00558         req.min\_1sigma = min\_1sigma;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00559}00559         req.low\_limit = low\_limit;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00560}00560         req.high\_limit = high\_limit;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00561}00561         req.low\_limit\_1sigma = low\_limit\_1sigma;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00562}00562         req.high\_limit\_1sigma = high\_limit\_1sigma;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00563}00563 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00564}00564         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aeb9fb755367cd253b65bf826e421cc05}{setMagAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00565}00565         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00566}00566     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00567}00567 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00568}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a704dbe24f752c360b09c82234d4c928f}{00568}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a704dbe24f752c360b09c82234d4c928f}{getMagAdaptiveVals}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00569}00569     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00570}00570         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00571}00571         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00572}00572 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00573}00573         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a799d76ddd2e92c3624d51ffb7c4b8c89}{getMagAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00574}00574         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00575}00575     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00576}00576 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00577}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1b81980570d6ff87b58a823a73cc992d}{00577}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1b81980570d6ff87b58a823a73cc992d}{setMagDipAdaptiveVals}}(\textcolor{keywordtype}{float} enable, \textcolor{keywordtype}{float} low\_pass\_cutoff, \textcolor{keywordtype}{float} min\_1sigma, \textcolor{keywordtype}{float} high\_limit, \textcolor{keywordtype}{float} high\_limit\_1sigma)}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00578}00578     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00579}00579         SetMagDipAdaptiveVals::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00580}00580         SetMagDipAdaptiveVals::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00581}00581 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00582}00582         req.enable = enable;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00583}00583         req.low\_pass\_cutoff = low\_pass\_cutoff;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00584}00584         req.min\_1sigma = min\_1sigma;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00585}00585         req.high\_limit = high\_limit;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00586}00586         req.high\_limit\_1sigma = high\_limit\_1sigma;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00587}00587 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00588}00588         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3618b27ce1ed75f2e498c0bc6a36599d}{setMagDipAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00589}00589         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00590}00590     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00591}00591 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00592}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8765bf73916e6de2646aba55f3b8a5ce}{00592}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8765bf73916e6de2646aba55f3b8a5ce}{getAccelBiasModel}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00593}00593     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00594}00594         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00595}00595         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00596}00596 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00597}00597         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5516ee2ad71621f728245d0854104dc7}{getAccelBiasModelSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00598}00598         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00599}00599     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00600}00600 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00601}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae3642065001bd0bac34d300d5e40f6a1}{00601}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae3642065001bd0bac34d300d5e40f6a1}{getMagDipAdaptiveVals}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00602}00602     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00603}00603         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00604}00604         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00605}00605 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00606}00606         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aa5a412d1343febccf6bda432eacb0581}{getMagDipAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00607}00607         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00608}00608     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00609}00609 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00610}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_acbb92f93e42a2c304d450cc30c0e992f}{00610}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_acbb92f93e42a2c304d450cc30c0e992f}{getSensorVehicleFrameOffset}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00611}00611     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00612}00612         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00613}00613         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00614}00614 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00615}00615         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a12957749416c955e1b0132cb2213f879}{getSensorVehicleFrameOffsetSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00616}00616         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00617}00617     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00618}00618 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00619}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3a0425423b14461be52bc9b6c0f118bc}{00619}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3a0425423b14461be52bc9b6c0f118bc}{getGynamicsMode}}()}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00620}00620     \{}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00621}00621         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00622}00622         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00623}00623 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00624}00624         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5ded1b1b3506d16e56d312b3d1a7fe13}{getGynamicsModeSrv}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00625}00625         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00626}00626     \}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00627}00627 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00628}00628 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00629}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{00629}}     ros::NodeHandle \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}};}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00630}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}{00630}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}{initialized\_}};}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00631}00631 }
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00632}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d9eb5c291d70a2fb1b9bde4392e1d48}{00632}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d9eb5c291d70a2fb1b9bde4392e1d48}{resetFilterSrv}};                 \textcolor{comment}{// reset\_kf -\/ std\_srvs::Empty}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00633}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a905c9403005198bb4dd62918721b7d10}{00633}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a905c9403005198bb4dd62918721b7d10}{deviceReportSrv}};                \textcolor{comment}{// device\_report -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00634}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a584ea1089a89cd1039494d0fce19485c}{00634}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a584ea1089a89cd1039494d0fce19485c}{gyroBiasCaptureSrv}};             \textcolor{comment}{// gyro\_bias\_capture -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00635}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2e46116a0dbc6acdf6384467d0c3a50d}{00635}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2e46116a0dbc6acdf6384467d0c3a50d}{setSoftIronMatrixSrv}};           \textcolor{comment}{// set\_soft\_iron\_matrix -\/ microstrain\_mips::SetSoftIronMatrix}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00636}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a54045931a06f909418ac284235c5dd5a}{00636}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a54045931a06f909418ac284235c5dd5a}{setComplementaryFilterSrv}};      \textcolor{comment}{//set\_complementary\_filter -\/ microstrain\_mips::SetComplementaryFilter}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00637}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4e88ebd03c7a774e958f8902c18e7f69}{00637}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4e88ebd03c7a774e958f8902c18e7f69}{setFilterEulerSrv}};              \textcolor{comment}{// set\_filter\_euler -\/ microstrain\_mips::SetFilterEuler}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00638}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abe64faba505dfdab0b78b7cf31f9609d}{00638}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abe64faba505dfdab0b78b7cf31f9609d}{setFilterHeadingSrv}};            \textcolor{comment}{// set\_filter\_heading -\/ microstrain\_mips::SetFilterHeading}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00639}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8d7c0f0a94dd6a25cac0130f8d9f55ff}{00639}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8d7c0f0a94dd6a25cac0130f8d9f55ff}{setAccelBiasModelSrv}};           \textcolor{comment}{// set\_accel\_bias\_model -\/ microstrain\_mips::SetAccelBiasModel}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00640}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0e22727b68e51261aa65605f236419e6}{00640}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0e22727b68e51261aa65605f236419e6}{setAccelAdaptiveValsSrv}};        \textcolor{comment}{// set\_accel\_adaptive\_vals -\/ microstrain\_mips::SetAccelAdaptiveVals}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00641}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac020b44e78addaa26beb44081d99f194}{00641}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac020b44e78addaa26beb44081d99f194}{setSensorVehicleFrameTransSrv}};  \textcolor{comment}{// set\_sensor\_vehicle\_frame\_trans -\/ microstrain\_mips::SetSensorVehicleFrameTrans}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00642}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a977cce1917e12d96f614266baa4ae55d}{00642}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a977cce1917e12d96f614266baa4ae55d}{setSensorVehicleFrameOffsetSrv}}; \textcolor{comment}{// set\_sensor\_vehicle\_frame\_offset -\/ microstrain\_mips::SetSensorVehicleFrameOffset}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00643}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae2ea11655cba06e49307780d1f95e197}{00643}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae2ea11655cba06e49307780d1f95e197}{setAccelBiasSrv}};                \textcolor{comment}{// set\_accel\_bias -\/ microstrain\_mips::SetAccelBiasModel}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00644}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a29fcea0897ca3bd7a036ab5c1856b86c}{00644}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a29fcea0897ca3bd7a036ab5c1856b86c}{setGyroBiasSrv}};                 \textcolor{comment}{// set\_gyro\_bias -\/ microstrain\_mips::SetGyroBias}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00645}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abab500a095515c133d5edfea23736fad}{00645}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abab500a095515c133d5edfea23736fad}{setHardIronValuesSrv}};           \textcolor{comment}{// set\_hard\_iron\_values -\/ microstrain\_mips::SetHardIronValues}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00646}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a79547e77f9122ca67610f153657ec8ac}{00646}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a79547e77f9122ca67610f153657ec8ac}{getAccelBiasSrv}};                \textcolor{comment}{// get\_accel\_bias -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00647}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2f3eaec7f31a54d833773ebb5eb03b64}{00647}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2f3eaec7f31a54d833773ebb5eb03b64}{getGyroBiasSrv}};                 \textcolor{comment}{// get\_gyro\_bias -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00648}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a11169f770102e9cff7f3b45c96fb4881}{00648}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a11169f770102e9cff7f3b45c96fb4881}{getHardIronValuesSrv}};           \textcolor{comment}{// get\_hard\_iron\_values -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00649}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7210454a851669073d06d82511014ecc}{00649}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7210454a851669073d06d82511014ecc}{getSoftIronMatrixSrv}};           \textcolor{comment}{// get\_soft\_iron\_matrix -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00650}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abeafc4f48f26ddd264e61b6cf97c779f}{00650}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abeafc4f48f26ddd264e61b6cf97c779f}{getSensorVehicleFrameTransSrv}};  \textcolor{comment}{// get\_sensor\_vehicle\_frame\_trans -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00651}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a39aa3d9d1bbe86d90548f7422aa0b4a4}{00651}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a39aa3d9d1bbe86d90548f7422aa0b4a4}{getComplementaryFilterSrv}};      \textcolor{comment}{// get\_complementary\_filter -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00652}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a778117029f93a6cff9c5e2a0dac9742b}{00652}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a778117029f93a6cff9c5e2a0dac9742b}{setReferencePositionSrv}};        \textcolor{comment}{// set\_reference\_position -\/ microstrain\_mips::SetReferencePosition}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00653}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1f9b56f826c67a2e1d8a33e0879053bc}{00653}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1f9b56f826c67a2e1d8a33e0879053bc}{getReferencePositionSrv}};        \textcolor{comment}{// get\_reference\_position -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00654}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae24545c615e2be170adced3999d94d84}{00654}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae24545c615e2be170adced3999d94d84}{setConingScullingCompSrv}};       \textcolor{comment}{// set\_coning\_sculling\_comp -\/ microstrain\_mips::SetConingScullingComp}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00655}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a877393b5cf4c313e0e433e9c92163265}{00655}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a877393b5cf4c313e0e433e9c92163265}{getConingScullingCompSrv}};       \textcolor{comment}{// get\_coning\_sculling\_comp -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00656}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2eeff01aea4a41fd5d24ff2f77daf584}{00656}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2eeff01aea4a41fd5d24ff2f77daf584}{setEstimationControlFlagsSrv}};   \textcolor{comment}{// set\_estimation\_control\_flags -\/ microstrain\_mips::SetEstimationControlFlags}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00657}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a64039ee26cf8a290b3c22b787b8868a5}{00657}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a64039ee26cf8a290b3c22b787b8868a5}{getEstimationControlFlagsSrv}};   \textcolor{comment}{// get\_estimation\_control\_flags -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00658}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a43a684f4010debc4a2ba17d9784712d6}{00658}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a43a684f4010debc4a2ba17d9784712d6}{setDynamicsModeSrv}};             \textcolor{comment}{// set\_dynamics\_mode -\/ microstrain\_mips::SetDynamicsMode}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00659}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ab2d9efccc6237800a890135a4249eaf8}{00659}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ab2d9efccc6237800a890135a4249eaf8}{getBasicStatusSrv}};              \textcolor{comment}{// get\_basic\_status -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00660}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d4329c798aa4b7cab1320f35f270192}{00660}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d4329c798aa4b7cab1320f35f270192}{getDiagnosticReportSrv}};         \textcolor{comment}{// get\_diagnostic\_report -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00661}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a88ffc1e573993764bb130c97cc64fe08}{00661}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a88ffc1e573993764bb130c97cc64fe08}{setZeroAngleUpdateThresholdSrv}}; \textcolor{comment}{// set\_zero\_angle\_update\_threshold -\/ microstrain\_mips::SetZeroAngleUpdateThreshold}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00662}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae720970f4114e7b6524b59df405ede83}{00662}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae720970f4114e7b6524b59df405ede83}{getZeroAngleUpdateThresholdSrv}}; \textcolor{comment}{// get\_zero\_angle\_update\_threshold -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00663}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_affd28a64d0ee9bcdb116d974f5e19ec6}{00663}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_affd28a64d0ee9bcdb116d974f5e19ec6}{setTareOrientationSrv}};          \textcolor{comment}{// set\_tare\_orientation -\/ microstrain\_mips::SetTareOrientation}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00664}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aed9dd96ff81966ea1fce03173a05bcd8}{00664}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aed9dd96ff81966ea1fce03173a05bcd8}{setAccelNoiseSrv}};               \textcolor{comment}{// set\_accel\_noise -\/ microstrain\_mips::SetAccelNoise}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00665}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae34d6cfd5e2e990d2fa3afab20ca9c01}{00665}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae34d6cfd5e2e990d2fa3afab20ca9c01}{getAccelNoiseSrv}};               \textcolor{comment}{// get\_accel\_noise -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00666}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a712c389ca54fa2ebe89ffd601b03bd37}{00666}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a712c389ca54fa2ebe89ffd601b03bd37}{setGyroNoiseSrv}};                \textcolor{comment}{// set\_gyro\_noise -\/ microstrain\_mips::SetGyroNoise}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00667}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7876569caf3e8169a1972ad8a591c772}{00667}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7876569caf3e8169a1972ad8a591c772}{getGyroNoiseSrv}};                \textcolor{comment}{// get\_gyro\_noise -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00668}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0a6ed1132b9cca45536598e78c8b23cc}{00668}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0a6ed1132b9cca45536598e78c8b23cc}{setMagNoiseSrv}};                 \textcolor{comment}{// set\_mag\_noise -\/ microstrain\_mips::SetMagNoise}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00669}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a858136430bc226e36390517f28687a2a}{00669}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a858136430bc226e36390517f28687a2a}{getMagNoiseSrv}};                 \textcolor{comment}{// get\_mag\_noise -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00670}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a96fa3777b87a5d8abcb0f5fe6d740934}{00670}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a96fa3777b87a5d8abcb0f5fe6d740934}{setGyroBiasModelSrv}};            \textcolor{comment}{// set\_gyro\_bias\_model -\/ microstrain\_mips::SetGyroBiasModel}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00671}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4caf935b9d839aa586b562982cfc3adb}{00671}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4caf935b9d839aa586b562982cfc3adb}{getGyroBiasModelSrv}};            \textcolor{comment}{// get\_gyro\_bias\_model -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00672}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a828f3b0adbfb1e6082fcaa1ce22928c0}{00672}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a828f3b0adbfb1e6082fcaa1ce22928c0}{getAccelAdaptiveValsSrv}};        \textcolor{comment}{// get\_accel\_adaptive\_vals -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00673}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aeb9fb755367cd253b65bf826e421cc05}{00673}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aeb9fb755367cd253b65bf826e421cc05}{setMagAdaptiveValsSrv}};          \textcolor{comment}{// set\_mag\_adaptive\_vals -\/ microstrain\_mips::SetMagAdaptiveVals}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00674}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a799d76ddd2e92c3624d51ffb7c4b8c89}{00674}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a799d76ddd2e92c3624d51ffb7c4b8c89}{getMagAdaptiveValsSrv}};          \textcolor{comment}{// get\_mag\_adaptive\_vals -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00675}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3618b27ce1ed75f2e498c0bc6a36599d}{00675}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3618b27ce1ed75f2e498c0bc6a36599d}{setMagDipAdaptiveValsSrv}};       \textcolor{comment}{// set\_mag\_dip\_adaptive\_vals -\/ microstrain\_mips::SetMagDipAdaptiveVals}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00676}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5516ee2ad71621f728245d0854104dc7}{00676}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5516ee2ad71621f728245d0854104dc7}{getAccelBiasModelSrv}};           \textcolor{comment}{// get\_accel\_bias\_model -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00677}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aa5a412d1343febccf6bda432eacb0581}{00677}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aa5a412d1343febccf6bda432eacb0581}{getMagDipAdaptiveValsSrv}};       \textcolor{comment}{// get\_mag\_dip\_adaptive\_vals -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00678}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a12957749416c955e1b0132cb2213f879}{00678}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a12957749416c955e1b0132cb2213f879}{getSensorVehicleFrameOffsetSrv}}; \textcolor{comment}{// get\_sensor\_vehicle\_frame\_offset -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00679}\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5ded1b1b3506d16e56d312b3d1a7fe13}{00679}}     ros::ServiceClient \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5ded1b1b3506d16e56d312b3d1a7fe13}{getGynamicsModeSrv}};             \textcolor{comment}{// get\_dynamics\_mode -\/ std\_srvs::Trigger}}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00680}00680 \};}
+\DoxyCodeLine{\Hypertarget{microstrain__mips__client_8h_source_l00681}00681 \}}
+
+\end{DoxyCode}

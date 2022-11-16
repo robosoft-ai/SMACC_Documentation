@@ -1,0 +1,48 @@
+\hypertarget{forward__global__planner_8h_source}{}\doxysection{forward\+\_\+global\+\_\+planner.\+h}
+\label{forward__global__planner_8h_source}\index{smacc\_client\_library/move\_base\_z\_client/custom\_planners/forward\_global\_planner/include/forward\_global\_planner/forward\_global\_planner.h@{smacc\_client\_library/move\_base\_z\_client/custom\_planners/forward\_global\_planner/include/forward\_global\_planner/forward\_global\_planner.h}}
+\mbox{\hyperlink{forward__global__planner_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00006}00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <nav\_core/base\_global\_planner.h>}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <nav\_msgs/GetPlan.h>}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <nav\_msgs/Path.h>}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00014}\mbox{\hyperlink{namespacecl__move__base__z_1_1forward__global__planner}{00014}} \textcolor{keyword}{namespace }forward\_global\_planner}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00016}\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner}{00016}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner}{ForwardGlobalPlanner}} : \textcolor{keyword}{public} nav\_core::BaseGlobalPlanner}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00018}00018 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00019}00019     \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a27715025f147a38b1422dd55ce2a9e0b}{ForwardGlobalPlanner}}();}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00021}00021     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a9d7c48877a390ca3cc580a7ffa50d316}{makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped \&start,}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00022}00022                   \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&goal, std::vector<geometry\_msgs::PoseStamped> \&plan);}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00024}00024     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a9d7c48877a390ca3cc580a7ffa50d316}{makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped \&start,}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00025}00025                   \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&goal, std::vector<geometry\_msgs::PoseStamped> \&plan,}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00026}00026                   \textcolor{keywordtype}{double} \&cost);}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00028}00028     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a3db25ea418729d257876394b5c0987dc}{initialize}}(std::string name, costmap\_2d::Costmap2DROS *\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}{costmap\_ros\_}});}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00030}00030 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00031}\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_aab61c90829040df58fb99dff3b566c72}{00031}}     ros::NodeHandle \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_aab61c90829040df58fb99dff3b566c72}{nh\_}};}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00033}\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a927dc6a687fac3751033d9736cf8dfcf}{00033}}     ros::Publisher \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a927dc6a687fac3751033d9736cf8dfcf}{planPub\_}};}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00036}\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}{00036}}     costmap\_2d::Costmap2DROS *\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}{costmap\_ros\_}};}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00038}\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_abafd101fa62caf2d74f118a0b4bb948c}{00038}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_abafd101fa62caf2d74f118a0b4bb948c}{skip\_straight\_motion\_distance\_}}; \textcolor{comment}{//meters}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00040}\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a6aed6f8f6e57a8c5821977814d0b9402}{00040}}     \textcolor{keywordtype}{double} \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a6aed6f8f6e57a8c5821977814d0b9402}{puresSpinningRadStep\_}}; \textcolor{comment}{// rads}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00041}00041 \};}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00042}00042 \} \textcolor{comment}{// namespace forward\_global\_planner}}
+\DoxyCodeLine{\Hypertarget{forward__global__planner_8h_source_l00043}00043 \} \textcolor{comment}{// namespace cl\_move\_base\_z}}
+
+\end{DoxyCode}

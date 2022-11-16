@@ -1,0 +1,52 @@
+\hypertarget{st__rotate180_8h_source}{}\doxysection{st\+\_\+rotate180.\+h}
+\label{st__rotate180_8h_source}\index{smacc\_sm\_reference\_library/sm\_fetch\_two\_table\_pick\_n\_place\_1/include/sm\_fetch\_two\_table\_pick\_n\_place\_1/states/st\_rotate180.h@{smacc\_sm\_reference\_library/sm\_fetch\_two\_table\_pick\_n\_place\_1/include/sm\_fetch\_two\_table\_pick\_n\_place\_1/states/st\_rotate180.h}}
+\mbox{\hyperlink{st__rotate180_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00002}00002 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1}{sm\_fetch\_two\_table\_pick\_n\_place\_1}}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00003}00003 \{}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00004}00004     \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00005}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StRotate180}{00005}}     \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StRotate180}{StRotate180}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<StRotate180, SmFetchTwoTablePickNPlace1>}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00006}00006     \{}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00007}00007         \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00009}00009         \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00010}00010         \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00012}00012             Transition<EvCbSuccess<CbAbsoluteRotate, OrNavigation>, \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StForwardNextTable}{StForwardNextTable}}, \mbox{\hyperlink{classSUCCESS}{SUCCESS}}>,}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00013}00013             Transition<EvCbFailure<CbAbsoluteRotate, OrNavigation>, \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StRotate180}{StRotate180}}, \mbox{\hyperlink{classABORT}{ABORT}}> \textcolor{comment}{/*retry*/}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00014}00014             >}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00015}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StRotate180_ad90326eef1113580bc5aa7a58e2ed698}{00015}}             \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StRotate180_ad90326eef1113580bc5aa7a58e2ed698}{reactions}};}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00017}00017         \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00018}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StRotate180_a3f0a58746f8652f0edfd799a942585e6}{00018}}         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StRotate180_a3f0a58746f8652f0edfd799a942585e6}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00019}00019         \{}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00020}00020             configure\_orthogonal<OrNavigation, CbAbsoluteRotate>(180 \textcolor{comment}{/*-\/M\_PI*/});}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00021}00021         \}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00023}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StRotate180_ac909b9af5c8eb5a4ff20990682985f46}{00023}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StRotate180_ac909b9af5c8eb5a4ff20990682985f46}{runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00024}00024         \{}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00025}00025             \mbox{\hyperlink{classcl__move__base__z_1_1ClMoveBaseZ}{ClMoveBaseZ}} *moveBaseClient\_;}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00026}00026             this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a7f95c9f0a6ea2d6f18d1aec0519de4ac}{requiresClient}}(moveBaseClient\_);}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00028}00028             \textcolor{keyword}{auto} pose = moveBaseClient\_-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{Pose}}>();}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00029}00029             \textcolor{keyword}{auto} currentPose = pose-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{toPoseMsg}}();}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00031}00031             \textcolor{keywordtype}{double} targetAbsoluteAngleDegrees;}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00032}00032             \textcolor{keywordflow}{if} (currentPose.position.x < -\/0.2) \textcolor{comment}{// robot is at negative x-\/axis side}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00033}00033             \{}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00034}00034                 targetAbsoluteAngleDegrees = 0;}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00035}00035             \}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00036}00036             \textcolor{keywordflow}{else} \textcolor{comment}{// the robot in at positive x-\/axis side}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00037}00037             \{}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00038}00038                 targetAbsoluteAngleDegrees = 180;}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00039}00039             \}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00041}00041             \textcolor{keyword}{auto} absoluteRotateBehavior = this-\/>getOrthogonal<OrNavigation>()-\/>getClientBehavior<\mbox{\hyperlink{classcl__move__base__z_1_1CbAbsoluteRotate}{CbAbsoluteRotate}}>();}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00042}00042             absoluteRotateBehavior-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbAbsoluteRotate_ad5d0e21549940444e1cb525cda73329a}{absoluteGoalAngleDegree}} = targetAbsoluteAngleDegrees;}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00043}00043             absoluteRotateBehavior-\/>spinningPlanner = SpiningPlanner::PureSpinning;}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00044}00044         \}}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00045}00045     \};}
+\DoxyCodeLine{\Hypertarget{st__rotate180_8h_source_l00046}00046 \} \textcolor{comment}{// namespace sm\_fetch\_two\_table\_pick\_n\_place\_1}}
+
+\end{DoxyCode}

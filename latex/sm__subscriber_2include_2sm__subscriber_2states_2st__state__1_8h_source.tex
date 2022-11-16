@@ -1,0 +1,47 @@
+\hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source}{}\doxysection{st\+\_\+state\+\_\+1.\+h}
+\label{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source}\index{smacc\_sm\_reference\_library/sm\_subscriber/include/sm\_subscriber/states/st\_state\_1.h@{smacc\_sm\_reference\_library/sm\_subscriber/include/sm\_subscriber/states/st\_state\_1.h}}
+\mbox{\hyperlink{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__subscriber}{sm\_subscriber}}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00005}00005 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc_1_1default__transition__tags}{smacc::default\_transition\_tags}};}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00007}00007 \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00008}\mbox{\hyperlink{structsm__subscriber_1_1State1}{00008}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__subscriber_1_1State1}{State1}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<State1, SmSubscriber>}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00010}00010   \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00012}00012   \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00013}00013   \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00015}00015       \textcolor{comment}{//Transition<EvTopicMessage<ClNumbersSubscription, OrSubscriber>, State2, SUCCESS>}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00016}00016       \mbox{\hyperlink{classsmacc_1_1Transition}{Transition<EvTimer<CbTimerCountdownOnce, OrTimer>}}, \mbox{\hyperlink{structsm__subscriber_1_1State2}{State2}}, \mbox{\hyperlink{structsmacc_1_1default__transition__tags_1_1SUCCESS}{SUCCESS}}>}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00017}00017       >}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00018}\mbox{\hyperlink{structsm__subscriber_1_1State1_afb6efba4aeabaa5423876c725b4c2e70}{00018}}       \mbox{\hyperlink{structsm__subscriber_1_1State1_afb6efba4aeabaa5423876c725b4c2e70}{reactions}};}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00020}00020   \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00021}\mbox{\hyperlink{structsm__subscriber_1_1State1_ae878310b93e6fb33efaf0a2d53533dc0}{00021}}   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__subscriber_1_1State1_ae878310b93e6fb33efaf0a2d53533dc0}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00022}00022   \{}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00023}00023       configure\_orthogonal<OrSubscriber, CbPrintMessageNumber>();  \textcolor{comment}{// EvTimer triggers once at 10 client ticks}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00024}00024       configure\_orthogonal<OrTimer, CbTimerCountdownOnce>(5); \textcolor{comment}{// EvTimer triggers once at 10 client ticks}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00025}00025   \}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00027}\mbox{\hyperlink{structsm__subscriber_1_1State1_a53ed360656c26531101bda2397f8c024}{00027}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__subscriber_1_1State1_a53ed360656c26531101bda2397f8c024}{runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00028}00028   \{}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00029}00029   \}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00031}\mbox{\hyperlink{structsm__subscriber_1_1State1_a20fcc20aab6ea52a463e3b275585bafb}{00031}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__subscriber_1_1State1_a20fcc20aab6ea52a463e3b275585bafb}{onEntry}}()}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00032}00032   \{}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00033}00033     ROS\_INFO(\textcolor{stringliteral}{"{}On Entry state1 !"{}});}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00034}00034   \}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00036}\mbox{\hyperlink{structsm__subscriber_1_1State1_a539b0ab5ba62c8b2298c1efc678c6683}{00036}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__subscriber_1_1State1_a539b0ab5ba62c8b2298c1efc678c6683}{onExit}}()}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00037}00037   \{}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00038}00038     ROS\_INFO(\textcolor{stringliteral}{"{}On Exit state1!"{}});}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00039}00039   \}}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00040}00040 \};}
+\DoxyCodeLine{\Hypertarget{sm__subscriber_2include_2sm__subscriber_2states_2st__state__1_8h_source_l00041}00041 \}  \textcolor{comment}{// namespace sm\_subscriber}}
+
+\end{DoxyCode}

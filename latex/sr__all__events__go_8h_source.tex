@@ -1,0 +1,38 @@
+\hypertarget{sr__all__events__go_8h_source}{}\doxysection{sr\+\_\+all\+\_\+events\+\_\+go.\+h}
+\label{sr__all__events__go_8h_source}\index{smacc\_state\_reactor\_library/sr\_all\_events\_go/include/sr\_all\_events\_go/sr\_all\_events\_go.h@{smacc\_state\_reactor\_library/sr\_all\_events\_go/include/sr\_all\_events\_go/sr\_all\_events\_go.h}}
+\mbox{\hyperlink{sr__all__events__go_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00002}00002 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{common_8h}{smacc/common.h}}>}}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__state__reactor_8h}{smacc/smacc\_state\_reactor.h}}>}}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <typeinfo>}}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00006}00006 \textcolor{preprocessor}{\#include <boost/statechart/event.hpp>}}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00011}00011 \textcolor{keyword}{namespace }state\_reactors}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00013}00013 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TSource, \textcolor{keyword}{typename} TObjectTag = EmptyObjectTag>}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00014}\mbox{\hyperlink{structsmacc_1_1state__reactors_1_1EvAllGo}{00014}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmacc_1_1state__reactors_1_1EvAllGo}{EvAllGo}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<EvAllGo<TSource, TObjectTag>>}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00016}00016 \};}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00018}\mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo}{SrAllEventsGo}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1StateReactor}{StateReactor}}}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00020}\mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_a2c3d7c7e15ed155ae6e83fe49e7897e9}{00020}}     std::map<const std::type\_info *, bool> \mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_a2c3d7c7e15ed155ae6e83fe49e7897e9}{triggeredEvents}};}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00022}00022 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00023}\mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_a22492ff31d435e29b972a04855cde3bd}{00023}}     \mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_a22492ff31d435e29b972a04855cde3bd}{SrAllEventsGo}}()}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00024}00024     \{}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00027}00027     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_adda075f2b3ec56115d02e9fb1a1c26fe}{onInitialized}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00028}00028     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_abd72dc79374c34111d24691c459850c2}{onEventNotified}}(\textcolor{keyword}{const} std::type\_info *eventType) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00029}00029     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_ab752043eda070661d2a676b580c679b7}{triggers}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00030}00030 \};}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00031}00031 \} \textcolor{comment}{// namespace state\_reactors}}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8h_source_l00032}00032 \} \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

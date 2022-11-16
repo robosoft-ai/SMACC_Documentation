@@ -1,0 +1,82 @@
+\hypertarget{structsm__viewer__sim_1_1MsRecoveryMode}{}\doxysection{sm\+\_\+viewer\+\_\+sim\+::Ms\+Recovery\+Mode Struct Reference}
+\label{structsm__viewer__sim_1_1MsRecoveryMode}\index{sm\_viewer\_sim::MsRecoveryMode@{sm\_viewer\_sim::MsRecoveryMode}}
+
+
+{\ttfamily \#include $<$ms\+\_\+recovery\+\_\+mode.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+viewer\+\_\+sim\+::Ms\+Recovery\+Mode\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{structsm__viewer__sim_1_1MsRecoveryMode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+viewer\+\_\+sim\+::Ms\+Recovery\+Mode\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{structsm__viewer__sim_1_1MsRecoveryMode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef mpl\+::list$<$ Transition$<$ \mbox{\hyperlink{structsm__viewer__sim_1_1EvToDeep}{Ev\+To\+Deep}}, sc\+::deep\+\_\+history$<$ Ms\+Run\+Mode\+::\+Last\+Deep\+State $>$, \mbox{\hyperlink{structsmacc_1_1default__transition__tags_1_1SUCCESS}{SUCCESS}} $>$ $>$ \mbox{\hyperlink{structsm__viewer__sim_1_1MsRecoveryMode_aed5fa1dd8ccebe3085331e82f1ca16d9}{reactions}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structsm__viewer__sim_1_1MsRecoveryMode_ab436ff9e90b963a3339644c0baf223d7}{on\+Entry}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{ms__recovery__mode_8h_source_l00005}{5}} of file \mbox{\hyperlink{ms__recovery__mode_8h_source}{ms\+\_\+recovery\+\_\+mode.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structsm__viewer__sim_1_1MsRecoveryMode_aed5fa1dd8ccebe3085331e82f1ca16d9}\label{structsm__viewer__sim_1_1MsRecoveryMode_aed5fa1dd8ccebe3085331e82f1ca16d9}} 
+\index{sm\_viewer\_sim::MsRecoveryMode@{sm\_viewer\_sim::MsRecoveryMode}!reactions@{reactions}}
+\index{reactions@{reactions}!sm\_viewer\_sim::MsRecoveryMode@{sm\_viewer\_sim::MsRecoveryMode}}
+\doxysubsubsection{\texorpdfstring{reactions}{reactions}}
+{\footnotesize\ttfamily typedef mpl\+::list$<$ Transition$<$\mbox{\hyperlink{structsm__viewer__sim_1_1EvToDeep}{Ev\+To\+Deep}}, sc\+::deep\+\_\+history$<$Ms\+Run\+Mode\+::\+Last\+Deep\+State$>$, \mbox{\hyperlink{structsmacc_1_1default__transition__tags_1_1SUCCESS}{SUCCESS}}$>$ $>$ \mbox{\hyperlink{structsm__viewer__sim_1_1MsRecoveryMode_aed5fa1dd8ccebe3085331e82f1ca16d9}{sm\+\_\+viewer\+\_\+sim\+::\+Ms\+Recovery\+Mode\+::reactions}}}
+
+
+
+Definition at line \mbox{\hyperlink{ms__recovery__mode_8h_source_l00010}{10}} of file \mbox{\hyperlink{ms__recovery__mode_8h_source}{ms\+\_\+recovery\+\_\+mode.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsm__viewer__sim_1_1MsRecoveryMode_ab436ff9e90b963a3339644c0baf223d7}\label{structsm__viewer__sim_1_1MsRecoveryMode_ab436ff9e90b963a3339644c0baf223d7}} 
+\index{sm\_viewer\_sim::MsRecoveryMode@{sm\_viewer\_sim::MsRecoveryMode}!onEntry@{onEntry}}
+\index{onEntry@{onEntry}!sm\_viewer\_sim::MsRecoveryMode@{sm\_viewer\_sim::MsRecoveryMode}}
+\doxysubsubsection{\texorpdfstring{onEntry()}{onEntry()}}
+{\footnotesize\ttfamily void sm\+\_\+viewer\+\_\+sim\+::\+Ms\+Recovery\+Mode\+::on\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{ms__recovery__mode_8h_source_l00013}{13}} of file \mbox{\hyperlink{ms__recovery__mode_8h_source}{ms\+\_\+recovery\+\_\+mode.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014     \{}
+\DoxyCodeLine{00015         ROS\_INFO(\textcolor{stringliteral}{"{}Recovery"{}});}
+\DoxyCodeLine{00016         delayedPostEvent<EvToDeep>(\textcolor{keyword}{this}, 3);}
+\DoxyCodeLine{00017     \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+viewer\+\_\+sim/include/sm\+\_\+viewer\+\_\+sim/modestates/\mbox{\hyperlink{ms__recovery__mode_8h}{ms\+\_\+recovery\+\_\+mode.\+h}}\end{DoxyCompactItemize}

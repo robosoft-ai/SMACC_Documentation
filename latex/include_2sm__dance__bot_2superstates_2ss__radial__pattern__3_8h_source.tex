@@ -1,0 +1,61 @@
+\hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source}{}\doxysection{ss\+\_\+radial\+\_\+pattern\+\_\+3.\+h}
+\label{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source}\index{smacc\_sm\_reference\_library/sm\_dance\_bot/include/sm\_dance\_bot/superstates/ss\_radial\_pattern\_3.h@{smacc\_sm\_reference\_library/sm\_dance\_bot/include/sm\_dance\_bot/superstates/ss\_radial\_pattern\_3.h}}
+\mbox{\hyperlink{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__dance__bot}{sm\_dance\_bot}} \{}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00004}00004 \textcolor{keyword}{namespace }SS3 \{}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00005}\mbox{\hyperlink{namespacesm__dance__bot_1_1SS3_1_1sm__dance__bot}{00005}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__dance__bot}{sm\_dance\_bot}} \{}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00006}\mbox{\hyperlink{namespacesm__dance__bot_1_1SS3_1_1sm__dance__bot_1_1radial__motion__states}{00006}} \textcolor{keyword}{namespace }radial\_motion\_states \{}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00008}00008 \textcolor{comment}{// FORWARD DECLARATION OF INNER STATES}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00009}00009 \textcolor{keyword}{class }StiRadialRotate;}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00010}00010 \textcolor{keyword}{class }StiRadialReturn;}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00011}00011 \textcolor{keyword}{class }StiRadialEndPoint;}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00012}00012 \textcolor{keyword}{class }StiRadialLoopStart;}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00013}00013 \} \textcolor{comment}{// namespace radial\_motion\_states}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00014}00014 \} \textcolor{comment}{// namespace sm\_dance\_bot}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00015}00015 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesm__dance__bot_1_1radial__motion__states}{sm\_dance\_bot::radial\_motion\_states}};}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00017}00017 \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00018}\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3}{00018}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3}{SsRadialPattern3}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<SsRadialPattern3, MsDanceBotRunMode, StiRadialLoopStart>}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00020}00020 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00021}00021     \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00023}00023 \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00024}00024     \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00026}00026     Transition<EvLoopEnd<StiRadialLoopStart>, \mbox{\hyperlink{structsm__dance__bot_1_1StRotateDegrees4}{StRotateDegrees4}}, \mbox{\hyperlink{structsmacc_1_1default__transition__tags_1_1ENDLOOP}{ENDLOOP}}>}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00028}\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_aa427cf1c1d77bc04e23acf4fb4bef9f1}{00028}}     >\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_aa427cf1c1d77bc04e23acf4fb4bef9f1}{reactions}};}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00030}00030 \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00031}\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_a79e74e3a784e82a36677b8f36a3041fe}{00031}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_a79e74e3a784e82a36677b8f36a3041fe}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00032}00032     \{}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00033}00033         \textcolor{comment}{//configure\_orthogonal<OrObstaclePerception, CbLidarSensor>();}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00034}00034     \}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00036}\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_a62885be83defcafb3fe5237dd3ec6b4c}{00036}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_a62885be83defcafb3fe5237dd3ec6b4c}{iteration\_count}};}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00038}\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_a131ebb64f66358e769217388cb2b05c5}{00038}}     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} \mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_a131ebb64f66358e769217388cb2b05c5}{total\_iterations}}() \{ \textcolor{keywordflow}{return} 16; \}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00039}\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_a904170764306e3c9242b9cd66e44b56e}{00039}}     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{float} \mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_a904170764306e3c9242b9cd66e44b56e}{ray\_angle\_increment\_degree}}() \{ \textcolor{keywordflow}{return} 360.0 / \mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_a131ebb64f66358e769217388cb2b05c5}{total\_iterations}}(); \}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00040}\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_aa7fa90f5fd3694bad969f97d6fddd01e}{00040}}     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{float} \mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_aa7fa90f5fd3694bad969f97d6fddd01e}{ray\_length\_meters}}() \{ \textcolor{keywordflow}{return} 4; \}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00042}\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_aa470f8f74c73af4e98a4c151b3a19f97}{00042}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_aa470f8f74c73af4e98a4c151b3a19f97}{runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00043}00043     \{}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00044}00044         \mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3_a62885be83defcafb3fe5237dd3ec6b4c}{iteration\_count}} = 0;}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00045}00045     \}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00046}00046 \};}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00048}00048 \textcolor{comment}{// FORWARD DECLARATION FOR THE SUPERSTATE}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00049}\mbox{\hyperlink{namespacesm__dance__bot_1_1SS3_aba7ea37bc21bc69fc2c374bd831c7ab1}{00049}} \textcolor{keyword}{using }\mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3}{SS}} = \mbox{\hyperlink{structsm__dance__bot_1_1SS3_1_1SsRadialPattern3}{SsRadialPattern3}};}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00050}00050 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{include_2sm__dance__bot_2states_2radial__motion__states_2sti__radial__end__point_8h}{sm\_dance\_bot/states/radial\_motion\_states/sti\_radial\_end\_point.h}}>}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00051}00051 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{include_2sm__dance__bot_2states_2radial__motion__states_2sti__radial__return_8h}{sm\_dance\_bot/states/radial\_motion\_states/sti\_radial\_return.h}}>}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00052}00052 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{include_2sm__dance__bot_2states_2radial__motion__states_2sti__radial__rotate_8h}{sm\_dance\_bot/states/radial\_motion\_states/sti\_radial\_rotate.h}}>}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00053}00053 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{include_2sm__dance__bot_2states_2radial__motion__states_2sti__radial__loop__start_8h}{sm\_dance\_bot/states/radial\_motion\_states/sti\_radial\_loop\_start.h}}>}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00054}00054 \} \textcolor{comment}{// namespace SS3}}
+\DoxyCodeLine{\Hypertarget{include_2sm__dance__bot_2superstates_2ss__radial__pattern__3_8h_source_l00055}00055 \} \textcolor{comment}{// namespace sm\_dance\_bot}}
+
+\end{DoxyCode}

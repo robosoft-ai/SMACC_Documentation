@@ -1,0 +1,125 @@
+\hypertarget{structsm__viewer__sim_1_1St2}{}\doxysection{sm\+\_\+viewer\+\_\+sim\+::St2 Struct Reference}
+\label{structsm__viewer__sim_1_1St2}\index{sm\_viewer\_sim::St2@{sm\_viewer\_sim::St2}}
+
+
+{\ttfamily \#include $<$st\+\_\+st2.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+viewer\+\_\+sim\+::St2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structsm__viewer__sim_1_1St2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+viewer\+\_\+sim\+::St2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsm__viewer__sim_1_1St2__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef mpl\+::list$<$ Transition$<$ \mbox{\hyperlink{structsm__viewer__sim_1_1Ev2}{Ev2}}, \mbox{\hyperlink{structsm__viewer__sim_1_1St3}{St3}}, \mbox{\hyperlink{structsmacc_1_1default__transition__tags_1_1SUCCESS}{smacc\+::\+SUCCESS}} $>$, Transition$<$ \mbox{\hyperlink{structsm__viewer__sim_1_1EvFail}{Ev\+Fail}}, \mbox{\hyperlink{structsm__viewer__sim_1_1MsRecoveryMode}{Ms\+Recovery\+Mode}}, \mbox{\hyperlink{structsmacc_1_1default__transition__tags_1_1ABORT}{smacc\+::\+ABORT}} $>$ $>$ \mbox{\hyperlink{structsm__viewer__sim_1_1St2_a4882f92c6fc0489b5b26d2d04a6befea}{reactions}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structsm__viewer__sim_1_1St2_af71699583a65b935221621956c6900da}{on\+Entry}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{structsm__viewer__sim_1_1St2_ab488bf5ee92dbf4652b5b01830b37849}{counter}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{st__st2_8h_source_l00005}{5}} of file \mbox{\hyperlink{st__st2_8h_source}{st\+\_\+st2.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structsm__viewer__sim_1_1St2_a4882f92c6fc0489b5b26d2d04a6befea}\label{structsm__viewer__sim_1_1St2_a4882f92c6fc0489b5b26d2d04a6befea}} 
+\index{sm\_viewer\_sim::St2@{sm\_viewer\_sim::St2}!reactions@{reactions}}
+\index{reactions@{reactions}!sm\_viewer\_sim::St2@{sm\_viewer\_sim::St2}}
+\doxysubsubsection{\texorpdfstring{reactions}{reactions}}
+{\footnotesize\ttfamily typedef mpl\+::list$<$ Transition$<$\mbox{\hyperlink{structsm__viewer__sim_1_1Ev2}{Ev2}}, \mbox{\hyperlink{structsm__viewer__sim_1_1St3}{St3}}, \mbox{\hyperlink{structsmacc_1_1default__transition__tags_1_1SUCCESS}{smacc\+::\+SUCCESS}}$>$, Transition$<$\mbox{\hyperlink{structsm__viewer__sim_1_1EvFail}{Ev\+Fail}}, \mbox{\hyperlink{structsm__viewer__sim_1_1MsRecoveryMode}{Ms\+Recovery\+Mode}}, \mbox{\hyperlink{structsmacc_1_1default__transition__tags_1_1ABORT}{smacc\+::\+ABORT}}$>$ $>$ \mbox{\hyperlink{structsm__viewer__sim_1_1St2_a4882f92c6fc0489b5b26d2d04a6befea}{sm\+\_\+viewer\+\_\+sim\+::\+St2\+::reactions}}}
+
+
+
+Definition at line \mbox{\hyperlink{st__st2_8h_source_l00011}{11}} of file \mbox{\hyperlink{st__st2_8h_source}{st\+\_\+st2.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsm__viewer__sim_1_1St2_af71699583a65b935221621956c6900da}\label{structsm__viewer__sim_1_1St2_af71699583a65b935221621956c6900da}} 
+\index{sm\_viewer\_sim::St2@{sm\_viewer\_sim::St2}!onEntry@{onEntry}}
+\index{onEntry@{onEntry}!sm\_viewer\_sim::St2@{sm\_viewer\_sim::St2}}
+\doxysubsubsection{\texorpdfstring{onEntry()}{onEntry()}}
+{\footnotesize\ttfamily void sm\+\_\+viewer\+\_\+sim\+::\+St2\+::on\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{st__st2_8h_source_l00015}{15}} of file \mbox{\hyperlink{st__st2_8h_source}{st\+\_\+st2.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016     \{}
+\DoxyCodeLine{00017         ROS\_INFO(\textcolor{stringliteral}{"{}St2"{}});}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}counter: "{}} << \mbox{\hyperlink{structsm__viewer__sim_1_1St2_ab488bf5ee92dbf4652b5b01830b37849}{counter}});}
+\DoxyCodeLine{00020         \textcolor{keywordflow}{if} (\mbox{\hyperlink{structsm__viewer__sim_1_1St2_ab488bf5ee92dbf4652b5b01830b37849}{counter}} \% 2 == 0)}
+\DoxyCodeLine{00021             delayedPostEvent<EvFail>(\textcolor{keyword}{this}, 3);}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00023             delayedPostEvent<Ev2>(\textcolor{keyword}{this}, 3);}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025         \mbox{\hyperlink{structsm__viewer__sim_1_1St2_ab488bf5ee92dbf4652b5b01830b37849}{counter}}++;}
+\DoxyCodeLine{00026         this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_a98f2673b257479e0a3615d5d8279a591}{setGlobalSMData}}(\textcolor{stringliteral}{"{}St2Attempts"{}}, \mbox{\hyperlink{structsm__viewer__sim_1_1St2_ab488bf5ee92dbf4652b5b01830b37849}{counter}});}
+\DoxyCodeLine{00027     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{st__st2_8h_source_l00007}{counter}}, and \mbox{\hyperlink{smacc__state__base_8h_source_l00157}{smacc\+::\+Smacc\+State$<$ St2, Ms\+Run\+Mode $>$\+::set\+Global\+SMData()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsm__viewer__sim_1_1St2_af71699583a65b935221621956c6900da_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsm__viewer__sim_1_1St2_ab488bf5ee92dbf4652b5b01830b37849}\label{structsm__viewer__sim_1_1St2_ab488bf5ee92dbf4652b5b01830b37849}} 
+\index{sm\_viewer\_sim::St2@{sm\_viewer\_sim::St2}!counter@{counter}}
+\index{counter@{counter}!sm\_viewer\_sim::St2@{sm\_viewer\_sim::St2}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int sm\+\_\+viewer\+\_\+sim\+::\+St2\+::counter = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{st__st2_8h_source_l00007}{7}} of file \mbox{\hyperlink{st__st2_8h_source}{st\+\_\+st2.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{st__st2_8h_source_l00015}{on\+Entry()}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+viewer\+\_\+sim/include/sm\+\_\+viewer\+\_\+sim/states/\mbox{\hyperlink{st__st2_8h}{st\+\_\+st2.\+h}}\end{DoxyCompactItemize}

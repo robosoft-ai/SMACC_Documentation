@@ -1,0 +1,599 @@
+\hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem}{}\doxysection{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::Cl\+Perception\+System Class Reference}
+\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem}\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+
+
+{\ttfamily \#include $<$cl\+\_\+perception\+\_\+system.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::Cl\+Perception\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::Cl\+Perception\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ae3757599dd4468520737570786a7ad5c}{Cl\+Perception\+System}} ()
+\item 
+virtual \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a81883848ef4447a0708e8b7e391a5833}{$\sim$\+Cl\+Perception\+System}} ()
+\item 
+void \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a4d53b9c9e65c35eec3c9e0eb4b1a019a}{next\+Cube}} ()
+\item 
+void \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab8b17d672321f3300e31bbfd18a94f79}{retry\+Cube\+After\+Fail}} ()
+\item 
+virtual void \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ac6e10d6fc38d2b1d561875298307c235}{update}} () override
+\item 
+\mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_a8bbef1f1cfae124eaec70ac53eede699}{Robot\+Process\+Status}} \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ad9c1b82e644fdbfbfc2d808523a1f330}{get\+Current\+Table}} ()
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_af9c32989b53ea6ac1da431134c8d2e39}{decide\+Pick\+Cube\+Pose}} ()
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ac5885c03fa6f754d1b1c312f4d925066}{decide\+Place\+Pose}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose}} $\ast$ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab60765c4ba512b25c49c508464c49adb}{detected\+Cube\+Pose0}}
+\item 
+\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose}} $\ast$ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_adf8bf74ca5091581bf23335b8573073d}{detected\+Cube\+Pose1}}
+\item 
+\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose}} $\ast$ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab4594ab1597649673845c90002c8a8e7}{detected\+Cube\+Pose2}}
+\item 
+boost\+::optional$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a9a81fba6b953fba9b27e0a2f222290d0}{original\+Cube0\+Pose}}
+\item 
+boost\+::optional$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a08c5950cef16dc2e307ec5c3573ba3f8}{original\+Cube1\+Pose}}
+\item 
+boost\+::optional$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a25eb595d1c9f8256f4bd5ae1ac3d5651}{original\+Cube2\+Pose}}
+\item 
+boost\+::optional$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a4badbcb867d3baa93ddc40e73efe8d3f}{cube0\+Destination\+In\+Table1}}
+\item 
+boost\+::optional$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a06728bf2c7c0f56c02e485b46fbc0c93}{cube1\+Destination\+In\+Table0}}
+\item 
+boost\+::optional$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aacd55af08e30d8b6b1303a670acd3328}{cube2\+Destination\+In\+Table1}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a3b88edd8d62e132052c3f0908839dbb1}{start\+Time}}
+\item 
+ros\+::\+Duration \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aa10a1ed21636e7bdf001895860075383}{read\+Delay}}
+\item 
+int \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a3639b112c2051d9d5f15716c8a72f127}{decissions\+Count}}
+\item 
+int \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{current\+Cube}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00019}{19}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ae3757599dd4468520737570786a7ad5c}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ae3757599dd4468520737570786a7ad5c}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!ClPerceptionSystem@{ClPerceptionSystem}}
+\index{ClPerceptionSystem@{ClPerceptionSystem}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{ClPerceptionSystem()}{ClPerceptionSystem()}}
+{\footnotesize\ttfamily sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::\+Cl\+Perception\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00040}{40}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041     \{}
+\DoxyCodeLine{00042         \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a3b88edd8d62e132052c3f0908839dbb1}{startTime}} = ros::Time::now();}
+\DoxyCodeLine{00043         \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aa10a1ed21636e7bdf001895860075383}{readDelay}} = ros::Duration(5);}
+\DoxyCodeLine{00044         \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a3639b112c2051d9d5f15716c8a72f127}{decissionsCount}} = 0;}
+\DoxyCodeLine{00045     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00037}{decissions\+Count}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00035}{read\+Delay}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00034}{start\+Time}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a81883848ef4447a0708e8b7e391a5833}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a81883848ef4447a0708e8b7e391a5833}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!````~ClPerceptionSystem@{$\sim$ClPerceptionSystem}}
+\index{````~ClPerceptionSystem@{$\sim$ClPerceptionSystem}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{$\sim$ClPerceptionSystem()}{~ClPerceptionSystem()}}
+{\footnotesize\ttfamily virtual sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::$\sim$\+Cl\+Perception\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00047}{47}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048     \{}
+\DoxyCodeLine{00049     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_af9c32989b53ea6ac1da431134c8d2e39}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_af9c32989b53ea6ac1da431134c8d2e39}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!decidePickCubePose@{decidePickCubePose}}
+\index{decidePickCubePose@{decidePickCubePose}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{decidePickCubePose()}{decidePickCubePose()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::decide\+Pick\+Cube\+Pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00122}{122}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123     \{}
+\DoxyCodeLine{00124         \mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\_move\_base\_z::Pose}} *targetObjectPose;}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}} == 0)}
+\DoxyCodeLine{00127         \{}
+\DoxyCodeLine{00128             targetObjectPose = \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab60765c4ba512b25c49c508464c49adb}{detectedCubePose0}};}
+\DoxyCodeLine{00129         \}}
+\DoxyCodeLine{00130         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}} == 1)}
+\DoxyCodeLine{00131         \{}
+\DoxyCodeLine{00132             targetObjectPose = \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_adf8bf74ca5091581bf23335b8573073d}{detectedCubePose1}};}
+\DoxyCodeLine{00133         \}}
+\DoxyCodeLine{00134         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00135         \{}
+\DoxyCodeLine{00136             targetObjectPose = \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab4594ab1597649673845c90002c8a8e7}{detectedCubePose2}};}
+\DoxyCodeLine{00137         \}}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139         targetObjectPose-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a5f8576c3dacfb2f2e7f9df5105c480ea}{waitTransformUpdate}}();}
+\DoxyCodeLine{00140         \textcolor{keywordflow}{return} targetObjectPose-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a63887a88c1ac6e9a4a71b8d7d11aed6c}{toPoseStampedMsg}}();}
+\DoxyCodeLine{00141     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00038}{current\+Cube}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00022}{detected\+Cube\+Pose0}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00023}{detected\+Cube\+Pose1}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00024}{detected\+Cube\+Pose2}}, \mbox{\hyperlink{cp__pose_8h_source_l00033}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose\+::to\+Pose\+Stamped\+Msg()}}, and \mbox{\hyperlink{cp__pose_8cpp_source_l00032}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose\+::wait\+Transform\+Update()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_af9c32989b53ea6ac1da431134c8d2e39_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ac5885c03fa6f754d1b1c312f4d925066}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ac5885c03fa6f754d1b1c312f4d925066}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!decidePlacePose@{decidePlacePose}}
+\index{decidePlacePose@{decidePlacePose}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{decidePlacePose()}{decidePlacePose()}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::decide\+Place\+Pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00143}{143}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144     \{}
+\DoxyCodeLine{00145         \mbox{\hyperlink{classcl__move__base__z_1_1ClMoveBaseZ}{cl\_move\_base\_z::ClMoveBaseZ}} *moveBaseclient;}
+\DoxyCodeLine{00146         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a7a9990a2f3e35d547671188d69fee520}{requiresClient}}(moveBaseclient);}
+\DoxyCodeLine{00147         \textcolor{keyword}{auto} pose = moveBaseclient-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\_move\_base\_z::Pose}}>();}
+\DoxyCodeLine{00148         \textcolor{keyword}{auto} currentPose = pose-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{toPoseMsg}}();}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150         \textcolor{keywordtype}{int} tableIndex = 0;}
+\DoxyCodeLine{00151         \textcolor{keywordflow}{if} (currentPose.position.x > -\/0.2) \textcolor{comment}{//negative side}}
+\DoxyCodeLine{00152         \{}
+\DoxyCodeLine{00153             ROS\_INFO(\textcolor{stringliteral}{"{}[StOpenGripper] locate cube in table 0"{}});}
+\DoxyCodeLine{00154             tableIndex = 0;}
+\DoxyCodeLine{00155         \}}
+\DoxyCodeLine{00156         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00157         \{}
+\DoxyCodeLine{00158             ROS\_INFO(\textcolor{stringliteral}{"{}[StOpenGripper] locate cube in table 1"{}});}
+\DoxyCodeLine{00159             tableIndex = 1;}
+\DoxyCodeLine{00160         \}}
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162         \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a3639b112c2051d9d5f15716c8a72f127}{decissionsCount}}++;}
+\DoxyCodeLine{00163         \textcolor{keywordflow}{if} (tableIndex == 0)}
+\DoxyCodeLine{00164         \{}
+\DoxyCodeLine{00165             ROS\_INFO(\textcolor{stringliteral}{"{}[Perception System] deciding cube target in table 0"{}});}
+\DoxyCodeLine{00166             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}} == 0)}
+\DoxyCodeLine{00167             \{}
+\DoxyCodeLine{00168                 ROS\_INFO(\textcolor{stringliteral}{"{}[Perception System] deciding cube target 0 in table 0"{}});}
+\DoxyCodeLine{00169                 \textcolor{keywordflow}{return} *\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a9a81fba6b953fba9b27e0a2f222290d0}{originalCube0Pose}};}
+\DoxyCodeLine{00170             \}}
+\DoxyCodeLine{00171             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}} == 1)}
+\DoxyCodeLine{00172             \{}
+\DoxyCodeLine{00173                 ROS\_INFO(\textcolor{stringliteral}{"{}[Perception System] deciding cube target 1 in table 0"{}});}
+\DoxyCodeLine{00174                 \textcolor{keywordflow}{return} *\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a06728bf2c7c0f56c02e485b46fbc0c93}{cube1DestinationInTable0}};}
+\DoxyCodeLine{00175             \}}
+\DoxyCodeLine{00176             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00177             \{}
+\DoxyCodeLine{00178                 ROS\_INFO(\textcolor{stringliteral}{"{}[Perception System] deciding cube target 2 in table 0"{}});}
+\DoxyCodeLine{00179                 \textcolor{keywordflow}{return} *\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a25eb595d1c9f8256f4bd5ae1ac3d5651}{originalCube2Pose}};}
+\DoxyCodeLine{00180             \}}
+\DoxyCodeLine{00181         \}}
+\DoxyCodeLine{00182         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00183         \{}
+\DoxyCodeLine{00184             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}} == 0)}
+\DoxyCodeLine{00185             \{}
+\DoxyCodeLine{00186                 ROS\_INFO(\textcolor{stringliteral}{"{}[Perception System] deciding cube target 0 in table 1"{}});}
+\DoxyCodeLine{00187                 \textcolor{keywordflow}{return} *\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a4badbcb867d3baa93ddc40e73efe8d3f}{cube0DestinationInTable1}};}
+\DoxyCodeLine{00188             \}}
+\DoxyCodeLine{00189             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}} == 1)}
+\DoxyCodeLine{00190             \{}
+\DoxyCodeLine{00191                 ROS\_INFO(\textcolor{stringliteral}{"{}[Perception System] deciding cube target 1 in table 1"{}});}
+\DoxyCodeLine{00192                 \textcolor{keywordflow}{return} *\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a08c5950cef16dc2e307ec5c3573ba3f8}{originalCube1Pose}};}
+\DoxyCodeLine{00193             \}}
+\DoxyCodeLine{00194             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00195             \{}
+\DoxyCodeLine{00196                 ROS\_INFO(\textcolor{stringliteral}{"{}[Perception System] deciding cube target 2 in table 1"{}});}
+\DoxyCodeLine{00197                 \textcolor{keywordflow}{return} *\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aacd55af08e30d8b6b1303a670acd3328}{cube2DestinationInTable1}};}
+\DoxyCodeLine{00198             \}}
+\DoxyCodeLine{00199         \}}
+\DoxyCodeLine{00200     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00030}{cube0\+Destination\+In\+Table1}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00031}{cube1\+Destination\+In\+Table0}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00032}{cube2\+Destination\+In\+Table1}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00038}{current\+Cube}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00037}{decissions\+Count}}, \mbox{\hyperlink{smacc__client__impl_8h_source_l00027}{smacc\+::\+ISmacc\+Client\+::get\+Component()}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00026}{original\+Cube0\+Pose}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00027}{original\+Cube1\+Pose}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00028}{original\+Cube2\+Pose}}, \mbox{\hyperlink{smacc__client__impl_8h_source_l00102}{smacc\+::\+ISmacc\+Client\+::requires\+Client()}}, and \mbox{\hyperlink{cp__pose_8h_source_l00027}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose\+::to\+Pose\+Msg()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ac5885c03fa6f754d1b1c312f4d925066_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ad9c1b82e644fdbfbfc2d808523a1f330}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ad9c1b82e644fdbfbfc2d808523a1f330}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!getCurrentTable@{getCurrentTable}}
+\index{getCurrentTable@{getCurrentTable}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{getCurrentTable()}{getCurrentTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_a8bbef1f1cfae124eaec70ac53eede699}{Robot\+Process\+Status}} sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::get\+Current\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00106}{106}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107     \{}
+\DoxyCodeLine{00108         \mbox{\hyperlink{classcl__move__base__z_1_1ClMoveBaseZ}{cl\_move\_base\_z::ClMoveBaseZ}} *moveBaseclient;}
+\DoxyCodeLine{00109         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a7a9990a2f3e35d547671188d69fee520}{requiresClient}}(moveBaseclient);}
+\DoxyCodeLine{00110         \textcolor{keyword}{auto} pose = moveBaseclient-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\_move\_base\_z::Pose}}>();}
+\DoxyCodeLine{00111         \textcolor{keyword}{auto} currentPose = pose-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{toPoseMsg}}();}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113         \textcolor{keywordtype}{int} tableIndex = 0;}
+\DoxyCodeLine{00114         \textcolor{keywordflow}{if} (currentPose.position.x > -\/0.2)}
+\DoxyCodeLine{00115             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_a8bbef1f1cfae124eaec70ac53eede699a1fd65c0ced0ead229bf6dd6a59067a4f}{RobotProcessStatus::TABLE0}};}
+\DoxyCodeLine{00116         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (currentPose.position.x < -\/0.8)}
+\DoxyCodeLine{00117             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_a8bbef1f1cfae124eaec70ac53eede699a5b22e42e5d94a94037a4486a4976c49d}{RobotProcessStatus::TABLE1}};}
+\DoxyCodeLine{00118         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00119             \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_a8bbef1f1cfae124eaec70ac53eede699a92f7ea3097b3fdb1b7a25669cfc1b8bd}{RobotProcessStatus::ONTHEWAY}};}
+\DoxyCodeLine{00120     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__client__impl_8h_source_l00027}{smacc\+::\+ISmacc\+Client\+::get\+Component()}}, \mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_a8bbef1f1cfae124eaec70ac53eede699a92f7ea3097b3fdb1b7a25669cfc1b8bd}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+ONTHEWAY}}, \mbox{\hyperlink{smacc__client__impl_8h_source_l00102}{smacc\+::\+ISmacc\+Client\+::requires\+Client()}}, \mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_a8bbef1f1cfae124eaec70ac53eede699a1fd65c0ced0ead229bf6dd6a59067a4f}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+TABLE0}}, \mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_a8bbef1f1cfae124eaec70ac53eede699a5b22e42e5d94a94037a4486a4976c49d}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+TABLE1}}, and \mbox{\hyperlink{cp__pose_8h_source_l00027}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose\+::to\+Pose\+Msg()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ad9c1b82e644fdbfbfc2d808523a1f330_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a4d53b9c9e65c35eec3c9e0eb4b1a019a}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a4d53b9c9e65c35eec3c9e0eb4b1a019a}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!nextCube@{nextCube}}
+\index{nextCube@{nextCube}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{nextCube()}{nextCube()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::next\+Cube (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00051}{51}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052     \{}
+\DoxyCodeLine{00053         \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}} = (\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}} + 1) \% 3;}
+\DoxyCodeLine{00054         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[Perception system] next cube: "{}} << \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}});}
+\DoxyCodeLine{00055     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00038}{current\+Cube}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab8b17d672321f3300e31bbfd18a94f79}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab8b17d672321f3300e31bbfd18a94f79}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!retryCubeAfterFail@{retryCubeAfterFail}}
+\index{retryCubeAfterFail@{retryCubeAfterFail}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{retryCubeAfterFail()}{retryCubeAfterFail()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::retry\+Cube\+After\+Fail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00057}{57}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058     \{}
+\DoxyCodeLine{00059         \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}} = (\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}} -\/ 1) \% 3;}
+\DoxyCodeLine{00060         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[Perception system] next cube: "{}} << \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}{currentCube}});}
+\DoxyCodeLine{00061     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00038}{current\+Cube}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ac6e10d6fc38d2b1d561875298307c235}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ac6e10d6fc38d2b1d561875298307c235}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!update@{update}}
+\index{update@{update}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_a84ee0520cbefdb1d412bed54650b028e}{smacc\+::\+ISmacc\+Updatable}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{63}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064     \{}
+\DoxyCodeLine{00065         \textcolor{keyword}{auto} elapsed = ros::Time::now() -\/ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a3b88edd8d62e132052c3f0908839dbb1}{startTime}};}
+\DoxyCodeLine{00066         \textcolor{keywordtype}{bool} applyUpdate = elapsed > \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aa10a1ed21636e7bdf001895860075383}{readDelay}};}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068         \textcolor{keywordflow}{if} (applyUpdate)}
+\DoxyCodeLine{00069         \{}
+\DoxyCodeLine{00070             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a9a81fba6b953fba9b27e0a2f222290d0}{originalCube0Pose}} \&\& \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab60765c4ba512b25c49c508464c49adb}{detectedCubePose0}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a49df3a978021edb71a48ef5e6d8e75a8}{isInitialized}})}
+\DoxyCodeLine{00071             \{}
+\DoxyCodeLine{00072                 \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a9a81fba6b953fba9b27e0a2f222290d0}{originalCube0Pose}} = \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab60765c4ba512b25c49c508464c49adb}{detectedCubePose0}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a63887a88c1ac6e9a4a71b8d7d11aed6c}{toPoseStampedMsg}}();}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074                 \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a4badbcb867d3baa93ddc40e73efe8d3f}{cube0DestinationInTable1}} = \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a9a81fba6b953fba9b27e0a2f222290d0}{originalCube0Pose}};}
+\DoxyCodeLine{00075                 (*cube0DestinationInTable1).pose.position.x = -\/ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a9a81fba6b953fba9b27e0a2f222290d0}{originalCube0Pose}}-\/>pose.position.x;}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[Perception system] Original Cube 0 Pose captured"{}} << \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a9a81fba6b953fba9b27e0a2f222290d0}{originalCube0Pose}}-\/>pose);}
+\DoxyCodeLine{00078                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[Perception system] Cube 0 Pose table 1 destination"{}} << (*\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a4badbcb867d3baa93ddc40e73efe8d3f}{cube0DestinationInTable1}}));}
+\DoxyCodeLine{00079             \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a08c5950cef16dc2e307ec5c3573ba3f8}{originalCube1Pose}} \&\& \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_adf8bf74ca5091581bf23335b8573073d}{detectedCubePose1}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a49df3a978021edb71a48ef5e6d8e75a8}{isInitialized}})}
+\DoxyCodeLine{00082             \{}
+\DoxyCodeLine{00083                 \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a08c5950cef16dc2e307ec5c3573ba3f8}{originalCube1Pose}} = \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_adf8bf74ca5091581bf23335b8573073d}{detectedCubePose1}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a63887a88c1ac6e9a4a71b8d7d11aed6c}{toPoseStampedMsg}}();}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085                 \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a06728bf2c7c0f56c02e485b46fbc0c93}{cube1DestinationInTable0}} = \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a08c5950cef16dc2e307ec5c3573ba3f8}{originalCube1Pose}};}
+\DoxyCodeLine{00086                 (*cube1DestinationInTable0).pose.position.x = -\/ \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a08c5950cef16dc2e307ec5c3573ba3f8}{originalCube1Pose}}-\/>pose.position.x;}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[Perception system] Original Cube 1 Pose captured"{}} << \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a08c5950cef16dc2e307ec5c3573ba3f8}{originalCube1Pose}}-\/>pose);}
+\DoxyCodeLine{00089                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[Perception system] Cube 1 Pose table 0 destination"{}} << (*\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a06728bf2c7c0f56c02e485b46fbc0c93}{cube1DestinationInTable0}}));}
+\DoxyCodeLine{00090             \}}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a25eb595d1c9f8256f4bd5ae1ac3d5651}{originalCube2Pose}} \&\& \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab4594ab1597649673845c90002c8a8e7}{detectedCubePose2}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a49df3a978021edb71a48ef5e6d8e75a8}{isInitialized}})}
+\DoxyCodeLine{00093             \{}
+\DoxyCodeLine{00094                 \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a25eb595d1c9f8256f4bd5ae1ac3d5651}{originalCube2Pose}} = \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab4594ab1597649673845c90002c8a8e7}{detectedCubePose2}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a63887a88c1ac6e9a4a71b8d7d11aed6c}{toPoseStampedMsg}}();}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096                 \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aacd55af08e30d8b6b1303a670acd3328}{cube2DestinationInTable1}} = \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a25eb595d1c9f8256f4bd5ae1ac3d5651}{originalCube2Pose}};}
+\DoxyCodeLine{00097                 (*cube2DestinationInTable1).pose.position.x = -\/\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a25eb595d1c9f8256f4bd5ae1ac3d5651}{originalCube2Pose}}-\/>pose.position.x;}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[Perception system] Original Cube 2 Pose captured"{}} << \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a25eb595d1c9f8256f4bd5ae1ac3d5651}{originalCube2Pose}}-\/>pose);}
+\DoxyCodeLine{00100                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[Perception system] Cube 2 Pose table 1 destination"{}} << (*\mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aacd55af08e30d8b6b1303a670acd3328}{cube2DestinationInTable1}}));}
+\DoxyCodeLine{00101             \}}
+\DoxyCodeLine{00102         \}}
+\DoxyCodeLine{00103     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00030}{cube0\+Destination\+In\+Table1}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00031}{cube1\+Destination\+In\+Table0}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00032}{cube2\+Destination\+In\+Table1}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00022}{detected\+Cube\+Pose0}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00023}{detected\+Cube\+Pose1}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00024}{detected\+Cube\+Pose2}}, \mbox{\hyperlink{cp__pose_8h_source_l00049}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose\+::is\+Initialized}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00026}{original\+Cube0\+Pose}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00027}{original\+Cube1\+Pose}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00028}{original\+Cube2\+Pose}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00035}{read\+Delay}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00034}{start\+Time}}, and \mbox{\hyperlink{cp__pose_8h_source_l00033}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose\+::to\+Pose\+Stamped\+Msg()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ac6e10d6fc38d2b1d561875298307c235_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a4badbcb867d3baa93ddc40e73efe8d3f}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a4badbcb867d3baa93ddc40e73efe8d3f}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!cube0DestinationInTable1@{cube0DestinationInTable1}}
+\index{cube0DestinationInTable1@{cube0DestinationInTable1}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{cube0DestinationInTable1}{cube0DestinationInTable1}}
+{\footnotesize\ttfamily boost\+::optional$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::cube0\+Destination\+In\+Table1}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00030}{30}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00143}{decide\+Place\+Pose()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a06728bf2c7c0f56c02e485b46fbc0c93}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a06728bf2c7c0f56c02e485b46fbc0c93}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!cube1DestinationInTable0@{cube1DestinationInTable0}}
+\index{cube1DestinationInTable0@{cube1DestinationInTable0}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{cube1DestinationInTable0}{cube1DestinationInTable0}}
+{\footnotesize\ttfamily boost\+::optional$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::cube1\+Destination\+In\+Table0}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00031}{31}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00143}{decide\+Place\+Pose()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aacd55af08e30d8b6b1303a670acd3328}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aacd55af08e30d8b6b1303a670acd3328}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!cube2DestinationInTable1@{cube2DestinationInTable1}}
+\index{cube2DestinationInTable1@{cube2DestinationInTable1}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{cube2DestinationInTable1}{cube2DestinationInTable1}}
+{\footnotesize\ttfamily boost\+::optional$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::cube2\+Destination\+In\+Table1}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00032}{32}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00143}{decide\+Place\+Pose()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a0acc9100f7de93d128c356fe928f311a}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!currentCube@{currentCube}}
+\index{currentCube@{currentCube}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{currentCube}{currentCube}}
+{\footnotesize\ttfamily int sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::current\+Cube = 0}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00038}{38}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00122}{decide\+Pick\+Cube\+Pose()}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00143}{decide\+Place\+Pose()}}, \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00051}{next\+Cube()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00057}{retry\+Cube\+After\+Fail()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a3639b112c2051d9d5f15716c8a72f127}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a3639b112c2051d9d5f15716c8a72f127}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!decissionsCount@{decissionsCount}}
+\index{decissionsCount@{decissionsCount}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{decissionsCount}{decissionsCount}}
+{\footnotesize\ttfamily int sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::decissions\+Count}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00037}{37}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00040}{Cl\+Perception\+System()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00143}{decide\+Place\+Pose()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab60765c4ba512b25c49c508464c49adb}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab60765c4ba512b25c49c508464c49adb}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!detectedCubePose0@{detectedCubePose0}}
+\index{detectedCubePose0@{detectedCubePose0}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{detectedCubePose0}{detectedCubePose0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose}}$\ast$ sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::detected\+Cube\+Pose0}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00022}{22}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00122}{decide\+Pick\+Cube\+Pose()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_adf8bf74ca5091581bf23335b8573073d}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_adf8bf74ca5091581bf23335b8573073d}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!detectedCubePose1@{detectedCubePose1}}
+\index{detectedCubePose1@{detectedCubePose1}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{detectedCubePose1}{detectedCubePose1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose}}$\ast$ sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::detected\+Cube\+Pose1}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00023}{23}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00122}{decide\+Pick\+Cube\+Pose()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab4594ab1597649673845c90002c8a8e7}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_ab4594ab1597649673845c90002c8a8e7}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!detectedCubePose2@{detectedCubePose2}}
+\index{detectedCubePose2@{detectedCubePose2}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{detectedCubePose2}{detectedCubePose2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose}}$\ast$ sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::detected\+Cube\+Pose2}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00024}{24}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00122}{decide\+Pick\+Cube\+Pose()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a9a81fba6b953fba9b27e0a2f222290d0}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a9a81fba6b953fba9b27e0a2f222290d0}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!originalCube0Pose@{originalCube0Pose}}
+\index{originalCube0Pose@{originalCube0Pose}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{originalCube0Pose}{originalCube0Pose}}
+{\footnotesize\ttfamily boost\+::optional$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::original\+Cube0\+Pose}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00026}{26}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00143}{decide\+Place\+Pose()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a08c5950cef16dc2e307ec5c3573ba3f8}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a08c5950cef16dc2e307ec5c3573ba3f8}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!originalCube1Pose@{originalCube1Pose}}
+\index{originalCube1Pose@{originalCube1Pose}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{originalCube1Pose}{originalCube1Pose}}
+{\footnotesize\ttfamily boost\+::optional$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::original\+Cube1\+Pose}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00027}{27}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00143}{decide\+Place\+Pose()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a25eb595d1c9f8256f4bd5ae1ac3d5651}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a25eb595d1c9f8256f4bd5ae1ac3d5651}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!originalCube2Pose@{originalCube2Pose}}
+\index{originalCube2Pose@{originalCube2Pose}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{originalCube2Pose}{originalCube2Pose}}
+{\footnotesize\ttfamily boost\+::optional$<$geometry\+\_\+msgs\+::\+Pose\+Stamped$>$ sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::original\+Cube2\+Pose}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00028}{28}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00143}{decide\+Place\+Pose()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aa10a1ed21636e7bdf001895860075383}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_aa10a1ed21636e7bdf001895860075383}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!readDelay@{readDelay}}
+\index{readDelay@{readDelay}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{readDelay}{readDelay}}
+{\footnotesize\ttfamily ros\+::\+Duration sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::read\+Delay}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00035}{35}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00040}{Cl\+Perception\+System()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a3b88edd8d62e132052c3f0908839dbb1}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem_a3b88edd8d62e132052c3f0908839dbb1}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}!startTime@{startTime}}
+\index{startTime@{startTime}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_perception\_system::ClPerceptionSystem}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily ros\+::\+Time sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cl\+Perception\+System\+::start\+Time}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00034}{34}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source}{cl\+\_\+perception\+\_\+system.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00040}{Cl\+Perception\+System()}}, and \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8_source_l00063}{update()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1/include/sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1/clients/perception\+\_\+system\+\_\+client/\mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2cli5d984beeae40655699a21da4da1896c8}{cl\+\_\+perception\+\_\+system.\+h}}\end{DoxyCompactItemize}

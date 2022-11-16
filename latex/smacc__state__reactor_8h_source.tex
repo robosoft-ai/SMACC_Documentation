@@ -1,0 +1,101 @@
+\hypertarget{smacc__state__reactor_8h_source}{}\doxysection{smacc\+\_\+state\+\_\+reactor.\+h}
+\label{smacc__state__reactor_8h_source}\index{smacc/include/smacc/smacc\_state\_reactor.h@{smacc/include/smacc/smacc\_state\_reactor.h}}
+\mbox{\hyperlink{smacc__state__reactor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{introspection_8h}{smacc/introspection/introspection.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <boost/statechart/event.hpp>}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00017}00017 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00018}00018 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00019}00019 \textcolor{keyword}{class }ISmaccState;}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00020}00020 \textcolor{keyword}{class }ISMaccStateMachine;}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00022}\mbox{\hyperlink{namespacesmacc_1_1state__reactors}{00022}} \textcolor{keyword}{namespace }state\_reactors}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00023}00023 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00024}\mbox{\hyperlink{structsmacc_1_1state__reactors_1_1EmptyObjectTag}{00024}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmacc_1_1state__reactors_1_1EmptyObjectTag}{EmptyObjectTag}}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00025}00025 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00026}00026 \};}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00027}00027 \} \textcolor{comment}{// namespace state\_reactors}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00029}\mbox{\hyperlink{classsmacc_1_1StateReactor}{00029}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1StateReactor}{StateReactor}}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00031}00031 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00032}\mbox{\hyperlink{classsmacc_1_1StateReactor_aabd30af9412a8fea9ec5906f173d9d4a}{00032}}     \mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmaccState}} *\mbox{\hyperlink{classsmacc_1_1StateReactor_aabd30af9412a8fea9ec5906f173d9d4a}{ownerState}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00033}\mbox{\hyperlink{classsmacc_1_1StateReactor_a1d97ae5c1689b6716c60c19c94a7eeae}{00033}}     std::function<void()> \mbox{\hyperlink{classsmacc_1_1StateReactor_a1d97ae5c1689b6716c60c19c94a7eeae}{postEventFn}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00034}\mbox{\hyperlink{classsmacc_1_1StateReactor_a65c8ddfce40e7859e5c73fff1cf6c04b}{00034}}     std::vector<const std::type\_info *> \mbox{\hyperlink{classsmacc_1_1StateReactor_a65c8ddfce40e7859e5c73fff1cf6c04b}{eventTypes}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00035}\mbox{\hyperlink{classsmacc_1_1StateReactor_a63cce05c412f3699cc1b15af9aeaf8af}{00035}}     std::map<\textcolor{keyword}{const} std::type\_info *, std::function<void(\textcolor{keywordtype}{void} *)>> \mbox{\hyperlink{classsmacc_1_1StateReactor_a63cce05c412f3699cc1b15af9aeaf8af}{eventCallbacks\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00037}00037     \mbox{\hyperlink{classsmacc_1_1StateReactor_ae319e9f7b0a2a80b4c5ace6ec8c99fb2}{StateReactor}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00039}00039     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_aa10b2c6b7d1e80f01b00cbdac526a2bf}{onInitialized}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00041}00041     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_a11ed02721fd751b8272540645b88f4a6}{onEntry}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00042}00042     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_ace125d986cc787c3940306b90bb67f07}{onExit}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00044}00044     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_a17646b3c68a6d80d1e4da8c14238ce36}{onEventNotified}}(\textcolor{keyword}{const} std::type\_info *eventType);}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00046}00046     \textcolor{keyword}{template} <\textcolor{keyword}{typename} EventType>}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00047}00047     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_a3d149851c5540110a29e9a7b3228239d}{postEvent}}(\textcolor{keyword}{const} EventType \&ev);}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00049}00049     \textcolor{keyword}{template} <\textcolor{keyword}{typename} EventType>}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00050}00050     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_a3d149851c5540110a29e9a7b3228239d}{postEvent}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00052}00052     \textcolor{comment}{// type based event callback}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00053}00053     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} TClass>}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00054}00054     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376}{createEventCallback}}(\textcolor{keywordtype}{void} (TClass::*\mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(T *), TClass *\textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00056}00056     \textcolor{comment}{// type based event callback}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00057}00057     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00058}00058     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376}{createEventCallback}}(std::function<\textcolor{keywordtype}{void}(T *)> \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}});}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00060}00060     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_aca5d4f7af06532272db55943b7810a43}{update}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00062}00062     \textcolor{comment}{//must returns true when the output event is triggered}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00063}\mbox{\hyperlink{classsmacc_1_1StateReactor_a445bc3c90980d75d7d815b85cfb68b21}{00063}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsmacc_1_1StateReactor_a445bc3c90980d75d7d815b85cfb68b21}{triggers}}() = 0;}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00065}00065     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TEv>}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00066}00066     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_acd4b35b4c82241fc27bb858761f6e4de}{addInputEvent}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00068}00068     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TEv>}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00069}00069     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_ae9d0dd0c8cdcc57f8881f0962040c8ed}{setOutputEvent}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00071}00071     \textcolor{comment}{//TDerived}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00072}00072     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_a5c1d734e3a495fa0f2b01229a3dbac3f}{initialize}}(\mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmaccState}} *\mbox{\hyperlink{classsmacc_1_1StateReactor_aabd30af9412a8fea9ec5906f173d9d4a}{ownerState}});}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00074}00074 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00075}\mbox{\hyperlink{classsmacc_1_1StateReactor_ad488bca73fa841277318d8b94c3a9421}{00075}}     \textcolor{keyword}{friend} \mbox{\hyperlink{classsmacc_1_1StateReactor_ad488bca73fa841277318d8b94c3a9421}{ISmaccStateMachine}};}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00077}00077     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TEvent>}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00078}\mbox{\hyperlink{classsmacc_1_1StateReactor_a9e1b551ab97d1c18b2e1bb60a60455da}{00078}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1StateReactor_a9e1b551ab97d1c18b2e1bb60a60455da}{notifyEvent}}(TEvent *ev)}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00079}00079     \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00080}00080         \textcolor{comment}{//the state machine uses this method to notify this state reactor some event happened.}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00081}00081         \textcolor{keyword}{auto} tid = \&(\textcolor{keyword}{typeid}(TEvent));}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00082}00082         \textcolor{keywordflow}{if} (std::find(\mbox{\hyperlink{classsmacc_1_1StateReactor_a65c8ddfce40e7859e5c73fff1cf6c04b}{eventTypes}}.begin(), \mbox{\hyperlink{classsmacc_1_1StateReactor_a65c8ddfce40e7859e5c73fff1cf6c04b}{eventTypes}}.end(), tid) != \mbox{\hyperlink{classsmacc_1_1StateReactor_a65c8ddfce40e7859e5c73fff1cf6c04b}{eventTypes}}.end())}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00083}00083         \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00084}00084             this-\/>\mbox{\hyperlink{classsmacc_1_1StateReactor_a17646b3c68a6d80d1e4da8c14238ce36}{onEventNotified}}(tid);}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00085}00085             this-\/>\mbox{\hyperlink{classsmacc_1_1StateReactor_aca5d4f7af06532272db55943b7810a43}{update}}();}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00087}00087             \textcolor{keywordflow}{if} (eventCallbacks\_.count(tid))}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00088}00088             \{}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00089}00089                 \mbox{\hyperlink{classsmacc_1_1StateReactor_a63cce05c412f3699cc1b15af9aeaf8af}{eventCallbacks\_}}[tid]((\textcolor{keywordtype}{void} *)ev);}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00090}00090             \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00091}00091         \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00092}00092     \}}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00093}00093 \};}
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{smacc__state__reactor_8h_source_l00095}00095 \} \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\hypertarget{classsm__viewer__sim_1_1OrNavigation}{}\doxysection{sm\+\_\+viewer\+\_\+sim\+::Or\+Navigation Class Reference}
+\label{classsm__viewer__sim_1_1OrNavigation}\index{sm\_viewer\_sim::OrNavigation@{sm\_viewer\_sim::OrNavigation}}
+
+
+{\ttfamily \#include $<$or\+\_\+navigation.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+viewer\+\_\+sim\+::Or\+Navigation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsm__viewer__sim_1_1OrNavigation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+viewer\+\_\+sim\+::Or\+Navigation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__viewer__sim_1_1OrNavigation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsm__viewer__sim_1_1OrNavigation_a6f39ecbb3c1ad253c283588df860a8c4}{on\+Initialize}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sm__viewer__sim_2include_2sm__viewer__sim_2orthogonals_2or__navigation_8h_source_l00009}{9}} of file \mbox{\hyperlink{sm__viewer__sim_2include_2sm__viewer__sim_2orthogonals_2or__navigation_8h_source}{or\+\_\+navigation.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__viewer__sim_1_1OrNavigation_a6f39ecbb3c1ad253c283588df860a8c4}\label{classsm__viewer__sim_1_1OrNavigation_a6f39ecbb3c1ad253c283588df860a8c4}} 
+\index{sm\_viewer\_sim::OrNavigation@{sm\_viewer\_sim::OrNavigation}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!sm\_viewer\_sim::OrNavigation@{sm\_viewer\_sim::OrNavigation}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+viewer\+\_\+sim\+::\+Or\+Navigation\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a6bb31c620cb64dd7b8417f8705c79c7a}{smacc\+::\+ISmacc\+Orthogonal}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__viewer__sim_2include_2sm__viewer__sim_2orthogonals_2or__navigation_8h_source_l00012}{12}} of file \mbox{\hyperlink{sm__viewer__sim_2include_2sm__viewer__sim_2orthogonals_2or__navigation_8h_source}{or\+\_\+navigation.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013     \{}
+\DoxyCodeLine{00014         \textcolor{keyword}{auto} movebaseClient = this-\/>createClient<ClMoveBaseZ>();}
+\DoxyCodeLine{00015         movebaseClient-\/>createComponent<\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\_move\_base\_z::Pose}}>();}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017         movebaseClient-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a3378552cb1a86aa26a07c0edc057448b}{initialize}}();}
+\DoxyCodeLine{00018     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__component_8cpp_source_l00020}{smacc\+::\+ISmacc\+Component\+::initialize()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__viewer__sim_1_1OrNavigation_a6f39ecbb3c1ad253c283588df860a8c4_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+viewer\+\_\+sim/include/sm\+\_\+viewer\+\_\+sim/orthogonals/\mbox{\hyperlink{sm__viewer__sim_2include_2sm__viewer__sim_2orthogonals_2or__navigation_8h}{or\+\_\+navigation.\+h}}\end{DoxyCompactItemize}

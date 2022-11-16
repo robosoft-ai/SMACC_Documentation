@@ -1,0 +1,292 @@
+\hypertarget{undo__path__global__planner_8cpp_source}{}\doxysection{undo\+\_\+path\+\_\+global\+\_\+planner.\+cpp}
+\label{undo__path__global__planner_8cpp_source}\index{smacc\_client\_library/move\_base\_z\_client/custom\_planners/undo\_path\_global\_planner/src/undo\_path\_global\_planner.cpp@{smacc\_client\_library/move\_base\_z\_client/custom\_planners/undo\_path\_global\_planner/src/undo\_path\_global\_planner.cpp}}
+\mbox{\hyperlink{undo__path__global__planner_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <boost/assign.hpp>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <boost/range/adaptor/reversed.hpp>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <boost/range/algorithm/copy.hpp>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <pluginlib/class\_list\_macros.h>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{undo__path__global__planner_8h}{undo\_path\_global\_planner/undo\_path\_global\_planner.h}}>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include <streambuf>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include <nav\_msgs/Path.h>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00014}00014 \textcolor{preprocessor}{\#include <visualization\_msgs/MarkerArray.h>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00015}00015 \textcolor{preprocessor}{\#include <tf/tf.h>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00016}00016 \textcolor{preprocessor}{\#include <tf/transform\_datatypes.h>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00017}00017 \textcolor{preprocessor}{\#include <angles/angles.h>}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00019}00019 \textcolor{comment}{//register this planner as a BaseGlobalPlanner plugin}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00021}\mbox{\hyperlink{undo__path__global__planner_8cpp_a4726a7033cec77468508537456431d13}{00021}} \mbox{\hyperlink{undo__path__global__planner_8cpp_a4726a7033cec77468508537456431d13}{PLUGINLIB\_EXPORT\_CLASS}}(\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner}{cl\_move\_base\_z::undo\_path\_global\_planner::UndoPathGlobalPlanner}}, nav\_core::BaseGlobalPlanner);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00023}00023 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00024}00024 \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00025}00025     \textcolor{keyword}{namespace }undo\_path\_global\_planner}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00026}00026     \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00032}\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_aaea18b14afd15cd5160e34a3a829b46f}{00032}}         \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_aaea18b14afd15cd5160e34a3a829b46f}{UndoPathGlobalPlanner::UndoPathGlobalPlanner}}()}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00033}00033         \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00034}00034             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9cb4fb49c952deeb77eb1cb9648d122f}{skip\_straight\_motion\_distance\_}} = 0.2;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00035}00035         \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00037}\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_aae5dcc1ca67cffca6b96fc3d267ba448}{00037}}         \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_aae5dcc1ca67cffca6b96fc3d267ba448}{UndoPathGlobalPlanner::\string~UndoPathGlobalPlanner}}()}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00038}00038         \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00039}00039             \textcolor{comment}{//clear}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00040}00040             nav\_msgs::Path planMsg;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00041}00041             planMsg.header.stamp = ros::Time::now();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00042}00042             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a65bf364a122d5950baf1bf8b42309d68}{planPub\_}}.publish(planMsg);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00043}00043         \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00050}\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a69e0fbb98872f108f679b2a6620638f5}{00050}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a69e0fbb98872f108f679b2a6620638f5}{UndoPathGlobalPlanner::initialize}}(std::string name, costmap\_2d::Costmap2DROS *costmap\_ros)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00051}00051         \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00052}00052             \textcolor{comment}{//ROS\_INFO\_NAMED("{}Backwards"{}, "{}UndoPathGlobalPlanner initialize"{});}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00053}00053             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_ab63eeb465e3ae989a6edcc4d059cf8f0}{costmap\_ros\_}} = costmap\_ros;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00054}00054             \textcolor{comment}{//ROS\_WARN\_NAMED("{}Backwards"{}, "{}initializating global planner, costmap address: \%ld"{}, (long)costmap\_ros);}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00056}00056             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a1cdf8a98469b5841d05a8cec9ad6f675}{forwardPathSub\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a5db1360cd47ccdf63276c75f507d6470}{nh\_}}.subscribe(\textcolor{stringliteral}{"{}odom\_tracker\_path"{}}, 2, \&\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_ae5e3c5922ceb8783a6a01d904fc9c230}{UndoPathGlobalPlanner::onForwardTrailMsg}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00058}00058             ros::NodeHandle nh;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00059}00059             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a65bf364a122d5950baf1bf8b42309d68}{planPub\_}} = nh.advertise<nav\_msgs::Path>(\textcolor{stringliteral}{"{}undo\_path\_planner/global\_plan"{}}, 1);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00060}00060             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_abfa0536872a0e3f8c823bebf0ed398fb}{markersPub\_}} = nh.advertise<visualization\_msgs::MarkerArray>(\textcolor{stringliteral}{"{}undo\_path\_planner/markers"{}}, 1);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00061}00061         \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00068}\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_ae5e3c5922ceb8783a6a01d904fc9c230}{00068}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_ae5e3c5922ceb8783a6a01d904fc9c230}{UndoPathGlobalPlanner::onForwardTrailMsg}}(\textcolor{keyword}{const} nav\_msgs::Path::ConstPtr \&trailMessage)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00069}00069         \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00070}00070             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}} = *trailMessage;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00071}00071             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] received backward path msg poses ["{}} << \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size() << \textcolor{stringliteral}{"{}]"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00072}00072         \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00079}\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a37a85e1cd57173902d8302cb8cb9b933}{00079}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a37a85e1cd57173902d8302cb8cb9b933}{UndoPathGlobalPlanner::publishGoalMarker}}(\textcolor{keyword}{const} geometry\_msgs::Pose \&pose, \textcolor{keywordtype}{double} \mbox{\hyperlink{namespacefake__cube__perception__node_a36e88703ab69fd35065e8a8d9344903e}{r}}, \textcolor{keywordtype}{double} g, \textcolor{keywordtype}{double} b)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00080}00080         \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00081}00081             \textcolor{keywordtype}{double} phi = tf::getYaw(pose.orientation);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00082}00082             visualization\_msgs::Marker marker;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00083}00083             marker.header.frame\_id = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_ab63eeb465e3ae989a6edcc4d059cf8f0}{costmap\_ros\_}}-\/>getGlobalFrameID();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00084}00084             marker.header.stamp = ros::Time::now();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00085}00085             marker.ns = \textcolor{stringliteral}{"{}my\_namespace2"{}};}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00086}00086             marker.id = 0;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00087}00087             marker.type = visualization\_msgs::Marker::ARROW;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00088}00088             marker.action = visualization\_msgs::Marker::ADD;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00089}00089             marker.scale.x = 0.1;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00090}00090             marker.scale.y = 0.3;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00091}00091             marker.scale.z = 0.1;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00092}00092             marker.color.a = 1.0;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00093}00093             marker.color.r = \mbox{\hyperlink{namespacefake__cube__perception__node_a36e88703ab69fd35065e8a8d9344903e}{r}};}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00094}00094             marker.color.g = g;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00095}00095             marker.color.b = b;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00097}00097             geometry\_msgs::Point start, end;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00098}00098             start.x = pose.position.x;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00099}00099             start.y = pose.position.y;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00101}00101             end.x = pose.position.x + 0.5 * cos(phi);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00102}00102             end.y = pose.position.y + 0.5 * sin(phi);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00104}00104             marker.points.push\_back(start);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00105}00105             marker.points.push\_back(end);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00107}00107             visualization\_msgs::MarkerArray ma;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00108}00108             ma.markers.push\_back(marker);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00110}00110             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_abfa0536872a0e3f8c823bebf0ed398fb}{markersPub\_}}.publish(ma);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00111}00111         \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00118}\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a659c16f439d33ac7026a54bb65c26ca8}{00118}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a659c16f439d33ac7026a54bb65c26ca8}{UndoPathGlobalPlanner::createDefaultUndoPathPlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped \&start,}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00119}00119                                                               \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&goal,}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00120}00120                                                               std::vector<geometry\_msgs::PoseStamped> \&plan)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00121}00121         \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00122}00122             \textcolor{comment}{//ROS\_WARN\_NAMED("{}Backwards"{}, "{}Iterating in last forward cord path"{});}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00123}00123             \textcolor{keywordtype}{int} i = \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size() -\/ 1;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00124}00124             \textcolor{keywordtype}{double} linear\_mindist = std::numeric\_limits<double>::max();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00125}00125             \textcolor{keywordtype}{int} mindistindex = -\/1;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00126}00126             \textcolor{keywordtype}{double} startPoseAngle = tf::getYaw(start.pose.orientation);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00127}00127             geometry\_msgs::Pose startPositionProjected;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00129}00129             \textcolor{comment}{// The goal of this code is finding the most convenient initial path pose.}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00130}00130             \textcolor{comment}{// first, find closest linear point to the current robot position}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00131}00131             \textcolor{comment}{// we start from the final goal, that is, the beginning of the trajectory}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00132}00132             \textcolor{comment}{// (since this was the forward motion from the odom tracker)}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00133}00133             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&p : \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses \textcolor{comment}{/*| boost::adaptors::reversed*/})}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00134}00134             \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00135}00135                 geometry\_msgs::PoseStamped pose = p;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00136}00136                 pose.header.frame\_id = \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_ab63eeb465e3ae989a6edcc4d059cf8f0}{costmap\_ros\_}}-\/>getGlobalFrameID();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00137}00137                 pose.header.stamp = ros::Time::now();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00139}00139                 \textcolor{keywordtype}{double} dx = pose.pose.position.x -\/ start.pose.position.x;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00140}00140                 \textcolor{keywordtype}{double} dy = pose.pose.position.y -\/ start.pose.position.y;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00142}00142                 \textcolor{keywordtype}{double} dist = sqrt(dx * dx + dy * dy);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00143}00143                 \textcolor{keywordtype}{double} angleOrientation = tf::getYaw(pose.pose.orientation);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00144}00144                 \textcolor{keywordtype}{double} angleError = fabs(angles::shortest\_angular\_distance(angleOrientation, startPoseAngle));}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00145}00145                 \textcolor{keywordflow}{if} (dist <= linear\_mindist)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00146}00146                 \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00147}00147                     mindistindex = i;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00148}00148                     linear\_mindist = dist;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00149}00149                     startPositionProjected = pose.pose;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00151}00151                     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] initial start point search, NEWBEST\_LINEAR= "{}} << i << \textcolor{stringliteral}{"{}. error, linear: "{}} << linear\_mindist << \textcolor{stringliteral}{"{}, angular: "{}} << angleError);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00152}00152                 \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00153}00153                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00154}00154                 \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00155}00155                     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] initial start point search, skipped= "{}} << i << \textcolor{stringliteral}{"{}. best linear error: "{}} << linear\_mindist << \textcolor{stringliteral}{"{}. current error, linear: "{}} << dist << \textcolor{stringliteral}{"{} angular: "{}} << angleError);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00156}00156                 \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00158}00158                 i-\/-\/;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00159}00159             \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00161}00161             \textcolor{keywordtype}{double} \textcolor{keyword}{const} ERROR\_DISTANCE\_PURE\_SPINNING\_FACTOR = 1.5;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00162}00162             \textcolor{comment}{// Concept of second pass: now we only consider a pure spinning motion in this point. We want to consume some very close angular targets, (accepting a larger linear minerror of 1.5 besterror. That is, more or less in the same point).}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00164}00164             ROS\_DEBUG(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] second angular pass"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00165}00165             \textcolor{keywordtype}{double} angularMinDist = std::numeric\_limits<double>::max();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00167}00167                 \textcolor{keywordflow}{if}(mindistindex >=  \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size())}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00168}00168                     mindistindex = \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size() -\/1;\textcolor{comment}{// workaround, something is making a out of bound exception in poses array access}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00169}00169             \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00170}00170                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size() == 0)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00171}00171                 \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00172}00172                     ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] Warning possible bug"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00173}00173                 \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00175}00175                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] second pass loop"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00176}00176                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = mindistindex; i >= 0; i-\/-\/)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00177}00177                 \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00178}00178                     \textcolor{comment}{// warning this index, i refers to some inverse interpretation from the previous loop,}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00179}00179                     \textcolor{comment}{// (last indexes in this path corresponds to the poses closer to our current position)}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00180}00180                     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] "{}} << i << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size());}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00181}00181                     \textcolor{keyword}{auto} index = \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size() -\/ i -\/1;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00182}00182                     \textcolor{keywordflow}{if}(index < 0 || index >= \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size())}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00183}00183                     \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00184}00184                         ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] this should not happen. Check implementation."{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00185}00185                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00186}00186                     \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00187}00187                     geometry\_msgs::PoseStamped pose = \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses[\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size() -\/ i -\/1];}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00189}00189                     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] global frame"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00190}00190                     pose.header.frame\_id = \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_ab63eeb465e3ae989a6edcc4d059cf8f0}{costmap\_ros\_}}-\/>getGlobalFrameID();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00191}00191                     pose.header.stamp = ros::Time::now();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00193}00193                     \textcolor{keywordtype}{double} dx = pose.pose.position.x -\/ start.pose.position.x;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00194}00194                     \textcolor{keywordtype}{double} dy = pose.pose.position.y -\/ start.pose.position.y;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00196}00196                     \textcolor{keywordtype}{double} dist = sqrt(dx * dx + dy * dy);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00197}00197                     \textcolor{keywordflow}{if} (dist <= linear\_mindist * ERROR\_DISTANCE\_PURE\_SPINNING\_FACTOR)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00198}00198                     \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00199}00199                         \textcolor{keywordtype}{double} angleOrientation = tf::getYaw(pose.pose.orientation);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00200}00200                         \textcolor{keywordtype}{double} angleError = fabs(angles::shortest\_angular\_distance(angleOrientation, startPoseAngle));}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00201}00201                         \textcolor{keywordflow}{if} (angleError < angularMinDist)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00202}00202                         \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00203}00203                             angularMinDist = angleError;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00204}00204                             mindistindex = i;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00205}00205                             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] initial start point search (angular update), NEWBEST\_ANGULAR= "{}} << i << \textcolor{stringliteral}{"{}. error, linear: "{}}<<  dist << \textcolor{stringliteral}{"{}("{}} << linear\_mindist << \textcolor{stringliteral}{"{})"{}} <<\textcolor{stringliteral}{"{}, angular: "{}} << angleError << \textcolor{stringliteral}{"{}("{}} << angularMinDist << \textcolor{stringliteral}{"{})"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00206}00206                         \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00207}00207                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00208}00208                         \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00209}00209                             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] initial start point search (angular update), skipped= "{}} << i <<\textcolor{stringliteral}{"{}. error, linear: "{}}<<  dist << \textcolor{stringliteral}{"{}("{}} << linear\_mindist << \textcolor{stringliteral}{"{})"{}} <<\textcolor{stringliteral}{"{}, angular: "{}}  << angleError << \textcolor{stringliteral}{"{}("{}} << angularMinDist << \textcolor{stringliteral}{"{})"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00210}00210                         \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00211}00211                     \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00212}00212                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00213}00213                     \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00214}00214                         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] initial start point search (angular update) not in linear range, skipped= "{}} << i << \textcolor{stringliteral}{"{} linear error: "{}} << dist << \textcolor{stringliteral}{"{}("{}} << linear\_mindist << \textcolor{stringliteral}{"{})"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00215}00215                     \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00216}00216                 \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00217}00217             \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00218}00218 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00219}00219             \textcolor{keywordflow}{if} (mindistindex != -\/1)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00220}00220             \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00221}00221                 \textcolor{comment}{//plan.push\_back(start);}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00222}00222 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00223}00223                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] Creating the backwards plan from odom tracker path ("{}} << \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size() << \textcolor{stringliteral}{"{}) poses"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00224}00224                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] closer point to goal i="{}} << mindistindex << \textcolor{stringliteral}{"{} (linear min dist "{}} << linear\_mindist << \textcolor{stringliteral}{"{})"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00225}00225                 \textcolor{comment}{// copy the path at the inverse direction}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00226}00226                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size() -\/ 1; i >= mindistindex; i-\/-\/)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00227}00227                 \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00228}00228                     \textcolor{keyword}{auto} \&pose = \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses[i];}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00229}00229                     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] adding to plan i = "{}} << i);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00230}00230                     plan.push\_back(pose);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00231}00231                 \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00232}00232                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner] refined plan has "{}} << plan.size() << \textcolor{stringliteral}{"{}  points"{}});}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00233}00233             \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00234}00234             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00235}00235             \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00236}00236                 ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"{}[UndoPathGlobalPlanner ] backward global plan size:  "{}} << plan.size());}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00237}00237             \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00238}00238 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00239}00239             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00240}00240         \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00241}00241 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00247}\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a46034d27c0811abae440009457a7f8b0}{00247}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a46034d27c0811abae440009457a7f8b0}{UndoPathGlobalPlanner::makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped \&start,}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00248}00248                                              \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&goal, std::vector<geometry\_msgs::PoseStamped> \&plan)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00249}00249         \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00250}00250             \textcolor{comment}{//ROS\_WARN\_NAMED("{}Backwards"{}, "{}Backwards global planner: Generating global plan "{});}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00251}00251             \textcolor{comment}{//ROS\_WARN\_NAMED("{}Backwards"{}, "{}Clearing..."{});}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00252}00252 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00253}00253             plan.clear();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00255}00255             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size() == 0)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00256}00256             \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00257}00257                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00258}00258             \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00259}00259 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00260}00260             \textcolor{keyword}{auto} forcedGoal = \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses[\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a9a4a6e40f5b6cb5f77dedbc5b6170871}{lastForwardPathMsg\_}}.poses.size() -\/ 1]; \textcolor{comment}{// FORCE LAST POSE}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00261}00261             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a659c16f439d33ac7026a54bb65c26ca8}{createDefaultUndoPathPlan}}(start, forcedGoal, plan);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00262}00262             \textcolor{comment}{//this-\/>createPureSpiningAndStragihtLineBackwardPath(start, goal, plan);}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00264}00264             \textcolor{comment}{//ROS\_INFO\_STREAM("{} start -\/ "{} << start);}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00265}00265             \textcolor{comment}{//ROS\_INFO\_STREAM("{} end -\/ "{} << goal.pose.position);}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00266}00266 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00267}00267             \textcolor{comment}{//ROS\_INFO("{}3 -\/ heading to goal orientation"{});}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00268}00268             \textcolor{comment}{//double goalOrientation = angles::normalize\_angle(tf::getYaw(goal.pose.orientation));}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00269}00269             \textcolor{comment}{//cl\_move\_base\_z::makePureSpinningSubPlan(prevState,goalOrientation,plan);}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00270}00270 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00271}00271             \textcolor{comment}{//ROS\_WARN\_STREAM( "{}MAKE PLAN INVOKED, plan size:"{}<< plan.size());}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00272}00272             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a37a85e1cd57173902d8302cb8cb9b933}{publishGoalMarker}}(forcedGoal.pose, 1.0, 0, 1.0);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00274}00274             nav\_msgs::Path planMsg;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00275}00275             planMsg.poses = plan;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00276}00276             planMsg.header.frame\_id = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_ab63eeb465e3ae989a6edcc4d059cf8f0}{costmap\_ros\_}}-\/>getGlobalFrameID();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00277}00277 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00278}00278             \textcolor{comment}{// check plan rejection}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00279}00279             \textcolor{keywordtype}{bool} acceptedGlobalPlan = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00280}00280 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00281}00281             \textcolor{comment}{// static const unsigned char NO\_INFORMATION = 255;}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00282}00282             \textcolor{comment}{// static const unsigned char LETHAL\_OBSTACLE = 254;}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00283}00283             \textcolor{comment}{// static const unsigned char INSCRIBED\_INFLATED\_OBSTACLE = 253;}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00284}00284             \textcolor{comment}{// static const unsigned char FREE\_SPACE = 0;}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00285}00285 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00286}00286             costmap\_2d::Costmap2D *costmap2d = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_ab63eeb465e3ae989a6edcc4d059cf8f0}{costmap\_ros\_}}-\/>getCostmap();}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00287}00287             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&p : plan)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00288}00288             \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00289}00289                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, my;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00290}00290                 costmap2d-\/>worldToMap(p.pose.position.x, p.pose.position.y, mx, my);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00291}00291                 \textcolor{keyword}{auto} cost = costmap2d-\/>getCost(mx, my);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00292}00292 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00293}00293                 \textcolor{keywordflow}{if} (cost >= costmap\_2d::INSCRIBED\_INFLATED\_OBSTACLE)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00294}00294                 \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00295}00295                     acceptedGlobalPlan = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00296}00296                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00297}00297                 \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00298}00298             \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00299}00299 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00300}00300             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a65bf364a122d5950baf1bf8b42309d68}{planPub\_}}.publish(planMsg);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00301}00301 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00302}00302             \textcolor{comment}{// this was previously set to size() <= 1, but a plan with a single point is also a valid plan (the goal)}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00303}00303             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00304}00304         \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00305}00305 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00311}\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_aca09f640e4bda4d5ccc9613276fd3f71}{00311}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a46034d27c0811abae440009457a7f8b0}{UndoPathGlobalPlanner::makePlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped \&start,}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00312}00312                                              \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&goal, std::vector<geometry\_msgs::PoseStamped> \&plan,}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00313}00313                                              \textcolor{keywordtype}{double} \&cost)}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00314}00314         \{}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00315}00315             cost = 0;}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00316}00316             \mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_a46034d27c0811abae440009457a7f8b0}{makePlan}}(start, goal, plan);}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00317}00317             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00318}00318         \}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00319}00319 }
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00320}00320     \} \textcolor{comment}{// namespace undo\_path\_global\_planner}}
+\DoxyCodeLine{\Hypertarget{undo__path__global__planner_8cpp_source_l00321}00321 \} \textcolor{comment}{// namespace cl\_move\_base\_z}}
+
+\end{DoxyCode}

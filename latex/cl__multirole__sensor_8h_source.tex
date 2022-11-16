@@ -1,0 +1,107 @@
+\hypertarget{cl__multirole__sensor_8h_source}{}\doxysection{cl\+\_\+multirole\+\_\+sensor.\+h}
+\label{cl__multirole__sensor_8h_source}\index{smacc\_client\_library/multirole\_sensor\_client/include/multirole\_sensor\_client/cl\_multirole\_sensor.h@{smacc\_client\_library/multirole\_sensor\_client/include/multirole\_sensor\_client/cl\_multirole\_sensor.h}}
+\mbox{\hyperlink{cl__multirole__sensor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__subscriber__client_8h}{smacc/client\_bases/smacc\_subscriber\_client.h}}>}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <boost/statechart/event.hpp>}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00006}00006 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <ros/duration.h>}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <boost/signals2.hpp>}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <boost/optional/optional\_io.hpp>}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00011}\mbox{\hyperlink{namespacecl__multirole__sensor}{00011}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__multirole__sensor}{cl\_multirole\_sensor}}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00013}00013 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc}{smacc}};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00015}00015 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TSource, \textcolor{keyword}{typename} TOrthogonal>}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00016}\mbox{\hyperlink{structcl__multirole__sensor_1_1EvTopicMessageTimeout}{00016}} \textcolor{keyword}{struct }\mbox{\hyperlink{structcl__multirole__sensor_1_1EvTopicMessageTimeout}{EvTopicMessageTimeout}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<EvTopicMessageTimeout<TSource, TOrthogonal>>}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00018}\mbox{\hyperlink{structcl__multirole__sensor_1_1EvTopicMessageTimeout_a56efab3b763d32bdd89ca9d737ab55dc}{00018}}   ros::TimerEvent \mbox{\hyperlink{structcl__multirole__sensor_1_1EvTopicMessageTimeout_a56efab3b763d32bdd89ca9d737ab55dc}{timerData}};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00019}00019 \};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00021}00021 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc_1_1client__bases}{smacc::client\_bases}};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00023}00023 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00024}00024 \textcolor{keyword}{template} <\textcolor{keyword}{typename} MessageType>}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00025}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor}{00025}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor}{ClMultiroleSensor}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient}{smacc::client\_bases::SmaccSubscriberClient}}<MessageType>}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00027}00027 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00028}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a76f2c1e5c54556bacdaf0aaf809972da}{00028}}   \textcolor{keyword}{typedef} MessageType \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a76f2c1e5c54556bacdaf0aaf809972da}{TMessageType}};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00029}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_afd37257b949c421d4f579b47352be95f}{00029}}   \mbox{\hyperlink{classsmacc_1_1SmaccSignal}{SmaccSignal}}<void(\textcolor{keyword}{const} ros::TimerEvent \&)> \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_afd37257b949c421d4f579b47352be95f}{onMessageTimeout\_}};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00031}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a25fcca3996fb5cbd5aa46cae4170e75e}{00031}}   \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a25fcca3996fb5cbd5aa46cae4170e75e}{ClMultiroleSensor}}()}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00032}00032       : \mbox{\hyperlink{namespacesmacc}{smacc}}::client\_bases::\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient}{SmaccSubscriberClient}}<MessageType>()}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00033}00033   \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00034}00034     ROS\_INFO(\textcolor{stringliteral}{"{}[ClMultiroleSensor] constructor"{}});}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00035}00035     \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a1f2bbfd7721308cb1eae4423d5fe999b}{initialized\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00036}00036   \}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00038}00038   \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00039}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a9a2ffac7f03e1570bedc246ea4b00078}{00039}}   boost::signals2::connection \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a9a2ffac7f03e1570bedc246ea4b00078}{onMessageTimeout}}(\textcolor{keywordtype}{void} (T::*\mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(\textcolor{keyword}{const} ros::TimerEvent \&), T *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00040}00040   \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00041}00041     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(onMessageTimeout\_, \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00042}00042   \}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00044}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a61a6e5dce7f1b34508701a8bc8f06ab9}{00044}}   std::function<void(\textcolor{keyword}{const} ros::TimerEvent \&ev)> \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a61a6e5dce7f1b34508701a8bc8f06ab9}{postTimeoutMessageEvent}};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00046}00046   \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} TSourceObject>}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00047}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a1626a5caea2f4ea03052f70fe0117d83}{00047}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a1626a5caea2f4ea03052f70fe0117d83}{onOrthogonalAllocation}}()}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00048}00048   \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00049}00049     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient}{SmaccSubscriberClient<MessageType>::template}} onOrthogonalAllocation<TOrthogonal, TSourceObject>();}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00051}00051     this-\/>postTimeoutMessageEvent = [=](\textcolor{keyword}{auto} \&timerdata) \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00052}00052       \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_afd37257b949c421d4f579b47352be95f}{onMessageTimeout\_}}(timerdata);}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00054}00054       \textcolor{keyword}{auto} \textcolor{keyword}{event} = \textcolor{keyword}{new} \mbox{\hyperlink{structcl__multirole__sensor_1_1EvTopicMessageTimeout}{EvTopicMessageTimeout<TSourceObject, TOrthogonal>}}();}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00055}00055       \textcolor{keyword}{event}-\/>timerData = timerdata;}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00056}00056       this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a21a79203cb44fc717d4d977c190327c6}{postEvent}}(event);}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00057}00057     \};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00058}00058   \}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00060}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a3847e19f925f65dd034964eb2d0b3594}{00060}}   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a3847e19f925f65dd034964eb2d0b3594}{initialize}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00061}00061 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00062}00062     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a1f2bbfd7721308cb1eae4423d5fe999b}{initialized\_}})}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00063}00063     \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00064}00064       \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_af188f0f5e89de26a07e1f964cdd23a70}{SmaccSubscriberClient<MessageType>::initialize}}();}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00066}00066       this-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a4f02251e3a161fb6d802b154b1081f18}{onMessageReceived}}(\&\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor}{ClMultiroleSensor<MessageType>::resetTimer}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00068}00068       \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a25cddc88db7d6208258630c0e5982f1e}{timeout\_}})}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00069}00069       \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00070}00070         \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_abd24848b13def072d7e89b830937439f}{timeoutTimer\_}} = this-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a401d2476e89e27acc2e905acd701f053}{nh\_}}.createTimer(*\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a25cddc88db7d6208258630c0e5982f1e}{timeout\_}}, boost::bind(\&\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor}{ClMultiroleSensor<MessageType>::timeoutCallback}}, \textcolor{keyword}{this}, \_1));}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00071}00071         \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_abd24848b13def072d7e89b830937439f}{timeoutTimer\_}}.start();}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00072}00072       \}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00073}00073       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00074}00074       \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00075}00075         ROS\_WARN(\textcolor{stringliteral}{"{}Timeout sensor client not set, skipping timeout watchdog funcionality"{}});}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00076}00076       \}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00078}00078       \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a1f2bbfd7721308cb1eae4423d5fe999b}{initialized\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00079}00079     \}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00080}00080   \}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00082}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a25cddc88db7d6208258630c0e5982f1e}{00082}}   boost::optional<ros::Duration> \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a25cddc88db7d6208258630c0e5982f1e}{timeout\_}};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00084}00084 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00085}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_afa5b63048466234906971db69677b3f0}{00085}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_afa5b63048466234906971db69677b3f0}{resetTimer}}(\textcolor{keyword}{const} MessageType \&\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}})}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00086}00086   \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00087}00087     \textcolor{comment}{//resetting the timer}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00088}00088     this-\/>\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_abd24848b13def072d7e89b830937439f}{timeoutTimer\_}}.stop();}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00089}00089     this-\/>\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_abd24848b13def072d7e89b830937439f}{timeoutTimer\_}}.start();}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00090}00090   \}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00092}00092 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00093}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_abd24848b13def072d7e89b830937439f}{00093}}   ros::Timer \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_abd24848b13def072d7e89b830937439f}{timeoutTimer\_}};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00094}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a1f2bbfd7721308cb1eae4423d5fe999b}{00094}}   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a1f2bbfd7721308cb1eae4423d5fe999b}{initialized\_}};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00096}\mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_af09cd42f86b55e379a028cfd0387d76e}{00096}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_af09cd42f86b55e379a028cfd0387d76e}{timeoutCallback}}(\textcolor{keyword}{const} ros::TimerEvent \&timerdata)}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00097}00097   \{}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00098}00098     \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a61a6e5dce7f1b34508701a8bc8f06ab9}{postTimeoutMessageEvent}}(timerdata);}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00099}00099   \}}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00100}00100 \};}
+\DoxyCodeLine{\Hypertarget{cl__multirole__sensor_8h_source_l00101}00101 \} \textcolor{comment}{// namespace cl\_multirole\_sensor}}
+
+\end{DoxyCode}

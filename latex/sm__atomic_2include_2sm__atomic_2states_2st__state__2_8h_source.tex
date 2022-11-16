@@ -1,0 +1,46 @@
+\hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source}{}\doxysection{st\+\_\+state\+\_\+2.\+h}
+\label{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source}\index{smacc\_sm\_reference\_library/sm\_atomic/include/sm\_atomic/states/st\_state\_2.h@{smacc\_sm\_reference\_library/sm\_atomic/include/sm\_atomic/states/st\_state\_2.h}}
+\mbox{\hyperlink{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__atomic}{sm\_atomic}}}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00005}00005 \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00006}\mbox{\hyperlink{structsm__atomic_1_1State2}{00006}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__atomic_1_1State2}{State2}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<State2, SmAtomic>}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00008}00008     \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00010}00010 \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00011}00011     \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00013}00013     Transition<EvTimer<CbTimerCountdownOnce, OrTimer>, \mbox{\hyperlink{structsm__atomic_1_1State1}{State1}}, \mbox{\hyperlink{structsmacc_1_1default__transition__tags_1_1SUCCESS}{SUCCESS}}>}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00015}\mbox{\hyperlink{structsm__atomic_1_1State2_a9436556de6be8ea64fd35707aa4bfec8}{00015}}     >\mbox{\hyperlink{structsm__atomic_1_1State2_a9436556de6be8ea64fd35707aa4bfec8}{reactions}};}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00018}00018 \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00019}\mbox{\hyperlink{structsm__atomic_1_1State2_ab6cafa3e8433c2d7ee10fa6fec8f3748}{00019}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__atomic_1_1State2_ab6cafa3e8433c2d7ee10fa6fec8f3748}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00020}00020     \{}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00021}00021         configure\_orthogonal<OrTimer, CbTimerCountdownOnce>(5); \textcolor{comment}{// EvTimer triggers once at 10 client ticks}}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00024}\mbox{\hyperlink{structsm__atomic_1_1State2_afd749890e13d8aa36f1ac6645a5f7f9a}{00024}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__atomic_1_1State2_afd749890e13d8aa36f1ac6645a5f7f9a}{runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00025}00025     \{}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00026}00026         ROS\_INFO(\textcolor{stringliteral}{"{}Entering State2"{}});}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00029}\mbox{\hyperlink{structsm__atomic_1_1State2_a85ae934666acb451cd847c7192be72fc}{00029}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__atomic_1_1State2_a85ae934666acb451cd847c7192be72fc}{onEntry}}()}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00030}00030     \{}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00031}00031         ROS\_INFO(\textcolor{stringliteral}{"{}On Entry!"{}});}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00034}\mbox{\hyperlink{structsm__atomic_1_1State2_ac6aed12a8e4fa53968de90ca540a59ff}{00034}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__atomic_1_1State2_ac6aed12a8e4fa53968de90ca540a59ff}{onExit}}()}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00036}00036         ROS\_INFO(\textcolor{stringliteral}{"{}On Exit!"{}});}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00039}00039 \};}
+\DoxyCodeLine{\Hypertarget{sm__atomic_2include_2sm__atomic_2states_2st__state__2_8h_source_l00040}00040 \}}
+
+\end{DoxyCode}

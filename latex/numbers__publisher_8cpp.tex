@@ -1,0 +1,59 @@
+\hypertarget{numbers__publisher_8cpp}{}\doxysection{smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+subscriber/servers/numbers\+\_\+publisher/numbers\+\_\+publisher.cpp File Reference}
+\label{numbers__publisher_8cpp}\index{smacc\_sm\_reference\_library/sm\_subscriber/servers/numbers\_publisher/numbers\_publisher.cpp@{smacc\_sm\_reference\_library/sm\_subscriber/servers/numbers\_publisher/numbers\_publisher.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$std\+\_\+msgs/\+UInt16.\+h$>$}\newline
+Include dependency graph for numbers\+\_\+publisher.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{numbers__publisher_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{numbers__publisher_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{numbers__publisher_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{numbers__publisher_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{numbers\_publisher.cpp@{numbers\_publisher.cpp}!main@{main}}
+\index{main@{main}!numbers\_publisher.cpp@{numbers\_publisher.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{numbers__publisher_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{numbers__publisher_8cpp_source}{numbers\+\_\+publisher.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005 \{}
+\DoxyCodeLine{00006   ros::init(argc, argv, \textcolor{stringliteral}{"{}numbers\_publisher"{}});}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008   ros::NodeHandle nh\_;}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010   \textcolor{keyword}{auto} \mbox{\hyperlink{namespacebattery__monitor__node_ab13957b56951b692f19d70ccac2e2511}{pub}} = nh\_.advertise<std\_msgs::UInt16>(\textcolor{stringliteral}{"{}/numbers"{}}, 1);}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012   ros::Rate \mbox{\hyperlink{namespacefake__cube__perception__node_a36e88703ab69fd35065e8a8d9344903e}{r}}(0.5);}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014   \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00015   \textcolor{keywordflow}{while} (ros::ok())}
+\DoxyCodeLine{00016   \{}
+\DoxyCodeLine{00017     std\_msgs::UInt16 \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}};}
+\DoxyCodeLine{00018     \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}.data = i++;}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020     \mbox{\hyperlink{namespacebattery__monitor__node_ab13957b56951b692f19d70ccac2e2511}{pub}}.publish(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022     \mbox{\hyperlink{namespacefake__cube__perception__node_a36e88703ab69fd35065e8a8d9344903e}{r}}.sleep();}
+\DoxyCodeLine{00023     ros::spinOnce();}
+\DoxyCodeLine{00024   \}}
+\DoxyCodeLine{00025 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{battery__monitor__node_8py_source_l00017}{battery\+\_\+monitor\+\_\+node\+::msg}}, \mbox{\hyperlink{battery__monitor__node_8py_source_l00011}{battery\+\_\+monitor\+\_\+node\+::pub}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2servers_2fake__cube__perception__node_8py_source_l00118}{fake\+\_\+cube\+\_\+perception\+\_\+node\+::r}}.
+

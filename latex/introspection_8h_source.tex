@@ -1,0 +1,287 @@
+\hypertarget{introspection_8h_source}{}\doxysection{introspection.\+h}
+\label{introspection_8h_source}\index{smacc/include/smacc/introspection/introspection.h@{smacc/include/smacc/introspection/introspection.h}}
+\mbox{\hyperlink{introspection_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <boost/statechart/state.hpp>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <boost/statechart/simple\_state.hpp>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <boost/statechart/event.hpp>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <typeinfo>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <boost/mpl/list.hpp>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <boost/mpl/for\_each.hpp>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <boost/mpl/transform.hpp>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__types_8h}{smacc/smacc\_types.h}}>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00020}00020 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{string__type__walker_8h}{smacc/introspection/string\_type\_walker.h}}>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00021}00021 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__state__info_8h}{smacc/introspection/smacc\_state\_info.h}}>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <smacc\_msgs/SmaccTransition.h>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00025}00025 \textcolor{keyword}{namespace }sc = boost::statechart;}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00027}00027 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00028}00028 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00029}00029 \textcolor{keyword}{namespace }introspection}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00031}00031 \textcolor{keyword}{using namespace }boost;}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00032}00032 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc_1_1default__transition__tags}{smacc::default\_transition\_tags}};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00034}00034 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacesmacc_1_1introspection_a6c1b51c4d44fd5e41fe218f1ee150681}{transitionInfoToMsg}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsmacc_1_1introspection_1_1SmaccTransitionInfo}{SmaccTransitionInfo}} \&transition, smacc\_msgs::SmaccTransition \&transitionMsg);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00036}\mbox{\hyperlink{namespacesmacc_1_1introspection_aa4064aa24887868c6347efc004c08986}{00036}} \textcolor{keyword}{typedef} std::allocator<void> \mbox{\hyperlink{namespacesmacc_1_1introspection_aa4064aa24887868c6347efc004c08986}{SmaccAllocator}};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00038}00038 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00039}\mbox{\hyperlink{namespacesmacc_1_1introspection_a8acc3b4146a8b2bb0a9fa4178840e9b9}{00039}} \textcolor{keyword}{auto} \mbox{\hyperlink{namespacesmacc_1_1introspection_a8acc3b4146a8b2bb0a9fa4178840e9b9}{optionalNodeHandle}}(boost::intrusive\_ptr<T> \&obj)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00040}00040     -\/> ros::NodeHandle}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00041}00041 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00042}00042     \textcolor{keywordflow}{return} obj-\/>getROSNode();}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00045}00045 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00046}\mbox{\hyperlink{namespacesmacc_1_1introspection_a96b953e65af67591266e9ae4b3e4ee49}{00046}} \textcolor{keyword}{auto} \mbox{\hyperlink{namespacesmacc_1_1introspection_a8acc3b4146a8b2bb0a9fa4178840e9b9}{optionalNodeHandle}}(T *) -\/> ros::NodeHandle}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00047}00047 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00048}00048     \textcolor{keywordflow}{return} ros::NodeHandle(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00051}\mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{00051}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{const} std::string \&name)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00052}00052 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00053}00053     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(name.c\_str());}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00054}00054 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00056}\mbox{\hyperlink{namespacesmacc_1_1introspection_af32c671351d958213f8031bb90767922}{00056}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00057}00057 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00058}00058 \textcolor{preprocessor}{\#if (\_\_GNUC\_\_ \&\& \_\_cplusplus \&\& \_\_GNUC\_\_ >= 3)}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00059}00059     \textcolor{keywordtype}{int} status;}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00060}00060     \textcolor{keywordtype}{char} *res = abi::\_\_cxa\_demangle(name, 0, 0, \&status);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00061}00061     \textcolor{keywordflow}{if} (res)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00062}00062     \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00063}00063         \textcolor{keyword}{const} std::string demangled\_name(res);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00064}00064         std::free(res);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00065}00065         \textcolor{keywordflow}{return} demangled\_name;}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00067}00067     \textcolor{comment}{// Demangling failed, fallback to mangled name}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00068}00068     \textcolor{keywordflow}{return} std::string(name);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00069}00069 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00070}00070     \textcolor{keywordflow}{return} std::string(name);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00071}00071 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00072}00072 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00074}00074 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00075}\mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{00075}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}()}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00076}00076 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00077}00077     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(T).name());}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00078}00078 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00080}00080 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00081}\mbox{\hyperlink{namespacesmacc_1_1introspection_af1b3277706c3299b589c3fa801169286}{00081}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_af1b3277706c3299b589c3fa801169286}{demangledTypeName}}()}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00082}00082 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00083}00083     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(T).name());}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00084}00084 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00086}\mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{00086}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{const} std::type\_info* tinfo)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00087}00087 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00088}00088     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(tinfo-\/>name());}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00089}00089 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00091}\mbox{\hyperlink{namespacesmacc_1_1introspection_a81ad2fc77a0262640d4b1bd273938603}{00091}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{const} std::type\_info \&tinfo)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00092}00092 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00093}00093     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(tinfo.name());}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00094}00094 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00096}00096 \textcolor{keyword}{template} <\textcolor{keyword}{typename}...>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00097}\mbox{\hyperlink{structsmacc_1_1introspection_1_1typelist}{00097}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmacc_1_1introspection_1_1typelist}{typelist}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00098}00098 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00099}00099 \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00101}00101 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00102}00102 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00103}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasEventLabel}{00103}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasEventLabel}{HasEventLabel}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00104}00104 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00105}00105 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00106}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasEventLabel_a8d4b4c2ecb640812e11e8c1407636b6a}{00106}}     \textcolor{keyword}{typedef} \textcolor{keywordtype}{char} YesType[1];}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00107}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasEventLabel_a91b6dd8a7c59c7f24ef0937c99026e81}{00107}}     \textcolor{keyword}{typedef} \textcolor{keywordtype}{char} NoType[2];}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00109}00109     \textcolor{keyword}{template} <\textcolor{keyword}{typename} C>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00110}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasEventLabel_af91a6f5834d532a450ec0a2a448fbc03}{00110}}     \textcolor{keyword}{static} YesType \&\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasEventLabel_af91a6f5834d532a450ec0a2a448fbc03}{test}}(\textcolor{keyword}{decltype}(\&C::getEventLabel));}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00111}00111     \textcolor{keyword}{template} <\textcolor{keyword}{typename} C>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00112}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasEventLabel_a6beb9a735eac3767f40b5682a5168064}{00112}}     \textcolor{keyword}{static} NoType \&\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasEventLabel_a6beb9a735eac3767f40b5682a5168064}{test}}(...);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00114}00114 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00115}00115     \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00116}00116     \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00117}00117         value = \textcolor{keyword}{sizeof}(test<T>(0)) == \textcolor{keyword}{sizeof}(YesType)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00118}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasEventLabel_a2de6073f80d42739c5ed78d301bd853ba3f57db3ac5b424aedec54eb89e48b732}{00118}}     \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00119}00119 \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00121}00121 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00122}00122 \textcolor{keyword}{typename} std::enable\_if<HasEventLabel<T>::value, \textcolor{keywordtype}{void}>\mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{::type}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00123}\mbox{\hyperlink{namespacesmacc_1_1introspection_ac04ff9b567faa8a2fb633c5a32a91716}{00123}} \mbox{\hyperlink{namespacesmacc_1_1introspection_ac04ff9b567faa8a2fb633c5a32a91716}{EventLabel}}(std::string \&label)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00124}00124 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00125}00125     label = T::getEventLabel();}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00126}00126 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00128}00128 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00129}00129 \textcolor{keyword}{typename} std::enable\_if<!HasEventLabel<T>::value, \textcolor{keywordtype}{void}>\mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{::type}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00130}\mbox{\hyperlink{namespacesmacc_1_1introspection_afa10ca8df5b7261af5de3e134776ddf8}{00130}} \mbox{\hyperlink{namespacesmacc_1_1introspection_ac04ff9b567faa8a2fb633c5a32a91716}{EventLabel}}(std::string \&label)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00131}00131 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00132}00132     label = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00133}00133 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00134}00134 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00136}00136 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00137}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag}{00137}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag}{HasAutomaticTransitionTag}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00138}00138 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00139}00139 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00140}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_a750a08a185de0fa20331ba7cfc531dde}{00140}}     \textcolor{keyword}{typedef} \textcolor{keywordtype}{char} \mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_a750a08a185de0fa20331ba7cfc531dde}{YesType}}[1];}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00141}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_ab81e7f76862ba064df3fd8e78b3864c4}{00141}}     \textcolor{keyword}{typedef} \textcolor{keywordtype}{char} \mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_ab81e7f76862ba064df3fd8e78b3864c4}{NoType}}[2];}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00143}00143     \textcolor{keyword}{template} <\textcolor{keyword}{typename} C>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00144}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_a9a177ea88c04389d7e8a5508e5ac0985}{00144}}     \textcolor{keyword}{static} \mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_a750a08a185de0fa20331ba7cfc531dde}{YesType}} \&\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_a9a177ea88c04389d7e8a5508e5ac0985}{test}}(\textcolor{keyword}{decltype}(\&C::getDefaultTransitionTag));}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00145}00145     \textcolor{keyword}{template} <\textcolor{keyword}{typename} C>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00146}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_a46096c32eea2b0158af4565c1b513a01}{00146}}     \textcolor{keyword}{static} \mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_ab81e7f76862ba064df3fd8e78b3864c4}{NoType}} \&\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_a46096c32eea2b0158af4565c1b513a01}{test}}(...);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00148}00148 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00149}00149     \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00150}00150     \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00151}00151         \mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_aa4d176f174bc660b4705a0ff3874d4aca4e813bb149aec14797ea59791542e845}{value}} = \textcolor{keyword}{sizeof}(test<T>(0)) == \textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_a750a08a185de0fa20331ba7cfc531dde}{YesType}})}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00152}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionTag_aa4d176f174bc660b4705a0ff3874d4aca4e813bb149aec14797ea59791542e845}{00152}}     \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00153}00153 \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00155}00155 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00156}00156 \textcolor{keyword}{typename} std::enable\_if<HasAutomaticTransitionTag<T>::value, \textcolor{keywordtype}{void}>\mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{::type}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00157}\mbox{\hyperlink{namespacesmacc_1_1introspection_a74c225addec49b64ad867dd9c7e34474}{00157}} \mbox{\hyperlink{namespacesmacc_1_1introspection_a74c225addec49b64ad867dd9c7e34474}{automaticTransitionTag}}(std::string \&transition\_name)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00158}00158 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00159}00159     transition\_name = T::getDefaultTransitionTag();}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00160}00160 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00162}00162 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00163}00163 \textcolor{keyword}{typename} std::enable\_if<!HasAutomaticTransitionTag<T>::value, \textcolor{keywordtype}{void}>\mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{::type}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00164}\mbox{\hyperlink{namespacesmacc_1_1introspection_aae0fe2c394e0e7ecbc50b4af93338f32}{00164}} \mbox{\hyperlink{namespacesmacc_1_1introspection_a74c225addec49b64ad867dd9c7e34474}{automaticTransitionTag}}(std::string \&transition\_name)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00165}00165 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00166}00166     transition\_name = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00167}00167 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00169}00169 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00170}00170 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00171}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType}{00171}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType}{HasAutomaticTransitionType}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00172}00172 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00173}00173 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00174}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_abeb599df547eb3db36684b6cb343eade}{00174}}     \textcolor{keyword}{typedef} \textcolor{keywordtype}{char} \mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_abeb599df547eb3db36684b6cb343eade}{YesType}}[1];}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00175}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_aa2e976214fc770f53aaae67fc049caab}{00175}}     \textcolor{keyword}{typedef} \textcolor{keywordtype}{char} \mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_aa2e976214fc770f53aaae67fc049caab}{NoType}}[2];}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00177}00177     \textcolor{keyword}{template} <\textcolor{keyword}{typename} C>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00178}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_a9dc66bc30267c776635763557619c88c}{00178}}     \textcolor{keyword}{static} \mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_abeb599df547eb3db36684b6cb343eade}{YesType}} \&\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_a9dc66bc30267c776635763557619c88c}{test}}(\textcolor{keyword}{decltype}(\&C::getDefaultTransitionType));}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00179}00179     \textcolor{keyword}{template} <\textcolor{keyword}{typename} C>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00180}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_aeac611fe8f3339373e10fe5b84770437}{00180}}     \textcolor{keyword}{static} \mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_aa2e976214fc770f53aaae67fc049caab}{NoType}} \&\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_aeac611fe8f3339373e10fe5b84770437}{test}}(...);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00181}00181 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00182}00182 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00183}00183     \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00184}00184     \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00185}00185         \mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_ac663d77745eac0f2b2ceb29e4c8b300ba8aba42189dc17891761a49375684776d}{value}} = \textcolor{keyword}{sizeof}(test<T>(0)) == \textcolor{keyword}{sizeof}(\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_abeb599df547eb3db36684b6cb343eade}{YesType}})}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00186}\mbox{\hyperlink{classsmacc_1_1introspection_1_1HasAutomaticTransitionType_ac663d77745eac0f2b2ceb29e4c8b300ba8aba42189dc17891761a49375684776d}{00186}}     \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00187}00187 \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00188}00188 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00189}00189 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00190}00190 \textcolor{keyword}{typename} std::enable\_if<HasAutomaticTransitionType<T>::value, \textcolor{keywordtype}{void}>\mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{::type}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00191}\mbox{\hyperlink{namespacesmacc_1_1introspection_a2cf3d25ea4647693fb436364417ddfc4}{00191}} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2cf3d25ea4647693fb436364417ddfc4}{automaticTransitionType}}(std::string \&transition\_type)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00192}00192 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00193}00193     transition\_type = T::getDefaultTransitionType();}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00194}00194 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00196}00196 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00197}00197 \textcolor{keyword}{typename} std::enable\_if<!HasAutomaticTransitionType<T>::value, \textcolor{keywordtype}{void}>\mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{::type}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00198}\mbox{\hyperlink{namespacesmacc_1_1introspection_a5a8c28d1a5b500eceda105f13d42402a}{00198}} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2cf3d25ea4647693fb436364417ddfc4}{automaticTransitionType}}(std::string \&transition\_type)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00199}00199 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00200}00200     transition\_type = demangledTypeName<DEFAULT>();}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00201}00201 \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00202}00202 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00203}00203 \textcolor{comment}{// there are many ways to implement this, for instance adding static methods to the types}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00204}\mbox{\hyperlink{namespacesmacc_1_1introspection_ac678f3918f2036c45d7d0da7f5afce83}{00204}} \textcolor{keyword}{typedef} boost::mpl::list<SUCCESS, ABORT, PREEMPT, CONTINUELOOP, ENDLOOP> \mbox{\hyperlink{namespacesmacc_1_1introspection_ac678f3918f2036c45d7d0da7f5afce83}{DEFAULT\_TRANSITION\_TYPES}};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00206}00206 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00208}00208 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00209}\mbox{\hyperlink{structsmacc_1_1introspection_1_1type__}{00209}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmacc_1_1introspection_1_1type__}{type\_}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00210}00210 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00211}\mbox{\hyperlink{structsmacc_1_1introspection_1_1type___afe9e4516cea9d3160f2eff1b787ca4f5}{00211}}     \textcolor{keyword}{using }\mbox{\hyperlink{structsmacc_1_1introspection_1_1type___afe9e4516cea9d3160f2eff1b787ca4f5}{type}} = T;}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00212}00212 \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00213}00213 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00214}00214 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00215}00215 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00216}\mbox{\hyperlink{structsmacc_1_1introspection_1_1add__type__wrapper}{00216}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmacc_1_1introspection_1_1add__type__wrapper}{add\_type\_wrapper}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00217}00217 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00218}\mbox{\hyperlink{structsmacc_1_1introspection_1_1add__type__wrapper_a4390a0426686e1e115d4c3ad22165cd9}{00218}}     \textcolor{keyword}{using }\mbox{\hyperlink{structsmacc_1_1introspection_1_1type__}{type}} = \mbox{\hyperlink{structsmacc_1_1introspection_1_1type__}{type\_<T>}};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00219}00219 \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00220}00220 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00221}00221 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TTransition>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00222}\mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType}{00222}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType}{CheckType}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00223}00223 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00224}\mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType_a5f35a9f0375faf0e8e15088206d3692c}{00224}}     \mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType_a5f35a9f0375faf0e8e15088206d3692c}{CheckType}}(std::string *\mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType_a0b356fd5975fa8f359f4e47f9ac8debf}{transitionTypeName}})}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00225}00225     \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00226}00226         this-\/>transitionTypeName = \mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType_a0b356fd5975fa8f359f4e47f9ac8debf}{transitionTypeName}};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00227}00227     \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00228}00228 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00229}\mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType_a0b356fd5975fa8f359f4e47f9ac8debf}{00229}}     std::string *\mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType_a0b356fd5975fa8f359f4e47f9ac8debf}{transitionTypeName}};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00230}00230     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00231}\mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType_abdf8cd065f31c69615c91af287192b9a}{00231}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType_abdf8cd065f31c69615c91af287192b9a}{operator()}}(T)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00232}00232     \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00233}00233         \textcolor{comment}{//ROS\_INFO\_STREAM("{}comparing.."{}<< demangleSymbol<T>() <<"{} vs "{} << demangleSymbol<TTransition>() );}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00234}00234         \textcolor{keywordflow}{if} (std::is\_base\_of<T, TTransition>::value || std::is\_same<T, TTransition>::value)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00235}00235         \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00236}00236             *(this-\/>\mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType_a0b356fd5975fa8f359f4e47f9ac8debf}{transitionTypeName}}) = demangledTypeName<T>();}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00237}00237             \textcolor{comment}{//ROS\_INFO("{}YESS!"{});}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00238}00238         \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00239}00239     \}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00240}00240 \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00241}00241 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00242}00242 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TTransition>}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00243}\mbox{\hyperlink{namespacesmacc_1_1introspection_a62b41b5a90e19f27288b1aaac317fef1}{00243}} \textcolor{keyword}{static} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a62b41b5a90e19f27288b1aaac317fef1}{getTransitionType}}()}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00244}00244 \{}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00245}00245     std::string output;}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00246}00246     \mbox{\hyperlink{structsmacc_1_1introspection_1_1CheckType}{CheckType<TTransition>}} op(\&output);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00247}00247     \textcolor{keyword}{using }boost::mpl::\_1;}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00248}00248     \textcolor{keyword}{using }wrappedList = \textcolor{keyword}{typename} \mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{boost::mpl::transform<DEFAULT\_TRANSITION\_TYPES, \_1>::type}};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00249}00249 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00250}00250     boost::mpl::for\_each<wrappedList>(op);}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00251}00251     \textcolor{keywordflow}{return} output;}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00252}00252 \};}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00253}00253 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00254}00254 \textcolor{comment}{// // BASE CASE}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00255}00255 \textcolor{comment}{// template <typename T>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00256}00256 \textcolor{comment}{// static void walkStateReactorsSources(SmaccStateReactorInfo \&sbinfo, typelist<T>)}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00257}00257 \textcolor{comment}{// \{}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00258}00258 \textcolor{comment}{//     auto sourceType = TypeInfo::getFromStdTypeInfo(typeid(T));}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00259}00259 \textcolor{comment}{//     auto evinfo = std::make\_shared<SmaccEventInfo>(sourceType);}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00260}00260 \textcolor{comment}{//     EventLabel<T>(evinfo-\/>label);}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00261}00261 \textcolor{comment}{//     sbinfo.sourceEventTypes.push\_back(evinfo);}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00262}00262 \textcolor{comment}{//     ROS\_INFO\_STREAM("{}event: "{} << sourceType-\/>getFullName());}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00263}00263 \textcolor{comment}{//     ROS\_INFO\_STREAM("{}event parameters: "{} << sourceType-\/>templateParameters.size());}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00264}00264 \textcolor{comment}{// \}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00265}00265 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00266}00266 \textcolor{comment}{// // RECURSIVE CASE}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00267}00267 \textcolor{comment}{// template <typename TEvHead, typename... TEvArgs>}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00268}00268 \textcolor{comment}{// static void walkStateReactorsSources(SmaccStateReactorInfo \&sbinfo, typelist<TEvHead, TEvArgs...>)}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00269}00269 \textcolor{comment}{// \{}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00270}00270 \textcolor{comment}{//     auto sourceType = TypeInfo::getFromStdTypeInfo(typeid(TEvHead));}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00271}00271 \textcolor{comment}{//     auto evinfo = std::make\_shared<SmaccEventInfo>(sourceType);}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00272}00272 \textcolor{comment}{//     EventLabel<TEvHead>(evinfo-\/>label);}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00273}00273 \textcolor{comment}{//     sbinfo.sourceEventTypes.push\_back(evinfo);}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00274}00274 \textcolor{comment}{//     ROS\_INFO\_STREAM("{}event: "{} << sourceType-\/>getFullName());}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00275}00275 \textcolor{comment}{//     ROS\_INFO\_STREAM("{}event parameters: "{} << sourceType-\/>templateParameters.size());}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00276}00276 \textcolor{comment}{//     walkStateReactorsSources(sbinfo, typelist<TEvArgs...>());}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00277}00277 \textcolor{comment}{// \}}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00278}00278 }
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00279}00279 \} \textcolor{comment}{// namespace introspection}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00280}00280 \} \textcolor{comment}{// namespace smacc}}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00281}00281 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__state__machine__info_8h}{smacc/introspection/smacc\_state\_machine\_info.h}}>}}
+
+\end{DoxyCode}

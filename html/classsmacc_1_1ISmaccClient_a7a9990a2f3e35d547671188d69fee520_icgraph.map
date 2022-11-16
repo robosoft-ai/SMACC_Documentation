@@ -1,0 +1,28 @@
+<map id="smacc::ISmaccClient::requiresClient" name="smacc::ISmaccClient::requiresClient">
+<area shape="rect" id="node1" title=" " alt="" coords="812,577,957,619"/>
+<area shape="rect" id="node2" href="$classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem.html#ac5885c03fa6f754d1b1c312f4d925066" title=" " alt="" coords="528,81,747,152"/>
+<area shape="rect" id="node3" href="$classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1ClPerceptionSystem.html#addd61eca413e2d927c636ef7fddaf91d" title=" " alt="" coords="511,177,764,233"/>
+<area shape="rect" id="node5" href="$classsm__fetch__six__table__pick__n__sort__1_1_1cl__perception__system_1_1ClPerceptionSystem.html#a553101516ba25a6a9f293e33b4e90dad" title=" " alt="" coords="540,257,735,328"/>
+<area shape="rect" id="node8" href="$classsm__fetch__two__table__whiskey__pour_1_1cl__perception__system_1_1ClPerceptionSystem.html#a803c5d30981b6368e854dd9e8972f129" title=" " alt="" coords="540,352,735,423"/>
+<area shape="rect" id="node10" href="$classsm__fetch__two__table__pick__n__place__1_1_1cl__perception__system_1_1ClPerceptionSystem.html#ad9c1b82e644fdbfbfc2d808523a1f330" title=" " alt="" coords="528,447,747,517"/>
+<area shape="rect" id="node11" href="$classsmacc_1_1ISmaccComponent.html#a36c085d906fbae0fcaee817aaeafebf4" title=" " alt="" coords="548,541,727,583"/>
+<area shape="rect" id="node21" href="$structsm__fetch__six__table__pick__n__sort__1_1_1StNavigateToDestinyTable.html#a9243186869228196101ca60180b9b1b1" title=" " alt="" coords="530,606,745,662"/>
+<area shape="rect" id="node22" href="$structsm__fetch__six__table__pick__n__sort__1_1_1StNavigateToSourceTable.html#a1e4b8cd70fbb88d5c42ebfdc48a9122f" title=" " alt="" coords="531,686,744,742"/>
+<area shape="rect" id="node23" href="$structsm__fetch__two__table__whiskey__pour_1_1StBringBottleBackNavigateSourceTable.html#a7f19e9282a3d89c41a41e0a8e66177dc" title=" " alt="" coords="542,767,733,837"/>
+<area shape="rect" id="node24" href="$structsm__fetch__two__table__whiskey__pour_1_1StNavigateToDestinyTable.html#a5b2903359ccdf59ed6736f05f1be5657" title=" " alt="" coords="537,862,737,918"/>
+<area shape="rect" id="node25" href="$structsm__fetch__two__table__whiskey__pour_1_1StNavigateToSourceTable.html#a843dcb687e92efc046efbb78da5a1258" title=" " alt="" coords="538,942,737,998"/>
+<area shape="rect" id="node26" href="$structsm__fetch__six__table__pick__n__sort__1_1_1StNavigationTableRetreat.html#a744f9201796aad510626a6ceaed8597c" title=" " alt="" coords="542,1022,733,1078"/>
+<area shape="rect" id="node4" href="$classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1ClPerceptionSystem.html#af5d1bcbb974b9af8effbcb60949c67e2" title=" " alt="" coords="252,5,463,76"/>
+<area shape="rect" id="node6" href="$classsm__fetch__six__table__pick__n__sort__1_1_1cl__perception__system_1_1ClPerceptionSystem.html#ae69404508a52c60784861163701c5fee" title=" " alt="" coords="260,100,455,171"/>
+<area shape="rect" id="node7" href="$structsm__fetch__six__table__pick__n__sort__1_1_1place__states_1_1StMovePrePlacePose.html#aad24b51d2808a945e0ae680a4ed3d99d" title=" " alt="" coords="5,100,204,171"/>
+<area shape="rect" id="node9" href="$classsm__fetch__two__table__whiskey__pour_1_1cl__perception__system_1_1ClPerceptionSystem.html#aa357d56583dd51b137384b8d15cbf308" title=" " alt="" coords="260,195,455,265"/>
+<area shape="rect" id="node12" href="$classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintLateralWorkspace.html#a6b1911a83059bef46803e9973fc325d8" title=" " alt="" coords="253,289,461,360"/>
+<area shape="rect" id="node13" href="$classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintTableWorkspaces.html#a813b53264563225547f31651fd5b3f76" title=" " alt="" coords="254,384,461,455"/>
+<area shape="rect" id="node14" href="$classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall.html#a1dcf39e1ad5ddbbec29a278677a2c680" title=" " alt="" coords="262,479,453,549"/>
+<area shape="rect" id="node15" href="$classsm__fetch__six__table__pick__n__sort__1_1_1cl__move__group__interface_1_1CpConstraintLateralWorkspace.html#ab6a7532f9f5c0a52eb149177dcadfeb2" title=" " alt="" coords="258,573,457,644"/>
+<area shape="rect" id="node16" href="$classsm__fetch__six__table__pick__n__sort__1_1_1cl__move__group__interface_1_1CpConstraintTableWorkspaces.html#a546bdfe3331f1b3c286d4d41cc3deccf" title=" " alt="" coords="258,668,457,739"/>
+<area shape="rect" id="node17" href="$classsm__fetch__six__table__pick__n__sort__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall.html#a409f2624001978e120faa2f79d7e150e" title=" " alt="" coords="258,763,457,833"/>
+<area shape="rect" id="node18" href="$classsm__fetch__two__table__whiskey__pour_1_1cl__move__group__interface_1_1CpConstraintLateralWorkspace.html#a420fcf0fc6f89007a313e70458bca06c" title=" " alt="" coords="258,857,457,928"/>
+<area shape="rect" id="node19" href="$classsm__fetch__two__table__whiskey__pour_1_1cl__move__group__interface_1_1CpConstraintTableWorkspaces.html#a6d333c263396864c34db183ea530f73c" title=" " alt="" coords="258,952,457,1023"/>
+<area shape="rect" id="node20" href="$classsm__fetch__two__table__whiskey__pour_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall.html#a7f052ec290f7cb7ee2b6a288b221b9a2" title=" " alt="" coords="258,1047,457,1117"/>
+</map>

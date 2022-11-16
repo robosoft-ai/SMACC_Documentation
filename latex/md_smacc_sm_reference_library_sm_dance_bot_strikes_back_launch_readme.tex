@@ -1,0 +1,43 @@
+\hypertarget{md_smacc_sm_reference_library_sm_dance_bot_strikes_back_launch_readme_autotoc_md16}{}\doxysection{Setup and requirements}\label{md_smacc_sm_reference_library_sm_dance_bot_strikes_back_launch_readme_autotoc_md16}
+Make sure that you have installed all the dependencies. For example this demo depends on rigeback robot simulation.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosdep install -\/-\/from-\/paths src -\/-\/ignore-\/src -\/r -\/y}
+
+\end{DoxyCode}
+
+
+After that you have to build the smacc ros workspace using catkin\+\_\+make.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{catkin\_make}
+
+\end{DoxyCode}
+
+
+After you build, remember to source the proper devel folder.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source \string~/catkin\_ws/devel/setup.bash}
+
+\end{DoxyCode}
+\hypertarget{md_smacc_sm_reference_library_sm_dance_bot_strikes_back_launch_readme_autotoc_md17}{}\doxysection{Default demo launching}\label{md_smacc_sm_reference_library_sm_dance_bot_strikes_back_launch_readme_autotoc_md17}
+Below is the default launch command to launch this demo\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch sm\_dance\_bot\_strikes\_back sm\_dance\_bot\_strikes\_back.launch}
+
+\end{DoxyCode}
+\hypertarget{md_smacc_sm_reference_library_sm_dance_bot_strikes_back_launch_readme_autotoc_md18}{}\doxysection{Lightweight demo launching}\label{md_smacc_sm_reference_library_sm_dance_bot_strikes_back_launch_readme_autotoc_md18}
+We use this launch command to start the process hiding the xterminals for all the servers, the state machine, the smacc\+\_\+viewer and the gazebo client.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch sm\_dance\_bot\_strikes\_back sm\_dance\_bot\_strikes\_back.launch sm\_xterm:=nice server\_nodes\_xterms:=nice show\_gz\_client:=false show\_smacc\_viewer:=false}
+
+\end{DoxyCode}
+ 

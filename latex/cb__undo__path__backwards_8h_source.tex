@@ -1,0 +1,39 @@
+\hypertarget{cb__undo__path__backwards_8h_source}{}\doxysection{cb\+\_\+undo\+\_\+path\+\_\+backwards.\+h}
+\label{cb__undo__path__backwards_8h_source}\index{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/client\_behaviors/cb\_undo\_path\_backwards.h@{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/client\_behaviors/cb\_undo\_path\_backwards.h}}
+\mbox{\hyperlink{cb__undo__path__backwards_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00006}00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <tf/transform\_listener.h>}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cb__move__base__client__behavior__base_8h}{cb\_move\_base\_client\_behavior\_base.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00013}\mbox{\hyperlink{namespacecl__move__base__z_aa8702d7f4bc14a650da006a263801a8b}{00013}} \textcolor{keyword}{enum} \mbox{\hyperlink{namespacecl__move__base__z_aa8702d7f4bc14a650da006a263801a8b}{UndoPathLocalPlanner}}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00014}00014 \{}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00015}\mbox{\hyperlink{namespacecl__move__base__z_aa8702d7f4bc14a650da006a263801a8ba89c94fa193c2a9e459400ca5bee38c47}{00015}}   \mbox{\hyperlink{namespacecl__move__base__z_aa8702d7f4bc14a650da006a263801a8ba89c94fa193c2a9e459400ca5bee38c47}{BackwardsLocalPlanner}}, \textcolor{comment}{/*default, it is able to move freely backwards, or combined straightsegments with pure spinning}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00016}00016 \textcolor{comment}{                            segments*/}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00017}00017   \mbox{\hyperlink{namespacecl__move__base__z_aa8702d7f4bc14a650da006a263801a8ba87a2d2768806d402074aeaca3398b5ff}{PureSpinningLocalPlanner}}    \textcolor{comment}{/*only pure spinnings, be careful it may not be able to undo the path if it was not a pure}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00018}00018 \textcolor{comment}{                            spinning segment*/}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00019}\mbox{\hyperlink{namespacecl__move__base__z_aa8702d7f4bc14a650da006a263801a8ba87a2d2768806d402074aeaca3398b5ff}{00019}} \};}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00021}\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards}{00021}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards}{CbUndoPathBackwards}} : \textcolor{keyword}{public} \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase}{CbMoveBaseClientBehaviorBase}}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00022}00022 \{}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00023}00023 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00024}\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards_a2dfb07d7391147e2fc06e01749bfd5bc}{00024}}   boost::optional<UndoPathLocalPlanner> \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards_a2dfb07d7391147e2fc06e01749bfd5bc}{forceUndoLocalPlanner}};}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00026}00026   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards_a32e680530375b62c7053bf173f6b2b1b}{onEntry}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00028}00028   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards_a20cee921ad92db16f8d17c3c3b9c2daf}{onExit}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00030}00030 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00031}\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards_add2b6a0f1c19654a0cf07209fc123a71}{00031}}   tf::TransformListener \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards_add2b6a0f1c19654a0cf07209fc123a71}{listener}};}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00032}00032 \};}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards_8h_source_l00033}00033 \}  \textcolor{comment}{// namespace cl\_move\_base\_z}}
+
+\end{DoxyCode}

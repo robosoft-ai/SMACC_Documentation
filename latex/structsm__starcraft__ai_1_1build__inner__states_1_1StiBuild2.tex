@@ -1,0 +1,153 @@
+\hypertarget{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2}{}\doxysection{sm\+\_\+starcraft\+\_\+ai\+::build\+\_\+inner\+\_\+states\+::Sti\+Build2 Struct Reference}
+\label{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2}\index{sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}}
+
+
+{\ttfamily \#include $<$sti\+\_\+build\+\_\+2.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+starcraft\+\_\+ai\+::build\+\_\+inner\+\_\+states\+::Sti\+Build2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+starcraft\+\_\+ai\+::build\+\_\+inner\+\_\+states\+::Sti\+Build2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_1_1NEXT}{NEXT}}
+\item 
+struct \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_1_1PREVIOUS}{PREVIOUS}}
+\item 
+struct \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_1_1TIMEOUT}{TIMEOUT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef mpl\+::list$<$ Transition$<$ Ev\+Timer$<$ Cb\+Timer\+Countdown\+Once, \mbox{\hyperlink{classsm__starcraft__ai_1_1OrTimer}{Or\+Timer}} $>$, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild3}{Sti\+Build3}}, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_1_1TIMEOUT}{TIMEOUT}} $>$, Transition$<$ Ev\+Key\+PressN$<$ Cb\+Default\+Keyboard\+Behavior, \mbox{\hyperlink{classsm__starcraft__ai_1_1OrKeyboard}{Or\+Keyboard}} $>$, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild3}{Sti\+Build3}}, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_1_1NEXT}{NEXT}} $>$, Transition$<$ Ev\+Key\+PressP$<$ Cb\+Default\+Keyboard\+Behavior, \mbox{\hyperlink{classsm__starcraft__ai_1_1OrKeyboard}{Or\+Keyboard}} $>$, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild1}{Sti\+Build1}}, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_1_1PREVIOUS}{PREVIOUS}} $>$ $>$ \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_ab615bc2995682a7a80cdf4d5ddcad22c}{reactions}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_a69f6a051fbfd9476762b804fbb06809a}{runtime\+Configure}} ()
+\item 
+void \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_aac67681e26987ca8d4bf57e9e561dae7}{on\+Entry}} ()
+\item 
+void \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_a2b0e97a51cf2a806d5238a54c68cb3f3}{on\+Exit}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_a811f387766855eeba5679d7943ccdee1}{static\+Configure}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sti__build__2_8h_source_l00006}{6}} of file \mbox{\hyperlink{sti__build__2_8h_source}{sti\+\_\+build\+\_\+2.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_ab615bc2995682a7a80cdf4d5ddcad22c}\label{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_ab615bc2995682a7a80cdf4d5ddcad22c}} 
+\index{sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}!reactions@{reactions}}
+\index{reactions@{reactions}!sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}}
+\doxysubsubsection{\texorpdfstring{reactions}{reactions}}
+{\footnotesize\ttfamily typedef mpl\+::list$<$ Transition$<$Ev\+Timer$<$Cb\+Timer\+Countdown\+Once, \mbox{\hyperlink{classsm__starcraft__ai_1_1OrTimer}{Or\+Timer}}$>$, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild3}{Sti\+Build3}}, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_1_1TIMEOUT}{TIMEOUT}}$>$, Transition$<$Ev\+Key\+PressN$<$Cb\+Default\+Keyboard\+Behavior, \mbox{\hyperlink{classsm__starcraft__ai_1_1OrKeyboard}{Or\+Keyboard}}$>$, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild3}{Sti\+Build3}}, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_1_1NEXT}{NEXT}}$>$, Transition$<$Ev\+Key\+PressP$<$Cb\+Default\+Keyboard\+Behavior, \mbox{\hyperlink{classsm__starcraft__ai_1_1OrKeyboard}{Or\+Keyboard}}$>$, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild1}{Sti\+Build1}}, \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_1_1PREVIOUS}{PREVIOUS}}$>$ $>$ \mbox{\hyperlink{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_ab615bc2995682a7a80cdf4d5ddcad22c}{sm\+\_\+starcraft\+\_\+ai\+::build\+\_\+inner\+\_\+states\+::\+Sti\+Build2\+::reactions}}}
+
+
+
+Definition at line \mbox{\hyperlink{sti__build__2_8h_source_l00022}{22}} of file \mbox{\hyperlink{sti__build__2_8h_source}{sti\+\_\+build\+\_\+2.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_aac67681e26987ca8d4bf57e9e561dae7}\label{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_aac67681e26987ca8d4bf57e9e561dae7}} 
+\index{sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}!onEntry@{onEntry}}
+\index{onEntry@{onEntry}!sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}}
+\doxysubsubsection{\texorpdfstring{onEntry()}{onEntry()}}
+{\footnotesize\ttfamily void sm\+\_\+starcraft\+\_\+ai\+::build\+\_\+inner\+\_\+states\+::\+Sti\+Build2\+::on\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sti__build__2_8h_source_l00037}{37}} of file \mbox{\hyperlink{sti__build__2_8h_source}{sti\+\_\+build\+\_\+2.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038   \{}
+\DoxyCodeLine{00039     ROS\_INFO(\textcolor{stringliteral}{"{}On Entry!"{}});}
+\DoxyCodeLine{00040   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_a2b0e97a51cf2a806d5238a54c68cb3f3}\label{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_a2b0e97a51cf2a806d5238a54c68cb3f3}} 
+\index{sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}!onExit@{onExit}}
+\index{onExit@{onExit}!sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily void sm\+\_\+starcraft\+\_\+ai\+::build\+\_\+inner\+\_\+states\+::\+Sti\+Build2\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sti__build__2_8h_source_l00042}{42}} of file \mbox{\hyperlink{sti__build__2_8h_source}{sti\+\_\+build\+\_\+2.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043   \{}
+\DoxyCodeLine{00044     ROS\_INFO(\textcolor{stringliteral}{"{}On Exit!"{}});}
+\DoxyCodeLine{00045   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_a69f6a051fbfd9476762b804fbb06809a}\label{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_a69f6a051fbfd9476762b804fbb06809a}} 
+\index{sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}!runtimeConfigure@{runtimeConfigure}}
+\index{runtimeConfigure@{runtimeConfigure}!sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}}
+\doxysubsubsection{\texorpdfstring{runtimeConfigure()}{runtimeConfigure()}}
+{\footnotesize\ttfamily void sm\+\_\+starcraft\+\_\+ai\+::build\+\_\+inner\+\_\+states\+::\+Sti\+Build2\+::runtime\+Configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sti__build__2_8h_source_l00033}{33}} of file \mbox{\hyperlink{sti__build__2_8h_source}{sti\+\_\+build\+\_\+2.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034   \{}
+\DoxyCodeLine{00035   \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_a811f387766855eeba5679d7943ccdee1}\label{structsm__starcraft__ai_1_1build__inner__states_1_1StiBuild2_a811f387766855eeba5679d7943ccdee1}} 
+\index{sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}!staticConfigure@{staticConfigure}}
+\index{staticConfigure@{staticConfigure}!sm\_starcraft\_ai::build\_inner\_states::StiBuild2@{sm\_starcraft\_ai::build\_inner\_states::StiBuild2}}
+\doxysubsubsection{\texorpdfstring{staticConfigure()}{staticConfigure()}}
+{\footnotesize\ttfamily static void sm\+\_\+starcraft\+\_\+ai\+::build\+\_\+inner\+\_\+states\+::\+Sti\+Build2\+::static\+Configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{sti__build__2_8h_source_l00025}{25}} of file \mbox{\hyperlink{sti__build__2_8h_source}{sti\+\_\+build\+\_\+2.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026   \{}
+\DoxyCodeLine{00027     configure\_orthogonal<OrTimer, CbTimerCountdownOnce>(10);}
+\DoxyCodeLine{00028     configure\_orthogonal<OrSubscriber, CbWatchdogSubscriberBehavior>();}
+\DoxyCodeLine{00029     configure\_orthogonal<OrUpdatablePublisher, CbDefaultPublishLoop>();}
+\DoxyCodeLine{00030     configure\_orthogonal<OrKeyboard, CbDefaultKeyboardBehavior>();}
+\DoxyCodeLine{00031   \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+starcraft\+\_\+ai/include/sm\+\_\+starcraft\+\_\+ai/states/build\+\_\+inner\+\_\+states/\mbox{\hyperlink{sti__build__2_8h}{sti\+\_\+build\+\_\+2.\+h}}\end{DoxyCompactItemize}
