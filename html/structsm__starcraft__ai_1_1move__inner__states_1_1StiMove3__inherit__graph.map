@@ -1,8 +1,0 @@
-<map id="sm_starcraft_ai::move_inner_states::StiMove3" name="sm_starcraft_ai::move_inner_states::StiMove3">
-<area shape="rect" id="node1" title=" " alt="" coords="129,1836,291,1972"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1SmaccState.html" title=" " alt="" coords="103,1211,317,1787"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,792,172,913"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccState.html" title=" " alt="" coords="106,5,314,508"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1SmaccState.html" title=" " alt="" coords="247,557,461,1148"/>
-<area shape="rect" id="node6" title=" " alt="" coords="338,196,522,317"/>
-</map>

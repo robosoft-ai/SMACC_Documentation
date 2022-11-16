@@ -1,7 +1,0 @@
-<map id="sm_fetch_screw_loop_1::cl_gripper::ClGripper" name="sm_fetch_screw_loop_1::cl_gripper::ClGripper">
-<area shape="rect" id="node1" title=" " alt="" coords="21,1933,208,2113"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html" title=" " alt="" coords="5,1279,224,1884"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1client__bases_1_1ISmaccActionClient.html" title=" " alt="" coords="28,411,191,561"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html" title=" " alt="" coords="131,611,320,1201"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClient.html" title=" " alt="" coords="17,5,201,361"/>
-</map>

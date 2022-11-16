@@ -1,8 +1,0 @@
-<map id="sm_fetch_two_table_whiskey_pour::pick_states::StGraspRetreat::runtimeConfigure" name="sm_fetch_two_table_whiskey_pour::pick_states::StGraspRetreat::runtimeConfigure">
-<area shape="rect" id="node1" title=" " alt="" coords="5,116,167,187"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccState.html#a7f95c9f0a6ea2d6f18d1aec0519de4ac" title=" " alt="" coords="249,95,391,136"/>
-<area shape="rect" id="node6" href="$classsmacc_1_1SmaccState.html#a49dcfc25824f7e083dd4b999c49ab2b6" title=" " alt="" coords="215,159,425,215"/>
-<area shape="rect" id="node3" href="$namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302" title=" " alt="" coords="499,29,640,71"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccStateMachine.html#a7f5b2882dbd077584767cb2533ed3c49" title=" " alt="" coords="473,95,665,136"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1ISmaccState.html#a99ccacd52b422f9ee53cf892f6204618" title=" " alt="" coords="498,160,641,201"/>
-</map>

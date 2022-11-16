@@ -1,7 +1,0 @@
-<map id="smacc_sm_reference_library/sm_fetch_two_table_pick_n_place_1/include/sm_fetch_two_table_pick_n_place_1/states/place_states/st_place_approach.h" name="smacc_sm_reference_library/sm_fetch_two_table_pick_n_place_1/include/sm_fetch_two_table_pick_n_place_1/states/place_states/st_place_approach.h">
-<area shape="rect" id="node1" title=" " alt="" coords="100,5,295,105"/>
-<area shape="rect" id="node2" href="$sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2superstates_2ss__place__object_8h.html" title=" " alt="" coords="102,153,293,253"/>
-<area shape="rect" id="node3" href="$sm__fetch__two__table__pick__n__place__1_8h.html" title=" " alt="" coords="95,301,300,401"/>
-<area shape="rect" id="node4" href="$sm__fetch__two__table__pick__n__place__1__node_8cpp.html" title=" " alt="" coords="5,449,184,535"/>
-<area shape="rect" id="node5" href="$sm__moveit__screw__loop__node_8cpp.html" title=" " alt="" coords="209,449,394,535"/>
-</map>

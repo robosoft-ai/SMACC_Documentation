@@ -1,6 +1,0 @@
-<map id="smacc_sm_reference_library/sm_fetch_two_table_pick_n_place_1/include/sm_fetch_two_table_pick_n_place_1/clients/gripper_client/client_behaviors/cb_close_gripper.h" name="smacc_sm_reference_library/sm_fetch_two_table_pick_n_place_1/include/sm_fetch_two_table_pick_n_place_1/clients/gripper_client/client_behaviors/cb_close_gripper.h">
-<area shape="rect" id="node1" title=" " alt="" coords="90,5,305,120"/>
-<area shape="rect" id="node2" href="$sm__fetch__two__table__pick__n__place__1_8h.html" title=" " alt="" coords="95,168,300,268"/>
-<area shape="rect" id="node3" href="$sm__fetch__two__table__pick__n__place__1__node_8cpp.html" title=" " alt="" coords="5,316,184,401"/>
-<area shape="rect" id="node4" href="$sm__moveit__screw__loop__node_8cpp.html" title=" " alt="" coords="209,316,394,401"/>
-</map>
