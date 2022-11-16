@@ -1,0 +1,54 @@
+\hypertarget{cp__trajectory__history_8cpp_source}{}\doxysection{cp\+\_\+trajectory\+\_\+history.\+cpp}
+\label{cp__trajectory__history_8cpp_source}\index{smacc\_client\_library/move\_group\_interface\_client/src/move\_group\_interface\_client/components/cp\_trajectory\_history.cpp@{smacc\_client\_library/move\_group\_interface\_client/src/move\_group\_interface\_client/components/cp\_trajectory\_history.cpp}}
+\mbox{\hyperlink{cp__trajectory__history_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018-\/2020}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cp__trajectory__history_8h}{move\_group\_interface\_client/components/cp\_trajectory\_history.h}}>}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00009}00009 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__group__interface}{cl\_move\_group\_interface}}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00012}\mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_acca64f5923a0960c704e3e8a727ba3ae}{00012}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_acca64f5923a0960c704e3e8a727ba3ae}{CpTrajectoryHistory::getLastTrajectory}}(\textcolor{keywordtype}{int} backIndex, moveit\_msgs::RobotTrajectory \&trajectory)}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00014}00014         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_ac5f17b74ca856f6f8ccb96d9a4786fb2}{trajectoryHistory\_}}.size() == 0 )}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00015}00015         \{}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00016}00016             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00017}00017         \}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00019}00019         \textcolor{keywordflow}{if} (backIndex < 0)}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00020}00020         \{}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00021}00021             backIndex = 0;}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00022}00022         \}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00023}00023         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(backIndex >= this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_ac5f17b74ca856f6f8ccb96d9a4786fb2}{trajectoryHistory\_}}.size())}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00024}00024         \{}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00025}00025             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00026}00026         \}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00028}00028         trajectory = this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_ac5f17b74ca856f6f8ccb96d9a4786fb2}{trajectoryHistory\_}}[this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_ac5f17b74ca856f6f8ccb96d9a4786fb2}{trajectoryHistory\_}}.size() -\/ 1 -\/ backIndex].trajectory;}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00029}00029         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00032}\mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_aa9026698871b1e9d3ef5ee29e362802f}{00032}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_acca64f5923a0960c704e3e8a727ba3ae}{CpTrajectoryHistory::getLastTrajectory}}(moveit\_msgs::RobotTrajectory \&trajectory)}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00033}00033     \{}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00034}00034         \textcolor{keywordflow}{return} \mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_acca64f5923a0960c704e3e8a727ba3ae}{getLastTrajectory}}(-\/1, trajectory);}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00037}\mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_adf3f9a3fed4ef7b1adf23a098d3451ec}{00037}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_adf3f9a3fed4ef7b1adf23a098d3451ec}{CpTrajectoryHistory::pushTrajectory}}(std::string name, \textcolor{keyword}{const} moveit\_msgs::RobotTrajectory \&trajectory, moveit\_msgs::MoveItErrorCodes result)}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00038}00038     \{}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00039}00039         \mbox{\hyperlink{structcl__move__group__interface_1_1TrajectoryHistoryEntry}{TrajectoryHistoryEntry}} entry;}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00040}00040         this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_ac5f17b74ca856f6f8ccb96d9a4786fb2}{trajectoryHistory\_}}.push\_back(entry);}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00042}00042         \textcolor{keyword}{auto} \&last = this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CpTrajectoryHistory_ac5f17b74ca856f6f8ccb96d9a4786fb2}{trajectoryHistory\_}}.back();}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00043}00043         last.trajectory = trajectory;}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00044}00044         last.result = result;}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00045}00045         last.name = name;}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{cp__trajectory__history_8cpp_source_l00048}00048 \} \textcolor{comment}{// namespace cl\_move\_group\_interface}}
+
+\end{DoxyCode}

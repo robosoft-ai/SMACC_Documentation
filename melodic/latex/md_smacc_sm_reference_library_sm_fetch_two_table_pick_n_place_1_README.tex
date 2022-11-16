@@ -1,0 +1,71 @@
+\doxysubsection*{State Machine Diagram}
+
+
+
+\doxysubsection*{Description}
+
+This example demonstrates the use of both Move\+It and Move\+Base within the same state machine, and cross orthogonal communication between the robot arm orthogonal and the perception orthogonal.~\newline
+
+
+\href{https://reelrbtx.github.io/SMACC_Documentation/master/html/namespacesm__moveit.html}{\texttt{ Doxygen Namespace \& Class Reference}}
+
+~\newline
+ 
+
+ 
+
+~\newline
+
+
+\doxysubsection*{Build Instructions}
+
+Before you build, make sure you\textquotesingle{}ve installed all the dependencies...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosdep install -\/-\/from-\/paths src -\/-\/ignore-\/src -\/r -\/y}
+
+\end{DoxyCode}
+
+
+Then you build with either catkin build or catkin make...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{catkin build}
+
+\end{DoxyCode}
+
+
+\doxysubsection*{Operating Instructions}
+
+After you build, remember to source the proper devel folder...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source \string~/catkin\_ws/devel/setup.bash}
+
+\end{DoxyCode}
+
+
+And then run the launch file...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch sm\_fetch\_two\_table\_pick\_n\_place\_1 sm\_fetch\_two\_table\_pick\_n\_place\_1.launch}
+
+\end{DoxyCode}
+
+
+\doxysubsection*{Viewer Instructions}
+
+If you have the SMACC Viewer installed then type...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosrun smacc\_viewer smacc\_viewer\_node.py}
+
+\end{DoxyCode}
+
+
+If you don\textquotesingle{}t have the SMACC Viewer installed, click \href{http://smacc.ninja/smacc-viewer/}{\texttt{ here}} for instructions. 

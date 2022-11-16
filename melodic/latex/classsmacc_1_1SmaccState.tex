@@ -1,0 +1,1237 @@
+\hypertarget{classsmacc_1_1SmaccState}{}\doxysection{smacc\+::Smacc\+State\texorpdfstring{$<$}{<} Most\+Derived, Context, Inner\+Initial, history\+Mode \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classsmacc_1_1SmaccState}\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+
+
+{\ttfamily \#include $<$smacc\+\_\+state\+\_\+base.\+h$>$}
+
+
+
+Inherits boost\+::statechart\+::simple\+\_\+state$<$ Most\+Derived, Context, mpl\+::list$<$$>$, sc\+::has\+\_\+deep\+\_\+history $>$, and \mbox{\hyperlink{classsmacc_1_1ISmaccState}{smacc\+::\+ISmacc\+State}}.
+
+
+
+Collaboration diagram for smacc\+::Smacc\+State\texorpdfstring{$<$}{<} Most\+Derived, Context, Inner\+Initial, history\+Mode \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1SmaccState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsmacc_1_1SmaccState_1_1my__context}{my\+\_\+context}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Context \mbox{\hyperlink{classsmacc_1_1SmaccState_a9953ba0428a8c46f7d72c70bc3f87db4}{TContext}}
+\item 
+typedef Context\+::inner\+\_\+context\+\_\+type \mbox{\hyperlink{classsmacc_1_1SmaccState_a65c128d05dbcadbf817f41ba20b8fa01}{context\+\_\+type}}
+\item 
+typedef context\+\_\+type\+::state\+\_\+iterator \mbox{\hyperlink{classsmacc_1_1SmaccState_a12497b38e710f07cacb5d45efc024339}{state\+\_\+iterator}}
+\item 
+typedef Inner\+Initial \mbox{\hyperlink{classsmacc_1_1SmaccState_a60088405d2d99d468caa0baa3b2830a8}{Last\+Deep\+State}}
+\item 
+typedef base\+\_\+type\+::outermost\+\_\+context\+\_\+base\+\_\+type \mbox{\hyperlink{classsmacc_1_1SmaccState_aaf76bbe2aa9dd73e3284605f84ab4b16}{outermost\+\_\+context\+\_\+base\+\_\+type}}
+\item 
+typedef base\+\_\+type\+::inner\+\_\+context\+\_\+ptr\+\_\+type \mbox{\hyperlink{classsmacc_1_1SmaccState_a65a772c2e2039e9a59148ba6ffb54d8a}{inner\+\_\+context\+\_\+ptr\+\_\+type}}
+\item 
+typedef base\+\_\+type\+::context\+\_\+ptr\+\_\+type \mbox{\hyperlink{classsmacc_1_1SmaccState_a0e15b77514301039f6bc093a9d3f6425}{context\+\_\+ptr\+\_\+type}}
+\item 
+typedef base\+\_\+type\+::inner\+\_\+initial\+\_\+list \mbox{\hyperlink{classsmacc_1_1SmaccState_acb4ac84bce421d39b594510a6b2df558}{inner\+\_\+initial\+\_\+list}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmacc_1_1SmaccState_a2fbeaca0f063a909d17de2c3040c8d17}{Smacc\+State}} ()=delete
+\item 
+\mbox{\hyperlink{classsmacc_1_1SmaccState_adc225018fe91da47e6e9f1d20150b26a}{Smacc\+State}} (\mbox{\hyperlink{structsmacc_1_1SmaccState_1_1my__context}{my\+\_\+context}} ctx)
+\item 
+virtual \mbox{\hyperlink{classsmacc_1_1SmaccState_a41b2515faf76648c6d69fe09108d2691}{$\sim$\+Smacc\+State}} ()
+\item 
+const \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo}{smacc\+::introspection\+::\+Smacc\+State\+Info}} $\ast$ \mbox{\hyperlink{classsmacc_1_1SmaccState_a55c3b227d9300d6139b41787fd44b789}{get\+State\+Info}} ()
+\item 
+std\+::string \mbox{\hyperlink{classsmacc_1_1SmaccState_a897dbdfe52a8b944d4bf1844ddcc3aa5}{get\+Full\+Name}} ()
+\item 
+std\+::string \mbox{\hyperlink{classsmacc_1_1SmaccState_a4db028a85244653e48957d2b3371413d}{get\+Short\+Name}} ()
+\item 
+virtual \mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmacc\+State}} $\ast$ \mbox{\hyperlink{classsmacc_1_1SmaccState_ab940e5cfc6b1defbc0927647d7401b98}{get\+Parent\+State}} ()
+\item 
+void \mbox{\hyperlink{classsmacc_1_1SmaccState_a34b22a3b1af1796f2bdc1383eeef3a74}{exit}} ()
+\item 
+void \mbox{\hyperlink{classsmacc_1_1SmaccState_a6995704a0232e24f4c38250302c0a01f}{runtime\+Configure}} ()
+\item 
+void \mbox{\hyperlink{classsmacc_1_1SmaccState_a4a10a74fdbe51a798b8d651668b8ed9a}{on\+Entry}} ()
+\item 
+void \mbox{\hyperlink{classsmacc_1_1SmaccState_a82ca7c69153e86dc5eedf3f909560f3a}{on\+Exit}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1SmaccState_ad53b5be2760eb7ffb50f3b2e542b65f1}{get\+Global\+SMData}} (std\+::string name, T \&ret)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classsmacc_1_1SmaccState_a98f2673b257479e0a3615d5d8279a591}{set\+Global\+SMData}} (std\+::string name, T value)
+\item 
+{\footnotesize template$<$typename Smacc\+Component\+Type $>$ }\\void \mbox{\hyperlink{classsmacc_1_1SmaccState_a2febb778d5c3d80b9c034576b5a92b65}{requires\+Component}} (Smacc\+Component\+Type $\ast$\&storage)
+\item 
+virtual \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmacc\+State\+Machine}} \& \mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{get\+State\+Machine}} ()
+\item 
+void \mbox{\hyperlink{classsmacc_1_1SmaccState_a80082718f226bebedb589f0c4696001d}{check\+While\+Loop\+Condition\+And\+Throw\+Event}} (\mbox{\hyperlink{classbool}{bool}}(Most\+Derived\+::$\ast$condition\+Fn)())
+\item 
+void \mbox{\hyperlink{classsmacc_1_1SmaccState_a49dcfc25824f7e083dd4b999c49ab2b6}{throw\+Sequence\+Finished\+Event}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TOrthogonal , typename TBehavior $>$ }\\static void \mbox{\hyperlink{classsmacc_1_1SmaccState_ad70d7004c9bb0eb1621e68a223cfd2ef}{configure\+\_\+orthogonal\+\_\+runtime}} (std\+::function$<$ void(TBehavior \&bh, Most\+Derived \&)$>$ initialization\+Function)
+\item 
+{\footnotesize template$<$typename TOrthogonal , typename TBehavior $>$ }\\static void \mbox{\hyperlink{classsmacc_1_1SmaccState_afe48d925910d9c691324ac3159a1bf10}{configure\+\_\+orthogonal\+\_\+runtime}} (std\+::function$<$ void(TBehavior \&bh)$>$ initialization\+Function)
+\item 
+{\footnotesize template$<$typename TOrthogonal , typename TBehavior , typename... Args$>$ }\\static void \mbox{\hyperlink{classsmacc_1_1SmaccState_a9a9238f3f8dc18825771f64aefbc803a}{configure\+\_\+orthogonal}} (Args \&\&... args)
+\item 
+{\footnotesize template$<$typename TState\+Reactor , typename TOutput\+Event , typename TInput\+Event\+List , typename... TArgs$>$ }\\static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1introspection_1_1StateReactorHandler}{smacc\+::introspection\+::\+State\+Reactor\+Handler}} $>$ \mbox{\hyperlink{classsmacc_1_1SmaccState_a4b54d8ec82d303736d8bc11a3ffd0ce1}{static\+\_\+create\+State\+Reactor}} (TArgs... args)
+\item 
+{\footnotesize template$<$typename TEvent\+Generator , typename... TUArgs$>$ }\\static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1introspection_1_1EventGeneratorHandler}{smacc\+::introspection\+::\+Event\+Generator\+Handler}} $>$ \mbox{\hyperlink{classsmacc_1_1SmaccState_a8904eb4b4902bb7fc19651ccf192ab4b}{static\+\_\+create\+Event\+Generator}} (TUArgs... args)
+\item 
+{\footnotesize template$<$typename TState\+Reactor , typename... TUArgs$>$ }\\static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1introspection_1_1StateReactorHandler}{smacc\+::introspection\+::\+State\+Reactor\+Handler}} $>$ \mbox{\hyperlink{classsmacc_1_1SmaccState_aaf28bda37cee53b41abb1fd2f90363a1}{static\+\_\+create\+State\+Reactor\+\_\+aux}} (TUArgs... args)
+\item 
+static void \mbox{\hyperlink{classsmacc_1_1SmaccState_af4b4635d16a32bdd3956e5d40ddbd01d}{initial\+\_\+deep\+\_\+construct}} (\mbox{\hyperlink{classsmacc_1_1SmaccState_aaf76bbe2aa9dd73e3284605f84ab4b16}{outermost\+\_\+context\+\_\+base\+\_\+type}} \&outermost\+Context\+Base)
+\item 
+static void \mbox{\hyperlink{classsmacc_1_1SmaccState_aac23d8a6909f75c5e5fca2a7c09b5368}{deep\+\_\+construct}} (const \mbox{\hyperlink{classsmacc_1_1SmaccState_a0e15b77514301039f6bc093a9d3f6425}{context\+\_\+ptr\+\_\+type}} \&p\+Context, \mbox{\hyperlink{classsmacc_1_1SmaccState_aaf76bbe2aa9dd73e3284605f84ab4b16}{outermost\+\_\+context\+\_\+base\+\_\+type}} \&outermost\+Context\+Base)
+\item 
+static \mbox{\hyperlink{classsmacc_1_1SmaccState_a65a772c2e2039e9a59148ba6ffb54d8a}{inner\+\_\+context\+\_\+ptr\+\_\+type}} \mbox{\hyperlink{classsmacc_1_1SmaccState_a1dccb401e1a99031863a21a590d953e6}{shallow\+\_\+construct}} (const \mbox{\hyperlink{classsmacc_1_1SmaccState_a0e15b77514301039f6bc093a9d3f6425}{context\+\_\+ptr\+\_\+type}} \&p\+Context, \mbox{\hyperlink{classsmacc_1_1SmaccState_aaf76bbe2aa9dd73e3284605f84ab4b16}{outermost\+\_\+context\+\_\+base\+\_\+type}} \&outermost\+Context\+Base)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1SmaccState_a6c40f733c35ddfb9ae2a2f8e9bab07d3}{finish\+State\+Thrown}}
+\item 
+Inner\+Initial $\ast$ \mbox{\hyperlink{classsmacc_1_1SmaccState_a087d0f66729b98614feb8c59ea548af1}{smacc\+\_\+inner\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef sc\+::simple\+\_\+state$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$ \mbox{\hyperlink{classsmacc_1_1SmaccState_a68f547c6fe147554bbe607b6fcd8e40a}{base\+\_\+type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsmacc_1_1SmaccState_a084b95d0cb856d048fdb5ce81400eec7}{entry\+State\+Internal}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TOrthogonal , typename TBehavior $>$ }\\static void \mbox{\hyperlink{classsmacc_1_1SmaccState_a1656e6a5fd9ec036267a740a00260bf3}{configure\+\_\+orthogonal\+\_\+internal}} (std\+::function$<$ void(\mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmacc\+State}} $\ast$state)$>$ initialization\+Function)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Most\+Derived, class Context, class Inner\+Initial = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$\newline
+class smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$}
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00022}{22}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a68f547c6fe147554bbe607b6fcd8e40a}\label{classsmacc_1_1SmaccState_a68f547c6fe147554bbe607b6fcd8e40a}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!base\_type@{base\_type}}
+\index{base\_type@{base\_type}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{base\_type}{base\_type}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+typedef sc\+::simple\+\_\+state$<$Most\+Derived, Context, Inner\+Initial, history\+Mode$>$ \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::base\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00027}{27}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a0e15b77514301039f6bc093a9d3f6425}\label{classsmacc_1_1SmaccState_a0e15b77514301039f6bc093a9d3f6425}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!context\_ptr\_type@{context\_ptr\_type}}
+\index{context\_ptr\_type@{context\_ptr\_type}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{context\_ptr\_type}{context\_ptr\_type}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+typedef base\+\_\+type\+::context\+\_\+ptr\+\_\+type \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::context\+\_\+ptr\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00339}{339}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a65c128d05dbcadbf817f41ba20b8fa01}\label{classsmacc_1_1SmaccState_a65c128d05dbcadbf817f41ba20b8fa01}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!context\_type@{context\_type}}
+\index{context\_type@{context\_type}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{context\_type}{context\_type}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+typedef Context\+::inner\+\_\+context\+\_\+type \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::context\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00031}{31}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a65a772c2e2039e9a59148ba6ffb54d8a}\label{classsmacc_1_1SmaccState_a65a772c2e2039e9a59148ba6ffb54d8a}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!inner\_context\_ptr\_type@{inner\_context\_ptr\_type}}
+\index{inner\_context\_ptr\_type@{inner\_context\_ptr\_type}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{inner\_context\_ptr\_type}{inner\_context\_ptr\_type}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+typedef base\+\_\+type\+::inner\+\_\+context\+\_\+ptr\+\_\+type \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::inner\+\_\+context\+\_\+ptr\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00338}{338}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_acb4ac84bce421d39b594510a6b2df558}\label{classsmacc_1_1SmaccState_acb4ac84bce421d39b594510a6b2df558}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!inner\_initial\_list@{inner\_initial\_list}}
+\index{inner\_initial\_list@{inner\_initial\_list}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{inner\_initial\_list}{inner\_initial\_list}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+typedef base\+\_\+type\+::inner\+\_\+initial\+\_\+list \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::inner\+\_\+initial\+\_\+list}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00340}{340}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a60088405d2d99d468caa0baa3b2830a8}\label{classsmacc_1_1SmaccState_a60088405d2d99d468caa0baa3b2830a8}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!LastDeepState@{LastDeepState}}
+\index{LastDeepState@{LastDeepState}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{LastDeepState}{LastDeepState}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+typedef Inner\+Initial \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::\+Last\+Deep\+State}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00034}{34}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_aaf76bbe2aa9dd73e3284605f84ab4b16}\label{classsmacc_1_1SmaccState_aaf76bbe2aa9dd73e3284605f84ab4b16}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!outermost\_context\_base\_type@{outermost\_context\_base\_type}}
+\index{outermost\_context\_base\_type@{outermost\_context\_base\_type}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{outermost\_context\_base\_type}{outermost\_context\_base\_type}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+typedef base\+\_\+type\+::outermost\+\_\+context\+\_\+base\+\_\+type \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::outermost\+\_\+context\+\_\+base\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00337}{337}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a12497b38e710f07cacb5d45efc024339}\label{classsmacc_1_1SmaccState_a12497b38e710f07cacb5d45efc024339}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!state\_iterator@{state\_iterator}}
+\index{state\_iterator@{state\_iterator}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{state\_iterator}{state\_iterator}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+typedef context\+\_\+type\+::state\+\_\+iterator \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::state\+\_\+iterator}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00032}{32}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a9953ba0428a8c46f7d72c70bc3f87db4}\label{classsmacc_1_1SmaccState_a9953ba0428a8c46f7d72c70bc3f87db4}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!TContext@{TContext}}
+\index{TContext@{TContext}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{TContext}{TContext}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+typedef Context \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::\+TContext}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00030}{30}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a2fbeaca0f063a909d17de2c3040c8d17}\label{classsmacc_1_1SmaccState_a2fbeaca0f063a909d17de2c3040c8d17}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!SmaccState@{SmaccState}}
+\index{SmaccState@{SmaccState}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{SmaccState()}{SmaccState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+\mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\mbox{\hyperlink{classSmaccState}{\+::\+Smacc\+State}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_adc225018fe91da47e6e9f1d20150b26a}\label{classsmacc_1_1SmaccState_adc225018fe91da47e6e9f1d20150b26a}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!SmaccState@{SmaccState}}
+\index{SmaccState@{SmaccState}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{SmaccState()}{SmaccState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+\mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\mbox{\hyperlink{classSmaccState}{\+::\+Smacc\+State}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsmacc_1_1SmaccState_1_1my__context}{my\+\_\+context}}}]{ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00053}{53}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054     \{}
+\DoxyCodeLine{00055       \textcolor{keyword}{static\_assert}(std::is\_base\_of<ISmaccState, Context>::value || std::is\_base\_of<ISmaccStateMachine, Context>::value, \textcolor{stringliteral}{"{}The context class must be a SmaccState or a SmaccStateMachine"{}});}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057       \textcolor{keyword}{static\_assert}(!std::is\_same<MostDerived, Context>::value, \textcolor{stringliteral}{"{}The context must be a different state or state machine than the current state"{}});}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059       ROS\_WARN(\textcolor{stringliteral}{"{}[\%s] creating "{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
+\DoxyCodeLine{00060       this-\/>set\_context(ctx.pContext\_);}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062       this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_af20df2cfd3aa826fe02a3d703dc63c1b}{stateInfo\_}} = \mbox{\hyperlink{classsmacc_1_1SmaccState_a55c3b227d9300d6139b41787fd44b789}{getStateInfo}}();}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064       \textcolor{comment}{// storing a reference to the parent state}}
+\DoxyCodeLine{00065       \textcolor{keyword}{auto} \&ps = this-\/>\textcolor{keyword}{template} context<Context>();}
+\DoxyCodeLine{00066       \mbox{\hyperlink{classsmacc_1_1ISmaccState_ad61db41d8d06a836e7d1dac7767f5695}{parentState\_}} = \textcolor{keyword}{dynamic\_cast<}ISmaccState *\textcolor{keyword}{>}(\&ps);}
+\DoxyCodeLine{00067       \mbox{\hyperlink{classsmacc_1_1SmaccState_a6c40f733c35ddfb9ae2a2f8e9bab07d3}{finishStateThrown}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069       this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_ae59191a663a08489b7d10036f3b25238}{contextNh}} = \mbox{\hyperlink{namespacesmacc_1_1introspection_a8acc3b4146a8b2bb0a9fa4178840e9b9}{optionalNodeHandle}}(ctx.pContext\_);}
+\DoxyCodeLine{00070       ROS\_DEBUG(\textcolor{stringliteral}{"{}[\%s] Ros node handle namespace for this state: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{classsmacc_1_1ISmaccState_ae59191a663a08489b7d10036f3b25238}{contextNh}}.getNamespace().c\_str());}
+\DoxyCodeLine{00071       \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsmacc_1_1ISmaccState_ae59191a663a08489b7d10036f3b25238}{contextNh}}.getNamespace() == \textcolor{stringliteral}{"{}/"{}})}
+\DoxyCodeLine{00072       \{}
+\DoxyCodeLine{00073         \textcolor{keyword}{auto} nhname = \mbox{\hyperlink{namespacesmacc_1_1utils_aacd1975bb7cd9bec4b50e111a2ae7edb}{smacc::utils::cleanShortTypeName}}(\textcolor{keyword}{typeid}(Context));}
+\DoxyCodeLine{00074         ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Creating ros NodeHandle for this state: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, nhname.c\_str());}
+\DoxyCodeLine{00075         \mbox{\hyperlink{classsmacc_1_1ISmaccState_ae59191a663a08489b7d10036f3b25238}{contextNh}} = ros::NodeHandle(nhname);}
+\DoxyCodeLine{00076       \}}
+\DoxyCodeLine{00077     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{common_8cpp_source_l00014}{smacc\+::utils\+::clean\+Short\+Type\+Name()}}, \mbox{\hyperlink{smacc__state_8h_source_l00091}{smacc\+::\+ISmacc\+State\+::context\+Nh}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00036}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::finish\+State\+Thrown}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00083}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Info()}}, \mbox{\hyperlink{introspection_8h_source_l00039}{smacc\+::introspection\+::optional\+Node\+Handle()}}, \mbox{\hyperlink{smacc__state_8h_source_l00093}{smacc\+::\+ISmacc\+State\+::parent\+State\+\_\+}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00046}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::my\+\_\+context\+::p\+Context\+\_\+}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00051}{STATE\+\_\+\+NAME}}, and \mbox{\hyperlink{smacc__state_8h_source_l00095}{smacc\+::\+ISmacc\+State\+::state\+Info\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1SmaccState_adc225018fe91da47e6e9f1d20150b26a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a41b2515faf76648c6d69fe09108d2691}\label{classsmacc_1_1SmaccState_a41b2515faf76648c6d69fe09108d2691}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!````~SmaccState@{$\sim$SmaccState}}
+\index{````~SmaccState@{$\sim$SmaccState}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SmaccState()}{~SmaccState()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+virtual \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::$\sim$\mbox{\hyperlink{classsmacc_1_1SmaccState}{Smacc\+State}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00079}{79}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080     \{}
+\DoxyCodeLine{00081     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a80082718f226bebedb589f0c4696001d}\label{classsmacc_1_1SmaccState_a80082718f226bebedb589f0c4696001d}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!checkWhileLoopConditionAndThrowEvent@{checkWhileLoopConditionAndThrowEvent}}
+\index{checkWhileLoopConditionAndThrowEvent@{checkWhileLoopConditionAndThrowEvent}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{checkWhileLoopConditionAndThrowEvent()}{checkWhileLoopConditionAndThrowEvent()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::check\+While\+Loop\+Condition\+And\+Throw\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbool}{bool}}(Most\+Derived\+::$\ast$)()}]{condition\+Fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00308}{308}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00309     \{}
+\DoxyCodeLine{00310       \textcolor{keyword}{auto} *thisobject = \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00311       \textcolor{keyword}{auto} condition = boost::bind(conditionFn, thisobject);}
+\DoxyCodeLine{00312       \textcolor{keywordtype}{bool} conditionResult = condition();}
+\DoxyCodeLine{00313 }
+\DoxyCodeLine{00314       \textcolor{comment}{//ROS\_INFO("{}LOOP EVENT CONDITION: \%d"{}, conditionResult);}}
+\DoxyCodeLine{00315       \textcolor{keywordflow}{if} (conditionResult)}
+\DoxyCodeLine{00316       \{}
+\DoxyCodeLine{00317         this-\/>postEvent<EvLoopContinue<MostDerived>>();}
+\DoxyCodeLine{00318       \}}
+\DoxyCodeLine{00319       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00320       \{}
+\DoxyCodeLine{00321         this-\/>postEvent<EvLoopEnd<MostDerived>>();}
+\DoxyCodeLine{00322       \}}
+\DoxyCodeLine{00323       ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] POST THROW CONDITION"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
+\DoxyCodeLine{00324     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__base_8h_source_l00051}{STATE\+\_\+\+NAME}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a9a9238f3f8dc18825771f64aefbc803a}\label{classsmacc_1_1SmaccState_a9a9238f3f8dc18825771f64aefbc803a}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!configure\_orthogonal@{configure\_orthogonal}}
+\index{configure\_orthogonal@{configure\_orthogonal}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{configure\_orthogonal()}{configure\_orthogonal()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+template$<$typename TOrthogonal , typename TBehavior , typename... Args$>$ \\
+static void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::configure\+\_\+orthogonal (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00194}{194}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00195     \{}
+\DoxyCodeLine{00196       configure\_orthogonal\_internal<TOrthogonal, TBehavior>(}
+\DoxyCodeLine{00197           [=](ISmaccState *state) \{}
+\DoxyCodeLine{00198             \textcolor{comment}{//auto bh = std::make\_shared<TBehavior>(args...);}}
+\DoxyCodeLine{00199             state-\/>configure<TOrthogonal, TBehavior>(\mbox{\hyperlink{namespacegenerate__debs_a75f9143e38df82d83b2e8a6f99cae02c}{args}}...);}
+\DoxyCodeLine{00200           \});}
+\DoxyCodeLine{00201     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{generate__debs_8py_source_l00305}{generate\+\_\+debs\+::args}}, and \mbox{\hyperlink{smacc__state__impl_8h_source_l00048}{smacc\+::\+ISmacc\+State\+::configure()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classsmacc_1_1SmaccState_a9a9238f3f8dc18825771f64aefbc803a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a1656e6a5fd9ec036267a740a00260bf3}\label{classsmacc_1_1SmaccState_a1656e6a5fd9ec036267a740a00260bf3}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!configure\_orthogonal\_internal@{configure\_orthogonal\_internal}}
+\index{configure\_orthogonal\_internal@{configure\_orthogonal\_internal}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{configure\_orthogonal\_internal()}{configure\_orthogonal\_internal()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+template$<$typename TOrthogonal , typename TBehavior $>$ \\
+static void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::configure\+\_\+orthogonal\+\_\+internal (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$ $\ast$state)$>$}]{initialization\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00376}{376}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00377     \{}
+\DoxyCodeLine{00378       ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Runtime configure orthogonal \%s -\/> \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(TOrthogonal).name()).c\_str(), \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(TBehavior).name()).c\_str());}
+\DoxyCodeLine{00379 }
+\DoxyCodeLine{00380       ClientBehaviorInfoEntry bhinfo;}
+\DoxyCodeLine{00381       bhinfo.factoryFunction = initializationFunction;}
+\DoxyCodeLine{00382 }
+\DoxyCodeLine{00383       bhinfo.behaviorType = \&(\textcolor{keyword}{typeid}(TBehavior));}
+\DoxyCodeLine{00384       bhinfo.orthogonalType = \&(\textcolor{keyword}{typeid}(TOrthogonal));}
+\DoxyCodeLine{00385 }
+\DoxyCodeLine{00386       \textcolor{keyword}{const} std::type\_info *tindex = \&(\textcolor{keyword}{typeid}(MostDerived));}
+\DoxyCodeLine{00387       \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ad3d8b3450060cb0b91f38fb2fe0a7678}{SmaccStateInfo::staticBehaviorInfo}}.\mbox{\hyperlink{namespacesm__fetch__two__table__whiskey__pour_acbce06cd0c9048e8be6a258e2c406986}{count}}(tindex))}
+\DoxyCodeLine{00388         \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ad3d8b3450060cb0b91f38fb2fe0a7678}{SmaccStateInfo::staticBehaviorInfo}}[tindex] = std::vector<ClientBehaviorInfoEntry>();}
+\DoxyCodeLine{00389 }
+\DoxyCodeLine{00390       \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ad3d8b3450060cb0b91f38fb2fe0a7678}{SmaccStateInfo::staticBehaviorInfo}}[tindex].push\_back(bhinfo);}
+\DoxyCodeLine{00391     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__info_8h_source_l00021}{smacc\+::introspection\+::\+Client\+Behavior\+Info\+Entry\+::behavior\+Type}}, \mbox{\hyperlink{st__decide__destiny__table__action_8h_source_l00007}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::count}}, \mbox{\hyperlink{introspection_8h_source_l00051}{smacc\+::introspection\+::demangle\+Symbol()}}, \mbox{\hyperlink{smacc__state__info_8h_source_l00020}{smacc\+::introspection\+::\+Client\+Behavior\+Info\+Entry\+::factory\+Function}}, \mbox{\hyperlink{smacc__state__info_8h_source_l00022}{smacc\+::introspection\+::\+Client\+Behavior\+Info\+Entry\+::orthogonal\+Type}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00051}{STATE\+\_\+\+NAME}}, and \mbox{\hyperlink{smacc__state__info_8h_source_l00142}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::static\+Behavior\+Info}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classsmacc_1_1SmaccState_a1656e6a5fd9ec036267a740a00260bf3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_afe48d925910d9c691324ac3159a1bf10}\label{classsmacc_1_1SmaccState_afe48d925910d9c691324ac3159a1bf10}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!configure\_orthogonal\_runtime@{configure\_orthogonal\_runtime}}
+\index{configure\_orthogonal\_runtime@{configure\_orthogonal\_runtime}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{configure\_orthogonal\_runtime()}{configure\_orthogonal\_runtime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+template$<$typename TOrthogonal , typename TBehavior $>$ \\
+static void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::configure\+\_\+orthogonal\+\_\+runtime (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(TBehavior \&bh)$>$}]{initialization\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00184}{184}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185     \{}
+\DoxyCodeLine{00186       configure\_orthogonal\_internal<TOrthogonal, TBehavior>([=](ISmaccState *state) \{}
+\DoxyCodeLine{00187         \textcolor{comment}{//auto bh = std::make\_shared<TBehavior>(args...);}}
+\DoxyCodeLine{00188         \textcolor{keyword}{auto} bh = state-\/>configure<TOrthogonal, TBehavior>();}
+\DoxyCodeLine{00189         initializationFunction(*bh);}
+\DoxyCodeLine{00190       \});}
+\DoxyCodeLine{00191     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__impl_8h_source_l00048}{smacc\+::\+ISmacc\+State\+::configure()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classsmacc_1_1SmaccState_afe48d925910d9c691324ac3159a1bf10_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_ad70d7004c9bb0eb1621e68a223cfd2ef}\label{classsmacc_1_1SmaccState_ad70d7004c9bb0eb1621e68a223cfd2ef}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!configure\_orthogonal\_runtime@{configure\_orthogonal\_runtime}}
+\index{configure\_orthogonal\_runtime@{configure\_orthogonal\_runtime}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{configure\_orthogonal\_runtime()}{configure\_orthogonal\_runtime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+template$<$typename TOrthogonal , typename TBehavior $>$ \\
+static void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::configure\+\_\+orthogonal\+\_\+runtime (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(TBehavior \&bh, Most\+Derived \&)$>$}]{initialization\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00174}{174}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175     \{}
+\DoxyCodeLine{00176       configure\_orthogonal\_internal<TOrthogonal, TBehavior>([=](ISmaccState *state) \{}
+\DoxyCodeLine{00177         \textcolor{comment}{//auto bh = std::make\_shared<TBehavior>(args...);}}
+\DoxyCodeLine{00178         \textcolor{keyword}{auto} bh = state-\/>configure<TOrthogonal, TBehavior>();}
+\DoxyCodeLine{00179         initializationFunction(*bh, *(\textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(state)));}
+\DoxyCodeLine{00180       \});}
+\DoxyCodeLine{00181     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__impl_8h_source_l00048}{smacc\+::\+ISmacc\+State\+::configure()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classsmacc_1_1SmaccState_ad70d7004c9bb0eb1621e68a223cfd2ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_aac23d8a6909f75c5e5fca2a7c09b5368}\label{classsmacc_1_1SmaccState_aac23d8a6909f75c5e5fca2a7c09b5368}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!deep\_construct@{deep\_construct}}
+\index{deep\_construct@{deep\_construct}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{deep\_construct()}{deep\_construct()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+static void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::deep\+\_\+construct (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsmacc_1_1SmaccState_a0e15b77514301039f6bc093a9d3f6425}{context\+\_\+ptr\+\_\+type}} \&}]{p\+Context,  }\item[{\mbox{\hyperlink{classsmacc_1_1SmaccState_aaf76bbe2aa9dd73e3284605f84ab4b16}{outermost\+\_\+context\+\_\+base\+\_\+type}} \&}]{outermost\+Context\+Base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00349}{349}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00352     \{}
+\DoxyCodeLine{00353       \textcolor{keyword}{const} \mbox{\hyperlink{classsmacc_1_1SmaccState_a65a772c2e2039e9a59148ba6ffb54d8a}{inner\_context\_ptr\_type}} pInnerContext(}
+\DoxyCodeLine{00354           \mbox{\hyperlink{classsmacc_1_1SmaccState_a1dccb401e1a99031863a21a590d953e6}{shallow\_construct}}(pContext, outermostContextBase));}
+\DoxyCodeLine{00355       base\_type::template deep\_construct\_inner<inner\_initial\_list>(}
+\DoxyCodeLine{00356           pInnerContext, outermostContextBase);}
+\DoxyCodeLine{00357     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__base_8h_source_l00359}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::shallow\+\_\+construct()}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__state__base_8h_source_l00342}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::initial\+\_\+deep\+\_\+construct()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classsmacc_1_1SmaccState_aac23d8a6909f75c5e5fca2a7c09b5368_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classsmacc_1_1SmaccState_aac23d8a6909f75c5e5fca2a7c09b5368_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a084b95d0cb856d048fdb5ce81400eec7}\label{classsmacc_1_1SmaccState_a084b95d0cb856d048fdb5ce81400eec7}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!entryStateInternal@{entryStateInternal}}
+\index{entryStateInternal@{entryStateInternal}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{entryStateInternal()}{entryStateInternal()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::entry\+State\+Internal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00393}{393}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00394     \{}
+\DoxyCodeLine{00395       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_aeec54e997d715b105ebfeb5caadc4fbf}{notifyOnStateEntryStart}}(\textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this}));}
+\DoxyCodeLine{00396 }
+\DoxyCodeLine{00397       \textcolor{comment}{// TODO: make this static to build the parameter tree at startup}}
+\DoxyCodeLine{00398       this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a13fe6e6abfdb87996402189d44b78494}{nh}} = ros::NodeHandle(\mbox{\hyperlink{classsmacc_1_1ISmaccState_ae59191a663a08489b7d10036f3b25238}{contextNh}}.getNamespace() + std::string(\textcolor{stringliteral}{"{}/"{}}) + \mbox{\hyperlink{namespacesmacc_1_1utils_aacd1975bb7cd9bec4b50e111a2ae7edb}{smacc::utils::cleanShortTypeName}}(\textcolor{keyword}{typeid}(MostDerived)).c\_str());}
+\DoxyCodeLine{00399 }
+\DoxyCodeLine{00400       ROS\_DEBUG(\textcolor{stringliteral}{"{}[\%s] nodehandle namespace: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{classsmacc_1_1ISmaccState_a13fe6e6abfdb87996402189d44b78494}{nh}}.getNamespace().c\_str());}
+\DoxyCodeLine{00401 }
+\DoxyCodeLine{00402       this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a0b6c531ca8c446052022308548f55b92}{setParam}}(\textcolor{stringliteral}{"{}created"{}}, \textcolor{keyword}{true});}
+\DoxyCodeLine{00403 }
+\DoxyCodeLine{00404       \textcolor{comment}{// before dynamic runtimeConfigure, we execute the staticConfigure behavior configurations}}
+\DoxyCodeLine{00405       \{}
+\DoxyCodeLine{00406         ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] -\/-\/ STATIC STATE DESCRIPTION -\/-\/"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
+\DoxyCodeLine{00407 }
+\DoxyCodeLine{00408         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto} \&stateReactorsVector : \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ad3d8b3450060cb0b91f38fb2fe0a7678}{SmaccStateInfo::staticBehaviorInfo}})}
+\DoxyCodeLine{00409         \{}
+\DoxyCodeLine{00410           ROS\_DEBUG(\textcolor{stringliteral}{"{}[\%s] state info: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(stateReactorsVector.first-\/>name()).c\_str());}
+\DoxyCodeLine{00411           \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&bhinfo : stateReactorsVector.second)}
+\DoxyCodeLine{00412           \{}
+\DoxyCodeLine{00413             ROS\_DEBUG(\textcolor{stringliteral}{"{}[\%s] client behavior: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(bhinfo.behaviorType-\/>name()).c\_str());}
+\DoxyCodeLine{00414           \}}
+\DoxyCodeLine{00415         \}}
+\DoxyCodeLine{00416 }
+\DoxyCodeLine{00417         \textcolor{keyword}{const} std::type\_info *tindex = \&(\textcolor{keyword}{typeid}(MostDerived));}
+\DoxyCodeLine{00418         \textcolor{keyword}{auto} \&staticDefinedBehaviors = \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ad3d8b3450060cb0b91f38fb2fe0a7678}{SmaccStateInfo::staticBehaviorInfo}}[tindex];}
+\DoxyCodeLine{00419         \textcolor{keyword}{auto} \&staticDefinedStateReactors = \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_abd1d6ca5060c87f6bd11fde3e5b2ac4d}{SmaccStateInfo::stateReactorsInfo}}[tindex];}
+\DoxyCodeLine{00420         \textcolor{keyword}{auto} \&staticDefinedEventGenerators = \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ae38b8c98fb7808cc67b67e1f97ddbf74}{SmaccStateInfo::eventGeneratorsInfo}}[tindex];}
+\DoxyCodeLine{00421 }
+\DoxyCodeLine{00422         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&bhinfo : staticDefinedBehaviors)}
+\DoxyCodeLine{00423         \{}
+\DoxyCodeLine{00424           ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Creating static client behavior: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(bhinfo.behaviorType-\/>name()).c\_str());}
+\DoxyCodeLine{00425           bhinfo.factoryFunction(\textcolor{keyword}{this});}
+\DoxyCodeLine{00426         \}}
+\DoxyCodeLine{00427 }
+\DoxyCodeLine{00428         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&sr : staticDefinedStateReactors)}
+\DoxyCodeLine{00429         \{}
+\DoxyCodeLine{00430           ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Creating static state reactor: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(sr-\/>stateReactorType-\/>name()).c\_str());}
+\DoxyCodeLine{00431           sr-\/>factoryFunction(\textcolor{keyword}{this});}
+\DoxyCodeLine{00432         \}}
+\DoxyCodeLine{00433 }
+\DoxyCodeLine{00434         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&eg : staticDefinedEventGenerators)}
+\DoxyCodeLine{00435         \{}
+\DoxyCodeLine{00436           ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Creating static event generator: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(eg-\/>eventGeneratorType-\/>name()).c\_str());}
+\DoxyCodeLine{00437           eg-\/>factoryFunction(\textcolor{keyword}{this});}
+\DoxyCodeLine{00438         \}}
+\DoxyCodeLine{00439 }
+\DoxyCodeLine{00440         ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] -\/-\/-\/-\/ END STATIC DESCRIPTION"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
+\DoxyCodeLine{00441       \}}
+\DoxyCodeLine{00442 }
+\DoxyCodeLine{00443       ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] State runtime configuration"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
+\DoxyCodeLine{00444 }
+\DoxyCodeLine{00445       \textcolor{keyword}{auto} *derivedthis = \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00446 }
+\DoxyCodeLine{00447       \textcolor{comment}{// second the orthogonals are internally configured}}
+\DoxyCodeLine{00448       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7377ca0f79289fdc27f9ed3ff6e67263}{notifyOnRuntimeConfigured}}(derivedthis);}
+\DoxyCodeLine{00449 }
+\DoxyCodeLine{00450       \textcolor{comment}{// first we runtime configure the state, where we create client behaviors}}
+\DoxyCodeLine{00451       \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this})-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_a6995704a0232e24f4c38250302c0a01f}{runtimeConfigure}}();}
+\DoxyCodeLine{00452 }
+\DoxyCodeLine{00453       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a0a561ebd12c874a9fa85ba75b740871b}{notifyOnRuntimeConfigurationFinished}}(derivedthis);}
+\DoxyCodeLine{00454 }
+\DoxyCodeLine{00455       ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] State OnEntry"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
+\DoxyCodeLine{00456 }
+\DoxyCodeLine{00457       \textcolor{comment}{// finally we go to the derived state onEntry Function}}
+\DoxyCodeLine{00458       \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this})-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_a4a10a74fdbe51a798b8d651668b8ed9a}{onEntry}}();}
+\DoxyCodeLine{00459 }
+\DoxyCodeLine{00460       \textcolor{comment}{// here orthogonals and client behaviors are entered OnEntry}}
+\DoxyCodeLine{00461       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a856cf2d25d84659b974cccfbf44aeec9}{notifyOnStateEntryEnd}}(derivedthis);}
+\DoxyCodeLine{00462     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{common_8cpp_source_l00014}{smacc\+::utils\+::clean\+Short\+Type\+Name()}}, \mbox{\hyperlink{smacc__state_8h_source_l00091}{smacc\+::\+ISmacc\+State\+::context\+Nh}}, \mbox{\hyperlink{introspection_8h_source_l00051}{smacc\+::introspection\+::demangle\+Symbol()}}, \mbox{\hyperlink{smacc__state__info_8h_source_l00144}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::event\+Generators\+Info}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00168}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Machine()}}, \mbox{\hyperlink{smacc__state_8h_source_l00089}{smacc\+::\+ISmacc\+State\+::nh}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00432}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+Runtime\+Configuration\+Finished()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00447}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+Runtime\+Configured()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00378}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Entry\+End()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00366}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Entry\+Start()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00139}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::on\+Entry()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00133}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::runtime\+Configure()}}, \mbox{\hyperlink{smacc__state__impl_8h_source_l00032}{smacc\+::\+ISmacc\+State\+::set\+Param()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00051}{STATE\+\_\+\+NAME}}, \mbox{\hyperlink{smacc__state__info_8h_source_l00143}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::state\+Reactors\+Info}}, and \mbox{\hyperlink{smacc__state__info_8h_source_l00142}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::static\+Behavior\+Info}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1SmaccState_a084b95d0cb856d048fdb5ce81400eec7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a34b22a3b1af1796f2bdc1383eeef3a74}\label{classsmacc_1_1SmaccState_a34b22a3b1af1796f2bdc1383eeef3a74}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!exit@{exit}}
+\index{exit@{exit}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00116}{116}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117     \{}
+\DoxyCodeLine{00118       \textcolor{keyword}{auto} *derivedThis = \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00119       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a707c36f8b02eeed1af624dd36a5a4957}{notifyOnStateExitting}}(derivedThis);}
+\DoxyCodeLine{00120       \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00121       \{ \textcolor{comment}{// static\_cast<MostDerived *>(this)-\/>onExit();}}
+\DoxyCodeLine{00122         \mbox{\hyperlink{namespacesmacc_ab3aebd999834404be47a62ea03aacfc9}{standardOnExit}}(*derivedThis);}
+\DoxyCodeLine{00123       \}}
+\DoxyCodeLine{00124       \textcolor{keywordflow}{catch} (...)}
+\DoxyCodeLine{00125       \{}
+\DoxyCodeLine{00126       \}}
+\DoxyCodeLine{00127       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ac352013a5df0dcce0594f1466b9a6f7b}{notifyOnStateExited}}(derivedThis);}
+\DoxyCodeLine{00128     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__base_8h_source_l00168}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Machine()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00520}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Exited()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00453}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Exitting()}}, and \mbox{\hyperlink{state__traits_8h_source_l00062}{smacc\+::standard\+On\+Exit()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1SmaccState_a34b22a3b1af1796f2bdc1383eeef3a74_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a897dbdfe52a8b944d4bf1844ddcc3aa5}\label{classsmacc_1_1SmaccState_a897dbdfe52a8b944d4bf1844ddcc3aa5}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!getFullName@{getFullName}}
+\index{getFullName@{getFullName}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{getFullName()}{getFullName()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+std\+::string \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+Full\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00098}{98}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099     \{}
+\DoxyCodeLine{00100       \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(MostDerived).name());}
+\DoxyCodeLine{00101     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{introspection_8h_source_l00051}{smacc\+::introspection\+::demangle\+Symbol()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classsmacc_1_1SmaccState_a897dbdfe52a8b944d4bf1844ddcc3aa5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_ad53b5be2760eb7ffb50f3b2e542b65f1}\label{classsmacc_1_1SmaccState_ad53b5be2760eb7ffb50f3b2e542b65f1}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!getGlobalSMData@{getGlobalSMData}}
+\index{getGlobalSMData@{getGlobalSMData}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{getGlobalSMData()}{getGlobalSMData()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+Global\+SMData (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{T \&}]{ret }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00150}{150}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151     \{}
+\DoxyCodeLine{00152       \textcolor{keywordflow}{return} base\_type::outermost\_context().getGlobalSMData(name, ret);}
+\DoxyCodeLine{00153     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_ab940e5cfc6b1defbc0927647d7401b98}\label{classsmacc_1_1SmaccState_ab940e5cfc6b1defbc0927647d7401b98}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!getParentState@{getParentState}}
+\index{getParentState@{getParentState}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{getParentState()}{getParentState()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+virtual \mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmacc\+State}} $\ast$ \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+Parent\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00108}{108}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00109     \{}
+\DoxyCodeLine{00110       \textcolor{comment}{//auto* ctx = dynamic\_cast<ISmaccState*>(this-\/>template context<Context *>());}}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112       \textcolor{keywordflow}{return} \mbox{\hyperlink{classsmacc_1_1ISmaccState_ad61db41d8d06a836e7d1dac7767f5695}{parentState\_}};}
+\DoxyCodeLine{00113     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state_8h_source_l00093}{smacc\+::\+ISmacc\+State\+::parent\+State\+\_\+}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a4db028a85244653e48957d2b3371413d}\label{classsmacc_1_1SmaccState_a4db028a85244653e48957d2b3371413d}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!getShortName@{getShortName}}
+\index{getShortName@{getShortName}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{getShortName()}{getShortName()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+std\+::string \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+Short\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00103}{103}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104     \{}
+\DoxyCodeLine{00105       \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1utils_aacd1975bb7cd9bec4b50e111a2ae7edb}{smacc::utils::cleanShortTypeName}}(\textcolor{keyword}{typeid}(MostDerived));}
+\DoxyCodeLine{00106     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{common_8cpp_source_l00014}{smacc\+::utils\+::clean\+Short\+Type\+Name()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1SmaccState_a4db028a85244653e48957d2b3371413d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a55c3b227d9300d6139b41787fd44b789}\label{classsmacc_1_1SmaccState_a55c3b227d9300d6139b41787fd44b789}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!getStateInfo@{getStateInfo}}
+\index{getStateInfo@{getStateInfo}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{getStateInfo()}{getStateInfo()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+const \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo}{smacc\+::introspection\+::\+Smacc\+State\+Info}} $\ast$ \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00083}{83}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084     \{}
+\DoxyCodeLine{00085       \textcolor{keyword}{auto} smInfo = this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a3b1facb0477325fe43b447fc21d9eb7d}{getStateMachineInfo}}();}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087       \textcolor{keyword}{auto} \mbox{\hyperlink{namespacekeyboard__server__node_af0ebd8a9e1564ddc13a227c727602466}{key}} = \textcolor{keyword}{typeid}(MostDerived).name();}
+\DoxyCodeLine{00088       \textcolor{keywordflow}{if} (smInfo.states.count(\mbox{\hyperlink{namespacekeyboard__server__node_af0ebd8a9e1564ddc13a227c727602466}{key}}))}
+\DoxyCodeLine{00089       \{}
+\DoxyCodeLine{00090         \textcolor{keywordflow}{return} smInfo.states[\mbox{\hyperlink{namespacekeyboard__server__node_af0ebd8a9e1564ddc13a227c727602466}{key}}].get();}
+\DoxyCodeLine{00091       \}}
+\DoxyCodeLine{00092       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00093       \{}
+\DoxyCodeLine{00094         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00095       \}}
+\DoxyCodeLine{00096     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__base_8h_source_l00168}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Machine()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00566}{smacc\+::\+ISmacc\+State\+Machine\+::get\+State\+Machine\+Info()}}, and \mbox{\hyperlink{keyboard__server__node_8py_source_l00028}{keyboard\+\_\+server\+\_\+node\+::key}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__state__base_8h_source_l00053}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::\+Smacc\+State()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1SmaccState_a55c3b227d9300d6139b41787fd44b789_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classsmacc_1_1SmaccState_a55c3b227d9300d6139b41787fd44b789_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}\label{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!getStateMachine@{getStateMachine}}
+\index{getStateMachine@{getStateMachine}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{getStateMachine()}{getStateMachine()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+virtual \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmacc\+State\+Machine}} \& \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsmacc_1_1ISmaccState_a99ccacd52b422f9ee53cf892f6204618}{smacc\+::\+ISmacc\+State}}.
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00168}{168}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169     \{}
+\DoxyCodeLine{00170       \textcolor{keywordflow}{return} base\_type::outermost\_context();}
+\DoxyCodeLine{00171     \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{smacc__state__base_8h_source_l00393}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::entry\+State\+Internal()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00116}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::exit()}}, and \mbox{\hyperlink{smacc__state__base_8h_source_l00083}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Info()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_af4b4635d16a32bdd3956e5d40ddbd01d}\label{classsmacc_1_1SmaccState_af4b4635d16a32bdd3956e5d40ddbd01d}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!initial\_deep\_construct@{initial\_deep\_construct}}
+\index{initial\_deep\_construct@{initial\_deep\_construct}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{initial\_deep\_construct()}{initial\_deep\_construct()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+static void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::initial\+\_\+deep\+\_\+construct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsmacc_1_1SmaccState_aaf76bbe2aa9dd73e3284605f84ab4b16}{outermost\+\_\+context\+\_\+base\+\_\+type}} \&}]{outermost\+Context\+Base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00342}{342}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00344     \{}
+\DoxyCodeLine{00345       \mbox{\hyperlink{classsmacc_1_1SmaccState_aac23d8a6909f75c5e5fca2a7c09b5368}{deep\_construct}}(\&outermostContextBase, outermostContextBase);}
+\DoxyCodeLine{00346     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__base_8h_source_l00349}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::deep\+\_\+construct()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1SmaccState_af4b4635d16a32bdd3956e5d40ddbd01d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a4a10a74fdbe51a798b8d651668b8ed9a}\label{classsmacc_1_1SmaccState_a4a10a74fdbe51a798b8d651668b8ed9a}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!onEntry@{onEntry}}
+\index{onEntry@{onEntry}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{onEntry()}{onEntry()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::on\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00139}{139}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00140     \{}
+\DoxyCodeLine{00141     \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{smacc__state__base_8h_source_l00393}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::entry\+State\+Internal()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classsmacc_1_1SmaccState_a4a10a74fdbe51a798b8d651668b8ed9a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a82ca7c69153e86dc5eedf3f909560f3a}\label{classsmacc_1_1SmaccState_a82ca7c69153e86dc5eedf3f909560f3a}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!onExit@{onExit}}
+\index{onExit@{onExit}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00145}{145}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00146     \{}
+\DoxyCodeLine{00147     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a2febb778d5c3d80b9c034576b5a92b65}\label{classsmacc_1_1SmaccState_a2febb778d5c3d80b9c034576b5a92b65}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!requiresComponent@{requiresComponent}}
+\index{requiresComponent@{requiresComponent}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{requiresComponent()}{requiresComponent()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+template$<$typename Smacc\+Component\+Type $>$ \\
+void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::requires\+Component (\begin{DoxyParamCaption}\item[{Smacc\+Component\+Type $\ast$\&}]{storage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00163}{163}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164     \{}
+\DoxyCodeLine{00165       base\_type::outermost\_context().requiresComponent(storage);}
+\DoxyCodeLine{00166     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a6995704a0232e24f4c38250302c0a01f}\label{classsmacc_1_1SmaccState_a6995704a0232e24f4c38250302c0a01f}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!runtimeConfigure@{runtimeConfigure}}
+\index{runtimeConfigure@{runtimeConfigure}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{runtimeConfigure()}{runtimeConfigure()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::runtime\+Configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00133}{133}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00134     \{}
+\DoxyCodeLine{00135     \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{smacc__state__base_8h_source_l00393}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::entry\+State\+Internal()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classsmacc_1_1SmaccState_a6995704a0232e24f4c38250302c0a01f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a98f2673b257479e0a3615d5d8279a591}\label{classsmacc_1_1SmaccState_a98f2673b257479e0a3615d5d8279a591}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!setGlobalSMData@{setGlobalSMData}}
+\index{setGlobalSMData@{setGlobalSMData}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{setGlobalSMData()}{setGlobalSMData()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::set\+Global\+SMData (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00157}{157}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158     \{}
+\DoxyCodeLine{00159       base\_type::outermost\_context().setGlobalSMData(name, value);}
+\DoxyCodeLine{00160     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a1dccb401e1a99031863a21a590d953e6}\label{classsmacc_1_1SmaccState_a1dccb401e1a99031863a21a590d953e6}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!shallow\_construct@{shallow\_construct}}
+\index{shallow\_construct@{shallow\_construct}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{shallow\_construct()}{shallow\_construct()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+static \mbox{\hyperlink{classsmacc_1_1SmaccState_a65a772c2e2039e9a59148ba6ffb54d8a}{inner\+\_\+context\+\_\+ptr\+\_\+type}} \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::shallow\+\_\+construct (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsmacc_1_1SmaccState_a0e15b77514301039f6bc093a9d3f6425}{context\+\_\+ptr\+\_\+type}} \&}]{p\+Context,  }\item[{\mbox{\hyperlink{classsmacc_1_1SmaccState_aaf76bbe2aa9dd73e3284605f84ab4b16}{outermost\+\_\+context\+\_\+base\+\_\+type}} \&}]{outermost\+Context\+Base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00359}{359}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00362     \{}
+\DoxyCodeLine{00363       \textcolor{comment}{// allocating in memory}}
+\DoxyCodeLine{00364       \textcolor{keyword}{auto} state = \textcolor{keyword}{new} MostDerived(\mbox{\hyperlink{classSmaccState}{SmaccState<MostDerived, Context, InnerInitial, historyMode>::my\_context}}(pContext));}
+\DoxyCodeLine{00365       \textcolor{keyword}{const} \mbox{\hyperlink{classsmacc_1_1SmaccState_a65a772c2e2039e9a59148ba6ffb54d8a}{inner\_context\_ptr\_type}} pInnerContext(state);}
+\DoxyCodeLine{00366 }
+\DoxyCodeLine{00367       ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] State object created. Initializating..."{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
+\DoxyCodeLine{00368       state-\/>entryStateInternal();}
+\DoxyCodeLine{00369 }
+\DoxyCodeLine{00370       outermostContextBase.add(pInnerContext);}
+\DoxyCodeLine{00371       \textcolor{keywordflow}{return} pInnerContext;}
+\DoxyCodeLine{00372     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__base_8h_source_l00051}{STATE\+\_\+\+NAME}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__state__base_8h_source_l00349}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::deep\+\_\+construct()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1SmaccState_a1dccb401e1a99031863a21a590d953e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a8904eb4b4902bb7fc19651ccf192ab4b}\label{classsmacc_1_1SmaccState_a8904eb4b4902bb7fc19651ccf192ab4b}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!static\_createEventGenerator@{static\_createEventGenerator}}
+\index{static\_createEventGenerator@{static\_createEventGenerator}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{static\_createEventGenerator()}{static\_createEventGenerator()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+template$<$typename TEvent\+Generator , typename... TUArgs$>$ \\
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1introspection_1_1EventGeneratorHandler}{smacc\+::introspection\+::\+Event\+Generator\+Handler}} $>$ \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::static\+\_\+create\+Event\+Generator (\begin{DoxyParamCaption}\item[{TUArgs...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00256}{256}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00257     \{}
+\DoxyCodeLine{00258       \textcolor{keyword}{auto} egh = std::make\_shared<smacc::introspection::EventGeneratorHandler>();}
+\DoxyCodeLine{00259       \textcolor{keyword}{auto} eginfo = std::make\_shared<SmaccEventGeneratorInfo>();}
+\DoxyCodeLine{00260       eginfo-\/>eventGeneratorType = \&\textcolor{keyword}{typeid}(TEventGenerator);}
+\DoxyCodeLine{00261       eginfo-\/>egh = egh;}
+\DoxyCodeLine{00262       egh-\/>egInfo\_ = eginfo;}
+\DoxyCodeLine{00263 }
+\DoxyCodeLine{00264       \textcolor{keyword}{const} std::type\_info *tindex = \&(\textcolor{keyword}{typeid}(MostDerived)); \textcolor{comment}{// get identifier of the current state}}
+\DoxyCodeLine{00265 }
+\DoxyCodeLine{00266       \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ae38b8c98fb7808cc67b67e1f97ddbf74}{SmaccStateInfo::eventGeneratorsInfo}}.\mbox{\hyperlink{namespacesm__fetch__two__table__whiskey__pour_acbce06cd0c9048e8be6a258e2c406986}{count}}(tindex))}
+\DoxyCodeLine{00267         \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ae38b8c98fb7808cc67b67e1f97ddbf74}{SmaccStateInfo::eventGeneratorsInfo}}[tindex] = std::vector<std::shared\_ptr<SmaccEventGeneratorInfo>>();}
+\DoxyCodeLine{00268 }
+\DoxyCodeLine{00269       eginfo-\/>factoryFunction = [\&, egh, \mbox{\hyperlink{namespacegenerate__debs_a75f9143e38df82d83b2e8a6f99cae02c}{args}}...](ISmaccState *state) \{}
+\DoxyCodeLine{00270         \textcolor{keyword}{auto} eg = state-\/>createEventGenerator<TEventGenerator>(\mbox{\hyperlink{namespacegenerate__debs_a75f9143e38df82d83b2e8a6f99cae02c}{args}}...);}
+\DoxyCodeLine{00271         egh-\/>configureEventGenerator(eg);}
+\DoxyCodeLine{00272         eg-\/>initialize(state);}
+\DoxyCodeLine{00273         eg-\/>template onStateAllocation<MostDerived, TEventGenerator>();}
+\DoxyCodeLine{00274         \textcolor{keywordflow}{return} eg;}
+\DoxyCodeLine{00275       \};}
+\DoxyCodeLine{00276 }
+\DoxyCodeLine{00277       \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ae38b8c98fb7808cc67b67e1f97ddbf74}{SmaccStateInfo::eventGeneratorsInfo}}[tindex].push\_back(eginfo);}
+\DoxyCodeLine{00278       \textcolor{keywordflow}{return} egh;}
+\DoxyCodeLine{00279     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{generate__debs_8py_source_l00305}{generate\+\_\+debs\+::args}}, \mbox{\hyperlink{st__decide__destiny__table__action_8h_source_l00007}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::count}}, and \mbox{\hyperlink{smacc__state__info_8h_source_l00144}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::event\+Generators\+Info}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a4b54d8ec82d303736d8bc11a3ffd0ce1}\label{classsmacc_1_1SmaccState_a4b54d8ec82d303736d8bc11a3ffd0ce1}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!static\_createStateReactor@{static\_createStateReactor}}
+\index{static\_createStateReactor@{static\_createStateReactor}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{static\_createStateReactor()}{static\_createStateReactor()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+template$<$typename TState\+Reactor , typename TOutput\+Event , typename TInput\+Event\+List , typename... TArgs$>$ \\
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1introspection_1_1StateReactorHandler}{smacc\+::introspection\+::\+State\+Reactor\+Handler}} $>$ \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::static\+\_\+create\+State\+Reactor (\begin{DoxyParamCaption}\item[{TArgs...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00229}{229}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00230     \{}
+\DoxyCodeLine{00231       \textcolor{keyword}{auto} srh = std::make\_shared<smacc::introspection::StateReactorHandler>();}
+\DoxyCodeLine{00232       \textcolor{keyword}{auto} srinfo = std::make\_shared<SmaccStateReactorInfo>();}
+\DoxyCodeLine{00233 }
+\DoxyCodeLine{00234       srinfo-\/>stateReactorType = \&\textcolor{keyword}{typeid}(TStateReactor);}
+\DoxyCodeLine{00235       srinfo-\/>srh = srh;}
+\DoxyCodeLine{00236       srh-\/>srInfo\_ = srinfo;}
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{00238       \textcolor{keyword}{const} std::type\_info *tindex = \&(\textcolor{keyword}{typeid}(MostDerived)); \textcolor{comment}{// get identifier of the current state}}
+\DoxyCodeLine{00239 }
+\DoxyCodeLine{00240       \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_abd1d6ca5060c87f6bd11fde3e5b2ac4d}{SmaccStateInfo::stateReactorsInfo}}.\mbox{\hyperlink{namespacesm__fetch__two__table__whiskey__pour_acbce06cd0c9048e8be6a258e2c406986}{count}}(tindex))}
+\DoxyCodeLine{00241         \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_abd1d6ca5060c87f6bd11fde3e5b2ac4d}{SmaccStateInfo::stateReactorsInfo}}[tindex] = std::vector<std::shared\_ptr<SmaccStateReactorInfo>>();}
+\DoxyCodeLine{00242 }
+\DoxyCodeLine{00243       srinfo-\/>factoryFunction = [\&, srh, \mbox{\hyperlink{namespacegenerate__debs_a75f9143e38df82d83b2e8a6f99cae02c}{args}}...](ISmaccState *state) \{}
+\DoxyCodeLine{00244         \textcolor{keyword}{auto} sr = state-\/>createStateReactor<TStateReactor, TOutputEvent, TInputEventList, TArgs...>(\mbox{\hyperlink{namespacegenerate__debs_a75f9143e38df82d83b2e8a6f99cae02c}{args}}...);}
+\DoxyCodeLine{00245         srh-\/>configureStateReactor(sr);}
+\DoxyCodeLine{00246         sr-\/>initialize(state);}
+\DoxyCodeLine{00247         \textcolor{keywordflow}{return} sr;}
+\DoxyCodeLine{00248       \};}
+\DoxyCodeLine{00249 }
+\DoxyCodeLine{00250       \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_abd1d6ca5060c87f6bd11fde3e5b2ac4d}{SmaccStateInfo::stateReactorsInfo}}[tindex].push\_back(srinfo);}
+\DoxyCodeLine{00251 }
+\DoxyCodeLine{00252       \textcolor{keywordflow}{return} srh;}
+\DoxyCodeLine{00253     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{generate__debs_8py_source_l00305}{generate\+\_\+debs\+::args}}, \mbox{\hyperlink{st__decide__destiny__table__action_8h_source_l00007}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::count}}, and \mbox{\hyperlink{smacc__state__info_8h_source_l00143}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::state\+Reactors\+Info}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_aaf28bda37cee53b41abb1fd2f90363a1}\label{classsmacc_1_1SmaccState_aaf28bda37cee53b41abb1fd2f90363a1}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!static\_createStateReactor\_aux@{static\_createStateReactor\_aux}}
+\index{static\_createStateReactor\_aux@{static\_createStateReactor\_aux}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{static\_createStateReactor\_aux()}{static\_createStateReactor\_aux()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+template$<$typename TState\+Reactor , typename... TUArgs$>$ \\
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1introspection_1_1StateReactorHandler}{smacc\+::introspection\+::\+State\+Reactor\+Handler}} $>$ \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::static\+\_\+create\+State\+Reactor\+\_\+aux (\begin{DoxyParamCaption}\item[{TUArgs...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00282}{282}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00283     \{}
+\DoxyCodeLine{00284       \textcolor{keyword}{auto} srh = std::make\_shared<smacc::introspection::StateReactorHandler>();}
+\DoxyCodeLine{00285       \textcolor{keyword}{auto} srinfo = std::make\_shared<SmaccStateReactorInfo>();}
+\DoxyCodeLine{00286 }
+\DoxyCodeLine{00287       srinfo-\/>stateReactorType = \&\textcolor{keyword}{typeid}(TStateReactor);}
+\DoxyCodeLine{00288       srinfo-\/>srh = srh;}
+\DoxyCodeLine{00289       srh-\/>srInfo\_ = srinfo;}
+\DoxyCodeLine{00290 }
+\DoxyCodeLine{00291       \textcolor{keyword}{const} std::type\_info *tindex = \&(\textcolor{keyword}{typeid}(MostDerived)); \textcolor{comment}{// get identifier of the current state}}
+\DoxyCodeLine{00292 }
+\DoxyCodeLine{00293       \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_abd1d6ca5060c87f6bd11fde3e5b2ac4d}{SmaccStateInfo::stateReactorsInfo}}.\mbox{\hyperlink{namespacesm__fetch__two__table__whiskey__pour_acbce06cd0c9048e8be6a258e2c406986}{count}}(tindex))}
+\DoxyCodeLine{00294         \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_abd1d6ca5060c87f6bd11fde3e5b2ac4d}{SmaccStateInfo::stateReactorsInfo}}[tindex] = std::vector<std::shared\_ptr<SmaccStateReactorInfo>>();}
+\DoxyCodeLine{00295 }
+\DoxyCodeLine{00296       srinfo-\/>factoryFunction = [\&, srh, \mbox{\hyperlink{namespacegenerate__debs_a75f9143e38df82d83b2e8a6f99cae02c}{args}}...](ISmaccState *state) \{}
+\DoxyCodeLine{00297         \textcolor{keyword}{auto} sr = state-\/>createStateReactor<TStateReactor>(\mbox{\hyperlink{namespacegenerate__debs_a75f9143e38df82d83b2e8a6f99cae02c}{args}}...);}
+\DoxyCodeLine{00298         srh-\/>configureStateReactor(sr);}
+\DoxyCodeLine{00299         sr-\/>initialize(state);}
+\DoxyCodeLine{00300         \textcolor{keywordflow}{return} sr;}
+\DoxyCodeLine{00301       \};}
+\DoxyCodeLine{00302 }
+\DoxyCodeLine{00303       \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_abd1d6ca5060c87f6bd11fde3e5b2ac4d}{SmaccStateInfo::stateReactorsInfo}}[tindex].push\_back(srinfo);}
+\DoxyCodeLine{00304 }
+\DoxyCodeLine{00305       \textcolor{keywordflow}{return} srh;}
+\DoxyCodeLine{00306     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{generate__debs_8py_source_l00305}{generate\+\_\+debs\+::args}}, \mbox{\hyperlink{st__decide__destiny__table__action_8h_source_l00007}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::count}}, and \mbox{\hyperlink{smacc__state__info_8h_source_l00143}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::state\+Reactors\+Info}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a49dcfc25824f7e083dd4b999c49ab2b6}\label{classsmacc_1_1SmaccState_a49dcfc25824f7e083dd4b999c49ab2b6}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!throwSequenceFinishedEvent@{throwSequenceFinishedEvent}}
+\index{throwSequenceFinishedEvent@{throwSequenceFinishedEvent}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{throwSequenceFinishedEvent()}{throwSequenceFinishedEvent()}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+void \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::throw\+Sequence\+Finished\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00326}{326}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00327     \{}
+\DoxyCodeLine{00328       this-\/>postEvent<EvSequenceFinished<MostDerived>>();}
+\DoxyCodeLine{00329     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a6c40f733c35ddfb9ae2a2f8e9bab07d3}\label{classsmacc_1_1SmaccState_a6c40f733c35ddfb9ae2a2f8e9bab07d3}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!finishStateThrown@{finishStateThrown}}
+\index{finishStateThrown@{finishStateThrown}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{finishStateThrown}{finishStateThrown}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::finish\+State\+Thrown}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00036}{36}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__state__base_8h_source_l00053}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::\+Smacc\+State()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1SmaccState_a087d0f66729b98614feb8c59ea548af1}\label{classsmacc_1_1SmaccState_a087d0f66729b98614feb8c59ea548af1}} 
+\index{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}!smacc\_inner\_type@{smacc\_inner\_type}}
+\index{smacc\_inner\_type@{smacc\_inner\_type}!smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$@{smacc::SmaccState$<$ MostDerived, Context, InnerInitial, historyMode $>$}}
+\doxysubsubsection{\texorpdfstring{smacc\_inner\_type}{smacc\_inner\_type}}
+{\footnotesize\ttfamily template$<$class Most\+Derived , class Context , class Inner\+Initial  = mpl\+::list$<$$>$, sc\+::history\+\_\+mode history\+Mode = sc\+::has\+\_\+deep\+\_\+history$>$ \\
+Inner\+Initial$\ast$ \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc\+::\+Smacc\+State}}$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::smacc\+\_\+inner\+\_\+type}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00037}{37}} of file \mbox{\hyperlink{smacc__state__base_8h_source}{smacc\+\_\+state\+\_\+base.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc/include/smacc/\mbox{\hyperlink{smacc__state__base_8h}{smacc\+\_\+state\+\_\+base.\+h}}\end{DoxyCompactItemize}

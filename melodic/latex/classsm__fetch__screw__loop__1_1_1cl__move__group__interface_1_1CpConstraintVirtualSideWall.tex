@@ -1,0 +1,458 @@
+\hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall}{}\doxysection{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::Cp\+Constraint\+Virtual\+Side\+Wall Class Reference}
+\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall}\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+
+
+{\ttfamily \#include $<$cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::Cp\+Constraint\+Virtual\+Side\+Wall\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::Cp\+Constraint\+Virtual\+Side\+Wall\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a99e6ff416d9da148461a7e46ee6b4449}{enable}} ()
+\item 
+void \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a8b26123cf0c582b07f116092c95ac724}{disable}} ()
+\item 
+\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a418294a1483bec4949879e1a28e20144}{Cp\+Constraint\+Virtual\+Side\+Wall}} (std\+::string reference\+Frame, geometry\+\_\+msgs\+::\+Vector3 size, geometry\+\_\+msgs\+::\+Vector3 offset=geometry\+\_\+msgs\+::\+Vector3())
+\item 
+virtual void \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a1dcf39e1ad5ddbbec29a278677a2c680}{on\+Initialize}} () override
+\item 
+virtual void \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a86d9dd2c82600e9b175ee0e456c797a8}{update}} ()
+\item 
+void \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a57a9d6a1149ded198943c69fedc567fc}{create\+Collision\+Box}} (float x, float y, float z, float xl, float yl, float zl, std\+::string id, std\+::string frameid, moveit\+\_\+msgs\+::\+Collision\+Object \&collision, const ros\+::\+Time \&time, int add\+Or\+Remove)
+\item 
+void \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_acbe325c0c6fb25e10efddb9be7e672d1}{create\+Virtual\+Collision\+Walls}} (std\+::vector$<$ moveit\+\_\+msgs\+::\+Collision\+Object $>$ \&collisions, const ros\+::\+Time \&time, int add\+Or\+Remove)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+moveit\+::planning\+\_\+interface\+::\+Planning\+Scene\+Interface $\ast$ \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a36d055e567438938c2355ad5ee081498}{planning\+Scene\+Interface\+\_\+}}
+\item 
+\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup}{\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cl\+Move\+Group}} $\ast$ \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a6832fffc147a8a3f9206a7d76546f6b7}{movegroupclient\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_af0f1ec5b78685c0c4a45906aca85219e}{reference\+Frame\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::\+Vector3 \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a2bb600f30ac245821b733051f67ff1f5}{offset\+\_\+}}
+\item 
+geometry\+\_\+msgs\+::\+Vector3 \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_ab495461dac422e249302ec9be8e9e17a}{size\+\_\+}}
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a9d17ffd44fe6739ea5e5e4113d470a60}{enabled\+\_\+}} = true
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_aabc81a5e528f1e9c72e2ee12c4a9740f}{already\+Removed\+\_\+}} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00012}{12}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a418294a1483bec4949879e1a28e20144}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a418294a1483bec4949879e1a28e20144}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!CpConstraintVirtualSideWall@{CpConstraintVirtualSideWall}}
+\index{CpConstraintVirtualSideWall@{CpConstraintVirtualSideWall}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{CpConstraintVirtualSideWall()}{CpConstraintVirtualSideWall()}}
+{\footnotesize\ttfamily sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::\+Cp\+Constraint\+Virtual\+Side\+Wall (\begin{DoxyParamCaption}\item[{std\+::string}]{reference\+Frame,  }\item[{geometry\+\_\+msgs\+::\+Vector3}]{size,  }\item[{geometry\+\_\+msgs\+::\+Vector3}]{offset = {\ttfamily geometry\+\_\+msgs\+:\+:Vector3()} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00022}{22}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023         \{}
+\DoxyCodeLine{00024             \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_af0f1ec5b78685c0c4a45906aca85219e}{referenceFrame\_}} = referenceFrame;}
+\DoxyCodeLine{00025             \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_ab495461dac422e249302ec9be8e9e17a}{size\_}} = size;}
+\DoxyCodeLine{00026             \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a2bb600f30ac245821b733051f67ff1f5}{offset\_}} = offset;}
+\DoxyCodeLine{00027             this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_a88f3b092a81b2d8810a9776c8c69855b}{setUpdatePeriod}}(ros::Duration(10.0)); \textcolor{comment}{// do not update too much frequenfly since we have a relative collision}}
+\DoxyCodeLine{00028         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00019}{offset\+\_\+}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00018}{reference\+Frame\+\_\+}}, \mbox{\hyperlink{smacc__updatable_8cpp_source_l00017}{smacc\+::\+ISmacc\+Updatable\+::set\+Update\+Period()}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00020}{size\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a418294a1483bec4949879e1a28e20144_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a57a9d6a1149ded198943c69fedc567fc}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a57a9d6a1149ded198943c69fedc567fc}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!createCollisionBox@{createCollisionBox}}
+\index{createCollisionBox@{createCollisionBox}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{createCollisionBox()}{createCollisionBox()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::create\+Collision\+Box (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z,  }\item[{float}]{xl,  }\item[{float}]{yl,  }\item[{float}]{zl,  }\item[{std\+::string}]{id,  }\item[{std\+::string}]{frameid,  }\item[{moveit\+\_\+msgs\+::\+Collision\+Object \&}]{collision,  }\item[{const ros\+::\+Time \&}]{time,  }\item[{int}]{add\+Or\+Remove }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00056}{56}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057         \{}
+\DoxyCodeLine{00058             collision.operation = addOrRemove;}
+\DoxyCodeLine{00059             collision.id = id;}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061             collision.primitives.resize(1);}
+\DoxyCodeLine{00062             collision.primitives[0].type = collision.primitives[0].BOX;}
+\DoxyCodeLine{00063             collision.primitives[0].dimensions.resize(3);}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065             collision.primitives[0].dimensions[0] = xl;}
+\DoxyCodeLine{00066             collision.primitives[0].dimensions[1] = yl;}
+\DoxyCodeLine{00067             collision.primitives[0].dimensions[2] = zl;}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069             collision.primitive\_poses.resize(1);}
+\DoxyCodeLine{00070             collision.primitive\_poses[0].position.x = x;}
+\DoxyCodeLine{00071             collision.primitive\_poses[0].position.y = y;}
+\DoxyCodeLine{00072             collision.primitive\_poses[0].position.z = z;}
+\DoxyCodeLine{00073             collision.primitive\_poses[0].orientation.w = 1.0;}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075             collision.header.frame\_id = frameid;}
+\DoxyCodeLine{00076             collision.header.stamp = time;}
+\DoxyCodeLine{00077         \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00079}{create\+Virtual\+Collision\+Walls()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a57a9d6a1149ded198943c69fedc567fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_acbe325c0c6fb25e10efddb9be7e672d1}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_acbe325c0c6fb25e10efddb9be7e672d1}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!createVirtualCollisionWalls@{createVirtualCollisionWalls}}
+\index{createVirtualCollisionWalls@{createVirtualCollisionWalls}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{createVirtualCollisionWalls()}{createVirtualCollisionWalls()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::create\+Virtual\+Collision\+Walls (\begin{DoxyParamCaption}\item[{std\+::vector$<$ moveit\+\_\+msgs\+::\+Collision\+Object $>$ \&}]{collisions,  }\item[{const ros\+::\+Time \&}]{time,  }\item[{int}]{add\+Or\+Remove }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00079}{79}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080         \{}
+\DoxyCodeLine{00081             moveit\_msgs::CollisionObject box;}
+\DoxyCodeLine{00082             \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a57a9d6a1149ded198943c69fedc567fc}{createCollisionBox}}(\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a2bb600f30ac245821b733051f67ff1f5}{offset\_}}.x, \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a2bb600f30ac245821b733051f67ff1f5}{offset\_}}.y , \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a2bb600f30ac245821b733051f67ff1f5}{offset\_}}.z, \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_ab495461dac422e249302ec9be8e9e17a}{size\_}}.x, \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_ab495461dac422e249302ec9be8e9e17a}{size\_}}.y, \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_ab495461dac422e249302ec9be8e9e17a}{size\_}}.z, \textcolor{stringliteral}{"{}virtual\_side\_wall"{}}, \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_af0f1ec5b78685c0c4a45906aca85219e}{referenceFrame\_}}, box, time, addOrRemove);}
+\DoxyCodeLine{00083             collisions.push\_back(box);}
+\DoxyCodeLine{00084         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00056}{create\+Collision\+Box()}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00019}{offset\+\_\+}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00018}{reference\+Frame\+\_\+}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00020}{size\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00036}{update()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_acbe325c0c6fb25e10efddb9be7e672d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_acbe325c0c6fb25e10efddb9be7e672d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a8b26123cf0c582b07f116092c95ac724}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a8b26123cf0c582b07f116092c95ac724}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!disable@{disable}}
+\index{disable@{disable}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00016}{16}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017         \{}
+\DoxyCodeLine{00018             \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a9d17ffd44fe6739ea5e5e4113d470a60}{enabled\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00019             this-\/>\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a86d9dd2c82600e9b175ee0e456c797a8}{update}}();}
+\DoxyCodeLine{00020         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00021}{enabled\+\_\+}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00036}{update()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a8b26123cf0c582b07f116092c95ac724_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a99e6ff416d9da148461a7e46ee6b4449}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a99e6ff416d9da148461a7e46ee6b4449}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!enable@{enable}}
+\index{enable@{enable}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00009}{9}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010         \{}
+\DoxyCodeLine{00011             \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a9d17ffd44fe6739ea5e5e4113d470a60}{enabled\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00012             \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_aabc81a5e528f1e9c72e2ee12c4a9740f}{alreadyRemoved\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00013             this-\/>\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a86d9dd2c82600e9b175ee0e456c797a8}{update}}();}
+\DoxyCodeLine{00014         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00022}{already\+Removed\+\_\+}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00021}{enabled\+\_\+}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00036}{update()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a99e6ff416d9da148461a7e46ee6b4449_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a1dcf39e1ad5ddbbec29a278677a2c680}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a1dcf39e1ad5ddbbec29a278677a2c680}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_ae6f71d008db12553912e9436184b9e65}{smacc\+::\+ISmacc\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00030}{30}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031         \{}
+\DoxyCodeLine{00032             this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a36c085d906fbae0fcaee817aaeafebf4}{requiresClient}}(\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a6832fffc147a8a3f9206a7d76546f6b7}{movegroupclient\_}});}
+\DoxyCodeLine{00033             \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a36d055e567438938c2355ad5ee081498}{planningSceneInterface\_}} = \&\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a6832fffc147a8a3f9206a7d76546f6b7}{movegroupclient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_a11bfab580f36e2ad32c9b37d6f58f44c}{planningSceneInterface}};}
+\DoxyCodeLine{00034         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00016}{movegroupclient\+\_\+}}, \mbox{\hyperlink{cl__movegroup_8h_source_l00076}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cl\+Move\+Group\+::planning\+Scene\+Interface}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00015}{planning\+Scene\+Interface\+\_\+}}, and \mbox{\hyperlink{smacc__component__impl_8h_source_l00027}{smacc\+::\+ISmacc\+Component\+::requires\+Client()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a1dcf39e1ad5ddbbec29a278677a2c680_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a86d9dd2c82600e9b175ee0e456c797a8}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a86d9dd2c82600e9b175ee0e456c797a8}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!update@{update}}
+\index{update@{update}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_a84ee0520cbefdb1d412bed54650b028e}{smacc\+::\+ISmacc\+Updatable}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00036}{36}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037         \{}
+\DoxyCodeLine{00038             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a9d17ffd44fe6739ea5e5e4113d470a60}{enabled\_}})}
+\DoxyCodeLine{00039             \{}
+\DoxyCodeLine{00040                 \textcolor{keyword}{auto} time = ros::Time::now();}
+\DoxyCodeLine{00041                 std::vector<moveit\_msgs::CollisionObject> collisionObjects;}
+\DoxyCodeLine{00042                 \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_acbe325c0c6fb25e10efddb9be7e672d1}{createVirtualCollisionWalls}}(collisionObjects, time, moveit\_msgs::CollisionObject::ADD);}
+\DoxyCodeLine{00043                 this-\/>\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a36d055e567438938c2355ad5ee081498}{planningSceneInterface\_}}-\/>applyCollisionObjects(collisionObjects);}
+\DoxyCodeLine{00044             \}}
+\DoxyCodeLine{00045             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_aabc81a5e528f1e9c72e2ee12c4a9740f}{alreadyRemoved\_}})}
+\DoxyCodeLine{00046             \{}
+\DoxyCodeLine{00047                 \textcolor{keyword}{auto} time = ros::Time::now();}
+\DoxyCodeLine{00048                 std::vector<moveit\_msgs::CollisionObject> collisionObjects;}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050                 \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_acbe325c0c6fb25e10efddb9be7e672d1}{createVirtualCollisionWalls}}(collisionObjects, time, moveit\_msgs::CollisionObject::REMOVE);}
+\DoxyCodeLine{00051                 this-\/>\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a36d055e567438938c2355ad5ee081498}{planningSceneInterface\_}}-\/>applyCollisionObjects(collisionObjects);}
+\DoxyCodeLine{00052                 \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_aabc81a5e528f1e9c72e2ee12c4a9740f}{alreadyRemoved\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00053             \}}
+\DoxyCodeLine{00054         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00022}{already\+Removed\+\_\+}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00079}{create\+Virtual\+Collision\+Walls()}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00021}{enabled\+\_\+}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00015}{planning\+Scene\+Interface\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00016}{disable()}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00009}{enable()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a86d9dd2c82600e9b175ee0e456c797a8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a86d9dd2c82600e9b175ee0e456c797a8_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_aabc81a5e528f1e9c72e2ee12c4a9740f}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_aabc81a5e528f1e9c72e2ee12c4a9740f}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!alreadyRemoved\_@{alreadyRemoved\_}}
+\index{alreadyRemoved\_@{alreadyRemoved\_}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{alreadyRemoved\_}{alreadyRemoved\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::already\+Removed\+\_\+ = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00022}{22}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00009}{enable()}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00036}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a9d17ffd44fe6739ea5e5e4113d470a60}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a9d17ffd44fe6739ea5e5e4113d470a60}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!enabled\_@{enabled\_}}
+\index{enabled\_@{enabled\_}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{enabled\_}{enabled\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::enabled\+\_\+ = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00021}{21}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00016}{disable()}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00009}{enable()}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00036}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a6832fffc147a8a3f9206a7d76546f6b7}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a6832fffc147a8a3f9206a7d76546f6b7}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!movegroupclient\_@{movegroupclient\_}}
+\index{movegroupclient\_@{movegroupclient\_}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{movegroupclient\_}{movegroupclient\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup}{\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cl\+Move\+Group}}$\ast$ sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::movegroupclient\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00016}{16}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00030}{on\+Initialize()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a2bb600f30ac245821b733051f67ff1f5}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a2bb600f30ac245821b733051f67ff1f5}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!offset\_@{offset\_}}
+\index{offset\_@{offset\_}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{offset\_}{offset\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Vector3 sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::offset\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00019}{19}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00022}{Cp\+Constraint\+Virtual\+Side\+Wall()}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00079}{create\+Virtual\+Collision\+Walls()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a36d055e567438938c2355ad5ee081498}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a36d055e567438938c2355ad5ee081498}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!planningSceneInterface\_@{planningSceneInterface\_}}
+\index{planningSceneInterface\_@{planningSceneInterface\_}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{planningSceneInterface\_}{planningSceneInterface\_}}
+{\footnotesize\ttfamily moveit\+::planning\+\_\+interface\+::\+Planning\+Scene\+Interface$\ast$ sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::planning\+Scene\+Interface\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00015}{15}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00030}{on\+Initialize()}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00036}{update()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_af0f1ec5b78685c0c4a45906aca85219e}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_af0f1ec5b78685c0c4a45906aca85219e}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!referenceFrame\_@{referenceFrame\_}}
+\index{referenceFrame\_@{referenceFrame\_}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{referenceFrame\_}{referenceFrame\_}}
+{\footnotesize\ttfamily std\+::string sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::reference\+Frame\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00018}{18}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00022}{Cp\+Constraint\+Virtual\+Side\+Wall()}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00079}{create\+Virtual\+Collision\+Walls()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_ab495461dac422e249302ec9be8e9e17a}\label{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_ab495461dac422e249302ec9be8e9e17a}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}!size\_@{size\_}}
+\index{size\_@{size\_}!sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall@{sm\_fetch\_screw\_loop\_1::cl\_move\_group\_interface::CpConstraintVirtualSideWall}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Vector3 sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source_l00020}{20}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d_source}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00022}{Cp\+Constraint\+Virtual\+Side\+Wall()}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00079}{create\+Virtual\+Collision\+Walls()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1/include/sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1/clients/move\+\_\+group\+\_\+interface\+\_\+client/components/\mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2move__group__interface__2973b596c5e2c0df601329489855784d}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+h}}\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1/src/sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1/clients/move\+\_\+group\+\_\+interface\+\_\+client/components/\mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596}{cp\+\_\+constraint\+\_\+virtual\+\_\+side\+\_\+wall.\+cpp}}\end{DoxyCompactItemize}

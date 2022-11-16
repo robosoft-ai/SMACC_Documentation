@@ -1,0 +1,2412 @@
+\hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips}{}\doxysection{cl\+\_\+microstrain\+\_\+mips\+::Cl\+Microstain\+Mips Class Reference}
+\label{classcl__microstrain__mips_1_1ClMicrostainMips}\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+
+
+{\ttfamily \#include $<$microstrain\+\_\+mips\+\_\+client.\+h$>$}
+
+
+
+Inheritance diagram for cl\+\_\+microstrain\+\_\+mips\+::Cl\+Microstain\+Mips\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classcl__microstrain__mips_1_1ClMicrostainMips__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cl\+\_\+microstrain\+\_\+mips\+::Cl\+Microstain\+Mips\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__microstrain__mips_1_1ClMicrostainMips__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac4708eb9946be3b716442e12f7296b2c}{Cl\+Microstain\+Mips}} ()
+\item 
+virtual void \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ab52b739d8230f932ad3042fcd1b697f4}{initialize}} () override
+\item 
+{\footnotesize template$<$typename TOrthogonal , typename TSource\+Object $>$ }\\void \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a47e6c127c560cf2e1443ef0d7368f4ad}{on\+Orthogonal\+Allocation}} ()
+\item 
+void \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad53d21cfe5e6f8089ff00583d364d0e5}{reset\+Filter}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4987d87f50c6ce20102f6e3359619b88}{device\+Report}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ada40a42a0d479c9651bc4a735a76ce39}{gyro\+Bias\+Capture}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a24996ea87cf409ae0a912931dc088eb2}{set\+Soft\+Iron\+Matrix}} (const geometry\+\_\+msgs\+::\+Vector3 \&soft\+\_\+iron\+\_\+1, const geometry\+\_\+msgs\+::\+Vector3 \&soft\+\_\+iron\+\_\+2, const geometry\+\_\+msgs\+::\+Vector3 \&soft\+\_\+iron\+\_\+3)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4dfbed2e601dd990b5fd89fb670656b9}{set\+Complementary\+Filter}} (int8\+\_\+t north\+\_\+comp\+\_\+enable, int8\+\_\+t up\+\_\+comp\+\_\+enable, float north\+\_\+comp\+\_\+time\+\_\+const, float up\+\_\+comp\+\_\+time\+\_\+const)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_af5d9e53254b967a2bc02343c2010a47b}{set\+Filter\+Euler\+Service}} (const geometry\+\_\+msgs\+::\+Vector3 \&angle)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_addede8b2d6eac488ff9de6acd0b28fa7}{set\+Filter\+Heading}} (float angle)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a809131028b774a3026a3f6894db0dc8f}{set\+Accel\+Bias\+Model}} (const geometry\+\_\+msgs\+::\+Vector3 \&noise\+\_\+vector, const geometry\+\_\+msgs\+::\+Vector3 \&beta\+\_\+vector)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4687c5a4ea6de01c41d96f3aeb58fa24}{set\+Accel\+Adaptive\+Vals}} (float enable, float low\+\_\+pass\+\_\+cutoff, float min\+\_\+1sigma, float low\+\_\+limit, float high\+\_\+limit, float low\+\_\+limit\+\_\+1sigma, float high\+\_\+limit\+\_\+1sigma)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4dd8966794ba1697319f0f1812160405}{set\+Sensor\+Vehicle\+Frame\+Trans}} (const geometry\+\_\+msgs\+::\+Vector3 \&angle)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2b2786c142088f7d8e0fba6fc67d3a88}{set\+Sensor\+Vehicle\+Frame\+Offset}} (const geometry\+\_\+msgs\+::\+Vector3 \&offset)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a535b7afce9ff4288c94077fe8fc30f79}{set\+Accel\+Bias}} (const geometry\+\_\+msgs\+::\+Vector3 \&bias)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aabb65ca3b2e8be4a1ad2284d543ddd9c}{set\+Gyro\+Bias}} (const geometry\+\_\+msgs\+::\+Vector3 \&bias)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6f9ae5ca80db4a93db8b01192d38b426}{set\+Hard\+Iron\+Values}} (const geometry\+\_\+msgs\+::\+Vector3 \&bias)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a97ef55f8b10be52f44ae585ccd4e7db9}{get\+Accel\+Bias}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaa1e9015c879e48776a803f55add33e2}{get\+Gyro\+Bias}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aa138907ebb7fb634373f948028202749}{get\+Hard\+Iron\+Values}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad605051aea5b2fe25de85314deb1aa39}{get\+Soft\+Iron\+Matrix}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a184450cf337fe02c9ef4101520d9f9a5}{get\+Sensor\+Vehicle\+Frame\+Trans}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaff58eafdd41438a7af7c6adee3b2d5b}{get\+Complementary\+Filter}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2dae9cbd60e135e149117d6af14e6b27}{set\+Reference\+Position}} (const geometry\+\_\+msgs\+::\+Vector3 \&position)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1bb67145e871d3ce3637a713559a0121}{get\+Reference\+Position}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a981895d2724594166bcf22247382ddcf}{set\+Coning\+Sculling\+Comp}} (int8\+\_\+t enable)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6826c989f0b2a29b87c6e78140dfe6d1}{get\+Coning\+Sculling\+Comp}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8b5a76095196ef5a351804991ea9e23f}{set\+Estimation\+Control\+Flags}} (int8\+\_\+t flag)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad0a8eda5c19617250d3392593d0c8986}{get\+Estimation\+Control\+Flags}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaa5987561df8840ec12ca1eecb852ad9}{set\+Dynamics\+Mode}} (int8\+\_\+t mode)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7ba22bfed70ee5796d9776b9438d0908}{get\+Basic\+Status}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_adbe8f64e2f6e4d48cd0efc84924b4d08}{get\+Diagnostic\+Report}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a75ba5fe4116ece2f23f9f92f7ab96435}{set\+Zero\+Angle\+Update\+Threshold}} (int8\+\_\+t enable, float threshold)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_afca57a1888e4e57f6dba69083e53442d}{get\+Zero\+Angle\+Update\+Threshold}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a84173859b79a7bad8861b7ea14f15c6a}{set\+Tare\+Orientation}} (int8\+\_\+t axis)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_af003ab445879e23f969cca8e767a70f3}{set\+Accel\+Noise}} (const geometry\+\_\+msgs\+::\+Vector3 \&noise)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6b75108e49aca71fdff9ac7fd83aecc0}{get\+Accel\+Noise}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a26f7969c967cc7f83f556f566254e0ff}{set\+Gyro\+Noise}} (const geometry\+\_\+msgs\+::\+Vector3 \&noise)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7e54b1b4fb3ccdc5d2a845e52caf2f17}{get\+Gyro\+Noise}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a6c9825168b47aa42091e410da90f43c8}{set\+Mag\+Noise}} (const geometry\+\_\+msgs\+::\+Vector3 \&noise)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aaa3a569e4b555b0db5b3f3d02ae1b33e}{get\+Mag\+Noise}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac0a42062a2938fca9c982668909f7bff}{set\+Gyro\+Bias\+Model}} (const geometry\+\_\+msgs\+::\+Vector3 \&noise\+\_\+vector, const geometry\+\_\+msgs\+::\+Vector3 \&beta\+\_\+vector)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a9a4353f87640e524750cf919bdcdbf2d}{get\+Gyro\+Bias\+Model}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aac0a271bd226038aca61077c08c6427b}{get\+Accel\+Adaptive\+Vals}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ad28163dc7afc33064b337f6a76b99389}{set\+Mag\+Adaptive\+Vals}} (float enable, float low\+\_\+pass\+\_\+cutoff, float min\+\_\+1sigma, float low\+\_\+limit, float high\+\_\+limit, float low\+\_\+limit\+\_\+1sigma, float high\+\_\+limit\+\_\+1sigma)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a704dbe24f752c360b09c82234d4c928f}{get\+Mag\+Adaptive\+Vals}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1b81980570d6ff87b58a823a73cc992d}{set\+Mag\+Dip\+Adaptive\+Vals}} (float enable, float low\+\_\+pass\+\_\+cutoff, float min\+\_\+1sigma, float high\+\_\+limit, float high\+\_\+limit\+\_\+1sigma)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8765bf73916e6de2646aba55f3b8a5ce}{get\+Accel\+Bias\+Model}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae3642065001bd0bac34d300d5e40f6a1}{get\+Mag\+Dip\+Adaptive\+Vals}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_acbb92f93e42a2c304d450cc30c0e992f}{get\+Sensor\+Vehicle\+Frame\+Offset}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3a0425423b14461be52bc9b6c0f118bc}{get\+Gynamics\+Mode}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a46c4caa433f40536bab99a0ecaf9e1ab}{node\+Name\+\_\+}}
+\item 
+\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ sensor\+\_\+msgs\+::\+Imu $>$ $\ast$ \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a71648a9d970672d017c90bd3724b1104}{imu\+Subscriber}}
+\item 
+\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ sensor\+\_\+msgs\+::\+Imu $>$ $\ast$ \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae53fdf79a14adb9c3eff4a8966a092ff}{imu\+Filtered\+Subscriber}}
+\item 
+\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ microstrain\+\_\+mips\+::status\+\_\+msg $>$ $\ast$ \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0da593a071ac7ff8dd842b934120e315}{status\+Subscriber}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\+\_\+}}
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}{initialized\+\_\+}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d9eb5c291d70a2fb1b9bde4392e1d48}{reset\+Filter\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a905c9403005198bb4dd62918721b7d10}{device\+Report\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a584ea1089a89cd1039494d0fce19485c}{gyro\+Bias\+Capture\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2e46116a0dbc6acdf6384467d0c3a50d}{set\+Soft\+Iron\+Matrix\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a54045931a06f909418ac284235c5dd5a}{set\+Complementary\+Filter\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4e88ebd03c7a774e958f8902c18e7f69}{set\+Filter\+Euler\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abe64faba505dfdab0b78b7cf31f9609d}{set\+Filter\+Heading\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8d7c0f0a94dd6a25cac0130f8d9f55ff}{set\+Accel\+Bias\+Model\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0e22727b68e51261aa65605f236419e6}{set\+Accel\+Adaptive\+Vals\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac020b44e78addaa26beb44081d99f194}{set\+Sensor\+Vehicle\+Frame\+Trans\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a977cce1917e12d96f614266baa4ae55d}{set\+Sensor\+Vehicle\+Frame\+Offset\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae2ea11655cba06e49307780d1f95e197}{set\+Accel\+Bias\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a29fcea0897ca3bd7a036ab5c1856b86c}{set\+Gyro\+Bias\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abab500a095515c133d5edfea23736fad}{set\+Hard\+Iron\+Values\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a79547e77f9122ca67610f153657ec8ac}{get\+Accel\+Bias\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2f3eaec7f31a54d833773ebb5eb03b64}{get\+Gyro\+Bias\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a11169f770102e9cff7f3b45c96fb4881}{get\+Hard\+Iron\+Values\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7210454a851669073d06d82511014ecc}{get\+Soft\+Iron\+Matrix\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abeafc4f48f26ddd264e61b6cf97c779f}{get\+Sensor\+Vehicle\+Frame\+Trans\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a39aa3d9d1bbe86d90548f7422aa0b4a4}{get\+Complementary\+Filter\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a778117029f93a6cff9c5e2a0dac9742b}{set\+Reference\+Position\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1f9b56f826c67a2e1d8a33e0879053bc}{get\+Reference\+Position\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae24545c615e2be170adced3999d94d84}{set\+Coning\+Sculling\+Comp\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a877393b5cf4c313e0e433e9c92163265}{get\+Coning\+Sculling\+Comp\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2eeff01aea4a41fd5d24ff2f77daf584}{set\+Estimation\+Control\+Flags\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a64039ee26cf8a290b3c22b787b8868a5}{get\+Estimation\+Control\+Flags\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a43a684f4010debc4a2ba17d9784712d6}{set\+Dynamics\+Mode\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ab2d9efccc6237800a890135a4249eaf8}{get\+Basic\+Status\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d4329c798aa4b7cab1320f35f270192}{get\+Diagnostic\+Report\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a88ffc1e573993764bb130c97cc64fe08}{set\+Zero\+Angle\+Update\+Threshold\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae720970f4114e7b6524b59df405ede83}{get\+Zero\+Angle\+Update\+Threshold\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_affd28a64d0ee9bcdb116d974f5e19ec6}{set\+Tare\+Orientation\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aed9dd96ff81966ea1fce03173a05bcd8}{set\+Accel\+Noise\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae34d6cfd5e2e990d2fa3afab20ca9c01}{get\+Accel\+Noise\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a712c389ca54fa2ebe89ffd601b03bd37}{set\+Gyro\+Noise\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7876569caf3e8169a1972ad8a591c772}{get\+Gyro\+Noise\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0a6ed1132b9cca45536598e78c8b23cc}{set\+Mag\+Noise\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a858136430bc226e36390517f28687a2a}{get\+Mag\+Noise\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a96fa3777b87a5d8abcb0f5fe6d740934}{set\+Gyro\+Bias\+Model\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4caf935b9d839aa586b562982cfc3adb}{get\+Gyro\+Bias\+Model\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a828f3b0adbfb1e6082fcaa1ce22928c0}{get\+Accel\+Adaptive\+Vals\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aeb9fb755367cd253b65bf826e421cc05}{set\+Mag\+Adaptive\+Vals\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a799d76ddd2e92c3624d51ffb7c4b8c89}{get\+Mag\+Adaptive\+Vals\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3618b27ce1ed75f2e498c0bc6a36599d}{set\+Mag\+Dip\+Adaptive\+Vals\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5516ee2ad71621f728245d0854104dc7}{get\+Accel\+Bias\+Model\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aa5a412d1343febccf6bda432eacb0581}{get\+Mag\+Dip\+Adaptive\+Vals\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a12957749416c955e1b0132cb2213f879}{get\+Sensor\+Vehicle\+Frame\+Offset\+Srv}}
+\item 
+ros\+::\+Service\+Client \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5ded1b1b3506d16e56d312b3d1a7fe13}{get\+Gynamics\+Mode\+Srv}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00042}{42}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ac4708eb9946be3b716442e12f7296b2c}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ac4708eb9946be3b716442e12f7296b2c}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!ClMicrostainMips@{ClMicrostainMips}}
+\index{ClMicrostainMips@{ClMicrostainMips}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{ClMicrostainMips()}{ClMicrostainMips()}}
+{\footnotesize\ttfamily cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::\+Cl\+Microstain\+Mips (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00051}{51}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052     \{}
+\DoxyCodeLine{00053         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}{initialized\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00054     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00630}{initialized\+\_\+}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a4987d87f50c6ce20102f6e3359619b88}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a4987d87f50c6ce20102f6e3359619b88}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!deviceReport@{deviceReport}}
+\index{deviceReport@{deviceReport}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{deviceReport()}{deviceReport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::device\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00153}{153}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154     \{}
+\DoxyCodeLine{00155         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00156         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00157 }
+\DoxyCodeLine{00158         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a905c9403005198bb4dd62918721b7d10}{deviceReportSrv}}.call(req, res);}
+\DoxyCodeLine{00159         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00160     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00633}{device\+Report\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_aac0a271bd226038aca61077c08c6427b}\label{classcl__microstrain__mips_1_1ClMicrostainMips_aac0a271bd226038aca61077c08c6427b}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getAccelAdaptiveVals@{getAccelAdaptiveVals}}
+\index{getAccelAdaptiveVals@{getAccelAdaptiveVals}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getAccelAdaptiveVals()}{getAccelAdaptiveVals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Accel\+Adaptive\+Vals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00542}{542}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00543     \{}
+\DoxyCodeLine{00544         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00545         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00546 }
+\DoxyCodeLine{00547         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a828f3b0adbfb1e6082fcaa1ce22928c0}{getAccelAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{00548         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00549     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00672}{get\+Accel\+Adaptive\+Vals\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a97ef55f8b10be52f44ae585ccd4e7db9}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a97ef55f8b10be52f44ae585ccd4e7db9}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getAccelBias@{getAccelBias}}
+\index{getAccelBias@{getAccelBias}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getAccelBias()}{getAccelBias()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Accel\+Bias (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00295}{295}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00296     \{}
+\DoxyCodeLine{00297         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00298         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00299 }
+\DoxyCodeLine{00300         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a79547e77f9122ca67610f153657ec8ac}{getAccelBiasSrv}}.call(req, res);}
+\DoxyCodeLine{00301         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00302     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00646}{get\+Accel\+Bias\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a8765bf73916e6de2646aba55f3b8a5ce}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a8765bf73916e6de2646aba55f3b8a5ce}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getAccelBiasModel@{getAccelBiasModel}}
+\index{getAccelBiasModel@{getAccelBiasModel}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getAccelBiasModel()}{getAccelBiasModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Accel\+Bias\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00592}{592}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00593     \{}
+\DoxyCodeLine{00594         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00595         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00596 }
+\DoxyCodeLine{00597         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5516ee2ad71621f728245d0854104dc7}{getAccelBiasModelSrv}}.call(req, res);}
+\DoxyCodeLine{00598         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00599     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00676}{get\+Accel\+Bias\+Model\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a6b75108e49aca71fdff9ac7fd83aecc0}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a6b75108e49aca71fdff9ac7fd83aecc0}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getAccelNoise@{getAccelNoise}}
+\index{getAccelNoise@{getAccelNoise}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getAccelNoise()}{getAccelNoise()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Accel\+Noise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00474}{474}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00475     \{}
+\DoxyCodeLine{00476         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00477         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00478 }
+\DoxyCodeLine{00479         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae34d6cfd5e2e990d2fa3afab20ca9c01}{getAccelNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{00480         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00481     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00665}{get\+Accel\+Noise\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a7ba22bfed70ee5796d9776b9438d0908}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a7ba22bfed70ee5796d9776b9438d0908}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getBasicStatus@{getBasicStatus}}
+\index{getBasicStatus@{getBasicStatus}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getBasicStatus()}{getBasicStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Basic\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00416}{416}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00417     \{}
+\DoxyCodeLine{00418         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00419         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00420 }
+\DoxyCodeLine{00421         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ab2d9efccc6237800a890135a4249eaf8}{getBasicStatusSrv}}.call(req, res);}
+\DoxyCodeLine{00422         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00423     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00659}{get\+Basic\+Status\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_aaff58eafdd41438a7af7c6adee3b2d5b}\label{classcl__microstrain__mips_1_1ClMicrostainMips_aaff58eafdd41438a7af7c6adee3b2d5b}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getComplementaryFilter@{getComplementaryFilter}}
+\index{getComplementaryFilter@{getComplementaryFilter}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getComplementaryFilter()}{getComplementaryFilter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Complementary\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00340}{340}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00341     \{}
+\DoxyCodeLine{00342         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00343         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00344 }
+\DoxyCodeLine{00345         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a39aa3d9d1bbe86d90548f7422aa0b4a4}{getComplementaryFilterSrv}}.call(req, res);}
+\DoxyCodeLine{00346         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00347     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00651}{get\+Complementary\+Filter\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a6826c989f0b2a29b87c6e78140dfe6d1}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a6826c989f0b2a29b87c6e78140dfe6d1}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getConingScullingComp@{getConingScullingComp}}
+\index{getConingScullingComp@{getConingScullingComp}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getConingScullingComp()}{getConingScullingComp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Coning\+Sculling\+Comp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00378}{378}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00379     \{}
+\DoxyCodeLine{00380         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00381         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00382 }
+\DoxyCodeLine{00383         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a877393b5cf4c313e0e433e9c92163265}{getConingScullingCompSrv}}.call(req, res);}
+\DoxyCodeLine{00384         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00385     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00655}{get\+Coning\+Sculling\+Comp\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_adbe8f64e2f6e4d48cd0efc84924b4d08}\label{classcl__microstrain__mips_1_1ClMicrostainMips_adbe8f64e2f6e4d48cd0efc84924b4d08}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getDiagnosticReport@{getDiagnosticReport}}
+\index{getDiagnosticReport@{getDiagnosticReport}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getDiagnosticReport()}{getDiagnosticReport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Diagnostic\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00425}{425}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00426     \{}
+\DoxyCodeLine{00427         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00428         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00429 }
+\DoxyCodeLine{00430         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d4329c798aa4b7cab1320f35f270192}{getDiagnosticReportSrv}}.call(req, res);}
+\DoxyCodeLine{00431         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00432     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00660}{get\+Diagnostic\+Report\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ad0a8eda5c19617250d3392593d0c8986}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ad0a8eda5c19617250d3392593d0c8986}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getEstimationControlFlags@{getEstimationControlFlags}}
+\index{getEstimationControlFlags@{getEstimationControlFlags}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getEstimationControlFlags()}{getEstimationControlFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Estimation\+Control\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00397}{397}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00398     \{}
+\DoxyCodeLine{00399         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00400         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00401 }
+\DoxyCodeLine{00402         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a64039ee26cf8a290b3c22b787b8868a5}{getEstimationControlFlagsSrv}}.call(req, res);}
+\DoxyCodeLine{00403         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00404     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00657}{get\+Estimation\+Control\+Flags\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a3a0425423b14461be52bc9b6c0f118bc}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a3a0425423b14461be52bc9b6c0f118bc}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getGynamicsMode@{getGynamicsMode}}
+\index{getGynamicsMode@{getGynamicsMode}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getGynamicsMode()}{getGynamicsMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Gynamics\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00619}{619}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00620     \{}
+\DoxyCodeLine{00621         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00622         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00623 }
+\DoxyCodeLine{00624         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5ded1b1b3506d16e56d312b3d1a7fe13}{getGynamicsModeSrv}}.call(req, res);}
+\DoxyCodeLine{00625         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00626     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00679}{get\+Gynamics\+Mode\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_aaa1e9015c879e48776a803f55add33e2}\label{classcl__microstrain__mips_1_1ClMicrostainMips_aaa1e9015c879e48776a803f55add33e2}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getGyroBias@{getGyroBias}}
+\index{getGyroBias@{getGyroBias}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getGyroBias()}{getGyroBias()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Gyro\+Bias (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00304}{304}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00305     \{}
+\DoxyCodeLine{00306         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00307         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00308 }
+\DoxyCodeLine{00309         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2f3eaec7f31a54d833773ebb5eb03b64}{getGyroBiasSrv}}.call(req, res);}
+\DoxyCodeLine{00310         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00311     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00647}{get\+Gyro\+Bias\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a9a4353f87640e524750cf919bdcdbf2d}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a9a4353f87640e524750cf919bdcdbf2d}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getGyroBiasModel@{getGyroBiasModel}}
+\index{getGyroBiasModel@{getGyroBiasModel}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getGyroBiasModel()}{getGyroBiasModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Gyro\+Bias\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00533}{533}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00534     \{}
+\DoxyCodeLine{00535         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00536         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00537 }
+\DoxyCodeLine{00538         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4caf935b9d839aa586b562982cfc3adb}{getGyroBiasModelSrv}}.call(req, res);}
+\DoxyCodeLine{00539         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00540     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00671}{get\+Gyro\+Bias\+Model\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a7e54b1b4fb3ccdc5d2a845e52caf2f17}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a7e54b1b4fb3ccdc5d2a845e52caf2f17}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getGyroNoise@{getGyroNoise}}
+\index{getGyroNoise@{getGyroNoise}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getGyroNoise()}{getGyroNoise()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Gyro\+Noise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00493}{493}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00494     \{}
+\DoxyCodeLine{00495         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00496         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00497 }
+\DoxyCodeLine{00498         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7876569caf3e8169a1972ad8a591c772}{getGyroNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{00499         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00500     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00667}{get\+Gyro\+Noise\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_aa138907ebb7fb634373f948028202749}\label{classcl__microstrain__mips_1_1ClMicrostainMips_aa138907ebb7fb634373f948028202749}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getHardIronValues@{getHardIronValues}}
+\index{getHardIronValues@{getHardIronValues}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getHardIronValues()}{getHardIronValues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Hard\+Iron\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00313}{313}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00314     \{}
+\DoxyCodeLine{00315         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00316         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00317 }
+\DoxyCodeLine{00318         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a11169f770102e9cff7f3b45c96fb4881}{getHardIronValuesSrv}}.call(req, res);}
+\DoxyCodeLine{00319         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00320     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00648}{get\+Hard\+Iron\+Values\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a704dbe24f752c360b09c82234d4c928f}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a704dbe24f752c360b09c82234d4c928f}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getMagAdaptiveVals@{getMagAdaptiveVals}}
+\index{getMagAdaptiveVals@{getMagAdaptiveVals}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getMagAdaptiveVals()}{getMagAdaptiveVals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Mag\+Adaptive\+Vals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00568}{568}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00569     \{}
+\DoxyCodeLine{00570         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00571         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00572 }
+\DoxyCodeLine{00573         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a799d76ddd2e92c3624d51ffb7c4b8c89}{getMagAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{00574         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00575     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00674}{get\+Mag\+Adaptive\+Vals\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ae3642065001bd0bac34d300d5e40f6a1}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ae3642065001bd0bac34d300d5e40f6a1}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getMagDipAdaptiveVals@{getMagDipAdaptiveVals}}
+\index{getMagDipAdaptiveVals@{getMagDipAdaptiveVals}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getMagDipAdaptiveVals()}{getMagDipAdaptiveVals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Mag\+Dip\+Adaptive\+Vals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00601}{601}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00602     \{}
+\DoxyCodeLine{00603         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00604         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00605 }
+\DoxyCodeLine{00606         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aa5a412d1343febccf6bda432eacb0581}{getMagDipAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{00607         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00608     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00677}{get\+Mag\+Dip\+Adaptive\+Vals\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_aaa3a569e4b555b0db5b3f3d02ae1b33e}\label{classcl__microstrain__mips_1_1ClMicrostainMips_aaa3a569e4b555b0db5b3f3d02ae1b33e}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getMagNoise@{getMagNoise}}
+\index{getMagNoise@{getMagNoise}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getMagNoise()}{getMagNoise()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Mag\+Noise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00513}{513}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00514     \{}
+\DoxyCodeLine{00515         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00516         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00517 }
+\DoxyCodeLine{00518         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a858136430bc226e36390517f28687a2a}{getMagNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{00519         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00520     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00669}{get\+Mag\+Noise\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a1bb67145e871d3ce3637a713559a0121}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a1bb67145e871d3ce3637a713559a0121}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getReferencePosition@{getReferencePosition}}
+\index{getReferencePosition@{getReferencePosition}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getReferencePosition()}{getReferencePosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Reference\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00359}{359}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00360     \{}
+\DoxyCodeLine{00361         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00362         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00363 }
+\DoxyCodeLine{00364         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1f9b56f826c67a2e1d8a33e0879053bc}{getReferencePositionSrv}}.call(req, res);}
+\DoxyCodeLine{00365         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00366     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00653}{get\+Reference\+Position\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_acbb92f93e42a2c304d450cc30c0e992f}\label{classcl__microstrain__mips_1_1ClMicrostainMips_acbb92f93e42a2c304d450cc30c0e992f}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getSensorVehicleFrameOffset@{getSensorVehicleFrameOffset}}
+\index{getSensorVehicleFrameOffset@{getSensorVehicleFrameOffset}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getSensorVehicleFrameOffset()}{getSensorVehicleFrameOffset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Sensor\+Vehicle\+Frame\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00610}{610}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00611     \{}
+\DoxyCodeLine{00612         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00613         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00614 }
+\DoxyCodeLine{00615         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a12957749416c955e1b0132cb2213f879}{getSensorVehicleFrameOffsetSrv}}.call(req, res);}
+\DoxyCodeLine{00616         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00617     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00678}{get\+Sensor\+Vehicle\+Frame\+Offset\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a184450cf337fe02c9ef4101520d9f9a5}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a184450cf337fe02c9ef4101520d9f9a5}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getSensorVehicleFrameTrans@{getSensorVehicleFrameTrans}}
+\index{getSensorVehicleFrameTrans@{getSensorVehicleFrameTrans}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getSensorVehicleFrameTrans()}{getSensorVehicleFrameTrans()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Sensor\+Vehicle\+Frame\+Trans (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00331}{331}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00332     \{}
+\DoxyCodeLine{00333         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00334         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00335 }
+\DoxyCodeLine{00336         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abeafc4f48f26ddd264e61b6cf97c779f}{getSensorVehicleFrameTransSrv}}.call(req, res);}
+\DoxyCodeLine{00337         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00338     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00650}{get\+Sensor\+Vehicle\+Frame\+Trans\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ad605051aea5b2fe25de85314deb1aa39}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ad605051aea5b2fe25de85314deb1aa39}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getSoftIronMatrix@{getSoftIronMatrix}}
+\index{getSoftIronMatrix@{getSoftIronMatrix}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getSoftIronMatrix()}{getSoftIronMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Soft\+Iron\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00322}{322}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00323     \{}
+\DoxyCodeLine{00324         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00325         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00326 }
+\DoxyCodeLine{00327         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7210454a851669073d06d82511014ecc}{getSoftIronMatrixSrv}}.call(req, res);}
+\DoxyCodeLine{00328         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00329     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00649}{get\+Soft\+Iron\+Matrix\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_afca57a1888e4e57f6dba69083e53442d}\label{classcl__microstrain__mips_1_1ClMicrostainMips_afca57a1888e4e57f6dba69083e53442d}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getZeroAngleUpdateThreshold@{getZeroAngleUpdateThreshold}}
+\index{getZeroAngleUpdateThreshold@{getZeroAngleUpdateThreshold}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getZeroAngleUpdateThreshold()}{getZeroAngleUpdateThreshold()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Zero\+Angle\+Update\+Threshold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00445}{445}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00446     \{}
+\DoxyCodeLine{00447         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00448         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00449 }
+\DoxyCodeLine{00450         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae720970f4114e7b6524b59df405ede83}{getZeroAngleUpdateThresholdSrv}}.call(req, res);}
+\DoxyCodeLine{00451         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00452     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00662}{get\+Zero\+Angle\+Update\+Threshold\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ada40a42a0d479c9651bc4a735a76ce39}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ada40a42a0d479c9651bc4a735a76ce39}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!gyroBiasCapture@{gyroBiasCapture}}
+\index{gyroBiasCapture@{gyroBiasCapture}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{gyroBiasCapture()}{gyroBiasCapture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::gyro\+Bias\+Capture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00162}{162}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00163     \{}
+\DoxyCodeLine{00164         std\_srvs::Trigger::Request req;}
+\DoxyCodeLine{00165         std\_srvs::Trigger::Response res;}
+\DoxyCodeLine{00166 }
+\DoxyCodeLine{00167         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a584ea1089a89cd1039494d0fce19485c}{gyroBiasCaptureSrv}}.call(req, res);}
+\DoxyCodeLine{00168         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00169     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00634}{gyro\+Bias\+Capture\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ab52b739d8230f932ad3042fcd1b697f4}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ab52b739d8230f932ad3042fcd1b697f4}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!initialize@{initialize}}
+\index{initialize@{initialize}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccClient_a974ebb6ad6cf812e7b9de6b78b3d901f}{smacc\+::\+ISmacc\+Client}}.
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{56}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057     \{}
+\DoxyCodeLine{00058         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}{initialized\_}})}
+\DoxyCodeLine{00059         \{}
+\DoxyCodeLine{00060             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a46c4caa433f40536bab99a0ecaf9e1ab}{nodeName\_}})}
+\DoxyCodeLine{00061             \{}
+\DoxyCodeLine{00062                 ROS\_ERROR(\textcolor{stringliteral}{"{}service client with no service name set. Skipping."{}});}
+\DoxyCodeLine{00063             \}}
+\DoxyCodeLine{00064             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00065             \{}
+\DoxyCodeLine{00066                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}["{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}() << \textcolor{stringliteral}{"{}] Client Service: "{}} << *\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a46c4caa433f40536bab99a0ecaf9e1ab}{nodeName\_}});}
+\DoxyCodeLine{00067                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}{initialized\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069                 std::string namebase = *\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a46c4caa433f40536bab99a0ecaf9e1ab}{nodeName\_}} + \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d9eb5c291d70a2fb1b9bde4392e1d48}{resetFilterSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Empty>(namebase + \textcolor{stringliteral}{"{}reset\_kf"{}});}
+\DoxyCodeLine{00072                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a905c9403005198bb4dd62918721b7d10}{deviceReportSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}device\_report"{}});}
+\DoxyCodeLine{00073                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a584ea1089a89cd1039494d0fce19485c}{gyroBiasCaptureSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}gyro\_bias\_capture"{}});}
+\DoxyCodeLine{00074                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2e46116a0dbc6acdf6384467d0c3a50d}{setSoftIronMatrixSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetSoftIronMatrix>(namebase + \textcolor{stringliteral}{"{}set\_soft\_iron\_matrix"{}});}
+\DoxyCodeLine{00075                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a54045931a06f909418ac284235c5dd5a}{setComplementaryFilterSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetComplementaryFilter>(namebase + \textcolor{stringliteral}{"{}set\_complementary\_filter"{}});}
+\DoxyCodeLine{00076                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4e88ebd03c7a774e958f8902c18e7f69}{setFilterEulerSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetFilterEuler>(namebase + \textcolor{stringliteral}{"{}set\_filter\_euler"{}});}
+\DoxyCodeLine{00077                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abe64faba505dfdab0b78b7cf31f9609d}{setFilterHeadingSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetFilterHeading>(namebase + \textcolor{stringliteral}{"{}set\_filter\_heading"{}});}
+\DoxyCodeLine{00078                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8d7c0f0a94dd6a25cac0130f8d9f55ff}{setAccelBiasModelSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetAccelBiasModel>(namebase + \textcolor{stringliteral}{"{}set\_accel\_bias\_model"{}});}
+\DoxyCodeLine{00079                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0e22727b68e51261aa65605f236419e6}{setAccelAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetAccelAdaptiveVals>(namebase + \textcolor{stringliteral}{"{}set\_accel\_adaptive\_vals"{}});}
+\DoxyCodeLine{00080                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac020b44e78addaa26beb44081d99f194}{setSensorVehicleFrameTransSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetSensorVehicleFrameTrans>(namebase + \textcolor{stringliteral}{"{}set\_sensor\_vehicle\_frame\_trans"{}});}
+\DoxyCodeLine{00081                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a977cce1917e12d96f614266baa4ae55d}{setSensorVehicleFrameOffsetSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetSensorVehicleFrameOffset>(namebase + \textcolor{stringliteral}{"{}set\_sensor\_vehicle\_frame\_offset"{}});}
+\DoxyCodeLine{00082                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae2ea11655cba06e49307780d1f95e197}{setAccelBiasSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetAccelBiasModel>(namebase + \textcolor{stringliteral}{"{}set\_accel\_bias"{}});}
+\DoxyCodeLine{00083                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a29fcea0897ca3bd7a036ab5c1856b86c}{setGyroBiasSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetGyroBias>(namebase + \textcolor{stringliteral}{"{}set\_gyro\_bias"{}});}
+\DoxyCodeLine{00084                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abab500a095515c133d5edfea23736fad}{setHardIronValuesSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetHardIronValues>(namebase + \textcolor{stringliteral}{"{}set\_hard\_iron\_values"{}});}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a79547e77f9122ca67610f153657ec8ac}{getAccelBiasSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_accel\_bias"{}});}
+\DoxyCodeLine{00087                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2f3eaec7f31a54d833773ebb5eb03b64}{getGyroBiasSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_gyro\_bias"{}});}
+\DoxyCodeLine{00088                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a11169f770102e9cff7f3b45c96fb4881}{getHardIronValuesSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_hard\_iron\_values"{}});}
+\DoxyCodeLine{00089                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7210454a851669073d06d82511014ecc}{getSoftIronMatrixSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_soft\_iron\_matrix"{}});}
+\DoxyCodeLine{00090                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abeafc4f48f26ddd264e61b6cf97c779f}{getSensorVehicleFrameTransSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_sensor\_vehicle\_frame\_trans"{}});}
+\DoxyCodeLine{00091                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a39aa3d9d1bbe86d90548f7422aa0b4a4}{getComplementaryFilterSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_complementary\_filter"{}});}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a778117029f93a6cff9c5e2a0dac9742b}{setReferencePositionSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetReferencePosition>(namebase + \textcolor{stringliteral}{"{}set\_reference\_position"{}});}
+\DoxyCodeLine{00094                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a1f9b56f826c67a2e1d8a33e0879053bc}{getReferencePositionSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_reference\_position"{}});}
+\DoxyCodeLine{00095                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae24545c615e2be170adced3999d94d84}{setConingScullingCompSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetConingScullingComp>(namebase + \textcolor{stringliteral}{"{}set\_coning\_sculling\_comp"{}});}
+\DoxyCodeLine{00096                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a877393b5cf4c313e0e433e9c92163265}{getConingScullingCompSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_coning\_sculling\_comp"{}});}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2eeff01aea4a41fd5d24ff2f77daf584}{setEstimationControlFlagsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetEstimationControlFlags>(namebase + \textcolor{stringliteral}{"{}set\_estimation\_control\_flags"{}});}
+\DoxyCodeLine{00099                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a64039ee26cf8a290b3c22b787b8868a5}{getEstimationControlFlagsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_estimation\_control\_flags"{}});}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a43a684f4010debc4a2ba17d9784712d6}{setDynamicsModeSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetDynamicsMode>(namebase + \textcolor{stringliteral}{"{}set\_dynamics\_mode"{}});}
+\DoxyCodeLine{00102                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ab2d9efccc6237800a890135a4249eaf8}{getBasicStatusSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_basic\_status"{}});}
+\DoxyCodeLine{00103                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d4329c798aa4b7cab1320f35f270192}{getDiagnosticReportSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_diagnostic\_report"{}});}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{00105                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a88ffc1e573993764bb130c97cc64fe08}{setZeroAngleUpdateThresholdSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetZeroAngleUpdateThreshold>(namebase + \textcolor{stringliteral}{"{}set\_zero\_angle\_update\_threshold"{}}); \textcolor{comment}{//  -\/}}
+\DoxyCodeLine{00106                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae720970f4114e7b6524b59df405ede83}{getZeroAngleUpdateThresholdSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_zero\_angle\_update\_threshold"{}});                             \textcolor{comment}{//  -\/}}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_affd28a64d0ee9bcdb116d974f5e19ec6}{setTareOrientationSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetTareOrientation>(namebase + \textcolor{stringliteral}{"{}set\_tare\_orientation"{}});}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aed9dd96ff81966ea1fce03173a05bcd8}{setAccelNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetAccelNoise>(namebase + \textcolor{stringliteral}{"{}set\_accel\_noise"{}});}
+\DoxyCodeLine{00111                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae34d6cfd5e2e990d2fa3afab20ca9c01}{getAccelNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_accel\_noise"{}});}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a712c389ca54fa2ebe89ffd601b03bd37}{setGyroNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetGyroNoise>(namebase + \textcolor{stringliteral}{"{}set\_gyro\_noise"{}});}
+\DoxyCodeLine{00114                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a7876569caf3e8169a1972ad8a591c772}{getGyroNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_gyro\_noise"{}});}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0a6ed1132b9cca45536598e78c8b23cc}{setMagNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetMagNoise>(namebase + \textcolor{stringliteral}{"{}set\_mag\_noise"{}});}
+\DoxyCodeLine{00117                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a858136430bc226e36390517f28687a2a}{getMagNoiseSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_mag\_noise"{}});}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a96fa3777b87a5d8abcb0f5fe6d740934}{setGyroBiasModelSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetGyroBiasModel>(namebase + \textcolor{stringliteral}{"{}set\_gyro\_bias\_model"{}});}
+\DoxyCodeLine{00120                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4caf935b9d839aa586b562982cfc3adb}{getGyroBiasModelSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_gyro\_bias\_model"{}});}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a828f3b0adbfb1e6082fcaa1ce22928c0}{getAccelAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_accel\_adaptive\_vals"{}});}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aeb9fb755367cd253b65bf826e421cc05}{setMagAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetMagAdaptiveVals>(namebase + \textcolor{stringliteral}{"{}set\_mag\_adaptive\_vals"{}});}
+\DoxyCodeLine{00125                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a799d76ddd2e92c3624d51ffb7c4b8c89}{getMagAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_mag\_adaptive\_vals"{}});}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3618b27ce1ed75f2e498c0bc6a36599d}{setMagDipAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<microstrain\_mips::SetMagDipAdaptiveVals>(namebase + \textcolor{stringliteral}{"{}set\_mag\_dip\_adaptive\_vals"{}});}
+\DoxyCodeLine{00128                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5516ee2ad71621f728245d0854104dc7}{getAccelBiasModelSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_accel\_bias\_model"{}});}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aa5a412d1343febccf6bda432eacb0581}{getMagDipAdaptiveValsSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_mag\_dip\_adaptive\_vals"{}});}
+\DoxyCodeLine{00131                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a12957749416c955e1b0132cb2213f879}{getSensorVehicleFrameOffsetSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_sensor\_vehicle\_frame\_offset"{}});}
+\DoxyCodeLine{00132                 this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5ded1b1b3506d16e56d312b3d1a7fe13}{getGynamicsModeSrv}} = \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}{nh\_}}.serviceClient<std\_srvs::Trigger>(namebase + \textcolor{stringliteral}{"{}get\_dynamics\_mode"{}});}
+\DoxyCodeLine{00133             \}}
+\DoxyCodeLine{00134         \}}
+\DoxyCodeLine{00135     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00633}{device\+Report\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00672}{get\+Accel\+Adaptive\+Vals\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00676}{get\+Accel\+Bias\+Model\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00646}{get\+Accel\+Bias\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00665}{get\+Accel\+Noise\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00659}{get\+Basic\+Status\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00651}{get\+Complementary\+Filter\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00655}{get\+Coning\+Sculling\+Comp\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00660}{get\+Diagnostic\+Report\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00657}{get\+Estimation\+Control\+Flags\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00679}{get\+Gynamics\+Mode\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00671}{get\+Gyro\+Bias\+Model\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00647}{get\+Gyro\+Bias\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00667}{get\+Gyro\+Noise\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00648}{get\+Hard\+Iron\+Values\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00674}{get\+Mag\+Adaptive\+Vals\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00677}{get\+Mag\+Dip\+Adaptive\+Vals\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00669}{get\+Mag\+Noise\+Srv}}, \mbox{\hyperlink{client_8cpp_source_l00034}{smacc\+::\+ISmacc\+Client\+::get\+Name()}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00653}{get\+Reference\+Position\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00678}{get\+Sensor\+Vehicle\+Frame\+Offset\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00650}{get\+Sensor\+Vehicle\+Frame\+Trans\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00649}{get\+Soft\+Iron\+Matrix\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00662}{get\+Zero\+Angle\+Update\+Threshold\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00634}{gyro\+Bias\+Capture\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00630}{initialized\+\_\+}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00629}{nh\+\_\+}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00045}{node\+Name\+\_\+}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00632}{reset\+Filter\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00640}{set\+Accel\+Adaptive\+Vals\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00639}{set\+Accel\+Bias\+Model\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00643}{set\+Accel\+Bias\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00664}{set\+Accel\+Noise\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00636}{set\+Complementary\+Filter\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00654}{set\+Coning\+Sculling\+Comp\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00658}{set\+Dynamics\+Mode\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00656}{set\+Estimation\+Control\+Flags\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00637}{set\+Filter\+Euler\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00638}{set\+Filter\+Heading\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00670}{set\+Gyro\+Bias\+Model\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00644}{set\+Gyro\+Bias\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00666}{set\+Gyro\+Noise\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00645}{set\+Hard\+Iron\+Values\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00673}{set\+Mag\+Adaptive\+Vals\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00675}{set\+Mag\+Dip\+Adaptive\+Vals\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00668}{set\+Mag\+Noise\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00652}{set\+Reference\+Position\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00642}{set\+Sensor\+Vehicle\+Frame\+Offset\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00641}{set\+Sensor\+Vehicle\+Frame\+Trans\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00635}{set\+Soft\+Iron\+Matrix\+Srv}}, \mbox{\hyperlink{microstrain__mips__client_8h_source_l00663}{set\+Tare\+Orientation\+Srv}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00661}{set\+Zero\+Angle\+Update\+Threshold\+Srv}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__microstrain__mips_1_1ClMicrostainMips_ab52b739d8230f932ad3042fcd1b697f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a47e6c127c560cf2e1443ef0d7368f4ad}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a47e6c127c560cf2e1443ef0d7368f4ad}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!onOrthogonalAllocation@{onOrthogonalAllocation}}
+\index{onOrthogonalAllocation@{onOrthogonalAllocation}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{onOrthogonalAllocation()}{onOrthogonalAllocation()}}
+{\footnotesize\ttfamily template$<$typename TOrthogonal , typename TSource\+Object $>$ \\
+void cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::on\+Orthogonal\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00138}{138}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139     \{}
+\DoxyCodeLine{00140         this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a71648a9d970672d017c90bd3724b1104}{imuSubscriber}} = this-\/>createComponent<TSourceObject, TOrthogonal, smacc::components::CpTopicSubscriber<sensor\_msgs::Imu>>(\textcolor{stringliteral}{"{}imu/data"{}});}
+\DoxyCodeLine{00141         this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae53fdf79a14adb9c3eff4a8966a092ff}{imuFilteredSubscriber}} = this-\/>createComponent<TSourceObject, TOrthogonal, smacc::components::CpTopicSubscriber<sensor\_msgs::Imu>>(\textcolor{stringliteral}{"{}filtered/imu/data"{}});}
+\DoxyCodeLine{00142         this-\/>\mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0da593a071ac7ff8dd842b934120e315}{statusSubscriber}} = this-\/>createComponent<TSourceObject, TOrthogonal, smacc::components::CpTopicSubscriber<microstrain\_mips::status\_msg>>(\textcolor{stringliteral}{"{}imu/data"{}});}
+\DoxyCodeLine{00143     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ad53d21cfe5e6f8089ff00583d364d0e5}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ad53d21cfe5e6f8089ff00583d364d0e5}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!resetFilter@{resetFilter}}
+\index{resetFilter@{resetFilter}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{resetFilter()}{resetFilter()}}
+{\footnotesize\ttfamily void cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::reset\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00145}{145}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00146     \{}
+\DoxyCodeLine{00147         std\_srvs::Empty::Request req;}
+\DoxyCodeLine{00148         std\_srvs::Empty::Response res;}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3d9eb5c291d70a2fb1b9bde4392e1d48}{resetFilterSrv}}.call(req, res);}
+\DoxyCodeLine{00151     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00632}{reset\+Filter\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a4687c5a4ea6de01c41d96f3aeb58fa24}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a4687c5a4ea6de01c41d96f3aeb58fa24}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setAccelAdaptiveVals@{setAccelAdaptiveVals}}
+\index{setAccelAdaptiveVals@{setAccelAdaptiveVals}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setAccelAdaptiveVals()}{setAccelAdaptiveVals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Accel\+Adaptive\+Vals (\begin{DoxyParamCaption}\item[{float}]{enable,  }\item[{float}]{low\+\_\+pass\+\_\+cutoff,  }\item[{float}]{min\+\_\+1sigma,  }\item[{float}]{low\+\_\+limit,  }\item[{float}]{high\+\_\+limit,  }\item[{float}]{low\+\_\+limit\+\_\+1sigma,  }\item[{float}]{high\+\_\+limit\+\_\+1sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00228}{228}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00229     \{}
+\DoxyCodeLine{00230         SetAccelAdaptiveVals::Request req;}
+\DoxyCodeLine{00231         SetAccelAdaptiveVals::Response res;}
+\DoxyCodeLine{00232 }
+\DoxyCodeLine{00233         req.enable = enable;}
+\DoxyCodeLine{00234         req.low\_pass\_cutoff = low\_pass\_cutoff;}
+\DoxyCodeLine{00235         req.min\_1sigma = min\_1sigma;}
+\DoxyCodeLine{00236         req.low\_limit = low\_limit;}
+\DoxyCodeLine{00237         req.high\_limit = high\_limit;}
+\DoxyCodeLine{00238         req.low\_limit\_1sigma = low\_limit\_1sigma;}
+\DoxyCodeLine{00239         req.high\_limit\_1sigma = high\_limit\_1sigma;}
+\DoxyCodeLine{00240 }
+\DoxyCodeLine{00241         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0e22727b68e51261aa65605f236419e6}{setAccelAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{00242         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00243     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00640}{set\+Accel\+Adaptive\+Vals\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a535b7afce9ff4288c94077fe8fc30f79}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a535b7afce9ff4288c94077fe8fc30f79}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setAccelBias@{setAccelBias}}
+\index{setAccelBias@{setAccelBias}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setAccelBias()}{setAccelBias()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Accel\+Bias (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{bias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00265}{265}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00266     \{}
+\DoxyCodeLine{00267         SetAccelBias::Request req;}
+\DoxyCodeLine{00268         SetAccelBias::Response res;}
+\DoxyCodeLine{00269         req.bias = bias;}
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{00271         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae2ea11655cba06e49307780d1f95e197}{setAccelBiasSrv}}.call(req, res);}
+\DoxyCodeLine{00272         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00273     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00643}{set\+Accel\+Bias\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a809131028b774a3026a3f6894db0dc8f}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a809131028b774a3026a3f6894db0dc8f}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setAccelBiasModel@{setAccelBiasModel}}
+\index{setAccelBiasModel@{setAccelBiasModel}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setAccelBiasModel()}{setAccelBiasModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Accel\+Bias\+Model (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{noise\+\_\+vector,  }\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{beta\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00217}{217}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00218     \{}
+\DoxyCodeLine{00219         SetAccelBiasModel::Request req;}
+\DoxyCodeLine{00220         SetAccelBiasModel::Response res;}
+\DoxyCodeLine{00221         req.noise\_vector = noise\_vector;}
+\DoxyCodeLine{00222         req.beta\_vector = beta\_vector;}
+\DoxyCodeLine{00223 }
+\DoxyCodeLine{00224         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a8d7c0f0a94dd6a25cac0130f8d9f55ff}{setAccelBiasModelSrv}}.call(req, res);}
+\DoxyCodeLine{00225         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00226     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00639}{set\+Accel\+Bias\+Model\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_af003ab445879e23f969cca8e767a70f3}\label{classcl__microstrain__mips_1_1ClMicrostainMips_af003ab445879e23f969cca8e767a70f3}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setAccelNoise@{setAccelNoise}}
+\index{setAccelNoise@{setAccelNoise}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setAccelNoise()}{setAccelNoise()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Accel\+Noise (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{noise }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00464}{464}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00465     \{}
+\DoxyCodeLine{00466         SetAccelNoise::Request req;}
+\DoxyCodeLine{00467         SetAccelNoise::Response res;}
+\DoxyCodeLine{00468         req.noise = noise;}
+\DoxyCodeLine{00469 }
+\DoxyCodeLine{00470         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aed9dd96ff81966ea1fce03173a05bcd8}{setAccelNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{00471         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00472     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00664}{set\+Accel\+Noise\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a4dfbed2e601dd990b5fd89fb670656b9}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a4dfbed2e601dd990b5fd89fb670656b9}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setComplementaryFilter@{setComplementaryFilter}}
+\index{setComplementaryFilter@{setComplementaryFilter}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setComplementaryFilter()}{setComplementaryFilter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Complementary\+Filter (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{north\+\_\+comp\+\_\+enable,  }\item[{int8\+\_\+t}]{up\+\_\+comp\+\_\+enable,  }\item[{float}]{north\+\_\+comp\+\_\+time\+\_\+const,  }\item[{float}]{up\+\_\+comp\+\_\+time\+\_\+const }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00183}{183}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00184     \{}
+\DoxyCodeLine{00185         SetComplementaryFilter::Request req;}
+\DoxyCodeLine{00186         SetComplementaryFilter::Response res;}
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00188         req.north\_comp\_enable = north\_comp\_enable;}
+\DoxyCodeLine{00189         req.up\_comp\_enable = up\_comp\_enable;}
+\DoxyCodeLine{00190         req.north\_comp\_time\_const = north\_comp\_time\_const;}
+\DoxyCodeLine{00191         req.up\_comp\_time\_const = up\_comp\_time\_const;}
+\DoxyCodeLine{00192 }
+\DoxyCodeLine{00193         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a54045931a06f909418ac284235c5dd5a}{setComplementaryFilterSrv}}.call(req, res);}
+\DoxyCodeLine{00194         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00195     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00636}{set\+Complementary\+Filter\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a981895d2724594166bcf22247382ddcf}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a981895d2724594166bcf22247382ddcf}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setConingScullingComp@{setConingScullingComp}}
+\index{setConingScullingComp@{setConingScullingComp}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setConingScullingComp()}{setConingScullingComp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Coning\+Sculling\+Comp (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00368}{368}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00369     \{}
+\DoxyCodeLine{00370         SetConingScullingComp::Request req;}
+\DoxyCodeLine{00371         SetConingScullingComp::Response res;}
+\DoxyCodeLine{00372         req.enable = enable;}
+\DoxyCodeLine{00373 }
+\DoxyCodeLine{00374         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ae24545c615e2be170adced3999d94d84}{setConingScullingCompSrv}}.call(req, res);}
+\DoxyCodeLine{00375         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00376     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00654}{set\+Coning\+Sculling\+Comp\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_aaa5987561df8840ec12ca1eecb852ad9}\label{classcl__microstrain__mips_1_1ClMicrostainMips_aaa5987561df8840ec12ca1eecb852ad9}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setDynamicsMode@{setDynamicsMode}}
+\index{setDynamicsMode@{setDynamicsMode}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setDynamicsMode()}{setDynamicsMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Dynamics\+Mode (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00406}{406}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00407     \{}
+\DoxyCodeLine{00408         SetDynamicsMode::Request req;}
+\DoxyCodeLine{00409         SetDynamicsMode::Response res;}
+\DoxyCodeLine{00410         req.mode = mode;}
+\DoxyCodeLine{00411 }
+\DoxyCodeLine{00412         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a43a684f4010debc4a2ba17d9784712d6}{setDynamicsModeSrv}}.call(req, res);}
+\DoxyCodeLine{00413         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00414     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00658}{set\+Dynamics\+Mode\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a8b5a76095196ef5a351804991ea9e23f}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a8b5a76095196ef5a351804991ea9e23f}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setEstimationControlFlags@{setEstimationControlFlags}}
+\index{setEstimationControlFlags@{setEstimationControlFlags}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setEstimationControlFlags()}{setEstimationControlFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Estimation\+Control\+Flags (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00387}{387}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00388     \{}
+\DoxyCodeLine{00389         SetEstimationControlFlags::Request req;}
+\DoxyCodeLine{00390         SetEstimationControlFlags::Response res;}
+\DoxyCodeLine{00391         req.flag = flag;}
+\DoxyCodeLine{00392 }
+\DoxyCodeLine{00393         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2eeff01aea4a41fd5d24ff2f77daf584}{setEstimationControlFlagsSrv}}.call(req, res);}
+\DoxyCodeLine{00394         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00395     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00656}{set\+Estimation\+Control\+Flags\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_af5d9e53254b967a2bc02343c2010a47b}\label{classcl__microstrain__mips_1_1ClMicrostainMips_af5d9e53254b967a2bc02343c2010a47b}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setFilterEulerService@{setFilterEulerService}}
+\index{setFilterEulerService@{setFilterEulerService}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setFilterEulerService()}{setFilterEulerService()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Filter\+Euler\+Service (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00197}{197}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00198     \{}
+\DoxyCodeLine{00199         SetFilterEuler::Request req;}
+\DoxyCodeLine{00200         SetFilterEuler::Response res;}
+\DoxyCodeLine{00201         req.angle = angle;}
+\DoxyCodeLine{00202 }
+\DoxyCodeLine{00203         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a4e88ebd03c7a774e958f8902c18e7f69}{setFilterEulerSrv}}.call(req, res);}
+\DoxyCodeLine{00204         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00205     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00637}{set\+Filter\+Euler\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_addede8b2d6eac488ff9de6acd0b28fa7}\label{classcl__microstrain__mips_1_1ClMicrostainMips_addede8b2d6eac488ff9de6acd0b28fa7}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setFilterHeading@{setFilterHeading}}
+\index{setFilterHeading@{setFilterHeading}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setFilterHeading()}{setFilterHeading()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Filter\+Heading (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00207}{207}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00208     \{}
+\DoxyCodeLine{00209         SetFilterHeading::Request req;}
+\DoxyCodeLine{00210         SetFilterHeading::Response res;}
+\DoxyCodeLine{00211         req.angle = angle;}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{00213         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abe64faba505dfdab0b78b7cf31f9609d}{setFilterHeadingSrv}}.call(req, res);}
+\DoxyCodeLine{00214         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00215     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00638}{set\+Filter\+Heading\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_aabb65ca3b2e8be4a1ad2284d543ddd9c}\label{classcl__microstrain__mips_1_1ClMicrostainMips_aabb65ca3b2e8be4a1ad2284d543ddd9c}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setGyroBias@{setGyroBias}}
+\index{setGyroBias@{setGyroBias}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setGyroBias()}{setGyroBias()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Gyro\+Bias (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{bias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00275}{275}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00276     \{}
+\DoxyCodeLine{00277         SetGyroBias::Request req;}
+\DoxyCodeLine{00278         SetGyroBias::Response res;}
+\DoxyCodeLine{00279         req.bias = bias;}
+\DoxyCodeLine{00280 }
+\DoxyCodeLine{00281         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a29fcea0897ca3bd7a036ab5c1856b86c}{setGyroBiasSrv}}.call(req, res);}
+\DoxyCodeLine{00282         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00283     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00644}{set\+Gyro\+Bias\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ac0a42062a2938fca9c982668909f7bff}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ac0a42062a2938fca9c982668909f7bff}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setGyroBiasModel@{setGyroBiasModel}}
+\index{setGyroBiasModel@{setGyroBiasModel}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setGyroBiasModel()}{setGyroBiasModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Gyro\+Bias\+Model (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{noise\+\_\+vector,  }\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{beta\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00522}{522}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00523     \{}
+\DoxyCodeLine{00524         SetGyroBiasModel::Request req;}
+\DoxyCodeLine{00525         SetGyroBiasModel::Response res;}
+\DoxyCodeLine{00526         req.noise\_vector = noise\_vector;}
+\DoxyCodeLine{00527         req.beta\_vector = beta\_vector;}
+\DoxyCodeLine{00528 }
+\DoxyCodeLine{00529         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a96fa3777b87a5d8abcb0f5fe6d740934}{setGyroBiasModelSrv}}.call(req, res);}
+\DoxyCodeLine{00530         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00531     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00670}{set\+Gyro\+Bias\+Model\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a26f7969c967cc7f83f556f566254e0ff}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a26f7969c967cc7f83f556f566254e0ff}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setGyroNoise@{setGyroNoise}}
+\index{setGyroNoise@{setGyroNoise}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setGyroNoise()}{setGyroNoise()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Gyro\+Noise (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{noise }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00483}{483}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00484     \{}
+\DoxyCodeLine{00485         SetGyroNoise::Request req;}
+\DoxyCodeLine{00486         SetGyroNoise::Response res;}
+\DoxyCodeLine{00487         req.noise = noise;}
+\DoxyCodeLine{00488 }
+\DoxyCodeLine{00489         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a712c389ca54fa2ebe89ffd601b03bd37}{setGyroNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{00490         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00491     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00666}{set\+Gyro\+Noise\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a6f9ae5ca80db4a93db8b01192d38b426}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a6f9ae5ca80db4a93db8b01192d38b426}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setHardIronValues@{setHardIronValues}}
+\index{setHardIronValues@{setHardIronValues}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setHardIronValues()}{setHardIronValues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Hard\+Iron\+Values (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{bias }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00285}{285}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00286     \{}
+\DoxyCodeLine{00287         SetHardIronValues::Request req;}
+\DoxyCodeLine{00288         SetHardIronValues::Response res;}
+\DoxyCodeLine{00289         req.bias = bias;}
+\DoxyCodeLine{00290 }
+\DoxyCodeLine{00291         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_abab500a095515c133d5edfea23736fad}{setHardIronValuesSrv}}.call(req, res);}
+\DoxyCodeLine{00292         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00293     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00645}{set\+Hard\+Iron\+Values\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ad28163dc7afc33064b337f6a76b99389}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ad28163dc7afc33064b337f6a76b99389}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setMagAdaptiveVals@{setMagAdaptiveVals}}
+\index{setMagAdaptiveVals@{setMagAdaptiveVals}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setMagAdaptiveVals()}{setMagAdaptiveVals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Mag\+Adaptive\+Vals (\begin{DoxyParamCaption}\item[{float}]{enable,  }\item[{float}]{low\+\_\+pass\+\_\+cutoff,  }\item[{float}]{min\+\_\+1sigma,  }\item[{float}]{low\+\_\+limit,  }\item[{float}]{high\+\_\+limit,  }\item[{float}]{low\+\_\+limit\+\_\+1sigma,  }\item[{float}]{high\+\_\+limit\+\_\+1sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00551}{551}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00552     \{}
+\DoxyCodeLine{00553         SetMagAdaptiveVals::Request req;}
+\DoxyCodeLine{00554         SetMagAdaptiveVals::Response res;}
+\DoxyCodeLine{00555 }
+\DoxyCodeLine{00556         req.enable = enable;}
+\DoxyCodeLine{00557         req.low\_pass\_cutoff = low\_pass\_cutoff;}
+\DoxyCodeLine{00558         req.min\_1sigma = min\_1sigma;}
+\DoxyCodeLine{00559         req.low\_limit = low\_limit;}
+\DoxyCodeLine{00560         req.high\_limit = high\_limit;}
+\DoxyCodeLine{00561         req.low\_limit\_1sigma = low\_limit\_1sigma;}
+\DoxyCodeLine{00562         req.high\_limit\_1sigma = high\_limit\_1sigma;}
+\DoxyCodeLine{00563 }
+\DoxyCodeLine{00564         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_aeb9fb755367cd253b65bf826e421cc05}{setMagAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{00565         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00566     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00673}{set\+Mag\+Adaptive\+Vals\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a1b81980570d6ff87b58a823a73cc992d}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a1b81980570d6ff87b58a823a73cc992d}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setMagDipAdaptiveVals@{setMagDipAdaptiveVals}}
+\index{setMagDipAdaptiveVals@{setMagDipAdaptiveVals}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setMagDipAdaptiveVals()}{setMagDipAdaptiveVals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Mag\+Dip\+Adaptive\+Vals (\begin{DoxyParamCaption}\item[{float}]{enable,  }\item[{float}]{low\+\_\+pass\+\_\+cutoff,  }\item[{float}]{min\+\_\+1sigma,  }\item[{float}]{high\+\_\+limit,  }\item[{float}]{high\+\_\+limit\+\_\+1sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00577}{577}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00578     \{}
+\DoxyCodeLine{00579         SetMagDipAdaptiveVals::Request req;}
+\DoxyCodeLine{00580         SetMagDipAdaptiveVals::Response res;}
+\DoxyCodeLine{00581 }
+\DoxyCodeLine{00582         req.enable = enable;}
+\DoxyCodeLine{00583         req.low\_pass\_cutoff = low\_pass\_cutoff;}
+\DoxyCodeLine{00584         req.min\_1sigma = min\_1sigma;}
+\DoxyCodeLine{00585         req.high\_limit = high\_limit;}
+\DoxyCodeLine{00586         req.high\_limit\_1sigma = high\_limit\_1sigma;}
+\DoxyCodeLine{00587 }
+\DoxyCodeLine{00588         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a3618b27ce1ed75f2e498c0bc6a36599d}{setMagDipAdaptiveValsSrv}}.call(req, res);}
+\DoxyCodeLine{00589         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00590     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00675}{set\+Mag\+Dip\+Adaptive\+Vals\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a6c9825168b47aa42091e410da90f43c8}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a6c9825168b47aa42091e410da90f43c8}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setMagNoise@{setMagNoise}}
+\index{setMagNoise@{setMagNoise}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setMagNoise()}{setMagNoise()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Mag\+Noise (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{noise }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00502}{502}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00503     \{}
+\DoxyCodeLine{00504         SetMagNoise::Request req;}
+\DoxyCodeLine{00505         SetMagNoise::Response res;}
+\DoxyCodeLine{00506 }
+\DoxyCodeLine{00507         req.noise = noise;}
+\DoxyCodeLine{00508 }
+\DoxyCodeLine{00509         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a0a6ed1132b9cca45536598e78c8b23cc}{setMagNoiseSrv}}.call(req, res);}
+\DoxyCodeLine{00510         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00511     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00668}{set\+Mag\+Noise\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a2dae9cbd60e135e149117d6af14e6b27}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a2dae9cbd60e135e149117d6af14e6b27}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setReferencePosition@{setReferencePosition}}
+\index{setReferencePosition@{setReferencePosition}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setReferencePosition()}{setReferencePosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Reference\+Position (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00349}{349}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00350     \{}
+\DoxyCodeLine{00351         SetReferencePosition::Request req;}
+\DoxyCodeLine{00352         SetReferencePosition::Response res;}
+\DoxyCodeLine{00353         req.position = position;}
+\DoxyCodeLine{00354 }
+\DoxyCodeLine{00355         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a778117029f93a6cff9c5e2a0dac9742b}{setReferencePositionSrv}}.call(req, res);}
+\DoxyCodeLine{00356         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00357     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00652}{set\+Reference\+Position\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a2b2786c142088f7d8e0fba6fc67d3a88}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a2b2786c142088f7d8e0fba6fc67d3a88}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setSensorVehicleFrameOffset@{setSensorVehicleFrameOffset}}
+\index{setSensorVehicleFrameOffset@{setSensorVehicleFrameOffset}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setSensorVehicleFrameOffset()}{setSensorVehicleFrameOffset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Sensor\+Vehicle\+Frame\+Offset (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00255}{255}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00256     \{}
+\DoxyCodeLine{00257         SetSensorVehicleFrameOffset::Request req;}
+\DoxyCodeLine{00258         SetSensorVehicleFrameOffset::Response res;}
+\DoxyCodeLine{00259         req.offset = offset;}
+\DoxyCodeLine{00260 }
+\DoxyCodeLine{00261         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a977cce1917e12d96f614266baa4ae55d}{setSensorVehicleFrameOffsetSrv}}.call(req, res);}
+\DoxyCodeLine{00262         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00263     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00642}{set\+Sensor\+Vehicle\+Frame\+Offset\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a4dd8966794ba1697319f0f1812160405}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a4dd8966794ba1697319f0f1812160405}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setSensorVehicleFrameTrans@{setSensorVehicleFrameTrans}}
+\index{setSensorVehicleFrameTrans@{setSensorVehicleFrameTrans}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setSensorVehicleFrameTrans()}{setSensorVehicleFrameTrans()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Sensor\+Vehicle\+Frame\+Trans (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00245}{245}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00246     \{}
+\DoxyCodeLine{00247         SetSensorVehicleFrameTrans::Request req;}
+\DoxyCodeLine{00248         SetSensorVehicleFrameTrans::Response res;}
+\DoxyCodeLine{00249         req.angle = angle;}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_ac020b44e78addaa26beb44081d99f194}{setSensorVehicleFrameTransSrv}}.call(req, res);}
+\DoxyCodeLine{00252         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00253     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00641}{set\+Sensor\+Vehicle\+Frame\+Trans\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a24996ea87cf409ae0a912931dc088eb2}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a24996ea87cf409ae0a912931dc088eb2}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setSoftIronMatrix@{setSoftIronMatrix}}
+\index{setSoftIronMatrix@{setSoftIronMatrix}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setSoftIronMatrix()}{setSoftIronMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Soft\+Iron\+Matrix (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{soft\+\_\+iron\+\_\+1,  }\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{soft\+\_\+iron\+\_\+2,  }\item[{const geometry\+\_\+msgs\+::\+Vector3 \&}]{soft\+\_\+iron\+\_\+3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00171}{171}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00172     \{}
+\DoxyCodeLine{00173         SetSoftIronMatrix::Request req;}
+\DoxyCodeLine{00174         SetSoftIronMatrix::Response res;}
+\DoxyCodeLine{00175         req.soft\_iron\_1 = soft\_iron\_1;}
+\DoxyCodeLine{00176         req.soft\_iron\_2 = soft\_iron\_2;}
+\DoxyCodeLine{00177         req.soft\_iron\_3 = soft\_iron\_3;}
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{00179         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a2e46116a0dbc6acdf6384467d0c3a50d}{setSoftIronMatrixSrv}}.call(req, res);}
+\DoxyCodeLine{00180         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00181     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00635}{set\+Soft\+Iron\+Matrix\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a84173859b79a7bad8861b7ea14f15c6a}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a84173859b79a7bad8861b7ea14f15c6a}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setTareOrientation@{setTareOrientation}}
+\index{setTareOrientation@{setTareOrientation}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setTareOrientation()}{setTareOrientation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Tare\+Orientation (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00454}{454}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00455     \{}
+\DoxyCodeLine{00456         SetTareOrientation::Request req;}
+\DoxyCodeLine{00457         SetTareOrientation::Response res;}
+\DoxyCodeLine{00458         req.axis = axis;}
+\DoxyCodeLine{00459 }
+\DoxyCodeLine{00460         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_affd28a64d0ee9bcdb116d974f5e19ec6}{setTareOrientationSrv}}.call(req, res);}
+\DoxyCodeLine{00461         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00462     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00663}{set\+Tare\+Orientation\+Srv}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a75ba5fe4116ece2f23f9f92f7ab96435}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a75ba5fe4116ece2f23f9f92f7ab96435}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setZeroAngleUpdateThreshold@{setZeroAngleUpdateThreshold}}
+\index{setZeroAngleUpdateThreshold@{setZeroAngleUpdateThreshold}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setZeroAngleUpdateThreshold()}{setZeroAngleUpdateThreshold()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Zero\+Angle\+Update\+Threshold (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{enable,  }\item[{float}]{threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00434}{434}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00435     \{}
+\DoxyCodeLine{00436         SetZeroAngleUpdateThreshold::Request req;}
+\DoxyCodeLine{00437         SetZeroAngleUpdateThreshold::Response res;}
+\DoxyCodeLine{00438         req.enable = enable;}
+\DoxyCodeLine{00439         req.threshold = threshold;}
+\DoxyCodeLine{00440 }
+\DoxyCodeLine{00441         \mbox{\hyperlink{classcl__microstrain__mips_1_1ClMicrostainMips_a88ffc1e573993764bb130c97cc64fe08}{setZeroAngleUpdateThresholdSrv}}.call(req, res);}
+\DoxyCodeLine{00442         \textcolor{keywordflow}{return} res.success;}
+\DoxyCodeLine{00443     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{microstrain__mips__client_8h_source_l00661}{set\+Zero\+Angle\+Update\+Threshold\+Srv}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a905c9403005198bb4dd62918721b7d10}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a905c9403005198bb4dd62918721b7d10}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!deviceReportSrv@{deviceReportSrv}}
+\index{deviceReportSrv@{deviceReportSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{deviceReportSrv}{deviceReportSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::device\+Report\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00633}{633}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00153}{device\+Report()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a828f3b0adbfb1e6082fcaa1ce22928c0}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a828f3b0adbfb1e6082fcaa1ce22928c0}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getAccelAdaptiveValsSrv@{getAccelAdaptiveValsSrv}}
+\index{getAccelAdaptiveValsSrv@{getAccelAdaptiveValsSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getAccelAdaptiveValsSrv}{getAccelAdaptiveValsSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Accel\+Adaptive\+Vals\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00672}{672}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00542}{get\+Accel\+Adaptive\+Vals()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a5516ee2ad71621f728245d0854104dc7}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a5516ee2ad71621f728245d0854104dc7}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getAccelBiasModelSrv@{getAccelBiasModelSrv}}
+\index{getAccelBiasModelSrv@{getAccelBiasModelSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getAccelBiasModelSrv}{getAccelBiasModelSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Accel\+Bias\+Model\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00676}{676}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00592}{get\+Accel\+Bias\+Model()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a79547e77f9122ca67610f153657ec8ac}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a79547e77f9122ca67610f153657ec8ac}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getAccelBiasSrv@{getAccelBiasSrv}}
+\index{getAccelBiasSrv@{getAccelBiasSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getAccelBiasSrv}{getAccelBiasSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Accel\+Bias\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00646}{646}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00295}{get\+Accel\+Bias()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ae34d6cfd5e2e990d2fa3afab20ca9c01}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ae34d6cfd5e2e990d2fa3afab20ca9c01}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getAccelNoiseSrv@{getAccelNoiseSrv}}
+\index{getAccelNoiseSrv@{getAccelNoiseSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getAccelNoiseSrv}{getAccelNoiseSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Accel\+Noise\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00665}{665}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00474}{get\+Accel\+Noise()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ab2d9efccc6237800a890135a4249eaf8}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ab2d9efccc6237800a890135a4249eaf8}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getBasicStatusSrv@{getBasicStatusSrv}}
+\index{getBasicStatusSrv@{getBasicStatusSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getBasicStatusSrv}{getBasicStatusSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Basic\+Status\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00659}{659}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00416}{get\+Basic\+Status()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a39aa3d9d1bbe86d90548f7422aa0b4a4}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a39aa3d9d1bbe86d90548f7422aa0b4a4}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getComplementaryFilterSrv@{getComplementaryFilterSrv}}
+\index{getComplementaryFilterSrv@{getComplementaryFilterSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getComplementaryFilterSrv}{getComplementaryFilterSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Complementary\+Filter\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00651}{651}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00340}{get\+Complementary\+Filter()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a877393b5cf4c313e0e433e9c92163265}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a877393b5cf4c313e0e433e9c92163265}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getConingScullingCompSrv@{getConingScullingCompSrv}}
+\index{getConingScullingCompSrv@{getConingScullingCompSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getConingScullingCompSrv}{getConingScullingCompSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Coning\+Sculling\+Comp\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00655}{655}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00378}{get\+Coning\+Sculling\+Comp()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a3d4329c798aa4b7cab1320f35f270192}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a3d4329c798aa4b7cab1320f35f270192}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getDiagnosticReportSrv@{getDiagnosticReportSrv}}
+\index{getDiagnosticReportSrv@{getDiagnosticReportSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getDiagnosticReportSrv}{getDiagnosticReportSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Diagnostic\+Report\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00660}{660}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00425}{get\+Diagnostic\+Report()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a64039ee26cf8a290b3c22b787b8868a5}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a64039ee26cf8a290b3c22b787b8868a5}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getEstimationControlFlagsSrv@{getEstimationControlFlagsSrv}}
+\index{getEstimationControlFlagsSrv@{getEstimationControlFlagsSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getEstimationControlFlagsSrv}{getEstimationControlFlagsSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Estimation\+Control\+Flags\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00657}{657}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00397}{get\+Estimation\+Control\+Flags()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a5ded1b1b3506d16e56d312b3d1a7fe13}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a5ded1b1b3506d16e56d312b3d1a7fe13}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getGynamicsModeSrv@{getGynamicsModeSrv}}
+\index{getGynamicsModeSrv@{getGynamicsModeSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getGynamicsModeSrv}{getGynamicsModeSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Gynamics\+Mode\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00679}{679}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00619}{get\+Gynamics\+Mode()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a4caf935b9d839aa586b562982cfc3adb}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a4caf935b9d839aa586b562982cfc3adb}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getGyroBiasModelSrv@{getGyroBiasModelSrv}}
+\index{getGyroBiasModelSrv@{getGyroBiasModelSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getGyroBiasModelSrv}{getGyroBiasModelSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Gyro\+Bias\+Model\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00671}{671}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00533}{get\+Gyro\+Bias\+Model()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a2f3eaec7f31a54d833773ebb5eb03b64}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a2f3eaec7f31a54d833773ebb5eb03b64}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getGyroBiasSrv@{getGyroBiasSrv}}
+\index{getGyroBiasSrv@{getGyroBiasSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getGyroBiasSrv}{getGyroBiasSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Gyro\+Bias\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00647}{647}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00304}{get\+Gyro\+Bias()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a7876569caf3e8169a1972ad8a591c772}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a7876569caf3e8169a1972ad8a591c772}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getGyroNoiseSrv@{getGyroNoiseSrv}}
+\index{getGyroNoiseSrv@{getGyroNoiseSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getGyroNoiseSrv}{getGyroNoiseSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Gyro\+Noise\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00667}{667}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00493}{get\+Gyro\+Noise()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a11169f770102e9cff7f3b45c96fb4881}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a11169f770102e9cff7f3b45c96fb4881}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getHardIronValuesSrv@{getHardIronValuesSrv}}
+\index{getHardIronValuesSrv@{getHardIronValuesSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getHardIronValuesSrv}{getHardIronValuesSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Hard\+Iron\+Values\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00648}{648}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00313}{get\+Hard\+Iron\+Values()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a799d76ddd2e92c3624d51ffb7c4b8c89}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a799d76ddd2e92c3624d51ffb7c4b8c89}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getMagAdaptiveValsSrv@{getMagAdaptiveValsSrv}}
+\index{getMagAdaptiveValsSrv@{getMagAdaptiveValsSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getMagAdaptiveValsSrv}{getMagAdaptiveValsSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Mag\+Adaptive\+Vals\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00674}{674}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00568}{get\+Mag\+Adaptive\+Vals()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_aa5a412d1343febccf6bda432eacb0581}\label{classcl__microstrain__mips_1_1ClMicrostainMips_aa5a412d1343febccf6bda432eacb0581}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getMagDipAdaptiveValsSrv@{getMagDipAdaptiveValsSrv}}
+\index{getMagDipAdaptiveValsSrv@{getMagDipAdaptiveValsSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getMagDipAdaptiveValsSrv}{getMagDipAdaptiveValsSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Mag\+Dip\+Adaptive\+Vals\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00677}{677}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00601}{get\+Mag\+Dip\+Adaptive\+Vals()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a858136430bc226e36390517f28687a2a}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a858136430bc226e36390517f28687a2a}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getMagNoiseSrv@{getMagNoiseSrv}}
+\index{getMagNoiseSrv@{getMagNoiseSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getMagNoiseSrv}{getMagNoiseSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Mag\+Noise\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00669}{669}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00513}{get\+Mag\+Noise()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a1f9b56f826c67a2e1d8a33e0879053bc}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a1f9b56f826c67a2e1d8a33e0879053bc}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getReferencePositionSrv@{getReferencePositionSrv}}
+\index{getReferencePositionSrv@{getReferencePositionSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getReferencePositionSrv}{getReferencePositionSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Reference\+Position\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00653}{653}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00359}{get\+Reference\+Position()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a12957749416c955e1b0132cb2213f879}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a12957749416c955e1b0132cb2213f879}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getSensorVehicleFrameOffsetSrv@{getSensorVehicleFrameOffsetSrv}}
+\index{getSensorVehicleFrameOffsetSrv@{getSensorVehicleFrameOffsetSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getSensorVehicleFrameOffsetSrv}{getSensorVehicleFrameOffsetSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Sensor\+Vehicle\+Frame\+Offset\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00678}{678}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00610}{get\+Sensor\+Vehicle\+Frame\+Offset()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_abeafc4f48f26ddd264e61b6cf97c779f}\label{classcl__microstrain__mips_1_1ClMicrostainMips_abeafc4f48f26ddd264e61b6cf97c779f}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getSensorVehicleFrameTransSrv@{getSensorVehicleFrameTransSrv}}
+\index{getSensorVehicleFrameTransSrv@{getSensorVehicleFrameTransSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getSensorVehicleFrameTransSrv}{getSensorVehicleFrameTransSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Sensor\+Vehicle\+Frame\+Trans\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00650}{650}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00331}{get\+Sensor\+Vehicle\+Frame\+Trans()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a7210454a851669073d06d82511014ecc}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a7210454a851669073d06d82511014ecc}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getSoftIronMatrixSrv@{getSoftIronMatrixSrv}}
+\index{getSoftIronMatrixSrv@{getSoftIronMatrixSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getSoftIronMatrixSrv}{getSoftIronMatrixSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Soft\+Iron\+Matrix\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00649}{649}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00322}{get\+Soft\+Iron\+Matrix()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ae720970f4114e7b6524b59df405ede83}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ae720970f4114e7b6524b59df405ede83}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!getZeroAngleUpdateThresholdSrv@{getZeroAngleUpdateThresholdSrv}}
+\index{getZeroAngleUpdateThresholdSrv@{getZeroAngleUpdateThresholdSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{getZeroAngleUpdateThresholdSrv}{getZeroAngleUpdateThresholdSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::get\+Zero\+Angle\+Update\+Threshold\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00662}{662}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00445}{get\+Zero\+Angle\+Update\+Threshold()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a584ea1089a89cd1039494d0fce19485c}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a584ea1089a89cd1039494d0fce19485c}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!gyroBiasCaptureSrv@{gyroBiasCaptureSrv}}
+\index{gyroBiasCaptureSrv@{gyroBiasCaptureSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{gyroBiasCaptureSrv}{gyroBiasCaptureSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::gyro\+Bias\+Capture\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00634}{634}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00162}{gyro\+Bias\+Capture()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ae53fdf79a14adb9c3eff4a8966a092ff}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ae53fdf79a14adb9c3eff4a8966a092ff}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!imuFilteredSubscriber@{imuFilteredSubscriber}}
+\index{imuFilteredSubscriber@{imuFilteredSubscriber}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{imuFilteredSubscriber}{imuFilteredSubscriber}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$sensor\+\_\+msgs\+::\+Imu$>$$\ast$ cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::imu\+Filtered\+Subscriber}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00048}{48}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a71648a9d970672d017c90bd3724b1104}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a71648a9d970672d017c90bd3724b1104}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!imuSubscriber@{imuSubscriber}}
+\index{imuSubscriber@{imuSubscriber}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{imuSubscriber}{imuSubscriber}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$sensor\+\_\+msgs\+::\+Imu$>$$\ast$ cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::imu\+Subscriber}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00047}{47}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ac57a43d359bfadaf897b51a57ccb3dc8}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00630}{630}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00051}{Cl\+Microstain\+Mips()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a5a39ba0864ba2c4c003b6ea427538243}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!nh\_@{nh\_}}
+\index{nh\_@{nh\_}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{nh\_}{nh\_}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::nh\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00629}{629}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a46c4caa433f40536bab99a0ecaf9e1ab}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a46c4caa433f40536bab99a0ecaf9e1ab}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!nodeName\_@{nodeName\_}}
+\index{nodeName\_@{nodeName\_}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{nodeName\_}{nodeName\_}}
+{\footnotesize\ttfamily boost\+::optional$<$std\+::string$>$ cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::node\+Name\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00045}{45}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a3d9eb5c291d70a2fb1b9bde4392e1d48}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a3d9eb5c291d70a2fb1b9bde4392e1d48}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!resetFilterSrv@{resetFilterSrv}}
+\index{resetFilterSrv@{resetFilterSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{resetFilterSrv}{resetFilterSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::reset\+Filter\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00632}{632}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00145}{reset\+Filter()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a0e22727b68e51261aa65605f236419e6}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a0e22727b68e51261aa65605f236419e6}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setAccelAdaptiveValsSrv@{setAccelAdaptiveValsSrv}}
+\index{setAccelAdaptiveValsSrv@{setAccelAdaptiveValsSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setAccelAdaptiveValsSrv}{setAccelAdaptiveValsSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Accel\+Adaptive\+Vals\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00640}{640}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00228}{set\+Accel\+Adaptive\+Vals()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a8d7c0f0a94dd6a25cac0130f8d9f55ff}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a8d7c0f0a94dd6a25cac0130f8d9f55ff}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setAccelBiasModelSrv@{setAccelBiasModelSrv}}
+\index{setAccelBiasModelSrv@{setAccelBiasModelSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setAccelBiasModelSrv}{setAccelBiasModelSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Accel\+Bias\+Model\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00639}{639}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00217}{set\+Accel\+Bias\+Model()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ae2ea11655cba06e49307780d1f95e197}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ae2ea11655cba06e49307780d1f95e197}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setAccelBiasSrv@{setAccelBiasSrv}}
+\index{setAccelBiasSrv@{setAccelBiasSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setAccelBiasSrv}{setAccelBiasSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Accel\+Bias\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00643}{643}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00265}{set\+Accel\+Bias()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_aed9dd96ff81966ea1fce03173a05bcd8}\label{classcl__microstrain__mips_1_1ClMicrostainMips_aed9dd96ff81966ea1fce03173a05bcd8}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setAccelNoiseSrv@{setAccelNoiseSrv}}
+\index{setAccelNoiseSrv@{setAccelNoiseSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setAccelNoiseSrv}{setAccelNoiseSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Accel\+Noise\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00664}{664}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00464}{set\+Accel\+Noise()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a54045931a06f909418ac284235c5dd5a}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a54045931a06f909418ac284235c5dd5a}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setComplementaryFilterSrv@{setComplementaryFilterSrv}}
+\index{setComplementaryFilterSrv@{setComplementaryFilterSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setComplementaryFilterSrv}{setComplementaryFilterSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Complementary\+Filter\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00636}{636}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00183}{set\+Complementary\+Filter()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ae24545c615e2be170adced3999d94d84}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ae24545c615e2be170adced3999d94d84}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setConingScullingCompSrv@{setConingScullingCompSrv}}
+\index{setConingScullingCompSrv@{setConingScullingCompSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setConingScullingCompSrv}{setConingScullingCompSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Coning\+Sculling\+Comp\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00654}{654}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00368}{set\+Coning\+Sculling\+Comp()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a43a684f4010debc4a2ba17d9784712d6}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a43a684f4010debc4a2ba17d9784712d6}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setDynamicsModeSrv@{setDynamicsModeSrv}}
+\index{setDynamicsModeSrv@{setDynamicsModeSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setDynamicsModeSrv}{setDynamicsModeSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Dynamics\+Mode\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00658}{658}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00406}{set\+Dynamics\+Mode()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a2eeff01aea4a41fd5d24ff2f77daf584}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a2eeff01aea4a41fd5d24ff2f77daf584}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setEstimationControlFlagsSrv@{setEstimationControlFlagsSrv}}
+\index{setEstimationControlFlagsSrv@{setEstimationControlFlagsSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setEstimationControlFlagsSrv}{setEstimationControlFlagsSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Estimation\+Control\+Flags\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00656}{656}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00387}{set\+Estimation\+Control\+Flags()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a4e88ebd03c7a774e958f8902c18e7f69}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a4e88ebd03c7a774e958f8902c18e7f69}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setFilterEulerSrv@{setFilterEulerSrv}}
+\index{setFilterEulerSrv@{setFilterEulerSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setFilterEulerSrv}{setFilterEulerSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Filter\+Euler\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00637}{637}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00197}{set\+Filter\+Euler\+Service()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_abe64faba505dfdab0b78b7cf31f9609d}\label{classcl__microstrain__mips_1_1ClMicrostainMips_abe64faba505dfdab0b78b7cf31f9609d}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setFilterHeadingSrv@{setFilterHeadingSrv}}
+\index{setFilterHeadingSrv@{setFilterHeadingSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setFilterHeadingSrv}{setFilterHeadingSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Filter\+Heading\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00638}{638}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00207}{set\+Filter\+Heading()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a96fa3777b87a5d8abcb0f5fe6d740934}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a96fa3777b87a5d8abcb0f5fe6d740934}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setGyroBiasModelSrv@{setGyroBiasModelSrv}}
+\index{setGyroBiasModelSrv@{setGyroBiasModelSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setGyroBiasModelSrv}{setGyroBiasModelSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Gyro\+Bias\+Model\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00670}{670}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00522}{set\+Gyro\+Bias\+Model()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a29fcea0897ca3bd7a036ab5c1856b86c}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a29fcea0897ca3bd7a036ab5c1856b86c}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setGyroBiasSrv@{setGyroBiasSrv}}
+\index{setGyroBiasSrv@{setGyroBiasSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setGyroBiasSrv}{setGyroBiasSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Gyro\+Bias\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00644}{644}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00275}{set\+Gyro\+Bias()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a712c389ca54fa2ebe89ffd601b03bd37}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a712c389ca54fa2ebe89ffd601b03bd37}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setGyroNoiseSrv@{setGyroNoiseSrv}}
+\index{setGyroNoiseSrv@{setGyroNoiseSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setGyroNoiseSrv}{setGyroNoiseSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Gyro\+Noise\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00666}{666}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00483}{set\+Gyro\+Noise()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_abab500a095515c133d5edfea23736fad}\label{classcl__microstrain__mips_1_1ClMicrostainMips_abab500a095515c133d5edfea23736fad}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setHardIronValuesSrv@{setHardIronValuesSrv}}
+\index{setHardIronValuesSrv@{setHardIronValuesSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setHardIronValuesSrv}{setHardIronValuesSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Hard\+Iron\+Values\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00645}{645}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00285}{set\+Hard\+Iron\+Values()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_aeb9fb755367cd253b65bf826e421cc05}\label{classcl__microstrain__mips_1_1ClMicrostainMips_aeb9fb755367cd253b65bf826e421cc05}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setMagAdaptiveValsSrv@{setMagAdaptiveValsSrv}}
+\index{setMagAdaptiveValsSrv@{setMagAdaptiveValsSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setMagAdaptiveValsSrv}{setMagAdaptiveValsSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Mag\+Adaptive\+Vals\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00673}{673}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00551}{set\+Mag\+Adaptive\+Vals()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a3618b27ce1ed75f2e498c0bc6a36599d}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a3618b27ce1ed75f2e498c0bc6a36599d}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setMagDipAdaptiveValsSrv@{setMagDipAdaptiveValsSrv}}
+\index{setMagDipAdaptiveValsSrv@{setMagDipAdaptiveValsSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setMagDipAdaptiveValsSrv}{setMagDipAdaptiveValsSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Mag\+Dip\+Adaptive\+Vals\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00675}{675}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00577}{set\+Mag\+Dip\+Adaptive\+Vals()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a0a6ed1132b9cca45536598e78c8b23cc}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a0a6ed1132b9cca45536598e78c8b23cc}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setMagNoiseSrv@{setMagNoiseSrv}}
+\index{setMagNoiseSrv@{setMagNoiseSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setMagNoiseSrv}{setMagNoiseSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Mag\+Noise\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00668}{668}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00502}{set\+Mag\+Noise()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a778117029f93a6cff9c5e2a0dac9742b}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a778117029f93a6cff9c5e2a0dac9742b}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setReferencePositionSrv@{setReferencePositionSrv}}
+\index{setReferencePositionSrv@{setReferencePositionSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setReferencePositionSrv}{setReferencePositionSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Reference\+Position\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00652}{652}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00349}{set\+Reference\+Position()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a977cce1917e12d96f614266baa4ae55d}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a977cce1917e12d96f614266baa4ae55d}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setSensorVehicleFrameOffsetSrv@{setSensorVehicleFrameOffsetSrv}}
+\index{setSensorVehicleFrameOffsetSrv@{setSensorVehicleFrameOffsetSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setSensorVehicleFrameOffsetSrv}{setSensorVehicleFrameOffsetSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Sensor\+Vehicle\+Frame\+Offset\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00642}{642}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00255}{set\+Sensor\+Vehicle\+Frame\+Offset()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_ac020b44e78addaa26beb44081d99f194}\label{classcl__microstrain__mips_1_1ClMicrostainMips_ac020b44e78addaa26beb44081d99f194}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setSensorVehicleFrameTransSrv@{setSensorVehicleFrameTransSrv}}
+\index{setSensorVehicleFrameTransSrv@{setSensorVehicleFrameTransSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setSensorVehicleFrameTransSrv}{setSensorVehicleFrameTransSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Sensor\+Vehicle\+Frame\+Trans\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00641}{641}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00245}{set\+Sensor\+Vehicle\+Frame\+Trans()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a2e46116a0dbc6acdf6384467d0c3a50d}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a2e46116a0dbc6acdf6384467d0c3a50d}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setSoftIronMatrixSrv@{setSoftIronMatrixSrv}}
+\index{setSoftIronMatrixSrv@{setSoftIronMatrixSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setSoftIronMatrixSrv}{setSoftIronMatrixSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Soft\+Iron\+Matrix\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00635}{635}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00171}{set\+Soft\+Iron\+Matrix()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_affd28a64d0ee9bcdb116d974f5e19ec6}\label{classcl__microstrain__mips_1_1ClMicrostainMips_affd28a64d0ee9bcdb116d974f5e19ec6}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setTareOrientationSrv@{setTareOrientationSrv}}
+\index{setTareOrientationSrv@{setTareOrientationSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setTareOrientationSrv}{setTareOrientationSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Tare\+Orientation\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00663}{663}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00454}{set\+Tare\+Orientation()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a88ffc1e573993764bb130c97cc64fe08}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a88ffc1e573993764bb130c97cc64fe08}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!setZeroAngleUpdateThresholdSrv@{setZeroAngleUpdateThresholdSrv}}
+\index{setZeroAngleUpdateThresholdSrv@{setZeroAngleUpdateThresholdSrv}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{setZeroAngleUpdateThresholdSrv}{setZeroAngleUpdateThresholdSrv}}
+{\footnotesize\ttfamily ros\+::\+Service\+Client cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::set\+Zero\+Angle\+Update\+Threshold\+Srv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00661}{661}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{microstrain__mips__client_8h_source_l00056}{initialize()}}, and \mbox{\hyperlink{microstrain__mips__client_8h_source_l00434}{set\+Zero\+Angle\+Update\+Threshold()}}.
+
+\mbox{\Hypertarget{classcl__microstrain__mips_1_1ClMicrostainMips_a0da593a071ac7ff8dd842b934120e315}\label{classcl__microstrain__mips_1_1ClMicrostainMips_a0da593a071ac7ff8dd842b934120e315}} 
+\index{cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}!statusSubscriber@{statusSubscriber}}
+\index{statusSubscriber@{statusSubscriber}!cl\_microstrain\_mips::ClMicrostainMips@{cl\_microstrain\_mips::ClMicrostainMips}}
+\doxysubsubsection{\texorpdfstring{statusSubscriber}{statusSubscriber}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$microstrain\+\_\+mips\+::status\+\_\+msg$>$$\ast$ cl\+\_\+microstrain\+\_\+mips\+::\+Cl\+Microstain\+Mips\+::status\+Subscriber}
+
+
+
+Definition at line \mbox{\hyperlink{microstrain__mips__client_8h_source_l00049}{49}} of file \mbox{\hyperlink{microstrain__mips__client_8h_source}{microstrain\+\_\+mips\+\_\+client.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+client\+\_\+library/microstrain\+\_\+mips\+\_\+client/include/microstrain\+\_\+mips\+\_\+client/\mbox{\hyperlink{microstrain__mips__client_8h}{microstrain\+\_\+mips\+\_\+client.\+h}}\end{DoxyCompactItemize}

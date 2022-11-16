@@ -1,0 +1,121 @@
+\hypertarget{sm__packml_8h_source}{}\doxysection{sm\+\_\+packml.\+h}
+\label{sm__packml_8h_source}\index{smacc\_sm\_reference\_library/sm\_packml/include/sm\_packml/sm\_packml.h@{smacc\_sm\_reference\_library/sm\_packml/include/sm\_packml/sm\_packml.h}}
+\mbox{\hyperlink{sm__packml_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00006}00006 \textcolor{comment}{// CLIENTS}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cl__ros__timer_8h}{ros\_timer\_client/cl\_ros\_timer.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cl__keyboard_8h}{keyboard\_client/cl\_keyboard.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00010}00010 \textcolor{comment}{// ORTHOGONALS}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__packml_2include_2sm__packml_2orthogonals_2or__timer_8h}{sm\_packml/orthogonals/or\_timer.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__packml_2include_2sm__packml_2orthogonals_2or__updatable__publisher_8h}{sm\_packml/orthogonals/or\_updatable\_publisher.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__packml_2include_2sm__packml_2orthogonals_2or__subscriber_8h}{sm\_packml/orthogonals/or\_subscriber.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__packml_2include_2sm__packml_2orthogonals_2or__keyboard_8h}{sm\_packml/orthogonals/or\_keyboard.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00016}00016 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecl__ros__timer}{cl\_ros\_timer}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00017}00017 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecl__ros__publisher}{cl\_ros\_publisher}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00018}00018 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecl__keyboard}{cl\_keyboard}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00020}00020 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesm__packml_1_1cl__subscriber}{sm\_packml::cl\_subscriber}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00022}00022 \textcolor{comment}{//CLIENT BEHAVIORS}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__default__publish__loop_8h}{ros\_publisher\_client/client\_behaviors/cb\_default\_publish\_loop.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00024}00024 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__muted__behavior_8h}{ros\_publisher\_client/client\_behaviors/cb\_muted\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00025}00025 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__publish__once_8h}{ros\_publisher\_client/client\_behaviors/cb\_publish\_once.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__packml_2include_2sm__packml_2clients_2cl__subscriber_2client__behaviors_2cb__default__subscriber__behavior_8h}{sm\_packml/clients/cl\_subscriber/client\_behaviors/cb\_default\_subscriber\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00028}00028 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__packml_2include_2sm__packml_2clients_2cl__subscriber_2client__behaviors_2cb__watchdog__subscriber__behavior_8h}{sm\_packml/clients/cl\_subscriber/client\_behaviors/cb\_watchdog\_subscriber\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00030}00030 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__default__keyboard__behavior_8h}{keyboard\_client/client\_behaviors/cb\_default\_keyboard\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00032}00032 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__ros__timer_8h}{ros\_timer\_client/client\_behaviors/cb\_ros\_timer.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00034}00034 \textcolor{comment}{//STATE REACTORS}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sr__all__events__go_8h}{sr\_all\_events\_go/sr\_all\_events\_go.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00037}00037 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc}{smacc}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00038}00038 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc_1_1state__reactors}{smacc::state\_reactors}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00039}00039 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc_1_1default__events}{smacc::default\_events}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00041}00041 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__packml}{sm\_packml}}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00042}00042 \{}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00044}00044 \textcolor{comment}{//STATES}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00045}00045 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StIdle}{StIdle}}; \textcolor{comment}{// first state specially needs a forward declaration}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00046}00046 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StStarting}{StStarting}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00047}00047 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StExecute}{StExecute}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00048}00048 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StCompleting}{StCompleting}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00049}00049 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StComplete}{StComplete}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00050}00050 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StResetting}{StResetting}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00051}00051 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StUnholding}{StUnholding}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00052}00052 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StHeld}{StHeld}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00053}00053 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StHolding}{StHolding}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00054}00054 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StSuspending}{StSuspending}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00055}00055 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StSuspended}{StSuspended}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00056}00056 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StUnsuspending}{StUnsuspending}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00057}00057 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StAborting}{StAborting}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00058}00058 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StAborted}{StAborted}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00059}00059 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StClearing}{StClearing}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00060}00060 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StStopping}{StStopping}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00061}00061 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__packml_1_1StStopped}{StStopped}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00063}00063 \textcolor{keyword}{class }\mbox{\hyperlink{classsm__packml_1_1MsRun}{MsRun}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00064}00064 \textcolor{keyword}{class }\mbox{\hyperlink{classsm__packml_1_1MsStop}{MsStop}};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00066}\mbox{\hyperlink{structsm__packml_1_1EvToDeep}{00066}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__packml_1_1EvToDeep}{EvToDeep}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<EvToDeep>}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00067}00067 \{}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00068}00068 \};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00070}\mbox{\hyperlink{structsm__packml_1_1EvFail}{00070}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__packml_1_1EvFail}{EvFail}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<EvFail>}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00071}00071 \{}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00072}00072 \};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00074}\mbox{\hyperlink{structsm__packml_1_1EvEStop}{00074}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__packml_1_1EvEStop}{EvEStop}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<EvEStop>}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00075}00075 \{}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00076}00076 \};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00078}00078 \textcolor{comment}{// STATE MACHINE}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00079}\mbox{\hyperlink{structsm__packml_1_1SmPackML}{00079}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__packml_1_1SmPackML}{SmPackML}}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00080}00080     : \textcolor{keyword}{public} \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{smacc::SmaccStateMachineBase}}<SmPackML, MsRun>}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00081}00081 \{}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00082}00082     \textcolor{keyword}{using }SmaccStateMachineBase::SmaccStateMachineBase;}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00084}\mbox{\hyperlink{structsm__packml_1_1SmPackML_a977b226f0602ce502cd3678f9066a450}{00084}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__packml_1_1SmPackML_a977b226f0602ce502cd3678f9066a450}{onInitialize}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00085}00085 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00086}00086         this-\/>createOrthogonal<OrTimer>();}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00087}00087         this-\/>createOrthogonal<OrUpdatablePublisher>();}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00088}00088         this-\/>createOrthogonal<OrKeyboard>();}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00089}00089         this-\/>createOrthogonal<OrSubscriber>();}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00090}00090     \}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00091}00091 \};}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00092}00092 \} \textcolor{comment}{// namespace sm\_packml}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00094}00094 \textcolor{comment}{// MODE STATES}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00095}00095 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__packml_2include_2sm__packml_2mode__states_2ms__run_8h}{sm\_packml/mode\_states/ms\_run.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00096}00096 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ms__stop_8h}{sm\_packml/mode\_states/ms\_stop.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00098}00098 \textcolor{comment}{//STATES}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00099}00099 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__idle_8h}{sm\_packml/states/st\_idle.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00100}00100 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__starting_8h}{sm\_packml/states/st\_starting.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00101}00101 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__execute_8h}{sm\_packml/states/st\_execute.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00102}00102 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__completing_8h}{sm\_packml/states/st\_completing.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00103}00103 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__complete_8h}{sm\_packml/states/st\_complete.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00104}00104 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__resetting_8h}{sm\_packml/states/st\_resetting.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00105}00105 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__unholding_8h}{sm\_packml/states/st\_unholding.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00106}00106 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__held_8h}{sm\_packml/states/st\_held.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00107}00107 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__holding_8h}{sm\_packml/states/st\_holding.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00108}00108 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__suspending_8h}{sm\_packml/states/st\_suspending.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00109}00109 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__suspended_8h}{sm\_packml/states/st\_suspended.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00110}00110 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__unsuspending_8h}{sm\_packml/states/st\_unsuspending.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00111}00111 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__aborting_8h}{sm\_packml/states/st\_aborting.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00112}00112 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__aborted_8h}{sm\_packml/states/st\_aborted.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00113}00113 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__clearing_8h}{sm\_packml/states/st\_clearing.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00114}00114 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__stopping_8h}{sm\_packml/states/st\_stopping.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__packml_8h_source_l00115}00115 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__stopped_8h}{sm\_packml/states/st\_stopped.h}}>}}
+
+\end{DoxyCode}

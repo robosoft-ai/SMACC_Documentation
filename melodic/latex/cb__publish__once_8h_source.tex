@@ -1,0 +1,53 @@
+\hypertarget{cb__publish__once_8h_source}{}\doxysection{cb\+\_\+publish\+\_\+once.\+h}
+\label{cb__publish__once_8h_source}\index{smacc\_client\_library/ros\_publisher\_client/include/ros\_publisher\_client/client\_behaviors/cb\_publish\_once.h@{smacc\_client\_library/ros\_publisher\_client/include/ros\_publisher\_client/client\_behaviors/cb\_publish\_once.h}}
+\mbox{\hyperlink{cb__publish__once_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00002}00002 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__client__behavior_8h}{smacc/smacc\_client\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cl__ros__publisher_8h}{ros\_publisher\_client/cl\_ros\_publisher.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00006}00006 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__ros__publisher}{cl\_ros\_publisher}}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00008}00008 \textcolor{keyword}{template} <\textcolor{keyword}{typename} RosMsgType>}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00009}\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce}{00009}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce}{CbPublishOnce}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1SmaccClientBehavior}{smacc::SmaccClientBehavior}}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00011}00011 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00012}\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_a6222a91fb87cd3118ca9f84ff857c696}{00012}}     std::function<void()> \mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_a6222a91fb87cd3118ca9f84ff857c696}{deferedPublishFn}};}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00013}\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_aabb127ac2192a295ce9d11c63f3c9595}{00013}}     \mbox{\hyperlink{classcl__ros__publisher_1_1ClRosPublisher}{ClRosPublisher}} *\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_aabb127ac2192a295ce9d11c63f3c9595}{client\_}};}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00015}00015 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00016}\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_a9706b20ed8ed9af79396a446abf44344}{00016}}     \mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_a9706b20ed8ed9af79396a446abf44344}{CbPublishOnce}}()}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00017}00017         : \mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_a6222a91fb87cd3118ca9f84ff857c696}{deferedPublishFn}}(nullptr)}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00021}00021     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TMessage>}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00022}\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_a54d9062c233e9949ec45c27da69cf83d}{00022}}     \mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_a54d9062c233e9949ec45c27da69cf83d}{CbPublishOnce}}(\textcolor{keyword}{const} TMessage \&\mbox{\hyperlink{namespacekeyboard__server__node_abfec01745fb17e2aa813913bea03d707}{data}})}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00024}00024         this-\/>\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_aedf3cb7940951d76773f46c807f34a58}{setMessage}}(data);}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00027}00027     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TMessage>}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00028}\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_aedf3cb7940951d76773f46c807f34a58}{00028}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_aedf3cb7940951d76773f46c807f34a58}{setMessage}}(\textcolor{keyword}{const} TMessage \&\mbox{\hyperlink{namespacekeyboard__server__node_abfec01745fb17e2aa813913bea03d707}{data}})}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00029}00029     \{}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00030}00030         \mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_a6222a91fb87cd3118ca9f84ff857c696}{deferedPublishFn}} = [=]() \{}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00031}00031             \mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_aabb127ac2192a295ce9d11c63f3c9595}{client\_}}-\/>\mbox{\hyperlink{classcl__ros__publisher_1_1ClRosPublisher_a3517d62fb0703a0a72efe6de7ad1a6d8}{publish}}(\mbox{\hyperlink{namespacekeyboard__server__node_abfec01745fb17e2aa813913bea03d707}{data}});}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00032}00032         \};}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00033}00033     \}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00035}\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_afaed71bc2694ec1837278d5f931a76e1}{00035}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_afaed71bc2694ec1837278d5f931a76e1}{onEntry}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00036}00036 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00037}00037         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a32b16e99e3b4cb289414203dc861a440}{requiresClient}}(client\_);}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00039}00039         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_a6222a91fb87cd3118ca9f84ff857c696}{deferedPublishFn}} != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00040}00040             \mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_a6222a91fb87cd3118ca9f84ff857c696}{deferedPublishFn}}();}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00041}00041     \}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00043}\mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_ad82cb7d6ac69fe9b91bc955550ab92cb}{00043}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__publisher_1_1CbPublishOnce_ad82cb7d6ac69fe9b91bc955550ab92cb}{onExit}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00044}00044 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00045}00045     \}}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00046}00046 \};}
+\DoxyCodeLine{\Hypertarget{cb__publish__once_8h_source_l00047}00047 \} \textcolor{comment}{// namespace cl\_ros\_publisher}}
+
+\end{DoxyCode}

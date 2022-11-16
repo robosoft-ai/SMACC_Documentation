@@ -1,0 +1,57 @@
+\hypertarget{smacc__client__behavior__base_8cpp_source}{}\doxysection{smacc\+\_\+client\+\_\+behavior\+\_\+base.\+cpp}
+\label{smacc__client__behavior__base_8cpp_source}\index{smacc/src/smacc/smacc\_client\_behavior\_base.cpp@{smacc/src/smacc/smacc\_client\_behavior\_base.cpp}}
+\mbox{\hyperlink{smacc__client__behavior__base_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__client__behavior_8h}{smacc/smacc\_client\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00005}\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a12fe603a4b66efe6c190c63da422c7d7}{00005}} \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a12fe603a4b66efe6c190c63da422c7d7}{ISmaccClientBehavior::ISmaccClientBehavior}}()}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00007}00007   \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a0fea65db292a8bb3dfba3e5840491d79}{stateMachine\_}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00008}00008   \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a5a6658a2deb72b700ae595e594617616}{currentState}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00009}00009 \}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00011}\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a916a04c467ae5e98c5fc11909f0098f3}{00011}} \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a916a04c467ae5e98c5fc11909f0098f3}{ISmaccClientBehavior::\string~ISmaccClientBehavior}}()}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00013}00013   ROS\_WARN(\textcolor{stringliteral}{"{}Client behavior deallocated."{}});}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00014}00014 \}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00016}\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a18e4bec9460b010f2894c0f7e7064a34}{00016}} std::string \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a18e4bec9460b010f2894c0f7e7064a34}{ISmaccClientBehavior::getName}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00017}00017 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00018}00018   \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(*this).name());}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00019}00019 \}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00021}\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a1078de57f291301cc2829c3548fa5ea5}{00021}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a1078de57f291301cc2829c3548fa5ea5}{ISmaccClientBehavior::runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00022}00022 \{}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00023}00023   ROS\_DEBUG(\textcolor{stringliteral}{"{}[\%s] Default empty SmaccClientBehavior runtimeConfigure"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a18e4bec9460b010f2894c0f7e7064a34}{getName}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00024}00024 \}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00026}\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9877684b1954429719826e2d0924d980}{00026}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9877684b1954429719826e2d0924d980}{ISmaccClientBehavior::onEntry}}()\{\};}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00028}\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_ad1198fdb2cbdf11f3276d3e23d4c0a50}{00028}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_ad1198fdb2cbdf11f3276d3e23d4c0a50}{ISmaccClientBehavior::onExit}}()\{\};}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00030}\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_ad066319af26db612ba2b6d2f1796daad}{00030}} ros::NodeHandle \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_ad066319af26db612ba2b6d2f1796daad}{ISmaccClientBehavior::getNode}}()}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00031}00031 \{}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00032}00032   \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a0fea65db292a8bb3dfba3e5840491d79}{stateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a0b81d4a2875ea203446210a6b349d1c1}{getNode}}();}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00033}00033 \}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00035}\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a90b7032f7520f9e7e805835e6ed9d43e}{00035}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a90b7032f7520f9e7e805835e6ed9d43e}{ISmaccClientBehavior::executeOnEntry}}()}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00036}00036 \{}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00037}00037   ROS\_DEBUG(\textcolor{stringliteral}{"{}[\%s] Default empty SmaccClientBehavior onEntry"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a18e4bec9460b010f2894c0f7e7064a34}{getName}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00038}00038   this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9877684b1954429719826e2d0924d980}{onEntry}}();}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00039}00039 \}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00041}\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_ac88fbad78c928b4bca6d18659ddfd8c0}{00041}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_ac88fbad78c928b4bca6d18659ddfd8c0}{ISmaccClientBehavior::executeOnExit}}()}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00042}00042 \{}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00043}00043   ROS\_DEBUG(\textcolor{stringliteral}{"{}[\%s] Default empty SmaccClientBehavior onExit"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a18e4bec9460b010f2894c0f7e7064a34}{getName}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00044}00044   this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_ad1198fdb2cbdf11f3276d3e23d4c0a50}{onExit}}();}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00045}00045 \}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00047}\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_abdc74a8d95fdd02794c19dfa90f8a6ce}{00047}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_abdc74a8d95fdd02794c19dfa90f8a6ce}{ISmaccClientBehavior::dispose}}()}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00048}00048 \{}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{smacc__client__behavior__base_8cpp_source_l00051}00051 \}  \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

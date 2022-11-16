@@ -1,0 +1,100 @@
+\hypertarget{structsm__fetch__screw__loop__1_1_1SmFetchScrewLoop1}{}\doxysection{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::Sm\+Fetch\+Screw\+Loop1 Struct Reference}
+\label{structsm__fetch__screw__loop__1_1_1SmFetchScrewLoop1}\index{sm\_fetch\_screw\_loop\_1::SmFetchScrewLoop1@{sm\_fetch\_screw\_loop\_1::SmFetchScrewLoop1}}
+
+
+Advanced example of state machine with smacc that shows multiple techniques for the development of state machines.  
+
+
+
+
+{\ttfamily \#include $<$sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::Sm\+Fetch\+Screw\+Loop1\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structsm__fetch__screw__loop__1_1_1SmFetchScrewLoop1__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::Sm\+Fetch\+Screw\+Loop1\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsm__fetch__screw__loop__1_1_1SmFetchScrewLoop1__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{structsm__fetch__screw__loop__1_1_1SmFetchScrewLoop1_a0a939505f6e1dbeb48a5284433437dab}{on\+Initialize}} () override
+\begin{DoxyCompactList}\small\item\em this function should be implemented by the user to create the orthogonals \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structsm__fetch__screw__loop__1_1_1SmFetchScrewLoop1_a47508a2d301007546d4c70dedd2ade4b}{Smacc\+State\+Machine\+Base}} (\mbox{\hyperlink{common_8h_a34caa66736ff9d94c36193dc061e30f4}{my\+\_\+context}} ctx, \mbox{\hyperlink{classsmacc_1_1SignalDetector}{Signal\+Detector}} $\ast$signal\+Detector)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Advanced example of state machine with smacc that shows multiple techniques for the development of state machines. 
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_8h_source_l00050}{50}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_8h_source}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsm__fetch__screw__loop__1_1_1SmFetchScrewLoop1_a0a939505f6e1dbeb48a5284433437dab}\label{structsm__fetch__screw__loop__1_1_1SmFetchScrewLoop1_a0a939505f6e1dbeb48a5284433437dab}} 
+\index{sm\_fetch\_screw\_loop\_1::SmFetchScrewLoop1@{sm\_fetch\_screw\_loop\_1::SmFetchScrewLoop1}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!sm\_fetch\_screw\_loop\_1::SmFetchScrewLoop1@{sm\_fetch\_screw\_loop\_1::SmFetchScrewLoop1}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::\+Sm\+Fetch\+Screw\+Loop1\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+this function should be implemented by the user to create the orthogonals 
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ac2982c6c8283663e5e1e8a7c82f511ec}{smacc\+::\+ISmacc\+State\+Machine}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_8h_source_l00055}{55}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_8h_source}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056         \{}
+\DoxyCodeLine{00057             this-\/>createOrthogonal<OrPerception>();}
+\DoxyCodeLine{00058             this-\/>createOrthogonal<OrGripper>();}
+\DoxyCodeLine{00059             this-\/>createOrthogonal<OrArm>();}
+\DoxyCodeLine{00060             this-\/>createOrthogonal<OrNavigation>();}
+\DoxyCodeLine{00061         \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structsm__fetch__screw__loop__1_1_1SmFetchScrewLoop1_a47508a2d301007546d4c70dedd2ade4b}\label{structsm__fetch__screw__loop__1_1_1SmFetchScrewLoop1_a47508a2d301007546d4c70dedd2ade4b}} 
+\index{sm\_fetch\_screw\_loop\_1::SmFetchScrewLoop1@{sm\_fetch\_screw\_loop\_1::SmFetchScrewLoop1}!SmaccStateMachineBase@{SmaccStateMachineBase}}
+\index{SmaccStateMachineBase@{SmaccStateMachineBase}!sm\_fetch\_screw\_loop\_1::SmFetchScrewLoop1@{sm\_fetch\_screw\_loop\_1::SmFetchScrewLoop1}}
+\doxysubsubsection{\texorpdfstring{SmaccStateMachineBase()}{SmaccStateMachineBase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{smacc\+::\+Smacc\+State\+Machine\+Base}}$<$ Derived\+State\+Machine, Initial\+State\+Type $>$\+::\+Smacc\+State\+Machine\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a34caa66736ff9d94c36193dc061e30f4}{my\+\_\+context}}}]{ctx,  }\item[{\mbox{\hyperlink{classsmacc_1_1SignalDetector}{Signal\+Detector}} $\ast$}]{signal\+Detector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__base_8h_source_l00020}{20}} of file \mbox{\hyperlink{smacc__state__machine__base_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021         : \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a497c2185584adbec3298d4000277b75e}{ISmaccStateMachine}}(signalDetector),}
+\DoxyCodeLine{00022           sc::asynchronous\_state\_machine<DerivedStateMachine, InitialStateType, SmaccFifoScheduler, SmaccAllocator>(ctx)}
+\DoxyCodeLine{00023     \{}
+\DoxyCodeLine{00024     \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1/include/sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1/\mbox{\hyperlink{sm__fetch__screw__loop__1_8h}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,77 @@
+\hypertarget{smacc__runtime__test__node_8cpp}{}\doxysection{smacc\+\_\+diagnostics/smacc\+\_\+runtime\+\_\+test/src/smacc\+\_\+runtime\+\_\+test\+\_\+node.cpp File Reference}
+\label{smacc__runtime__test__node_8cpp}\index{smacc\_diagnostics/smacc\_runtime\_test/src/smacc\_runtime\_test\_node.cpp@{smacc\_diagnostics/smacc\_runtime\_test/src/smacc\_runtime\_test\_node.cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\newline
+{\ttfamily \#include $<$rosgraph\+\_\+msgs/\+Log.\+h$>$}\newline
+{\ttfamily \#include $<$smacc\+\_\+msgs/\+Smacc\+Transition\+Log\+Entry.\+h$>$}\newline
+{\ttfamily \#include $<$boost/signals2.\+hpp$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for smacc\+\_\+runtime\+\_\+test\+\_\+node.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{smacc__runtime__test__node_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTestPolicy}{Test\+Policy}}
+\item 
+class \mbox{\hyperlink{classSmaccTestRuntimeNode}{Smacc\+Test\+Runtime\+Node}}
+\item 
+class \mbox{\hyperlink{classTimeoutFailureTestPolicy}{Timeout\+Failure\+Test\+Policy}}
+\item 
+class \mbox{\hyperlink{classReachedStateSuccessTestPolicy}{Reached\+State\+Success\+Test\+Policy}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{smacc__runtime__test__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{smacc__runtime__test__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{smacc__runtime__test__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{smacc\_runtime\_test\_node.cpp@{smacc\_runtime\_test\_node.cpp}!main@{main}}
+\index{main@{main}!smacc\_runtime\_test\_node.cpp@{smacc\_runtime\_test\_node.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00185}{185}} of file \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source}{smacc\+\_\+runtime\+\_\+test\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00186 \{}
+\DoxyCodeLine{00187   ros::init(argc, argv, \textcolor{stringliteral}{"{}smacc\_runtime\_test\_node"{}});}
+\DoxyCodeLine{00188 }
+\DoxyCodeLine{00189   \mbox{\hyperlink{classSmaccTestRuntimeNode}{SmaccTestRuntimeNode}} testNode;}
+\DoxyCodeLine{00190   testNode.\mbox{\hyperlink{classSmaccTestRuntimeNode_a8a75b2f3884af285826c7168753b8886}{init}}();}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192   ros::Rate \mbox{\hyperlink{namespacefake__cube__perception__node_a36e88703ab69fd35065e8a8d9344903e}{r}}(20);}
+\DoxyCodeLine{00193 }
+\DoxyCodeLine{00194   \textcolor{keywordflow}{while} (ros::ok())}
+\DoxyCodeLine{00195   \{}
+\DoxyCodeLine{00196     testNode.\mbox{\hyperlink{classSmaccTestRuntimeNode_a0cdde5c108219ca3d7db941676fc1dcf}{update}}();}
+\DoxyCodeLine{00197     ros::spinOnce();}
+\DoxyCodeLine{00198     \mbox{\hyperlink{namespacefake__cube__perception__node_a36e88703ab69fd35065e8a8d9344903e}{r}}.sleep();}
+\DoxyCodeLine{00199   \}}
+\DoxyCodeLine{00200   \textcolor{comment}{// ros::Subscriber sub = nh.subscribe();}}
+\DoxyCodeLine{00201 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00061}{Smacc\+Test\+Runtime\+Node\+::init()}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2servers_2fake__cube__perception__node_8py_source_l00118}{fake\+\_\+cube\+\_\+perception\+\_\+node\+::r}}, and \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00111}{Smacc\+Test\+Runtime\+Node\+::update()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{smacc__runtime__test__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}

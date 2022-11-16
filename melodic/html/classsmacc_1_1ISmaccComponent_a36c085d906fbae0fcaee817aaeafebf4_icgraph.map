@@ -1,0 +1,12 @@
+<map id="smacc::ISmaccComponent::requiresClient" name="smacc::ISmaccComponent::requiresClient">
+<area shape="rect" id="node1" title=" " alt="" coords="261,399,440,440"/>
+<area shape="rect" id="node2" href="$classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintLateralWorkspace.html#a6b1911a83059bef46803e9973fc325d8" title=" " alt="" coords="5,5,213,76"/>
+<area shape="rect" id="node3" href="$classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintTableWorkspaces.html#a813b53264563225547f31651fd5b3f76" title=" " alt="" coords="6,100,213,171"/>
+<area shape="rect" id="node4" href="$classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall.html#a1dcf39e1ad5ddbbec29a278677a2c680" title=" " alt="" coords="14,195,205,265"/>
+<area shape="rect" id="node5" href="$classsm__fetch__six__table__pick__n__sort__1_1_1cl__move__group__interface_1_1CpConstraintLateralWorkspace.html#ab6a7532f9f5c0a52eb149177dcadfeb2" title=" " alt="" coords="10,289,209,360"/>
+<area shape="rect" id="node6" href="$classsm__fetch__six__table__pick__n__sort__1_1_1cl__move__group__interface_1_1CpConstraintTableWorkspaces.html#a546bdfe3331f1b3c286d4d41cc3deccf" title=" " alt="" coords="10,384,209,455"/>
+<area shape="rect" id="node7" href="$classsm__fetch__six__table__pick__n__sort__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall.html#a409f2624001978e120faa2f79d7e150e" title=" " alt="" coords="10,479,209,549"/>
+<area shape="rect" id="node8" href="$classsm__fetch__two__table__whiskey__pour_1_1cl__move__group__interface_1_1CpConstraintLateralWorkspace.html#a420fcf0fc6f89007a313e70458bca06c" title=" " alt="" coords="10,573,209,644"/>
+<area shape="rect" id="node9" href="$classsm__fetch__two__table__whiskey__pour_1_1cl__move__group__interface_1_1CpConstraintTableWorkspaces.html#a6d333c263396864c34db183ea530f73c" title=" " alt="" coords="10,668,209,739"/>
+<area shape="rect" id="node10" href="$classsm__fetch__two__table__whiskey__pour_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall.html#a7f052ec290f7cb7ee2b6a288b221b9a2" title=" " alt="" coords="10,763,209,833"/>
+</map>

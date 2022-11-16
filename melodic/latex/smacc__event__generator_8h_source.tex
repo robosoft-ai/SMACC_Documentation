@@ -1,0 +1,54 @@
+\hypertarget{smacc__event__generator_8h_source}{}\doxysection{smacc\+\_\+event\+\_\+generator.\+h}
+\label{smacc__event__generator_8h_source}\index{smacc/include/smacc/smacc\_event\_generator.h@{smacc/include/smacc/smacc\_event\_generator.h}}
+\mbox{\hyperlink{smacc__event__generator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{introspection_8h}{smacc/introspection/introspection.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <boost/statechart/event.hpp>}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00017}00017 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00018}00018 \{}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00019}00019     \textcolor{keyword}{class }ISmaccState;}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00020}00020     \textcolor{keyword}{class }ISMaccStateMachine;}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00022}\mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator}{00022}}     \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator}{SmaccEventGenerator}}}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00024}00024     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00025}00025         \mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_a26d17f3c1126a03107d452c95eef5136}{SmaccEventGenerator}}();}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00026}00026         \textcolor{keyword}{virtual} \mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_a3032b762f40b72e76d6c5713ee44e138}{\string~SmaccEventGenerator}}();}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00028}00028         \textcolor{keyword}{template} <\textcolor{keyword}{typename} TState, \textcolor{keyword}{typename} TSource>}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00029}00029         \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_ad6560a6467f5f90863dad91f28b59fd7}{onStateAllocation}}();}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00031}00031         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_aa1eb9cc0fd1b3e83cc87d4871fb0f68a}{onEntry}}();}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00032}00032         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_ac9de300b5316071623b8486cb5b6662e}{onExit}}();}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00034}00034         \textcolor{keyword}{template} <\textcolor{keyword}{typename} EventType>}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00035}00035         \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_a9c1df7c3e6b5ff7bf0da8f6d24fab4bb}{postEvent}}(\textcolor{keyword}{const} EventType \&ev);}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00037}00037         \textcolor{keyword}{template} <\textcolor{keyword}{typename} EventType>}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00038}00038         \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_a9c1df7c3e6b5ff7bf0da8f6d24fab4bb}{postEvent}}();}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00040}00040         \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_a804f2d42ef9a834a2729376de2f2f4e4}{initialize}}(\mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmaccState}} *ownerState);}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00041}00041         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_a59a90d4c22d02f72522e94ff71b14d10}{onInitialized}}();}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00043}00043     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00044}\mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_ac7efdd1d9c69906c3a9d3f66e13bb04a}{00044}}         \mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmaccState}} *\mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_ac7efdd1d9c69906c3a9d3f66e13bb04a}{ownerState\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00045}\mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_acf9f0c148c1ca8b39fd21aaf52d4ea39}{00045}}         \textcolor{keyword}{friend} \mbox{\hyperlink{classsmacc_1_1SmaccEventGenerator_acf9f0c148c1ca8b39fd21aaf52d4ea39}{ISmaccStateMachine}};}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00046}00046     \};}
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{smacc__event__generator_8h_source_l00048}00048 \} \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

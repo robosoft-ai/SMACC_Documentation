@@ -1,0 +1,80 @@
+\hypertarget{waypoints__navigator_8h_source}{}\doxysection{waypoints\+\_\+navigator.\+h}
+\label{waypoints__navigator_8h_source}\index{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/components/waypoints\_navigator/waypoints\_navigator.h@{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/components/waypoints\_navigator/waypoints\_navigator.h}}
+\mbox{\hyperlink{waypoints__navigator_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00002}00002 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00003}00003 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00004}00004 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00005}00005 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00006}00006 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <geometry\_msgs/Pose.h>}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{waypoints__event__dispatcher_8h}{move\_base\_z\_client\_plugin/components/waypoints\_navigator/waypoints\_event\_dispatcher.h}}>}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{move__base__z__client__plugin_8h}{move\_base\_z\_client\_plugin/move\_base\_z\_client\_plugin.h}}>}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00014}00014 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00016}00016 \textcolor{keyword}{class }ClMoveBaseZ;}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00018}\mbox{\hyperlink{structcl__move__base__z_1_1Pose2D}{00018}} \textcolor{keyword}{struct }\mbox{\hyperlink{structcl__move__base__z_1_1Pose2D}{Pose2D}}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00020}\mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_ac84fa69c2c2dda7ec107a52e9f2c2fcf}{00020}}   \mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_ac84fa69c2c2dda7ec107a52e9f2c2fcf}{Pose2D}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double} yaw)}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00021}00021   \{}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00022}00022     this-\/>\mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_a5cf116d8264305c3cf062e573f218854}{x\_}} = x;}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00023}00023     this-\/>\mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_a745b752ce659fca634aaa386230bb931}{y\_}} = y;}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00024}00024     this-\/>\mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_aed88c69c4fb64fdca72534843de5350e}{yaw\_}} = yaw;}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00025}00025   \}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00027}\mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_a5cf116d8264305c3cf062e573f218854}{00027}}   \textcolor{keywordtype}{double} \mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_a5cf116d8264305c3cf062e573f218854}{x\_}};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00028}\mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_a745b752ce659fca634aaa386230bb931}{00028}}   \textcolor{keywordtype}{double} \mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_a745b752ce659fca634aaa386230bb931}{y\_}};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00029}\mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_aed88c69c4fb64fdca72534843de5350e}{00029}}   \textcolor{keywordtype}{double} \mbox{\hyperlink{structcl__move__base__z_1_1Pose2D_aed88c69c4fb64fdca72534843de5350e}{yaw\_}};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00030}00030 \};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00032}\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator}{00032}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator}{WaypointNavigator}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1ISmaccComponent}{smacc::ISmaccComponent}}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00033}00033 \{}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00034}00034 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00035}\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a4f2be7a9741e8535c414e63335d752a0}{00035}}   \mbox{\hyperlink{classcl__move__base__z_1_1WaypointEventDispatcher}{WaypointEventDispatcher}} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a4f2be7a9741e8535c414e63335d752a0}{waypointsEventDispatcher}};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00037}\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_afc5ad5c5d15f41437286b8fca1d3a324}{00037}}   \mbox{\hyperlink{classcl__move__base__z_1_1ClMoveBaseZ}{ClMoveBaseZ}} *\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_afc5ad5c5d15f41437286b8fca1d3a324}{client\_}};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00039}00039   \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a62d2f964f5537e17f94317c2f69c8969}{WaypointNavigator}}();}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00041}00041   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_ac60ecf63f7a2a84f3ef51f04cc222a70}{onInitialize}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00043}00043   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a5d40e7942620c3c191e2a3bd75845069}{insertWaypoint}}(\textcolor{keywordtype}{int} index, geometry\_msgs::Pose \&newpose);}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00045}00045   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a0a7e9e35ed5ba02ff4cfb580ffa25e9a}{removeWaypoint}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00047}00047   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a18d74467ddf0e637a8d5a6e1fa2e93db}{loadWayPointsFromFile}}(std::string filepath);}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00049}00049   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a477992dbb2eca9ee77a396d0fe1b084b}{setWaypoints}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::Pose> \&waypoints);}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00051}00051   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a477992dbb2eca9ee77a396d0fe1b084b}{setWaypoints}}(\textcolor{keyword}{const} std::vector<Pose2D> \&waypoints);}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00053}00053   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a1e0a8ff536d2d01a01063fd903029347}{sendNextGoal}}();}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00055}00055   \textcolor{keyword}{const} std::vector<geometry\_msgs::Pose> \&\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a553cdd4ddc20ff26c1bdcb6dad42911f}{getWaypoints}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00057}00057   \textcolor{keywordtype}{long} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a753c3df56b96c49438a361d3e5234f79}{getCurrentWaypointIndex}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00059}00059   \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} TSourceObject>}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00060}\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_aa41d28f71eccc3a61932d09f8ea8f5f5}{00060}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_aa41d28f71eccc3a61932d09f8ea8f5f5}{onOrthogonalAllocation}}()}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00061}00061   \{}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00062}00062     \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a4f2be7a9741e8535c414e63335d752a0}{waypointsEventDispatcher}}.\mbox{\hyperlink{classcl__move__base__z_1_1WaypointEventDispatcher_a89674461d32af85dd64ca49290dbd010}{initialize}}<TSourceObject, TOrthogonal>(\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_afc5ad5c5d15f41437286b8fca1d3a324}{client\_}});}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00063}00063   \}}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00065}\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a82859e418592c2392c20a2d11b9836eb}{00065}}   \textcolor{keywordtype}{int} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a82859e418592c2392c20a2d11b9836eb}{currentWaypoint\_}};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00067}00067 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00068}00068   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_ae10ba80b7e46b62096cac96609f66893}{onGoalReached}}(\mbox{\hyperlink{classcl__move__base__z_1_1ClMoveBaseZ_a99373d0c15ae96684462d8677f5fd632}{ClMoveBaseZ::ResultConstPtr}} \&res);}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00070}\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a727f6a73e15ff5dc6bb3ffdf52c3d832}{00070}}   std::vector<geometry\_msgs::Pose> \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a727f6a73e15ff5dc6bb3ffdf52c3d832}{waypoints\_}};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00072}\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a6e32b1d6cae56963187d0965de251108}{00072}}   boost::signals2::connection \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_a6e32b1d6cae56963187d0965de251108}{succeddedConnection\_}};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00073}00073 \};}
+\DoxyCodeLine{\Hypertarget{waypoints__navigator_8h_source_l00074}00074 \} \textcolor{comment}{// namespace cl\_move\_base\_z}}
+
+\end{DoxyCode}

@@ -1,0 +1,403 @@
+\hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception}{}\doxysection{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::Cp\+Simulated\+Gazebo\+Perception Class Reference}
+\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception}\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+
+
+{\ttfamily \#include $<$cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::Cp\+Simulated\+Gazebo\+Perception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::Cp\+Simulated\+Gazebo\+Perception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a2cde9f6f8ba4b5b660f7ac8cf86f9e29}{on\+Initialize}} () override
+\item 
+void \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a83c115c056525c3b3da790ef020b3add}{simulated\+Link\+State\+Callback}} (const gazebo\+\_\+msgs\+::\+Link\+States \&linksmsg)
+\item 
+void \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_ac54440671eebf57be9d13b07902e47b2}{identify\+Cube\+Colors\+By\+Names}} (const std\+::vector$<$ std\+::string $>$ \&linknames)
+\item 
+void \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a6eeedaceae67210042d0c2e9e1b497e7}{propagate\+Link\+States\+To\+Tf}} (const gazebo\+\_\+msgs\+::\+Link\+States \&linksmsg, std\+::string link\+Name\+Filter, std\+::string object\+Prefix, std\+::string global\+Frame, std\+::vector$<$ tf\+::\+Stamped\+Transform $>$ \&transforms)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Time \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a7b016c50f24f70b2898ba548dedbf6a5}{start\+Time}}
+\item 
+ros\+::\+Duration \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a68eb4babf06589501b7e8b447275fd10}{read\+Delay}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_af6f8deceff833ec35675cc5c23343f99}{last\+Update\+Stamp\+\_\+}}
+\item 
+ros\+::\+Duration \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a27e862c79209a76a3966c73d6a63083f}{update\+Period\+\_\+}}
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a352d1bef0db5717071647953ec4edcb7}{table\+Collision\+\_\+}}
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a96e883b38219941f719ecc6b2aee6c9c}{cube\+Collision\+\_\+}}
+\item 
+tf\+::\+Transform\+Listener \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a935b5d2a827dfb4f786144119f5f70fb}{tf\+Listener\+\_\+}}
+\item 
+tf\+::\+Transform\+Broadcaster \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a2e17f7717b14242046f3489ec0d8e13c}{tf\+Broadcaster\+\_\+}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a45b284b336532037f62ce2c81475cf08}{gazebo\+State\+Subscriber\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00025}{25}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_ac54440671eebf57be9d13b07902e47b2}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_ac54440671eebf57be9d13b07902e47b2}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!identifyCubeColorsByNames@{identifyCubeColorsByNames}}
+\index{identifyCubeColorsByNames@{identifyCubeColorsByNames}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{identifyCubeColorsByNames()}{identifyCubeColorsByNames()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::identify\+Cube\+Colors\+By\+Names (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{linknames }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00069}{69}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070             \{}
+\DoxyCodeLine{00071                 CpSceneState *scene;}
+\DoxyCodeLine{00072                 this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_aa06d58b1dcec3c513ca2edddfd3847ec}{requiresComponent}}(scene);}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074                 \textcolor{keywordflow}{if} (scene-\/>cubeInfos\_.front().color == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00075                 \{}
+\DoxyCodeLine{00076                     std::vector<std::string> strs;}
+\DoxyCodeLine{00077                     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{00078                     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&linkname : linknames)}
+\DoxyCodeLine{00079                     \{}
+\DoxyCodeLine{00080                         \textcolor{keywordflow}{if} (linkname.find(\textcolor{stringliteral}{"{}cube"{}}) != std::string::npos)}
+\DoxyCodeLine{00081                         \{}
+\DoxyCodeLine{00082                             strs.clear();}
+\DoxyCodeLine{00083                             boost::split(strs, linkname, boost::is\_any\_of(\textcolor{stringliteral}{"{}\_:"{}})); \textcolor{comment}{// demo\_cube\_green::link}}
+\DoxyCodeLine{00084                             CubeInfo\& cubeinfo = scene-\/>cubeInfos\_[i++];}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086                             cubeinfo.color = strs[2];}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088                             cubeinfo.dstTableInfo\_ = \&(*(std::find\_if(scene-\/>tablesInfo\_.begin(), scene-\/>tablesInfo\_.end(),}
+\DoxyCodeLine{00089                                                                       [\&](\textcolor{keyword}{auto} \&ti) \{ return ti.associatedCubeColor\_ == cubeinfo.color; \})));}
+\DoxyCodeLine{00090                         \}}
+\DoxyCodeLine{00091                     \}}
+\DoxyCodeLine{00092                 \}}
+\DoxyCodeLine{00093             \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clieee3458176781c2fc203d99687f5e5b43_source_l00025}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cube\+Info\+::color}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clieee3458176781c2fc203d99687f5e5b43_source_l00038}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Scene\+State\+::cube\+Infos\+\_\+}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clieee3458176781c2fc203d99687f5e5b43_source_l00026}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cube\+Info\+::dst\+Table\+Info\+\_\+}}, \mbox{\hyperlink{smacc__component__impl_8h_source_l00021}{smacc\+::\+ISmacc\+Component\+::requires\+Component()}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clieee3458176781c2fc203d99687f5e5b43_source_l00039}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Scene\+State\+::tables\+Info\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00053}{simulated\+Link\+State\+Callback()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_ac54440671eebf57be9d13b07902e47b2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_ac54440671eebf57be9d13b07902e47b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a2cde9f6f8ba4b5b660f7ac8cf86f9e29}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a2cde9f6f8ba4b5b660f7ac8cf86f9e29}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_ae6f71d008db12553912e9436184b9e65}{smacc\+::\+ISmacc\+Component}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00041}{41}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042             \{}
+\DoxyCodeLine{00043                 \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a352d1bef0db5717071647953ec4edcb7}{tableCollision\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00044                 \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a27e862c79209a76a3966c73d6a63083f}{updatePeriod\_}} = ros::Duration(0.25);}
+\DoxyCodeLine{00045                 \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a7b016c50f24f70b2898ba548dedbf6a5}{startTime}} = ros::Time::now();}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047                 \textcolor{comment}{// order is important, to avoid "{}preemption"{} of the callback before it is initialized}}
+\DoxyCodeLine{00048                 ros::NodeHandle nh;}
+\DoxyCodeLine{00049                 \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a45b284b336532037f62ce2c81475cf08}{gazeboStateSubscriber\_}} =}
+\DoxyCodeLine{00050                     nh.subscribe(\textcolor{stringliteral}{"{}/gazebo/link\_states"{}}, 1, \&\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a83c115c056525c3b3da790ef020b3add}{CpSimulatedGazeboPerception::simulatedLinkStateCallback}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{00051             \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00038}{gazebo\+State\+Subscriber\+\_\+}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00053}{simulated\+Link\+State\+Callback()}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00028}{start\+Time}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00033}{table\+Collision\+\_\+}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00032}{update\+Period\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a2cde9f6f8ba4b5b660f7ac8cf86f9e29_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a6eeedaceae67210042d0c2e9e1b497e7}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a6eeedaceae67210042d0c2e9e1b497e7}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!propagateLinkStatesToTf@{propagateLinkStatesToTf}}
+\index{propagateLinkStatesToTf@{propagateLinkStatesToTf}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{propagateLinkStatesToTf()}{propagateLinkStatesToTf()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::propagate\+Link\+States\+To\+Tf (\begin{DoxyParamCaption}\item[{const gazebo\+\_\+msgs\+::\+Link\+States \&}]{linksmsg,  }\item[{std\+::string}]{link\+Name\+Filter,  }\item[{std\+::string}]{object\+Prefix,  }\item[{std\+::string}]{global\+Frame,  }\item[{std\+::vector$<$ tf\+::\+Stamped\+Transform $>$ \&}]{transforms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00095}{95}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098             \{}
+\DoxyCodeLine{00099                 transforms.clear();}
+\DoxyCodeLine{00100                 \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00101                 std::vector<geometry\_msgs::Pose> filteredLinkPoses;}
+\DoxyCodeLine{00102                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&b : linksmsg.pose)}
+\DoxyCodeLine{00103                 \{}
+\DoxyCodeLine{00104                     \textcolor{keyword}{auto} linkname = linksmsg.name[i];}
+\DoxyCodeLine{00105                     \textcolor{keywordflow}{if} (linkname.find(linkNameFilter) != std::string::npos)}
+\DoxyCodeLine{00106                         filteredLinkPoses.push\_back(b);}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108                     i++;}
+\DoxyCodeLine{00109                 \}}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111                 i = 0;}
+\DoxyCodeLine{00112                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&linkpose : filteredLinkPoses)}
+\DoxyCodeLine{00113                 \{}
+\DoxyCodeLine{00114                     tf::Pose tfpose;}
+\DoxyCodeLine{00115                     tf::poseMsgToTF(linkpose, tfpose);}
+\DoxyCodeLine{00116                     tf::StampedTransform transform;}
+\DoxyCodeLine{00117                     transform.setOrigin(tfpose.getOrigin());}
+\DoxyCodeLine{00118                     transform.setRotation(tfpose.getRotation());}
+\DoxyCodeLine{00119                     transform.frame\_id\_ = globalFrame;}
+\DoxyCodeLine{00120                     transform.child\_frame\_id\_ = objectPrefix + std::to\_string(i + 1);}
+\DoxyCodeLine{00121                     transform.stamp\_ = ros::Time::now();}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123                     \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a2e17f7717b14242046f3489ec0d8e13c}{tfBroadcaster\_}}.sendTransform(transform);}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125                     i++;}
+\DoxyCodeLine{00126                     transforms.push\_back(transform);}
+\DoxyCodeLine{00127                 \}}
+\DoxyCodeLine{00128             \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00037}{tf\+Broadcaster\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00053}{simulated\+Link\+State\+Callback()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a6eeedaceae67210042d0c2e9e1b497e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a83c115c056525c3b3da790ef020b3add}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a83c115c056525c3b3da790ef020b3add}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!simulatedLinkStateCallback@{simulatedLinkStateCallback}}
+\index{simulatedLinkStateCallback@{simulatedLinkStateCallback}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{simulatedLinkStateCallback()}{simulatedLinkStateCallback()}}
+{\footnotesize\ttfamily void sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::simulated\+Link\+State\+Callback (\begin{DoxyParamCaption}\item[{const gazebo\+\_\+msgs\+::\+Link\+States \&}]{linksmsg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00053}{53}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054             \{}
+\DoxyCodeLine{00055                 \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_ac54440671eebf57be9d13b07902e47b2}{identifyCubeColorsByNames}}(linksmsg.name);}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057                 std::vector<tf::StampedTransform> cubeTransforms;}
+\DoxyCodeLine{00058                 this-\/>\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a6eeedaceae67210042d0c2e9e1b497e7}{propagateLinkStatesToTf}}(linksmsg, \textcolor{stringliteral}{"{}cube"{}}, \textcolor{stringliteral}{"{}cube\_"{}}, \textcolor{stringliteral}{"{}map"{}}, cubeTransforms);}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060                 std::vector<tf::StampedTransform> tableTransforms;}
+\DoxyCodeLine{00061                 this-\/>\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a6eeedaceae67210042d0c2e9e1b497e7}{propagateLinkStatesToTf}}(linksmsg, \textcolor{stringliteral}{"{}table"{}}, \textcolor{stringliteral}{"{}table\_"{}}, \textcolor{stringliteral}{"{}map"{}}, tableTransforms);}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063                 \textcolor{keyword}{auto} elapsed = ros::Time::now() -\/ this-\/>\mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_af6f8deceff833ec35675cc5c23343f99}{lastUpdateStamp\_}};}
+\DoxyCodeLine{00064             \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00069}{identify\+Cube\+Colors\+By\+Names()}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00031}{last\+Update\+Stamp\+\_\+}}, and \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00095}{propagate\+Link\+States\+To\+Tf()}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00041}{on\+Initialize()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a83c115c056525c3b3da790ef020b3add_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a83c115c056525c3b3da790ef020b3add_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a96e883b38219941f719ecc6b2aee6c9c}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a96e883b38219941f719ecc6b2aee6c9c}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!cubeCollision\_@{cubeCollision\_}}
+\index{cubeCollision\_@{cubeCollision\_}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{cubeCollision\_}{cubeCollision\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::cube\+Collision\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00034}{34}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a45b284b336532037f62ce2c81475cf08}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a45b284b336532037f62ce2c81475cf08}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!gazeboStateSubscriber\_@{gazeboStateSubscriber\_}}
+\index{gazeboStateSubscriber\_@{gazeboStateSubscriber\_}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{gazeboStateSubscriber\_}{gazeboStateSubscriber\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::gazebo\+State\+Subscriber\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00038}{38}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00041}{on\+Initialize()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_af6f8deceff833ec35675cc5c23343f99}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_af6f8deceff833ec35675cc5c23343f99}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!lastUpdateStamp\_@{lastUpdateStamp\_}}
+\index{lastUpdateStamp\_@{lastUpdateStamp\_}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{lastUpdateStamp\_}{lastUpdateStamp\_}}
+{\footnotesize\ttfamily ros\+::\+Time sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::last\+Update\+Stamp\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00031}{31}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00053}{simulated\+Link\+State\+Callback()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a68eb4babf06589501b7e8b447275fd10}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a68eb4babf06589501b7e8b447275fd10}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!readDelay@{readDelay}}
+\index{readDelay@{readDelay}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{readDelay}{readDelay}}
+{\footnotesize\ttfamily ros\+::\+Duration sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::read\+Delay\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00029}{29}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a7b016c50f24f70b2898ba548dedbf6a5}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a7b016c50f24f70b2898ba548dedbf6a5}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!startTime@{startTime}}
+\index{startTime@{startTime}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily ros\+::\+Time sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00028}{28}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00041}{on\+Initialize()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a352d1bef0db5717071647953ec4edcb7}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a352d1bef0db5717071647953ec4edcb7}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!tableCollision\_@{tableCollision\_}}
+\index{tableCollision\_@{tableCollision\_}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{tableCollision\_}{tableCollision\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::table\+Collision\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00033}{33}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00041}{on\+Initialize()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a2e17f7717b14242046f3489ec0d8e13c}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a2e17f7717b14242046f3489ec0d8e13c}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!tfBroadcaster\_@{tfBroadcaster\_}}
+\index{tfBroadcaster\_@{tfBroadcaster\_}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{tfBroadcaster\_}{tfBroadcaster\_}}
+{\footnotesize\ttfamily tf\+::\+Transform\+Broadcaster sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::tf\+Broadcaster\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00037}{37}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00095}{propagate\+Link\+States\+To\+Tf()}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a935b5d2a827dfb4f786144119f5f70fb}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a935b5d2a827dfb4f786144119f5f70fb}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!tfListener\_@{tfListener\_}}
+\index{tfListener\_@{tfListener\_}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{tfListener\_}{tfListener\_}}
+{\footnotesize\ttfamily tf\+::\+Transform\+Listener sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::tf\+Listener\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00036}{36}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+\mbox{\Hypertarget{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a27e862c79209a76a3966c73d6a63083f}\label{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a27e862c79209a76a3966c73d6a63083f}} 
+\index{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}!updatePeriod\_@{updatePeriod\_}}
+\index{updatePeriod\_@{updatePeriod\_}!sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception@{sm\_fetch\_screw\_loop\_1::cl\_perception\_system::CpSimulatedGazeboPerception}}
+\doxysubsubsection{\texorpdfstring{updatePeriod\_}{updatePeriod\_}}
+{\footnotesize\ttfamily ros\+::\+Duration sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::update\+Period\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00032}{32}} of file \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00041}{on\+Initialize()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1/include/sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1/clients/perception\+\_\+system\+\_\+client/components/\mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab}{cp\+\_\+simulated\+\_\+gazebo\+\_\+perception.\+h}}\end{DoxyCompactItemize}

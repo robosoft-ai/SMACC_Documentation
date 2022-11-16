@@ -1,0 +1,45 @@
+\hypertarget{st__monday_8h_source}{}\doxysection{st\+\_\+monday.\+h}
+\label{st__monday_8h_source}\index{smacc\_sm\_reference\_library/sm\_calendar\_week/include/sm\_calendar\_week/states/st\_monday.h@{smacc\_sm\_reference\_library/sm\_calendar\_week/include/sm\_calendar\_week/states/st\_monday.h}}
+\mbox{\hyperlink{st__monday_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00001}00001 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__calendar__week}{sm\_calendar\_week}}}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00002}00002 \{}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00004}00004 \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00005}\mbox{\hyperlink{structsm__calendar__week_1_1StMonday}{00005}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__calendar__week_1_1StMonday}{StMonday}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<StMonday, MsWorkweek>}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00007}00007     \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00009}00009 \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00010}00010     \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00012}00012     Transition<EvTimer<CbTimerCountdownOnce, OrTimer>, \mbox{\hyperlink{structsm__calendar__week_1_1StTuesday}{StTuesday}}, \mbox{\hyperlink{classSUCCESS}{SUCCESS}}>,}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00013}00013     Transition<EvKeyPressN<CbDefaultKeyboardBehavior, OrKeyboard>, \mbox{\hyperlink{structsm__calendar__week_1_1StTuesday}{StTuesday}}, \mbox{\hyperlink{classPREEMPT}{PREEMPT}}>}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00015}\mbox{\hyperlink{structsm__calendar__week_1_1StMonday_a6fee9231d13553ae7370225d9b1f28f9}{00015}}     >\mbox{\hyperlink{structsm__calendar__week_1_1StMonday_a6fee9231d13553ae7370225d9b1f28f9}{reactions}};}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00017}00017 \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00018}\mbox{\hyperlink{structsm__calendar__week_1_1StMonday_a2fae8eddd6ad1990e31982aa044f34eb}{00018}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__calendar__week_1_1StMonday_a2fae8eddd6ad1990e31982aa044f34eb}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00020}00020         configure\_orthogonal<OrTimer, CbTimerCountdownOnce>(5); \textcolor{comment}{// EvTimer triggers once at 10 client ticks}}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00021}00021         configure\_orthogonal<OrKeyboard, CbDefaultKeyboardBehavior>();}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00024}\mbox{\hyperlink{structsm__calendar__week_1_1StMonday_aed3cf2a8d76902e9f35d66e99de0a1f9}{00024}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__calendar__week_1_1StMonday_aed3cf2a8d76902e9f35d66e99de0a1f9}{runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00025}00025     \{}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00028}\mbox{\hyperlink{structsm__calendar__week_1_1StMonday_a6a64482ecac73d7c7b7304e9c27d0119}{00028}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__calendar__week_1_1StMonday_a6a64482ecac73d7c7b7304e9c27d0119}{onEntry}}()}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00029}00029     \{}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00030}00030         ROS\_INFO(\textcolor{stringliteral}{"{}On Entry!"{}});}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00033}\mbox{\hyperlink{structsm__calendar__week_1_1StMonday_a3c53bed49c8e977e8189fd630d62f516}{00033}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__calendar__week_1_1StMonday_a3c53bed49c8e977e8189fd630d62f516}{onExit}}()}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00034}00034     \{}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00035}00035         ROS\_INFO(\textcolor{stringliteral}{"{}On Exit!"{}});}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00038}00038 \};}
+\DoxyCodeLine{\Hypertarget{st__monday_8h_source_l00039}00039 \} \textcolor{comment}{// namespace sm\_calendar\_week}}
+
+\end{DoxyCode}

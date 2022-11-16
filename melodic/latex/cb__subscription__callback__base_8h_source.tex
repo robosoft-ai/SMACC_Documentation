@@ -1,0 +1,32 @@
+\hypertarget{cb__subscription__callback__base_8h_source}{}\doxysection{cb\+\_\+subscription\+\_\+callback\+\_\+base.\+h}
+\label{cb__subscription__callback__base_8h_source}\index{smacc/include/smacc/client\_behavior\_bases/cb\_subscription\_callback\_base.h@{smacc/include/smacc/client\_behavior\_bases/cb\_subscription\_callback\_base.h}}
+\mbox{\hyperlink{cb__subscription__callback__base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018-\/2021}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00006}00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__client__behavior_8h}{smacc/smacc\_client\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00009}00009 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00011}00011 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TMsg>}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00012}\mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase}{00012}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase}{CbSubscriptionCallbackBase}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1SmaccClientBehavior}{smacc::SmaccClientBehavior}}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00014}00014 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00015}\mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase_a1092b6c0d6fd428be86939559bed1e16}{00015}}   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase_a1092b6c0d6fd428be86939559bed1e16}{onEntry}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00016}00016 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00017}00017     this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a32b16e99e3b4cb289414203dc861a440}{requiresClient}}(\mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase_af6f6d8dd53447934d90d6d71bdcc10cb}{attachedClient\_}});}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00018}00018     \mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase_af6f6d8dd53447934d90d6d71bdcc10cb}{attachedClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a4f02251e3a161fb6d802b154b1081f18}{onMessageReceived}}(\&\mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase_a77d8d3eee701b990277e69804eac0049}{CbSubscriptionCallbackBase::onMessageReceived}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00019}00019   \}}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00021}\mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase_a77d8d3eee701b990277e69804eac0049}{00021}}   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase_a77d8d3eee701b990277e69804eac0049}{onMessageReceived}}(\textcolor{keyword}{const} TMsg\& \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}) = 0;}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00023}00023 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00024}\mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase_af6f6d8dd53447934d90d6d71bdcc10cb}{00024}}   \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient}{smacc::client\_bases::SmaccSubscriberClient<TMsg>}}* \mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase_af6f6d8dd53447934d90d6d71bdcc10cb}{attachedClient\_}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00025}00025 \};}
+\DoxyCodeLine{\Hypertarget{cb__subscription__callback__base_8h_source_l00026}00026 \}  \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

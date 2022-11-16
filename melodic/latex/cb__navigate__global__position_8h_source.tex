@@ -1,0 +1,46 @@
+\hypertarget{cb__navigate__global__position_8h_source}{}\doxysection{cb\+\_\+navigate\+\_\+global\+\_\+position.\+h}
+\label{cb__navigate__global__position_8h_source}\index{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/client\_behaviors/cb\_navigate\_global\_position.h@{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/client\_behaviors/cb\_navigate\_global\_position.h}}
+\mbox{\hyperlink{cb__navigate__global__position_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00006}00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cb__move__base__client__behavior__base_8h}{cb\_move\_base\_client\_behavior\_base.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <boost/optional.hpp>}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <geometry\_msgs/Point.h>}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00014}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition}{00014}}   \textcolor{keyword}{class }\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition}{CbNavigateGlobalPosition}} : \textcolor{keyword}{public} \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase}{CbMoveBaseClientBehaviorBase}}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00015}00015   \{}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00016}00016   \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00017}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_a51a0266fd9a63e99f26e88933529c559}{00017}}     boost::optional<geometry\_msgs::Point> \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_a51a0266fd9a63e99f26e88933529c559}{goalPosition}};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00018}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_a839900de7f664b27c9be189fadbaa003}{00018}}     boost::optional<float> \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_a839900de7f664b27c9be189fadbaa003}{goalYaw}};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00020}00020     \textcolor{comment}{//boost::optional<float> goalToleranceXY; // not implemented yet}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00021}00021     \textcolor{comment}{//boost::optional<float> yawTolerance; // not implemented yet}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00023}00023     \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_aec75d2481b2057bbbdad9513c4dc08cd}{CbNavigateGlobalPosition}}();}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00025}00025     \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_aec75d2481b2057bbbdad9513c4dc08cd}{CbNavigateGlobalPosition}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y, \textcolor{keywordtype}{float} yaw \textcolor{comment}{/*radians*/});}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00027}00027     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_a3dc6072628c1e1cdded3d574b3a9766e}{setGoal}}(\textcolor{keyword}{const} geometry\_msgs::Pose \&pose);}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00029}00029     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_a66d8b0555ef2945bc108dcd5171be292}{onEntry}}();}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00031}00031     \textcolor{comment}{// auxiliary function that defines the motion that is requested to the move\_base action server}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00032}00032     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_a0b8525ea9e4388b27cb1f9b1e06a3b63}{execute}}();}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00034}00034     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_a868b25f238e3781c9a2e44b4e1502fcc}{readStartPoseFromParameterServer}}(ClMoveBaseZ::Goal \&goal);}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00036}00036     \textcolor{comment}{// This is the substate destructor. This code will be executed when the}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00037}00037     \textcolor{comment}{// workflow exits from this substate (that is according to statechart the moment when this object is destroyed)}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00038}00038     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateGlobalPosition_a5c18268af1e7fc236aa155a58345d5d7}{onExit}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00039}00039   \};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__global__position_8h_source_l00040}00040 \} \textcolor{comment}{// namespace cl\_move\_base\_z}}
+
+\end{DoxyCode}

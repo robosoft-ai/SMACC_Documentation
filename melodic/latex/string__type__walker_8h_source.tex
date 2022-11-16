@@ -1,0 +1,74 @@
+\hypertarget{string__type__walker_8h_source}{}\doxysection{string\+\_\+type\+\_\+walker.\+h}
+\label{string__type__walker_8h_source}\index{smacc/include/smacc/introspection/string\_type\_walker.h@{smacc/include/smacc/introspection/string\_type\_walker.h}}
+\mbox{\hyperlink{string__type__walker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <typeinfo>}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00014}00014 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00016}00016 \textcolor{keyword}{namespace }introspection}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00018}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo}{TypeInfo}}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00020}00020 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00021}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa6ffd9c39811d59f7c771941b7fad860}{00021}}     \textcolor{keyword}{typedef} std::shared\_ptr<TypeInfo> \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa6ffd9c39811d59f7c771941b7fad860}{Ptr}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00023}00023     \textcolor{comment}{//-\/-\/-\/-\/ FACTORY STATIC METHODS -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00024}00024     \textcolor{keyword}{static} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa6ffd9c39811d59f7c771941b7fad860}{TypeInfo::Ptr}} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a47d65b6c61499d7ae8ab9f6325c84837}{getTypeInfoFromString}}(std::string inputtext);}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00025}00025     \textcolor{keyword}{static} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa6ffd9c39811d59f7c771941b7fad860}{TypeInfo::Ptr}} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ada1e604cd8bf968a5f816fbace4af881}{getFromStdTypeInfo}}(\textcolor{keyword}{const} std::type\_info \&tid);}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00027}00027     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00028}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a8716ca6ac890b4582986d9fe4f5962ad}{00028}}     \textcolor{keyword}{static} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa6ffd9c39811d59f7c771941b7fad860}{TypeInfo::Ptr}} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a8716ca6ac890b4582986d9fe4f5962ad}{getTypeInfoFromType}}()}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00029}00029     \{}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00030}00030         \textcolor{keywordflow}{return} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ada1e604cd8bf968a5f816fbace4af881}{TypeInfo::getFromStdTypeInfo}}(\textcolor{keyword}{typeid}(T));}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00032}00032     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00034}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aed5166ab8bcd94489e7bc87deb01de5c}{00034}}     std::vector<Ptr> \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aed5166ab8bcd94489e7bc87deb01de5c}{templateParameters}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00036}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ae57986b3f7e913346a379ec7ad609ffc}{00036}}     \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ae57986b3f7e913346a379ec7ad609ffc}{TypeInfo}}(std::string \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}}, std::string \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a117d2b73994b78a6e4e81cdf7054912c}{codedtype}}, std::string \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa4010ed427e12db443e08ab16a3de243}{finaltype}})}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00037}00037     \{}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00038}00038         this-\/>tkey = \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00039}00039         this-\/>codedtype = \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a117d2b73994b78a6e4e81cdf7054912c}{codedtype}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00040}00040         this-\/>finaltype = \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa4010ed427e12db443e08ab16a3de243}{finaltype}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00041}00041     \}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00043}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a41eb6c64f46a8e24a206e5702c6f6818}{00043}}     std::string \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a41eb6c64f46a8e24a206e5702c6f6818}{toString}}()}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00044}00044     \{}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00045}00045         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}} + \textcolor{stringliteral}{"{}:"{}} + this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa4010ed427e12db443e08ab16a3de243}{finaltype}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00048}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_adf059b6105291f4d6402068e8b122365}{00048}}     std::string \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_adf059b6105291f4d6402068e8b122365}{getNonTemplatedTypeName}}()}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00049}00049     \{}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00050}00050         \textcolor{keyword}{auto} index = this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa4010ed427e12db443e08ab16a3de243}{finaltype}}.find(\textcolor{stringliteral}{"{}<"{}});}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00051}00051         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa4010ed427e12db443e08ab16a3de243}{finaltype}}.substr(0, index);}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00052}00052     \}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00055}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a43d19da69f6003aa3de38c473a4a79e4}{00055}}     \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a43d19da69f6003aa3de38c473a4a79e4}{getFullName}}()}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00056}00056     \{}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00057}00057         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa4010ed427e12db443e08ab16a3de243}{finaltype}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00058}00058     \}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00060}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ab780c03206b824aaf338135d16b0eff4}{00060}}     \textcolor{keyword}{static} std::map<std::string, Ptr> \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ab780c03206b824aaf338135d16b0eff4}{typeInfoDatabase}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00062}00062 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00063}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{00063}}     std::string \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00064}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a117d2b73994b78a6e4e81cdf7054912c}{00064}}     std::string \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a117d2b73994b78a6e4e81cdf7054912c}{codedtype}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00065}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa4010ed427e12db443e08ab16a3de243}{00065}}     std::string \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa4010ed427e12db443e08ab16a3de243}{finaltype}};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00066}00066 \};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00067}00067 \} \textcolor{comment}{// namespace introspection}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8h_source_l00068}00068 \} \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

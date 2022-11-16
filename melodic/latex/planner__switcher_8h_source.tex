@@ -1,0 +1,50 @@
+\hypertarget{planner__switcher_8h_source}{}\doxysection{planner\+\_\+switcher.\+h}
+\label{planner__switcher_8h_source}\index{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/components/planner\_switcher/planner\_switcher.h@{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/components/planner\_switcher/planner\_switcher.h}}
+\mbox{\hyperlink{planner__switcher_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00006}00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__action__client_8h}{smacc/client\_bases/smacc\_action\_client.h}}>}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{component_8h}{smacc/component.h}}>}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/Config.h>}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/DoubleParameter.h>}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/Reconfigure.h>}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00017}00017 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00018}00018 \{}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00019}\mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher}{00019}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher}{PlannerSwitcher}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1ISmaccComponent}{smacc::ISmaccComponent}}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00020}00020 \{}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00021}00021 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00022}00022   \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_aacdf8266ba7dc861efd460645587561f}{PlannerSwitcher}}();}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00023}00023   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a6995deff44418a0965e4e793de8c4857}{setBackwardPlanner}}();}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00024}00024   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a99e5ec5c0529dab7b528c1e0d9e36012}{setUndoPathBackwardsPlannerConfiguration}}();}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00025}00025   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a560f77f78b527ed9a0d4f598d98713a3}{setUndoPathPureSpinningPlannerConfiguration}}();}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00027}00027   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a4bec9859c90f125f9fcc2b68594caf17}{setForwardPlanner}}();}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00028}00028   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a0accdff89d7858658c1835f06b53786f}{setPureSpinningPlanner}}();}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00030}00030   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a36bc2b9788f03a1ca02b954c625ef4c5}{onInitialize}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00032}00032   \textcolor{comment}{// sets ROS defaults local and global planners}}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00033}00033   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_ad3f0d08a51af6218d203bf44a7f9df40}{setDefaultPlanners}}();}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00035}00035 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00036}\mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_aef047d3778b2993c1df146bbad43e03d}{00036}}   std::string \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_aef047d3778b2993c1df146bbad43e03d}{desired\_global\_planner\_}};}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00037}\mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a6cbf65f11bb69125f913caaabdf7b4cf}{00037}}   std::string \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a6cbf65f11bb69125f913caaabdf7b4cf}{desired\_local\_planner\_}};}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00038}\mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_ae902346f4f8e58241acc56cccaad8546}{00038}}   ros::Subscriber \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_ae902346f4f8e58241acc56cccaad8546}{dynrecofSub\_}};}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00039}\mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a6c14fd001513787ed213704e2d3dc383}{00039}}   \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a6c14fd001513787ed213704e2d3dc383}{set\_planners\_mode\_flag}};}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00041}00041   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a146641f63aea3185daab4c5cbb789550}{updatePlanners}}(\textcolor{keywordtype}{bool} subscribecallback = \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00042}00042   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_ad9371bd8d62600ef874e8914c3ec177b}{dynreconfCallback}}(\textcolor{keyword}{const} dynamic\_reconfigure::Config::ConstPtr\& configuration\_update);}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00043}00043 \};}
+\DoxyCodeLine{\Hypertarget{planner__switcher_8h_source_l00044}00044 \}  \textcolor{comment}{// namespace cl\_move\_base\_z}}
+
+\end{DoxyCode}

@@ -1,0 +1,834 @@
+\hypertarget{classLEDActionServer}{}\doxysection{LEDAction\+Server Class Reference}
+\label{classLEDActionServer}\index{LEDActionServer@{LEDActionServer}}
+
+
+Collaboration diagram for LEDAction\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLEDActionServer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}{LEDAction\+Server}} ()
+\item 
+void \mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publish\+Feedback}} ()
+\item 
+void \mbox{\hyperlink{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b}{execute}} (const sm\+\_\+dance\+\_\+bot\+::\+LEDControl\+Goal\+Const\+Ptr \&goal)
+\item 
+void \mbox{\hyperlink{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}{run}} ()
+\item 
+void \mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publish\+State\+Marker}} ()
+\item 
+\mbox{\hyperlink{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}{LEDAction\+Server}} ()
+\item 
+void \mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publish\+Feedback}} ()
+\item 
+void \mbox{\hyperlink{classLEDActionServer_ae7cf81f53d16e3bdb5142df60b2017b3}{execute}} (const sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+LEDControl\+Goal\+Const\+Ptr \&goal)
+\item 
+void \mbox{\hyperlink{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}{run}} ()
+\item 
+void \mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publish\+State\+Marker}} ()
+\item 
+\mbox{\hyperlink{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}{LEDAction\+Server}} ()
+\item 
+void \mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publish\+Feedback}} ()
+\item 
+void \mbox{\hyperlink{classLEDActionServer_aea69ee96367e9f6a82d6302f148505d6}{execute}} (const sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::\+LEDControl\+Goal\+Const\+Ptr \&goal)
+\item 
+void \mbox{\hyperlink{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}{run}} ()
+\item 
+void \mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publish\+State\+Marker}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{odom__tracker__node_8cpp_a9884574d0480319430f628f79afc0500}{Server}} $>$ \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}{state\+Marker\+Publisher\+\_\+}}
+\item 
+sm\+\_\+dance\+\_\+bot\+::\+LEDControl\+Goal \mbox{\hyperlink{classLEDActionServer_a4d3a4c07e7659cdd78228932bb1634d3}{cmd}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{current\+State\+\_\+}}
+\item 
+sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+LEDControl\+Goal \mbox{\hyperlink{classLEDActionServer_a754ac14e0c9bde99ae28feb59c0801c0}{cmd}}
+\item 
+sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::\+LEDControl\+Goal \mbox{\hyperlink{classLEDActionServer_a219e3a4ae2a09887d601bc9b210294dd}{cmd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}\label{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}} 
+\index{LEDActionServer@{LEDActionServer}!LEDActionServer@{LEDActionServer}}
+\index{LEDActionServer@{LEDActionServer}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{LEDActionServer()}{LEDActionServer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily LEDAction\+Server\+::\+LEDAction\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor() 
+
+Definition at line \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039   \{}
+\DoxyCodeLine{00040     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot::LEDControlResult::STATE\_UNKNOWN;}
+\DoxyCodeLine{00041   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}{current\+State\+\_\+}}.
+
+\mbox{\Hypertarget{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}\label{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}} 
+\index{LEDActionServer@{LEDActionServer}!LEDActionServer@{LEDActionServer}}
+\index{LEDActionServer@{LEDActionServer}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{LEDActionServer()}{LEDActionServer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily LEDAction\+Server\+::\+LEDAction\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor() 
+
+Definition at line \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039   \{}
+\DoxyCodeLine{00040     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot\_2::LEDControlResult::STATE\_UNKNOWN;}
+\DoxyCodeLine{00041   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}{current\+State\+\_\+}}.
+
+\mbox{\Hypertarget{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}\label{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}} 
+\index{LEDActionServer@{LEDActionServer}!LEDActionServer@{LEDActionServer}}
+\index{LEDActionServer@{LEDActionServer}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{LEDActionServer()}{LEDActionServer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily LEDAction\+Server\+::\+LEDAction\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+constructor() 
+
+Definition at line \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039   \{}
+\DoxyCodeLine{00040     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot\_strikes\_back::LEDControlResult::STATE\_UNKNOWN;}
+\DoxyCodeLine{00041   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}{current\+State\+\_\+}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b}\label{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b}} 
+\index{LEDActionServer@{LEDActionServer}!execute@{execute}}
+\index{execute@{execute}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::execute (\begin{DoxyParamCaption}\item[{const sm\+\_\+dance\+\_\+bot\+::\+LEDControl\+Goal\+Const\+Ptr \&}]{goal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b}{execute()}} 
+
+Definition at line \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061 \{}
+\DoxyCodeLine{00062   ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}Tool action server request: "{}}<< *goal);}
+\DoxyCodeLine{00063   \mbox{\hyperlink{classLEDActionServer_a4d3a4c07e7659cdd78228932bb1634d3}{cmd}} = *goal;}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065   \textcolor{keywordflow}{if}(goal-\/>command == sm\_dance\_bot::LEDControlGoal::CMD\_ON)}
+\DoxyCodeLine{00066   \{}
+\DoxyCodeLine{00067     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot::LEDControlResult::STATE\_RUNNING;}
+\DoxyCodeLine{00068   \}}
+\DoxyCodeLine{00069   \textcolor{keywordflow}{else}  \textcolor{keywordflow}{if} (goal-\/>command == sm\_dance\_bot::LEDControlGoal::CMD\_OFF)}
+\DoxyCodeLine{00070   \{}
+\DoxyCodeLine{00071     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot::LEDControlResult::STATE\_IDLE;}
+\DoxyCodeLine{00072   \}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074   \textcolor{comment}{// 10Hz internal loop}}
+\DoxyCodeLine{00075   ros::Rate rate(20);}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077   \textcolor{keywordflow}{while}(ros::ok())}
+\DoxyCodeLine{00078   \{}
+\DoxyCodeLine{00079     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>isPreemptRequested())}
+\DoxyCodeLine{00080     \{}
+\DoxyCodeLine{00081        \textcolor{comment}{// a new request is being executed, we will stop this one}}
+\DoxyCodeLine{00082        ROS\_WARN(\textcolor{stringliteral}{"{}LEDActionServer request preempted. Forgetting older request."{}});}
+\DoxyCodeLine{00083        \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>setPreempted();}
+\DoxyCodeLine{00084        \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00085     \}}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087     \mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publishFeedback}}();}
+\DoxyCodeLine{00088     \mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publishStateMarker}}();}
+\DoxyCodeLine{00089     rate.sleep();}
+\DoxyCodeLine{00090   \}}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092    \textcolor{comment}{// never reach succeeded because were are interested in keeping the feedback alive}}
+\DoxyCodeLine{00093    \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>setSucceeded();}
+\DoxyCodeLine{00094 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}{as\+\_\+}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00029}{cmd}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}{current\+State\+\_\+}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00048}{publish\+Feedback()}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00121}{publish\+State\+Marker()}}.
+
+
+
+Referenced by \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00101}{run()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLEDActionServer_ae7cf81f53d16e3bdb5142df60b2017b3}\label{classLEDActionServer_ae7cf81f53d16e3bdb5142df60b2017b3}} 
+\index{LEDActionServer@{LEDActionServer}!execute@{execute}}
+\index{execute@{execute}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::execute (\begin{DoxyParamCaption}\item[{const sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+LEDControl\+Goal\+Const\+Ptr \&}]{goal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b}{execute()}} 
+
+Definition at line \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061 \{}
+\DoxyCodeLine{00062   ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}Tool action server request: "{}}<< *goal);}
+\DoxyCodeLine{00063   \mbox{\hyperlink{classLEDActionServer_a4d3a4c07e7659cdd78228932bb1634d3}{cmd}} = *goal;}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065   \textcolor{keywordflow}{if}(goal-\/>command == sm\_dance\_bot\_2::LEDControlGoal::CMD\_ON)}
+\DoxyCodeLine{00066   \{}
+\DoxyCodeLine{00067     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot\_2::LEDControlResult::STATE\_RUNNING;}
+\DoxyCodeLine{00068   \}}
+\DoxyCodeLine{00069   \textcolor{keywordflow}{else}  \textcolor{keywordflow}{if} (goal-\/>command == sm\_dance\_bot\_2::LEDControlGoal::CMD\_OFF)}
+\DoxyCodeLine{00070   \{}
+\DoxyCodeLine{00071     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot\_2::LEDControlResult::STATE\_IDLE;}
+\DoxyCodeLine{00072   \}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074   \textcolor{comment}{// 10Hz internal loop}}
+\DoxyCodeLine{00075   ros::Rate rate(20);}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077   \textcolor{keywordflow}{while}(ros::ok())}
+\DoxyCodeLine{00078   \{}
+\DoxyCodeLine{00079     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>isPreemptRequested())}
+\DoxyCodeLine{00080     \{}
+\DoxyCodeLine{00081        \textcolor{comment}{// a new request is being executed, we will stop this one}}
+\DoxyCodeLine{00082        ROS\_WARN(\textcolor{stringliteral}{"{}LEDActionServer request preempted. Forgetting older request."{}});}
+\DoxyCodeLine{00083        \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>setPreempted();}
+\DoxyCodeLine{00084        \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00085     \}}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087     \mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publishFeedback}}();}
+\DoxyCodeLine{00088     \mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publishStateMarker}}();}
+\DoxyCodeLine{00089     rate.sleep();}
+\DoxyCodeLine{00090   \}}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092    \textcolor{comment}{// never reach succeeded because were are interested in keeping the feedback alive}}
+\DoxyCodeLine{00093    \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>setSucceeded();}
+\DoxyCodeLine{00094 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}{as\+\_\+}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00029}{cmd}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}{current\+State\+\_\+}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00048}{publish\+Feedback()}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00121}{publish\+State\+Marker()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLEDActionServer_ae7cf81f53d16e3bdb5142df60b2017b3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLEDActionServer_aea69ee96367e9f6a82d6302f148505d6}\label{classLEDActionServer_aea69ee96367e9f6a82d6302f148505d6}} 
+\index{LEDActionServer@{LEDActionServer}!execute@{execute}}
+\index{execute@{execute}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::execute (\begin{DoxyParamCaption}\item[{const sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::\+LEDControl\+Goal\+Const\+Ptr \&}]{goal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b}{execute()}} 
+
+Definition at line \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061 \{}
+\DoxyCodeLine{00062   ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}Tool action server request: "{}}<< *goal);}
+\DoxyCodeLine{00063   \mbox{\hyperlink{classLEDActionServer_a4d3a4c07e7659cdd78228932bb1634d3}{cmd}} = *goal;}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065   \textcolor{keywordflow}{if}(goal-\/>command == sm\_dance\_bot\_strikes\_back::LEDControlGoal::CMD\_ON)}
+\DoxyCodeLine{00066   \{}
+\DoxyCodeLine{00067     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot\_strikes\_back::LEDControlResult::STATE\_RUNNING;}
+\DoxyCodeLine{00068   \}}
+\DoxyCodeLine{00069   \textcolor{keywordflow}{else}  \textcolor{keywordflow}{if} (goal-\/>command == sm\_dance\_bot\_strikes\_back::LEDControlGoal::CMD\_OFF)}
+\DoxyCodeLine{00070   \{}
+\DoxyCodeLine{00071     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot\_strikes\_back::LEDControlResult::STATE\_IDLE;}
+\DoxyCodeLine{00072   \}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074   \textcolor{comment}{// 10Hz internal loop}}
+\DoxyCodeLine{00075   ros::Rate rate(20);}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077   \textcolor{keywordflow}{while}(ros::ok())}
+\DoxyCodeLine{00078   \{}
+\DoxyCodeLine{00079     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>isPreemptRequested())}
+\DoxyCodeLine{00080     \{}
+\DoxyCodeLine{00081        \textcolor{comment}{// a new request is being executed, we will stop this one}}
+\DoxyCodeLine{00082        ROS\_WARN(\textcolor{stringliteral}{"{}LEDActionServer request preempted. Forgetting older request."{}});}
+\DoxyCodeLine{00083        \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>setPreempted();}
+\DoxyCodeLine{00084        \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00085     \}}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087     \mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publishFeedback}}();}
+\DoxyCodeLine{00088     \mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publishStateMarker}}();}
+\DoxyCodeLine{00089     rate.sleep();}
+\DoxyCodeLine{00090   \}}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092    \textcolor{comment}{// never reach succeeded because were are interested in keeping the feedback alive}}
+\DoxyCodeLine{00093    \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>setSucceeded();}
+\DoxyCodeLine{00094 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}{as\+\_\+}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00029}{cmd}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}{current\+State\+\_\+}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00048}{publish\+Feedback()}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00121}{publish\+State\+Marker()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLEDActionServer_aea69ee96367e9f6a82d6302f148505d6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}\label{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}} 
+\index{LEDActionServer@{LEDActionServer}!publishFeedback@{publishFeedback}}
+\index{publishFeedback@{publishFeedback}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{publishFeedback()}{publishFeedback()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::publish\+Feedback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publish\+Feedback()}} 
+
+Definition at line \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049 \{}
+\DoxyCodeLine{00050     sm\_dance\_bot::LEDControlFeedback feedback\_msg;}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052     \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>publishFeedback(feedback\_msg);}
+\DoxyCodeLine{00053 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}{as\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{execute()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}\label{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}} 
+\index{LEDActionServer@{LEDActionServer}!publishFeedback@{publishFeedback}}
+\index{publishFeedback@{publishFeedback}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{publishFeedback()}{publishFeedback()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::publish\+Feedback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publish\+Feedback()}} 
+
+Definition at line \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049 \{}
+\DoxyCodeLine{00050     sm\_dance\_bot\_2::LEDControlFeedback feedback\_msg;}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052     \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>publishFeedback(feedback\_msg);}
+\DoxyCodeLine{00053 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}{as\+\_\+}}.
+
+\mbox{\Hypertarget{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}\label{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}} 
+\index{LEDActionServer@{LEDActionServer}!publishFeedback@{publishFeedback}}
+\index{publishFeedback@{publishFeedback}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{publishFeedback()}{publishFeedback()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::publish\+Feedback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publish\+Feedback()}} 
+
+Definition at line \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049 \{}
+\DoxyCodeLine{00050     sm\_dance\_bot\_strikes\_back::LEDControlFeedback feedback\_msg;}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052     \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>publishFeedback(feedback\_msg);}
+\DoxyCodeLine{00053 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}{as\+\_\+}}.
+
+\mbox{\Hypertarget{classLEDActionServer_a73bb754ac2347c50660624ad92315895}\label{classLEDActionServer_a73bb754ac2347c50660624ad92315895}} 
+\index{LEDActionServer@{LEDActionServer}!publishStateMarker@{publishStateMarker}}
+\index{publishStateMarker@{publishStateMarker}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{publishStateMarker()}{publishStateMarker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::publish\+State\+Marker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publish\+State\+Marker()}} 
+
+Definition at line \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122 \{}
+\DoxyCodeLine{00123     visualization\_msgs::Marker marker;}
+\DoxyCodeLine{00124     marker.header.frame\_id = \textcolor{stringliteral}{"{}base\_link"{}};}
+\DoxyCodeLine{00125     marker.header.stamp = ros::Time::now ();}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127     marker.ns = \textcolor{stringliteral}{"{}tool\_namespace"{}};}
+\DoxyCodeLine{00128     marker.id = 0;}
+\DoxyCodeLine{00129     marker.type = visualization\_msgs::Marker::SPHERE;}
+\DoxyCodeLine{00130     marker.action = visualization\_msgs::Marker::ADD;}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132     marker.scale.x = 0.2;}
+\DoxyCodeLine{00133     marker.scale.y = 0.2;}
+\DoxyCodeLine{00134     marker.scale.z = 0.2;}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     marker.color.a = 1;}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} == sm\_dance\_bot::LEDControlResult::STATE\_RUNNING)}
+\DoxyCodeLine{00139     \{}
+\DoxyCodeLine{00140       \textcolor{comment}{// show green ball}}
+\DoxyCodeLine{00141       marker.color.r = 0;}
+\DoxyCodeLine{00142       marker.color.g = 1;}
+\DoxyCodeLine{00143       marker.color.b = 0;}
+\DoxyCodeLine{00144     \}}
+\DoxyCodeLine{00145     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} == sm\_dance\_bot::LEDControlResult::STATE\_IDLE)}
+\DoxyCodeLine{00146     \{}
+\DoxyCodeLine{00147       \textcolor{comment}{// show gray ball}}
+\DoxyCodeLine{00148       marker.color.r = 0.7;}
+\DoxyCodeLine{00149       marker.color.g = 0.7;}
+\DoxyCodeLine{00150       marker.color.b = 0.7;}
+\DoxyCodeLine{00151     \}}
+\DoxyCodeLine{00152     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00153     \{}
+\DoxyCodeLine{00154       \textcolor{comment}{// show black ball}}
+\DoxyCodeLine{00155       marker.color.r = 0;}
+\DoxyCodeLine{00156       marker.color.g = 0;}
+\DoxyCodeLine{00157       marker.color.b = 0;}
+\DoxyCodeLine{00158     \}}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160     marker.pose.orientation.w=1;}
+\DoxyCodeLine{00161     marker.pose.position.x=0;}
+\DoxyCodeLine{00162     marker.pose.position.y=0;}
+\DoxyCodeLine{00163     marker.pose.position.z=1;}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165     visualization\_msgs::MarkerArray ma;}
+\DoxyCodeLine{00166     ma.markers.push\_back(marker);}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168     \mbox{\hyperlink{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}{stateMarkerPublisher\_}}.publish(ma);}
+\DoxyCodeLine{00169 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}{current\+State\+\_\+}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00027}{state\+Marker\+Publisher\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{execute()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLEDActionServer_a73bb754ac2347c50660624ad92315895_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLEDActionServer_a73bb754ac2347c50660624ad92315895}\label{classLEDActionServer_a73bb754ac2347c50660624ad92315895}} 
+\index{LEDActionServer@{LEDActionServer}!publishStateMarker@{publishStateMarker}}
+\index{publishStateMarker@{publishStateMarker}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{publishStateMarker()}{publishStateMarker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::publish\+State\+Marker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publish\+State\+Marker()}} 
+
+Definition at line \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122 \{}
+\DoxyCodeLine{00123     visualization\_msgs::Marker marker;}
+\DoxyCodeLine{00124     marker.header.frame\_id = \textcolor{stringliteral}{"{}base\_link"{}};}
+\DoxyCodeLine{00125     marker.header.stamp = ros::Time::now ();}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127     marker.ns = \textcolor{stringliteral}{"{}tool\_namespace"{}};}
+\DoxyCodeLine{00128     marker.id = 0;}
+\DoxyCodeLine{00129     marker.type = visualization\_msgs::Marker::SPHERE;}
+\DoxyCodeLine{00130     marker.action = visualization\_msgs::Marker::ADD;}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132     marker.scale.x = 0.2;}
+\DoxyCodeLine{00133     marker.scale.y = 0.2;}
+\DoxyCodeLine{00134     marker.scale.z = 0.2;}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     marker.color.a = 1;}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} == sm\_dance\_bot\_2::LEDControlResult::STATE\_RUNNING)}
+\DoxyCodeLine{00139     \{}
+\DoxyCodeLine{00140       \textcolor{comment}{// show green ball}}
+\DoxyCodeLine{00141       marker.color.r = 0;}
+\DoxyCodeLine{00142       marker.color.g = 1;}
+\DoxyCodeLine{00143       marker.color.b = 0;}
+\DoxyCodeLine{00144     \}}
+\DoxyCodeLine{00145     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} == sm\_dance\_bot\_2::LEDControlResult::STATE\_IDLE)}
+\DoxyCodeLine{00146     \{}
+\DoxyCodeLine{00147       \textcolor{comment}{// show gray ball}}
+\DoxyCodeLine{00148       marker.color.r = 0.7;}
+\DoxyCodeLine{00149       marker.color.g = 0.7;}
+\DoxyCodeLine{00150       marker.color.b = 0.7;}
+\DoxyCodeLine{00151     \}}
+\DoxyCodeLine{00152     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00153     \{}
+\DoxyCodeLine{00154       \textcolor{comment}{// show black ball}}
+\DoxyCodeLine{00155       marker.color.r = 0;}
+\DoxyCodeLine{00156       marker.color.g = 0;}
+\DoxyCodeLine{00157       marker.color.b = 0;}
+\DoxyCodeLine{00158     \}}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160     marker.pose.orientation.w=1;}
+\DoxyCodeLine{00161     marker.pose.position.x=0;}
+\DoxyCodeLine{00162     marker.pose.position.y=0;}
+\DoxyCodeLine{00163     marker.pose.position.z=1;}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165     visualization\_msgs::MarkerArray ma;}
+\DoxyCodeLine{00166     ma.markers.push\_back(marker);}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168     \mbox{\hyperlink{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}{stateMarkerPublisher\_}}.publish(ma);}
+\DoxyCodeLine{00169 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}{current\+State\+\_\+}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00027}{state\+Marker\+Publisher\+\_\+}}.
+
+\mbox{\Hypertarget{classLEDActionServer_a73bb754ac2347c50660624ad92315895}\label{classLEDActionServer_a73bb754ac2347c50660624ad92315895}} 
+\index{LEDActionServer@{LEDActionServer}!publishStateMarker@{publishStateMarker}}
+\index{publishStateMarker@{publishStateMarker}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{publishStateMarker()}{publishStateMarker()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::publish\+State\+Marker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publish\+State\+Marker()}} 
+
+Definition at line \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122 \{}
+\DoxyCodeLine{00123     visualization\_msgs::Marker marker;}
+\DoxyCodeLine{00124     marker.header.frame\_id = \textcolor{stringliteral}{"{}base\_link"{}};}
+\DoxyCodeLine{00125     marker.header.stamp = ros::Time::now ();}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127     marker.ns = \textcolor{stringliteral}{"{}tool\_namespace"{}};}
+\DoxyCodeLine{00128     marker.id = 0;}
+\DoxyCodeLine{00129     marker.type = visualization\_msgs::Marker::SPHERE;}
+\DoxyCodeLine{00130     marker.action = visualization\_msgs::Marker::ADD;}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132     marker.scale.x = 0.2;}
+\DoxyCodeLine{00133     marker.scale.y = 0.2;}
+\DoxyCodeLine{00134     marker.scale.z = 0.2;}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     marker.color.a = 1;}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} == sm\_dance\_bot\_strikes\_back::LEDControlResult::STATE\_RUNNING)}
+\DoxyCodeLine{00139     \{}
+\DoxyCodeLine{00140       \textcolor{comment}{// show green ball}}
+\DoxyCodeLine{00141       marker.color.r = 0;}
+\DoxyCodeLine{00142       marker.color.g = 1;}
+\DoxyCodeLine{00143       marker.color.b = 0;}
+\DoxyCodeLine{00144     \}}
+\DoxyCodeLine{00145     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} == sm\_dance\_bot\_strikes\_back::LEDControlResult::STATE\_IDLE)}
+\DoxyCodeLine{00146     \{}
+\DoxyCodeLine{00147       \textcolor{comment}{// show gray ball}}
+\DoxyCodeLine{00148       marker.color.r = 0.7;}
+\DoxyCodeLine{00149       marker.color.g = 0.7;}
+\DoxyCodeLine{00150       marker.color.b = 0.7;}
+\DoxyCodeLine{00151     \}}
+\DoxyCodeLine{00152     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00153     \{}
+\DoxyCodeLine{00154       \textcolor{comment}{// show black ball}}
+\DoxyCodeLine{00155       marker.color.r = 0;}
+\DoxyCodeLine{00156       marker.color.g = 0;}
+\DoxyCodeLine{00157       marker.color.b = 0;}
+\DoxyCodeLine{00158     \}}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160     marker.pose.orientation.w=1;}
+\DoxyCodeLine{00161     marker.pose.position.x=0;}
+\DoxyCodeLine{00162     marker.pose.position.y=0;}
+\DoxyCodeLine{00163     marker.pose.position.z=1;}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165     visualization\_msgs::MarkerArray ma;}
+\DoxyCodeLine{00166     ma.markers.push\_back(marker);}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168     \mbox{\hyperlink{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}{stateMarkerPublisher\_}}.publish(ma);}
+\DoxyCodeLine{00169 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}{current\+State\+\_\+}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00027}{state\+Marker\+Publisher\+\_\+}}.
+
+\mbox{\Hypertarget{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}\label{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}} 
+\index{LEDActionServer@{LEDActionServer}!run@{run}}
+\index{run@{run}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}{run()}} 
+
+Definition at line \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102 \{}
+\DoxyCodeLine{00103   ros::NodeHandle n;}
+\DoxyCodeLine{00104   ROS\_INFO(\textcolor{stringliteral}{"{}Creating tool action server"{}});}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106   \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}} = std::make\_shared<Server>(n, \textcolor{stringliteral}{"{}led\_action\_server"{}}, boost::bind(\&\mbox{\hyperlink{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b}{LEDActionServer::execute}}, \textcolor{keyword}{this},  \_1), \textcolor{keyword}{false});}
+\DoxyCodeLine{00107   ROS\_INFO(\textcolor{stringliteral}{"{}Starting Tool Action Server"{}});}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109   \mbox{\hyperlink{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}{stateMarkerPublisher\_}} = n.advertise<visualization\_msgs::MarkerArray>(\textcolor{stringliteral}{"{}tool\_markers"{}}, 1);}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111   \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>start();}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113   ros::spin();}
+\DoxyCodeLine{00114 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}{as\+\_\+}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{execute()}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00027}{state\+Marker\+Publisher\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00177}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}\label{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}} 
+\index{LEDActionServer@{LEDActionServer}!run@{run}}
+\index{run@{run}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}{run()}} 
+
+Definition at line \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102 \{}
+\DoxyCodeLine{00103   ros::NodeHandle n;}
+\DoxyCodeLine{00104   ROS\_INFO(\textcolor{stringliteral}{"{}Creating tool action server"{}});}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106   \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}} = std::make\_shared<Server>(n, \textcolor{stringliteral}{"{}led\_action\_server"{}}, boost::bind(\&\mbox{\hyperlink{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b}{LEDActionServer::execute}}, \textcolor{keyword}{this},  \_1), \textcolor{keyword}{false});}
+\DoxyCodeLine{00107   ROS\_INFO(\textcolor{stringliteral}{"{}Starting Tool Action Server"{}});}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109   \mbox{\hyperlink{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}{stateMarkerPublisher\_}} = n.advertise<visualization\_msgs::MarkerArray>(\textcolor{stringliteral}{"{}tool\_markers"{}}, 1);}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111   \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>start();}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113   ros::spin();}
+\DoxyCodeLine{00114 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}{as\+\_\+}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{execute()}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00027}{state\+Marker\+Publisher\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}\label{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}} 
+\index{LEDActionServer@{LEDActionServer}!run@{run}}
+\index{run@{run}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void LEDAction\+Server\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}{run()}} 
+
+Definition at line \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102 \{}
+\DoxyCodeLine{00103   ros::NodeHandle n;}
+\DoxyCodeLine{00104   ROS\_INFO(\textcolor{stringliteral}{"{}Creating tool action server"{}});}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106   \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}} = std::make\_shared<Server>(n, \textcolor{stringliteral}{"{}led\_action\_server"{}}, boost::bind(\&\mbox{\hyperlink{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b}{LEDActionServer::execute}}, \textcolor{keyword}{this},  \_1), \textcolor{keyword}{false});}
+\DoxyCodeLine{00107   ROS\_INFO(\textcolor{stringliteral}{"{}Starting Tool Action Server"{}});}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109   \mbox{\hyperlink{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}{stateMarkerPublisher\_}} = n.advertise<visualization\_msgs::MarkerArray>(\textcolor{stringliteral}{"{}tool\_markers"{}}, 1);}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111   \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>start();}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113   ros::spin();}
+\DoxyCodeLine{00114 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}{as\+\_\+}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{execute()}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00027}{state\+Marker\+Publisher\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}\label{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}} 
+\index{LEDActionServer@{LEDActionServer}!as\_@{as\_}}
+\index{as\_@{as\_}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{as\_}{as\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{odom__tracker__node_8cpp_a9884574d0480319430f628f79afc0500}{Server}} $>$ LEDAction\+Server\+::as\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{execute()}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00048}{publish\+Feedback()}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00101}{run()}}.
+
+\mbox{\Hypertarget{classLEDActionServer_a4d3a4c07e7659cdd78228932bb1634d3}\label{classLEDActionServer_a4d3a4c07e7659cdd78228932bb1634d3}} 
+\index{LEDActionServer@{LEDActionServer}!cmd@{cmd}}
+\index{cmd@{cmd}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{cmd}{cmd}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily sm\+\_\+dance\+\_\+bot\+::\+LEDControl\+Goal LEDAction\+Server\+::cmd}
+
+
+
+Definition at line \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{execute()}}.
+
+\mbox{\Hypertarget{classLEDActionServer_a754ac14e0c9bde99ae28feb59c0801c0}\label{classLEDActionServer_a754ac14e0c9bde99ae28feb59c0801c0}} 
+\index{LEDActionServer@{LEDActionServer}!cmd@{cmd}}
+\index{cmd@{cmd}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{cmd}{cmd}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+LEDControl\+Goal LEDAction\+Server\+::cmd}
+
+
+
+Definition at line \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+\mbox{\Hypertarget{classLEDActionServer_a219e3a4ae2a09887d601bc9b210294dd}\label{classLEDActionServer_a219e3a4ae2a09887d601bc9b210294dd}} 
+\index{LEDActionServer@{LEDActionServer}!cmd@{cmd}}
+\index{cmd@{cmd}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{cmd}{cmd}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::\+LEDControl\+Goal LEDAction\+Server\+::cmd}
+
+
+
+Definition at line \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+\mbox{\Hypertarget{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}\label{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}} 
+\index{LEDActionServer@{LEDActionServer}!currentState\_@{currentState\_}}
+\index{currentState\_@{currentState\_}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{currentState\_}{currentState\_}}
+{\footnotesize\ttfamily uint8\+\_\+t LEDAction\+Server\+::current\+State\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}{execute()}}, \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00038}{LEDAction\+Server()}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00121}{publish\+State\+Marker()}}.
+
+\mbox{\Hypertarget{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}\label{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}} 
+\index{LEDActionServer@{LEDActionServer}!stateMarkerPublisher\_@{stateMarkerPublisher\_}}
+\index{stateMarkerPublisher\_@{stateMarkerPublisher\_}!LEDActionServer@{LEDActionServer}}
+\doxysubsubsection{\texorpdfstring{stateMarkerPublisher\_}{stateMarkerPublisher\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher LEDAction\+Server\+::state\+Marker\+Publisher\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00121}{publish\+State\+Marker()}}, and \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00101}{run()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+dance\+\_\+bot/servers/led\+\_\+action\+\_\+server/src/\mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+dance\+\_\+bot\+\_\+2/servers/led\+\_\+action\+\_\+server/src/\mbox{\hyperlink{2_2servers_2led__action__server_2src_2led__action__server__node_8cpp}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back/servers/led\+\_\+action\+\_\+server/src/\mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp}{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}}\end{DoxyCompactItemize}

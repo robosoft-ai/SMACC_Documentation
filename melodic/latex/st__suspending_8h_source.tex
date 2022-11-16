@@ -1,0 +1,38 @@
+\hypertarget{st__suspending_8h_source}{}\doxysection{st\+\_\+suspending.\+h}
+\label{st__suspending_8h_source}\index{smacc\_sm\_reference\_library/sm\_packml/include/sm\_packml/states/st\_suspending.h@{smacc\_sm\_reference\_library/sm\_packml/include/sm\_packml/states/st\_suspending.h}}
+\mbox{\hyperlink{st__suspending_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00001}00001 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__packml}{sm\_packml}}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00002}00002 \{}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00003}00003 \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00004}\mbox{\hyperlink{structsm__packml_1_1StSuspending}{00004}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__packml_1_1StSuspending}{StSuspending}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<StSuspending, MsRun>}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00006}00006     \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00008}00008 \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00009}00009     \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00011}00011     \textcolor{comment}{// Transition<smacc::EvTopicMessage<CbWatchdogSubscriberBehavior, OrTimer>, StStarting>,}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00012}00012     \textcolor{comment}{// Keyboard events}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00013}00013     \textcolor{comment}{// Transition<EvKeyPressP<CbDefaultKeyboardBehavior, OrKeyboard>, SS1::Ss1>,}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00014}00014     Transition<EvKeyPressN<CbDefaultKeyboardBehavior, OrKeyboard>, \mbox{\hyperlink{structsm__packml_1_1StSuspended}{StSuspended}}, \mbox{\hyperlink{classSUCCESS}{SUCCESS}}> \textcolor{comment}{//,}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00015}00015     \textcolor{comment}{// Transition<EvFail, MsStop, smacc::ABORT>}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00017}\mbox{\hyperlink{structsm__packml_1_1StSuspending_a0230b8d6ae21587b7537ca0e82d403d3}{00017}}     >\mbox{\hyperlink{structsm__packml_1_1StSuspending_a0230b8d6ae21587b7537ca0e82d403d3}{reactions}};}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00019}00019 \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00020}\mbox{\hyperlink{structsm__packml_1_1StSuspending_aa8991d63da69d7169fbedc8a55110eef}{00020}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__packml_1_1StSuspending_aa8991d63da69d7169fbedc8a55110eef}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00021}00021     \{}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00022}00022         configure\_orthogonal<OrTimer, CbTimer>();}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00023}00023         configure\_orthogonal<OrSubscriber, CbWatchdogSubscriberBehavior>();}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00024}00024         configure\_orthogonal<OrUpdatablePublisher, CbDefaultPublishLoop>();}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00025}00025         configure\_orthogonal<OrKeyboard, CbDefaultKeyboardBehavior>();}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00028}\mbox{\hyperlink{structsm__packml_1_1StSuspending_a8ba18b18a29151db1297ddfcbd7f9ae7}{00028}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__packml_1_1StSuspending_a8ba18b18a29151db1297ddfcbd7f9ae7}{runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00029}00029     \{}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00031}00031 \};}
+\DoxyCodeLine{\Hypertarget{st__suspending_8h_source_l00032}00032 \} \textcolor{comment}{// namespace sm\_packml}}
+
+\end{DoxyCode}

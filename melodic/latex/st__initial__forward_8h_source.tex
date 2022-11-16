@@ -1,0 +1,41 @@
+\hypertarget{st__initial__forward_8h_source}{}\doxysection{st\+\_\+initial\+\_\+forward.\+h}
+\label{st__initial__forward_8h_source}\index{smacc\_sm\_reference\_library/sm\_fetch\_two\_table\_pick\_n\_place\_1/include/sm\_fetch\_two\_table\_pick\_n\_place\_1/states/st\_initial\_forward.h@{smacc\_sm\_reference\_library/sm\_fetch\_two\_table\_pick\_n\_place\_1/include/sm\_fetch\_two\_table\_pick\_n\_place\_1/states/st\_initial\_forward.h}}
+\mbox{\hyperlink{st__initial__forward_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00002}00002 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__fetch__two__table__pick__n__place__1}{sm\_fetch\_two\_table\_pick\_n\_place\_1}}}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00003}00003 \{}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00004}00004     \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00005}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward}{00005}}     \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward}{StInitialForward}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<StInitialForward, SmFetchTwoTablePickNPlace1>}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00006}00006     \{}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00007}00007         \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00009}00009         \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00010}00010         \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00012}00012             Transition<EvCbSuccess<CbNavigateForward, OrNavigation>, \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1SS1_1_1SsPickObject}{SS1::SsPickObject}}, \mbox{\hyperlink{classSUCCESS}{SUCCESS}}>,}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00013}00013             Transition<EvCbFailure<CbNavigateForward, OrNavigation>, \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward}{StInitialForward}}, \mbox{\hyperlink{classABORT}{ABORT}}>}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00015}00015             >}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00016}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward_ac3cdc1af3fb1641169c5e7367ebed93b}{00016}}             \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward_ac3cdc1af3fb1641169c5e7367ebed93b}{reactions}};}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00018}00018         \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00019}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward_a1303332364805a3f765aac791cf76b22}{00019}}         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward_a1303332364805a3f765aac791cf76b22}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00020}00020         \{}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00021}00021             \textcolor{comment}{//configure\_orthogonal<OrNavigation, CbNavigateGlobalPosition>();}}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00022}00022             configure\_orthogonal<OrNavigation, CbNavigateForward>(1.2);}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00023}00023         \}}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00025}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward_aa6216751821ef74f82a3c1de960762fa}{00025}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward_aa6216751821ef74f82a3c1de960762fa}{runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00026}00026         \{}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00027}00027             ROS\_INFO(\textcolor{stringliteral}{"{}runtime"{}});}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00028}00028         \}}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00030}\mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward_ad399e67494196c702c6e241f688a19f2}{00030}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__fetch__two__table__pick__n__place__1_1_1StInitialForward_ad399e67494196c702c6e241f688a19f2}{OnEntry}}()}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00031}00031         \{}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00032}00032             ROS\_INFO(\textcolor{stringliteral}{"{}state on entry"{}});}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00033}00033         \}}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00034}00034     \};}
+\DoxyCodeLine{\Hypertarget{st__initial__forward_8h_source_l00035}00035 \} \textcolor{comment}{// namespace sm\_fetch\_two\_table\_pick\_n\_place\_1}}
+
+\end{DoxyCode}

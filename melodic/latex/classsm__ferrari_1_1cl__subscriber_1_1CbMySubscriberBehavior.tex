@@ -1,0 +1,168 @@
+\hypertarget{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior}{}\doxysection{sm\+\_\+ferrari\+::cl\+\_\+subscriber\+::Cb\+My\+Subscriber\+Behavior Class Reference}
+\label{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior}\index{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior@{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior}}
+
+
+{\ttfamily \#include $<$cb\+\_\+my\+\_\+subscriber\+\_\+behavior.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+ferrari\+::cl\+\_\+subscriber\+::Cb\+My\+Subscriber\+Behavior\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+ferrari\+::cl\+\_\+subscriber\+::Cb\+My\+Subscriber\+Behavior\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a16c8c5e65f02bd76081c3dc13367776a}{on\+Entry}} ()
+\item 
+{\footnotesize template$<$typename TOrthogonal , typename TSource\+Object $>$ }\\void \mbox{\hyperlink{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_ab3b93bd780a1dea560e55e0a81f9dbe2}{on\+Orthogonal\+Allocation}} ()
+\item 
+void \mbox{\hyperlink{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a9dcea2976705d72df667f747328eb7d6}{on\+Message\+Received}} (const std\+\_\+msgs\+::\+Float32 \&msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a54dd6633b3105bd2b1d9432ed1462ff0}{post\+My\+Event\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00016}{16}} of file \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source}{cb\+\_\+my\+\_\+subscriber\+\_\+behavior.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a16c8c5e65f02bd76081c3dc13367776a}\label{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a16c8c5e65f02bd76081c3dc13367776a}} 
+\index{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior@{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior}!onEntry@{onEntry}}
+\index{onEntry@{onEntry}!sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior@{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior}}
+\doxysubsubsection{\texorpdfstring{onEntry()}{onEntry()}}
+{\footnotesize\ttfamily void sm\+\_\+ferrari\+::cl\+\_\+subscriber\+::\+Cb\+My\+Subscriber\+Behavior\+::on\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1SmaccClientBehavior_ad5d3e1f1697c3cfe66c94cadba948493}{smacc\+::\+Smacc\+Client\+Behavior}}.
+
+
+
+Definition at line \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00019}{19}} of file \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source}{cb\+\_\+my\+\_\+subscriber\+\_\+behavior.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020     \{}
+\DoxyCodeLine{00021         ClSubscriber* client;}
+\DoxyCodeLine{00022         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a32b16e99e3b4cb289414203dc861a440}{requiresClient}}(client);}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024         client-\/>onMessageReceived(\&\mbox{\hyperlink{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a9dcea2976705d72df667f747328eb7d6}{CbMySubscriberBehavior::onMessageReceived}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{00025     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00033}{on\+Message\+Received()}}, \mbox{\hyperlink{smacc__subscriber__client_8h_source_l00052}{smacc\+::client\+\_\+bases\+::\+Smacc\+Subscriber\+Client$<$ Message\+Type $>$\+::on\+Message\+Received()}}, and \mbox{\hyperlink{smacc__client__behavior__impl_8h_source_l00054}{smacc\+::\+ISmacc\+Client\+Behavior\+::requires\+Client()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a16c8c5e65f02bd76081c3dc13367776a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a9dcea2976705d72df667f747328eb7d6}\label{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a9dcea2976705d72df667f747328eb7d6}} 
+\index{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior@{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior}!onMessageReceived@{onMessageReceived}}
+\index{onMessageReceived@{onMessageReceived}!sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior@{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior}}
+\doxysubsubsection{\texorpdfstring{onMessageReceived()}{onMessageReceived()}}
+{\footnotesize\ttfamily void sm\+\_\+ferrari\+::cl\+\_\+subscriber\+::\+Cb\+My\+Subscriber\+Behavior\+::on\+Message\+Received (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+Float32 \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00033}{33}} of file \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source}{cb\+\_\+my\+\_\+subscriber\+\_\+behavior.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{if}(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}.data > 30)}
+\DoxyCodeLine{00036         \{}
+\DoxyCodeLine{00037             ROS\_INFO(\textcolor{stringliteral}{"{}[CbMySubscriberBehavior] received message from topic with value > 30. Posting event!"{}});}
+\DoxyCodeLine{00038             this-\/>\mbox{\hyperlink{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a54dd6633b3105bd2b1d9432ed1462ff0}{postMyEvent\_}}();}
+\DoxyCodeLine{00039         \}}
+\DoxyCodeLine{00040     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{battery__monitor__node_8py_source_l00017}{battery\+\_\+monitor\+\_\+node\+::msg}}, and \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00042}{post\+My\+Event\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00019}{on\+Entry()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a9dcea2976705d72df667f747328eb7d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_ab3b93bd780a1dea560e55e0a81f9dbe2}\label{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_ab3b93bd780a1dea560e55e0a81f9dbe2}} 
+\index{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior@{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior}!onOrthogonalAllocation@{onOrthogonalAllocation}}
+\index{onOrthogonalAllocation@{onOrthogonalAllocation}!sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior@{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior}}
+\doxysubsubsection{\texorpdfstring{onOrthogonalAllocation()}{onOrthogonalAllocation()}}
+{\footnotesize\ttfamily template$<$typename TOrthogonal , typename TSource\+Object $>$ \\
+void sm\+\_\+ferrari\+::cl\+\_\+subscriber\+::\+Cb\+My\+Subscriber\+Behavior\+::on\+Orthogonal\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00028}{28}} of file \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source}{cb\+\_\+my\+\_\+subscriber\+\_\+behavior.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029     \{}
+\DoxyCodeLine{00030         \mbox{\hyperlink{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a54dd6633b3105bd2b1d9432ed1462ff0}{postMyEvent\_}} = [=]\{this-\/>postEvent<EvMyBehavior<TSourceObject, TOrthogonal>>();\};}
+\DoxyCodeLine{00031     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00042}{post\+My\+Event\+\_\+}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a54dd6633b3105bd2b1d9432ed1462ff0}\label{classsm__ferrari_1_1cl__subscriber_1_1CbMySubscriberBehavior_a54dd6633b3105bd2b1d9432ed1462ff0}} 
+\index{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior@{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior}!postMyEvent\_@{postMyEvent\_}}
+\index{postMyEvent\_@{postMyEvent\_}!sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior@{sm\_ferrari::cl\_subscriber::CbMySubscriberBehavior}}
+\doxysubsubsection{\texorpdfstring{postMyEvent\_}{postMyEvent\_}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ sm\+\_\+ferrari\+::cl\+\_\+subscriber\+::\+Cb\+My\+Subscriber\+Behavior\+::post\+My\+Event\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00042}{42}} of file \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source}{cb\+\_\+my\+\_\+subscriber\+\_\+behavior.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00033}{on\+Message\+Received()}}, and \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00028}{on\+Orthogonal\+Allocation()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+ferrari/include/sm\+\_\+ferrari/clients/cl\+\_\+subscriber/client\+\_\+behaviors/\mbox{\hyperlink{cb__my__subscriber__behavior_8h}{cb\+\_\+my\+\_\+subscriber\+\_\+behavior.\+h}}\end{DoxyCompactItemize}

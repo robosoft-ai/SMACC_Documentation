@@ -1,0 +1,184 @@
+\hypertarget{sm__respira__1_8h_source}{}\doxysection{sm\+\_\+respira\+\_\+1.\+h}
+\label{sm__respira__1_8h_source}\index{smacc\_sm\_reference\_library/sm\_respira\_1/include/sm\_respira\_1/sm\_respira\_1.h@{smacc\_sm\_reference\_library/sm\_respira\_1/include/sm\_respira\_1/sm\_respira\_1.h}}
+\mbox{\hyperlink{sm__respira__1_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00006}00006 \textcolor{comment}{// CLIENTS}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cl__ros__timer_8h}{ros\_timer\_client/cl\_ros\_timer.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cl__keyboard_8h}{keyboard\_client/cl\_keyboard.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00010}00010 \textcolor{comment}{// ORTHOGONALS}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__respira__1_2include_2sm__respira__1_2orthogonals_2or__timer_8h}{sm\_respira\_1/orthogonals/or\_timer.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__respira__1_2include_2sm__respira__1_2orthogonals_2or__updatable__publisher_8h}{sm\_respira\_1/orthogonals/or\_updatable\_publisher.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__respira__1_2include_2sm__respira__1_2orthogonals_2or__subscriber_8h}{sm\_respira\_1/orthogonals/or\_subscriber.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__respira__1_2include_2sm__respira__1_2orthogonals_2or__keyboard_8h}{sm\_respira\_1/orthogonals/or\_keyboard.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00016}00016 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecl__ros__timer}{cl\_ros\_timer}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00017}00017 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecl__ros__publisher}{cl\_ros\_publisher}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00018}00018 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacecl__keyboard}{cl\_keyboard}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00019}00019 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesm__respira__1_1_1cl__subscriber}{sm\_respira\_1::cl\_subscriber}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00021}00021 \textcolor{comment}{//CLIENT BEHAVIORS}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00022}00022 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__default__publish__loop_8h}{ros\_publisher\_client/client\_behaviors/cb\_default\_publish\_loop.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00023}00023 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__muted__behavior_8h}{ros\_publisher\_client/client\_behaviors/cb\_muted\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00024}00024 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__publish__once_8h}{ros\_publisher\_client/client\_behaviors/cb\_publish\_once.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00026}00026 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__respira__1_2include_2sm__respira__1_2clients_2cl__subscriber_2client__behaviors_2cb__default__subscriber__behavior_8h}{sm\_respira\_1/clients/cl\_subscriber/client\_behaviors/cb\_default\_subscriber\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00027}00027 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__respira__1_2include_2sm__respira__1_2clients_2cl__subscriber_2client__behaviors_2cb__watchdog__subscriber__behavior_8h}{sm\_respira\_1/clients/cl\_subscriber/client\_behaviors/cb\_watchdog\_subscriber\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00029}00029 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__default__keyboard__behavior_8h}{keyboard\_client/client\_behaviors/cb\_default\_keyboard\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00031}00031 \textcolor{comment}{//\#include <ros\_timer\_client/client\_behaviors/cb\_ros\_timer.h>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00032}00032 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__timer__countdown__once_8h}{ros\_timer\_client/client\_behaviors/cb\_timer\_countdown\_once.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00034}00034 \textcolor{comment}{//STATE REACTORS}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00035}00035 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sr__all__events__go_8h}{sr\_all\_events\_go/sr\_all\_events\_go.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00037}00037 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc}{smacc}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00038}00038 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc_1_1state__reactors}{smacc::state\_reactors}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00039}00039 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc_1_1default__events}{smacc::default\_events}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00041}00041 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__respira__1}{sm\_respira\_1}}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00042}00042 \{}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00043}00043 \textcolor{comment}{//SUPERSTATES}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00044}00044 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1SsACCycle}{SsACCycle}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00045}\mbox{\hyperlink{namespacesm__respira__1_1_1ac__cycle__inner__states}{00045}} \textcolor{keyword}{namespace }ac\_cycle\_inner\_states}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00046}00046 \{}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00047}00047 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1ac__cycle__inner__states_1_1StiACCycleLoop}{StiACCycleLoop}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00048}00048 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1ac__cycle__inner__states_1_1StiACCycleInspire}{StiACCycleInspire}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00049}00049 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1ac__cycle__inner__states_1_1StiACCyclePlateau}{StiACCyclePlateau}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00050}00050 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1ac__cycle__inner__states_1_1StiACCycleExpire}{StiACCycleExpire}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00051}00051 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1ac__cycle__inner__states_1_1StiACCycleDwell}{StiACCycleDwell}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00052}00052 \}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00054}00054 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1SsCMVCycle}{SsCMVCycle}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00056}\mbox{\hyperlink{namespacesm__respira__1_1_1cmv__cycle__inner__states}{00056}} \textcolor{keyword}{namespace }cmv\_cycle\_inner\_states}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00057}00057 \{}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00058}00058 \textcolor{comment}{//FORWARD DECLARATIONS OF ALL INNER STATES}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00059}00059 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1cmv__cycle__inner__states_1_1StiCMVCycleLoop}{StiCMVCycleLoop}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00060}00060 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1cmv__cycle__inner__states_1_1StiCMVCycleInspire}{StiCMVCycleInspire}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00061}00061 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1cmv__cycle__inner__states_1_1StiCMVCyclePlateau}{StiCMVCyclePlateau}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00062}00062 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1cmv__cycle__inner__states_1_1StiCMVCycleExpire}{StiCMVCycleExpire}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00063}00063 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1cmv__cycle__inner__states_1_1StiCMVCycleDwell}{StiCMVCycleDwell}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00064}00064 \}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00067}00067 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1SsPCCycle}{SsPCCycle}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00068}\mbox{\hyperlink{namespacesm__respira__1_1_1pc__cycle__inner__states}{00068}} \textcolor{keyword}{namespace }pc\_cycle\_inner\_states}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00069}00069 \{}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00070}00070 \textcolor{comment}{//FORWARD DECLARATIONS OF ALL INNER STATES}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00071}00071 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1pc__cycle__inner__states_1_1StiPCCycleLoop}{StiPCCycleLoop}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00072}00072 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1pc__cycle__inner__states_1_1StiPCCycleInspire}{StiPCCycleInspire}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00073}00073 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1pc__cycle__inner__states_1_1StiPCCyclePlateau}{StiPCCyclePlateau}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00074}00074 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1pc__cycle__inner__states_1_1StiPCCycleExpire}{StiPCCycleExpire}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00075}00075 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1pc__cycle__inner__states_1_1StiPCCycleDwell}{StiPCCycleDwell}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00076}00076 \}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00078}00078 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1SsPSCycle}{SsPSCycle}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00079}\mbox{\hyperlink{namespacesm__respira__1_1_1ps__cycle__inner__states}{00079}} \textcolor{keyword}{namespace }ps\_cycle\_inner\_states}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00080}00080 \{}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00081}00081 \textcolor{comment}{//FORWARD DECLARATIONS OF ALL INNER STATES}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00082}00082 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1ps__cycle__inner__states_1_1StiPSCycleLoop}{StiPSCycleLoop}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00083}00083 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1ps__cycle__inner__states_1_1StiPSCycleInspire}{StiPSCycleInspire}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00084}00084 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1ps__cycle__inner__states_1_1StiPSCyclePlateau}{StiPSCyclePlateau}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00085}00085 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1ps__cycle__inner__states_1_1StiPSCycleExpire}{StiPSCycleExpire}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00086}00086 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1ps__cycle__inner__states_1_1StiPSCycleDwell}{StiPSCycleDwell}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00087}00087 \}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00089}00089 \textcolor{comment}{//STATES}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00090}00090 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1StObserve}{StObserve}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00091}00091 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1StLeakyLungStep1}{StLeakyLungStep1}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00092}00092 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1StLeakyLungStep2}{StLeakyLungStep2}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00093}00093 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1StLeakyLungStep3}{StLeakyLungStep3}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00094}00094 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1StPatientObstructionStep1}{StPatientObstructionStep1}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00095}00095 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1StPatientObstructionStep2}{StPatientObstructionStep2}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00096}00096 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1StCalibrationStep1}{StCalibrationStep1}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00097}00097 \textcolor{keyword}{class }\mbox{\hyperlink{structsm__respira__1_1_1StSystemShutdown}{StSystemShutdown}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00099}00099 \textcolor{comment}{//MODE STATES}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00100}00100 \textcolor{keyword}{class }\mbox{\hyperlink{classsm__respira__1_1_1MsRun}{MsRun}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00101}00101 \textcolor{keyword}{class }\mbox{\hyperlink{classsm__respira__1_1_1MsLeakyLung}{MsLeakyLung}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00102}00102 \textcolor{keyword}{class }\mbox{\hyperlink{classsm__respira__1_1_1MsPatientObstruction}{MsPatientObstruction}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00103}00103 \textcolor{keyword}{class }\mbox{\hyperlink{classsm__respira__1_1_1MsCalibration}{MsCalibration}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00104}00104 \textcolor{keyword}{class }\mbox{\hyperlink{classsm__respira__1_1_1MsShutdown}{MsShutdown}};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00106}\mbox{\hyperlink{structsm__respira__1_1_1EvToDeep}{00106}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__respira__1_1_1EvToDeep}{EvToDeep}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<EvToDeep>}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00107}00107 \{}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00108}00108 \};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00110}\mbox{\hyperlink{structsm__respira__1_1_1EvFail}{00110}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__respira__1_1_1EvFail}{EvFail}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<EvFail>}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00111}00111 \{}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00112}00112 \};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00114}00114 \textcolor{comment}{// STATE MACHINE}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00115}\mbox{\hyperlink{structsm__respira__1_1_1SmRespira1}{00115}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__respira__1_1_1SmRespira1}{SmRespira1}}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00116}00116     : \textcolor{keyword}{public} \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{smacc::SmaccStateMachineBase}}<SmRespira1, MsRun>}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00117}00117 \{}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00118}00118     \textcolor{keyword}{using }SmaccStateMachineBase::SmaccStateMachineBase;}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00120}\mbox{\hyperlink{structsm__respira__1_1_1SmRespira1_a6be26eb018ef73a2e39772fe4a03e551}{00120}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__respira__1_1_1SmRespira1_a6be26eb018ef73a2e39772fe4a03e551}{onInitialize}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00121}00121 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00122}00122         this-\/>createOrthogonal<OrTimer>();}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00123}00123         this-\/>createOrthogonal<OrUpdatablePublisher>();}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00124}00124         this-\/>createOrthogonal<OrKeyboard>();}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00125}00125         this-\/>createOrthogonal<OrSubscriber>();}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00126}00126     \}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00127}00127 \};}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00128}00128 \} \textcolor{comment}{// namespace sm\_respira\_1}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00130}00130 \textcolor{comment}{// MODE STATES}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00131}00131 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__respira__1_2include_2sm__respira__1_2mode__states_2ms__run_8h}{sm\_respira\_1/mode\_states/ms\_run.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00132}00132 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ms__leaky__lung_8h}{sm\_respira\_1/mode\_states/ms\_leaky\_lung.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00133}00133 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ms__patient__obstruction_8h}{sm\_respira\_1/mode\_states/ms\_patient\_obstruction.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00134}00134 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ms__calibration_8h}{sm\_respira\_1/mode\_states/ms\_calibration.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00135}00135 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ms__shutdown_8h}{sm\_respira\_1/mode\_states/ms\_shutdown.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00137}00137 \textcolor{comment}{//STATES}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00138}00138 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__respira__1_2include_2sm__respira__1_2states_2st__observe_8h}{sm\_respira\_1/states/st\_observe.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00139}00139 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__leaky__lung__step__1_8h}{sm\_respira\_1/states/ms\_leaky\_lung\_inner\_states/st\_leaky\_lung\_step\_1.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00140}00140 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__leaky__lung__step__2_8h}{sm\_respira\_1/states/ms\_leaky\_lung\_inner\_states/st\_leaky\_lung\_step\_2.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00141}00141 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__leaky__lung__step__3_8h}{sm\_respira\_1/states/ms\_leaky\_lung\_inner\_states/st\_leaky\_lung\_step\_3.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00142}00142 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__patient__obstruction__step__1_8h}{sm\_respira\_1/states/ms\_patient\_obstruction\_inner\_states/st\_patient\_obstruction\_step\_1.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00143}00143 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__patient__obstruction__step__2_8h}{sm\_respira\_1/states/ms\_patient\_obstruction\_inner\_states/st\_patient\_obstruction\_step\_2.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00144}00144 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__calibration__step__1_8h}{sm\_respira\_1/states/ms\_calibration\_inner\_states/st\_calibration\_step\_1.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00145}00145 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__system__shutdown_8h}{sm\_respira\_1/states/ms\_shutdown\_inner\_states/st\_system\_shutdown.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00147}00147 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ss__ac__cycle_8h}{sm\_respira\_1/superstates/ss\_ac\_cycle.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00148}00148 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ss__cmv__cycle_8h}{sm\_respira\_1/superstates/ss\_cmv\_cycle.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00149}00149 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ss__pc__cycle_8h}{sm\_respira\_1/superstates/ss\_pc\_cycle.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00150}00150 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ss__ps__cycle_8h}{sm\_respira\_1/superstates/ss\_ps\_cycle.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00152}00152 \textcolor{comment}{//ss\_ac\_cycle}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00153}00153 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__ac__cycle__loop_8h}{sm\_respira\_1/states/ac\_cycle\_inner\_states/sti\_ac\_cycle\_loop.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00154}00154 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__ac__cycle__inspire_8h}{sm\_respira\_1/states/ac\_cycle\_inner\_states/sti\_ac\_cycle\_inspire.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00155}00155 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__ac__cycle__plateau_8h}{sm\_respira\_1/states/ac\_cycle\_inner\_states/sti\_ac\_cycle\_plateau.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00156}00156 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__ac__cycle__expire_8h}{sm\_respira\_1/states/ac\_cycle\_inner\_states/sti\_ac\_cycle\_expire.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00157}00157 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__ac__cycle__dwell_8h}{sm\_respira\_1/states/ac\_cycle\_inner\_states/sti\_ac\_cycle\_dwell.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00159}00159 \textcolor{comment}{//ss\_cmv\_cycle}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00160}00160 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__cmv__cycle__loop_8h}{sm\_respira\_1/states/cmv\_cycle\_inner\_states/sti\_cmv\_cycle\_loop.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00161}00161 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__cmv__cycle__inspire_8h}{sm\_respira\_1/states/cmv\_cycle\_inner\_states/sti\_cmv\_cycle\_inspire.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00162}00162 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__cmv__cycle__plateau_8h}{sm\_respira\_1/states/cmv\_cycle\_inner\_states/sti\_cmv\_cycle\_plateau.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00163}00163 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__cmv__cycle__expire_8h}{sm\_respira\_1/states/cmv\_cycle\_inner\_states/sti\_cmv\_cycle\_expire.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00164}00164 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__cmv__cycle__dwell_8h}{sm\_respira\_1/states/cmv\_cycle\_inner\_states/sti\_cmv\_cycle\_dwell.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00166}00166 \textcolor{comment}{//ss\_pc\_cycle}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00167}00167 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__pc__cycle__loop_8h}{sm\_respira\_1/states/pc\_cycle\_inner\_states/sti\_pc\_cycle\_loop.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00168}00168 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__pc__cycle__inspire_8h}{sm\_respira\_1/states/pc\_cycle\_inner\_states/sti\_pc\_cycle\_inspire.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00169}00169 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__pc__cycle__plateau_8h}{sm\_respira\_1/states/pc\_cycle\_inner\_states/sti\_pc\_cycle\_plateau.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00170}00170 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__pc__cycle__expire_8h}{sm\_respira\_1/states/pc\_cycle\_inner\_states/sti\_pc\_cycle\_expire.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00171}00171 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__pc__cycle__dwell_8h}{sm\_respira\_1/states/pc\_cycle\_inner\_states/sti\_pc\_cycle\_dwell.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00173}00173 \textcolor{comment}{//ss\_ps\_cycle}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00174}00174 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__ps__cycle__loop_8h}{sm\_respira\_1/states/ps\_cycle\_inner\_states/sti\_ps\_cycle\_loop.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00175}00175 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__ps__cycle__inspire_8h}{sm\_respira\_1/states/ps\_cycle\_inner\_states/sti\_ps\_cycle\_inspire.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00176}00176 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__ps__cycle__plateau_8h}{sm\_respira\_1/states/ps\_cycle\_inner\_states/sti\_ps\_cycle\_plateau.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00177}00177 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__ps__cycle__expire_8h}{sm\_respira\_1/states/ps\_cycle\_inner\_states/sti\_ps\_cycle\_expire.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__respira__1_8h_source_l00178}00178 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sti__ps__cycle__dwell_8h}{sm\_respira\_1/states/ps\_cycle\_inner\_states/sti\_ps\_cycle\_dwell.h}}>}}
+
+\end{DoxyCode}

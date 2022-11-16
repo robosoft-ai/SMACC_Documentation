@@ -1,0 +1,43 @@
+\hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source}{}\doxysection{st\+\_\+event\+\_\+count\+\_\+down.\+h}
+\label{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source}\index{smacc\_sm\_reference\_library/sm\_dance\_bot\_strikes\_back/include/sm\_dance\_bot\_strikes\_back/states/st\_event\_count\_down.h@{smacc\_sm\_reference\_library/sm\_dance\_bot\_strikes\_back/include/sm\_dance\_bot\_strikes\_back/states/st\_event\_count\_down.h}}
+\mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00002}00002 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__dance__bot__strikes__back}{sm\_dance\_bot\_strikes\_back}}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00003}00003 \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00004}00004 \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00005}\mbox{\hyperlink{structsm__dance__bot__strikes__back_1_1StEventCountDown}{00005}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__dance__bot__strikes__back_1_1StEventCountDown}{StEventCountDown}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<StEventCountDown, MsDanceBotRunMode>}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00007}00007     \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00009}00009 \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00010}00010     \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00012}00012     Transition<EvCountdownEnd<SrEventCountdown>, \mbox{\hyperlink{structsm__dance__bot__strikes__back_1_1StNavigateToWaypointsX}{StNavigateToWaypointsX}}>,}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00013}00013     Transition<EvGlobalError, MsDanceBotRecoveryMode>}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00015}\mbox{\hyperlink{structsm__dance__bot__strikes__back_1_1StEventCountDown_a854ccb5b93cb3e2a87fe02b0b4990016}{00015}}     >\mbox{\hyperlink{structsm__dance__bot__strikes__back_1_1StEventCountDown_a854ccb5b93cb3e2a87fe02b0b4990016}{reactions}};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00017}00017 \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00018}\mbox{\hyperlink{structsm__dance__bot__strikes__back_1_1StEventCountDown_a2b0d518bcc72065392d547d69c0dff7d}{00018}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__dance__bot__strikes__back_1_1StEventCountDown_a2b0d518bcc72065392d547d69c0dff7d}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00020}00020         \textcolor{comment}{//   configure\_orthogonal<OrObstaclePerception, CbLidarSensor>();}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00021}00021         \textcolor{comment}{//   configure\_orthogonal<OrStringPublisher, CbStringPublisher>("{}Hello World!"{});}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00022}00022         \textcolor{comment}{//   configure\_orthogonal<OrTemperatureSensor, CbConditionTemperatureSensor>();}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00023}00023         \textcolor{comment}{//   configure\_orthogonal<OrService3, CbService3>(Service3Command::SERVICE3\_ON);}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00025}00025         \textcolor{comment}{// Create State Reactor}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00026}00026         \textcolor{comment}{// auto srCountdown = static\_createStateReactor<SrEventCountdown>(5);}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00027}00027         \textcolor{comment}{// srCountdown-\/>addInputEvent<EvTimer<ClRosTimer, OrTimer>>();}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00028}00028         \textcolor{comment}{// srCountdown-\/>setOutputEvent<EvCountdownEnd<SrEventCountdown>>();}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00030}00030         \textcolor{keyword}{auto} srCountdown = \mbox{\hyperlink{classsmacc_1_1SmaccState_a4b54d8ec82d303736d8bc11a3ffd0ce1}{static\_createStateReactor}}<SrEventCountdown,}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00031}00031                                                     EvCountdownEnd<SrEventCountdown>,}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00032}00032                                                     mpl::list<}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00033}00033                                                             EvTimer<ClRosTimer, OrTimer>}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00034}00034                                                             >>(5);}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00036}00036 \};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2include_2sm__dance__bot__strikes__back_2states_2st__event__count__down_8h_source_l00037}00037 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,40 @@
+\hypertarget{sm__dance__bot_8cpp}{}\doxysection{smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+dance\+\_\+bot/src/sm\+\_\+dance\+\_\+bot.cpp File Reference}
+\label{sm__dance__bot_8cpp}\index{smacc\_sm\_reference\_library/sm\_dance\_bot/src/sm\_dance\_bot.cpp@{smacc\_sm\_reference\_library/sm\_dance\_bot/src/sm\_dance\_bot.cpp}}
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot/sm\+\_\+dance\+\_\+bot.\+h$>$}\newline
+Include dependency graph for sm\+\_\+dance\+\_\+bot.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sm__dance__bot_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sm__dance__bot_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sm__dance__bot_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{sm__dance__bot_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{sm\_dance\_bot.cpp@{sm\_dance\_bot.cpp}!main@{main}}
+\index{main@{main}!sm\_dance\_bot.cpp@{sm\_dance\_bot.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{sm__dance__bot_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{sm__dance__bot_8cpp_source}{sm\+\_\+dance\+\_\+bot.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004 \{}
+\DoxyCodeLine{00005     ros::init(argc, argv, \textcolor{stringliteral}{"{}dance\_bot"{}});}
+\DoxyCodeLine{00006     ros::NodeHandle nh;}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008     ros::Duration(5).sleep();}
+\DoxyCodeLine{00009     smacc::run<SmDanceBot>();}
+\DoxyCodeLine{00010 \}}
+
+\end{DoxyCode}

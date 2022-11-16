@@ -1,0 +1,41 @@
+\hypertarget{st__complete_8h_source}{}\doxysection{st\+\_\+complete.\+h}
+\label{st__complete_8h_source}\index{smacc\_sm\_reference\_library/sm\_packml/include/sm\_packml/states/st\_complete.h@{smacc\_sm\_reference\_library/sm\_packml/include/sm\_packml/states/st\_complete.h}}
+\mbox{\hyperlink{st__complete_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00001}00001 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__packml}{sm\_packml}}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00002}00002 \{}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00003}00003 \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00004}\mbox{\hyperlink{structsm__packml_1_1StComplete}{00004}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__packml_1_1StComplete}{StComplete}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<StComplete, MsRun>}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00006}00006     \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00008}00008 \textcolor{comment}{// DECLARE CUSTOM OBJECT TAGS}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00009}\mbox{\hyperlink{structsm__packml_1_1StComplete_1_1RESET}{00009}}     \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__packml_1_1StComplete_1_1RESET}{RESET}} : \mbox{\hyperlink{classSUCCESS}{SUCCESS}}\{\};}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00011}00011 \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00012}00012     \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00014}00014     \textcolor{comment}{// Transition<smacc::EvTopicMessage<CbWatchdogSubscriberBehavior, OrTimer>, StStarting>,}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00015}00015     \textcolor{comment}{// Keyboard events}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00016}00016     \textcolor{comment}{// Transition<EvKeyPressP<CbDefaultKeyboardBehavior, OrKeyboard>, SS1::Ss1>,}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00017}00017     Transition<EvKeyPressN<CbDefaultKeyboardBehavior, OrKeyboard>, \mbox{\hyperlink{structsm__packml_1_1StResetting}{StResetting}}, \mbox{\hyperlink{structsm__packml_1_1StComplete_1_1RESET}{RESET}}> \textcolor{comment}{//,}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00018}00018     \textcolor{comment}{// Transition<EvFail, MsStop, smacc::ABORT>}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00020}\mbox{\hyperlink{structsm__packml_1_1StComplete_abe26a003ec05b72f290f6b5c2497123e}{00020}}     >\mbox{\hyperlink{structsm__packml_1_1StComplete_abe26a003ec05b72f290f6b5c2497123e}{reactions}};}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00022}00022 \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00023}\mbox{\hyperlink{structsm__packml_1_1StComplete_a6d671966b0f05fc72d1662054a32ecd3}{00023}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__packml_1_1StComplete_a6d671966b0f05fc72d1662054a32ecd3}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00024}00024     \{}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00025}00025         configure\_orthogonal<OrTimer, CbTimer>();}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00026}00026         configure\_orthogonal<OrSubscriber, CbWatchdogSubscriberBehavior>();}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00027}00027         configure\_orthogonal<OrUpdatablePublisher, CbDefaultPublishLoop>();}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00028}00028         configure\_orthogonal<OrKeyboard, CbDefaultKeyboardBehavior>();}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00029}00029     \}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00031}\mbox{\hyperlink{structsm__packml_1_1StComplete_af6884149d83d202713c31c0aa85fa9e2}{00031}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__packml_1_1StComplete_af6884149d83d202713c31c0aa85fa9e2}{runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00032}00032     \{}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00033}00033     \}}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00034}00034 \};}
+\DoxyCodeLine{\Hypertarget{st__complete_8h_source_l00035}00035 \} \textcolor{comment}{// namespace sm\_packml}}
+
+\end{DoxyCode}

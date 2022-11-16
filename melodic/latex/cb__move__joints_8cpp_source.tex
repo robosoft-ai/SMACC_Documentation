@@ -1,0 +1,113 @@
+\hypertarget{cb__move__joints_8cpp_source}{}\doxysection{cb\+\_\+move\+\_\+joints.\+cpp}
+\label{cb__move__joints_8cpp_source}\index{smacc\_client\_library/move\_group\_interface\_client/src/move\_group\_interface\_client/client\_behaviors/cb\_move\_joints.cpp@{smacc\_client\_library/move\_group\_interface\_client/src/move\_group\_interface\_client/client\_behaviors/cb\_move\_joints.cpp}}
+\mbox{\hyperlink{cb__move__joints_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018-\/2020}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__move__joints_8h}{move\_group\_interface\_client/client\_behaviors/cb\_move\_joints.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <future>}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__group__interface}{cl\_move\_group\_interface}}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00012}\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a3b79fb14e34ffdb5cd6ffafdaa6b8965}{00012}}   \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a085919fd766e50098cbe9782de3303c6}{CbMoveJoints::CbMoveJoints}}(\textcolor{keyword}{const} std::map<std::string, double> \&jointValueTarget) : jointValueTarget\_(jointValueTarget)}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00013}00013   \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00014}00014   \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00016}\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a085919fd766e50098cbe9782de3303c6}{00016}}   \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a085919fd766e50098cbe9782de3303c6}{CbMoveJoints::CbMoveJoints}}()}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00017}00017   \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00018}00018   \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00020}\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a23e4181af695aed9fa6bb4ae3f17fd76}{00020}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a23e4181af695aed9fa6bb4ae3f17fd76}{CbMoveJoints::onEntry}}()}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00021}00021   \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00022}00022     this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a32b16e99e3b4cb289414203dc861a440}{requiresClient}}(\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_aa5749bbc6bb5f09069e9e8115326f024}{movegroupClient\_}});}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00024}00024     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_afc75b1e5403e49583930531bcb6508eb}{group\_}})}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00025}00025     \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00026}00026       moveit::planning\_interface::MoveGroupInterface move\_group(*(this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_afc75b1e5403e49583930531bcb6508eb}{group\_}}));}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00027}00027       this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_ad91d243eb8a818e240d85e5a7fdea68d}{moveJoints}}(move\_group);}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00029}00029     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00030}00030     \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00031}00031       this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_ad91d243eb8a818e240d85e5a7fdea68d}{moveJoints}}(\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_aa5749bbc6bb5f09069e9e8115326f024}{movegroupClient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_a92922ea689e4e1b7b91512c56629c95b}{moveGroupClientInterface}});}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00033}00033   \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00035}\mbox{\hyperlink{namespacecl__move__group__interface_aad71400738b3e25d9fa9ac924670de5d}{00035}}   std::string \mbox{\hyperlink{namespacecl__move__group__interface_aad71400738b3e25d9fa9ac924670de5d}{currentJointStatesToString}}(moveit::planning\_interface::MoveGroupInterface \&moveGroupInterface, std::map<std::string, double>\& targetJoints)}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00036}00036   \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00037}00037     \textcolor{keyword}{auto} state = moveGroupInterface.getCurrentState();}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00038}00038     \textcolor{keyword}{auto} vnames = state-\/>getVariableNames();}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00040}00040     std::stringstream ss;}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00042}00042     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& tgj: targetJoints)}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00043}00043     \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00044}00044       \textcolor{keyword}{auto} it = std::find(vnames.begin(),vnames.end(), tgj.first);}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00045}00045       \textcolor{keyword}{auto} index = std::distance(vnames.begin(), it);}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00047}00047       ss << tgj.first << \textcolor{stringliteral}{"{}:"{}} << state-\/>getVariablePosition(index) << std::endl;}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00050}00050     \textcolor{keywordflow}{return} ss.str();}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00051}00051   \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00053}\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_ad91d243eb8a818e240d85e5a7fdea68d}{00053}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_ad91d243eb8a818e240d85e5a7fdea68d}{CbMoveJoints::moveJoints}}(moveit::planning\_interface::MoveGroupInterface \&moveGroupInterface)}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00054}00054   \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00055}00055     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a2480db16c4bf55a40701c00cd2afe9a0}{scalingFactor\_}})}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00056}00056       moveGroupInterface.setMaxVelocityScalingFactor(*\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a2480db16c4bf55a40701c00cd2afe9a0}{scalingFactor\_}});}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00058}00058     \textcolor{keywordtype}{bool} success;}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00059}00059     moveit::planning\_interface::MoveGroupInterface::Plan computedMotionPlan;}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00061}00061     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a8103f7c923a34d9bf5a2c374ff88a277}{jointValueTarget\_}}.size() == 0)}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00062}00062     \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00063}00063       ROS\_WARN(\textcolor{stringliteral}{"{}[CbMoveJoints] No joint was value specified. Skipping planning call."{}});}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00064}00064       success = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00065}00065     \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00066}00066     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00067}00067     \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00068}00068       moveGroupInterface.setJointValueTarget(\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a8103f7c923a34d9bf5a2c374ff88a277}{jointValueTarget\_}});}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00069}00069       \textcolor{comment}{//moveGroupInterface.setGoalJointTolerance(0.01);}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00070}00070       success = (moveGroupInterface.plan(computedMotionPlan) == moveit::planning\_interface::MoveItErrorCode::SUCCESS);}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00071}00071       ROS\_INFO\_NAMED(\textcolor{stringliteral}{"{}CbMoveJoints"{}}, \textcolor{stringliteral}{"{}Success Visualizing plan 1 (pose goal) \%s"{}}, success ? \textcolor{stringliteral}{"{}"{}} : \textcolor{stringliteral}{"{}FAILED"{}});}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00074}00074     \textcolor{keywordflow}{if} (success)}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00075}00075     \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00076}00076       \textcolor{keyword}{auto} executionResult = moveGroupInterface.execute(computedMotionPlan);}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00078}00078       \textcolor{keyword}{auto} statestr = \mbox{\hyperlink{namespacecl__move__group__interface_aad71400738b3e25d9fa9ac924670de5d}{currentJointStatesToString}}(moveGroupInterface, \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a8103f7c923a34d9bf5a2c374ff88a277}{jointValueTarget\_}});}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00080}00080       \textcolor{keywordflow}{if} (executionResult == moveit\_msgs::MoveItErrorCodes::SUCCESS)}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00081}00081       \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00082}00082         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}["{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a18e4bec9460b010f2894c0f7e7064a34}{getName}}() << \textcolor{stringliteral}{"{}] motion execution succeeded. Throwing success event. "{}} << std::endl}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00083}00083                                                                                               << statestr);}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00084}00084         \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_aa5749bbc6bb5f09069e9e8115326f024}{movegroupClient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_aebaf269db373d41837bae87651458e54}{postEventMotionExecutionSucceded}}();}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00085}00085         this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_adf18efe1f0e4eacc1277b8865a8a94b1}{postSuccessEvent}}();}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00086}00086       \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00087}00087       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00088}00088       \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00089}00089         ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}["{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a18e4bec9460b010f2894c0f7e7064a34}{getName}}() << \textcolor{stringliteral}{"{}] motion execution failed. Throwing fail event."{}} << std::endl}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00090}00090                                                                                        << statestr);}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00091}00091         \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_aa5749bbc6bb5f09069e9e8115326f024}{movegroupClient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_a39dc3871d29b2af1ab739057f6ca6daa}{postEventMotionExecutionFailed}}();}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00092}00092         this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_af6fa358cb1ab5ed16791a201f59260e0}{postFailureEvent}}();}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00093}00093       \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00095}00095     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00096}00096     \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00097}00097       \textcolor{keyword}{auto} statestr = \mbox{\hyperlink{namespacecl__move__group__interface_aad71400738b3e25d9fa9ac924670de5d}{currentJointStatesToString}}(moveGroupInterface, \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a8103f7c923a34d9bf5a2c374ff88a277}{jointValueTarget\_}});}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00098}00098       ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}["{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a18e4bec9460b010f2894c0f7e7064a34}{getName}}() << \textcolor{stringliteral}{"{}] motion execution failed. Throwing fail event."{}} << std::endl << statestr);}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00099}00099       \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_aa5749bbc6bb5f09069e9e8115326f024}{movegroupClient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_a39dc3871d29b2af1ab739057f6ca6daa}{postEventMotionExecutionFailed}}();}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00100}00100       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_af6fa358cb1ab5ed16791a201f59260e0}{postFailureEvent}}();}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00101}00101     \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00102}00102   \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00104}\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_aff7d27d2427a5a771cb9abce1609aa27}{00104}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_aff7d27d2427a5a771cb9abce1609aa27}{CbMoveJoints::onExit}}()}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00105}00105   \{}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00106}00106   \}}
+\DoxyCodeLine{\Hypertarget{cb__move__joints_8cpp_source_l00107}00107 \} \textcolor{comment}{// namespace cl\_move\_group\_interface}}
+
+\end{DoxyCode}

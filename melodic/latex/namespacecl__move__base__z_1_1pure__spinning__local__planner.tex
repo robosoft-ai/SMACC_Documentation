@@ -1,0 +1,64 @@
+\hypertarget{namespacecl__move__base__z_1_1pure__spinning__local__planner}{}\doxysection{cl\+\_\+move\+\_\+base\+\_\+z\+::pure\+\_\+spinning\+\_\+local\+\_\+planner Namespace Reference}
+\label{namespacecl__move__base__z_1_1pure__spinning__local__planner}\index{cl\_move\_base\_z::pure\_spinning\_local\_planner@{cl\_move\_base\_z::pure\_spinning\_local\_planner}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcl__move__base__z_1_1pure__spinning__local__planner_1_1PureSpinningLocalPlanner}{Pure\+Spinning\+Local\+Planner}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tf\+::\+Stamped$<$ tf\+::\+Pose $>$ \mbox{\hyperlink{namespacecl__move__base__z_1_1pure__spinning__local__planner_a9a9023445e13ea89ea8685132683c10c}{optional\+Robot\+Pose}} (costmap\+\_\+2d\+::\+Costmap2\+DROS $\ast$costmap\+Ros)
+\item 
+void \mbox{\hyperlink{namespacecl__move__base__z_1_1pure__spinning__local__planner_ab6a498d3454059055f0aebf49c7b82cf}{publish\+Goal\+Marker}} (double x, double y, double phi)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecl__move__base__z_1_1pure__spinning__local__planner_a9a9023445e13ea89ea8685132683c10c}\label{namespacecl__move__base__z_1_1pure__spinning__local__planner_a9a9023445e13ea89ea8685132683c10c}} 
+\index{cl\_move\_base\_z::pure\_spinning\_local\_planner@{cl\_move\_base\_z::pure\_spinning\_local\_planner}!optionalRobotPose@{optionalRobotPose}}
+\index{optionalRobotPose@{optionalRobotPose}!cl\_move\_base\_z::pure\_spinning\_local\_planner@{cl\_move\_base\_z::pure\_spinning\_local\_planner}}
+\doxysubsubsection{\texorpdfstring{optionalRobotPose()}{optionalRobotPose()}}
+{\footnotesize\ttfamily tf\+::\+Stamped$<$ tf\+::\+Pose $>$ cl\+\_\+move\+\_\+base\+\_\+z\+::pure\+\_\+spinning\+\_\+local\+\_\+planner\+::optional\+Robot\+Pose (\begin{DoxyParamCaption}\item[{costmap\+\_\+2d\+::\+Costmap2\+DROS $\ast$}]{costmap\+Ros }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pure__spinning__local__planner_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{pure__spinning__local__planner_8cpp_source}{pure\+\_\+spinning\+\_\+local\+\_\+planner.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025 \{}
+\DoxyCodeLine{00026   tf::Stamped<tf::Pose> tfpose;}
+\DoxyCodeLine{00027   costmapRos-\/>getRobotPose(tfpose);}
+\DoxyCodeLine{00028   \textcolor{keywordflow}{return} tfpose;}
+\DoxyCodeLine{00029 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{pure__spinning__local__planner_8cpp_source_l00074}{cl\+\_\+move\+\_\+base\+\_\+z\+::pure\+\_\+spinning\+\_\+local\+\_\+planner\+::\+Pure\+Spinning\+Local\+Planner\+::compute\+Velocity\+Commands()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecl__move__base__z_1_1pure__spinning__local__planner_a9a9023445e13ea89ea8685132683c10c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacecl__move__base__z_1_1pure__spinning__local__planner_ab6a498d3454059055f0aebf49c7b82cf}\label{namespacecl__move__base__z_1_1pure__spinning__local__planner_ab6a498d3454059055f0aebf49c7b82cf}} 
+\index{cl\_move\_base\_z::pure\_spinning\_local\_planner@{cl\_move\_base\_z::pure\_spinning\_local\_planner}!publishGoalMarker@{publishGoalMarker}}
+\index{publishGoalMarker@{publishGoalMarker}!cl\_move\_base\_z::pure\_spinning\_local\_planner@{cl\_move\_base\_z::pure\_spinning\_local\_planner}}
+\doxysubsubsection{\texorpdfstring{publishGoalMarker()}{publishGoalMarker()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+base\+\_\+z\+::pure\+\_\+spinning\+\_\+local\+\_\+planner\+::publish\+Goal\+Marker (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{phi }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pure__spinning__local__planner_8cpp_source_l00145}{145}} of file \mbox{\hyperlink{pure__spinning__local__planner_8cpp_source}{pure\+\_\+spinning\+\_\+local\+\_\+planner.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00146 \{}
+\DoxyCodeLine{00147 \}}
+
+\end{DoxyCode}

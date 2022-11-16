@@ -1,0 +1,108 @@
+\hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper}{}\doxysection{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+gripper\+::Cb\+Open\+Gripper Class Reference}
+\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper}\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_gripper::CbOpenGripper@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_gripper::CbOpenGripper}}
+
+
+{\ttfamily \#include $<$cb\+\_\+open\+\_\+gripper.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+gripper\+::Cb\+Open\+Gripper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+gripper\+::Cb\+Open\+Gripper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper_a08f95a8f05e33c1a04b77fa5f3465d78}{on\+Entry}} () override
+\item 
+virtual void \mbox{\hyperlink{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper_aa5943cc677a643e9e7cd5d57766857fc}{on\+Exit}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2clifd54e3ade7c7ed86b168f26e040f7921_source_l00010}{10}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2clifd54e3ade7c7ed86b168f26e040f7921_source}{cb\+\_\+open\+\_\+gripper.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper_a08f95a8f05e33c1a04b77fa5f3465d78}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper_a08f95a8f05e33c1a04b77fa5f3465d78}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_gripper::CbOpenGripper@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_gripper::CbOpenGripper}!onEntry@{onEntry}}
+\index{onEntry@{onEntry}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_gripper::CbOpenGripper@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_gripper::CbOpenGripper}}
+\doxysubsubsection{\texorpdfstring{onEntry()}{onEntry()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+gripper\+::\+Cb\+Open\+Gripper\+::on\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1SmaccClientBehavior_ad5d3e1f1697c3cfe66c94cadba948493}{smacc\+::\+Smacc\+Client\+Behavior}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2clifd54e3ade7c7ed86b168f26e040f7921_source_l00013}{13}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2clifd54e3ade7c7ed86b168f26e040f7921_source}{cb\+\_\+open\+\_\+gripper.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014     \{}
+\DoxyCodeLine{00015         ClGripper *gripper;}
+\DoxyCodeLine{00016         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a32b16e99e3b4cb289414203dc861a440}{requiresClient}}(gripper);}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018         control\_msgs::GripperCommandGoal gripperGoal;}
+\DoxyCodeLine{00019         gripperGoal.command.position = 100;}
+\DoxyCodeLine{00020         gripperGoal.command.max\_effort = 100;}
+\DoxyCodeLine{00021         gripper-\/>sendGoal(gripperGoal);}
+\DoxyCodeLine{00022     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__client__behavior__impl_8h_source_l00054}{smacc\+::\+ISmacc\+Client\+Behavior\+::requires\+Client()}}, and \mbox{\hyperlink{smacc__action__client__base_8h_source_l00177}{smacc\+::client\+\_\+bases\+::\+Smacc\+Action\+Client\+Base$<$ Action\+Type $>$\+::send\+Goal()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper_a08f95a8f05e33c1a04b77fa5f3465d78_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper_aa5943cc677a643e9e7cd5d57766857fc}\label{classsm__fetch__two__table__pick__n__place__1_1_1cl__gripper_1_1CbOpenGripper_aa5943cc677a643e9e7cd5d57766857fc}} 
+\index{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_gripper::CbOpenGripper@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_gripper::CbOpenGripper}!onExit@{onExit}}
+\index{onExit@{onExit}!sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_gripper::CbOpenGripper@{sm\_fetch\_two\_table\_pick\_n\_place\_1::cl\_gripper::CbOpenGripper}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1\+::cl\+\_\+gripper\+::\+Cb\+Open\+Gripper\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1SmaccClientBehavior_a7e4fb6ce81ff96dc172425852d69c0c5}{smacc\+::\+Smacc\+Client\+Behavior}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2clifd54e3ade7c7ed86b168f26e040f7921_source_l00024}{24}} of file \mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2clifd54e3ade7c7ed86b168f26e040f7921_source}{cb\+\_\+open\+\_\+gripper.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025     \{}
+\DoxyCodeLine{00026     \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1/include/sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+pick\+\_\+n\+\_\+place\+\_\+1/clients/gripper\+\_\+client/client\+\_\+behaviors/\mbox{\hyperlink{sm__fetch__two__table__pick__n__place__1_2include_2sm__fetch__two__table__pick__n__place__1_2clifd54e3ade7c7ed86b168f26e040f7921}{cb\+\_\+open\+\_\+gripper.\+h}}\end{DoxyCompactItemize}

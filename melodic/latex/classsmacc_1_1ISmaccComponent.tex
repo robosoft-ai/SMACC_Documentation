@@ -1,0 +1,526 @@
+\hypertarget{classsmacc_1_1ISmaccComponent}{}\doxysection{smacc\+::ISmacc\+Component Class Reference}
+\label{classsmacc_1_1ISmaccComponent}\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+
+
+{\ttfamily \#include $<$component.\+h$>$}
+
+
+
+Inheritance diagram for smacc\+::ISmacc\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for smacc\+::ISmacc\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a43952d7269ddb81d017a80f018fe502e}{ISmacc\+Component}} ()
+\item 
+virtual \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a46f5cfc6a308de938b6ee3a5e80a8fe9}{$\sim$\+ISmacc\+Component}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a8bfa94b1b1c616d55837ebba1b426c6e}{get\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a3378552cb1a86aa26a07c0edc057448b}{initialize}} (\mbox{\hyperlink{classsmacc_1_1ISmaccClient}{ISmacc\+Client}} $\ast$owner)
+\item 
+void \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_afe57665a6982475e8f9c2a5885e986e1}{set\+State\+Machine}} (\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmacc\+State\+Machine}} $\ast$state\+Machine)
+\item 
+{\footnotesize template$<$typename Event\+Type $>$ }\\void \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a687dead5b87a3b9781b9bf6ab0b7afa5}{post\+Event}} (const Event\+Type \&ev)
+\item 
+{\footnotesize template$<$typename Event\+Type $>$ }\\void \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a84455564c2c4b90be58e900050232722}{post\+Event}} ()
+\item 
+{\footnotesize template$<$typename TOrthogonal , typename TSource\+Object $>$ }\\void \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a709535b31a309e95a89ec3e4f4c54f30}{on\+Orthogonal\+Allocation}} ()
+\item 
+{\footnotesize template$<$typename TComponent $>$ }\\void \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_aa06d58b1dcec3c513ca2edddfd3847ec}{requires\+Component}} (TComponent $\ast$\&required\+Component\+Storage)
+\item 
+{\footnotesize template$<$typename \mbox{\hyperlink{classTClient}{TClient}} $>$ }\\void \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a36c085d906fbae0fcaee817aaeafebf4}{requires\+Client}} (\mbox{\hyperlink{classTClient}{TClient}} $\ast$\&required\+Client\+Storage)
+\item 
+virtual void \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_ae6f71d008db12553912e9436184b9e65}{on\+Initialize}} ()
+\item 
+{\footnotesize template$<$typename Smacc\+Component\+Type , typename TOrthogonal , typename \mbox{\hyperlink{classTClient}{TClient}} , typename... TArgs$>$ }\\Smacc\+Component\+Type $\ast$ \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a85a3f70369d18176aa0a28c3ba31b945}{create\+Sibling\+Component}} (TArgs... targs)
+\item 
+{\footnotesize template$<$typename Smacc\+Component\+Type , typename TOrthogonal , typename \mbox{\hyperlink{classTClient}{TClient}} , typename... TArgs$>$ }\\Smacc\+Component\+Type $\ast$ \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a86afd97c9eaed89073def7c51a3c86ab}{create\+Sibling\+Named\+Component}} (std\+::string name, TArgs... targs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmacc\+State\+Machine}} $\ast$ \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_ae3f37acc1679f79299b86872d4b1f80f}{state\+Machine\+\_\+}}
+\item 
+\mbox{\hyperlink{classsmacc_1_1ISmaccClient}{ISmacc\+Client}} $\ast$ \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a7205cc84a71fea903124d54d01e99a68}{ISmacc\+Orthogonal}}
+\item 
+class \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a64e981df7a9da02075b7668b3391ca1e}{ISmacc\+Client}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{component_8h_source_l00014}{14}} of file \mbox{\hyperlink{component_8h_source}{component.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a43952d7269ddb81d017a80f018fe502e}\label{classsmacc_1_1ISmaccComponent_a43952d7269ddb81d017a80f018fe502e}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!ISmaccComponent@{ISmaccComponent}}
+\index{ISmaccComponent@{ISmaccComponent}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{ISmaccComponent()}{ISmaccComponent()}}
+{\footnotesize\ttfamily smacc\+::\+ISmacc\+Component\+::\+ISmacc\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{smacc__component_8cpp_source}{smacc\+\_\+component.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016     : \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\_}}(\textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00017 \{}
+\DoxyCodeLine{00018 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a46f5cfc6a308de938b6ee3a5e80a8fe9}\label{classsmacc_1_1ISmaccComponent_a46f5cfc6a308de938b6ee3a5e80a8fe9}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!````~ISmaccComponent@{$\sim$ISmaccComponent}}
+\index{````~ISmaccComponent@{$\sim$ISmaccComponent}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{$\sim$ISmaccComponent()}{~ISmaccComponent()}}
+{\footnotesize\ttfamily smacc\+::\+ISmacc\+Component\+::$\sim$\+ISmacc\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{smacc__component_8cpp_source}{smacc\+\_\+component.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a85a3f70369d18176aa0a28c3ba31b945}\label{classsmacc_1_1ISmaccComponent_a85a3f70369d18176aa0a28c3ba31b945}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!createSiblingComponent@{createSiblingComponent}}
+\index{createSiblingComponent@{createSiblingComponent}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{createSiblingComponent()}{createSiblingComponent()}}
+{\footnotesize\ttfamily template$<$typename Smacc\+Component\+Type , typename TOrthogonal , typename \mbox{\hyperlink{classTClient}{TClient}} , typename... TArgs$>$ \\
+Smacc\+Component\+Type $\ast$ smacc\+::\+ISmacc\+Component\+::create\+Sibling\+Component (\begin{DoxyParamCaption}\item[{TArgs...}]{targs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component__impl_8h_source_l00033}{33}} of file \mbox{\hyperlink{smacc__component__impl_8h_source}{smacc\+\_\+component\+\_\+impl.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a5c1c8eb5e91a3b399662a52cb0ca86aa}{createComponent}}<SmaccComponentType, TOrthogonal, \mbox{\hyperlink{classTClient}{TClient}}>(targs...);}
+\DoxyCodeLine{00036     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__client__impl_8h_source_l00090}{smacc\+::\+ISmacc\+Client\+::create\+Component()}}, and \mbox{\hyperlink{component_8h_source_l00057}{owner\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_a85a3f70369d18176aa0a28c3ba31b945_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a86afd97c9eaed89073def7c51a3c86ab}\label{classsmacc_1_1ISmaccComponent_a86afd97c9eaed89073def7c51a3c86ab}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!createSiblingNamedComponent@{createSiblingNamedComponent}}
+\index{createSiblingNamedComponent@{createSiblingNamedComponent}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{createSiblingNamedComponent()}{createSiblingNamedComponent()}}
+{\footnotesize\ttfamily template$<$typename Smacc\+Component\+Type , typename TOrthogonal , typename \mbox{\hyperlink{classTClient}{TClient}} , typename... TArgs$>$ \\
+Smacc\+Component\+Type $\ast$ smacc\+::\+ISmacc\+Component\+::create\+Sibling\+Named\+Component (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{TArgs...}]{targs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component__impl_8h_source_l00039}{39}} of file \mbox{\hyperlink{smacc__component__impl_8h_source}{smacc\+\_\+component\+\_\+impl.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040     \{}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_affcc2f95bc993b5f07ef0d6ab6eec8f1}{createNamedComponent}}<SmaccComponentType, TOrthogonal, \mbox{\hyperlink{classTClient}{TClient}}>(name, targs...);}
+\DoxyCodeLine{00042     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__client__impl_8h_source_l00057}{smacc\+::\+ISmacc\+Client\+::create\+Named\+Component()}}, and \mbox{\hyperlink{component_8h_source_l00057}{owner\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_a86afd97c9eaed89073def7c51a3c86ab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a8bfa94b1b1c616d55837ebba1b426c6e}\label{classsmacc_1_1ISmaccComponent_a8bfa94b1b1c616d55837ebba1b426c6e}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!getName@{getName}}
+\index{getName@{getName}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string smacc\+::\+ISmacc\+Component\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{smacc__component_8cpp_source}{smacc\+\_\+component.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037 \{}
+\DoxyCodeLine{00038     std::string keyname = \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(*this).name());}
+\DoxyCodeLine{00039     \textcolor{keywordflow}{return} keyname;}
+\DoxyCodeLine{00040 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{introspection_8h_source_l00051}{smacc\+::introspection\+::demangle\+Symbol()}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00072}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::initialize()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_a8bfa94b1b1c616d55837ebba1b426c6e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_a8bfa94b1b1c616d55837ebba1b426c6e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a3378552cb1a86aa26a07c0edc057448b}\label{classsmacc_1_1ISmaccComponent_a3378552cb1a86aa26a07c0edc057448b}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!initialize@{initialize}}
+\index{initialize@{initialize}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void smacc\+::\+ISmacc\+Component\+::initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsmacc_1_1ISmaccClient}{ISmacc\+Client}} $\ast$}]{owner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{smacc__component_8cpp_source}{smacc\+\_\+component.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022     \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\_}} = owner;}
+\DoxyCodeLine{00023     this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_ae6f71d008db12553912e9436184b9e65}{onInitialize}}();}
+\DoxyCodeLine{00024 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__component_8cpp_source_l00026}{on\+Initialize()}}, and \mbox{\hyperlink{component_8h_source_l00057}{owner\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__viewer__sim_2include_2sm__viewer__sim_2orthogonals_2or__navigation_8h_source_l00012}{sm\+\_\+viewer\+\_\+sim\+::\+Or\+Navigation\+::on\+Initialize()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_a3378552cb1a86aa26a07c0edc057448b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_a3378552cb1a86aa26a07c0edc057448b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_ae6f71d008db12553912e9436184b9e65}\label{classsmacc_1_1ISmaccComponent_ae6f71d008db12553912e9436184b9e65}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily void smacc\+::\+ISmacc\+Component\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a469bdb5723a9ab66d6b0a7908d5891bf}{smacc\+::components\+::\+Cp\+Ros\+Control\+Interface}}, \mbox{\hyperlink{classcl__move__base__z_1_1CostmapSwitch_ad4d125cd563ed0bb76d27226bc47e63e}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Costmap\+Switch}}, \mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a36bc2b9788f03a1ca02b954c625ef4c5}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Planner\+Switcher}}, \mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator_ac60ecf63f7a2a84f3ef51f04cc222a70}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Waypoint\+Navigator}}, \mbox{\hyperlink{classsm__dance__bot__strikes__back_1_1cl__lidar_1_1CpLidarSensorData_a138dad9a855d5d4962410374d0a29d30}{sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::cl\+\_\+lidar\+::\+Cp\+Lidar\+Sensor\+Data}}, \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintLateralWorkspace_a6b1911a83059bef46803e9973fc325d8}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Lateral\+Workspace}}, \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintTableWorkspaces_a813b53264563225547f31651fd5b3f76}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Table\+Workspaces}}, \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a1dcf39e1ad5ddbbec29a278677a2c680}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall}}, \mbox{\hyperlink{classsm__fetch__screw__loop__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a2cde9f6f8ba4b5b660f7ac8cf86f9e29}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception}}, \mbox{\hyperlink{classsm__fetch__six__table__pick__n__sort__1_1_1cl__move__group__interface_1_1CpConstraintLateralWorkspace_ab6a7532f9f5c0a52eb149177dcadfeb2}{sm\+\_\+fetch\+\_\+six\+\_\+table\+\_\+pick\+\_\+n\+\_\+sort\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Lateral\+Workspace}}, \mbox{\hyperlink{classsm__fetch__six__table__pick__n__sort__1_1_1cl__move__group__interface_1_1CpConstraintTableWorkspaces_a546bdfe3331f1b3c286d4d41cc3deccf}{sm\+\_\+fetch\+\_\+six\+\_\+table\+\_\+pick\+\_\+n\+\_\+sort\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Table\+Workspaces}}, \mbox{\hyperlink{classsm__fetch__six__table__pick__n__sort__1_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a409f2624001978e120faa2f79d7e150e}{sm\+\_\+fetch\+\_\+six\+\_\+table\+\_\+pick\+\_\+n\+\_\+sort\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall}}, \mbox{\hyperlink{classsm__fetch__six__table__pick__n__sort__1_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_a59ebcf12c7fe1f7933ae4d741bc8aaea}{sm\+\_\+fetch\+\_\+six\+\_\+table\+\_\+pick\+\_\+n\+\_\+sort\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception}}, \mbox{\hyperlink{classsm__fetch__two__table__whiskey__pour_1_1cl__move__group__interface_1_1CpConstraintLateralWorkspace_a420fcf0fc6f89007a313e70458bca06c}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Lateral\+Workspace}}, \mbox{\hyperlink{classsm__fetch__two__table__whiskey__pour_1_1cl__move__group__interface_1_1CpConstraintTableWorkspaces_a6d333c263396864c34db183ea530f73c}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Table\+Workspaces}}, \mbox{\hyperlink{classsm__fetch__two__table__whiskey__pour_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a7f052ec290f7cb7ee2b6a288b221b9a2}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall}}, \mbox{\hyperlink{classsm__fetch__two__table__whiskey__pour_1_1cl__move__group__interface_1_1CpConstraintVirtualSideWall_a00d9f7eea9e5b91d4d2154c37e56f60e}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall}}, and \mbox{\hyperlink{classsm__fetch__two__table__whiskey__pour_1_1cl__perception__system_1_1CpSimulatedGazeboPerception_ad6c1bdf94360b5b737314dd40302e446}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception}}.
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{smacc__component_8cpp_source}{smacc\+\_\+component.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027 \{}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{smacc__component_8cpp_source_l00020}{initialize()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_ae6f71d008db12553912e9436184b9e65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a709535b31a309e95a89ec3e4f4c54f30}\label{classsmacc_1_1ISmaccComponent_a709535b31a309e95a89ec3e4f4c54f30}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!onOrthogonalAllocation@{onOrthogonalAllocation}}
+\index{onOrthogonalAllocation@{onOrthogonalAllocation}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{onOrthogonalAllocation()}{onOrthogonalAllocation()}}
+{\footnotesize\ttfamily template$<$typename TOrthogonal , typename TSource\+Object $>$ \\
+void smacc\+::\+ISmacc\+Component\+::on\+Orthogonal\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{component_8h_source_l00038}{38}} of file \mbox{\hyperlink{component_8h_source}{component.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a84455564c2c4b90be58e900050232722}\label{classsmacc_1_1ISmaccComponent_a84455564c2c4b90be58e900050232722}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!postEvent@{postEvent}}
+\index{postEvent@{postEvent}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{postEvent()}{postEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Event\+Type $>$ \\
+void smacc\+::\+ISmacc\+Component\+::post\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00057}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::on\+Orthogonal\+Allocation()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_a84455564c2c4b90be58e900050232722_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a687dead5b87a3b9781b9bf6ab0b7afa5}\label{classsmacc_1_1ISmaccComponent_a687dead5b87a3b9781b9bf6ab0b7afa5}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!postEvent@{postEvent}}
+\index{postEvent@{postEvent}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{postEvent()}{postEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Event\+Type $>$ \\
+void smacc\+::\+ISmacc\+Component\+::post\+Event (\begin{DoxyParamCaption}\item[{const Event\+Type \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component__impl_8h_source_l00015}{15}} of file \mbox{\hyperlink{smacc__component__impl_8h_source}{smacc\+\_\+component\+\_\+impl.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016     \{}
+\DoxyCodeLine{00017         \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_ae3f37acc1679f79299b86872d4b1f80f}{stateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_afcb6a216441aeaea2cba4e1ab12c366b}{postEvent}}(ev);}
+\DoxyCodeLine{00018     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00138}{smacc\+::\+ISmacc\+State\+Machine\+::post\+Event()}}, and \mbox{\hyperlink{component_8h_source_l00055}{state\+Machine\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_a687dead5b87a3b9781b9bf6ab0b7afa5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a36c085d906fbae0fcaee817aaeafebf4}\label{classsmacc_1_1ISmaccComponent_a36c085d906fbae0fcaee817aaeafebf4}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!requiresClient@{requiresClient}}
+\index{requiresClient@{requiresClient}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{requiresClient()}{requiresClient()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{classTClient}{TClient}} $>$ \\
+void smacc\+::\+ISmacc\+Component\+::requires\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTClient}{TClient}} $\ast$\&}]{required\+Client\+Storage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component__impl_8h_source_l00027}{27}} of file \mbox{\hyperlink{smacc__component__impl_8h_source}{smacc\+\_\+component\+\_\+impl.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028     \{}
+\DoxyCodeLine{00029         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a7a9990a2f3e35d547671188d69fee520}{requiresClient}}(requiredClientStorage);}
+\DoxyCodeLine{00030     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{component_8h_source_l00057}{owner\+\_\+}}, and \mbox{\hyperlink{smacc__client__impl_8h_source_l00102}{smacc\+::\+ISmacc\+Client\+::requires\+Client()}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clieb2113844d572b8f574ad1d1a7cee9cc1_source_l00030}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Lateral\+Workspace\+::on\+Initialize()}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__cliea9127a8bf4c5b4aa0723f6a4b59a622c_source_l00025}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Table\+Workspaces\+::on\+Initialize()}}, \mbox{\hyperlink{sm__fetch__screw__loop__1_2src_2sm__fetch__screw__loop__1_2clients_2move__group__interface__clie36fd24b5e8da3c87f2db2218c4264596_source_l00030}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::on\+Initialize()}}, \mbox{\hyperlink{sm__fetch__six__table__pick__n__sort__1_2src_2sm__fetch__six__table__pick__n__sort__1_2clients_23dd59363ba87521e62204a08705173cd_source_l00030}{sm\+\_\+fetch\+\_\+six\+\_\+table\+\_\+pick\+\_\+n\+\_\+sort\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Lateral\+Workspace\+::on\+Initialize()}}, \mbox{\hyperlink{sm__fetch__six__table__pick__n__sort__1_2src_2sm__fetch__six__table__pick__n__sort__1_2clients_2dc5c9e2964d595680863b8d8b2ee52ee_source_l00025}{sm\+\_\+fetch\+\_\+six\+\_\+table\+\_\+pick\+\_\+n\+\_\+sort\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Table\+Workspaces\+::on\+Initialize()}}, \mbox{\hyperlink{sm__fetch__six__table__pick__n__sort__1_2src_2sm__fetch__six__table__pick__n__sort__1_2clients_2674f5136ecf4d5f27de0ff918bdcc52c_source_l00030}{sm\+\_\+fetch\+\_\+six\+\_\+table\+\_\+pick\+\_\+n\+\_\+sort\+\_\+1\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::on\+Initialize()}}, \mbox{\hyperlink{sm__fetch__two__table__whiskey__pour_2src_2sm__fetch__two__table__whiskey__pour_2clients_2move__64789164897b910e95ab0e0910505529_source_l00030}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Lateral\+Workspace\+::on\+Initialize()}}, \mbox{\hyperlink{sm__fetch__two__table__whiskey__pour_2src_2sm__fetch__two__table__whiskey__pour_2clients_2move__39e7198a5872fbd262a4e7f0dd06817b_source_l00025}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Table\+Workspaces\+::on\+Initialize()}}, and \mbox{\hyperlink{sm__fetch__two__table__whiskey__pour_2src_2sm__fetch__two__table__whiskey__pour_2clients_2move__57a774cffb7062ac18eb3c417fc76699_source_l00031}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cp\+Constraint\+Virtual\+Side\+Wall\+::on\+Initialize()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_a36c085d906fbae0fcaee817aaeafebf4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsmacc_1_1ISmaccComponent_a36c085d906fbae0fcaee817aaeafebf4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_aa06d58b1dcec3c513ca2edddfd3847ec}\label{classsmacc_1_1ISmaccComponent_aa06d58b1dcec3c513ca2edddfd3847ec}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!requiresComponent@{requiresComponent}}
+\index{requiresComponent@{requiresComponent}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{requiresComponent()}{requiresComponent()}}
+{\footnotesize\ttfamily template$<$typename TComponent $>$ \\
+void smacc\+::\+ISmacc\+Component\+::requires\+Component (\begin{DoxyParamCaption}\item[{TComponent $\ast$\&}]{required\+Component\+Storage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component__impl_8h_source_l00021}{21}} of file \mbox{\hyperlink{smacc__component__impl_8h_source}{smacc\+\_\+component\+\_\+impl.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022     \{}
+\DoxyCodeLine{00023         requiredComponentStorage = this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<TComponent>();}
+\DoxyCodeLine{00024     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__client__impl_8h_source_l00027}{smacc\+::\+ISmacc\+Client\+::get\+Component()}}, and \mbox{\hyperlink{component_8h_source_l00057}{owner\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__fetch__screw__loop__1_2include_2sm__fetch__screw__loop__1_2clients_2perception__system__clie071e67c5e368edaa0c41500876620cab_source_l00069}{sm\+\_\+fetch\+\_\+screw\+\_\+loop\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::identify\+Cube\+Colors\+By\+Names()}}, \mbox{\hyperlink{sm__fetch__six__table__pick__n__sort__1_2include_2sm__fetch__six__table__pick__n__sort__1_2clien03f67e02ecc6181787e7b5c2ec6798da_source_l00069}{sm\+\_\+fetch\+\_\+six\+\_\+table\+\_\+pick\+\_\+n\+\_\+sort\+\_\+1\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::identify\+Cube\+Colors\+By\+Names()}}, and \mbox{\hyperlink{sm__fetch__two__table__whiskey__pour_2include_2sm__fetch__two__table__whiskey__pour_2clients_2pea31d8f5f7b1533d1142b362d3fe03cdd_source_l00069}{sm\+\_\+fetch\+\_\+two\+\_\+table\+\_\+whiskey\+\_\+pour\+::cl\+\_\+perception\+\_\+system\+::\+Cp\+Simulated\+Gazebo\+Perception\+::identify\+Cube\+Colors\+By\+Names()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_aa06d58b1dcec3c513ca2edddfd3847ec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccComponent_aa06d58b1dcec3c513ca2edddfd3847ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_afe57665a6982475e8f9c2a5885e986e1}\label{classsmacc_1_1ISmaccComponent_afe57665a6982475e8f9c2a5885e986e1}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!setStateMachine@{setStateMachine}}
+\index{setStateMachine@{setStateMachine}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{setStateMachine()}{setStateMachine()}}
+{\footnotesize\ttfamily void smacc\+::\+ISmacc\+Component\+::set\+State\+Machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmacc\+State\+Machine}} $\ast$}]{state\+Machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__component_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{smacc__component_8cpp_source}{smacc\+\_\+component.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032 \{}
+\DoxyCodeLine{00033     \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_ae3f37acc1679f79299b86872d4b1f80f}{stateMachine\_}} = stateMachine;}
+\DoxyCodeLine{00034 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{component_8h_source_l00055}{state\+Machine\+\_\+}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a64e981df7a9da02075b7668b3391ca1e}\label{classsmacc_1_1ISmaccComponent_a64e981df7a9da02075b7668b3391ca1e}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!ISmaccClient@{ISmaccClient}}
+\index{ISmaccClient@{ISmaccClient}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{ISmaccClient}{ISmaccClient}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classsmacc_1_1ISmaccClient}{ISmacc\+Client}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{component_8h_source_l00060}{60}} of file \mbox{\hyperlink{component_8h_source}{component.\+h}}.
+
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a7205cc84a71fea903124d54d01e99a68}\label{classsmacc_1_1ISmaccComponent_a7205cc84a71fea903124d54d01e99a68}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!ISmaccOrthogonal@{ISmaccOrthogonal}}
+\index{ISmaccOrthogonal@{ISmaccOrthogonal}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{ISmaccOrthogonal}{ISmaccOrthogonal}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal}{ISmacc\+Orthogonal}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{component_8h_source_l00059}{59}} of file \mbox{\hyperlink{component_8h_source}{component.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}\label{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!owner\_@{owner\_}}
+\index{owner\_@{owner\_}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{owner\_}{owner\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsmacc_1_1ISmaccClient}{ISmacc\+Client}}$\ast$ smacc\+::\+ISmacc\+Component\+::owner\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{component_8h_source_l00057}{57}} of file \mbox{\hyperlink{component_8h_source}{component.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__component__impl_8h_source_l00033}{create\+Sibling\+Component()}}, \mbox{\hyperlink{smacc__component__impl_8h_source_l00039}{create\+Sibling\+Named\+Component()}}, \mbox{\hyperlink{smacc__component_8cpp_source_l00020}{initialize()}}, \mbox{\hyperlink{cp__costmap__switch_8cpp_source_l00025}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Costmap\+Switch\+::on\+Initialize()}}, \mbox{\hyperlink{planner__switcher_8cpp_source_l00016}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Planner\+Switcher\+::on\+Initialize()}}, \mbox{\hyperlink{waypoints__navigator_8cpp_source_l00020}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Waypoint\+Navigator\+::on\+Initialize()}}, \mbox{\hyperlink{cp__lidar__data_8h_source_l00016}{sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::cl\+\_\+lidar\+::\+Cp\+Lidar\+Sensor\+Data\+::on\+Initialize()}}, \mbox{\hyperlink{smacc__component__impl_8h_source_l00027}{requires\+Client()}}, and \mbox{\hyperlink{smacc__component__impl_8h_source_l00021}{requires\+Component()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1ISmaccComponent_ae3f37acc1679f79299b86872d4b1f80f}\label{classsmacc_1_1ISmaccComponent_ae3f37acc1679f79299b86872d4b1f80f}} 
+\index{smacc::ISmaccComponent@{smacc::ISmaccComponent}!stateMachine\_@{stateMachine\_}}
+\index{stateMachine\_@{stateMachine\_}!smacc::ISmaccComponent@{smacc::ISmaccComponent}}
+\doxysubsubsection{\texorpdfstring{stateMachine\_}{stateMachine\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmacc\+State\+Machine}}$\ast$ smacc\+::\+ISmacc\+Component\+::state\+Machine\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{component_8h_source_l00055}{55}} of file \mbox{\hyperlink{component_8h_source}{component.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__component__impl_8h_source_l00015}{post\+Event()}}, and \mbox{\hyperlink{smacc__component_8cpp_source_l00031}{set\+State\+Machine()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+smacc/include/smacc/\mbox{\hyperlink{component_8h}{component.\+h}}\item 
+smacc/include/smacc/impl/\mbox{\hyperlink{smacc__component__impl_8h}{smacc\+\_\+component\+\_\+impl.\+h}}\item 
+smacc/src/smacc/\mbox{\hyperlink{smacc__component_8cpp}{smacc\+\_\+component.\+cpp}}\end{DoxyCompactItemize}

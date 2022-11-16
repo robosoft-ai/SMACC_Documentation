@@ -1,0 +1,73 @@
+\hypertarget{classsm__dance__bot__strikes__back_1_1OrObstaclePerception}{}\doxysection{sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::Or\+Obstacle\+Perception Class Reference}
+\label{classsm__dance__bot__strikes__back_1_1OrObstaclePerception}\index{sm\_dance\_bot\_strikes\_back::OrObstaclePerception@{sm\_dance\_bot\_strikes\_back::OrObstaclePerception}}
+
+
+{\ttfamily \#include $<$or\+\_\+obstacle\+\_\+perception.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::Or\+Obstacle\+Perception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsm__dance__bot__strikes__back_1_1OrObstaclePerception__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::Or\+Obstacle\+Perception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__dance__bot__strikes__back_1_1OrObstaclePerception__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsm__dance__bot__strikes__back_1_1OrObstaclePerception_a11bcaa362ceecfbd5b26562e4b380c3c}{on\+Initialize}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2orthogonals_2or__obstacle__perception_8h_source_l00009}{9}} of file \mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2orthogonals_2or__obstacle__perception_8h_source}{or\+\_\+obstacle\+\_\+perception.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__dance__bot__strikes__back_1_1OrObstaclePerception_a11bcaa362ceecfbd5b26562e4b380c3c}\label{classsm__dance__bot__strikes__back_1_1OrObstaclePerception_a11bcaa362ceecfbd5b26562e4b380c3c}} 
+\index{sm\_dance\_bot\_strikes\_back::OrObstaclePerception@{sm\_dance\_bot\_strikes\_back::OrObstaclePerception}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!sm\_dance\_bot\_strikes\_back::OrObstaclePerception@{sm\_dance\_bot\_strikes\_back::OrObstaclePerception}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::\+Or\+Obstacle\+Perception\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a6bb31c620cb64dd7b8417f8705c79c7a}{smacc\+::\+ISmacc\+Orthogonal}}.
+
+
+
+Definition at line \mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2orthogonals_2or__obstacle__perception_8h_source_l00012}{12}} of file \mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2orthogonals_2or__obstacle__perception_8h_source}{or\+\_\+obstacle\+\_\+perception.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013     \{}
+\DoxyCodeLine{00014         \textcolor{keyword}{auto} lidarClient =}
+\DoxyCodeLine{00015             this-\/>createClient<ClLidarSensor>(\textcolor{stringliteral}{"{}/front/scan"{}}, ros::Duration(10));}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017         lidarClient-\/>initialize();}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019         lidarClient-\/>createComponent<CpLidarSensorData>();}
+\DoxyCodeLine{00020     \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back/include/sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back/orthogonals/\mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2orthogonals_2or__obstacle__perception_8h}{or\+\_\+obstacle\+\_\+perception.\+h}}\end{DoxyCompactItemize}

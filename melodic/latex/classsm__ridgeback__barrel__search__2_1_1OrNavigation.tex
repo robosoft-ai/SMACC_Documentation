@@ -1,0 +1,151 @@
+\hypertarget{classsm__ridgeback__barrel__search__2_1_1OrNavigation}{}\doxysection{sm\+\_\+ridgeback\+\_\+barrel\+\_\+search\+\_\+2\+::Or\+Navigation Class Reference}
+\label{classsm__ridgeback__barrel__search__2_1_1OrNavigation}\index{sm\_ridgeback\_barrel\_search\_2::OrNavigation@{sm\_ridgeback\_barrel\_search\_2::OrNavigation}}
+
+
+{\ttfamily \#include $<$or\+\_\+navigation.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+ridgeback\+\_\+barrel\+\_\+search\+\_\+2\+::Or\+Navigation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsm__ridgeback__barrel__search__2_1_1OrNavigation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+ridgeback\+\_\+barrel\+\_\+search\+\_\+2\+::Or\+Navigation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__ridgeback__barrel__search__2_1_1OrNavigation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsm__ridgeback__barrel__search__2_1_1OrNavigation_aee279dd334bda539b0a2b614ec32b95f}{on\+Initialize}} () override
+\item 
+void \mbox{\hyperlink{classsm__ridgeback__barrel__search__2_1_1OrNavigation_acf8aa6378fc7a286c5bec3415ab45f7d}{load\+Waypoints\+From\+Yaml}} (\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator}{Waypoint\+Navigator}} $\ast$waypoints\+Navigator)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2include_2sm__ridgeback__barrel__search__2_2orthogonals_2or__navigation_8h_source_l00014}{14}} of file \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2include_2sm__ridgeback__barrel__search__2_2orthogonals_2or__navigation_8h_source}{or\+\_\+navigation.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__ridgeback__barrel__search__2_1_1OrNavigation_acf8aa6378fc7a286c5bec3415ab45f7d}\label{classsm__ridgeback__barrel__search__2_1_1OrNavigation_acf8aa6378fc7a286c5bec3415ab45f7d}} 
+\index{sm\_ridgeback\_barrel\_search\_2::OrNavigation@{sm\_ridgeback\_barrel\_search\_2::OrNavigation}!loadWaypointsFromYaml@{loadWaypointsFromYaml}}
+\index{loadWaypointsFromYaml@{loadWaypointsFromYaml}!sm\_ridgeback\_barrel\_search\_2::OrNavigation@{sm\_ridgeback\_barrel\_search\_2::OrNavigation}}
+\doxysubsubsection{\texorpdfstring{loadWaypointsFromYaml()}{loadWaypointsFromYaml()}}
+{\footnotesize\ttfamily void sm\+\_\+ridgeback\+\_\+barrel\+\_\+search\+\_\+2\+::\+Or\+Navigation\+::load\+Waypoints\+From\+Yaml (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcl__move__base__z_1_1WaypointNavigator}{Waypoint\+Navigator}} $\ast$}]{waypoints\+Navigator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2include_2sm__ridgeback__barrel__search__2_2orthogonals_2or__navigation_8h_source_l00038}{38}} of file \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2include_2sm__ridgeback__barrel__search__2_2orthogonals_2or__navigation_8h_source}{or\+\_\+navigation.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039         \{}
+\DoxyCodeLine{00040             \textcolor{comment}{// if it is the first time and the waypoints navigator is not configured}}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042             std::string planfilepath;}
+\DoxyCodeLine{00043             ros::NodeHandle nh(\textcolor{stringliteral}{"{}\string~"{}});}
+\DoxyCodeLine{00044             \textcolor{keywordflow}{if} (nh.getParam(\textcolor{stringliteral}{"{}waypoints\_plan"{}}, planfilepath))}
+\DoxyCodeLine{00045             \{}
+\DoxyCodeLine{00046                 ROS\_INFO(\textcolor{stringliteral}{"{}Loaded waypoints path file: \%s"{}}, planfilepath.c\_str());}
+\DoxyCodeLine{00047                 waypointsNavigator-\/>loadWayPointsFromFile(planfilepath);}
+\DoxyCodeLine{00048             \}}
+\DoxyCodeLine{00049             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00050             \{}
+\DoxyCodeLine{00051                 ROS\_ERROR(\textcolor{stringliteral}{"{}Error while loading waypoints\_path file: not found"{}});}
+\DoxyCodeLine{00052             \}}
+\DoxyCodeLine{00053         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{waypoints__navigator_8cpp_source_l00116}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Waypoint\+Navigator\+::load\+Way\+Points\+From\+File()}}.
+
+
+
+Referenced by \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2include_2sm__ridgeback__barrel__search__2_2orthogonals_2or__navigation_8h_source_l00017}{on\+Initialize()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__ridgeback__barrel__search__2_1_1OrNavigation_acf8aa6378fc7a286c5bec3415ab45f7d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__ridgeback__barrel__search__2_1_1OrNavigation_acf8aa6378fc7a286c5bec3415ab45f7d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsm__ridgeback__barrel__search__2_1_1OrNavigation_aee279dd334bda539b0a2b614ec32b95f}\label{classsm__ridgeback__barrel__search__2_1_1OrNavigation_aee279dd334bda539b0a2b614ec32b95f}} 
+\index{sm\_ridgeback\_barrel\_search\_2::OrNavigation@{sm\_ridgeback\_barrel\_search\_2::OrNavigation}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!sm\_ridgeback\_barrel\_search\_2::OrNavigation@{sm\_ridgeback\_barrel\_search\_2::OrNavigation}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+ridgeback\+\_\+barrel\+\_\+search\+\_\+2\+::\+Or\+Navigation\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a6bb31c620cb64dd7b8417f8705c79c7a}{smacc\+::\+ISmacc\+Orthogonal}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2include_2sm__ridgeback__barrel__search__2_2orthogonals_2or__navigation_8h_source_l00017}{17}} of file \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2include_2sm__ridgeback__barrel__search__2_2orthogonals_2or__navigation_8h_source}{or\+\_\+navigation.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018         \{}
+\DoxyCodeLine{00019             \textcolor{keyword}{auto} movebaseClient = this-\/>createClient<ClMoveBaseZ>();}
+\DoxyCodeLine{00020             movebaseClient-\/>initialize();}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022             movebaseClient-\/>createComponent<Pose>();}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024             \textcolor{comment}{// create planner switcher}}
+\DoxyCodeLine{00025             movebaseClient-\/>createComponent<PlannerSwitcher>();}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027             \textcolor{comment}{// create odom tracker}}
+\DoxyCodeLine{00028             movebaseClient-\/>createComponent<\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker}{cl\_move\_base\_z::odom\_tracker::OdomTracker}}>();}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030             \textcolor{comment}{// create waypoints navigator component}}
+\DoxyCodeLine{00031             \textcolor{keyword}{auto} waypointsNavigator = movebaseClient-\/>createComponent<WaypointNavigator>();}
+\DoxyCodeLine{00032             \mbox{\hyperlink{classsm__ridgeback__barrel__search__2_1_1OrNavigation_acf8aa6378fc7a286c5bec3415ab45f7d}{loadWaypointsFromYaml}}(waypointsNavigator);}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034             \textcolor{comment}{// change this to skip some points of the yaml file, default = 0}}
+\DoxyCodeLine{00035             \textcolor{comment}{// waypointsNavigator-\/>currentWaypoint\_ = 3;}}
+\DoxyCodeLine{00036         \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2include_2sm__ridgeback__barrel__search__2_2orthogonals_2or__navigation_8h_source_l00038}{load\+Waypoints\+From\+Yaml()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__ridgeback__barrel__search__2_1_1OrNavigation_aee279dd334bda539b0a2b614ec32b95f_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+ridgeback\+\_\+barrel\+\_\+search\+\_\+2/include/sm\+\_\+ridgeback\+\_\+barrel\+\_\+search\+\_\+2/orthogonals/\mbox{\hyperlink{sm__ridgeback__barrel__search__2_2include_2sm__ridgeback__barrel__search__2_2orthogonals_2or__navigation_8h}{or\+\_\+navigation.\+h}}\end{DoxyCompactItemize}

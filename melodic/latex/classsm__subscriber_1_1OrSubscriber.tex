@@ -1,0 +1,69 @@
+\hypertarget{classsm__subscriber_1_1OrSubscriber}{}\doxysection{sm\+\_\+subscriber\+::Or\+Subscriber Class Reference}
+\label{classsm__subscriber_1_1OrSubscriber}\index{sm\_subscriber::OrSubscriber@{sm\_subscriber::OrSubscriber}}
+
+
+{\ttfamily \#include $<$or\+\_\+subscriber.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+subscriber\+::Or\+Subscriber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsm__subscriber_1_1OrSubscriber__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+subscriber\+::Or\+Subscriber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__subscriber_1_1OrSubscriber__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsm__subscriber_1_1OrSubscriber_a58ac0563654fc1da27717b35acf4f810}{on\+Initialize}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sm__subscriber_2include_2sm__subscriber_2orthogonals_2or__subscriber_8h_source_l00008}{8}} of file \mbox{\hyperlink{sm__subscriber_2include_2sm__subscriber_2orthogonals_2or__subscriber_8h_source}{or\+\_\+subscriber.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__subscriber_1_1OrSubscriber_a58ac0563654fc1da27717b35acf4f810}\label{classsm__subscriber_1_1OrSubscriber_a58ac0563654fc1da27717b35acf4f810}} 
+\index{sm\_subscriber::OrSubscriber@{sm\_subscriber::OrSubscriber}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!sm\_subscriber::OrSubscriber@{sm\_subscriber::OrSubscriber}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+subscriber\+::\+Or\+Subscriber\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a6bb31c620cb64dd7b8417f8705c79c7a}{smacc\+::\+ISmacc\+Orthogonal}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__subscriber_2include_2sm__subscriber_2orthogonals_2or__subscriber_8h_source_l00011}{11}} of file \mbox{\hyperlink{sm__subscriber_2include_2sm__subscriber_2orthogonals_2or__subscriber_8h_source}{or\+\_\+subscriber.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012   \{}
+\DoxyCodeLine{00013     \textcolor{keyword}{auto} subscriber\_client = this-\/>createClient<ClNumbersSubscription>(\textcolor{stringliteral}{"{}/numbers"{}});}
+\DoxyCodeLine{00014     subscriber\_client -\/>initialize();}
+\DoxyCodeLine{00015   \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+subscriber/include/sm\+\_\+subscriber/orthogonals/\mbox{\hyperlink{sm__subscriber_2include_2sm__subscriber_2orthogonals_2or__subscriber_8h}{or\+\_\+subscriber.\+h}}\end{DoxyCompactItemize}

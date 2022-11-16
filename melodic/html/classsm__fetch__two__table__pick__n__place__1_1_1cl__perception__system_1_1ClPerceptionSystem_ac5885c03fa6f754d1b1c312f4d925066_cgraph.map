@@ -1,0 +1,8 @@
+<map id="sm_fetch_two_table_pick_n_place_1::cl_perception_system::ClPerceptionSystem::decidePlacePose" name="sm_fetch_two_table_pick_n_place_1::cl_perception_system::ClPerceptionSystem::decidePlacePose">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,224,127"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccClient.html#adef78db601749ca63c19e74a27cb88cc" title=" " alt="" coords="277,5,422,47"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClient.html#a7a9990a2f3e35d547671188d69fee520" title=" " alt="" coords="277,71,422,112"/>
+<area shape="rect" id="node6" href="$classcl__move__base__z_1_1Pose.html#a9faf8c6b437ff6b19c8bddd692908dca" title=" " alt="" coords="272,136,427,177"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccOrthogonal.html#a602e16b09f8a1b3de889f2f3d90a3211" title=" " alt="" coords="475,71,649,112"/>
+<area shape="rect" id="node5" href="$classsmacc_1_1ISmaccOrthogonal.html#aae265ec480b8ed552ddc79afd2d93a62" title=" " alt="" coords="697,71,872,112"/>
+</map>
