@@ -1,0 +1,334 @@
+\hypertarget{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner}{}\doxysection{cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::Forward\+Global\+Planner Class Reference}
+\label{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner}\index{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}}
+
+
+{\ttfamily \#include $<$forward\+\_\+global\+\_\+planner.\+h$>$}
+
+
+
+Inheritance diagram for cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::Forward\+Global\+Planner\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::Forward\+Global\+Planner\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a27715025f147a38b1422dd55ce2a9e0b}{Forward\+Global\+Planner}} ()
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a9d7c48877a390ca3cc580a7ffa50d316}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&start, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_ab01769603169105e92d9b6e479147bce}{make\+Plan}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&start, const geometry\+\_\+msgs\+::\+Pose\+Stamped \&goal, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&plan, double \&cost)
+\item 
+void \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a3db25ea418729d257876394b5c0987dc}{initialize}} (std\+::string name, costmap\+\_\+2d\+::\+Costmap2\+DROS $\ast$\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}{costmap\+\_\+ros\+\_\+}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_aab61c90829040df58fb99dff3b566c72}{nh\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a927dc6a687fac3751033d9736cf8dfcf}{plan\+Pub\+\_\+}}
+\item 
+costmap\+\_\+2d\+::\+Costmap2\+DROS $\ast$ \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}{costmap\+\_\+ros\+\_\+}}
+\begin{DoxyCompactList}\small\item\em stored but almost not used \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_abafd101fa62caf2d74f118a0b4bb948c}{skip\+\_\+straight\+\_\+motion\+\_\+distance\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a6aed6f8f6e57a8c5821977814d0b9402}{pures\+Spinning\+Rad\+Step\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{forward__global__planner_8h_source_l00016}{16}} of file \mbox{\hyperlink{forward__global__planner_8h_source}{forward\+\_\+global\+\_\+planner.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a27715025f147a38b1422dd55ce2a9e0b}\label{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a27715025f147a38b1422dd55ce2a9e0b}} 
+\index{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}!ForwardGlobalPlanner@{ForwardGlobalPlanner}}
+\index{ForwardGlobalPlanner@{ForwardGlobalPlanner}!cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{ForwardGlobalPlanner()}{ForwardGlobalPlanner()}}
+{\footnotesize\ttfamily cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::\+Forward\+Global\+Planner\+::\+Forward\+Global\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{forward__global__planner_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{forward__global__planner_8cpp_source}{forward\+\_\+global\+\_\+planner.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024     : \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_aab61c90829040df58fb99dff3b566c72}{nh\_}}(\textcolor{stringliteral}{"{}\string~/ForwardGlobalPlanner"{}})}
+\DoxyCodeLine{00025 \{}
+\DoxyCodeLine{00026     \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_abafd101fa62caf2d74f118a0b4bb948c}{skip\_straight\_motion\_distance\_}} = 0.2; \textcolor{comment}{//meters}}
+\DoxyCodeLine{00027     \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a6aed6f8f6e57a8c5821977814d0b9402}{puresSpinningRadStep\_}} = 1000;         \textcolor{comment}{// rads}}
+\DoxyCodeLine{00028 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{forward__global__planner_8h_source_l00040}{pures\+Spinning\+Rad\+Step\+\_\+}}, and \mbox{\hyperlink{forward__global__planner_8h_source_l00038}{skip\+\_\+straight\+\_\+motion\+\_\+distance\+\_\+}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a3db25ea418729d257876394b5c0987dc}\label{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a3db25ea418729d257876394b5c0987dc}} 
+\index{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}!initialize@{initialize}}
+\index{initialize@{initialize}!cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::\+Forward\+Global\+Planner\+::initialize (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{costmap\+\_\+2d\+::\+Costmap2\+DROS $\ast$}]{costmap\+\_\+ros\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{forward__global__planner_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{forward__global__planner_8cpp_source}{forward\+\_\+global\+\_\+planner.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031 \{}
+\DoxyCodeLine{00032     ROS\_INFO(\textcolor{stringliteral}{"{}[Forward Global Planner] initializing"{}});}
+\DoxyCodeLine{00033     \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a927dc6a687fac3751033d9736cf8dfcf}{planPub\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_aab61c90829040df58fb99dff3b566c72}{nh\_}}.advertise<nav\_msgs::Path>(\textcolor{stringliteral}{"{}global\_plan"{}}, 1);}
+\DoxyCodeLine{00034     \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_abafd101fa62caf2d74f118a0b4bb948c}{skip\_straight\_motion\_distance\_}} = 0.2; \textcolor{comment}{//meters}}
+\DoxyCodeLine{00035     \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a6aed6f8f6e57a8c5821977814d0b9402}{puresSpinningRadStep\_}} = 1000;         \textcolor{comment}{// rads}}
+\DoxyCodeLine{00036     this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}{costmap\_ros\_}} = costmap\_ros;}
+\DoxyCodeLine{00037 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{forward__global__planner_8h_source_l00036}{costmap\+\_\+ros\+\_\+}}, \mbox{\hyperlink{forward__global__planner_8h_source_l00031}{nh\+\_\+}}, \mbox{\hyperlink{forward__global__planner_8h_source_l00033}{plan\+Pub\+\_\+}}, \mbox{\hyperlink{forward__global__planner_8h_source_l00040}{pures\+Spinning\+Rad\+Step\+\_\+}}, and \mbox{\hyperlink{forward__global__planner_8h_source_l00038}{skip\+\_\+straight\+\_\+motion\+\_\+distance\+\_\+}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a9d7c48877a390ca3cc580a7ffa50d316}\label{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a9d7c48877a390ca3cc580a7ffa50d316}} 
+\index{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::\+Forward\+Global\+Planner\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{forward__global__planner_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{forward__global__planner_8cpp_source}{forward\+\_\+global\+\_\+planner.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050 \{}
+\DoxyCodeLine{00051     \textcolor{comment}{//ROS\_WARN\_STREAM("{}Forward global plan goal: "{} << goal);}}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053     \textcolor{comment}{//three stages: 1 -\/ heading to goal position, 2 -\/ going forward keep orientation, 3 -\/ heading to goal orientation}}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055     \textcolor{comment}{// 1 -\/ heading to goal position}}
+\DoxyCodeLine{00056     \textcolor{comment}{// orientation direction}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     \textcolor{keywordtype}{double} dx = goal.pose.position.x -\/ start.pose.position.x;}
+\DoxyCodeLine{00059     \textcolor{keywordtype}{double} dy = goal.pose.position.y -\/ start.pose.position.y;}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061     \textcolor{keywordtype}{double} length = sqrt(dx * dx + dy * dy);}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063     geometry\_msgs::PoseStamped prevState;}
+\DoxyCodeLine{00064     \textcolor{keywordflow}{if} (length > \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_abafd101fa62caf2d74f118a0b4bb948c}{skip\_straight\_motion\_distance\_}})}
+\DoxyCodeLine{00065     \{}
+\DoxyCodeLine{00066         \textcolor{comment}{// skip initial pure spinning and initial straight motion}}
+\DoxyCodeLine{00067         \textcolor{comment}{//ROS\_INFO("{}1 -\/ heading to goal position pure spinning"{});}}
+\DoxyCodeLine{00068         \textcolor{keywordtype}{double} heading\_direction = atan2(dy, dx);}
+\DoxyCodeLine{00069         prevState = \mbox{\hyperlink{namespacecl__move__base__z_ac774e138510eb7b5e0015be1f7709e19}{cl\_move\_base\_z::makePureSpinningSubPlan}}(start, heading\_direction, plan, \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a6aed6f8f6e57a8c5821977814d0b9402}{puresSpinningRadStep\_}});}
+\DoxyCodeLine{00070         \textcolor{comment}{//ROS\_INFO("{}2 -\/ going forward keep orientation pure straight"{});}}
+\DoxyCodeLine{00071         prevState = \mbox{\hyperlink{namespacecl__move__base__z_a84f0875e9e553c2795894cc9c21b2b3c}{cl\_move\_base\_z::makePureStraightSubPlan}}(prevState, goal.pose.position, length, plan);}
+\DoxyCodeLine{00072     \}}
+\DoxyCodeLine{00073     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00074     \{}
+\DoxyCodeLine{00075         prevState = start;}
+\DoxyCodeLine{00076     \}}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078     \textcolor{comment}{//ROS\_INFO("{}3 -\/ heading to goal orientation"{});}}
+\DoxyCodeLine{00079     \textcolor{keywordtype}{double} goalOrientation = angles::normalize\_angle(tf::getYaw(goal.pose.orientation));}
+\DoxyCodeLine{00080     \mbox{\hyperlink{namespacecl__move__base__z_ac774e138510eb7b5e0015be1f7709e19}{cl\_move\_base\_z::makePureSpinningSubPlan}}(prevState, goalOrientation, plan, \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a6aed6f8f6e57a8c5821977814d0b9402}{puresSpinningRadStep\_}});}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     nav\_msgs::Path planMsg;}
+\DoxyCodeLine{00083     planMsg.poses = plan;}
+\DoxyCodeLine{00084     planMsg.header.stamp = ros::Time::now();}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     planMsg.header.frame\_id = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}{costmap\_ros\_}}-\/>getGlobalFrameID();}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088     \textcolor{comment}{// check plan rejection}}
+\DoxyCodeLine{00089     \textcolor{keywordtype}{bool} acceptedGlobalPlan = \textcolor{keyword}{true};}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091     \textcolor{comment}{// static const unsigned char NO\_INFORMATION = 255;}}
+\DoxyCodeLine{00092     \textcolor{comment}{// static const unsigned char LETHAL\_OBSTACLE = 254;}}
+\DoxyCodeLine{00093     \textcolor{comment}{// static const unsigned char INSCRIBED\_INFLATED\_OBSTACLE = 253;}}
+\DoxyCodeLine{00094     \textcolor{comment}{// static const unsigned char FREE\_SPACE = 0;}}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096     costmap\_2d::Costmap2D *costmap2d = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}{costmap\_ros\_}}-\/>getCostmap();}
+\DoxyCodeLine{00097     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&p : plan)}
+\DoxyCodeLine{00098     \{}
+\DoxyCodeLine{00099         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, my;}
+\DoxyCodeLine{00100         costmap2d-\/>worldToMap(p.pose.position.x, p.pose.position.y, mx, my);}
+\DoxyCodeLine{00101         \textcolor{keyword}{auto} cost = costmap2d-\/>getCost(mx, my);}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103         \textcolor{keywordflow}{if} (cost >= costmap\_2d::INSCRIBED\_INFLATED\_OBSTACLE)}
+\DoxyCodeLine{00104         \{}
+\DoxyCodeLine{00105             acceptedGlobalPlan = \textcolor{keyword}{false};}
+\DoxyCodeLine{00106             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00107         \}}
+\DoxyCodeLine{00108     \}}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110     \textcolor{keywordflow}{if} (acceptedGlobalPlan)}
+\DoxyCodeLine{00111     \{}
+\DoxyCodeLine{00112         \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a927dc6a687fac3751033d9736cf8dfcf}{planPub\_}}.publish(planMsg);}
+\DoxyCodeLine{00113         \textcolor{comment}{//ROS\_INFO\_STREAM("{}global forward plan: "{} << planMsg);}}
+\DoxyCodeLine{00114         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00115     \}}
+\DoxyCodeLine{00116     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00117     \{}
+\DoxyCodeLine{00118         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00119     \}}
+\DoxyCodeLine{00120 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{forward__global__planner_8h_source_l00036}{costmap\+\_\+ros\+\_\+}}, \mbox{\hyperlink{path__tools_8cpp_source_l00013}{cl\+\_\+move\+\_\+base\+\_\+z\+::make\+Pure\+Spinning\+Sub\+Plan()}}, \mbox{\hyperlink{path__tools_8cpp_source_l00061}{cl\+\_\+move\+\_\+base\+\_\+z\+::make\+Pure\+Straight\+Sub\+Plan()}}, \mbox{\hyperlink{forward__global__planner_8h_source_l00033}{plan\+Pub\+\_\+}}, \mbox{\hyperlink{forward__global__planner_8h_source_l00040}{pures\+Spinning\+Rad\+Step\+\_\+}}, and \mbox{\hyperlink{forward__global__planner_8h_source_l00038}{skip\+\_\+straight\+\_\+motion\+\_\+distance\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{forward__global__planner_8cpp_source_l00039}{make\+Plan()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a9d7c48877a390ca3cc580a7ffa50d316_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a9d7c48877a390ca3cc580a7ffa50d316_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_ab01769603169105e92d9b6e479147bce}\label{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_ab01769603169105e92d9b6e479147bce}} 
+\index{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}!makePlan@{makePlan}}
+\index{makePlan@{makePlan}!cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{makePlan()}{makePlan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::\+Forward\+Global\+Planner\+::make\+Plan (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{start,  }\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{goal,  }\item[{std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose\+Stamped $>$ \&}]{plan,  }\item[{double \&}]{cost }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{forward__global__planner_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{forward__global__planner_8cpp_source}{forward\+\_\+global\+\_\+planner.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042 \{}
+\DoxyCodeLine{00043     ROS\_INFO(\textcolor{stringliteral}{"{}[Forward Global Planner] planning"{}});}
+\DoxyCodeLine{00044     cost = 0;}
+\DoxyCodeLine{00045     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a9d7c48877a390ca3cc580a7ffa50d316}{makePlan}}(start, goal, plan);}
+\DoxyCodeLine{00046 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{forward__global__planner_8cpp_source_l00048}{make\+Plan()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_ab01769603169105e92d9b6e479147bce_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}\label{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}} 
+\index{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}!costmap\_ros\_@{costmap\_ros\_}}
+\index{costmap\_ros\_@{costmap\_ros\_}!cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{costmap\_ros\_}{costmap\_ros\_}}
+{\footnotesize\ttfamily costmap\+\_\+2d\+::\+Costmap2\+DROS$\ast$ cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::\+Forward\+Global\+Planner\+::costmap\+\_\+ros\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+stored but almost not used 
+
+
+
+Definition at line \mbox{\hyperlink{forward__global__planner_8h_source_l00036}{36}} of file \mbox{\hyperlink{forward__global__planner_8h_source}{forward\+\_\+global\+\_\+planner.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{forward__global__planner_8cpp_source_l00030}{initialize()}}, and \mbox{\hyperlink{forward__global__planner_8cpp_source_l00048}{make\+Plan()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_aab61c90829040df58fb99dff3b566c72}\label{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_aab61c90829040df58fb99dff3b566c72}} 
+\index{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}!nh\_@{nh\_}}
+\index{nh\_@{nh\_}!cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{nh\_}{nh\_}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::\+Forward\+Global\+Planner\+::nh\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{forward__global__planner_8h_source_l00031}{31}} of file \mbox{\hyperlink{forward__global__planner_8h_source}{forward\+\_\+global\+\_\+planner.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{forward__global__planner_8cpp_source_l00030}{initialize()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a927dc6a687fac3751033d9736cf8dfcf}\label{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a927dc6a687fac3751033d9736cf8dfcf}} 
+\index{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}!planPub\_@{planPub\_}}
+\index{planPub\_@{planPub\_}!cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{planPub\_}{planPub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::\+Forward\+Global\+Planner\+::plan\+Pub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{forward__global__planner_8h_source_l00033}{33}} of file \mbox{\hyperlink{forward__global__planner_8h_source}{forward\+\_\+global\+\_\+planner.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{forward__global__planner_8cpp_source_l00030}{initialize()}}, and \mbox{\hyperlink{forward__global__planner_8cpp_source_l00048}{make\+Plan()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a6aed6f8f6e57a8c5821977814d0b9402}\label{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a6aed6f8f6e57a8c5821977814d0b9402}} 
+\index{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}!puresSpinningRadStep\_@{puresSpinningRadStep\_}}
+\index{puresSpinningRadStep\_@{puresSpinningRadStep\_}!cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{puresSpinningRadStep\_}{puresSpinningRadStep\_}}
+{\footnotesize\ttfamily double cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::\+Forward\+Global\+Planner\+::pures\+Spinning\+Rad\+Step\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{forward__global__planner_8h_source_l00040}{40}} of file \mbox{\hyperlink{forward__global__planner_8h_source}{forward\+\_\+global\+\_\+planner.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{forward__global__planner_8cpp_source_l00023}{Forward\+Global\+Planner()}}, \mbox{\hyperlink{forward__global__planner_8cpp_source_l00030}{initialize()}}, and \mbox{\hyperlink{forward__global__planner_8cpp_source_l00048}{make\+Plan()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_abafd101fa62caf2d74f118a0b4bb948c}\label{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_abafd101fa62caf2d74f118a0b4bb948c}} 
+\index{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}!skip\_straight\_motion\_distance\_@{skip\_straight\_motion\_distance\_}}
+\index{skip\_straight\_motion\_distance\_@{skip\_straight\_motion\_distance\_}!cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner@{cl\_move\_base\_z::forward\_global\_planner::ForwardGlobalPlanner}}
+\doxysubsubsection{\texorpdfstring{skip\_straight\_motion\_distance\_}{skip\_straight\_motion\_distance\_}}
+{\footnotesize\ttfamily double cl\+\_\+move\+\_\+base\+\_\+z\+::forward\+\_\+global\+\_\+planner\+::\+Forward\+Global\+Planner\+::skip\+\_\+straight\+\_\+motion\+\_\+distance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{forward__global__planner_8h_source_l00038}{38}} of file \mbox{\hyperlink{forward__global__planner_8h_source}{forward\+\_\+global\+\_\+planner.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{forward__global__planner_8cpp_source_l00023}{Forward\+Global\+Planner()}}, \mbox{\hyperlink{forward__global__planner_8cpp_source_l00030}{initialize()}}, and \mbox{\hyperlink{forward__global__planner_8cpp_source_l00048}{make\+Plan()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+client\+\_\+library/move\+\_\+base\+\_\+z\+\_\+client/custom\+\_\+planners/forward\+\_\+global\+\_\+planner/include/forward\+\_\+global\+\_\+planner/\mbox{\hyperlink{forward__global__planner_8h}{forward\+\_\+global\+\_\+planner.\+h}}\item 
+smacc\+\_\+client\+\_\+library/move\+\_\+base\+\_\+z\+\_\+client/custom\+\_\+planners/forward\+\_\+global\+\_\+planner/src/\mbox{\hyperlink{forward__global__planner_8cpp}{forward\+\_\+global\+\_\+planner.\+cpp}}\end{DoxyCompactItemize}

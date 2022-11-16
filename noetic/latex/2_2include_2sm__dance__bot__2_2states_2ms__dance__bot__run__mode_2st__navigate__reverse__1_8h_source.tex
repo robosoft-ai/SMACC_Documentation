@@ -1,0 +1,31 @@
+\hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source}{}\doxysection{st\+\_\+navigate\+\_\+reverse\+\_\+1.\+h}
+\label{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source}\index{smacc\_sm\_reference\_library/sm\_dance\_bot\_2/include/sm\_dance\_bot\_2/states/ms\_dance\_bot\_run\_mode/st\_navigate\_reverse\_1.h@{smacc\_sm\_reference\_library/sm\_dance\_bot\_2/include/sm\_dance\_bot\_2/states/ms\_dance\_bot\_run\_mode/st\_navigate\_reverse\_1.h}}
+\mbox{\hyperlink{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00002}00002 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__dance__bot__2}{sm\_dance\_bot\_2}}}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00003}00003 \{}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00004}00004 \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00005}\mbox{\hyperlink{structsm__dance__bot__2_1_1StNavigateReverse1}{00005}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__dance__bot__2_1_1StNavigateReverse1}{StNavigateReverse1}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<StNavigateReverse1, MsDanceBotRunMode>}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00007}00007    \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00009}00009 \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00010}00010    \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00012}00012    Transition<EvCbSuccess<CbNavigateBackwards, OrNavigation>, \mbox{\hyperlink{structsm__dance__bot__2_1_1StRotateDegrees3}{StRotateDegrees3}}>,}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00013}00013    Transition<EvCbFailure<CbNavigateBackwards, OrNavigation>, \mbox{\hyperlink{structsm__dance__bot__2_1_1StNavigateToWaypointsX}{StNavigateToWaypointsX}}>}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00015}\mbox{\hyperlink{structsm__dance__bot__2_1_1StNavigateReverse1_a29c709f81a04d776277fe903597ef43e}{00015}}    >\mbox{\hyperlink{structsm__dance__bot__2_1_1StNavigateReverse1_a29c709f81a04d776277fe903597ef43e}{reactions}};}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00017}00017 \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00018}\mbox{\hyperlink{structsm__dance__bot__2_1_1StNavigateReverse1_a15d3a1e5f83f03d54113e4d9e7ec7aac}{00018}}    \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__dance__bot__2_1_1StNavigateReverse1_a15d3a1e5f83f03d54113e4d9e7ec7aac}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00019}00019    \{}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00020}00020       configure\_orthogonal<OrNavigation, CbNavigateBackwards>(2);}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00021}00021       configure\_orthogonal<OrLED, CbLEDOff>();}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00022}00022       configure\_orthogonal<OrObstaclePerception, CbLidarSensor>();}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00023}00023    \}}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00024}00024 \};}
+\DoxyCodeLine{\Hypertarget{2_2include_2sm__dance__bot__2_2states_2ms__dance__bot__run__mode_2st__navigate__reverse__1_8h_source_l00025}00025 \}}
+
+\end{DoxyCode}

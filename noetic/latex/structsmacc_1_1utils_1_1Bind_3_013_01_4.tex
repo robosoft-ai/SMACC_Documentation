@@ -1,0 +1,66 @@
+\hypertarget{structsmacc_1_1utils_1_1Bind_3_013_01_4}{}\doxysection{smacc\+::utils\+::Bind\texorpdfstring{$<$}{<} 3 \texorpdfstring{$>$}{>} Struct Reference}
+\label{structsmacc_1_1utils_1_1Bind_3_013_01_4}\index{smacc::utils::Bind$<$ 3 $>$@{smacc::utils::Bind$<$ 3 $>$}}
+
+
+{\ttfamily \#include $<$smacc\+\_\+state\+\_\+machine\+\_\+impl.\+h$>$}
+
+
+
+Collaboration diagram for smacc\+::utils\+::Bind\texorpdfstring{$<$}{<} 3 \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{structsmacc_1_1utils_1_1Bind_3_013_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TSmacc\+Signal , typename TMember\+Function\+Prototype , typename TSmacc\+Object\+Type $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{structsmacc_1_1utils_1_1Bind_3_013_01_4_a8958f16a2a40b187e6500a76cfaeed63}{bindaux}} (TSmacc\+Signal \&signal, TMember\+Function\+Prototype \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, TSmacc\+Object\+Type $\ast$object)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00276}{276}} of file \mbox{\hyperlink{smacc__state__machine__impl_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+impl.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsmacc_1_1utils_1_1Bind_3_013_01_4_a8958f16a2a40b187e6500a76cfaeed63}\label{structsmacc_1_1utils_1_1Bind_3_013_01_4_a8958f16a2a40b187e6500a76cfaeed63}} 
+\index{smacc::utils::Bind$<$ 3 $>$@{smacc::utils::Bind$<$ 3 $>$}!bindaux@{bindaux}}
+\index{bindaux@{bindaux}!smacc::utils::Bind$<$ 3 $>$@{smacc::utils::Bind$<$ 3 $>$}}
+\doxysubsubsection{\texorpdfstring{bindaux()}{bindaux()}}
+{\footnotesize\ttfamily template$<$typename TSmacc\+Signal , typename TMember\+Function\+Prototype , typename TSmacc\+Object\+Type $>$ \\
+boost\+::signals2\+::connection \mbox{\hyperlink{structsmacc_1_1utils_1_1Bind}{smacc\+::utils\+::\+Bind}}$<$ 3 $>$\+::bindaux (\begin{DoxyParamCaption}\item[{TSmacc\+Signal \&}]{signal,  }\item[{TMember\+Function\+Prototype}]{callback,  }\item[{TSmacc\+Object\+Type $\ast$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00279}{279}} of file \mbox{\hyperlink{smacc__state__machine__impl_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+impl.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00280       \{}
+\DoxyCodeLine{00281         \textcolor{keywordflow}{return} signal.connect([=](\textcolor{keyword}{auto} a1, \textcolor{keyword}{auto} a2) \{ \textcolor{keywordflow}{return} (object-\/>*\mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(a1, a2); \});}
+\DoxyCodeLine{00282       \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source_l00104}{callback()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsmacc_1_1utils_1_1Bind_3_013_01_4_a8958f16a2a40b187e6500a76cfaeed63_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc/include/smacc/impl/\mbox{\hyperlink{smacc__state__machine__impl_8h}{smacc\+\_\+state\+\_\+machine\+\_\+impl.\+h}}\end{DoxyCompactItemize}

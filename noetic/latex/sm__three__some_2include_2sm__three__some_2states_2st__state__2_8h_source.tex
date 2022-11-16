@@ -1,0 +1,69 @@
+\hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source}{}\doxysection{st\+\_\+state\+\_\+2.\+h}
+\label{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source}\index{smacc\_sm\_reference\_library/sm\_three\_some/include/sm\_three\_some/states/st\_state\_2.h@{smacc\_sm\_reference\_library/sm\_three\_some/include/sm\_three\_some/states/st\_state\_2.h}}
+\mbox{\hyperlink{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00001}00001 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__three__some}{sm\_three\_some}}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00002}00002 \{}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00003}00003 \textcolor{comment}{// STATE DECLARATION}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00004}\mbox{\hyperlink{structsm__three__some_1_1StState2}{00004}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__three__some_1_1StState2}{StState2}} : \mbox{\hyperlink{classsmacc_1_1SmaccState}{smacc::SmaccState}}<StState2, MsRun>}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00006}00006     \textcolor{keyword}{using }SmaccState::SmaccState;}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00008}00008 \textcolor{comment}{// DECLARE CUSTOM OBJECT TAGS}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00009}\mbox{\hyperlink{structsm__three__some_1_1StState2_1_1TIMEOUT}{00009}}     \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__three__some_1_1StState2_1_1TIMEOUT}{TIMEOUT}} : \mbox{\hyperlink{classSUCCESS}{SUCCESS}}\{\};}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00010}\mbox{\hyperlink{structsm__three__some_1_1StState2_1_1NEXT}{00010}}     \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__three__some_1_1StState2_1_1NEXT}{NEXT}} : \mbox{\hyperlink{classSUCCESS}{SUCCESS}}\{\};}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00011}\mbox{\hyperlink{structsm__three__some_1_1StState2_1_1PREVIOUS}{00011}}     \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__three__some_1_1StState2_1_1PREVIOUS}{PREVIOUS}} : \mbox{\hyperlink{classABORT}{ABORT}}\{\};}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00013}00013 \textcolor{comment}{// TRANSITION TABLE}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00014}00014     \textcolor{keyword}{typedef} mpl::list<}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00016}00016    Transition<EvTimer<CbTimerCountdownOnce, OrTimer>, \mbox{\hyperlink{structsm__three__some_1_1StState3}{StState3}}, \mbox{\hyperlink{structsm__three__some_1_1StState2_1_1TIMEOUT}{TIMEOUT}}>,}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00017}00017     Transition<EvAllGo<SrAllEventsGo>, \mbox{\hyperlink{structsm__three__some_1_1StState3}{StState3}}>,}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00018}00018     \textcolor{comment}{// Keyboard events}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00019}00019     Transition<EvKeyPressP<CbDefaultKeyboardBehavior, OrKeyboard>, \mbox{\hyperlink{structsm__three__some_1_1StState1}{StState1}}, \mbox{\hyperlink{structsm__three__some_1_1StState2_1_1PREVIOUS}{PREVIOUS}}>,}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00020}00020     Transition<EvKeyPressN<CbDefaultKeyboardBehavior, OrKeyboard>, \mbox{\hyperlink{structsm__three__some_1_1StState3}{StState3}}, \mbox{\hyperlink{structsm__three__some_1_1StState2_1_1NEXT}{NEXT}}>}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00022}\mbox{\hyperlink{structsm__three__some_1_1StState2_a882f17a676c2edc41d5e3a76c5255c87}{00022}}     >\mbox{\hyperlink{structsm__three__some_1_1StState2_a882f17a676c2edc41d5e3a76c5255c87}{reactions}};}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00024}00024 \textcolor{comment}{// STATE FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00025}\mbox{\hyperlink{structsm__three__some_1_1StState2_af07ae40962e343ce9605288f0ebad82b}{00025}}     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__three__some_1_1StState2_af07ae40962e343ce9605288f0ebad82b}{staticConfigure}}()}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00026}00026     \{}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00027}00027         configure\_orthogonal<OrTimer, CbTimerCountdownOnce>(10);}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00028}00028         configure\_orthogonal<OrSubscriber, CbWatchdogSubscriberBehavior>();}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00029}00029         configure\_orthogonal<OrUpdatablePublisher, CbDefaultPublishLoop>();}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00030}00030         configure\_orthogonal<OrKeyboard, CbDefaultKeyboardBehavior>();}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00032}00032         \textcolor{comment}{// Create State Reactor}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00033}00033         \textcolor{comment}{// auto sbAll = static\_createStateReactor<SrAllEventsGo>();}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00035}00035         \textcolor{keyword}{auto} sbAll = \mbox{\hyperlink{classsmacc_1_1SmaccState_a4b54d8ec82d303736d8bc11a3ffd0ce1}{static\_createStateReactor}}<\mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo}{smacc::state\_reactors::SrAllEventsGo}},}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00036}00036                                                \mbox{\hyperlink{structsmacc_1_1state__reactors_1_1EvAllGo}{smacc::state\_reactors::EvAllGo<SrAllEventsGo>}},}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00037}00037                                                mpl::list<}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00038}00038                                                            EvKeyPressA<CbDefaultKeyboardBehavior, OrKeyboard>,}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00039}00039                                                            EvKeyPressB<CbDefaultKeyboardBehavior, OrKeyboard>,}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00040}00040                                                            EvKeyPressC<CbDefaultKeyboardBehavior, OrKeyboard>}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00041}00041                                                            >>();}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00042}00042         \textcolor{comment}{/*sbAll-\/>addInputEvent<EvKeyPressA<CbDefaultKeyboardBehavior, OrKeyboard>>();}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00043}00043 \textcolor{comment}{        sbAll-\/>addInputEvent<EvKeyPressB<CbDefaultKeyboardBehavior, OrKeyboard>>();}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00044}00044 \textcolor{comment}{        sbAll-\/>addInputEvent<EvKeyPressC<CbDefaultKeyboardBehavior, OrKeyboard>>();}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00045}00045 \textcolor{comment}{        sbAll-\/>setOutputEvent<EvAllGo<SrAllEventsGo>>();*/}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00048}\mbox{\hyperlink{structsm__three__some_1_1StState2_aab0c27caa0d5a70c644ee1ec0830ba15}{00048}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__three__some_1_1StState2_aab0c27caa0d5a70c644ee1ec0830ba15}{runtimeConfigure}}()}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00049}00049     \{}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00052}\mbox{\hyperlink{structsm__three__some_1_1StState2_ac117bcbd7f1afe6ea699109923795b50}{00052}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__three__some_1_1StState2_ac117bcbd7f1afe6ea699109923795b50}{onEntry}}()}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00053}00053     \{}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00054}00054         ROS\_INFO(\textcolor{stringliteral}{"{}On Entry!"{}});}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00057}\mbox{\hyperlink{structsm__three__some_1_1StState2_af1c453aa52e2117b3a059ae11625963b}{00057}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__three__some_1_1StState2_af1c453aa52e2117b3a059ae11625963b}{onExit}}()}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00058}00058     \{}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00059}00059         ROS\_INFO(\textcolor{stringliteral}{"{}On Exit!"{}});}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00060}00060     \}}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00062}00062 \};}
+\DoxyCodeLine{\Hypertarget{sm__three__some_2include_2sm__three__some_2states_2st__state__2_8h_source_l00063}00063 \} \textcolor{comment}{// namespace sm\_three\_some}}
+
+\end{DoxyCode}

@@ -1,0 +1,72 @@
+\hypertarget{classsm__subscriber_1_1CbPrintMessageNumber}{}\doxysection{sm\+\_\+subscriber\+::Cb\+Print\+Message\+Number Class Reference}
+\label{classsm__subscriber_1_1CbPrintMessageNumber}\index{sm\_subscriber::CbPrintMessageNumber@{sm\_subscriber::CbPrintMessageNumber}}
+
+
+{\ttfamily \#include $<$cb\+\_\+print\+\_\+message\+\_\+number.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+subscriber\+::Cb\+Print\+Message\+Number\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsm__subscriber_1_1CbPrintMessageNumber__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+subscriber\+::Cb\+Print\+Message\+Number\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__subscriber_1_1CbPrintMessageNumber__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsm__subscriber_1_1CbPrintMessageNumber_a8f9a13e3da3fd897354579a31cb9de3f}{on\+Message\+Received}} (const std\+\_\+msgs\+::\+UInt16 \&msg) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{cb__print__message__number_8h_source_l00009}{9}} of file \mbox{\hyperlink{cb__print__message__number_8h_source}{cb\+\_\+print\+\_\+message\+\_\+number.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__subscriber_1_1CbPrintMessageNumber_a8f9a13e3da3fd897354579a31cb9de3f}\label{classsm__subscriber_1_1CbPrintMessageNumber_a8f9a13e3da3fd897354579a31cb9de3f}} 
+\index{sm\_subscriber::CbPrintMessageNumber@{sm\_subscriber::CbPrintMessageNumber}!onMessageReceived@{onMessageReceived}}
+\index{onMessageReceived@{onMessageReceived}!sm\_subscriber::CbPrintMessageNumber@{sm\_subscriber::CbPrintMessageNumber}}
+\doxysubsubsection{\texorpdfstring{onMessageReceived()}{onMessageReceived()}}
+{\footnotesize\ttfamily void sm\+\_\+subscriber\+::\+Cb\+Print\+Message\+Number\+::on\+Message\+Received (\begin{DoxyParamCaption}\item[{const std\+\_\+msgs\+::\+UInt16 \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsmacc_1_1CbSubscriptionCallbackBase_a77d8d3eee701b990277e69804eac0049}{smacc\+::\+Cb\+Subscription\+Callback\+Base$<$ std\+\_\+msgs\+::\+UInt16 $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{cb__print__message__number_8h_source_l00012}{12}} of file \mbox{\hyperlink{cb__print__message__number_8h_source}{cb\+\_\+print\+\_\+message\+\_\+number.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013   \{}
+\DoxyCodeLine{00014     ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}**** [CbPrintMessageNumber] MESSAGE RECEIVED NUMBER: "{}} << \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}.data);}
+\DoxyCodeLine{00015   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{battery__monitor__node_8py_source_l00015}{battery\+\_\+monitor\+\_\+node\+::msg}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+subscriber/include/sm\+\_\+subscriber/clients/cl\+\_\+numbers\+\_\+subscription/client\+\_\+behaviors/\mbox{\hyperlink{cb__print__message__number_8h}{cb\+\_\+print\+\_\+message\+\_\+number.\+h}}\end{DoxyCompactItemize}

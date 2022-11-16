@@ -1,0 +1,46 @@
+\hypertarget{cb__navigate__forward_8h_source}{}\doxysection{cb\+\_\+navigate\+\_\+forward.\+h}
+\label{cb__navigate__forward_8h_source}\index{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/client\_behaviors/cb\_navigate\_forward.h@{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/client\_behaviors/cb\_navigate\_forward.h}}
+\mbox{\hyperlink{cb__navigate__forward_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00006}00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cb__move__base__client__behavior__base_8h}{cb\_move\_base\_client\_behavior\_base.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <tf/transform\_listener.h>}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{odom__tracker_8h}{move\_base\_z\_client\_plugin/components/odom\_tracker/odom\_tracker.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00014}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward}{00014}}     \textcolor{keyword}{class }\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward}{CbNavigateForward}} : \textcolor{keyword}{public} \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase}{CbMoveBaseClientBehaviorBase}}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00016}00016     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00017}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a41bc9c319c64be6302f7365173ccd2c5}{00017}}         boost::optional<float> \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a41bc9c319c64be6302f7365173ccd2c5}{forwardDistance}};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00019}00019         \textcolor{comment}{// just a stub to show how to use parameterless constructor}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00020}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_acd3a70c0886d7021f37405fb07d96cc9}{00020}}         boost::optional<float> \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_acd3a70c0886d7021f37405fb07d96cc9}{forwardSpeed}};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00022}00022         \textcolor{comment}{// this may be useful in the case you want to do a stright line with some orientation}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00023}00023         \textcolor{comment}{// relative to some global reference (trying to solve the initial orientation error}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00024}00024         \textcolor{comment}{// of the current orientation). If it is not set, the orientation of the straight line is}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00025}00025         \textcolor{comment}{// the orientation of the initial state.}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00026}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_ac73da1af2bca33f0927310f75d8d2e35}{00026}}         boost::optional<geometry\_msgs::Quaternion> \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_ac73da1af2bca33f0927310f75d8d2e35}{forceInitialOrientation}};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00028}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a4fcb3933f612a0801bf373fbdeec71f5}{00028}}         tf::TransformListener \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a4fcb3933f612a0801bf373fbdeec71f5}{listener}};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00030}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a7583a4d669af48618bd45950db8e5292}{00030}}         \mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker}{odom\_tracker::OdomTracker}} *\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a7583a4d669af48618bd45950db8e5292}{odomTracker\_}};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00032}00032         \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a6322be3ee8a23652a0a9dbe8e203d00e}{CbNavigateForward}}(\textcolor{keywordtype}{float} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a41bc9c319c64be6302f7365173ccd2c5}{forwardDistance}});}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00034}00034         \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a6322be3ee8a23652a0a9dbe8e203d00e}{CbNavigateForward}}();}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00036}00036         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_af9a2e49071de287922c3f5963a079b95}{onEntry}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00038}00038         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a2160484562ef5fb1c655fab7f990241e}{onExit}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00039}00039     \};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8h_source_l00040}00040 \} \textcolor{comment}{// namespace cl\_move\_base\_z}}
+
+\end{DoxyCode}

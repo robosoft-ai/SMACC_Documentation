@@ -1,0 +1,95 @@
+\hypertarget{path__tools_8cpp_source}{}\doxysection{path\+\_\+tools.\+cpp}
+\label{path__tools_8cpp_source}\index{smacc\_client\_library/move\_base\_z\_client/custom\_planners/forward\_global\_planner/src/path\_tools.cpp@{smacc\_client\_library/move\_base\_z\_client/custom\_planners/forward\_global\_planner/src/path\_tools.cpp}}
+\mbox{\hyperlink{path__tools_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <ros/ros.h>}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <geometry\_msgs/PoseStamped.h>}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <tf/transform\_datatypes.h>}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <angles/angles.h>}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00013}\mbox{\hyperlink{namespacecl__move__base__z_ac774e138510eb7b5e0015be1f7709e19}{00013}}     geometry\_msgs::PoseStamped \mbox{\hyperlink{namespacecl__move__base__z_ac774e138510eb7b5e0015be1f7709e19}{makePureSpinningSubPlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& start, \textcolor{keywordtype}{double} dstRads, std::vector<geometry\_msgs::PoseStamped>\& plan, \textcolor{keywordtype}{double} puresSpinningRadStep=1000)}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00014}00014     \{}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00015}00015         \textcolor{keywordtype}{double} startYaw = tf::getYaw(start.pose.orientation);}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00016}00016         \textcolor{comment}{//ROS\_INFO("{}pure spining start yaw: \%lf"{}, startYaw);}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00017}00017         \textcolor{comment}{//ROS\_INFO("{}pure spining goal yaw: \%lf"{}, dstRads);}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00018}00018         \textcolor{comment}{//ROS\_WARN\_STREAM("{}pure spinning start pose: "{} << start);}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00020}00020         \textcolor{keywordtype}{double} goalAngleOffset = angles::shortest\_angular\_distance(startYaw, dstRads);}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00021}00021         \textcolor{comment}{//ROS\_INFO("{}shortest angle: \%lf"{}, goalAngleOffset);}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00023}00023         \textcolor{keywordtype}{double} radstep = 0.005;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00025}00025         \textcolor{keywordflow}{if}( goalAngleOffset>=0)}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00026}00026         \{}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00027}00027             \textcolor{comment}{// angle positive turn counterclockwise}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00028}00028             \textcolor{comment}{//ROS\_INFO("{}pure spining counterclockwise"{});}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00029}00029             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{double} dangle = 0; dangle <= goalAngleOffset;dangle+=radstep )}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00030}00030             \{}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00031}00031                 geometry\_msgs::PoseStamped p= start;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00032}00032                 \textcolor{keywordtype}{double} yaw = startYaw+ dangle;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00033}00033                 \textcolor{comment}{//ROS\_INFO("{}pure spining counterclockwise, current path yaw: \%lf, dangle: \%lf, angleoffset \%lf, radstep \%lf pathsize(\%ld)"{}, yaw, dangle, goalAngleOffset, radstep, plan.size());}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00034}00034                 p.pose.orientation = tf::createQuaternionMsgFromYaw(yaw);}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00035}00035                 plan.push\_back(p);}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00036}00036             \}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00037}00037         \}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00038}00038         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00039}00039         \{}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00040}00040             \textcolor{comment}{// angle positive turn clockwise}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00041}00041             \textcolor{comment}{//ROS\_INFO("{}pure spining clockwise"{});}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00042}00042             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{double} dangle = 0; dangle >= goalAngleOffset;dangle-\/=radstep )}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00043}00043             \{}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00044}00044                 \textcolor{comment}{//ROS\_INFO("{}dangle: \%lf"{}, dangle);}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00045}00045                 geometry\_msgs::PoseStamped p= start;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00046}00046                 \textcolor{keywordtype}{double} yaw = startYaw+ dangle;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00047}00047                 \textcolor{comment}{//ROS\_INFO("{}pure spining clockwise, yaw: \%lf, dangle: \%lf, angleoffset \%lf radstep \%lf"{}, yaw, dangle, goalAngleOffset,radstep);}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00048}00048                 p.pose.orientation = tf::createQuaternionMsgFromYaw(yaw);}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00049}00049                 plan.push\_back(p);}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00050}00050             \}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00051}00051         \}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00053}00053         \textcolor{comment}{//ROS\_INFO("{}pure spining end yaw: \%lf"{}, dstRads);}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00054}00054         geometry\_msgs::PoseStamped end= start;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00055}00055         end.pose.orientation = tf::createQuaternionMsgFromYaw(dstRads);}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00056}00056         plan.push\_back(end);}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00058}00058         \textcolor{keywordflow}{return} end;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00061}\mbox{\hyperlink{namespacecl__move__base__z_a84f0875e9e553c2795894cc9c21b2b3c}{00061}}     geometry\_msgs::PoseStamped \mbox{\hyperlink{namespacecl__move__base__z_a84f0875e9e553c2795894cc9c21b2b3c}{makePureStraightSubPlan}}(\textcolor{keyword}{const} geometry\_msgs::PoseStamped\& startOrientedPose,}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00062}00062                                                         \textcolor{keyword}{const} geometry\_msgs::Point\& goal,}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00063}00063                                                         \textcolor{keywordtype}{double} length,}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00064}00064                                                         std::vector<geometry\_msgs::PoseStamped>\& plan)}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00065}00065     \{}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00066}00066         \textcolor{keywordtype}{double} dx = 0.01; \textcolor{comment}{// 1 cm}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00067}00067         \textcolor{keywordtype}{double} steps = length /dx;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00068}00068         \textcolor{keywordtype}{double} dt = 1.0/steps;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00070}00070         \textcolor{comment}{// geometry\_msgs::PoseStamped end;}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00071}00071         \textcolor{comment}{// end.pose.orientation = startOrientedPose.pose.orientation;}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00072}00072         \textcolor{comment}{//end.pose.position = goal;}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00073}00073         plan.push\_back(startOrientedPose);}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00075}00075         \textcolor{comment}{//ROS\_INFO\_STREAM("{}Pure straight, start: "{} << startOrientedPose << std::endl << "{}end: "{} << goal);}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00076}00076         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{double} \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}}=0; \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}} <=1.0; \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}}+=dt)}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00077}00077         \{}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00078}00078             geometry\_msgs::PoseStamped p = startOrientedPose;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00080}00080             p.pose.position.x =  startOrientedPose.pose.position.x *(1 -\/ \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}}) + goal.x * \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}};}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00081}00081             p.pose.position.y =  startOrientedPose.pose.position.y *(1 -\/ \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}}) + goal.y * \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}};}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00082}00082             p.pose.orientation = startOrientedPose.pose.orientation;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00084}00084             plan.push\_back(p);}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00085}00085         \}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00087}00087         \textcolor{keywordflow}{return} plan.back();}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00089}00089 \}}
+
+\end{DoxyCode}

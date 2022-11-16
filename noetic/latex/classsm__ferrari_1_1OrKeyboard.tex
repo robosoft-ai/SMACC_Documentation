@@ -1,0 +1,71 @@
+\hypertarget{classsm__ferrari_1_1OrKeyboard}{}\doxysection{sm\+\_\+ferrari\+::Or\+Keyboard Class Reference}
+\label{classsm__ferrari_1_1OrKeyboard}\index{sm\_ferrari::OrKeyboard@{sm\_ferrari::OrKeyboard}}
+
+
+{\ttfamily \#include $<$or\+\_\+keyboard.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+ferrari\+::Or\+Keyboard\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsm__ferrari_1_1OrKeyboard__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+ferrari\+::Or\+Keyboard\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__ferrari_1_1OrKeyboard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsm__ferrari_1_1OrKeyboard_ac7c1dea6cff8b1cb6808a49c5a3ecb1c}{on\+Initialize}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sm__ferrari_2include_2sm__ferrari_2orthogonals_2or__keyboard_8h_source_l00008}{8}} of file \mbox{\hyperlink{sm__ferrari_2include_2sm__ferrari_2orthogonals_2or__keyboard_8h_source}{or\+\_\+keyboard.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__ferrari_1_1OrKeyboard_ac7c1dea6cff8b1cb6808a49c5a3ecb1c}\label{classsm__ferrari_1_1OrKeyboard_ac7c1dea6cff8b1cb6808a49c5a3ecb1c}} 
+\index{sm\_ferrari::OrKeyboard@{sm\_ferrari::OrKeyboard}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!sm\_ferrari::OrKeyboard@{sm\_ferrari::OrKeyboard}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+ferrari\+::\+Or\+Keyboard\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a6bb31c620cb64dd7b8417f8705c79c7a}{smacc\+::\+ISmacc\+Orthogonal}}.
+
+
+
+Definition at line \mbox{\hyperlink{sm__ferrari_2include_2sm__ferrari_2orthogonals_2or__keyboard_8h_source_l00011}{11}} of file \mbox{\hyperlink{sm__ferrari_2include_2sm__ferrari_2orthogonals_2or__keyboard_8h_source}{or\+\_\+keyboard.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012     \{}
+\DoxyCodeLine{00013         \textcolor{keyword}{auto} clKeyboard = this-\/>createClient<cl\_keyboard::ClKeyboard>();}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015         \textcolor{comment}{//ClKeyboard.queueSize = 1;}}
+\DoxyCodeLine{00016         clKeyboard-\/>initialize();}
+\DoxyCodeLine{00017     \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+ferrari/include/sm\+\_\+ferrari/orthogonals/\mbox{\hyperlink{sm__ferrari_2include_2sm__ferrari_2orthogonals_2or__keyboard_8h}{or\+\_\+keyboard.\+h}}\end{DoxyCompactItemize}

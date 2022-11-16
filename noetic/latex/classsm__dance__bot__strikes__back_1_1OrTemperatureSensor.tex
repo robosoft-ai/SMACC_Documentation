@@ -1,0 +1,74 @@
+\hypertarget{classsm__dance__bot__strikes__back_1_1OrTemperatureSensor}{}\doxysection{sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::Or\+Temperature\+Sensor Class Reference}
+\label{classsm__dance__bot__strikes__back_1_1OrTemperatureSensor}\index{sm\_dance\_bot\_strikes\_back::OrTemperatureSensor@{sm\_dance\_bot\_strikes\_back::OrTemperatureSensor}}
+
+
+{\ttfamily \#include $<$or\+\_\+temperature\+\_\+sensor.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::Or\+Temperature\+Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsm__dance__bot__strikes__back_1_1OrTemperatureSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::Or\+Temperature\+Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsm__dance__bot__strikes__back_1_1OrTemperatureSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsm__dance__bot__strikes__back_1_1OrTemperatureSensor_a5ad96122dd84bf27e0a1f5c7c87be7e2}{on\+Initialize}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2orthogonals_2or__temperature__sensor_8h_source_l00010}{10}} of file \mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2orthogonals_2or__temperature__sensor_8h_source}{or\+\_\+temperature\+\_\+sensor.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsm__dance__bot__strikes__back_1_1OrTemperatureSensor_a5ad96122dd84bf27e0a1f5c7c87be7e2}\label{classsm__dance__bot__strikes__back_1_1OrTemperatureSensor_a5ad96122dd84bf27e0a1f5c7c87be7e2}} 
+\index{sm\_dance\_bot\_strikes\_back::OrTemperatureSensor@{sm\_dance\_bot\_strikes\_back::OrTemperatureSensor}!onInitialize@{onInitialize}}
+\index{onInitialize@{onInitialize}!sm\_dance\_bot\_strikes\_back::OrTemperatureSensor@{sm\_dance\_bot\_strikes\_back::OrTemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{onInitialize()}{onInitialize()}}
+{\footnotesize\ttfamily virtual void sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::\+Or\+Temperature\+Sensor\+::on\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a6bb31c620cb64dd7b8417f8705c79c7a}{smacc\+::\+ISmacc\+Orthogonal}}.
+
+
+
+Definition at line \mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2orthogonals_2or__temperature__sensor_8h_source_l00013}{13}} of file \mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2orthogonals_2or__temperature__sensor_8h_source}{or\+\_\+temperature\+\_\+sensor.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014     \{}
+\DoxyCodeLine{00015         \textcolor{keyword}{auto} clTemperatureSensor = this-\/>createClient<ClTemperatureSensor>();}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017         clTemperatureSensor-\/>topicName = \textcolor{stringliteral}{"{}/temperature"{}};}
+\DoxyCodeLine{00018         \textcolor{comment}{//ClTemperatureSensor-\/>queueSize = "{}/front/scan"{};}}
+\DoxyCodeLine{00019         clTemperatureSensor-\/>timeout\_ = ros::Duration(10);}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021         clTemperatureSensor-\/>initialize();}
+\DoxyCodeLine{00022     \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back/include/sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back/orthogonals/\mbox{\hyperlink{strikes__back_2include_2sm__dance__bot__strikes__back_2orthogonals_2or__temperature__sensor_8h}{or\+\_\+temperature\+\_\+sensor.\+h}}\end{DoxyCompactItemize}

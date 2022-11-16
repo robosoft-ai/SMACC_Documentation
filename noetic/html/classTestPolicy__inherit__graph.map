@@ -1,0 +1,5 @@
+<map id="TestPolicy" name="TestPolicy">
+<area shape="rect" id="node1" title=" " alt="" coords="180,5,263,97"/>
+<area shape="rect" id="node2" href="$classReachedStateSuccessTestPolicy.html" title=" " alt="" coords="5,153,221,245"/>
+<area shape="rect" id="node3" href="$classTimeoutFailureTestPolicy.html" title=" " alt="" coords="246,145,415,252"/>
+</map>

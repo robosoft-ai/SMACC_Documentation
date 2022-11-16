@@ -1,0 +1,34 @@
+\hypertarget{cl__ros__publisher_8h_source}{}\doxysection{cl\+\_\+ros\+\_\+publisher.\+h}
+\label{cl__ros__publisher_8h_source}\index{smacc\_client\_library/ros\_publisher\_client/include/ros\_publisher\_client/cl\_ros\_publisher.h@{smacc\_client\_library/ros\_publisher\_client/include/ros\_publisher\_client/cl\_ros\_publisher.h}}
+\mbox{\hyperlink{cl__ros__publisher_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00002}00002 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__publisher__client_8h}{smacc/client\_bases/smacc\_publisher\_client.h}}>}}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00006}\mbox{\hyperlink{namespacecl__ros__publisher}{00006}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__ros__publisher}{cl\_ros\_publisher}}}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00009}\mbox{\hyperlink{classcl__ros__publisher_1_1ClRosPublisher}{00009}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__ros__publisher_1_1ClRosPublisher}{ClRosPublisher}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient}{smacc::client\_bases::SmaccPublisherClient}}}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00010}00010 \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00011}00011 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00012}\mbox{\hyperlink{classcl__ros__publisher_1_1ClRosPublisher_ab38e361d6b62f6ad19c2c9fd05101e50}{00012}}     \mbox{\hyperlink{classcl__ros__publisher_1_1ClRosPublisher_ab38e361d6b62f6ad19c2c9fd05101e50}{ClRosPublisher}}()}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00014}00014     \}}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00016}00016     \textcolor{keyword}{template} <\textcolor{keyword}{typename} MessageType>}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00017}\mbox{\hyperlink{classcl__ros__publisher_1_1ClRosPublisher_a288bed7979e04a640a52980d50f3d7ec}{00017}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__publisher_1_1ClRosPublisher_a288bed7979e04a640a52980d50f3d7ec}{configure}}(std::string \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}{topicName}})}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00019}00019         SmaccPublisherClient::configure<MessageType>(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}{topicName}});}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00022}00022     \textcolor{keyword}{template} <\textcolor{keyword}{typename} MessageType>}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00023}\mbox{\hyperlink{classcl__ros__publisher_1_1ClRosPublisher_a3517d62fb0703a0a72efe6de7ad1a6d8}{00023}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__publisher_1_1ClRosPublisher_a3517d62fb0703a0a72efe6de7ad1a6d8}{publish}}(\textcolor{keyword}{const} MessageType \&\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}})}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00024}00024     \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00025}00025         SmaccPublisherClient::publish(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00027}00027 \};}
+\DoxyCodeLine{\Hypertarget{cl__ros__publisher_8h_source_l00028}00028 \} \textcolor{comment}{// namespace cl\_ros\_publisher}}
+
+\end{DoxyCode}

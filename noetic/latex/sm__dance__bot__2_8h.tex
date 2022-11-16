@@ -1,0 +1,89 @@
+\hypertarget{sm__dance__bot__2_8h}{}\doxysection{smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+dance\+\_\+bot\+\_\+2/include/sm\+\_\+dance\+\_\+bot\+\_\+2/sm\+\_\+dance\+\_\+bot\+\_\+2.h File Reference}
+\label{sm__dance__bot__2_8h}\index{smacc\_sm\_reference\_library/sm\_dance\_bot\_2/include/sm\_dance\_bot\_2/sm\_dance\_bot\_2.h@{smacc\_sm\_reference\_library/sm\_dance\_bot\_2/include/sm\_dance\_bot\_2/sm\_dance\_bot\_2.h}}
+{\ttfamily \#include $<$smacc/smacc.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Laser\+Scan.\+h$>$}\newline
+{\ttfamily \#include $<$ros\+\_\+timer\+\_\+client/client\+\_\+behaviors/cb\+\_\+ros\+\_\+timer.\+h$>$}\newline
+{\ttfamily \#include $<$multirole\+\_\+sensor\+\_\+client/client\+\_\+behaviors/cb\+\_\+default\+\_\+multirole\+\_\+sensor\+\_\+behavior.\+h$>$}\newline
+{\ttfamily \#include $<$move\+\_\+base\+\_\+z\+\_\+client\+\_\+plugin/move\+\_\+base\+\_\+z\+\_\+client\+\_\+plugin.\+h$>$}\newline
+{\ttfamily \#include $<$move\+\_\+base\+\_\+z\+\_\+client\+\_\+plugin/client\+\_\+behaviors.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/clients/cl\+\_\+led/client\+\_\+behaviors/cb\+\_\+led\+\_\+on.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/clients/cl\+\_\+led/client\+\_\+behaviors/cb\+\_\+led\+\_\+off.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/clients/cl\+\_\+lidar/client\+\_\+behaviors/cb\+\_\+lidar\+\_\+sensor.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/clients/cl\+\_\+temperature\+\_\+sensor/client\+\_\+behaviors/cb\+\_\+custom\+\_\+condition\+\_\+temperature\+\_\+sensor.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/clients/cl\+\_\+string\+\_\+publisher/client\+\_\+behaviors/cb\+\_\+string\+\_\+publisher.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/clients/cl\+\_\+service3/client\+\_\+behaviors/cb\+\_\+service3.\+h$>$}\newline
+{\ttfamily \#include $<$ros\+\_\+publisher\+\_\+client/client\+\_\+behaviors/cb\+\_\+default\+\_\+publish\+\_\+loop.\+h$>$}\newline
+{\ttfamily \#include $<$ros\+\_\+publisher\+\_\+client/client\+\_\+behaviors/cb\+\_\+publish\+\_\+once.\+h$>$}\newline
+{\ttfamily \#include $<$ros\+\_\+publisher\+\_\+client/client\+\_\+behaviors/cb\+\_\+muted\+\_\+behavior.\+h$>$}\newline
+{\ttfamily \#include $<$ros\+\_\+publisher\+\_\+client/cl\+\_\+ros\+\_\+publisher.\+h$>$}\newline
+{\ttfamily \#include $<$sr\+\_\+all\+\_\+events\+\_\+go/sr\+\_\+all\+\_\+events\+\_\+go.\+h$>$}\newline
+{\ttfamily \#include $<$sr\+\_\+event\+\_\+countdown/sr\+\_\+event\+\_\+countdown.\+h$>$}\newline
+{\ttfamily \#include $<$sr\+\_\+conditional/sr\+\_\+conditional.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/orthogonals/or\+\_\+navigation.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/orthogonals/or\+\_\+obstacle\+\_\+perception.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/orthogonals/or\+\_\+led.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/orthogonals/or\+\_\+temperature\+\_\+sensor.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/orthogonals/or\+\_\+string\+\_\+publisher.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/orthogonals/or\+\_\+service3.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/orthogonals/or\+\_\+timer.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/orthogonals/or\+\_\+updatable\+\_\+publisher.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+recovery\+\_\+mode/ms\+\_\+dance\+\_\+bot\+\_\+recovery\+\_\+mode.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/radial\+\_\+motion\+\_\+states/ss\+\_\+radial\+\_\+pattern\+\_\+1.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/radial\+\_\+motion\+\_\+states/ss\+\_\+radial\+\_\+pattern\+\_\+2.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/radial\+\_\+motion\+\_\+states/ss\+\_\+radial\+\_\+pattern\+\_\+3.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/f\+\_\+pattern\+\_\+states/ss\+\_\+f\+\_\+pattern\+\_\+1.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/s\+\_\+pattern\+\_\+states/ss\+\_\+s\+\_\+pattern\+\_\+1.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+acquire\+\_\+sensors.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+event\+\_\+count\+\_\+down.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+navigate\+\_\+to\+\_\+waypoints\+\_\+x.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+rotate\+\_\+degrees\+\_\+6.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+rotate\+\_\+degrees\+\_\+5.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+navigate\+\_\+forward\+\_\+2.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+rotate\+\_\+degrees\+\_\+4.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+navigate\+\_\+forward\+\_\+1.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+navigate\+\_\+to\+\_\+waypoint\+\_\+1.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+rotate\+\_\+degrees\+\_\+2.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+rotate\+\_\+degrees\+\_\+1.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+navigate\+\_\+reverse\+\_\+2.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+rotate\+\_\+degrees\+\_\+3.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+navigate\+\_\+reverse\+\_\+1.\+h$>$}\newline
+{\ttfamily \#include $<$sm\+\_\+dance\+\_\+bot\+\_\+2/states/ms\+\_\+dance\+\_\+bot\+\_\+run\+\_\+mode/st\+\_\+navigate\+\_\+reverse\+\_\+3.\+h$>$}\newline
+Include dependency graph for sm\+\_\+dance\+\_\+bot\+\_\+2.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sm__dance__bot__2_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{sm__dance__bot__2_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsm__dance__bot__2_1_1EvGlobalError}{sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+Ev\+Global\+Error}}
+\item 
+struct \mbox{\hyperlink{structsm__dance__bot__2_1_1SmDanceBot2}{sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+Sm\+Dance\+Bot2}}
+\begin{DoxyCompactList}\small\item\em Advanced example of state machine with smacc that shows multiple techniques for the development of state machines. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesm__dance__bot__2}{sm\+\_\+dance\+\_\+bot\+\_\+2}}
+\item 
+namespace \mbox{\hyperlink{namespacesm__dance__bot__2_1_1SS1}{sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+SS1}}
+\item 
+namespace \mbox{\hyperlink{namespacesm__dance__bot__2_1_1SS2}{sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+SS2}}
+\item 
+namespace \mbox{\hyperlink{namespacesm__dance__bot__2_1_1SS3}{sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+SS3}}
+\item 
+namespace \mbox{\hyperlink{namespacesm__dance__bot__2_1_1SS4}{sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+SS4}}
+\item 
+namespace \mbox{\hyperlink{namespacesm__dance__bot__2_1_1SS5}{sm\+\_\+dance\+\_\+bot\+\_\+2\+::\+SS5}}
+\end{DoxyCompactItemize}

@@ -1,0 +1,160 @@
+\hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}{}\doxysection{led\+\_\+action\+\_\+server\+\_\+node.\+cpp}
+\label{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source}\index{smacc\_sm\_reference\_library/sm\_dance\_bot\_strikes\_back/servers/led\_action\_server/src/led\_action\_server\_node.cpp@{smacc\_sm\_reference\_library/sm\_dance\_bot\_strikes\_back/servers/led\_action\_server/src/led\_action\_server\_node.cpp}}
+\mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <actionlib/server/simple\_action\_server.h>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <std\_msgs/UInt8.h>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/DoubleParameter.h>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/Reconfigure.h>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <dynamic\_reconfigure/Config.h>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include <sm\_dance\_bot\_strikes\_back/LEDControlAction.h>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include <sm\_dance\_bot\_strikes\_back/LEDControlActionResult.h>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00014}00014 \textcolor{preprocessor}{\#include <sm\_dance\_bot\_strikes\_back/LEDControlResult.h>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00015}00015 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00016}00016 \textcolor{preprocessor}{\#include <visualization\_msgs/MarkerArray.h>}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00018}\mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_a2036ae39d23f8e14a2cc8ddcd46dea5a}{00018}} \textcolor{keyword}{typedef} actionlib::SimpleActionServer<sm\_dance\_bot\_strikes\_back::LEDControlAction> \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_aa8767d1286539545f6d13f200fefb5ff}{Server}};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00020}00020 \textcolor{comment}{// This class describes a preemptable-\/on/off tool action server to be used from smacc}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00021}00021 \textcolor{comment}{// shows in rviz a sphere whose color describe the current state (unknown, running, idle)}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00022}00022 \textcolor{keyword}{class }\mbox{\hyperlink{classLEDActionServer}{LEDActionServer}}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00023}00023 \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00024}00024 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00025}00025   std::shared\_ptr<Server> \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}} ;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00027}00027   ros::Publisher \mbox{\hyperlink{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}{stateMarkerPublisher\_}};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00029}\mbox{\hyperlink{classLEDActionServer_a219e3a4ae2a09887d601bc9b210294dd}{00029}}   sm\_dance\_bot\_strikes\_back::LEDControlGoal \mbox{\hyperlink{classLEDActionServer_a219e3a4ae2a09887d601bc9b210294dd}{cmd}};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00031}00031   uint8\_t \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00038}\mbox{\hyperlink{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}{00038}}   \mbox{\hyperlink{classLEDActionServer_a6978c43940438b9fd8bfcd6b443092d3}{LEDActionServer}}()}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00039}00039   \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00040}00040     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot\_strikes\_back::LEDControlResult::STATE\_UNKNOWN;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00041}00041   \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00048}\mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{00048}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publishFeedback}}()  \textcolor{comment}{// Note: "{}Action"{} is not appended to DoDishes here}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00049}00049 \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00050}00050     sm\_dance\_bot\_strikes\_back::LEDControlFeedback feedback\_msg;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00052}00052     \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>publishFeedback(feedback\_msg);}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00053}00053 \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00060}\mbox{\hyperlink{classLEDActionServer_aea69ee96367e9f6a82d6302f148505d6}{00060}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classLEDActionServer_aea69ee96367e9f6a82d6302f148505d6}{execute}}(\textcolor{keyword}{const} sm\_dance\_bot\_strikes\_back::LEDControlGoalConstPtr\& goal)  \textcolor{comment}{// Note: "{}Action"{} is not appended to DoDishes here}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00061}00061 \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00062}00062   ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}Tool action server request: "{}}<< *goal);}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00063}00063   \mbox{\hyperlink{classLEDActionServer_a4d3a4c07e7659cdd78228932bb1634d3}{cmd}} = *goal;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00065}00065   \textcolor{keywordflow}{if}(goal-\/>command == sm\_dance\_bot\_strikes\_back::LEDControlGoal::CMD\_ON)}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00066}00066   \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00067}00067     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot\_strikes\_back::LEDControlResult::STATE\_RUNNING;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00068}00068   \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00069}00069   \textcolor{keywordflow}{else}  \textcolor{keywordflow}{if} (goal-\/>command == sm\_dance\_bot\_strikes\_back::LEDControlGoal::CMD\_OFF)}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00070}00070   \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00071}00071     \mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} =  sm\_dance\_bot\_strikes\_back::LEDControlResult::STATE\_IDLE;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00072}00072   \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00074}00074   \textcolor{comment}{// 10Hz internal loop}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00075}00075   ros::Rate rate(20);}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00077}00077   \textcolor{keywordflow}{while}(ros::ok())}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00078}00078   \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00079}00079     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>isPreemptRequested())}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00080}00080     \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00081}00081        \textcolor{comment}{// a new request is being executed, we will stop this one}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00082}00082        ROS\_WARN(\textcolor{stringliteral}{"{}LEDActionServer request preempted. Forgetting older request."{}});}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00083}00083        \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>setPreempted();}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00084}00084        \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00085}00085     \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00087}00087     \mbox{\hyperlink{classLEDActionServer_a25c93d4e7ecdacbb4f5b090d7789aa36}{publishFeedback}}();}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00088}00088     \mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publishStateMarker}}();}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00089}00089     rate.sleep();}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00090}00090   \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00092}00092    \textcolor{comment}{// never reach succeeded because were are interested in keeping the feedback alive}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00093}00093    \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>setSucceeded();}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00094}00094 \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00101}\mbox{\hyperlink{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}{00101}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}{run}}()}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00102}00102 \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00103}00103   ros::NodeHandle n;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00104}00104   ROS\_INFO(\textcolor{stringliteral}{"{}Creating tool action server"{}});}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00106}00106   \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}} = std::make\_shared<Server>(n, \textcolor{stringliteral}{"{}led\_action\_server"{}}, boost::bind(\&\mbox{\hyperlink{classLEDActionServer_a2d8b9dfca1912e24170ef69a5edf5e9b}{LEDActionServer::execute}}, \textcolor{keyword}{this},  \_1), \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00107}00107   ROS\_INFO(\textcolor{stringliteral}{"{}Starting Tool Action Server"{}});}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00109}00109   \mbox{\hyperlink{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}{stateMarkerPublisher\_}} = n.advertise<visualization\_msgs::MarkerArray>(\textcolor{stringliteral}{"{}tool\_markers"{}}, 1);}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00111}00111   \mbox{\hyperlink{classLEDActionServer_a61d21c77642081acf017d4ebd65b2de0}{as\_}}-\/>start();}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00113}00113   ros::spin();}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00114}00114 \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00121}\mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{00121}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classLEDActionServer_a73bb754ac2347c50660624ad92315895}{publishStateMarker}}()}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00122}00122 \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00123}00123     visualization\_msgs::Marker marker;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00124}00124     marker.header.frame\_id = \textcolor{stringliteral}{"{}base\_link"{}};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00125}00125     marker.header.stamp = ros::Time::now ();}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00127}00127     marker.ns = \textcolor{stringliteral}{"{}tool\_namespace"{}};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00128}00128     marker.id = 0;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00129}00129     marker.type = visualization\_msgs::Marker::SPHERE;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00130}00130     marker.action = visualization\_msgs::Marker::ADD;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00132}00132     marker.scale.x = 0.2;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00133}00133     marker.scale.y = 0.2;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00134}00134     marker.scale.z = 0.2;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00136}00136     marker.color.a = 1;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00138}00138     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} == sm\_dance\_bot\_strikes\_back::LEDControlResult::STATE\_RUNNING)}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00139}00139     \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00140}00140       \textcolor{comment}{// show green ball}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00141}00141       marker.color.r = 0;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00142}00142       marker.color.g = 1;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00143}00143       marker.color.b = 0;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00144}00144     \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00145}00145     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classLEDActionServer_a1dc456e987dc331501ad6ff2215661ff}{currentState\_}} == sm\_dance\_bot\_strikes\_back::LEDControlResult::STATE\_IDLE)}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00146}00146     \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00147}00147       \textcolor{comment}{// show gray ball}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00148}00148       marker.color.r = 0.7;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00149}00149       marker.color.g = 0.7;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00150}00150       marker.color.b = 0.7;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00151}00151     \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00152}00152     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00153}00153     \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00154}00154       \textcolor{comment}{// show black ball}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00155}00155       marker.color.r = 0;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00156}00156       marker.color.g = 0;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00157}00157       marker.color.b = 0;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00158}00158     \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00160}00160     marker.pose.orientation.w=1;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00161}00161     marker.pose.position.x=0;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00162}00162     marker.pose.position.y=0;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00163}00163     marker.pose.position.z=1;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00165}00165     visualization\_msgs::MarkerArray ma;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00166}00166     ma.markers.push\_back(marker);}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00168}00168     \mbox{\hyperlink{classLEDActionServer_a4168a1e4a17eb1d65aaa059ce0c52086}{stateMarkerPublisher\_}}.publish(ma);}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00169}00169 \}}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00170}00170 \};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00171}00171 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00177}\mbox{\hyperlink{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{00177}} \textcolor{keywordtype}{int} \mbox{\hyperlink{servers_2led__action__server_2src_2led__action__server__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv)}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00178}00178 \{}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00179}00179   ros::init(argc, argv, \textcolor{stringliteral}{"{}led\_action\_server\_node"{}});}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00180}00180   \mbox{\hyperlink{classLEDActionServer}{LEDActionServer}} \mbox{\hyperlink{classLEDActionServer}{LEDActionServer}};}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00181}00181   \mbox{\hyperlink{classLEDActionServer}{LEDActionServer}}.\mbox{\hyperlink{classLEDActionServer_ae8e1b2d4bf0a85eec3ffd1c7d4f08490}{run}}();}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00183}00183   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp_source_l00184}00184 \}}
+
+\end{DoxyCode}

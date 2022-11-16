@@ -1,0 +1,130 @@
+\hypertarget{structsm__packml_1_1StStarting}{}\doxysection{sm\+\_\+packml\+::St\+Starting Struct Reference}
+\label{structsm__packml_1_1StStarting}\index{sm\_packml::StStarting@{sm\_packml::StStarting}}
+
+
+{\ttfamily \#include $<$st\+\_\+starting.\+h$>$}
+
+
+
+Inheritance diagram for sm\+\_\+packml\+::St\+Starting\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structsm__packml_1_1StStarting__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sm\+\_\+packml\+::St\+Starting\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsm__packml_1_1StStarting__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef mpl\+::list$<$ Transition$<$ Ev\+Key\+PressN$<$ Cb\+Default\+Keyboard\+Behavior, \mbox{\hyperlink{classsm__packml_1_1OrKeyboard}{Or\+Keyboard}} $>$, \mbox{\hyperlink{structsm__packml_1_1StExecute}{St\+Execute}}, \mbox{\hyperlink{classSUCCESS}{SUCCESS}} $>$ $>$ \mbox{\hyperlink{structsm__packml_1_1StStarting_a5874175ff382d18ac532b2ceeda18c8b}{reactions}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structsm__packml_1_1StStarting_ac300462fece8c35773780ac356c29653}{runtime\+Configure}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structsm__packml_1_1StStarting_a41a4418153e0a3756f8f5f93d13aa16d}{static\+Configure}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{st__starting_8h_source_l00004}{4}} of file \mbox{\hyperlink{st__starting_8h_source}{st\+\_\+starting.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structsm__packml_1_1StStarting_a5874175ff382d18ac532b2ceeda18c8b}\label{structsm__packml_1_1StStarting_a5874175ff382d18ac532b2ceeda18c8b}} 
+\index{sm\_packml::StStarting@{sm\_packml::StStarting}!reactions@{reactions}}
+\index{reactions@{reactions}!sm\_packml::StStarting@{sm\_packml::StStarting}}
+\doxysubsubsection{\texorpdfstring{reactions}{reactions}}
+{\footnotesize\ttfamily typedef mpl\+::list$<$ Transition$<$Ev\+Key\+PressN$<$Cb\+Default\+Keyboard\+Behavior, \mbox{\hyperlink{classsm__packml_1_1OrKeyboard}{Or\+Keyboard}}$>$, \mbox{\hyperlink{structsm__packml_1_1StExecute}{St\+Execute}}, \mbox{\hyperlink{classSUCCESS}{SUCCESS}}$>$ $>$ \mbox{\hyperlink{structsm__packml_1_1StStarting_a5874175ff382d18ac532b2ceeda18c8b}{sm\+\_\+packml\+::\+St\+Starting\+::reactions}}}
+
+
+
+Definition at line \mbox{\hyperlink{st__starting_8h_source_l00016}{16}} of file \mbox{\hyperlink{st__starting_8h_source}{st\+\_\+starting.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsm__packml_1_1StStarting_ac300462fece8c35773780ac356c29653}\label{structsm__packml_1_1StStarting_ac300462fece8c35773780ac356c29653}} 
+\index{sm\_packml::StStarting@{sm\_packml::StStarting}!runtimeConfigure@{runtimeConfigure}}
+\index{runtimeConfigure@{runtimeConfigure}!sm\_packml::StStarting@{sm\_packml::StStarting}}
+\doxysubsubsection{\texorpdfstring{runtimeConfigure()}{runtimeConfigure()}}
+{\footnotesize\ttfamily void sm\+\_\+packml\+::\+St\+Starting\+::runtime\+Configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{st__starting_8h_source_l00039}{39}} of file \mbox{\hyperlink{st__starting_8h_source}{st\+\_\+starting.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040     \{}
+\DoxyCodeLine{00041     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structsm__packml_1_1StStarting_a41a4418153e0a3756f8f5f93d13aa16d}\label{structsm__packml_1_1StStarting_a41a4418153e0a3756f8f5f93d13aa16d}} 
+\index{sm\_packml::StStarting@{sm\_packml::StStarting}!staticConfigure@{staticConfigure}}
+\index{staticConfigure@{staticConfigure}!sm\_packml::StStarting@{sm\_packml::StStarting}}
+\doxysubsubsection{\texorpdfstring{staticConfigure()}{staticConfigure()}}
+{\footnotesize\ttfamily static void sm\+\_\+packml\+::\+St\+Starting\+::static\+Configure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{st__starting_8h_source_l00019}{19}} of file \mbox{\hyperlink{st__starting_8h_source}{st\+\_\+starting.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020     \{}
+\DoxyCodeLine{00021         configure\_orthogonal<OrTimer, CbTimer>();}
+\DoxyCodeLine{00022         configure\_orthogonal<OrSubscriber, CbWatchdogSubscriberBehavior>();}
+\DoxyCodeLine{00023         configure\_orthogonal<OrUpdatablePublisher, CbDefaultPublishLoop>();}
+\DoxyCodeLine{00024         configure\_orthogonal<OrKeyboard, CbDefaultKeyboardBehavior>();}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026         \textcolor{comment}{// Create State Reactor}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029         \textcolor{keyword}{auto} sbAll = \mbox{\hyperlink{classsmacc_1_1SmaccState_a4b54d8ec82d303736d8bc11a3ffd0ce1}{static\_createStateReactor}}<SrAllEventsGo,}
+\DoxyCodeLine{00030                                                 \mbox{\hyperlink{structsmacc_1_1state__reactors_1_1EvAllGo}{smacc::state\_reactors::EvAllGo<SrAllEventsGo>}},}
+\DoxyCodeLine{00031                                                 mpl::list<EvTimer<CbTimer, OrTimer>, EvKeyPressA<CbDefaultKeyboardBehavior, OrKeyboard>> >();}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033         \textcolor{comment}{//auto sbAll = static\_createStateReactor<SrAllEventsGo>();}}
+\DoxyCodeLine{00034         \textcolor{comment}{//sbAll-\/>addInputEvent<EvTimer<CbTimer, OrTimer>>();}}
+\DoxyCodeLine{00035         \textcolor{comment}{//sbAll-\/>addInputEvent<EvKeyPressA<CbDefaultKeyboardBehavior, OrKeyboard>>();}}
+\DoxyCodeLine{00036         \textcolor{comment}{//sbAll-\/>setOutputEvent<EvAllGo<SrAllEventsGo>>();}}
+\DoxyCodeLine{00037     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__base_8h_source_l00229}{smacc\+::\+Smacc\+State$<$ St\+Starting, Ms\+Run $>$\+::static\+\_\+create\+State\+Reactor()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsm__packml_1_1StStarting_a41a4418153e0a3756f8f5f93d13aa16d_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+sm\+\_\+reference\+\_\+library/sm\+\_\+packml/include/sm\+\_\+packml/states/\mbox{\hyperlink{st__starting_8h}{st\+\_\+starting.\+h}}\end{DoxyCompactItemize}

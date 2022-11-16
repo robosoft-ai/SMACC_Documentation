@@ -1,0 +1,83 @@
+\hypertarget{sm__viewer__sim_8h_source}{}\doxysection{sm\+\_\+viewer\+\_\+sim.\+h}
+\label{sm__viewer__sim_8h_source}\index{smacc\_sm\_reference\_library/sm\_viewer\_sim/include/sm\_viewer\_sim/sm\_viewer\_sim.h@{smacc\_sm\_reference\_library/sm\_viewer\_sim/include/sm\_viewer\_sim/sm\_viewer\_sim.h}}
+\mbox{\hyperlink{sm__viewer__sim_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00002}00002 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <future>}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00007}00007 \textcolor{comment}{// CLIENT BEHAVIORS}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00008}00008 \textcolor{comment}{// -\/ no client behavior in this example -\/}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00010}00010 \textcolor{comment}{// ORTHOGONALS}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{sm__viewer__sim_2include_2sm__viewer__sim_2orthogonals_2or__navigation_8h}{sm\_viewer\_sim/orthogonals/or\_navigation.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00013}00013 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc}{smacc}};}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00015}00015 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesm__viewer__sim}{sm\_viewer\_sim}}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00017}00017 \textcolor{keyword}{struct }MsRecoveryMode;}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00018}00018 \textcolor{keyword}{struct }MsRunMode;}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00019}00019 \textcolor{keyword}{struct }St1;}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00020}00020 \textcolor{keyword}{struct }St2;}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00021}00021 \textcolor{keyword}{struct }St3;}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00023}\mbox{\hyperlink{structsm__viewer__sim_1_1EvToDeep}{00023}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__viewer__sim_1_1EvToDeep}{EvToDeep}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<EvToDeep>}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00024}00024 \{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00025}00025 \};}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00027}\mbox{\hyperlink{structsm__viewer__sim_1_1EvFail}{00027}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__viewer__sim_1_1EvFail}{EvFail}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<EvFail>}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00028}00028 \{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00029}00029 \};}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00032}\mbox{\hyperlink{structsm__viewer__sim_1_1Ev1}{00032}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__viewer__sim_1_1Ev1}{Ev1}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<Ev1>}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00033}00033 \{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00034}00034 \};}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00035}\mbox{\hyperlink{structsm__viewer__sim_1_1Ev2}{00035}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__viewer__sim_1_1Ev2}{Ev2}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<Ev2>}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00036}00036 \{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00037}00037 \};}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00038}\mbox{\hyperlink{structsm__viewer__sim_1_1Ev3}{00038}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__viewer__sim_1_1Ev3}{Ev3}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<Ev3>}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00039}00039 \{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00040}00040 \};}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00042}00042 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TEv>}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00043}\mbox{\hyperlink{namespacesm__viewer__sim_a19b5db17983d5b9bbf21e96ecf9ab5c8}{00043}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacesm__viewer__sim_a19b5db17983d5b9bbf21e96ecf9ab5c8}{delayedPostEvent}}(\mbox{\hyperlink{classsmacc_1_1ISmaccState}{smacc::ISmaccState}} *sm, \textcolor{keywordtype}{int} delayseconds)}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00044}00044 \{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00045}00045     std::async(std::launch::async, [=]() \{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00046}00046         std::this\_thread::sleep\_for(std::chrono::seconds(delayseconds));}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00047}00047         sm-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_acef404ab3766ddf2892e8dad14a4a7cf}{postEvent}}(\textcolor{keyword}{new} TEv());}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00048}00048     \});}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00051}\mbox{\hyperlink{structsm__viewer__sim_1_1SmViewerSim}{00051}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsm__viewer__sim_1_1SmViewerSim}{SmViewerSim}} : \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{smacc::SmaccStateMachineBase}}<SmViewerSim, MsRunMode>}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00052}00052 \{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00053}00053     \textcolor{keyword}{using }SmaccStateMachineBase::SmaccStateMachineBase;}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00055}\mbox{\hyperlink{structsm__viewer__sim_1_1SmViewerSim_a1ad4e963a078af53a55097c6eb78cae0}{00055}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__viewer__sim_1_1SmViewerSim_a1ad4e963a078af53a55097c6eb78cae0}{onInitialize}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00056}00056 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00057}00057         this-\/>createOrthogonal<OrNavigation>();}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00058}00058         \textcolor{keywordtype}{int} initialcounterValue = 0;}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00059}00059         \textcolor{comment}{//this-\/>setGlobalSMData("{}St2Attempts"{}, initialcounterValue);}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00060}00060     \}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00062}\mbox{\hyperlink{structsm__viewer__sim_1_1SmViewerSim_a7b9ef19f73db25f93b1b540eb744365b}{00062}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{structsm__viewer__sim_1_1SmViewerSim_a7b9ef19f73db25f93b1b540eb744365b}{unconsumed\_event}}(\textcolor{keyword}{const} sc::event\_base \&)}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00063}00063     \{}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00064}00064         \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}Event was not consumed!"{}});}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00065}00065     \}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00066}00066 \};}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00067}00067 \} \textcolor{comment}{// namespace sm\_viewer\_sim}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00069}00069 \textcolor{comment}{// MODE STATES}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00070}00070 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ms__run__mode_8h}{sm\_viewer\_sim/modestates/ms\_run\_mode.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00071}00071 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{ms__recovery__mode_8h}{sm\_viewer\_sim/modestates/ms\_recovery\_mode.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00074}00074 \textcolor{comment}{// STATES}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00075}00075 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__st1_8h}{sm\_viewer\_sim/states/st\_st1.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00076}00076 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__st2_8h}{sm\_viewer\_sim/states/st\_st2.h}}>}}
+\DoxyCodeLine{\Hypertarget{sm__viewer__sim_8h_source_l00077}00077 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{st__st3_8h}{sm\_viewer\_sim/states/st\_st3.h}}>}}
+
+\end{DoxyCode}

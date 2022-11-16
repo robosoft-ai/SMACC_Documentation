@@ -1,0 +1,482 @@
+\hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2}{}\doxysection{cl\+\_\+move\+\_\+base\+\_\+z\+::Cb\+Undo\+Path\+Backwards2 Class Reference}
+\label{classcl__move__base__z_1_1CbUndoPathBackwards2}\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+
+
+{\ttfamily \#include $<$cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h$>$}
+
+
+
+Inheritance diagram for cl\+\_\+move\+\_\+base\+\_\+z\+::Cb\+Undo\+Path\+Backwards2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classcl__move__base__z_1_1CbUndoPathBackwards2__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cl\+\_\+move\+\_\+base\+\_\+z\+::Cb\+Undo\+Path\+Backwards2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__base__z_1_1CbUndoPathBackwards2__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a0f202bf7a4b1cc1db426a0c2ad1434f6}{Cb\+Undo\+Path\+Backwards2}} ()
+\item 
+virtual void \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1b96187df9be6ce0fbdb5511147685d3}{on\+Entry}} () override
+\item 
+virtual void \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ae493fcd813176d8473ff08680beb7afe}{on\+Exit}} () override
+\item 
+virtual void \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a62f0d53fc341ca6d241637cc0e4b2e30}{update}} () override
+\item 
+{\footnotesize template$<$typename TOrthogonal , typename TSource\+Object $>$ }\\void \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a61148b9509b489efc382ecdeb9bcf9c2}{on\+Orthogonal\+Allocation}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_afaa039c78eb70ba012d86d8c77b9828c}{publish\+Markers}} ()
+\item 
+float \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a20b9a6799b0484810b0319f5a97d020e}{eval\+Plane\+Side}} (const geometry\+\_\+msgs\+::\+Pose \&pose)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Cl\+Move\+Base\+Z\+::\+Goal \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\+\_\+}}
+\item 
+\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker}{odom\+\_\+tracker\+::\+Odom\+Tracker}} $\ast$ \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1faa9bf6fef87280e28d4016f5c0843e}{odom\+Tracker\+\_\+}}
+\item 
+tf\+::\+Transform\+Listener \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a4531d3f52b12a4cce20ac1545ca2cb61}{listener}}
+\item 
+\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose}} $\ast$ \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}{robot\+Pose\+\_\+}}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{classbool}{bool}} $>$ \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1c037317330c74b60660548f09a01749}{goal\+Line\+Passed\+\_\+}}
+\item 
+float \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\+\_\+plane\+\_\+side\+\_\+}}
+\item 
+float \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a452bcdab678ea02d6d6a0ae06fb484ab}{trigger\+Threshold\+\_\+}}
+\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2405e8194c63dce4462b6d4910031fe8}{post\+Virtual\+Line\+Passed\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00021}{21}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8h_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a0f202bf7a4b1cc1db426a0c2ad1434f6}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a0f202bf7a4b1cc1db426a0c2ad1434f6}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!CbUndoPathBackwards2@{CbUndoPathBackwards2}}
+\index{CbUndoPathBackwards2@{CbUndoPathBackwards2}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{CbUndoPathBackwards2()}{CbUndoPathBackwards2()}}
+{\footnotesize\ttfamily cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::\+Cb\+Undo\+Path\+Backwards2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015                                            : \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1c037317330c74b60660548f09a01749}{goalLinePassed\_}}(\textcolor{keyword}{false})}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017   \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a452bcdab678ea02d6d6a0ae06fb484ab}{triggerThreshold\_}} = 0.01;  \textcolor{comment}{// 10 mm}}
+\DoxyCodeLine{00018 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00050}{trigger\+Threshold\+\_\+}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a20b9a6799b0484810b0319f5a97d020e}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a20b9a6799b0484810b0319f5a97d020e}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!evalPlaneSide@{evalPlaneSide}}
+\index{evalPlaneSide@{evalPlaneSide}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{evalPlaneSide()}{evalPlaneSide()}}
+{\footnotesize\ttfamily float cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::eval\+Plane\+Side (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose \&}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049 \{}
+\DoxyCodeLine{00050   \textcolor{comment}{// check the line was passed}}
+\DoxyCodeLine{00051   \textcolor{comment}{// y = mx x + y0}}
+\DoxyCodeLine{00052   \textcolor{comment}{// y = (sin(alpha)/cos(alpha)) (x -\/x0) + y0}}
+\DoxyCodeLine{00053   \textcolor{comment}{// cos(alpha)(y -\/ y0) -\/ sin(alpha) (x -\/x0)= 0 // if greater one side if lower , the other}}
+\DoxyCodeLine{00054   \textcolor{keyword}{auto} y = pose.position.y;}
+\DoxyCodeLine{00055   \textcolor{keyword}{auto} x = pose.position.x;}
+\DoxyCodeLine{00056   \textcolor{keyword}{auto} alpha = tf::getYaw(\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose.pose.orientation);}
+\DoxyCodeLine{00057   \textcolor{keyword}{auto} y0 = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose.pose.position.y;}
+\DoxyCodeLine{00058   \textcolor{keyword}{auto} x0 = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose.pose.position.x;}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060   \textcolor{keyword}{auto} evalimplicit = cos(alpha) * (y -\/ y0) -\/ sin (alpha) * (x -\/ x0);}
+\DoxyCodeLine{00061   \textcolor{keywordflow}{return} evalimplicit;}
+\DoxyCodeLine{00062 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00043}{goal\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00020}{on\+Entry()}}, and \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00064}{update()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__base__z_1_1CbUndoPathBackwards2_a20b9a6799b0484810b0319f5a97d020e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a1b96187df9be6ce0fbdb5511147685d3}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a1b96187df9be6ce0fbdb5511147685d3}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!onEntry@{onEntry}}
+\index{onEntry@{onEntry}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{onEntry()}{onEntry()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::on\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9877684b1954429719826e2d0924d980}{smacc\+::\+ISmacc\+Client\+Behavior}}.
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022   \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1faa9bf6fef87280e28d4016f5c0843e}{odomTracker\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<OdomTracker>();}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024   \textcolor{keyword}{auto} plannerSwitcher = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<PlannerSwitcher>();}
+\DoxyCodeLine{00025   \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}{robotPose\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\_move\_base\_z::Pose}}>();}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027   nav\_msgs::Path forwardpath = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1faa9bf6fef87280e28d4016f5c0843e}{odomTracker\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_a762bc88653ebb7d78e693ba465fb160f}{getPath}}();}
+\DoxyCodeLine{00028   \textcolor{comment}{// ROS\_INFO\_STREAM("{}[UndoPathBackward] Current path backwards: "{} << forwardpath);}}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030   \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1faa9bf6fef87280e28d4016f5c0843e}{odomTracker\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_aeed01bdefd9a1cc709b0b3e4eed285ed}{setWorkingMode}}(WorkingMode::CLEAR\_PATH);}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032   \textcolor{comment}{// this line is used to flush/reset backward planner in the case it were already there}}
+\DoxyCodeLine{00033   \textcolor{comment}{// plannerSwitcher-\/>setDefaultPlanners();}}
+\DoxyCodeLine{00034   \textcolor{keywordflow}{if} (forwardpath.poses.size() > 0)}
+\DoxyCodeLine{00035   \{}
+\DoxyCodeLine{00036     \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose = forwardpath.poses.front();}
+\DoxyCodeLine{00037     \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\_plane\_side\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a20b9a6799b0484810b0319f5a97d020e}{evalPlaneSide}}(\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}{robotPose\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{toPoseMsg}}());}
+\DoxyCodeLine{00038     plannerSwitcher-\/>setUndoPathBackwardsPlannerConfiguration();}
+\DoxyCodeLine{00039     \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9c47a5094ac8afb01680307fe5eca922}{sendGoal}}(\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}});}
+\DoxyCodeLine{00040   \}}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00048}{eval\+Plane\+Side()}}, \mbox{\hyperlink{smacc__client__impl_8h_source_l00027}{smacc\+::\+ISmacc\+Client\+::get\+Component()}}, \mbox{\hyperlink{odom__tracker_8cpp_source_l00211}{cl\+\_\+move\+\_\+base\+\_\+z\+::odom\+\_\+tracker\+::\+Odom\+Tracker\+::get\+Path()}}, \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00043}{goal\+\_\+}}, \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00049}{initial\+\_\+plane\+\_\+side\+\_\+}}, \mbox{\hyperlink{cb__move__base__client__behavior__base_8h_source_l00033}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Move\+Base\+Client\+Behavior\+Base\+::move\+Base\+Client\+\_\+}}, \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00044}{odom\+Tracker\+\_\+}}, \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00047}{robot\+Pose\+\_\+}}, \mbox{\hyperlink{smacc__action__client__base_8h_source_l00177}{smacc\+::client\+\_\+bases\+::\+Smacc\+Action\+Client\+Base$<$ Action\+Type $>$\+::send\+Goal()}}, \mbox{\hyperlink{odom__tracker_8cpp_source_l00074}{cl\+\_\+move\+\_\+base\+\_\+z\+::odom\+\_\+tracker\+::\+Odom\+Tracker\+::set\+Working\+Mode()}}, and \mbox{\hyperlink{cp__pose_8h_source_l00027}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose\+::to\+Pose\+Msg()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__base__z_1_1CbUndoPathBackwards2_a1b96187df9be6ce0fbdb5511147685d3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_ae493fcd813176d8473ff08680beb7afe}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_ae493fcd813176d8473ff08680beb7afe}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!onExit@{onExit}}
+\index{onExit@{onExit}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{onExit()}{onExit()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::on\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_ad1198fdb2cbdf11f3276d3e23d4c0a50}{smacc\+::\+ISmacc\+Client\+Behavior}}.
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00127}{127}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00128 \{}
+\DoxyCodeLine{00129   \textcolor{keyword}{auto}* odomTracker = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<OdomTracker>();}
+\DoxyCodeLine{00130   odomTracker-\/>popPath();}
+\DoxyCodeLine{00131 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__client__impl_8h_source_l00027}{smacc\+::\+ISmacc\+Client\+::get\+Component()}}, and \mbox{\hyperlink{cb__move__base__client__behavior__base_8h_source_l00033}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Move\+Base\+Client\+Behavior\+Base\+::move\+Base\+Client\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__base__z_1_1CbUndoPathBackwards2_ae493fcd813176d8473ff08680beb7afe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a61148b9509b489efc382ecdeb9bcf9c2}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a61148b9509b489efc382ecdeb9bcf9c2}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!onOrthogonalAllocation@{onOrthogonalAllocation}}
+\index{onOrthogonalAllocation@{onOrthogonalAllocation}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{onOrthogonalAllocation()}{onOrthogonalAllocation()}}
+{\footnotesize\ttfamily template$<$typename TOrthogonal , typename TSource\+Object $>$ \\
+void cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::on\+Orthogonal\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00032}{32}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8h_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033   \{}
+\DoxyCodeLine{00034     CbMoveBaseClientBehaviorBase::onOrthogonalAllocation<TOrthogonal, TSourceObject>();}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2405e8194c63dce4462b6d4910031fe8}{postVirtualLinePassed\_}} = [=] \{ this-\/>postEvent<EvGoalVirtualLinePassed<TSourceObject, TOrthogonal>>(); \};}
+\DoxyCodeLine{00037   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00051}{post\+Virtual\+Line\+Passed\+\_\+}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_afaa039c78eb70ba012d86d8c77b9828c}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_afaa039c78eb70ba012d86d8c77b9828c}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!publishMarkers@{publishMarkers}}
+\index{publishMarkers@{publishMarkers}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{publishMarkers()}{publishMarkers()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::publish\+Markers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00090}{90}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091 \{}
+\DoxyCodeLine{00092   \textcolor{keywordtype}{double} phi = tf::getYaw(\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose.pose.orientation);}
+\DoxyCodeLine{00093   visualization\_msgs::Marker marker;}
+\DoxyCodeLine{00094   marker.header.frame\_id = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}{robotPose\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_aec469af8ca846ae14e108d74fef93b4f}{getReferenceFrame}}();}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096   marker.header.stamp = ros::Time::now();}
+\DoxyCodeLine{00097   marker.ns = \textcolor{stringliteral}{"{}my\_namespace2"{}};}
+\DoxyCodeLine{00098   marker.id = 0;}
+\DoxyCodeLine{00099   marker.type = visualization\_msgs::Marker::SPHERE;}
+\DoxyCodeLine{00100   marker.action = visualization\_msgs::Marker::ADD;}
+\DoxyCodeLine{00101   marker.scale.x = 3;}
+\DoxyCodeLine{00102   marker.scale.y = 3;}
+\DoxyCodeLine{00103   marker.scale.z = 3;}
+\DoxyCodeLine{00104   marker.color.a = 1.0;}
+\DoxyCodeLine{00105   marker.color.r = 1.0;}
+\DoxyCodeLine{00106   marker.color.g = 0.0;}
+\DoxyCodeLine{00107   marker.color.b = 0.0;}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109   marker.pose = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose.pose;}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111   \textcolor{comment}{// geometry\_msgs::Point start, end;}}
+\DoxyCodeLine{00112   \textcolor{comment}{// start.x = pose.position.x;}}
+\DoxyCodeLine{00113   \textcolor{comment}{// start.y = pose.position.y;}}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115   \textcolor{comment}{// end.x = pose.position.x + 0.5 * cos(phi);}}
+\DoxyCodeLine{00116   \textcolor{comment}{// end.y = pose.position.y + 0.5 * sin(phi);}}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118   \textcolor{comment}{// marker.points.push\_back(start);}}
+\DoxyCodeLine{00119   \textcolor{comment}{// marker.points.push\_back(end);}}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121   visualization\_msgs::MarkerArray ma;}
+\DoxyCodeLine{00122   ma.markers.push\_back(marker);}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124   this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_aff48fc567ae025b196efd8895b7fb35d}{visualizationMarkersPub\_}}.publish(ma);}
+\DoxyCodeLine{00125 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cp__pose_8h_source_l00039}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose\+::get\+Reference\+Frame()}}, \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00043}{goal\+\_\+}}, \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00047}{robot\+Pose\+\_\+}}, and \mbox{\hyperlink{cb__move__base__client__behavior__base_8h_source_l00034}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Move\+Base\+Client\+Behavior\+Base\+::visualization\+Markers\+Pub\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__base__z_1_1CbUndoPathBackwards2_afaa039c78eb70ba012d86d8c77b9828c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a62f0d53fc341ca6d241637cc0e4b2e30}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a62f0d53fc341ca6d241637cc0e4b2e30}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!update@{update}}
+\index{update@{update}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_a84ee0520cbefdb1d412bed54650b028e}{smacc\+::\+ISmacc\+Updatable}}.
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065 \{}
+\DoxyCodeLine{00066   \textcolor{keyword}{auto} pose = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}{robotPose\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{toPoseMsg}}();}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068   \textcolor{keywordtype}{float} evalimplicit = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a20b9a6799b0484810b0319f5a97d020e}{evalPlaneSide}}(pose);}
+\DoxyCodeLine{00069   \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecl__move__base__z_ae144a2fabd00ba70fdc8099878cb3dac}{sgn}}(evalimplicit) != \mbox{\hyperlink{namespacecl__move__base__z_ae144a2fabd00ba70fdc8099878cb3dac}{sgn}}(\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\_plane\_side\_}}))}
+\DoxyCodeLine{00070   \{}
+\DoxyCodeLine{00071     ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[CbUndoPathBackwards2] goal\_ line passed: "{}}}
+\DoxyCodeLine{00072                                       << evalimplicit << \textcolor{stringliteral}{"{}/"{}} << this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\_plane\_side\_}});}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074     \textcolor{keywordflow}{if} (fabs(evalimplicit) > \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a452bcdab678ea02d6d6a0ae06fb484ab}{triggerThreshold\_}} \textcolor{comment}{/*meters*/})}
+\DoxyCodeLine{00075     \{}
+\DoxyCodeLine{00076        ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[CbUndoPathBackwards2] virtual goal line passed, stopping behavior and success: "{}}}
+\DoxyCodeLine{00077                                       << evalimplicit << \textcolor{stringliteral}{"{}/"{}} << this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\_plane\_side\_}});}
+\DoxyCodeLine{00078       \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_aedeaf9704b73bf05b5522f7250416c9a}{cancelGoal}}();}
+\DoxyCodeLine{00079       \textcolor{comment}{// this-\/>postSuccessEvent();}}
+\DoxyCodeLine{00080       this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2405e8194c63dce4462b6d4910031fe8}{postVirtualLinePassed\_}}();}
+\DoxyCodeLine{00081     \}}
+\DoxyCodeLine{00082   \}}
+\DoxyCodeLine{00083   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00084   \{}
+\DoxyCodeLine{00085     ROS\_INFO\_STREAM\_THROTTLE(1.0, \textcolor{stringliteral}{"{}[CbUndoPathBackwards2] goal\_ line not passed yet: "{}} << evalimplicit << \textcolor{stringliteral}{"{}/"{}}}
+\DoxyCodeLine{00086                                                                                        << this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\_plane\_side\_}});}
+\DoxyCodeLine{00087   \}}
+\DoxyCodeLine{00088 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__action__client__base_8h_source_l00159}{smacc\+::client\+\_\+bases\+::\+Smacc\+Action\+Client\+Base$<$ Action\+Type $>$\+::cancel\+Goal()}}, \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00048}{eval\+Plane\+Side()}}, \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00049}{initial\+\_\+plane\+\_\+side\+\_\+}}, \mbox{\hyperlink{cb__move__base__client__behavior__base_8h_source_l00033}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Move\+Base\+Client\+Behavior\+Base\+::move\+Base\+Client\+\_\+}}, \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00051}{post\+Virtual\+Line\+Passed\+\_\+}}, \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00047}{robot\+Pose\+\_\+}}, \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00008}{cl\+\_\+move\+\_\+base\+\_\+z\+::sgn()}}, \mbox{\hyperlink{cp__pose_8h_source_l00027}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose\+::to\+Pose\+Msg()}}, and \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00050}{trigger\+Threshold\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__base__z_1_1CbUndoPathBackwards2_a62f0d53fc341ca6d241637cc0e4b2e30_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!goal\_@{goal\_}}
+\index{goal\_@{goal\_}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{goal\_}{goal\_}}
+{\footnotesize\ttfamily Cl\+Move\+Base\+Z\+::\+Goal cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::goal\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00043}{43}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8h_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00048}{eval\+Plane\+Side()}}, \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00020}{on\+Entry()}}, and \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00090}{publish\+Markers()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a1c037317330c74b60660548f09a01749}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a1c037317330c74b60660548f09a01749}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!goalLinePassed\_@{goalLinePassed\_}}
+\index{goalLinePassed\_@{goalLinePassed\_}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{goalLinePassed\_}{goalLinePassed\_}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{classbool}{bool}}$>$ cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::goal\+Line\+Passed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00048}{48}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8h_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!initial\_plane\_side\_@{initial\_plane\_side\_}}
+\index{initial\_plane\_side\_@{initial\_plane\_side\_}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{initial\_plane\_side\_}{initial\_plane\_side\_}}
+{\footnotesize\ttfamily float cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::initial\+\_\+plane\+\_\+side\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00049}{49}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8h_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00020}{on\+Entry()}}, and \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00064}{update()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a4531d3f52b12a4cce20ac1545ca2cb61}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a4531d3f52b12a4cce20ac1545ca2cb61}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!listener@{listener}}
+\index{listener@{listener}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{listener}{listener}}
+{\footnotesize\ttfamily tf\+::\+Transform\+Listener cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::listener\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00046}{46}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8h_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a1faa9bf6fef87280e28d4016f5c0843e}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a1faa9bf6fef87280e28d4016f5c0843e}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!odomTracker\_@{odomTracker\_}}
+\index{odomTracker\_@{odomTracker\_}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{odomTracker\_}{odomTracker\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker}{odom\+\_\+tracker\+::\+Odom\+Tracker}}$\ast$ cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::odom\+Tracker\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00044}{44}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8h_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00020}{on\+Entry()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a2405e8194c63dce4462b6d4910031fe8}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a2405e8194c63dce4462b6d4910031fe8}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!postVirtualLinePassed\_@{postVirtualLinePassed\_}}
+\index{postVirtualLinePassed\_@{postVirtualLinePassed\_}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{postVirtualLinePassed\_}{postVirtualLinePassed\_}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::post\+Virtual\+Line\+Passed\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00051}{51}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8h_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00032}{on\+Orthogonal\+Allocation()}}, and \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00064}{update()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!robotPose\_@{robotPose\_}}
+\index{robotPose\_@{robotPose\_}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{robotPose\_}{robotPose\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\+\_\+move\+\_\+base\+\_\+z\+::\+Pose}}$\ast$ cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::robot\+Pose\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00047}{47}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8h_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00020}{on\+Entry()}}, \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00090}{publish\+Markers()}}, and \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00064}{update()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CbUndoPathBackwards2_a452bcdab678ea02d6d6a0ae06fb484ab}\label{classcl__move__base__z_1_1CbUndoPathBackwards2_a452bcdab678ea02d6d6a0ae06fb484ab}} 
+\index{cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}!triggerThreshold\_@{triggerThreshold\_}}
+\index{triggerThreshold\_@{triggerThreshold\_}!cl\_move\_base\_z::CbUndoPathBackwards2@{cl\_move\_base\_z::CbUndoPathBackwards2}}
+\doxysubsubsection{\texorpdfstring{triggerThreshold\_}{triggerThreshold\_}}
+{\footnotesize\ttfamily float cl\+\_\+move\+\_\+base\+\_\+z\+::\+Cb\+Undo\+Path\+Backwards2\+::trigger\+Threshold\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__undo__path__backwards2_8h_source_l00050}{50}} of file \mbox{\hyperlink{cb__undo__path__backwards2_8h_source}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00015}{Cb\+Undo\+Path\+Backwards2()}}, and \mbox{\hyperlink{cb__undo__path__backwards2_8cpp_source_l00064}{update()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+client\+\_\+library/move\+\_\+base\+\_\+z\+\_\+client/move\+\_\+base\+\_\+z\+\_\+client\+\_\+plugin/include/move\+\_\+base\+\_\+z\+\_\+client\+\_\+plugin/client\+\_\+behaviors/\mbox{\hyperlink{cb__undo__path__backwards2_8h}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+h}}\item 
+smacc\+\_\+client\+\_\+library/move\+\_\+base\+\_\+z\+\_\+client/move\+\_\+base\+\_\+z\+\_\+client\+\_\+plugin/src/client\+\_\+behaviors/\mbox{\hyperlink{cb__undo__path__backwards2_8cpp}{cb\+\_\+undo\+\_\+path\+\_\+backwards2.\+cpp}}\end{DoxyCompactItemize}

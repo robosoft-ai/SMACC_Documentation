@@ -1,0 +1,152 @@
+\hypertarget{classTimeoutFailureTestPolicy}{}\doxysection{Timeout\+Failure\+Test\+Policy Class Reference}
+\label{classTimeoutFailureTestPolicy}\index{TimeoutFailureTestPolicy@{TimeoutFailureTestPolicy}}
+
+
+Inheritance diagram for Timeout\+Failure\+Test\+Policy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classTimeoutFailureTestPolicy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Timeout\+Failure\+Test\+Policy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTimeoutFailureTestPolicy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classTimeoutFailureTestPolicy_ab37fd803fdd79d989a6fdf58d3473b87}{init}} (Xml\+Rpc\+::\+Xml\+Rpc\+Value \&init\+Xml\+Rpc\+Value) override
+\item 
+virtual void \mbox{\hyperlink{classTimeoutFailureTestPolicy_a51946c46616697b0b0d9d7c7aaef9f22}{update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Duration \mbox{\hyperlink{classTimeoutFailureTestPolicy_a6075c28b35a0e10632a2f461d7f7b63a}{timeout\+\_\+}}
+\item 
+ros\+::\+Time \mbox{\hyperlink{classTimeoutFailureTestPolicy_a75bf7a1990099ecd02017c06f3694e64}{start\+Time\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source}{smacc\+\_\+runtime\+\_\+test\+\_\+node.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTimeoutFailureTestPolicy_ab37fd803fdd79d989a6fdf58d3473b87}\label{classTimeoutFailureTestPolicy_ab37fd803fdd79d989a6fdf58d3473b87}} 
+\index{TimeoutFailureTestPolicy@{TimeoutFailureTestPolicy}!init@{init}}
+\index{init@{init}!TimeoutFailureTestPolicy@{TimeoutFailureTestPolicy}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void Timeout\+Failure\+Test\+Policy\+::init (\begin{DoxyParamCaption}\item[{Xml\+Rpc\+::\+Xml\+Rpc\+Value \&}]{init\+Xml\+Rpc\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classTestPolicy_a43d28339f108860503ef66ce4692596d}{Test\+Policy}}.
+
+
+
+Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00136}{136}} of file \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source}{smacc\+\_\+runtime\+\_\+test\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137   \{}
+\DoxyCodeLine{00138     ROS\_INFO(\textcolor{stringliteral}{"{}[TimeoutFailureTestPolicy] initializating"{}});}
+\DoxyCodeLine{00139     \mbox{\hyperlink{classTimeoutFailureTestPolicy_a75bf7a1990099ecd02017c06f3694e64}{startTime\_}} = ros::Time::now();}
+\DoxyCodeLine{00140     \mbox{\hyperlink{classTimeoutFailureTestPolicy_a6075c28b35a0e10632a2f461d7f7b63a}{timeout\_}} = ros::Duration((\textcolor{keywordtype}{double})initXmlRpcValue[\textcolor{stringliteral}{"{}duration"{}}]);}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[TimeoutFailureTestPolicy] duration: "{}} << \mbox{\hyperlink{classTimeoutFailureTestPolicy_a6075c28b35a0e10632a2f461d7f7b63a}{timeout\_}});}
+\DoxyCodeLine{00143   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00134}{start\+Time\+\_\+}}, and \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00133}{timeout\+\_\+}}.
+
+\mbox{\Hypertarget{classTimeoutFailureTestPolicy_a51946c46616697b0b0d9d7c7aaef9f22}\label{classTimeoutFailureTestPolicy_a51946c46616697b0b0d9d7c7aaef9f22}} 
+\index{TimeoutFailureTestPolicy@{TimeoutFailureTestPolicy}!update@{update}}
+\index{update@{update}!TimeoutFailureTestPolicy@{TimeoutFailureTestPolicy}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Timeout\+Failure\+Test\+Policy\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classTestPolicy_ae7a8f2ef3c4d513122ad20d5cffc88db}{Test\+Policy}}.
+
+
+
+Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00145}{145}} of file \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source}{smacc\+\_\+runtime\+\_\+test\+\_\+node.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00146   \{}
+\DoxyCodeLine{00147     \textcolor{keyword}{auto} now = ros::Time::now();}
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{00149     \textcolor{keyword}{auto} elapsed = now -\/ \mbox{\hyperlink{classTimeoutFailureTestPolicy_a75bf7a1990099ecd02017c06f3694e64}{startTime\_}};}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151     \textcolor{keywordflow}{if} (elapsed > \mbox{\hyperlink{classTimeoutFailureTestPolicy_a6075c28b35a0e10632a2f461d7f7b63a}{timeout\_}})}
+\DoxyCodeLine{00152     \{}
+\DoxyCodeLine{00153       this-\/>\mbox{\hyperlink{classTestPolicy_a717c3e59e35216a175398b85575aec43}{owner\_}}-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_a58254eca6e6a5f2bde6417a1cccc932a}{failure}}(std::string(\textcolor{stringliteral}{"{}timeout failure: "{}}) + std::to\_string(\mbox{\hyperlink{classTimeoutFailureTestPolicy_a6075c28b35a0e10632a2f461d7f7b63a}{timeout\_}}.toSec()));}
+\DoxyCodeLine{00154     \}}
+\DoxyCodeLine{00155   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00105}{Smacc\+Test\+Runtime\+Node\+::failure()}}, \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00016}{Test\+Policy\+::owner\+\_\+}}, \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00134}{start\+Time\+\_\+}}, and \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00133}{timeout\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTimeoutFailureTestPolicy_a51946c46616697b0b0d9d7c7aaef9f22_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTimeoutFailureTestPolicy_a75bf7a1990099ecd02017c06f3694e64}\label{classTimeoutFailureTestPolicy_a75bf7a1990099ecd02017c06f3694e64}} 
+\index{TimeoutFailureTestPolicy@{TimeoutFailureTestPolicy}!startTime\_@{startTime\_}}
+\index{startTime\_@{startTime\_}!TimeoutFailureTestPolicy@{TimeoutFailureTestPolicy}}
+\doxysubsubsection{\texorpdfstring{startTime\_}{startTime\_}}
+{\footnotesize\ttfamily ros\+::\+Time Timeout\+Failure\+Test\+Policy\+::start\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source}{smacc\+\_\+runtime\+\_\+test\+\_\+node.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00136}{init()}}, and \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00145}{update()}}.
+
+\mbox{\Hypertarget{classTimeoutFailureTestPolicy_a6075c28b35a0e10632a2f461d7f7b63a}\label{classTimeoutFailureTestPolicy_a6075c28b35a0e10632a2f461d7f7b63a}} 
+\index{TimeoutFailureTestPolicy@{TimeoutFailureTestPolicy}!timeout\_@{timeout\_}}
+\index{timeout\_@{timeout\_}!TimeoutFailureTestPolicy@{TimeoutFailureTestPolicy}}
+\doxysubsubsection{\texorpdfstring{timeout\_}{timeout\_}}
+{\footnotesize\ttfamily ros\+::\+Duration Timeout\+Failure\+Test\+Policy\+::timeout\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00133}{133}} of file \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source}{smacc\+\_\+runtime\+\_\+test\+\_\+node.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00136}{init()}}, and \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00145}{update()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+diagnostics/smacc\+\_\+runtime\+\_\+test/src/\mbox{\hyperlink{smacc__runtime__test__node_8cpp}{smacc\+\_\+runtime\+\_\+test\+\_\+node.\+cpp}}\end{DoxyCompactItemize}

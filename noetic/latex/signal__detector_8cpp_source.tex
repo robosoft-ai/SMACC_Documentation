@@ -1,0 +1,239 @@
+\hypertarget{signal__detector_8cpp_source}{}\doxysection{signal\+\_\+detector.\+cpp}
+\label{signal__detector_8cpp_source}\index{smacc/src/smacc/signal\_detector.cpp@{smacc/src/smacc/signal\_detector.cpp}}
+\mbox{\hyperlink{signal__detector_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__action__client__base_8h}{smacc/client\_bases/smacc\_action\_client\_base.h}}>}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__signal__detector_8h}{smacc/smacc\_signal\_detector.h}}>}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__state__machine_8h}{smacc/smacc\_state\_machine.h}}>}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00018}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a24914014feb0ab01e2452af705ef2774}{00018}} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a24914014feb0ab01e2452af705ef2774}{SignalDetector::SignalDetector}}(\mbox{\hyperlink{smacc__fifo__scheduler_8h_a0063e275231c80d5f97df21d17257bf7}{SmaccFifoScheduler}} *scheduler) : end\_(false), initialized\_(false)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00020}00020   \mbox{\hyperlink{classsmacc_1_1SignalDetector_adaee5b9b91d0e6305dc1ab30f7ab566d}{scheduler\_}} = scheduler;}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00021}00021   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{loop\_rate\_hz}} = 20.0;}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00022}00022 \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00029}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a91ab3cd92d8095cdaf8610b50731f04b}{00029}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a91ab3cd92d8095cdaf8610b50731f04b}{SignalDetector::initialize}}(\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmaccStateMachine}} *stateMachine)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00031}00031   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}} = stateMachine;}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00032}00032   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a72293ed0e98f4200fbe75b53f1e41eab}{lastState\_}} = std::numeric\_limits<unsigned long>::quiet\_NaN();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00033}00033   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a47ec2df560e2e33758ce3975bece9385}{findUpdatableClients}}();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00034}00034   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a1b3c54963799b538078619906edd5302}{initialized\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00035}00035 \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00042}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a47ec2df560e2e33758ce3975bece9385}{00042}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a47ec2df560e2e33758ce3975bece9385}{SignalDetector::findUpdatableClients}}()}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00044}00044   this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a01a457b4ec935473d6426efb7b87e683}{updatableClients\_}}.clear();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00045}00045   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} pair : this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7f5b2882dbd077584767cb2533ed3c49}{getOrthogonals}}())}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00046}00046   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00047}00047     \textcolor{keyword}{auto} \&orthogonal = pair.second;}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00048}00048     \textcolor{keyword}{auto} \&clients = orthogonal-\/>getClients();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00050}00050     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&client : clients)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00051}00051     \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00052}00052       \textcolor{comment}{// updatable client components}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00053}00053       \textcolor{keyword}{auto} updatableClient = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(client.get());}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00055}00055       \textcolor{keywordflow}{if} (updatableClient != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00056}00056       \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00057}00057         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}Adding updatable client: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(updatableClient)));}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00058}00058         this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a01a457b4ec935473d6426efb7b87e683}{updatableClients\_}}.push\_back(updatableClient);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00059}00059       \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00061}00061       \textcolor{comment}{// updatable client components}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00062}00062       std::vector<std::shared\_ptr<ISmaccComponent>> components;}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00063}00063       client-\/>getComponents(components);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00064}00064       \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&componententry : components)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00065}00065       \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00066}00066         \textcolor{keyword}{auto} updatableComponent = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(componententry.get());}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00067}00067         \textcolor{keywordflow}{if} (updatableComponent != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00068}00068         \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00069}00069           ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}Adding updatable component: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(*updatableComponent)));}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00070}00070           this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a01a457b4ec935473d6426efb7b87e683}{updatableClients\_}}.push\_back(updatableComponent);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00071}00071         \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00072}00072       \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00073}00073     \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00074}00074   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00075}00075 \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00082}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a443234ebdf8cedd45cde725e64639dfe}{00082}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a443234ebdf8cedd45cde725e64639dfe}{SignalDetector::findUpdatableStateElements}}(\mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmaccState}} *currentState)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00083}00083 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00084}00084   this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a07a5e7bb00c348435d954e22682fa610}{updatableStateElements\_}}.clear();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00085}00085   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} pair : this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7f5b2882dbd077584767cb2533ed3c49}{getOrthogonals}}())}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00086}00086   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00087}00087     \textcolor{keyword}{auto} \&orthogonal = pair.second;}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00088}00088     \textcolor{keyword}{auto} \&behaviors = orthogonal-\/>getClientBehaviors();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00090}00090     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&currentBehavior : behaviors)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00091}00091     \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00092}00092       \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmaccUpdatable}} *updatableClientBehavior = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(currentBehavior.get());}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00094}00094       \textcolor{keywordflow}{if} (updatableClientBehavior != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00095}00095       \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00096}00096         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}Adding updatable behavior: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(updatableClientBehavior)));}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00097}00097         this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a07a5e7bb00c348435d954e22682fa610}{updatableStateElements\_}}.push\_back(updatableClientBehavior);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00098}00098       \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00099}00099     \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00100}00100   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00102}00102   \textcolor{keyword}{auto} updatableState = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(currentState);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00103}00103   \textcolor{keywordflow}{if} (updatableState != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00104}00104   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00105}00105     this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a07a5e7bb00c348435d954e22682fa610}{updatableStateElements\_}}.push\_back(updatableState);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00106}00106   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00108}00108   \textcolor{keyword}{auto} statereactors = currentState-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a758fea49c0c8b60f940e5708495f5c8a}{getStateReactors}}();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00109}00109   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&sr : statereactors)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00110}00110   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00111}00111     \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmaccUpdatable}} *updatableStateReactor = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(sr.get());}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00112}00112     \textcolor{keywordflow}{if} (updatableStateReactor != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00113}00113     \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00114}00114       ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}Adding updatable stateReactorr: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(updatableStateReactor)));}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00115}00115       this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a07a5e7bb00c348435d954e22682fa610}{updatableStateElements\_}}.push\_back(updatableStateReactor);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00116}00116     \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00117}00117   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00119}00119   \textcolor{keyword}{auto} eventgenerators = currentState-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a1da272d8ebbdee1757de8a1feba907f7}{getEventGenerators}}();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00120}00120   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&eg : eventgenerators)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00121}00121   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00122}00122     \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmaccUpdatable}} *updatableEventGenerator = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(eg.get());}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00123}00123     \textcolor{keywordflow}{if} (updatableEventGenerator != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00124}00124     \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00125}00125       ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}Adding updatable eventGenerator: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(updatableEventGenerator)));}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00126}00126       this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a07a5e7bb00c348435d954e22682fa610}{updatableStateElements\_}}.push\_back(updatableEventGenerator);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00127}00127     \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00128}00128   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00129}00129 \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00136}\mbox{\hyperlink{classsmacc_1_1SignalDetector_ac1197a77c32a3b817005391e550ce646}{00136}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_ac1197a77c32a3b817005391e550ce646}{SignalDetector::setProcessorHandle}}(SmaccFifoScheduler::processor\_handle processorHandle)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00137}00137 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00138}00138   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a77dc9f0e9f8f56dff5e76077abcb78}{processorHandle\_}} = processorHandle;}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00139}00139 \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00146}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a48b3fee853ddcb25732408b22ecfcf39}{00146}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a48b3fee853ddcb25732408b22ecfcf39}{SignalDetector::runThread}}()}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00147}00147 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00148}00148   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a4346a400cd37eafc5d1d2e63d975785e}{signalDetectorThread\_}} = boost::thread(boost::bind(\&\mbox{\hyperlink{classsmacc_1_1SignalDetector_a2665e66cdae9f6533c64bbcecf3fa199}{SignalDetector::pollingLoop}}, \textcolor{keyword}{this}));}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00149}00149 \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00156}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a636f704e469bf74b4a9fdb15bd63d5be}{00156}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a636f704e469bf74b4a9fdb15bd63d5be}{SignalDetector::join}}()}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00157}00157 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00158}00158   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a4346a400cd37eafc5d1d2e63d975785e}{signalDetectorThread\_}}.join();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00159}00159 \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00166}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a536ea005ea4ef4632c0c9c1c62c557a3}{00166}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a536ea005ea4ef4632c0c9c1c62c557a3}{SignalDetector::stop}}()}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00167}00167 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00168}00168   \mbox{\hyperlink{classsmacc_1_1SignalDetector_aaee266393c01693528a2d74b1f2354a2}{end\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00169}00169 \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00176}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a116479e23259f3a5d5d4a47278afd5}{00176}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a116479e23259f3a5d5d4a47278afd5}{SignalDetector::pollOnce}}()}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00177}00177 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00178}00178   \textcolor{comment}{// precondition: smaccStateMachine\_ != nullptr}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00180}00180   \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00181}00181   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00182}00182     \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a5c8d4c9a4b11c7950266a00e48080ce3}{lockStateMachine}}(\textcolor{stringliteral}{"{}update behaviors"{}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00184}00184     this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a47ec2df560e2e33758ce3975bece9385}{findUpdatableClients}}();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00185}00185     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}updatable clients: "{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a01a457b4ec935473d6426efb7b87e683}{updatableClients\_}}.size());}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00187}00187     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a01a457b4ec935473d6426efb7b87e683}{updatableClients\_}}.size())}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00188}00188     \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00189}00189       \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} *updatableClient : this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a01a457b4ec935473d6426efb7b87e683}{updatableClients\_}})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00190}00190       \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00191}00191         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] update client call:  "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(updatableClient)));}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00192}00192         updatableClient-\/>executeUpdate();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00193}00193       \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00194}00194     \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00196}00196     \textcolor{comment}{// STATE UPDATABLE ELEMENTS}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00197}00197     \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a654a98ba86c4c1013ac3c371f293d950}{stateMachineCurrentAction}} != \mbox{\hyperlink{namespacesmacc_a0889aff43c93fe5285109819d2898144a5e174e130ee1847f37541ba5786207a3}{StateMachineInternalAction::TRANSITIONING}} \&\&}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00198}00198         this-\/>smaccStateMachine\_-\/>stateMachineCurrentAction != \mbox{\hyperlink{namespacesmacc_a0889aff43c93fe5285109819d2898144a32406d3560b9f36b3e6e3b84454e1be5}{StateMachineInternalAction::STATE\_CONFIGURING}} \&\&}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00199}00199         this-\/>smaccStateMachine\_-\/>stateMachineCurrentAction != \mbox{\hyperlink{namespacesmacc_a0889aff43c93fe5285109819d2898144a22bd5bb7935dd66f181d92efc273951e}{StateMachineInternalAction::STATE\_EXITING}} \&\&}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00200}00200         this-\/>smaccStateMachine\_-\/>stateMachineCurrentAction != \mbox{\hyperlink{namespacesmacc_a0889aff43c93fe5285109819d2898144aef27ae3e54b805b81e1efacea3c02575}{StateMachineInternalAction::STATE\_ENTERING}})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00201}00201     \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00202}00202       \textcolor{comment}{// we do not update updatable elements during trasitioning or configuration of states}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00203}00203       \textcolor{keywordtype}{long} currentStateIndex = \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_aad27c0182b53245d0aded22e63cd83bd}{getCurrentStateCounter}}();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00205}00205       ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] update behaviors. checking current state"{}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00207}00207       \textcolor{keyword}{auto} currentState = \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a610d09dc5341fb63732be713c21fbe86}{getCurrentState}}();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00208}00208       \textcolor{keywordflow}{if} (currentState != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00209}00209       \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00210}00210         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] current state: "{}} << currentStateIndex);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00211}00211         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] last state: "{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a72293ed0e98f4200fbe75b53f1e41eab}{lastState\_}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00212}00212 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00213}00213         \textcolor{keywordflow}{if} (currentStateIndex != 0)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00214}00214         \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00215}00215           \textcolor{keywordflow}{if} (currentStateIndex != this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a72293ed0e98f4200fbe75b53f1e41eab}{lastState\_}})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00216}00216           \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00217}00217             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] detected new state, refreshing updatable client behavior table"{}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00218}00218             \textcolor{comment}{// we are in a new state, refresh the updatable client behaviors table}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00219}00219             this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a72293ed0e98f4200fbe75b53f1e41eab}{lastState\_}} = currentStateIndex;}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00220}00220             this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a443234ebdf8cedd45cde725e64639dfe}{findUpdatableStateElements}}(currentState);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00221}00221           \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00222}00222 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00223}00223           ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}updatable state elements: "{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a07a5e7bb00c348435d954e22682fa610}{updatableStateElements\_}}.size());}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00224}00224           \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} *udpatableStateElement : this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a07a5e7bb00c348435d954e22682fa610}{updatableStateElements\_}})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00225}00225           \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00226}00226             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}pollOnce update client behavior call: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(*udpatableStateElement)));}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00227}00227             udpatableStateElement-\/>executeUpdate();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00228}00228           \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00229}00229         \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00230}00230       \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00231}00231     \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00232}00232   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00233}00233   \textcolor{keywordflow}{catch} (std::exception \&ex)}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00234}00234   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00235}00235     ROS\_ERROR(\textcolor{stringliteral}{"{}Exception during Signal Detector update loop. \%s"{}}, ex.what());}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00236}00236   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00237}00237 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00238}00238   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ae2e3ceb87bfe3f9d8bf320e36071fdc7}{unlockStateMachine}}(\textcolor{stringliteral}{"{}update behaviors"{}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00239}00239 \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00246}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a2665e66cdae9f6533c64bbcecf3fa199}{00246}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a2665e66cdae9f6533c64bbcecf3fa199}{SignalDetector::pollingLoop}}()}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00247}00247 \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00248}00248   \textcolor{comment}{// ros::NodeHandle nh("{}\string~"{}); // use node name as root of the parameter server}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00249}00249 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00250}00250   ros::NodeHandle \_;}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00251}00251   ros::Rate r0(20);}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00252}00252   \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classsmacc_1_1SignalDetector_a1b3c54963799b538078619906edd5302}{initialized\_}})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00253}00253   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00254}00254     r0.sleep();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00255}00255   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00256}00256 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00257}00257   ros::NodeHandle nh(\mbox{\hyperlink{namespacesmacc_1_1utils_aacd1975bb7cd9bec4b50e111a2ae7edb}{smacc::utils::cleanShortTypeName}}(\textcolor{keyword}{typeid}(*this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}})));}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00258}00258 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00259}00259   \textcolor{keywordflow}{if} (!nh.getParam(\textcolor{stringliteral}{"{}signal\_detector\_loop\_freq"{}}, this-\/>loop\_rate\_hz))}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00260}00260   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00261}00261     ROS\_WARN(\textcolor{stringliteral}{"{}Signal detector frequency (ros param \string~signal\_detector\_loop\_freq) was not set, using default frequency: "{}}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00262}00262              \textcolor{stringliteral}{"{}\%lf"{}},}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00263}00263              this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{loop\_rate\_hz}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00264}00264   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00265}00265   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00266}00266   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00267}00267     ROS\_WARN(\textcolor{stringliteral}{"{}Signal detector frequency (ros param \string~signal\_detector\_loop\_freq): \%lf"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{loop\_rate\_hz}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00268}00268   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00269}00269 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00270}00270   nh.setParam(\textcolor{stringliteral}{"{}signal\_detector\_loop\_freq"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{loop\_rate\_hz}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00271}00271 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00272}00272   ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[SignalDetector] loop rate hz:"{}} << \mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{loop\_rate\_hz}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00274}00274   ros::Rate r(\mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{loop\_rate\_hz}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00275}00275   \textcolor{keywordflow}{while} (ros::ok() \&\& !\mbox{\hyperlink{classsmacc_1_1SignalDetector_aaee266393c01693528a2d74b1f2354a2}{end\_}})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00276}00276   \{}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00277}00277     ROS\_INFO\_STREAM\_THROTTLE(10, \textcolor{stringliteral}{"{}[SignalDetector] heartbeat"{}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00278}00278     \mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a116479e23259f3a5d5d4a47278afd5}{pollOnce}}();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00279}00279     ros::spinOnce();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00280}00280     r.sleep();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00281}00281   \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00282}00282 \}}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00283}00283 \}  \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

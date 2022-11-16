@@ -1,0 +1,63 @@
+\doxysubsection*{State Machine Diagram}
+
+
+
+\doxysubsection*{Description}
+
+This example implements the 17 state, Pack\+ML Interface State Model, shown on page 17, Fig.\+9 of the \href{http://omac.org/wp-content/uploads/2016/11/PackML_Unit_Machine_Implementation_Guide-V1-00.pdf}{\texttt{ Pack\+ML Unit Machine Implementation Guide}}.~\newline
+
+
+\href{https://robosoft-ai.github.io/SMACC_Documentation/master/html/namespacesm__packml.html}{\texttt{ Doxygen Namespace \& Class Reference}}
+
+\doxysubsection*{Build Instructions}
+
+Before you build, make sure you\textquotesingle{}ve installed all the dependencies...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosdep install -\/-\/from-\/paths src -\/-\/ignore-\/src -\/r -\/y}
+
+\end{DoxyCode}
+
+
+Then you build with either catkin build or catkin make...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{catkin build}
+
+\end{DoxyCode}
+
+
+\doxysubsection*{Operating Instructions}
+
+After you build, remember to source the proper devel folder...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source \string~/catkin\_ws/devel/setup.bash}
+
+\end{DoxyCode}
+
+
+And then run the launch file...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{roslaunch sm\_packml sm\_packml.launch}
+
+\end{DoxyCode}
+
+
+\doxysubsection*{Viewer Instructions}
+
+If you have the SMACC Viewer installed then type...
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rosrun smacc\_viewer smacc\_viewer\_node.py}
+
+\end{DoxyCode}
+
+
+If you don\textquotesingle{}t have the SMACC Viewer installed, click \href{http://smacc.ninja/smacc-viewer/}{\texttt{ here}} for instructions. 
