@@ -2,45 +2,45 @@
 \label{cb__navigate__forward_8cpp_source}\index{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/src/client\_behaviors/cb\_navigate\_forward.cpp@{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/src/client\_behaviors/cb\_navigate\_forward.cpp}}
 \mbox{\hyperlink{cb__navigate__forward_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__navigate__forward_8h}{move\_base\_z\_client\_plugin/client\_behaviors/cb\_navigate\_forward.h}}>}}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cp__pose_8h}{move\_base\_z\_client\_plugin/components/pose/cp\_pose.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <move\_base\_z\_client\_plugin/client\_behaviors/cb\_navigate\_forward.h>}}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <move\_base\_z\_client\_plugin/components/pose/cp\_pose.h>}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00003}00003 }
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00004}00004 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00005}00005 \{}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00006}00006 \textcolor{keyword}{using namespace }::\mbox{\hyperlink{namespacecl__move__base__z_1_1odom__tracker}{cl\_move\_base\_z::odom\_tracker}};}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00008}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a99ad479eeee7116e68cdb41870223eeb}{00008}} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a6322be3ee8a23652a0a9dbe8e203d00e}{CbNavigateForward::CbNavigateForward}}(\textcolor{keywordtype}{float} forwardDistance)}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00008}00008 CbNavigateForward::CbNavigateForward(\textcolor{keywordtype}{float} forwardDistance)}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00009}00009 \{}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00010}00010   this-\/>forwardDistance = \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a41bc9c319c64be6302f7365173ccd2c5}{forwardDistance}};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00010}00010   this-\/>forwardDistance = forwardDistance;}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00011}00011 \}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00012}00012 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00013}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a6322be3ee8a23652a0a9dbe8e203d00e}{00013}} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a6322be3ee8a23652a0a9dbe8e203d00e}{CbNavigateForward::CbNavigateForward}}()}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00013}00013 CbNavigateForward::CbNavigateForward()}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00014}00014 \{}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00015}00015 \}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00016}00016 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00017}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_af9a2e49071de287922c3f5963a079b95}{00017}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_af9a2e49071de287922c3f5963a079b95}{CbNavigateForward::onEntry}}()}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00017}00017 \textcolor{keywordtype}{void} CbNavigateForward::onEntry()}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00018}00018 \{}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00019}00019   \textcolor{comment}{// straight motion distance}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00020}00020   \textcolor{keywordtype}{double} dist;}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00021}00021 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00022}00022   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a41bc9c319c64be6302f7365173ccd2c5}{forwardDistance}})}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00022}00022   \textcolor{keywordflow}{if} (!forwardDistance)}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00023}00023   \{}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00024}00024     this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a34fde34e48fa13db622ee60d8374d0b8}{getCurrentState}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a4f2ff8e3eda8aa9bbb60c8ff17d0def1}{param}}(\textcolor{stringliteral}{"{}straight\_motion\_distance"{}}, dist, 3.5);}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00024}00024     this-\/>getCurrentState()-\/>param(\textcolor{stringliteral}{"{}straight\_motion\_distance"{}}, dist, 3.5);}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00025}00025   \}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00026}00026   \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00027}00027   \{}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00028}00028     dist = *\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a41bc9c319c64be6302f7365173ccd2c5}{forwardDistance}};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00028}00028     dist = *forwardDistance;}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00029}00029   \}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00030}00030 }
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00031}00031   ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[CbNavigateForward] Straight motion distance: "{}} << dist);}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00032}00032 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00033}00033   \textcolor{keyword}{auto} p = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\_move\_base\_z::Pose}}>();}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00034}00034   \textcolor{keyword}{auto} referenceFrame = p-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_aec469af8ca846ae14e108d74fef93b4f}{getReferenceFrame}}();}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00033}00033   \textcolor{keyword}{auto} p = moveBaseClient\_-\/>getComponent<cl\_move\_base\_z::Pose>();}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00034}00034   \textcolor{keyword}{auto} referenceFrame = p-\/>getReferenceFrame();}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00035}00035   \textcolor{keyword}{auto} currentPoseMsg = p-\/>toPoseMsg();}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00036}00036 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00037}00037   \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_ac73da1af2bca33f0927310f75d8d2e35}{forceInitialOrientation}})}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00037}00037   \textcolor{keywordflow}{if} (this-\/>forceInitialOrientation)}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00038}00038   \{}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00039}00039     currentPoseMsg.orientation = *\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_ac73da1af2bca33f0927310f75d8d2e35}{forceInitialOrientation}};}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00039}00039     currentPoseMsg.orientation = *forceInitialOrientation;}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00040}00040     ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[CbNavigateForward] Forcing initial straight motion orientation: "{}} << currentPoseMsg.orientation);}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00041}00041   \}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00042}00042 }
@@ -65,21 +65,21 @@
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00061}00061   currentStampedPoseMsg.header.stamp = ros::Time::now();}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00062}00062   tf::poseTFToMsg(currentPose, currentStampedPoseMsg.pose);}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00063}00063 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00064}00064   \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a7583a4d669af48618bd45950db8e5292}{odomTracker\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<OdomTracker>();}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00065}00065   \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a7583a4d669af48618bd45950db8e5292}{odomTracker\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_ab92735db58cfdf8d0055e3f01be124d3}{pushPath}}(\textcolor{stringliteral}{"{}StraightNavigationForwards"{}});}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00064}00064   odomTracker\_ = moveBaseClient\_-\/>getComponent<OdomTracker>();}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00065}00065   odomTracker\_-\/>pushPath(\textcolor{stringliteral}{"{}StraightNavigationForwards"{}});}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00066}00066 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00067}00067   \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a7583a4d669af48618bd45950db8e5292}{odomTracker\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_a9f4989c6353022c2ec3b0546c09bf3bc}{setStartPoint}}(currentStampedPoseMsg);}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00068}00068   \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a7583a4d669af48618bd45950db8e5292}{odomTracker\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_aeed01bdefd9a1cc709b0b3e4eed285ed}{setWorkingMode}}(WorkingMode::RECORD\_PATH);}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00067}00067   odomTracker\_-\/>setStartPoint(currentStampedPoseMsg);}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00068}00068   odomTracker\_-\/>setWorkingMode(WorkingMode::RECORD\_PATH);}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00069}00069 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00070}00070   \textcolor{keyword}{auto} plannerSwitcher = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<\mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher}{PlannerSwitcher}}>();}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00071}00071   plannerSwitcher-\/>\mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher_a4bec9859c90f125f9fcc2b68594caf17}{setForwardPlanner}}();}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00070}00070   \textcolor{keyword}{auto} plannerSwitcher = moveBaseClient\_-\/>getComponent<PlannerSwitcher>();}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00071}00071   plannerSwitcher-\/>setForwardPlanner();}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00072}00072 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00073}00073   \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9c47a5094ac8afb01680307fe5eca922}{sendGoal}}(goal);}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00073}00073   moveBaseClient\_-\/>sendGoal(goal);}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00074}00074 \}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00075}00075 }
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00076}\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a2160484562ef5fb1c655fab7f990241e}{00076}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a2160484562ef5fb1c655fab7f990241e}{CbNavigateForward::onExit}}()}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00076}00076 \textcolor{keywordtype}{void} CbNavigateForward::onExit()}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00077}00077 \{}
-\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00078}00078   this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbNavigateForward_a7583a4d669af48618bd45950db8e5292}{odomTracker\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_aeed01bdefd9a1cc709b0b3e4eed285ed}{setWorkingMode}}(WorkingMode::IDLE);}
+\DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00078}00078   this-\/>odomTracker\_-\/>setWorkingMode(WorkingMode::IDLE);}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00079}00079 \}}
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00080}00080 }
 \DoxyCodeLine{\Hypertarget{cb__navigate__forward_8cpp_source_l00081}00081 \}  \textcolor{comment}{// namespace cl\_move\_base\_z}}

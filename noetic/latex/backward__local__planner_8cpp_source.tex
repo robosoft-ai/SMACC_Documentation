@@ -4,91 +4,91 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <angles/angles.h>}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <pluginlib/class\_list\_macros.h>}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{backward__local__planner_8h}{backward\_local\_planner/backward\_local\_planner.h}}>}}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <backward\_local\_planner/backward\_local\_planner.h>}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <visualization\_msgs/MarkerArray.h>}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <boost/intrusive\_ptr.hpp>}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00006}00006 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00007}00007 \textcolor{comment}{//register this planner as a BaseLocalPlanner plugin}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00008}00008 \mbox{\hyperlink{backward__global__planner_8cpp_a51f582fb30166d23ef7d096df52bdb13}{PLUGINLIB\_EXPORT\_CLASS}}(\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner}{cl\_move\_base\_z::backward\_local\_planner::BackwardLocalPlanner}}, nav\_core::BaseLocalPlanner)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00008}00008 \mbox{\hyperlink{backward__global__planner_8cpp_a51f582fb30166d23ef7d096df52bdb13}{PLUGINLIB\_EXPORT\_CLASS}}(cl\_move\_base\_z::backward\_local\_planner::BackwardLocalPlanner, nav\_core::BaseLocalPlanner)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00009}00009 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00011}00011 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00012}00012     \textcolor{keyword}{namespace }backward\_local\_planner}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00012}\mbox{\hyperlink{namespacecl__move__base__z_1_1backward__local__planner}{00012}}     \textcolor{keyword}{namespace }backward\_local\_planner}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00013}00013     \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00014}00014 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00020}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a79e73a858b2a13c7fe10c52e08568fd6}{00020}}         \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a79e73a858b2a13c7fe10c52e08568fd6}{BackwardLocalPlanner::BackwardLocalPlanner}}()}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00020}00020         BackwardLocalPlanner::BackwardLocalPlanner()}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00021}00021             : paramServer\_(ros::NodeHandle(\textcolor{stringliteral}{"{}\string~BackwardLocalPlanner"{}}))}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00022}00022         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00023}00023         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00024}00024 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00030}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a6a36aa94617786c6958e861e64abb862}{00030}}         \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a6a36aa94617786c6958e861e64abb862}{BackwardLocalPlanner::\string~BackwardLocalPlanner}}()}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00030}00030         BackwardLocalPlanner::\string~BackwardLocalPlanner()}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00031}00031         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00032}00032         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00033}00033 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00034}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9a854ad7d93c5db2efda316358aa845c}{00034}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a5c9815019cef272faed835cd8c575196}{BackwardLocalPlanner::initialize}}(std::string name, tf2\_ros::Buffer *tf, costmap\_2d::Costmap2DROS *costmap\_ros)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00034}00034         \textcolor{keywordtype}{void} BackwardLocalPlanner::initialize(std::string name, tf2\_ros::Buffer *tf, costmap\_2d::Costmap2DROS *costmap\_ros)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00035}00035         \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00036}00036             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a4136268882a105d9e06e173d85d5c0dc}{costmapRos\_}} = costmap\_ros;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00037}00037             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a5c9815019cef272faed835cd8c575196}{initialize}}();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00036}00036             this-\/>costmapRos\_ = costmap\_ros;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00037}00037             this-\/>initialize();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00038}00038         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00039}00039 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00040}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a5c9815019cef272faed835cd8c575196}{00040}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a5c9815019cef272faed835cd8c575196}{BackwardLocalPlanner::initialize}}()}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00040}00040         \textcolor{keywordtype}{void} BackwardLocalPlanner::initialize()}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00041}00041         \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00042}00042             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad8a36184bfb011545c751109e23d3b98}{k\_rho\_}} = -\/1.0;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00043}00043             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_abf7a5a56de2ee41afba7e63c0628ec35}{k\_alpha\_}} = 0.5;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00044}00044             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9f257183d87f1d732cb7e404f09905ad}{k\_betta\_}} = -\/1.0; \textcolor{comment}{// set to zero means that orientation is not important}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00045}00045             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}} = 0.4;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00046}00046             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a858efacf597a3a35c97aec9ca53e5900}{linear\_mode\_rho\_error\_threshold\_}} = 0.02;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00042}00042             k\_rho\_ = -\/1.0;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00043}00043             k\_alpha\_ = 0.5;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00044}00044             k\_betta\_ = -\/1.0; \textcolor{comment}{// set to zero means that orientation is not important}}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00045}00045             carrot\_angular\_distance\_ = 0.4;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00046}00046             linear\_mode\_rho\_error\_threshold\_ = 0.02;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00047}00047 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00048}00048             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aebafa83dd5fced64dc2239919a3ab8d8}{f}} = boost::bind(\&\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a62e4783adae03ce92190d855a021b91d}{BackwardLocalPlanner::reconfigCB}}, \textcolor{keyword}{this}, \_1, \_2);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00049}00049             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_afb349461ce9c4edee018dbb822a8cd9a}{paramServer\_}}.setCallback(\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aebafa83dd5fced64dc2239919a3ab8d8}{f}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00050}00050             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} = 0;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00048}00048             f = boost::bind(\&BackwardLocalPlanner::reconfigCB, \textcolor{keyword}{this}, \_1, \_2);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00049}00049             paramServer\_.setCallback(f);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00050}00050             this-\/>currentCarrotPoseIndex\_ = 0;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00051}00051 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00052}00052             ros::NodeHandle nh(\textcolor{stringliteral}{"{}\string~/BackwardLocalPlanner"{}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00053}00053             nh.param(\textcolor{stringliteral}{"{}pure\_spinning\_straight\_line\_mode"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a04febb67563add6f715051a94aed1b9b}{straightBackwardsAndPureSpinningMode\_}}, \textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00054}00054             nh.param(\textcolor{stringliteral}{"{}yaw\_goal\_tolerance"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}}, 0.05);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00055}00055             nh.param(\textcolor{stringliteral}{"{}xy\_goal\_tolerance"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}}, 0.10);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00056}00056             nh.param(\textcolor{stringliteral}{"{}k\_rho"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad8a36184bfb011545c751109e23d3b98}{k\_rho\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad8a36184bfb011545c751109e23d3b98}{k\_rho\_}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00057}00057             nh.param(\textcolor{stringliteral}{"{}k\_betta"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9f257183d87f1d732cb7e404f09905ad}{k\_betta\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9f257183d87f1d732cb7e404f09905ad}{k\_betta\_}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00058}00058             nh.param(\textcolor{stringliteral}{"{}linear\_mode\_rho\_error\_threshold"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a858efacf597a3a35c97aec9ca53e5900}{linear\_mode\_rho\_error\_threshold\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a858efacf597a3a35c97aec9ca53e5900}{linear\_mode\_rho\_error\_threshold\_}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00053}00053             nh.param(\textcolor{stringliteral}{"{}pure\_spinning\_straight\_line\_mode"{}}, straightBackwardsAndPureSpinningMode\_, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00054}00054             nh.param(\textcolor{stringliteral}{"{}yaw\_goal\_tolerance"{}}, yaw\_goal\_tolerance\_, 0.05);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00055}00055             nh.param(\textcolor{stringliteral}{"{}xy\_goal\_tolerance"{}}, xy\_goal\_tolerance\_, 0.10);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00056}00056             nh.param(\textcolor{stringliteral}{"{}k\_rho"{}}, k\_rho\_, k\_rho\_);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00057}00057             nh.param(\textcolor{stringliteral}{"{}k\_betta"{}}, k\_betta\_, k\_betta\_);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00058}00058             nh.param(\textcolor{stringliteral}{"{}linear\_mode\_rho\_error\_threshold"{}}, linear\_mode\_rho\_error\_threshold\_, linear\_mode\_rho\_error\_threshold\_);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00059}00059 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00060}00060             nh.param(\textcolor{stringliteral}{"{}carrot\_distance"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00061}00061             nh.param(\textcolor{stringliteral}{"{}carrot\_angular\_distance"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00062}00062             nh.param(\textcolor{stringliteral}{"{}enable\_obstacle\_checking"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a154043366660cc02ec758dda32817511}{enable\_obstacle\_checking\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a154043366660cc02ec758dda32817511}{enable\_obstacle\_checking\_}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00060}00060             nh.param(\textcolor{stringliteral}{"{}carrot\_distance"{}}, carrot\_distance\_, carrot\_distance\_);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00061}00061             nh.param(\textcolor{stringliteral}{"{}carrot\_angular\_distance"{}}, carrot\_angular\_distance\_, carrot\_angular\_distance\_);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00062}00062             nh.param(\textcolor{stringliteral}{"{}enable\_obstacle\_checking"{}}, enable\_obstacle\_checking\_, enable\_obstacle\_checking\_);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00063}00063 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00064}00064             nh.param(\textcolor{stringliteral}{"{}max\_linear\_x\_speed"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae4399072e9ae9cc60d8837860dc4807b}{max\_linear\_x\_speed\_}}, 1.0);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00065}00065             nh.param(\textcolor{stringliteral}{"{}max\_angular\_z\_speed"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_af7e492339ee2d1c90c00f6dd4cf95551}{max\_angular\_z\_speed\_}}, 2.0);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00064}00064             nh.param(\textcolor{stringliteral}{"{}max\_linear\_x\_speed"{}}, max\_linear\_x\_speed\_, 1.0);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00065}00065             nh.param(\textcolor{stringliteral}{"{}max\_angular\_z\_speed"{}}, max\_angular\_z\_speed\_, 2.0);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00066}00066 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00067}00067             \textcolor{comment}{// we have to do this, for example for the case we are refining the final orientation.}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00068}00068             \textcolor{comment}{// se check at some point if the carrot is reached in "{}goal linear distance"{}, then we go into}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00069}00069             \textcolor{comment}{// some automatic pure-\/spinning mode where we only update the orientation}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00070}00070             \textcolor{comment}{// This means that if we reach the carrot with precision we go into pure spinning mode but we cannot}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00071}00071             \textcolor{comment}{// leave that point (maybe this could be improved)}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00072}00072             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00072}00072             \textcolor{keywordflow}{if} (carrot\_angular\_distance\_ < yaw\_goal\_tolerance\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00073}00073             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00074}00074                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot\_angular\_distance ("{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}} << \textcolor{stringliteral}{"{}) cannot be lower than yaw\_goal\_tolerance ("{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}} << \textcolor{stringliteral}{"{}) setting carrot\_angular\_distance = "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00075}00075                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00074}00074                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot\_angular\_distance ("{}} << carrot\_angular\_distance\_ << \textcolor{stringliteral}{"{}) cannot be lower than yaw\_goal\_tolerance ("{}} << yaw\_goal\_tolerance\_ << \textcolor{stringliteral}{"{}) setting carrot\_angular\_distance = "{}} << yaw\_goal\_tolerance\_);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00075}00075                 carrot\_angular\_distance\_ = yaw\_goal\_tolerance\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00076}00076             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00077}00077 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00078}00078             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00078}00078             \textcolor{keywordflow}{if} (carrot\_distance\_ < xy\_goal\_tolerance\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00079}00079             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00080}00080                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot\_linear\_distance ("{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} << \textcolor{stringliteral}{"{}) cannot be lower than xy\_goal\_tolerance\_ ("{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}} << \textcolor{stringliteral}{"{}) setting carrot\_angular\_distance = "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00081}00081                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00080}00080                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot\_linear\_distance ("{}} << carrot\_distance\_ << \textcolor{stringliteral}{"{}) cannot be lower than xy\_goal\_tolerance\_ ("{}} << yaw\_goal\_tolerance\_ << \textcolor{stringliteral}{"{}) setting carrot\_angular\_distance = "{}} << xy\_goal\_tolerance\_);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00081}00081                 carrot\_distance\_ = xy\_goal\_tolerance\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00082}00082             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00083}00083 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00084}00084             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a79f0ddfa686e2cd47bbc2f0bac9f3d4c}{goalMarkerPublisher\_}} = nh.advertise<visualization\_msgs::MarkerArray>(\textcolor{stringliteral}{"{}goal\_marker"{}}, 1);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00085}00085             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0c15da985f7f051164adb643c03a0c90}{waitingTimeout\_}} = ros::Duration(10);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00084}00084             goalMarkerPublisher\_ = nh.advertise<visualization\_msgs::MarkerArray>(\textcolor{stringliteral}{"{}goal\_marker"{}}, 1);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00085}00085             waitingTimeout\_ = ros::Duration(10);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00086}00086         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00087}00087 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00093}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae7659aa099ce5a329a9ef046dabcc599}{00093}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a5c9815019cef272faed835cd8c575196}{BackwardLocalPlanner::initialize}}(std::string name, tf::TransformListener *tf, costmap\_2d::Costmap2DROS *costmap\_ros)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00093}00093         \textcolor{keywordtype}{void} BackwardLocalPlanner::initialize(std::string name, tf::TransformListener *tf, costmap\_2d::Costmap2DROS *costmap\_ros)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00094}00094         \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00095}00095             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a4136268882a105d9e06e173d85d5c0dc}{costmapRos\_}} = costmap\_ros;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00096}00096             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a5c9815019cef272faed835cd8c575196}{initialize}}();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00095}00095             this-\/>costmapRos\_ = costmap\_ros;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00096}00096             this-\/>initialize();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00097}00097         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00098}00098 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00099}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{00099}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{BackwardLocalPlanner::computeCurrentEuclideanAndAngularErrorsToCarrotGoal}}(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose, \textcolor{keywordtype}{double} \&dist, \textcolor{keywordtype}{double} \&angular\_error)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00099}00099         \textcolor{keywordtype}{void} BackwardLocalPlanner::computeCurrentEuclideanAndAngularErrorsToCarrotGoal(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose, \textcolor{keywordtype}{double} \&dist, \textcolor{keywordtype}{double} \&angular\_error)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00100}00100         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00101}00101             \textcolor{keywordtype}{double} angle = tf::getYaw(tfpose.getRotation());}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00102}00102             \textcolor{keyword}{auto} \&carrot\_pose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}];}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00102}00102             \textcolor{keyword}{auto} \&carrot\_pose = backwardsPlanPath\_[currentCarrotPoseIndex\_];}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00103}00103             \textcolor{keyword}{const} geometry\_msgs::Point \&carrot\_point = carrot\_pose.pose.position;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00104}00104 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00105}00105             tf::Quaternion carrot\_orientation;}
@@ -112,26 +112,26 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00123}00123                                                                                       << currentPoseDebugMsg);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00124}00124         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00125}00125 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00131}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a16e79a1b4c0f18879f6f0a8ba67103fd}{00131}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a16e79a1b4c0f18879f6f0a8ba67103fd}{BackwardLocalPlanner::updateCarrotGoal}}(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00131}00131         \textcolor{keywordtype}{bool} BackwardLocalPlanner::updateCarrotGoal(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00132}00132         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00133}00133             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] -\/-\/-\/ Computing carrot pose -\/-\/-\/"{}});}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00134}00134             \textcolor{keywordtype}{double} disterr = 0, angleerr = 0;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00135}00135             \textcolor{comment}{// iterate the point from the current position and backward until reaching a new goal point in the path}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00136}00136             \textcolor{comment}{// this algorithm among other advantages has that skip the looping with an eager global planner}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00137}00137             \textcolor{comment}{// that recalls the same plan (the already performed part of the plan in the current pose is skipped)}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00138}00138             \textcolor{keywordflow}{while} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size())}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00138}00138             \textcolor{keywordflow}{while} (currentCarrotPoseIndex\_ < backwardsPlanPath\_.size())}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00139}00139             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00140}00140                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{computeCurrentEuclideanAndAngularErrorsToCarrotGoal}}(tfpose, disterr, angleerr);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00140}00140                 computeCurrentEuclideanAndAngularErrorsToCarrotGoal(tfpose, disterr, angleerr);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00141}00141 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00142}00142                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] update carrot goal: Current index: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00142}00142                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] update carrot goal: Current index: "{}} << currentCarrotPoseIndex\_ << \textcolor{stringliteral}{"{}/"{}} << backwardsPlanPath\_.size());}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00143}00143                 ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] update carrot goal: linear error \%lf, angular error: \%lf"{}}, disterr, angleerr);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00144}00144 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00145}00145                 \textcolor{comment}{// target pose found, goal carrot tries to escape!}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00146}00146                 \textcolor{keywordflow}{if} (disterr < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} \&\& angleerr < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00146}00146                 \textcolor{keywordflow}{if} (disterr < carrot\_distance\_ \&\& angleerr < carrot\_angular\_distance\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00147}00147                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00148}00148                     \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}++;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00149}00149                     \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a35832ebefc43e5977e1222389244c8d3}{resetDivergenceDetection}}();}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00150}00150                     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] fw "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00148}00148                     currentCarrotPoseIndex\_++;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00149}00149                     resetDivergenceDetection();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00150}00150                     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] fw "{}} << currentCarrotPoseIndex\_ << \textcolor{stringliteral}{"{}/"{}} << backwardsPlanPath\_.size());}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00151}00151                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00152}00152                 \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00153}00153                 \{}
@@ -139,15 +139,15 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00155}00155                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00156}00156             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00157}00157             \textcolor{comment}{//ROS\_DEBUG("{}[BackwardsLocalPlanner] computing angular error"{});}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00158}00158             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} >= \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() \&\& \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() > 0)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00158}00158             \textcolor{keywordflow}{if} (currentCarrotPoseIndex\_ >= backwardsPlanPath\_.size() \&\& backwardsPlanPath\_.size() > 0)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00159}00159             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00160}00160                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() -\/ 1;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00161}00161                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{computeCurrentEuclideanAndAngularErrorsToCarrotGoal}}(tfpose, disterr, angleerr);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00160}00160                 currentCarrotPoseIndex\_ = backwardsPlanPath\_.size() -\/ 1;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00161}00161                 computeCurrentEuclideanAndAngularErrorsToCarrotGoal(tfpose, disterr, angleerr);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00162}00162             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00163}00163 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00164}00164             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] Current index carrot goal: \%d"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00164}00164             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] Current index carrot goal: \%d"{}}, currentCarrotPoseIndex\_);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00165}00165             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] Update carrot goal: linear error  \%lf, angular error: \%lf"{}}, disterr, angleerr);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00166}00166             \textcolor{keywordtype}{bool} carrotInGoalLinear = disterr < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00166}00166             \textcolor{keywordtype}{bool} carrotInGoalLinear = disterr < xy\_goal\_tolerance\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00167}00167             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] carrot in goal radius: \%d"{}}, carrotInGoalLinear);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00168}00168 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00169}00169             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] -\/-\/-\/ Computing carrot pose -\/-\/-\/"{}});}
@@ -155,28 +155,28 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00171}00171             \textcolor{keywordflow}{return} carrotInGoalLinear;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00172}00172         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00173}00173 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00174}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a35832ebefc43e5977e1222389244c8d3}{00174}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a35832ebefc43e5977e1222389244c8d3}{BackwardLocalPlanner::resetDivergenceDetection}}()}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00174}00174         \textcolor{keywordtype}{bool} BackwardLocalPlanner::resetDivergenceDetection()}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00175}00175         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00176}00176             \textcolor{comment}{// this function should be called always the carrot is updated}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00177}00177             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a3187b3b0c9a640133556efd056f2e736}{divergenceDetectionLastCarrotLinearDistance\_}} = std::numeric\_limits<double>::max();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00177}00177             divergenceDetectionLastCarrotLinearDistance\_ = std::numeric\_limits<double>::max();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00178}00178             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00179}00179         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00180}00180 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00181}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ab1b01ecdb27641dde60661362d75465b}{00181}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ab1b01ecdb27641dde60661362d75465b}{BackwardLocalPlanner::divergenceDetectionUpdate}}(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00181}00181         \textcolor{keywordtype}{bool} BackwardLocalPlanner::divergenceDetectionUpdate(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00182}00182         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00183}00183             \textcolor{keywordtype}{double} disterr = 0, angleerr = 0;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00184}00184             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{computeCurrentEuclideanAndAngularErrorsToCarrotGoal}}(tfpose, disterr, angleerr);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00184}00184             computeCurrentEuclideanAndAngularErrorsToCarrotGoal(tfpose, disterr, angleerr);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00185}00185 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00186}00186             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Divergence check. carrot goal distance. was: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a3187b3b0c9a640133556efd056f2e736}{divergenceDetectionLastCarrotLinearDistance\_}} << \textcolor{stringliteral}{"{}, now it is: "{}} << disterr);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00187}00187             \textcolor{keywordflow}{if} (disterr > \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a3187b3b0c9a640133556efd056f2e736}{divergenceDetectionLastCarrotLinearDistance\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00186}00186             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Divergence check. carrot goal distance. was: "{}} << divergenceDetectionLastCarrotLinearDistance\_ << \textcolor{stringliteral}{"{}, now it is: "{}} << disterr);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00187}00187             \textcolor{keywordflow}{if} (disterr > divergenceDetectionLastCarrotLinearDistance\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00188}00188             \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00189}00189                 \textcolor{comment}{// candidate of divergence, we do not throw the divergence alarm yet}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00190}00190                 \textcolor{comment}{// but we neither update the distance since it is worse than the one}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00191}00191                 \textcolor{comment}{// we had previously with the same carrot.}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00192}00192                 \textcolor{keyword}{const} \textcolor{keywordtype}{double} MARGIN\_FACTOR = 1.2;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00193}00193                 \textcolor{keywordflow}{if} (disterr > MARGIN\_FACTOR * \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a3187b3b0c9a640133556efd056f2e736}{divergenceDetectionLastCarrotLinearDistance\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00193}00193                 \textcolor{keywordflow}{if} (disterr > MARGIN\_FACTOR * divergenceDetectionLastCarrotLinearDistance\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00194}00194                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00195}00195                     ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Divergence detected. The same carrot goal distance was previously: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a3187b3b0c9a640133556efd056f2e736}{divergenceDetectionLastCarrotLinearDistance\_}} << \textcolor{stringliteral}{"{}but now it is: "{}} << disterr);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00195}00195                     ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Divergence detected. The same carrot goal distance was previously: "{}} << divergenceDetectionLastCarrotLinearDistance\_ << \textcolor{stringliteral}{"{}but now it is: "{}} << disterr);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00196}00196                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00197}00197                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00198}00198                 \textcolor{keywordflow}{else}}
@@ -188,12 +188,12 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00204}00204             \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00205}00205             \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00206}00206                 \textcolor{comment}{//update:}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00207}00207                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a3187b3b0c9a640133556efd056f2e736}{divergenceDetectionLastCarrotLinearDistance\_}} = disterr;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00207}00207                 divergenceDetectionLastCarrotLinearDistance\_ = disterr;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00208}00208                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00209}00209             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00210}00210         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00211}00211 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00212}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a22938e354a4ec489101295ed7f2539f6}{00212}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a22938e354a4ec489101295ed7f2539f6}{BackwardLocalPlanner::checkCarrotHalfPlainConstraint}}(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00212}00212         \textcolor{keywordtype}{bool} BackwardLocalPlanner::checkCarrotHalfPlainConstraint(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00213}00213         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00214}00214             \textcolor{comment}{// this function is specially useful when we want to reach the goal with a lot}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00215}00215             \textcolor{comment}{// of precision. We may pass the goal and then the controller enters in some}}
@@ -201,7 +201,7 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00217}00217 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00218}00218             \textcolor{comment}{// only apply if the carrot is in goal position and also if we are not in a pure spinning behavior v!=0}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00219}00219 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00220}00220             \textcolor{keyword}{auto} \&carrot\_pose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}];}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00220}00220             \textcolor{keyword}{auto} \&carrot\_pose = backwardsPlanPath\_[currentCarrotPoseIndex\_];}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00221}00221             \textcolor{keyword}{const} geometry\_msgs::Point \&carrot\_point = carrot\_pose.pose.position;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00222}00222             \textcolor{keywordtype}{double} yaw = tf::getYaw(carrot\_pose.pose.orientation);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00223}00223 }
@@ -221,43 +221,43 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00237}00237             \textcolor{keywordflow}{return} check < 0;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00238}00238         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00239}00239 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00240}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a8b84e3961a79317a9c978ec054e4a112}{00240}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a8b84e3961a79317a9c978ec054e4a112}{BackwardLocalPlanner::checkCurrentPoseInGoalRange}}(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose,  \textcolor{keywordtype}{double} angle\_error, \textcolor{keywordtype}{bool}\& linearGoalReached)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00240}00240         \textcolor{keywordtype}{bool} BackwardLocalPlanner::checkCurrentPoseInGoalRange(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose,  \textcolor{keywordtype}{double} angle\_error, \textcolor{keywordtype}{bool}\& linearGoalReached)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00241}00241         \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00242}00242             \textcolor{keyword}{auto} \&finalgoal = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.back();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00242}00242             \textcolor{keyword}{auto} \&finalgoal = backwardsPlanPath\_.back();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00243}00243             \textcolor{keywordtype}{double} gdx = finalgoal.pose.position.x -\/ tfpose.getOrigin().x();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00244}00244             \textcolor{keywordtype}{double} gdy = finalgoal.pose.position.y -\/ tfpose.getOrigin().y();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00245}00245             \textcolor{keywordtype}{double} goaldist = sqrt(gdx * gdx + gdy * gdy);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00246}00246 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00247}00247             \textcolor{keyword}{auto} abs\_angle\_error = fabs(angle\_error);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00248}00248             \textcolor{comment}{// final\_alpha\_error =}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00249}00249             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] goal check. linear dist: "{}} << goaldist << \textcolor{stringliteral}{"{}("{}} << this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}} << \textcolor{stringliteral}{"{})"{}}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00250}00250                                                                                 << \textcolor{stringliteral}{"{}, angular dist: "{}} << abs\_angle\_error << \textcolor{stringliteral}{"{}("{}} << this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}} << \textcolor{stringliteral}{"{})"{}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00249}00249             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] goal check. linear dist: "{}} << goaldist << \textcolor{stringliteral}{"{}("{}} << this-\/>xy\_goal\_tolerance\_ << \textcolor{stringliteral}{"{})"{}}}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00250}00250                                                                                 << \textcolor{stringliteral}{"{}, angular dist: "{}} << abs\_angle\_error << \textcolor{stringliteral}{"{}("{}} << this-\/>yaw\_goal\_tolerance\_ << \textcolor{stringliteral}{"{})"{}});}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00251}00251 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00252}00252             linearGoalReached = goaldist < this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00252}00252             linearGoalReached = goaldist < this-\/>xy\_goal\_tolerance\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00253}00253 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00254}00254             \textcolor{keywordflow}{if} (abs\_angle\_error < this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}}) \textcolor{comment}{// 5cm}}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00254}00254             \textcolor{keywordflow}{if} (abs\_angle\_error < this-\/>yaw\_goal\_tolerance\_) \textcolor{comment}{// 5cm}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00255}00255             \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00256}00256                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00257}00257             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00258}00258 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00259}00259             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00260}00260         \}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00266}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a1ebd69a028a22e3573e98f89d593f97d}{00266}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a1ebd69a028a22e3573e98f89d593f97d}{BackwardLocalPlanner::defaultBackwardCmd}}(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose, \textcolor{keywordtype}{double} vetta, \textcolor{keywordtype}{double} gamma, \textcolor{keywordtype}{double} alpha\_error, \textcolor{keywordtype}{double} betta\_error, geometry\_msgs::Twist \&cmd\_vel)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00266}00266         \textcolor{keywordtype}{void} BackwardLocalPlanner::defaultBackwardCmd(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose, \textcolor{keywordtype}{double} vetta, \textcolor{keywordtype}{double} gamma, \textcolor{keywordtype}{double} alpha\_error, \textcolor{keywordtype}{double} betta\_error, geometry\_msgs::Twist \&cmd\_vel)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00267}00267         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00268}00268             cmd\_vel.linear.x = vetta;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00269}00269             cmd\_vel.angular.z = gamma;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00270}00270         \}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00276}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a6069866b4a3150883de3212d8e43e8f8}{00276}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a6069866b4a3150883de3212d8e43e8f8}{BackwardLocalPlanner::straightBackwardsAndPureSpinCmd}}(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose, \textcolor{keywordtype}{double} vetta, \textcolor{keywordtype}{double} gamma, \textcolor{keywordtype}{double} alpha\_error, \textcolor{keywordtype}{double} betta\_error, \textcolor{keywordtype}{double} rho\_error, geometry\_msgs::Twist \&cmd\_vel)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00276}00276         \textcolor{keywordtype}{void} BackwardLocalPlanner::straightBackwardsAndPureSpinCmd(\textcolor{keyword}{const} tf::Stamped<tf::Pose> \&tfpose, \textcolor{keywordtype}{double} vetta, \textcolor{keywordtype}{double} gamma, \textcolor{keywordtype}{double} alpha\_error, \textcolor{keywordtype}{double} betta\_error, \textcolor{keywordtype}{double} rho\_error, geometry\_msgs::Twist \&cmd\_vel)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00277}00277         \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00278}00278             \textcolor{keywordflow}{if} (rho\_error > \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a858efacf597a3a35c97aec9ca53e5900}{linear\_mode\_rho\_error\_threshold\_}}) \textcolor{comment}{// works in straight motion mode}}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00278}00278             \textcolor{keywordflow}{if} (rho\_error > linear\_mode\_rho\_error\_threshold\_) \textcolor{comment}{// works in straight motion mode}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00279}00279             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00280}00280                 vetta = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad8a36184bfb011545c751109e23d3b98}{k\_rho\_}} * rho\_error;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00281}00281                 gamma = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_abf7a5a56de2ee41afba7e63c0628ec35}{k\_alpha\_}} * alpha\_error;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00280}00280                 vetta = k\_rho\_ * rho\_error;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00281}00281                 gamma = k\_alpha\_ * alpha\_error;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00282}00282             \}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00283}00283             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (fabs(betta\_error) >= this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}}) \textcolor{comment}{// works in pure spinning mode}}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00283}00283             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (fabs(betta\_error) >= this-\/>yaw\_goal\_tolerance\_) \textcolor{comment}{// works in pure spinning mode}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00284}00284             \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00285}00285                 vetta = 0;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00286}00286                 gamma = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9f257183d87f1d732cb7e404f09905ad}{k\_betta\_}} * betta\_error;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00286}00286                 gamma = k\_betta\_ * betta\_error;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00287}00287             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00288}00288             \textcolor{comment}{/*}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00289}00289 \textcolor{comment}{            // THIS IS NOT TRUE, IF THE CARROT REACHES THE GOAL DOES NOT MEAN THE ROBOT IS}}
@@ -297,11 +297,11 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00323}00323 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00324}00324 \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00325}00325 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00331}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a25437208766366ca22f967fe72e80988}{00331}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a25437208766366ca22f967fe72e80988}{BackwardLocalPlanner::computeVelocityCommands}}(geometry\_msgs::Twist \&cmd\_vel)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00331}00331         \textcolor{keywordtype}{bool} BackwardLocalPlanner::computeVelocityCommands(geometry\_msgs::Twist \&cmd\_vel)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00332}00332         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00333}00333             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ LOCAL PLANNER LOOP -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00334}00334             geometry\_msgs::PoseStamped paux;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00335}00335             tf::Stamped<tf::Pose> tfpose = \mbox{\hyperlink{namespacecl__move__base__z_1_1backward__local__planner_a59f03ead7377eb9c22b83f84f0215127}{optionalRobotPose}}(\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a4136268882a105d9e06e173d85d5c0dc}{costmapRos\_}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00335}00335             tf::Stamped<tf::Pose> tfpose = \mbox{\hyperlink{namespacecl__move__base__z_1_1backward__local__planner_a59f03ead7377eb9c22b83f84f0215127}{optionalRobotPose}}(costmapRos\_);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00336}00336 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00337}00337             \textcolor{comment}{//bool divergenceDetected = this-\/>divergenceDetectionUpdate(tfpose);}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00338}00338             \textcolor{comment}{// it is not working in the pure spinning reel example, maybe the hyperplane check is enough}}
@@ -314,7 +314,7 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00345}00345                 emergency\_stop = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00346}00346             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00347}00347 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00348}00348             \textcolor{keywordtype}{bool} carrotInLinearGoalRange = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a16e79a1b4c0f18879f6f0a8ba67103fd}{updateCarrotGoal}}(tfpose);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00348}00348             \textcolor{keywordtype}{bool} carrotInLinearGoalRange = updateCarrotGoal(tfpose);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00349}00349             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot goal created"{}});}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00350}00350 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00351}00351             \textcolor{keywordflow}{if} (emergency\_stop)}
@@ -331,9 +331,9 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00362}00362 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00363}00363                 \textcolor{comment}{// getting carrot goal information}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00364}00364                 tf::Quaternion q = tfpose.getRotation();}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00365}00365                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot goal: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00366}00366                 \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&carrotgoalpose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}];}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00367}00367                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot goal pose current index: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() << \textcolor{stringliteral}{"{}: "{}} << carrotgoalpose);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00365}00365                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot goal: "{}} << currentCarrotPoseIndex\_ << \textcolor{stringliteral}{"{}/"{}} << backwardsPlanPath\_.size());}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00366}00366                 \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&carrotgoalpose = backwardsPlanPath\_[currentCarrotPoseIndex\_];}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00367}00367                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot goal pose current index: "{}} << currentCarrotPoseIndex\_ << \textcolor{stringliteral}{"{}/"{}} << backwardsPlanPath\_.size() << \textcolor{stringliteral}{"{}: "{}} << carrotgoalpose);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00368}00368                 \textcolor{keyword}{const} geometry\_msgs::Point \&carrotGoalPosition = carrotgoalpose.pose.position;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00369}00369 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00370}00370                 tf::Quaternion goalQ;}
@@ -342,7 +342,7 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00373}00373 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00374}00374                 \textcolor{comment}{//goal orientation (global frame)}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00375}00375                 \textcolor{keywordtype}{double} betta = tf::getYaw(goalQ);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00376}00376                 betta = betta + \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a07e5f16f6951cca1e6d3483f345d0bb1}{betta\_offset\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00376}00376                 betta = betta + betta\_offset\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00377}00377 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00378}00378                 \textcolor{keywordtype}{double} dx = carrotGoalPosition.x -\/ tfpose.getOrigin().x();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00379}00379                 \textcolor{keywordtype}{double} dy = carrotGoalPosition.y -\/ tfpose.getOrigin().y();}
@@ -353,21 +353,21 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00384}00384                 \textcolor{comment}{//heading to goal angle}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00385}00385                 \textcolor{keywordtype}{double} theta = tf::getYaw(q);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00386}00386                 \textcolor{keywordtype}{double} alpha = atan2(dy, dx);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00387}00387                 alpha = alpha + \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a09765b08935d9355447c44776e1b1c3a}{alpha\_offset\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00387}00387                 alpha = alpha + alpha\_offset\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00388}00388 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00389}00389                 alpha\_error = angles::shortest\_angular\_distance(alpha, theta);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00390}00390                 betta\_error = angles::shortest\_angular\_distance(betta, theta);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00391}00391             \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ END CONTEXT EVAL -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00392}00392 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00393}00393             \textcolor{keywordtype}{bool} linearGoalReached;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00394}00394             \textcolor{keywordtype}{bool} currentPoseInGoal = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a8b84e3961a79317a9c978ec054e4a112}{checkCurrentPoseInGoalRange}}(tfpose,betta\_error, linearGoalReached);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00394}00394             \textcolor{keywordtype}{bool} currentPoseInGoal = checkCurrentPoseInGoalRange(tfpose,betta\_error, linearGoalReached);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00395}00395 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00396}00396             \textcolor{keywordtype}{bool} carrotInFinalGoal = carrotInLinearGoalRange \&\& \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} == \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() -\/ 1;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00396}00396             \textcolor{keywordtype}{bool} carrotInFinalGoal = carrotInLinearGoalRange \&\& currentCarrotPoseIndex\_ == backwardsPlanPath\_.size() -\/ 1;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00397}00397 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00398}00398             \textcolor{keywordflow}{if}(currentPoseInGoal \&\& carrotInFinalGoal)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00399}00399             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00400}00400                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad443c52ef585a8eab0364f0909222f51}{goalReached\_}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00401}00401                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.clear();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00400}00400                 goalReached\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00401}00401                 backwardsPlanPath\_.clear();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00402}00402                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{} [BackwardLocalPlanner] GOAL REACHED. Send stop command and skipping trajectory collision: "{}} << cmd\_vel);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00403}00403                 cmd\_vel.linear.x =0;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00404}00404                 cmd\_vel.angular.z = 0;}
@@ -376,55 +376,55 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00407}00407 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00408}00408             \textcolor{keywordflow}{if} (carrotInLinearGoalRange \&\& linearGoalReached) \textcolor{comment}{// we miss here and not any carrot ahead is outside goal, replacing carrotInLinearGoalRange to carrotInFinalLinearGoalRange}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00409}00409             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00410}00410                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae4d7254afd19ae1f7bd8eac9f5d58b9a}{inGoalPureSpinningState\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00410}00410                 inGoalPureSpinningState\_ = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00411}00411             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00412}00412 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00413}00413 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00414}00414                 \textcolor{keywordtype}{double} vetta = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad8a36184bfb011545c751109e23d3b98}{k\_rho\_}} * rho\_error;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00415}00415                 \textcolor{keywordtype}{double} gamma = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_abf7a5a56de2ee41afba7e63c0628ec35}{k\_alpha\_}} * alpha\_error + \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9f257183d87f1d732cb7e404f09905ad}{k\_betta\_}} * betta\_error;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00414}00414                 \textcolor{keywordtype}{double} vetta = k\_rho\_ * rho\_error;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00415}00415                 \textcolor{keywordtype}{double} gamma = k\_alpha\_ * alpha\_error + k\_betta\_ * betta\_error;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00416}00416                 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00417}00417 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00418}00418                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a04febb67563add6f715051a94aed1b9b}{straightBackwardsAndPureSpinningMode\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00418}00418                 \textcolor{keywordflow}{if} (straightBackwardsAndPureSpinningMode\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00419}00419                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00420}00420                     this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a6069866b4a3150883de3212d8e43e8f8}{straightBackwardsAndPureSpinCmd}}(tfpose, vetta, gamma, alpha\_error, betta\_error, rho\_error, cmd\_vel);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00420}00420                     this-\/>straightBackwardsAndPureSpinCmd(tfpose, vetta, gamma, alpha\_error, betta\_error, rho\_error, cmd\_vel);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00421}00421                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00422}00422                 \textcolor{keywordflow}{else} \textcolor{comment}{// default curved backward-\/free motion mode}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00423}00423                 \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00424}00424                     \textcolor{comment}{// case B: goal position reached but orientation not yet reached. deactivate linear motion.}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00425}00425                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae4d7254afd19ae1f7bd8eac9f5d58b9a}{inGoalPureSpinningState\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00425}00425                     \textcolor{keywordflow}{if} (inGoalPureSpinningState\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00426}00426                     \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00427}00427                         ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] we entered in a pure spinning state even in not pure-\/spining configuration, carrotDistanceGoalReached: \%d"{}}, carrotInLinearGoalRange);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00428}00428                         gamma = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9f257183d87f1d732cb7e404f09905ad}{k\_betta\_}} * betta\_error;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00428}00428                         gamma = k\_betta\_ * betta\_error;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00429}00429                         vetta = 0;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00430}00430                     \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00431}00431 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00432}00432                     \textcolor{comment}{//classical control to reach a goal backwards}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00433}00433                     this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a1ebd69a028a22e3573e98f89d593f97d}{defaultBackwardCmd}}(tfpose, vetta, gamma, alpha\_error, betta\_error, cmd\_vel);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00433}00433                     this-\/>defaultBackwardCmd(tfpose, vetta, gamma, alpha\_error, betta\_error, cmd\_vel);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00434}00434                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00435}00435 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00436}00436                 \textcolor{keywordflow}{if} (cmd\_vel.linear.x > \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae4399072e9ae9cc60d8837860dc4807b}{max\_linear\_x\_speed\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00436}00436                 \textcolor{keywordflow}{if} (cmd\_vel.linear.x > max\_linear\_x\_speed\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00437}00437                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00438}00438                     cmd\_vel.linear.x = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae4399072e9ae9cc60d8837860dc4807b}{max\_linear\_x\_speed\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00438}00438                     cmd\_vel.linear.x = max\_linear\_x\_speed\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00439}00439                 \}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00440}00440                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cmd\_vel.linear.x < -\/\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae4399072e9ae9cc60d8837860dc4807b}{max\_linear\_x\_speed\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00440}00440                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cmd\_vel.linear.x < -\/max\_linear\_x\_speed\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00441}00441                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00442}00442                     cmd\_vel.linear.x = -\/\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae4399072e9ae9cc60d8837860dc4807b}{max\_linear\_x\_speed\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00442}00442                     cmd\_vel.linear.x = -\/max\_linear\_x\_speed\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00443}00443                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00444}00444 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00445}00445                 \textcolor{keywordflow}{if} (cmd\_vel.angular.z > \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_af7e492339ee2d1c90c00f6dd4cf95551}{max\_angular\_z\_speed\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00445}00445                 \textcolor{keywordflow}{if} (cmd\_vel.angular.z > max\_angular\_z\_speed\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00446}00446                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00447}00447                     cmd\_vel.angular.z = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_af7e492339ee2d1c90c00f6dd4cf95551}{max\_angular\_z\_speed\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00447}00447                     cmd\_vel.angular.z = max\_angular\_z\_speed\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00448}00448                 \}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00449}00449                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cmd\_vel.angular.z < -\/\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_af7e492339ee2d1c90c00f6dd4cf95551}{max\_angular\_z\_speed\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00449}00449                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cmd\_vel.angular.z < -\/max\_angular\_z\_speed\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00450}00450                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00451}00451                     cmd\_vel.angular.z = -\/\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_af7e492339ee2d1c90c00f6dd4cf95551}{max\_angular\_z\_speed\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00451}00451                     cmd\_vel.angular.z = -\/max\_angular\_z\_speed\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00452}00452                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00453}00453 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00454}00454                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a70eaeb6cf31fd3378d9fbf9bcb975995}{publishGoalMarker}}(carrotGoalPosition.x, carrotGoalPosition.y, betta);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00454}00454                 \mbox{\hyperlink{namespacecl__move__base__z_1_1pure__spinning__local__planner_ab6a498d3454059055f0aebf49c7b82cf}{publishGoalMarker}}(carrotGoalPosition.x, carrotGoalPosition.y, betta);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00455}00455 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00456}00456                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] local planner,"{}} << std::endl}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00457}00457                                                                          << \textcolor{stringliteral}{"{} straightAnPureSpiningMode: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a04febb67563add6f715051a94aed1b9b}{straightBackwardsAndPureSpinningMode\_}} << std::endl}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00458}00458                                                                          << \textcolor{stringliteral}{"{} inGoalPureSpinningState: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae4d7254afd19ae1f7bd8eac9f5d58b9a}{inGoalPureSpinningState\_}} << std::endl}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00457}00457                                                                          << \textcolor{stringliteral}{"{} straightAnPureSpiningMode: "{}} << straightBackwardsAndPureSpinningMode\_ << std::endl}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00458}00458                                                                          << \textcolor{stringliteral}{"{} inGoalPureSpinningState: "{}} << inGoalPureSpinningState\_ << std::endl}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00459}00459                                                                          << \textcolor{stringliteral}{"{}carrotInLinearGoalRange: "{}} << carrotInLinearGoalRange << std::endl}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00460}00460                                                                          << \textcolor{stringliteral}{"{} theta: "{}} << theta << std::endl}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00461}00461                                                                          << \textcolor{stringliteral}{"{} betta: "{}} << theta << std::endl}
@@ -438,9 +438,9 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00469}00469                                                                          << \textcolor{stringliteral}{"{} cmd\_vel.lin.x:"{}} << cmd\_vel.linear.x << std::endl}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00470}00470                                                                          << \textcolor{stringliteral}{"{} cmd\_vel.ang.z:"{}} << cmd\_vel.angular.z);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00471}00471 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00472}00472                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae4d7254afd19ae1f7bd8eac9f5d58b9a}{inGoalPureSpinningState\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00472}00472                 \textcolor{keywordflow}{if} (inGoalPureSpinningState\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00473}00473                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00474}00474                     \textcolor{keywordtype}{bool} carrotHalfPlaneConstraintFailure = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a22938e354a4ec489101295ed7f2539f6}{checkCarrotHalfPlainConstraint}}(tfpose);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00474}00474                     \textcolor{keywordtype}{bool} carrotHalfPlaneConstraintFailure = checkCarrotHalfPlainConstraint(tfpose);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00475}00475 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00476}00476                     \textcolor{keywordflow}{if} (carrotHalfPlaneConstraintFailure)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00477}00477                     \{}
@@ -453,9 +453,9 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00484}00484             \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ TRAJECTORY PREDICTION AND COLLISION AVOIDANCE -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00485}00485             \textcolor{comment}{//cmd\_vel.linear.x=0;}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00486}00486             \textcolor{comment}{//cmd\_vel.angular.z = 0;}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00487}00487             tf::Stamped<tf::Pose> global\_pose = \mbox{\hyperlink{namespacecl__move__base__z_1_1backward__local__planner_a59f03ead7377eb9c22b83f84f0215127}{optionalRobotPose}}(\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a4136268882a105d9e06e173d85d5c0dc}{costmapRos\_}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00487}00487             tf::Stamped<tf::Pose> global\_pose = \mbox{\hyperlink{namespacecl__move__base__z_1_1backward__local__planner_a59f03ead7377eb9c22b83f84f0215127}{optionalRobotPose}}(costmapRos\_);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00488}00488 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00489}00489             \textcolor{keyword}{auto} *costmap2d = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a4136268882a105d9e06e173d85d5c0dc}{costmapRos\_}}-\/>getCostmap();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00489}00489             \textcolor{keyword}{auto} *costmap2d = costmapRos\_-\/>getCostmap();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00490}00490             \textcolor{keyword}{auto} yaw = tf::getYaw(global\_pose.getRotation());}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00491}00491 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00492}00492             \textcolor{keyword}{auto} \&pos = global\_pose.getOrigin();}
@@ -463,18 +463,18 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00494}00494             Eigen::Vector3f currentpose(pos.x(), pos.y(), yaw);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00495}00495             Eigen::Vector3f currentvel(cmd\_vel.linear.x, cmd\_vel.linear.y, cmd\_vel.angular.z);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00496}00496             std::vector<Eigen::Vector3f> trajectory;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00497}00497             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9e8921ca8ce379ca8ba321f82ca23cdc}{generateTrajectory}}(currentpose, currentvel, 0.8 \textcolor{comment}{/*meters*/}, M\_PI / 8 \textcolor{comment}{/*rads*/}, 3.0 \textcolor{comment}{/*seconds*/}, 0.05 \textcolor{comment}{/*seconds*/}, trajectory);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00497}00497             this-\/>generateTrajectory(currentpose, currentvel, 0.8 \textcolor{comment}{/*meters*/}, M\_PI / 8 \textcolor{comment}{/*rads*/}, 3.0 \textcolor{comment}{/*seconds*/}, 0.05 \textcolor{comment}{/*seconds*/}, trajectory);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00498}00498 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00499}00499             \textcolor{comment}{// check plan rejection}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00500}00500             \textcolor{keywordtype}{bool} acceptedLocalTrajectoryFreeOfObstacles = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00501}00501 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00502}00502             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, my;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00503}00503 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00504}00504             \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a154043366660cc02ec758dda32817511}{enable\_obstacle\_checking\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00504}00504             \textcolor{keywordflow}{if} (this-\/>enable\_obstacle\_checking\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00505}00505             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00506}00506                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() > 0)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00506}00506                 \textcolor{keywordflow}{if} (backwardsPlanPath\_.size() > 0)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00507}00507                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00508}00508                     \textcolor{keyword}{auto} \&finalgoalpose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.back();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00508}00508                     \textcolor{keyword}{auto} \&finalgoalpose = backwardsPlanPath\_.back();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00509}00509 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00510}00510                     \textcolor{keywordtype}{int} i = 0;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00511}00511                     \textcolor{comment}{// ROS\_INFO\_STREAM("{}lplanner goal: "{} << finalgoalpose.pose.position);}}
@@ -484,7 +484,7 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00515}00515                         \textcolor{keywordtype}{float} dy = p[1] -\/ finalgoalpose.pose.position.y;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00516}00516 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00517}00517                         \textcolor{keywordtype}{float} dst = sqrt(dx * dx + dy * dy);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00518}00518                         \textcolor{keywordflow}{if} (dst < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00518}00518                         \textcolor{keywordflow}{if} (dst < xy\_goal\_tolerance\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00519}00519                         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00520}00520                             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] trajectory simulation for collision checking: goal reached with no collision"{}});}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00521}00521                             \textcolor{keywordflow}{break};}
@@ -513,14 +513,14 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00544}00544                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00545}00545                 \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00546}00546                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00547}00547                     ROS\_WARN(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Abort local -\/ Backwards global plan size: \%ld"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00547}00547                     ROS\_WARN(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Abort local -\/ Backwards global plan size: \%ld"{}}, backwardsPlanPath\_.size());}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00548}00548                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00549}00549                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00550}00550             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00551}00551 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00552}00552             \textcolor{keywordflow}{if} (acceptedLocalTrajectoryFreeOfObstacles)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00553}00553             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00554}00554                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a00849266e4bdd9379c3717e8a41c303e}{waiting\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00554}00554                 waiting\_ = \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00555}00555                 ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] accepted local trajectory free of obstacle. Local planner continues."{}});}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00556}00556                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00557}00557             \}}
@@ -530,19 +530,19 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00561}00561                 cmd\_vel.linear.x = 0;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00562}00562                 cmd\_vel.angular.z = 0;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00563}00563 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00564}00564                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a00849266e4bdd9379c3717e8a41c303e}{waiting\_}} == \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00564}00564                 \textcolor{keywordflow}{if} (waiting\_ == \textcolor{keyword}{false})}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00565}00565                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00566}00566                     \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a00849266e4bdd9379c3717e8a41c303e}{waiting\_}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00567}00567                     \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_abe08faab5b784fcf64ac6b3f936459f1}{waitingStamp\_}} = ros::Time::now();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00566}00566                     waiting\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00567}00567                     waitingStamp\_ = ros::Time::now();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00568}00568                     ROS\_WARN(\textcolor{stringliteral}{"{}[BackwardLocalPlanner][Not accepted local plan] starting countdown"{}});}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00569}00569                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00570}00570                 \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00571}00571                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00572}00572                     \textcolor{keyword}{auto} waitingduration = ros::Time::now() -\/ \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_abe08faab5b784fcf64ac6b3f936459f1}{waitingStamp\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00572}00572                     \textcolor{keyword}{auto} waitingduration = ros::Time::now() -\/ waitingStamp\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00573}00573 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00574}00574                     \textcolor{keywordflow}{if} (waitingduration > this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0c15da985f7f051164adb643c03a0c90}{waitingTimeout\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00574}00574                     \textcolor{keywordflow}{if} (waitingduration > this-\/>waitingTimeout\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00575}00575                     \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00576}00576                         ROS\_WARN(\textcolor{stringliteral}{"{}[BackwardLocalPlanner][Abort local] timeout! duration \%lf/\%f"{}}, waitingduration.toSec(), \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0c15da985f7f051164adb643c03a0c90}{waitingTimeout\_}}.toSec());}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00576}00576                         ROS\_WARN(\textcolor{stringliteral}{"{}[BackwardLocalPlanner][Abort local] timeout! duration \%lf/\%f"{}}, waitingduration.toSec(), waitingTimeout\_.toSec());}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00577}00577                         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00578}00578                     \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00579}00579                 \}}
@@ -551,113 +551,113 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00582}00582             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00583}00583         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00584}00584 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00590}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a62e4783adae03ce92190d855a021b91d}{00590}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a62e4783adae03ce92190d855a021b91d}{BackwardLocalPlanner::reconfigCB}}(::backward\_local\_planner::BackwardLocalPlannerConfig \&config, uint32\_t level)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00590}00590         \textcolor{keywordtype}{void} BackwardLocalPlanner::reconfigCB(::backward\_local\_planner::BackwardLocalPlannerConfig \&config, uint32\_t level)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00591}00591         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00592}00592             ROS\_INFO(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] reconfigure Request"{}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00593}00593             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_abf7a5a56de2ee41afba7e63c0628ec35}{k\_alpha\_}} = config.k\_alpha;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00594}00594             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9f257183d87f1d732cb7e404f09905ad}{k\_betta\_}} = config.k\_betta;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00595}00595             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad8a36184bfb011545c751109e23d3b98}{k\_rho\_}} = config.k\_rho;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00596}00596             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a154043366660cc02ec758dda32817511}{enable\_obstacle\_checking\_}} = config.enable\_obstacle\_checking;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00593}00593             k\_alpha\_ = config.k\_alpha;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00594}00594             k\_betta\_ = config.k\_betta;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00595}00595             k\_rho\_ = config.k\_rho;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00596}00596             enable\_obstacle\_checking\_ = config.enable\_obstacle\_checking;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00597}00597 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00598}00598             \textcolor{comment}{//alpha\_offset\_ = config.alpha\_offset;}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00599}00599             \textcolor{comment}{//betta\_offset\_ = config.betta\_offset;}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00600}00600 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00601}00601             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} = config.carrot\_distance;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00602}00602             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}} = config.carrot\_angular\_distance;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00603}00603             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}} = config.xy\_goal\_tolerance;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00604}00604             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}} = config.yaw\_goal\_tolerance;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00605}00605             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a04febb67563add6f715051a94aed1b9b}{straightBackwardsAndPureSpinningMode\_}} = config.pure\_spinning\_straight\_line\_mode;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00601}00601             carrot\_distance\_ = config.carrot\_distance;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00602}00602             carrot\_angular\_distance\_ = config.carrot\_angular\_distance;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00603}00603             xy\_goal\_tolerance\_ = config.xy\_goal\_tolerance;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00604}00604             yaw\_goal\_tolerance\_ = config.yaw\_goal\_tolerance;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00605}00605             straightBackwardsAndPureSpinningMode\_ = config.pure\_spinning\_straight\_line\_mode;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00606}00606 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00607}00607             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00607}00607             \textcolor{keywordflow}{if} (carrot\_angular\_distance\_ < yaw\_goal\_tolerance\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00608}00608             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00609}00609                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot\_angular\_distance ("{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}} << \textcolor{stringliteral}{"{}) cannot be lower than yaw\_goal\_tolerance ("{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}} << \textcolor{stringliteral}{"{}) setting carrot\_angular\_distance = "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00610}00610                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}};}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00611}00611                 config.carrot\_angular\_distance = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00609}00609                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot\_angular\_distance ("{}} << carrot\_angular\_distance\_ << \textcolor{stringliteral}{"{}) cannot be lower than yaw\_goal\_tolerance ("{}} << yaw\_goal\_tolerance\_ << \textcolor{stringliteral}{"{}) setting carrot\_angular\_distance = "{}} << yaw\_goal\_tolerance\_);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00610}00610                 carrot\_angular\_distance\_ = yaw\_goal\_tolerance\_;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00611}00611                 config.carrot\_angular\_distance = yaw\_goal\_tolerance\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00612}00612             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00613}00613 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00614}00614             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00614}00614             \textcolor{keywordflow}{if} (carrot\_distance\_ < xy\_goal\_tolerance\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00615}00615             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00616}00616                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot\_linear\_distance ("{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} << \textcolor{stringliteral}{"{}) cannot be lower than xy\_goal\_tolerance\_ ("{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9c5104d328041fcde5a3c02664abad48}{yaw\_goal\_tolerance\_}} << \textcolor{stringliteral}{"{}) setting carrot\_angular\_distance = "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00617}00617                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}};}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00618}00618                 config.carrot\_distance = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00616}00616                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot\_linear\_distance ("{}} << carrot\_distance\_ << \textcolor{stringliteral}{"{}) cannot be lower than xy\_goal\_tolerance\_ ("{}} << yaw\_goal\_tolerance\_ << \textcolor{stringliteral}{"{}) setting carrot\_angular\_distance = "{}} << xy\_goal\_tolerance\_);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00617}00617                 carrot\_distance\_ = xy\_goal\_tolerance\_;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00618}00618                 config.carrot\_distance = xy\_goal\_tolerance\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00619}00619             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00620}00620         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00621}00621 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00627}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a06a99e609ed31b97f765351dd6827722}{00627}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a06a99e609ed31b97f765351dd6827722}{BackwardLocalPlanner::isGoalReached}}()}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00627}00627         \textcolor{keywordtype}{bool} BackwardLocalPlanner::isGoalReached()}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00628}00628         \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00629}00629             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] isGoalReached call: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad443c52ef585a8eab0364f0909222f51}{goalReached\_}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00630}00630             \textcolor{keywordflow}{return} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad443c52ef585a8eab0364f0909222f51}{goalReached\_}};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00629}00629             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] isGoalReached call: "{}} << goalReached\_);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00630}00630             \textcolor{keywordflow}{return} goalReached\_;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00631}00631         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00632}00632 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00633}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0025cd3ffaa04a6a02492a33673a78a1}{00633}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0025cd3ffaa04a6a02492a33673a78a1}{BackwardLocalPlanner::findInitialCarrotGoal}}(tf::Stamped<tf::Pose> \&tfpose)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00633}00633         \textcolor{keywordtype}{bool} BackwardLocalPlanner::findInitialCarrotGoal(tf::Stamped<tf::Pose> \&tfpose)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00634}00634         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00635}00635             \textcolor{keywordtype}{double} lineardisterr, angleerr;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00636}00636             \textcolor{keywordtype}{bool} inCarrotRange = \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00637}00637 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00638}00638             \textcolor{comment}{// initial state check}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00639}00639             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{computeCurrentEuclideanAndAngularErrorsToCarrotGoal}}(tfpose, lineardisterr, angleerr);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00639}00639             computeCurrentEuclideanAndAngularErrorsToCarrotGoal(tfpose, lineardisterr, angleerr);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00640}00640 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00641}00641             \textcolor{keywordtype}{int} closestIndex = -\/1;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00642}00642             \textcolor{keywordtype}{double} minpointdist = std::numeric\_limits<double>::max();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00643}00643 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00644}00644             \textcolor{comment}{// lets set the carrot-\/goal in the correct place with this loop}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00645}00645             \textcolor{keywordflow}{while} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() \&\& !inCarrotRange)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00645}00645             \textcolor{keywordflow}{while} (currentCarrotPoseIndex\_ < backwardsPlanPath\_.size() \&\& !inCarrotRange)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00646}00646             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00647}00647                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{computeCurrentEuclideanAndAngularErrorsToCarrotGoal}}(tfpose, lineardisterr, angleerr);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00647}00647                 computeCurrentEuclideanAndAngularErrorsToCarrotGoal(tfpose, lineardisterr, angleerr);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00648}00648 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00649}00649                 ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%d -\/ error to carrot, linear = \%lf (\%lf), angular : \%lf (\%lf)"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}, lineardisterr, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}}, angleerr, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00649}00649                 ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%d -\/ error to carrot, linear = \%lf (\%lf), angular : \%lf (\%lf)"{}}, currentCarrotPoseIndex\_, lineardisterr, carrot\_distance\_, angleerr, carrot\_angular\_distance\_);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00650}00650 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00651}00651                 \textcolor{comment}{// current path point is inside the carrot distance range, goal carrot tries to escape!}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00652}00652                 \textcolor{keywordflow}{if} (lineardisterr < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} \&\& angleerr < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}})}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00652}00652                 \textcolor{keywordflow}{if} (lineardisterr < carrot\_distance\_ \&\& angleerr < carrot\_angular\_distance\_)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00653}00653                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00654}00654                     ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%d -\/ in carrot Range"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00654}00654                     ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%d -\/ in carrot Range"{}}, currentCarrotPoseIndex\_);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00655}00655                     inCarrotRange = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00656}00656                     \textcolor{comment}{// we are inside the goal range}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00657}00657                 \}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00658}00658                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (inCarrotRange \&\& (lineardisterr > \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} || angleerr > \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}}))}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00658}00658                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (inCarrotRange \&\& (lineardisterr > carrot\_distance\_ || angleerr > carrot\_angular\_distance\_))}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00659}00659                 \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00660}00660                     \textcolor{comment}{// we were inside the carrot range but not anymore, now we are just leaving. we want to continue forward (currentCarrotPoseIndex\_++)}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00661}00661                     \textcolor{comment}{// unless we go out of the carrot range}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00662}00662 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00663}00663                     \textcolor{comment}{// but we rollback last index increment (to go back inside the carrot goal scope) and start motion with that carrot goal we found}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00664}00664                     \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00664}00664                     currentCarrotPoseIndex\_-\/-\/;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00665}00665                     \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00666}00666                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00667}00667                 \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00668}00668                 \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00669}00669                     ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%d -\/ carrot out of range, searching coincidence..."{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00669}00669                     ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%d -\/ carrot out of range, searching coincidence..."{}}, currentCarrotPoseIndex\_);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00670}00670                 \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00671}00671 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00672}00672                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}++;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00673}00673                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] setPlan: fw"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00672}00672                 currentCarrotPoseIndex\_++;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00673}00673                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] setPlan: fw"{}} << currentCarrotPoseIndex\_);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00674}00674             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00675}00675 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00676}00676             ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] setPlan: (found first carrot:"{}} << inCarrotRange << \textcolor{stringliteral}{"{}) initial carrot point index: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00676}00676             ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] setPlan: (found first carrot:"{}} << inCarrotRange << \textcolor{stringliteral}{"{}) initial carrot point index: "{}} << currentCarrotPoseIndex\_ << \textcolor{stringliteral}{"{}/"{}} << backwardsPlanPath\_.size());}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00677}00677 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00678}00678             \textcolor{keywordflow}{return} inCarrotRange;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00679}00679         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00680}00680 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00681}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a100fe8bdaaf89b0fa54ecf2aef0966ed}{00681}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a100fe8bdaaf89b0fa54ecf2aef0966ed}{BackwardLocalPlanner::resamplePrecisePlan}}()}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00681}00681         \textcolor{keywordtype}{bool} BackwardLocalPlanner::resamplePrecisePlan()}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00682}00682         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00683}00683             \textcolor{comment}{// this algorithm is really important to have a precise carrot (linear or angular)}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00684}00684             \textcolor{comment}{// and not being considered as a divergence from the path}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00685}00685 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00686}00686             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] resample precise"{}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00687}00687             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() <=1)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00687}00687             \textcolor{keywordflow}{if}(backwardsPlanPath\_.size() <=1)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00688}00688             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00689}00689                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] resample precise skipping, size: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00689}00689                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] resample precise skipping, size: "{}} << backwardsPlanPath\_.size());}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00690}00690                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00691}00691             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00692}00692 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00693}00693             \textcolor{keywordtype}{int} counter = 0;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00694}00694             \textcolor{keywordtype}{double} maxallowedAngularError = 0.45 * this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}}; \textcolor{comment}{// nyquist}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00695}00695             \textcolor{keywordtype}{double} maxallowedLinearError = 0.45 * this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}};          \textcolor{comment}{// nyquist}}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00694}00694             \textcolor{keywordtype}{double} maxallowedAngularError = 0.45 * this-\/>carrot\_angular\_distance\_; \textcolor{comment}{// nyquist}}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00695}00695             \textcolor{keywordtype}{double} maxallowedLinearError = 0.45 * this-\/>carrot\_distance\_;          \textcolor{comment}{// nyquist}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00696}00696 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00697}00697             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() -\/ 1; i++)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00697}00697             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < backwardsPlanPath\_.size() -\/ 1; i++)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00698}00698             \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00699}00699                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] resample precise, check: "{}} << i);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00700}00700                 \textcolor{keyword}{auto} \&currpose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[i];}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00701}00701                 \textcolor{keyword}{auto} \&nextpose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[i + 1];}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00700}00700                 \textcolor{keyword}{auto} \&currpose = backwardsPlanPath\_[i];}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00701}00701                 \textcolor{keyword}{auto} \&nextpose = backwardsPlanPath\_[i + 1];}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00702}00702 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00703}00703                 tf::Quaternion qCurrent, qNext;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00704}00704                 tf::quaternionMsgToTF(currpose.pose.orientation, qCurrent);}
@@ -699,7 +699,7 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00740}00740                     tf::Quaternion intermediateQuat = tf::slerp(qCurrent, qNext, 0.5);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00741}00741                     tf::quaternionTFToMsg(intermediateQuat, pintermediate.pose.orientation);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00742}00742 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00743}00743                     this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.insert(this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.begin() + i + 1, pintermediate);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00743}00743                     this-\/>backwardsPlanPath\_.insert(this-\/>backwardsPlanPath\_.begin() + i + 1, pintermediate);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00744}00744 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00745}00745                     \textcolor{comment}{// retry this point}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00746}00746                     i-\/-\/;}
@@ -711,25 +711,25 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00752}00752             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00753}00753         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00754}00754 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00760}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ab11a0eec45f24b5a5a3987a50427eed4}{00760}}         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ab11a0eec45f24b5a5a3987a50427eed4}{BackwardLocalPlanner::setPlan}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped> \&plan)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00760}00760         \textcolor{keywordtype}{bool} BackwardLocalPlanner::setPlan(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped> \&plan)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00761}00761         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00762}00762             ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] setPlan: new global plan received ("{}} << plan.size() << \textcolor{stringliteral}{"{})"{}});}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00763}00763             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa0e2b0589fce0bb228eb87751528e822}{initialPureSpinningStage\_}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00764}00764             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad443c52ef585a8eab0364f0909222f51}{goalReached\_}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00765}00765             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}} = plan;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00766}00766             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ae4d7254afd19ae1f7bd8eac9f5d58b9a}{inGoalPureSpinningState\_}} =\textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00763}00763             initialPureSpinningStage\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00764}00764             goalReached\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00765}00765             backwardsPlanPath\_ = plan;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00766}00766             inGoalPureSpinningState\_ =\textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00767}00767 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00768}00768             \textcolor{comment}{// find again the new carrot goal, from the destiny direction}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00769}00769             tf::Stamped<tf::Pose> tfpose = \mbox{\hyperlink{namespacecl__move__base__z_1_1backward__local__planner_a59f03ead7377eb9c22b83f84f0215127}{optionalRobotPose}}(\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a4136268882a105d9e06e173d85d5c0dc}{costmapRos\_}});}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00769}00769             tf::Stamped<tf::Pose> tfpose = \mbox{\hyperlink{namespacecl__move__base__z_1_1backward__local__planner_a59f03ead7377eb9c22b83f84f0215127}{optionalRobotPose}}(costmapRos\_);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00770}00770 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00771}00771             geometry\_msgs::PoseStamped posestamped;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00772}00772             tf::poseStampedTFToMsg(tfpose,posestamped);}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00773}00773             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.insert(\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.begin(), posestamped);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00773}00773             backwardsPlanPath\_.insert(backwardsPlanPath\_.begin(), posestamped);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00774}00774 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00775}00775             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a100fe8bdaaf89b0fa54ecf2aef0966ed}{resamplePrecisePlan}}();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00775}00775             this-\/>resamplePrecisePlan();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00776}00776 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00777}00777             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} = 0;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00778}00778             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a35832ebefc43e5977e1222389244c8d3}{resetDivergenceDetection}}();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00777}00777             currentCarrotPoseIndex\_ = 0;}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00778}00778             this-\/>resetDivergenceDetection();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00779}00779 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00780}00780             \textcolor{keywordflow}{if} (plan.size() == 0)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00781}00781             \{}
@@ -737,7 +737,7 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00783}00783                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00784}00784             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00785}00785 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00786}00786             \textcolor{keywordtype}{bool} foundInitialCarrotGoal = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0025cd3ffaa04a6a02492a33673a78a1}{findInitialCarrotGoal}}(tfpose);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00786}00786             \textcolor{keywordtype}{bool} foundInitialCarrotGoal = this-\/>findInitialCarrotGoal(tfpose);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00787}00787             \textcolor{keywordflow}{if} (!foundInitialCarrotGoal)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00788}00788             \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00789}00789                 ROS\_ERROR(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] new plan rejected. The initial point in the global path is too much far away from the current state (according to carrot\_distance parameter)"{}});}
@@ -745,13 +745,13 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00791}00791             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00792}00792             \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00793}00793             \{}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00794}00794                 this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ab1b01ecdb27641dde60661362d75465b}{divergenceDetectionUpdate}}(tfpose);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00794}00794                 this-\/>divergenceDetectionUpdate(tfpose);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00795}00795                 \textcolor{comment}{// SANDARD AND PREFERRED CASE ON NEW PLAN}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00796}00796                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00797}00797             \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00798}00798         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00799}00799 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00800}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9e8921ca8ce379ca8ba321f82ca23cdc}{00800}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a9e8921ca8ce379ca8ba321f82ca23cdc}{BackwardLocalPlanner::generateTrajectory}}(\textcolor{keyword}{const} Eigen::Vector3f \&pos, \textcolor{keyword}{const} Eigen::Vector3f \&vel, \textcolor{keywordtype}{float} maxdist, \textcolor{keywordtype}{float} maxanglediff, \textcolor{keywordtype}{float} maxtime, \textcolor{keywordtype}{float} dt, std::vector<Eigen::Vector3f> \&outtraj)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00800}00800         \textcolor{keywordtype}{void} BackwardLocalPlanner::generateTrajectory(\textcolor{keyword}{const} Eigen::Vector3f \&pos, \textcolor{keyword}{const} Eigen::Vector3f \&vel, \textcolor{keywordtype}{float} maxdist, \textcolor{keywordtype}{float} maxanglediff, \textcolor{keywordtype}{float} maxtime, \textcolor{keywordtype}{float} dt, std::vector<Eigen::Vector3f> \&outtraj)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00801}00801         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00802}00802             \textcolor{comment}{//simulate the trajectory and check for collisions, updating costs along the way}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00803}00803             \textcolor{keywordtype}{bool} end = \textcolor{keyword}{false};}
@@ -771,7 +771,7 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00817}00817 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00818}00818                 \textcolor{keyword}{auto} loop\_vel = vel;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00819}00819                 \textcolor{comment}{//update the position of the robot using the velocities passed in}}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00820}00820                 \textcolor{keyword}{auto} newpos = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0fe2ebd23fd79e8b574127e819ef0e14}{computeNewPositions}}(currentpos, loop\_vel, dt);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00820}00820                 \textcolor{keyword}{auto} newpos = computeNewPositions(currentpos, loop\_vel, dt);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00821}00821 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00822}00822                 \textcolor{keyword}{auto} dx = newpos[0] -\/ currentpos[0];}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00823}00823                 \textcolor{keyword}{auto} dy = newpos[1] -\/ currentpos[1];}
@@ -813,7 +813,7 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00859}00859             \} \textcolor{comment}{// end for simulation steps}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00860}00860         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00861}00861 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00862}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0fe2ebd23fd79e8b574127e819ef0e14}{00862}}         Eigen::Vector3f \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0fe2ebd23fd79e8b574127e819ef0e14}{BackwardLocalPlanner::computeNewPositions}}(\textcolor{keyword}{const} Eigen::Vector3f \&pos, \textcolor{keyword}{const} Eigen::Vector3f \&vel, \textcolor{keywordtype}{double} dt)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00862}00862         Eigen::Vector3f BackwardLocalPlanner::computeNewPositions(\textcolor{keyword}{const} Eigen::Vector3f \&pos, \textcolor{keyword}{const} Eigen::Vector3f \&vel, \textcolor{keywordtype}{double} dt)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00863}00863         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00864}00864             Eigen::Vector3f new\_pos = Eigen::Vector3f::Zero();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00865}00865             new\_pos[0] = pos[0] + (vel[0] * cos(pos[2]) + vel[1] * cos(M\_PI\_2 + pos[2])) * dt;}
@@ -822,10 +822,10 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00868}00868             \textcolor{keywordflow}{return} new\_pos;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00869}00869         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00870}00870 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00876}\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a70eaeb6cf31fd3378d9fbf9bcb975995}{00876}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a70eaeb6cf31fd3378d9fbf9bcb975995}{BackwardLocalPlanner::publishGoalMarker}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double} phi)}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00876}00876         \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacecl__move__base__z_1_1pure__spinning__local__planner_ab6a498d3454059055f0aebf49c7b82cf}{BackwardLocalPlanner::publishGoalMarker}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double} phi)}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00877}00877         \{}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00878}00878             visualization\_msgs::Marker marker;}
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00879}00879             marker.header.frame\_id = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a4136268882a105d9e06e173d85d5c0dc}{costmapRos\_}}-\/>getGlobalFrameID();}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00879}00879             marker.header.frame\_id = this-\/>costmapRos\_-\/>getGlobalFrameID();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00880}00880             marker.header.stamp = ros::Time::now();}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00881}00881 }
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00882}00882             marker.ns = \textcolor{stringliteral}{"{}my\_namespace2"{}};}
@@ -856,7 +856,7 @@
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00907}00907             visualization\_msgs::MarkerArray ma;}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00908}00908             ma.markers.push\_back(marker);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00909}00909 }
-\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00910}00910             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a79f0ddfa686e2cd47bbc2f0bac9f3d4c}{goalMarkerPublisher\_}}.publish(ma);}
+\DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00910}00910             goalMarkerPublisher\_.publish(ma);}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00911}00911         \}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00912}00912     \} \textcolor{comment}{// namespace backward\_local\_planner}}
 \DoxyCodeLine{\Hypertarget{backward__local__planner_8cpp_source_l00913}00913 \} \textcolor{comment}{// namespace cl\_move\_base\_z}}

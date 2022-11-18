@@ -64,11 +64,11 @@ Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l0016
 \DoxyCodeLine{00164     \mbox{\hyperlink{classReachedStateSuccessTestPolicy_a2dc3e3fae4d136b61ca9499eebb06ba2}{targetStateName\_}} = ((std::string)initXmlRpcValue[\textcolor{stringliteral}{"{}state\_name"{}}]);}
 \DoxyCodeLine{00165     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[ReachedStateSuccessTestPolicy] success state: "{}} << \mbox{\hyperlink{classReachedStateSuccessTestPolicy_a2dc3e3fae4d136b61ca9499eebb06ba2}{targetStateName\_}});}
 \DoxyCodeLine{00166     this-\/>\mbox{\hyperlink{classTestPolicy_a717c3e59e35216a175398b85575aec43}{owner\_}}-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_aaaedcb5c8a4cca432b5138bb1dfb0a6c}{onSmaccTransition}}.connect(}
-\DoxyCodeLine{00167     [=](\textcolor{keyword}{auto}\& \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}})}
+\DoxyCodeLine{00167     [=](\textcolor{keyword}{auto}\& msg)}
 \DoxyCodeLine{00168     \{}
-\DoxyCodeLine{00169         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[ReachedStateSuccessTestPolicy] received state: "{}} << \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}.transition.destiny\_state\_name);}
+\DoxyCodeLine{00169         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[ReachedStateSuccessTestPolicy] received state: "{}} << msg.transition.destiny\_state\_name);}
 \DoxyCodeLine{00170 }
-\DoxyCodeLine{00171         \textcolor{keywordflow}{if}(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}.transition.destiny\_state\_name == \mbox{\hyperlink{classReachedStateSuccessTestPolicy_a2dc3e3fae4d136b61ca9499eebb06ba2}{targetStateName\_}})}
+\DoxyCodeLine{00171         \textcolor{keywordflow}{if}(msg.transition.destiny\_state\_name == \mbox{\hyperlink{classReachedStateSuccessTestPolicy_a2dc3e3fae4d136b61ca9499eebb06ba2}{targetStateName\_}})}
 \DoxyCodeLine{00172         \{}
 \DoxyCodeLine{00173             this-\/>\mbox{\hyperlink{classTestPolicy_a717c3e59e35216a175398b85575aec43}{owner\_}}-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_a47f93f7fe74e3fc416a2655e92c8dd2d}{success}}(std::string(\textcolor{stringliteral}{"{}success destiny state "{}}) + \mbox{\hyperlink{classReachedStateSuccessTestPolicy_a2dc3e3fae4d136b61ca9499eebb06ba2}{targetStateName\_}});}
 \DoxyCodeLine{00174         \}}
@@ -78,7 +78,7 @@ Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l0016
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{battery__monitor__node_8py_source_l00015}{battery\+\_\+monitor\+\_\+node\+::msg}}, \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00038}{Smacc\+Test\+Runtime\+Node\+::on\+Smacc\+Transition}}, \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00016}{Test\+Policy\+::owner\+\_\+}}, \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00099}{Smacc\+Test\+Runtime\+Node\+::success()}}, and \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00160}{target\+State\+Name\+\_\+}}.
+References \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00038}{Smacc\+Test\+Runtime\+Node\+::on\+Smacc\+Transition}}, \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00016}{Test\+Policy\+::owner\+\_\+}}, \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00099}{Smacc\+Test\+Runtime\+Node\+::success()}}, and \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00160}{target\+State\+Name\+\_\+}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

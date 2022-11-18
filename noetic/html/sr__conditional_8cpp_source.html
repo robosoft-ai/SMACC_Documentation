@@ -69,27 +69,23 @@ $(function() {
   <div class="headertitle"><div class="title">sr_conditional.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="sr__conditional_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;<a class="code" href="sr__conditional_8h.html">sr_conditional/sr_conditional.h</a>&gt;</span></div>
+<a href="sr__conditional_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;sr_conditional/sr_conditional.h&gt;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesmacc.html">smacc</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>state_reactors</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classsmacc_1_1state__reactors_1_1Srsr__conditional.html#a711473830935c7c4fb1d0939e41fb2cb">    7</a></span><a class="code hl_function" href="classsmacc_1_1state__reactors_1_1Srsr__conditional.html#a711473830935c7c4fb1d0939e41fb2cb">Srsr_conditional::~Srsr_conditional</a>()</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>Srsr_conditional::~Srsr_conditional()</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classsmacc_1_1state__reactors_1_1Srsr__conditional.html#aa95877afb569902015924e5e7d1da35a">   11</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classsmacc_1_1state__reactors_1_1Srsr__conditional.html#aa95877afb569902015924e5e7d1da35a">Srsr_conditional::triggers</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">bool</span> Srsr_conditional::triggers()</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="classsmacc_1_1state__reactors_1_1Srsr__conditional.html#a2c1c6a4acf1429526fe8c84e66479fbc">conditionFlag</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">return</span> this-&gt;conditionFlag;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>} <span class="comment">// namespace state_reactors</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>} <span class="comment">// namespace smacc</span></div>
-<div class="ttc" id="aclasssmacc_1_1state__reactors_1_1Srsr__conditional_html_a2c1c6a4acf1429526fe8c84e66479fbc"><div class="ttname"><a href="classsmacc_1_1state__reactors_1_1Srsr__conditional.html#a2c1c6a4acf1429526fe8c84e66479fbc">smacc::state_reactors::Srsr_conditional::conditionFlag</a></div><div class="ttdeci">bool conditionFlag</div><div class="ttdef"><b>Definition:</b> <a href="sr__conditional_8h_source.html#l00022">sr_conditional.h:22</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1state__reactors_1_1Srsr__conditional_html_a711473830935c7c4fb1d0939e41fb2cb"><div class="ttname"><a href="classsmacc_1_1state__reactors_1_1Srsr__conditional.html#a711473830935c7c4fb1d0939e41fb2cb">smacc::state_reactors::Srsr_conditional::~Srsr_conditional</a></div><div class="ttdeci">~Srsr_conditional()</div><div class="ttdef"><b>Definition:</b> <a href="sr__conditional_8cpp_source.html#l00007">sr_conditional.cpp:7</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1state__reactors_1_1Srsr__conditional_html_aa95877afb569902015924e5e7d1da35a"><div class="ttname"><a href="classsmacc_1_1state__reactors_1_1Srsr__conditional.html#aa95877afb569902015924e5e7d1da35a">smacc::state_reactors::Srsr_conditional::triggers</a></div><div class="ttdeci">virtual bool triggers() override</div><div class="ttdef"><b>Definition:</b> <a href="sr__conditional_8cpp_source.html#l00011">sr_conditional.cpp:11</a></div></div>
-<div class="ttc" id="anamespacesmacc_html"><div class="ttname"><a href="namespacesmacc.html">smacc</a></div><div class="ttdef"><b>Definition:</b> <a href="cp__ros__control__interface_8h_source.html#l00005">cp_ros_control_interface.h:6</a></div></div>
-<div class="ttc" id="asr__conditional_8h_html"><div class="ttname"><a href="sr__conditional_8h.html">sr_conditional.h</a></div></div>
+<div class="ttc" id="anamespacesmacc_html"><div class="ttname"><a href="namespacesmacc.html">smacc</a></div><div class="ttdef"><b>Definition:</b> <a href="client_8cpp_source.html#l00011">client.cpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

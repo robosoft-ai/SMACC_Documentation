@@ -1,4 +1,0 @@
-<map id="cl_move_base_z::pure_spinning_local_planner::PureSpinningLocalPlanner::computeVelocityCommands" name="cl_move_base_z::pure_spinning_local_planner::PureSpinningLocalPlanner::computeVelocityCommands">
-<area shape="rect" id="node1" title="Given the current position, orientation, and velocity of the robot: compute velocity commands to send..." alt="" coords="5,5,196,76"/>
-<area shape="rect" id="node2" href="$namespacecl__move__base__z_1_1pure__spinning__local__planner.html#a9a9023445e13ea89ea8685132683c10c" title=" " alt="" coords="244,13,404,69"/>
-</map>

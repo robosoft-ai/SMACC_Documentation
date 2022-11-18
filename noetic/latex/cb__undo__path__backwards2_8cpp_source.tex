@@ -2,9 +2,9 @@
 \label{cb__undo__path__backwards2_8cpp_source}\index{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/src/client\_behaviors/cb\_undo\_path\_backwards2.cpp@{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/src/client\_behaviors/cb\_undo\_path\_backwards2.cpp}}
 \mbox{\hyperlink{cb__undo__path__backwards2_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__undo__path__backwards2_8h}{move\_base\_z\_client\_plugin/client\_behaviors/cb\_undo\_path\_backwards2.h}}>}}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{odom__tracker_8h}{move\_base\_z\_client\_plugin/components/odom\_tracker/odom\_tracker.h}}>}}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{planner__switcher_8h}{move\_base\_z\_client\_plugin/components/planner\_switcher/planner\_switcher.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <move\_base\_z\_client\_plugin/client\_behaviors/cb\_undo\_path\_backwards2.h>}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <move\_base\_z\_client\_plugin/components/odom\_tracker/odom\_tracker.h>}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <move\_base\_z\_client\_plugin/components/planner\_switcher/planner\_switcher.h>}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00004}00004 }
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00005}00005 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00006}00006 \{}
@@ -16,31 +16,31 @@
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00012}00012 }
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00013}00013 \textcolor{keyword}{using namespace }::\mbox{\hyperlink{namespacecl__move__base__z_1_1odom__tracker}{cl\_move\_base\_z::odom\_tracker}};}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00014}00014 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00015}\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a0f202bf7a4b1cc1db426a0c2ad1434f6}{00015}} \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a0f202bf7a4b1cc1db426a0c2ad1434f6}{CbUndoPathBackwards2::CbUndoPathBackwards2}}() : goalLinePassed\_(false)}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00015}00015 CbUndoPathBackwards2::CbUndoPathBackwards2() : goalLinePassed\_(false)}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00016}00016 \{}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00017}00017   \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a452bcdab678ea02d6d6a0ae06fb484ab}{triggerThreshold\_}} = 0.01;  \textcolor{comment}{// 10 mm}}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00017}00017   triggerThreshold\_ = 0.01;  \textcolor{comment}{// 10 mm}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00018}00018 \}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00020}\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1b96187df9be6ce0fbdb5511147685d3}{00020}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1b96187df9be6ce0fbdb5511147685d3}{CbUndoPathBackwards2::onEntry}}()}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00020}00020 \textcolor{keywordtype}{void} CbUndoPathBackwards2::onEntry()}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00021}00021 \{}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00022}00022   \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1faa9bf6fef87280e28d4016f5c0843e}{odomTracker\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<OdomTracker>();}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00022}00022   odomTracker\_ = moveBaseClient\_-\/>getComponent<OdomTracker>();}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00023}00023 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00024}00024   \textcolor{keyword}{auto} plannerSwitcher = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<\mbox{\hyperlink{classcl__move__base__z_1_1PlannerSwitcher}{PlannerSwitcher}}>();}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00025}00025   \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}{robotPose\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{cl\_move\_base\_z::Pose}}>();}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00024}00024   \textcolor{keyword}{auto} plannerSwitcher = moveBaseClient\_-\/>getComponent<PlannerSwitcher>();}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00025}00025   robotPose\_ = moveBaseClient\_-\/>getComponent<cl\_move\_base\_z::Pose>();}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00026}00026 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00027}00027   nav\_msgs::Path forwardpath = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1faa9bf6fef87280e28d4016f5c0843e}{odomTracker\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_a762bc88653ebb7d78e693ba465fb160f}{getPath}}();}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00027}00027   nav\_msgs::Path forwardpath = odomTracker\_-\/>getPath();}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00028}00028   \textcolor{comment}{// ROS\_INFO\_STREAM("{}[UndoPathBackward] Current path backwards: "{} << forwardpath);}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00029}00029 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00030}00030   \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a1faa9bf6fef87280e28d4016f5c0843e}{odomTracker\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_aeed01bdefd9a1cc709b0b3e4eed285ed}{setWorkingMode}}(WorkingMode::CLEAR\_PATH);}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00030}00030   odomTracker\_-\/>setWorkingMode(WorkingMode::CLEAR\_PATH);}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00031}00031 }
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00032}00032   \textcolor{comment}{// this line is used to flush/reset backward planner in the case it were already there}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00033}00033   \textcolor{comment}{// plannerSwitcher-\/>setDefaultPlanners();}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00034}00034   \textcolor{keywordflow}{if} (forwardpath.poses.size() > 0)}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00035}00035   \{}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00036}00036     \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose = forwardpath.poses.front();}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00037}00037     \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\_plane\_side\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a20b9a6799b0484810b0319f5a97d020e}{evalPlaneSide}}(\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}{robotPose\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{toPoseMsg}}());}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00036}00036     goal\_.target\_pose = forwardpath.poses.front();}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00037}00037     initial\_plane\_side\_ = evalPlaneSide(robotPose\_-\/>toPoseMsg());}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00038}00038     plannerSwitcher-\/>setUndoPathBackwardsPlannerConfiguration();}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00039}00039     \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9c47a5094ac8afb01680307fe5eca922}{sendGoal}}(\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}});}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00039}00039     moveBaseClient\_-\/>sendGoal(goal\_);}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00040}00040   \}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00041}00041 \}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00042}00042 }
@@ -49,7 +49,7 @@
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00045}00045 \textcolor{comment}{//   return normal.dot(p1 -\/ p\_line)*normal.dot(p2 -\/ p\_line) > 0.0f;}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00046}00046 \textcolor{comment}{// \}}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00047}00047 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00048}\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a20b9a6799b0484810b0319f5a97d020e}{00048}} \textcolor{keywordtype}{float} \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a20b9a6799b0484810b0319f5a97d020e}{CbUndoPathBackwards2::evalPlaneSide}}(\textcolor{keyword}{const} geometry\_msgs::Pose\& pose)}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00048}00048 \textcolor{keywordtype}{float} CbUndoPathBackwards2::evalPlaneSide(\textcolor{keyword}{const} geometry\_msgs::Pose\& pose)}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00049}00049 \{}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00050}00050   \textcolor{comment}{// check the line was passed}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00051}00051   \textcolor{comment}{// y = mx x + y0}}
@@ -57,45 +57,45 @@
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00053}00053   \textcolor{comment}{// cos(alpha)(y -\/ y0) -\/ sin(alpha) (x -\/x0)= 0 // if greater one side if lower , the other}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00054}00054   \textcolor{keyword}{auto} y = pose.position.y;}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00055}00055   \textcolor{keyword}{auto} x = pose.position.x;}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00056}00056   \textcolor{keyword}{auto} alpha = tf::getYaw(\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose.pose.orientation);}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00057}00057   \textcolor{keyword}{auto} y0 = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose.pose.position.y;}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00058}00058   \textcolor{keyword}{auto} x0 = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose.pose.position.x;}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00056}00056   \textcolor{keyword}{auto} alpha = tf::getYaw(goal\_.target\_pose.pose.orientation);}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00057}00057   \textcolor{keyword}{auto} y0 = goal\_.target\_pose.pose.position.y;}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00058}00058   \textcolor{keyword}{auto} x0 = goal\_.target\_pose.pose.position.x;}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00059}00059 }
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00060}00060   \textcolor{keyword}{auto} evalimplicit = cos(alpha) * (y -\/ y0) -\/ sin (alpha) * (x -\/ x0);}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00061}00061   \textcolor{keywordflow}{return} evalimplicit;}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00062}00062 \}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00063}00063 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00064}\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a62f0d53fc341ca6d241637cc0e4b2e30}{00064}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a62f0d53fc341ca6d241637cc0e4b2e30}{CbUndoPathBackwards2::update}}()}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00064}00064 \textcolor{keywordtype}{void} CbUndoPathBackwards2::update()}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00065}00065 \{}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00066}00066   \textcolor{keyword}{auto} pose = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}{robotPose\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{toPoseMsg}}();}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00066}00066   \textcolor{keyword}{auto} pose = robotPose\_-\/>toPoseMsg();}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00067}00067 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00068}00068   \textcolor{keywordtype}{float} evalimplicit = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a20b9a6799b0484810b0319f5a97d020e}{evalPlaneSide}}(pose);}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00069}00069   \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecl__move__base__z_ae144a2fabd00ba70fdc8099878cb3dac}{sgn}}(evalimplicit) != \mbox{\hyperlink{namespacecl__move__base__z_ae144a2fabd00ba70fdc8099878cb3dac}{sgn}}(\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\_plane\_side\_}}))}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00068}00068   \textcolor{keywordtype}{float} evalimplicit = evalPlaneSide(pose);}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00069}00069   \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacecl__move__base__z_ae144a2fabd00ba70fdc8099878cb3dac}{sgn}}(evalimplicit) != \mbox{\hyperlink{namespacecl__move__base__z_ae144a2fabd00ba70fdc8099878cb3dac}{sgn}}(initial\_plane\_side\_))}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00070}00070   \{}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00071}00071     ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[CbUndoPathBackwards2] goal\_ line passed: "{}}}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00072}00072                                       << evalimplicit << \textcolor{stringliteral}{"{}/"{}} << this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\_plane\_side\_}});}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00072}00072                                       << evalimplicit << \textcolor{stringliteral}{"{}/"{}} << this-\/>initial\_plane\_side\_);}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00073}00073 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00074}00074     \textcolor{keywordflow}{if} (fabs(evalimplicit) > \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a452bcdab678ea02d6d6a0ae06fb484ab}{triggerThreshold\_}} \textcolor{comment}{/*meters*/})}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00074}00074     \textcolor{keywordflow}{if} (fabs(evalimplicit) > triggerThreshold\_ \textcolor{comment}{/*meters*/})}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00075}00075     \{}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00076}00076        ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[CbUndoPathBackwards2] virtual goal line passed, stopping behavior and success: "{}}}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00077}00077                                       << evalimplicit << \textcolor{stringliteral}{"{}/"{}} << this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\_plane\_side\_}});}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00078}00078       \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_aedeaf9704b73bf05b5522f7250416c9a}{cancelGoal}}();}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00077}00077                                       << evalimplicit << \textcolor{stringliteral}{"{}/"{}} << this-\/>initial\_plane\_side\_);}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00078}00078       moveBaseClient\_-\/>cancelGoal();}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00079}00079       \textcolor{comment}{// this-\/>postSuccessEvent();}}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00080}00080       this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2405e8194c63dce4462b6d4910031fe8}{postVirtualLinePassed\_}}();}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00080}00080       this-\/>postVirtualLinePassed\_();}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00081}00081     \}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00082}00082   \}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00083}00083   \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00084}00084   \{}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00085}00085     ROS\_INFO\_STREAM\_THROTTLE(1.0, \textcolor{stringliteral}{"{}[CbUndoPathBackwards2] goal\_ line not passed yet: "{}} << evalimplicit << \textcolor{stringliteral}{"{}/"{}}}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00086}00086                                                                                        << this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_abc388e4c9576f04d1fad869aa8651750}{initial\_plane\_side\_}});}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00086}00086                                                                                        << this-\/>initial\_plane\_side\_);}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00087}00087   \}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00088}00088 \}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00089}00089 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00090}\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_afaa039c78eb70ba012d86d8c77b9828c}{00090}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_afaa039c78eb70ba012d86d8c77b9828c}{CbUndoPathBackwards2::publishMarkers}}()}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00090}00090 \textcolor{keywordtype}{void} CbUndoPathBackwards2::publishMarkers()}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00091}00091 \{}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00092}00092   \textcolor{keywordtype}{double} phi = tf::getYaw(\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose.pose.orientation);}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00092}00092   \textcolor{keywordtype}{double} phi = tf::getYaw(goal\_.target\_pose.pose.orientation);}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00093}00093   visualization\_msgs::Marker marker;}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00094}00094   marker.header.frame\_id = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_a2d398dac07efaca840fbcea31957cf7a}{robotPose\_}}-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_aec469af8ca846ae14e108d74fef93b4f}{getReferenceFrame}}();}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00094}00094   marker.header.frame\_id = robotPose\_-\/>getReferenceFrame();}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00095}00095 }
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00096}00096   marker.header.stamp = ros::Time::now();}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00097}00097   marker.ns = \textcolor{stringliteral}{"{}my\_namespace2"{}};}
@@ -110,7 +110,7 @@
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00106}00106   marker.color.g = 0.0;}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00107}00107   marker.color.b = 0.0;}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00108}00108 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00109}00109   marker.pose = \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ad119c38ee9cb341c9b468682d1794538}{goal\_}}.target\_pose.pose;}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00109}00109   marker.pose = goal\_.target\_pose.pose;}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00110}00110 }
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00111}00111   \textcolor{comment}{// geometry\_msgs::Point start, end;}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00112}00112   \textcolor{comment}{// start.x = pose.position.x;}}
@@ -125,12 +125,12 @@
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00121}00121   visualization\_msgs::MarkerArray ma;}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00122}00122   ma.markers.push\_back(marker);}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00123}00123 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00124}00124   this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_aff48fc567ae025b196efd8895b7fb35d}{visualizationMarkersPub\_}}.publish(ma);}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00124}00124   this-\/>visualizationMarkersPub\_.publish(ma);}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00125}00125 \}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00126}00126 }
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00127}\mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ae493fcd813176d8473ff08680beb7afe}{00127}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1CbUndoPathBackwards2_ae493fcd813176d8473ff08680beb7afe}{CbUndoPathBackwards2::onExit}}()}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00127}00127 \textcolor{keywordtype}{void} CbUndoPathBackwards2::onExit()}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00128}00128 \{}
-\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00129}00129   \textcolor{keyword}{auto}* odomTracker = \mbox{\hyperlink{classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase_ab2ef219464cfac8659b4a87c8d0db6d5}{moveBaseClient\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<OdomTracker>();}
+\DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00129}00129   \textcolor{keyword}{auto}* odomTracker = moveBaseClient\_-\/>getComponent<OdomTracker>();}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00130}00130   odomTracker-\/>popPath();}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00131}00131 \}}
 \DoxyCodeLine{\Hypertarget{cb__undo__path__backwards2_8cpp_source_l00132}00132 }
