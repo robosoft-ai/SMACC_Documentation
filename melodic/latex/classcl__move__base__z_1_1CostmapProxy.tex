@@ -1,0 +1,197 @@
+\hypertarget{classcl__move__base__z_1_1CostmapProxy}{}\doxysection{cl\+\_\+move\+\_\+base\+\_\+z\+::Costmap\+Proxy Class Reference}
+\label{classcl__move__base__z_1_1CostmapProxy}\index{cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}}
+
+
+{\ttfamily \#include $<$cp\+\_\+costmap\+\_\+switch.\+h$>$}
+
+
+
+Collaboration diagram for cl\+\_\+move\+\_\+base\+\_\+z\+::Costmap\+Proxy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classcl__move__base__z_1_1CostmapProxy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_af72dea5a7a40c11023b220029d729f1f}{Costmap\+Proxy}} (std\+::string costmap\+\_\+name, std\+::string enable\+Property\+Name)
+\item 
+void \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_a0f5c70b124ffb8a28f1d36854c340206}{set\+Costmap\+Enabled}} (\mbox{\hyperlink{classbool}{bool}} value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_ac18a66844cf11a1d7a45dd7db3f954ec}{dynreconf\+Callback}} (const dynamic\+\_\+reconfigure\+::\+Config\+::\+Const\+Ptr \&configuration\+\_\+update)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_adb1ed877b9ec2ff7f9f73775dd4ead7b}{costmap\+Name\+\_\+}}
+\item 
+dynamic\+\_\+reconfigure\+::\+Config \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_aff2defa5d265d3e8efda4849eedd3500}{enable\+Req}}
+\item 
+dynamic\+\_\+reconfigure\+::\+Config \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_a798847a9ee787134e26326edc574020f}{disable\+Req}}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_a7443ac3dd932a33b3dc9d8ccc9aa2a91}{dynrecof\+Sub\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{cp__costmap__switch_8h_source_l00060}{60}} of file \mbox{\hyperlink{cp__costmap__switch_8h_source}{cp\+\_\+costmap\+\_\+switch.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CostmapProxy_af72dea5a7a40c11023b220029d729f1f}\label{classcl__move__base__z_1_1CostmapProxy_af72dea5a7a40c11023b220029d729f1f}} 
+\index{cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}!CostmapProxy@{CostmapProxy}}
+\index{CostmapProxy@{CostmapProxy}!cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}}
+\doxysubsubsection{\texorpdfstring{CostmapProxy()}{CostmapProxy()}}
+{\footnotesize\ttfamily cl\+\_\+move\+\_\+base\+\_\+z\+::\+Costmap\+Proxy\+::\+Costmap\+Proxy (\begin{DoxyParamCaption}\item[{std\+::string}]{costmap\+\_\+name,  }\item[{std\+::string}]{enable\+Property\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{cp__costmap__switch_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{cp__costmap__switch_8cpp_source}{cp\+\_\+costmap\+\_\+switch.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100 \{}
+\DoxyCodeLine{00101     this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_adb1ed877b9ec2ff7f9f73775dd4ead7b}{costmapName\_}} = costmap\_name + \textcolor{stringliteral}{"{}/set\_parameters"{}};}
+\DoxyCodeLine{00102     dynamic\_reconfigure::BoolParameter enableField;}
+\DoxyCodeLine{00103     enableField.name = \textcolor{stringliteral}{"{}enabled"{}};}
+\DoxyCodeLine{00104     enableField.value = \textcolor{keyword}{true};}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106     \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_aff2defa5d265d3e8efda4849eedd3500}{enableReq}}.bools.push\_back(enableField);}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108     enableField.value = \textcolor{keyword}{false};}
+\DoxyCodeLine{00109     \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_a798847a9ee787134e26326edc574020f}{disableReq}}.bools.push\_back(enableField);}
+\DoxyCodeLine{00110 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cp__costmap__switch_8h_source_l00068}{costmap\+Name\+\_\+}}, \mbox{\hyperlink{cp__costmap__switch_8h_source_l00070}{disable\+Req}}, and \mbox{\hyperlink{cp__costmap__switch_8h_source_l00069}{enable\+Req}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CostmapProxy_ac18a66844cf11a1d7a45dd7db3f954ec}\label{classcl__move__base__z_1_1CostmapProxy_ac18a66844cf11a1d7a45dd7db3f954ec}} 
+\index{cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}!dynreconfCallback@{dynreconfCallback}}
+\index{dynreconfCallback@{dynreconfCallback}!cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}}
+\doxysubsubsection{\texorpdfstring{dynreconfCallback()}{dynreconfCallback()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+base\+\_\+z\+::\+Costmap\+Proxy\+::dynreconf\+Callback (\begin{DoxyParamCaption}\item[{const dynamic\+\_\+reconfigure\+::\+Config\+::\+Const\+Ptr \&}]{configuration\+\_\+update }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__costmap__switch_8cpp_source_l00133}{133}} of file \mbox{\hyperlink{cp__costmap__switch_8cpp_source}{cp\+\_\+costmap\+\_\+switch.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00134 \{}
+\DoxyCodeLine{00135     \textcolor{comment}{// auto gp = std::find\_if(configuration\_update-\/>strs.begin(), configuration\_update-\/>strs.begin(),}}
+\DoxyCodeLine{00136     \textcolor{comment}{//                        [\&](const dynamic\_reconfigure::StrParameter \&p) \{ return p.name == "{}base\_global\_planner"{} \&\& p.value == desired\_global\_planner\_; \});}}
+\DoxyCodeLine{00137 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CostmapProxy_a0f5c70b124ffb8a28f1d36854c340206}\label{classcl__move__base__z_1_1CostmapProxy_a0f5c70b124ffb8a28f1d36854c340206}} 
+\index{cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}!setCostmapEnabled@{setCostmapEnabled}}
+\index{setCostmapEnabled@{setCostmapEnabled}!cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}}
+\doxysubsubsection{\texorpdfstring{setCostmapEnabled()}{setCostmapEnabled()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+base\+\_\+z\+::\+Costmap\+Proxy\+::set\+Costmap\+Enabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbool}{bool}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{cp__costmap__switch_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{cp__costmap__switch_8cpp_source}{cp\+\_\+costmap\+\_\+switch.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113 \{}
+\DoxyCodeLine{00114     dynamic\_reconfigure::ReconfigureRequest srv\_req;}
+\DoxyCodeLine{00115     dynamic\_reconfigure::ReconfigureResponse srv\_resp;}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117     \textcolor{keywordflow}{if} (value)}
+\DoxyCodeLine{00118         srv\_req.config = \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_aff2defa5d265d3e8efda4849eedd3500}{enableReq}};}
+\DoxyCodeLine{00119     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00120         srv\_req.config = \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_a798847a9ee787134e26326edc574020f}{disableReq}};}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122     \textcolor{keywordflow}{if} (ros::service::exists(\mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_adb1ed877b9ec2ff7f9f73775dd4ead7b}{costmapName\_}}, \textcolor{keyword}{true}))}
+\DoxyCodeLine{00123     \{}
+\DoxyCodeLine{00124         ROS\_INFO(\textcolor{stringliteral}{"{}sending dynamic reconfigure request: \%s"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_adb1ed877b9ec2ff7f9f73775dd4ead7b}{costmapName\_}}.c\_str());}
+\DoxyCodeLine{00125         ros::service::call(\mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_adb1ed877b9ec2ff7f9f73775dd4ead7b}{costmapName\_}}, srv\_req, srv\_resp);}
+\DoxyCodeLine{00126     \}}
+\DoxyCodeLine{00127     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00128     \{}
+\DoxyCodeLine{00129         ROS\_WARN(\textcolor{stringliteral}{"{}could not call dynamic reconfigure server. It does not exist: \%s"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1CostmapProxy_adb1ed877b9ec2ff7f9f73775dd4ead7b}{costmapName\_}}.c\_str());}
+\DoxyCodeLine{00130     \}}
+\DoxyCodeLine{00131 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cp__costmap__switch_8h_source_l00068}{costmap\+Name\+\_\+}}, \mbox{\hyperlink{cp__costmap__switch_8h_source_l00070}{disable\+Req}}, and \mbox{\hyperlink{cp__costmap__switch_8h_source_l00069}{enable\+Req}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcl__move__base__z_1_1CostmapProxy_adb1ed877b9ec2ff7f9f73775dd4ead7b}\label{classcl__move__base__z_1_1CostmapProxy_adb1ed877b9ec2ff7f9f73775dd4ead7b}} 
+\index{cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}!costmapName\_@{costmapName\_}}
+\index{costmapName\_@{costmapName\_}!cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}}
+\doxysubsubsection{\texorpdfstring{costmapName\_}{costmapName\_}}
+{\footnotesize\ttfamily std\+::string cl\+\_\+move\+\_\+base\+\_\+z\+::\+Costmap\+Proxy\+::costmap\+Name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__costmap__switch_8h_source_l00068}{68}} of file \mbox{\hyperlink{cp__costmap__switch_8h_source}{cp\+\_\+costmap\+\_\+switch.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__costmap__switch_8cpp_source_l00099}{Costmap\+Proxy()}}, and \mbox{\hyperlink{cp__costmap__switch_8cpp_source_l00112}{set\+Costmap\+Enabled()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CostmapProxy_a798847a9ee787134e26326edc574020f}\label{classcl__move__base__z_1_1CostmapProxy_a798847a9ee787134e26326edc574020f}} 
+\index{cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}!disableReq@{disableReq}}
+\index{disableReq@{disableReq}!cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}}
+\doxysubsubsection{\texorpdfstring{disableReq}{disableReq}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Config cl\+\_\+move\+\_\+base\+\_\+z\+::\+Costmap\+Proxy\+::disable\+Req\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__costmap__switch_8h_source_l00070}{70}} of file \mbox{\hyperlink{cp__costmap__switch_8h_source}{cp\+\_\+costmap\+\_\+switch.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__costmap__switch_8cpp_source_l00099}{Costmap\+Proxy()}}, and \mbox{\hyperlink{cp__costmap__switch_8cpp_source_l00112}{set\+Costmap\+Enabled()}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CostmapProxy_a7443ac3dd932a33b3dc9d8ccc9aa2a91}\label{classcl__move__base__z_1_1CostmapProxy_a7443ac3dd932a33b3dc9d8ccc9aa2a91}} 
+\index{cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}!dynrecofSub\_@{dynrecofSub\_}}
+\index{dynrecofSub\_@{dynrecofSub\_}!cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}}
+\doxysubsubsection{\texorpdfstring{dynrecofSub\_}{dynrecofSub\_}}
+{\footnotesize\ttfamily ros\+::\+Subscriber cl\+\_\+move\+\_\+base\+\_\+z\+::\+Costmap\+Proxy\+::dynrecof\+Sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__costmap__switch_8h_source_l00074}{74}} of file \mbox{\hyperlink{cp__costmap__switch_8h_source}{cp\+\_\+costmap\+\_\+switch.\+h}}.
+
+\mbox{\Hypertarget{classcl__move__base__z_1_1CostmapProxy_aff2defa5d265d3e8efda4849eedd3500}\label{classcl__move__base__z_1_1CostmapProxy_aff2defa5d265d3e8efda4849eedd3500}} 
+\index{cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}!enableReq@{enableReq}}
+\index{enableReq@{enableReq}!cl\_move\_base\_z::CostmapProxy@{cl\_move\_base\_z::CostmapProxy}}
+\doxysubsubsection{\texorpdfstring{enableReq}{enableReq}}
+{\footnotesize\ttfamily dynamic\+\_\+reconfigure\+::\+Config cl\+\_\+move\+\_\+base\+\_\+z\+::\+Costmap\+Proxy\+::enable\+Req\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__costmap__switch_8h_source_l00069}{69}} of file \mbox{\hyperlink{cp__costmap__switch_8h_source}{cp\+\_\+costmap\+\_\+switch.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__costmap__switch_8cpp_source_l00099}{Costmap\+Proxy()}}, and \mbox{\hyperlink{cp__costmap__switch_8cpp_source_l00112}{set\+Costmap\+Enabled()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+client\+\_\+library/move\+\_\+base\+\_\+z\+\_\+client/move\+\_\+base\+\_\+z\+\_\+client\+\_\+plugin/include/move\+\_\+base\+\_\+z\+\_\+client\+\_\+plugin/components/costmap\+\_\+switch/\mbox{\hyperlink{cp__costmap__switch_8h}{cp\+\_\+costmap\+\_\+switch.\+h}}\item 
+smacc\+\_\+client\+\_\+library/move\+\_\+base\+\_\+z\+\_\+client/move\+\_\+base\+\_\+z\+\_\+client\+\_\+plugin/src/components/costmap\+\_\+switch/\mbox{\hyperlink{cp__costmap__switch_8cpp}{cp\+\_\+costmap\+\_\+switch.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,255 @@
+\hypertarget{structsmacc_1_1SmaccStateMachineBase}{}\doxysection{smacc\+::Smacc\+State\+Machine\+Base\texorpdfstring{$<$}{<} Derived\+State\+Machine, Initial\+State\+Type \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structsmacc_1_1SmaccStateMachineBase}\index{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}}
+
+
+State Machine.  
+
+
+
+
+{\ttfamily \#include $<$smacc\+\_\+state\+\_\+machine\+\_\+base.\+h$>$}
+
+
+
+Inheritance diagram for smacc\+::Smacc\+State\+Machine\+Base\texorpdfstring{$<$}{<} Derived\+State\+Machine, Initial\+State\+Type \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{structsmacc_1_1SmaccStateMachineBase__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for smacc\+::Smacc\+State\+Machine\+Base\texorpdfstring{$<$}{<} Derived\+State\+Machine, Initial\+State\+Type \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsmacc_1_1SmaccStateMachineBase__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase_a47508a2d301007546d4c70dedd2ade4b}{Smacc\+State\+Machine\+Base}} (\mbox{\hyperlink{common_8h_a34caa66736ff9d94c36193dc061e30f4}{my\+\_\+context}} ctx, \mbox{\hyperlink{classsmacc_1_1SignalDetector}{Signal\+Detector}} $\ast$signal\+Detector)
+\item 
+virtual \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase_af08edc30fb749631b5459eb7438129ec}{$\sim$\+Smacc\+State\+Machine\+Base}} ()
+\item 
+virtual void \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase_af34aec9fa012f0e3858131c84abfd5ed}{reset}} () override
+\item 
+virtual void \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase_aaa9baa888888165998aa990ca299e30b}{stop}} () override
+\item 
+virtual void \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase_a3ba186af957cfe4ddbd7bdbe10630743}{e\+Stop}} () override
+\item 
+virtual void \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase_a2dc1cd9a25b80f00602f1faab9b01e7b}{initiate\+\_\+impl}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Derived\+State\+Machine, typename Initial\+State\+Type$>$\newline
+struct smacc\+::\+Smacc\+State\+Machine\+Base$<$ Derived\+State\+Machine, Initial\+State\+Type $>$}
+State Machine. 
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__base_8h_source_l00017}{17}} of file \mbox{\hyperlink{smacc__state__machine__base_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+base.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsmacc_1_1SmaccStateMachineBase_a47508a2d301007546d4c70dedd2ade4b}\label{structsmacc_1_1SmaccStateMachineBase_a47508a2d301007546d4c70dedd2ade4b}} 
+\index{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}!SmaccStateMachineBase@{SmaccStateMachineBase}}
+\index{SmaccStateMachineBase@{SmaccStateMachineBase}!smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}}
+\doxysubsubsection{\texorpdfstring{SmaccStateMachineBase()}{SmaccStateMachineBase()}}
+{\footnotesize\ttfamily template$<$typename Derived\+State\+Machine , typename Initial\+State\+Type $>$ \\
+\mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{smacc\+::\+Smacc\+State\+Machine\+Base}}$<$ Derived\+State\+Machine, Initial\+State\+Type $>$\+::\+Smacc\+State\+Machine\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a34caa66736ff9d94c36193dc061e30f4}{my\+\_\+context}}}]{ctx,  }\item[{\mbox{\hyperlink{classsmacc_1_1SignalDetector}{Signal\+Detector}} $\ast$}]{signal\+Detector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__base_8h_source_l00020}{20}} of file \mbox{\hyperlink{smacc__state__machine__base_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021         : \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a497c2185584adbec3298d4000277b75e}{ISmaccStateMachine}}(signalDetector),}
+\DoxyCodeLine{00022           \mbox{\hyperlink{classboost_1_1statechart_1_1asynchronous__state__machine}{sc::asynchronous\_state\_machine<DerivedStateMachine, InitialStateType, SmaccFifoScheduler, SmaccAllocator>}}(ctx)}
+\DoxyCodeLine{00023     \{}
+\DoxyCodeLine{00024     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structsmacc_1_1SmaccStateMachineBase_af08edc30fb749631b5459eb7438129ec}\label{structsmacc_1_1SmaccStateMachineBase_af08edc30fb749631b5459eb7438129ec}} 
+\index{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}!````~SmaccStateMachineBase@{$\sim$SmaccStateMachineBase}}
+\index{````~SmaccStateMachineBase@{$\sim$SmaccStateMachineBase}!smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$SmaccStateMachineBase()}{~SmaccStateMachineBase()}}
+{\footnotesize\ttfamily template$<$typename Derived\+State\+Machine , typename Initial\+State\+Type $>$ \\
+virtual \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{smacc\+::\+Smacc\+State\+Machine\+Base}}$<$ Derived\+State\+Machine, Initial\+State\+Type $>$\+::$\sim$\mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{Smacc\+State\+Machine\+Base}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__base_8h_source_l00026}{26}} of file \mbox{\hyperlink{smacc__state__machine__base_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027     \{}
+\DoxyCodeLine{00028         \textcolor{comment}{//updateCurrentState<InitialStateType>(false);}}
+\DoxyCodeLine{00029     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsmacc_1_1SmaccStateMachineBase_a3ba186af957cfe4ddbd7bdbe10630743}\label{structsmacc_1_1SmaccStateMachineBase_a3ba186af957cfe4ddbd7bdbe10630743}} 
+\index{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}!eStop@{eStop}}
+\index{eStop@{eStop}!smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}}
+\doxysubsubsection{\texorpdfstring{eStop()}{eStop()}}
+{\footnotesize\ttfamily template$<$typename Derived\+State\+Machine , typename Initial\+State\+Type $>$ \\
+virtual void \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{smacc\+::\+Smacc\+State\+Machine\+Base}}$<$ Derived\+State\+Machine, Initial\+State\+Type $>$\+::e\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a66a2900be8629748dab7a5c5ab6ae94e}{smacc\+::\+ISmacc\+State\+Machine}}.
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__base_8h_source_l00044}{44}} of file \mbox{\hyperlink{smacc__state__machine__base_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045     \{}
+\DoxyCodeLine{00046         \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a66a2900be8629748dab7a5c5ab6ae94e}{ISmaccStateMachine::eStop}}();}
+\DoxyCodeLine{00047         this-\/>terminate();}
+\DoxyCodeLine{00048     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00057}{smacc\+::\+ISmacc\+State\+Machine\+::e\+Stop()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsmacc_1_1SmaccStateMachineBase_a3ba186af957cfe4ddbd7bdbe10630743_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsmacc_1_1SmaccStateMachineBase_a2dc1cd9a25b80f00602f1faab9b01e7b}\label{structsmacc_1_1SmaccStateMachineBase_a2dc1cd9a25b80f00602f1faab9b01e7b}} 
+\index{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}!initiate\_impl@{initiate\_impl}}
+\index{initiate\_impl@{initiate\_impl}!smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}}
+\doxysubsubsection{\texorpdfstring{initiate\_impl()}{initiate\_impl()}}
+{\footnotesize\ttfamily template$<$typename Derived\+State\+Machine , typename Initial\+State\+Type $>$ \\
+virtual void \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{smacc\+::\+Smacc\+State\+Machine\+Base}}$<$ Derived\+State\+Machine, Initial\+State\+Type $>$\+::initiate\+\_\+impl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__base_8h_source_l00050}{50}} of file \mbox{\hyperlink{smacc__state__machine__base_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051     \{}
+\DoxyCodeLine{00052         \textcolor{comment}{// this is before because this creates orthogonals}}
+\DoxyCodeLine{00053         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ac2982c6c8283663e5e1e8a7c82f511ec}{onInitialize}}();}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055         ROS\_INFO(\textcolor{stringliteral}{"{}[SmaccStateMachine] Introspecting state machine via typeWalker"{}});}
+\DoxyCodeLine{00056         this-\/>buildStateMachineInfo<InitialStateType>();}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058         ROS\_INFO(\textcolor{stringliteral}{"{}[SmaccStateMachine] initiate\_impl"{}});}
+\DoxyCodeLine{00059         \textcolor{keyword}{auto} shortname =  \mbox{\hyperlink{namespacesmacc_1_1utils_aacd1975bb7cd9bec4b50e111a2ae7edb}{smacc::utils::cleanShortTypeName}}(\textcolor{keyword}{typeid}(DerivedStateMachine));}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a1136dd5d81e846ac86de48bc71912cbf}{initializeROS}}(shortname);}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063         ROS\_INFO(\textcolor{stringliteral}{"{}[SmaccStateMachine] Initializing ROS communication mechanisms"{}});}
+\DoxyCodeLine{00064         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a95e7f71d0d88fffd0afebb1f9ccdade5}{onInitialized}}();}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066         ROS\_INFO(\textcolor{stringliteral}{"{}[SmaccStateMachine] Initializing state machine"{}});}
+\DoxyCodeLine{00067         sc::state\_machine<DerivedStateMachine, InitialStateType, SmaccAllocator>::initiate();}
+\DoxyCodeLine{00068     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{common_8cpp_source_l00014}{smacc\+::utils\+::clean\+Short\+Type\+Name()}}, \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00121}{smacc\+::\+ISmacc\+State\+Machine\+::initialize\+ROS()}}, \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00112}{smacc\+::\+ISmacc\+State\+Machine\+::on\+Initialize()}}, and \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00116}{smacc\+::\+ISmacc\+State\+Machine\+::on\+Initialized()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsmacc_1_1SmaccStateMachineBase_a2dc1cd9a25b80f00602f1faab9b01e7b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsmacc_1_1SmaccStateMachineBase_af34aec9fa012f0e3858131c84abfd5ed}\label{structsmacc_1_1SmaccStateMachineBase_af34aec9fa012f0e3858131c84abfd5ed}} 
+\index{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}!reset@{reset}}
+\index{reset@{reset}!smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename Derived\+State\+Machine , typename Initial\+State\+Type $>$ \\
+virtual void \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{smacc\+::\+Smacc\+State\+Machine\+Base}}$<$ Derived\+State\+Machine, Initial\+State\+Type $>$\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a9e4b4fe4dda962642397993235c6eea0}{smacc\+::\+ISmacc\+State\+Machine}}.
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__base_8h_source_l00031}{31}} of file \mbox{\hyperlink{smacc__state__machine__base_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033         \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a9e4b4fe4dda962642397993235c6eea0}{ISmaccStateMachine::reset}}();}
+\DoxyCodeLine{00034         this-\/>terminate();}
+\DoxyCodeLine{00035         smacc::run<DerivedStateMachine>();}
+\DoxyCodeLine{00036     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00049}{smacc\+::\+ISmacc\+State\+Machine\+::reset()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsmacc_1_1SmaccStateMachineBase_af34aec9fa012f0e3858131c84abfd5ed_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structsmacc_1_1SmaccStateMachineBase_aaa9baa888888165998aa990ca299e30b}\label{structsmacc_1_1SmaccStateMachineBase_aaa9baa888888165998aa990ca299e30b}} 
+\index{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}!stop@{stop}}
+\index{stop@{stop}!smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$@{smacc::SmaccStateMachineBase$<$ DerivedStateMachine, InitialStateType $>$}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily template$<$typename Derived\+State\+Machine , typename Initial\+State\+Type $>$ \\
+virtual void \mbox{\hyperlink{structsmacc_1_1SmaccStateMachineBase}{smacc\+::\+Smacc\+State\+Machine\+Base}}$<$ Derived\+State\+Machine, Initial\+State\+Type $>$\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adcb1b55e014f982a713a863ffb0261d3}{smacc\+::\+ISmacc\+State\+Machine}}.
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__base_8h_source_l00038}{38}} of file \mbox{\hyperlink{smacc__state__machine__base_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+base.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039     \{}
+\DoxyCodeLine{00040         \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adcb1b55e014f982a713a863ffb0261d3}{ISmaccStateMachine::stop}}();}
+\DoxyCodeLine{00041         this-\/>terminate();}
+\DoxyCodeLine{00042     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00053}{smacc\+::\+ISmacc\+State\+Machine\+::stop()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsmacc_1_1SmaccStateMachineBase_aaa9baa888888165998aa990ca299e30b_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc/include/smacc/\mbox{\hyperlink{smacc__state__machine__base_8h}{smacc\+\_\+state\+\_\+machine\+\_\+base.\+h}}\end{DoxyCompactItemize}

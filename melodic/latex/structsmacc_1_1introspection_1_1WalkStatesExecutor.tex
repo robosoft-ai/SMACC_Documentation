@@ -1,0 +1,97 @@
+\hypertarget{structsmacc_1_1introspection_1_1WalkStatesExecutor}{}\doxysection{smacc\+::introspection\+::Walk\+States\+Executor\texorpdfstring{$<$}{<} Initial\+State\+Type \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structsmacc_1_1introspection_1_1WalkStatesExecutor}\index{smacc::introspection::WalkStatesExecutor$<$ InitialStateType $>$@{smacc::introspection::WalkStatesExecutor$<$ InitialStateType $>$}}
+
+
+{\ttfamily \#include $<$smacc\+\_\+state\+\_\+machine\+\_\+info.\+h$>$}
+
+
+
+Collaboration diagram for smacc\+::introspection\+::Walk\+States\+Executor\texorpdfstring{$<$}{<} Initial\+State\+Type \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{structsmacc_1_1introspection_1_1WalkStatesExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structsmacc_1_1introspection_1_1WalkStatesExecutor_a21848ccc6e7a7ddee0ccfff97e550ec6}{walk\+States}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo}{Smacc\+State\+Info}} $>$ \&current\+State, \mbox{\hyperlink{classbool}{bool}} root\+Initial\+Node)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Initial\+State\+Type$>$\newline
+struct smacc\+::introspection\+::\+Walk\+States\+Executor$<$ Initial\+State\+Type $>$}
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__info_8h_source_l00095}{95}} of file \mbox{\hyperlink{smacc__state__machine__info_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+info.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsmacc_1_1introspection_1_1WalkStatesExecutor_a21848ccc6e7a7ddee0ccfff97e550ec6}\label{structsmacc_1_1introspection_1_1WalkStatesExecutor_a21848ccc6e7a7ddee0ccfff97e550ec6}} 
+\index{smacc::introspection::WalkStatesExecutor$<$ InitialStateType $>$@{smacc::introspection::WalkStatesExecutor$<$ InitialStateType $>$}!walkStates@{walkStates}}
+\index{walkStates@{walkStates}!smacc::introspection::WalkStatesExecutor$<$ InitialStateType $>$@{smacc::introspection::WalkStatesExecutor$<$ InitialStateType $>$}}
+\doxysubsubsection{\texorpdfstring{walkStates()}{walkStates()}}
+{\footnotesize\ttfamily template$<$typename Initial\+State\+Type $>$ \\
+void \mbox{\hyperlink{structsmacc_1_1introspection_1_1WalkStatesExecutor}{smacc\+::introspection\+::\+Walk\+States\+Executor}}$<$ Initial\+State\+Type $>$\+::walk\+States (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo}{Smacc\+State\+Info}} $>$ \&}]{current\+State,  }\item[{\mbox{\hyperlink{classbool}{bool}}}]{root\+Initial\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__state__machine__info_8h_source_l00367}{367}} of file \mbox{\hyperlink{smacc__state__machine__info_8h_source}{smacc\+\_\+state\+\_\+machine\+\_\+info.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00368 \{}
+\DoxyCodeLine{00369     \textcolor{comment}{//ros::Duration(1).sleep();}}
+\DoxyCodeLine{00370     \textcolor{keyword}{auto} currentname = demangledTypeName<InitialStateType>();}
+\DoxyCodeLine{00371 }
+\DoxyCodeLine{00372     std::shared\_ptr<SmaccStateInfo> targetState;}
+\DoxyCodeLine{00373 }
+\DoxyCodeLine{00374     \textcolor{keywordflow}{if} (!rootInitialNode)}
+\DoxyCodeLine{00375     \{}
+\DoxyCodeLine{00376         \textcolor{keywordflow}{if} (parentState-\/>stateMachine\_-\/>containsState<InitialStateType>())}
+\DoxyCodeLine{00377         \{}
+\DoxyCodeLine{00378             \textcolor{comment}{// it already exist: break;}}
+\DoxyCodeLine{00379             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00380         \}}
+\DoxyCodeLine{00381 }
+\DoxyCodeLine{00382         targetState = parentState-\/>createChildState<InitialStateType>();}
+\DoxyCodeLine{00383     \}}
+\DoxyCodeLine{00384     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00385     \{}
+\DoxyCodeLine{00386         targetState = parentState;}
+\DoxyCodeLine{00387     \}}
+\DoxyCodeLine{00388 }
+\DoxyCodeLine{00389     CallOnDefinition<InitialStateType>();}
+\DoxyCodeLine{00390 }
+\DoxyCodeLine{00391     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} std::remove\_pointer<\textcolor{keyword}{decltype}(InitialStateType::smacc\_inner\_type)>::type InnerType;}
+\DoxyCodeLine{00392     processSubState<InnerType>(targetState);}
+\DoxyCodeLine{00393 }
+\DoxyCodeLine{00394     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ REACTIONS -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00395     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} InitialStateType::reactions reactions;}
+\DoxyCodeLine{00396     \textcolor{comment}{//ROS\_INFO\_STREAM("{}state machine initial state reactions: "{}<< demangledTypeName<reactions>());}}
+\DoxyCodeLine{00397 }
+\DoxyCodeLine{00398     processTransitions<reactions>(targetState);}
+\DoxyCodeLine{00399 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{smacc__state__machine__info_8h_source_l00404}{smacc\+::introspection\+::\+Smacc\+State\+Machine\+Info\+::build\+State\+Machine\+Info()}}, \mbox{\hyperlink{smacc__state__machine__info_8h_source_l00102}{smacc\+::introspection\+::\+Add\+Sub\+State\+::operator()()}}, \mbox{\hyperlink{smacc__state__machine__info_8h_source_l00111}{smacc\+::introspection\+::process\+Sub\+State()}}, and \mbox{\hyperlink{smacc__state__machine__info_8h_source_l00155}{smacc\+::introspection\+::process\+Transition\+Aux()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structsmacc_1_1introspection_1_1WalkStatesExecutor_a21848ccc6e7a7ddee0ccfff97e550ec6_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc/include/smacc/introspection/\mbox{\hyperlink{smacc__state__machine__info_8h}{smacc\+\_\+state\+\_\+machine\+\_\+info.\+h}}\end{DoxyCompactItemize}

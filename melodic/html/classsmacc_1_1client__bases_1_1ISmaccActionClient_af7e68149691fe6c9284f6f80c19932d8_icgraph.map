@@ -1,0 +1,16 @@
+<map id="smacc::client_bases::ISmaccActionClient::getNamespace" name="smacc::client_bases::ISmaccActionClient::getNamespace">
+<area shape="rect" id="node1" title=" " alt="" coords="711,219,853,275"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#aedeaf9704b73bf05b5522f7250416c9a" title=" " alt="" coords="493,89,663,145"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#a9c47a5094ac8afb01680307fe5eca922" title=" " alt="" coords="493,259,663,315"/>
+<area shape="rect" id="node3" href="$classcl__move__base__z_1_1CbUndoPathBackwards2.html#a62f0d53fc341ca6d241637cc0e4b2e30" title=" " alt="" coords="247,5,445,47"/>
+<area shape="rect" id="node5" href="$classcl__move__base__z_1_1CbNavigateGlobalPosition.html#a0b8525ea9e4388b27cb1f9b1e06a3b63" title=" " alt="" coords="249,71,443,112"/>
+<area shape="rect" id="node7" href="$classcl__move__base__z_1_1CbAbsoluteRotate.html#a10418ea360809fa649d295716b152b2b" title=" " alt="" coords="250,136,442,177"/>
+<area shape="rect" id="node8" href="$classcl__move__base__z_1_1CbNavigateBackwards.html#a545a5282f0ef6b0080b46002d6037567" title=" " alt="" coords="249,201,443,243"/>
+<area shape="rect" id="node9" href="$classcl__move__base__z_1_1CbNavigateForward.html#af9a2e49071de287922c3f5963a079b95" title=" " alt="" coords="249,267,443,308"/>
+<area shape="rect" id="node10" href="$classcl__move__base__z_1_1CbRotate.html#a316ee51ecfd3f10fd1edae0d7d3b26c0" title=" " alt="" coords="257,332,435,373"/>
+<area shape="rect" id="node11" href="$classcl__move__base__z_1_1CbUndoPathBackwards.html#a32e680530375b62c7053bf173f6b2b1b" title=" " alt="" coords="247,397,445,439"/>
+<area shape="rect" id="node12" href="$classcl__move__base__z_1_1CbUndoPathBackwards2.html#a1b96187df9be6ce0fbdb5511147685d3" title=" " alt="" coords="247,463,445,504"/>
+<area shape="rect" id="node13" href="$classcl__move__base__z_1_1WaypointNavigator.html#a1e0a8ff536d2d01a01063fd903029347" title=" " alt="" coords="257,528,435,569"/>
+<area shape="rect" id="node6" href="$classcl__move__base__z_1_1CbNavigateGlobalPosition.html#a66d8b0555ef2945bc108dcd5171be292" title=" " alt="" coords="5,71,199,112"/>
+<area shape="rect" id="node14" href="$classcl__move__base__z_1_1CbNavigateNextWaypoint.html#a04913ef24344363669c1916b5df28493" title=" " alt="" coords="5,528,199,569"/>
+</map>

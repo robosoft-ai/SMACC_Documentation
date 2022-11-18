@@ -1,0 +1,257 @@
+\hypertarget{classsmacc_1_1client__bases_1_1SmaccPublisherClient}{}\doxysection{smacc\+::client\+\_\+bases\+::Smacc\+Publisher\+Client Class Reference}
+\label{classsmacc_1_1client__bases_1_1SmaccPublisherClient}\index{smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}}
+
+
+{\ttfamily \#include $<$smacc\+\_\+publisher\+\_\+client.\+h$>$}
+
+
+
+Inheritance diagram for smacc\+::client\+\_\+bases\+::Smacc\+Publisher\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsmacc_1_1client__bases_1_1SmaccPublisherClient__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for smacc\+::client\+\_\+bases\+::Smacc\+Publisher\+Client\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1client__bases_1_1SmaccPublisherClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_ac1713f185a2b81c6143a8fea042d53fa}{Smacc\+Publisher\+Client}} ()
+\item 
+virtual \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_ad528f768a7b99560db514924f9cb789f}{$\sim$\+Smacc\+Publisher\+Client}} ()
+\item 
+{\footnotesize template$<$typename Message\+Type $>$ }\\void \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_ade7a2549ada725b8342633137eb6ad53}{configure}} (std\+::string \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}{topic\+Name}})
+\item 
+{\footnotesize template$<$typename Message\+Type $>$ }\\void \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a083abb0f5c0f587f3381a58fe1fe3669}{publish}} (const Message\+Type \&msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}{topic\+Name}}
+\item 
+boost\+::optional$<$ int $>$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a1a9b98681b01953f134191799a029fd3}{queue\+Size}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a83a44b5a1afd4d45140d4936f4011cc9}{nh\+\_\+}}
+\item 
+ros\+::\+Publisher \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_af39f498e73e8f956aae312065a4fd093}{pub\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_acb2fbd8b9797ce286d9ecc0419e2cc55}{initialized\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{smacc__publisher__client_8h_source_l00016}{16}} of file \mbox{\hyperlink{smacc__publisher__client_8h_source}{smacc\+\_\+publisher\+\_\+client.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccPublisherClient_ac1713f185a2b81c6143a8fea042d53fa}\label{classsmacc_1_1client__bases_1_1SmaccPublisherClient_ac1713f185a2b81c6143a8fea042d53fa}} 
+\index{smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}!SmaccPublisherClient@{SmaccPublisherClient}}
+\index{SmaccPublisherClient@{SmaccPublisherClient}!smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}}
+\doxysubsubsection{\texorpdfstring{SmaccPublisherClient()}{SmaccPublisherClient()}}
+{\footnotesize\ttfamily smacc\+::client\+\_\+bases\+::\+Smacc\+Publisher\+Client\+::\+Smacc\+Publisher\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__publisher__client_8h_source_l00022}{22}} of file \mbox{\hyperlink{smacc__publisher__client_8h_source}{smacc\+\_\+publisher\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023   \{}
+\DoxyCodeLine{00024     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_acb2fbd8b9797ce286d9ecc0419e2cc55}{initialized\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00025   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__publisher__client_8h_source_l00064}{initialized\+\_\+}}.
+
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccPublisherClient_ad528f768a7b99560db514924f9cb789f}\label{classsmacc_1_1client__bases_1_1SmaccPublisherClient_ad528f768a7b99560db514924f9cb789f}} 
+\index{smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}!````~SmaccPublisherClient@{$\sim$SmaccPublisherClient}}
+\index{````~SmaccPublisherClient@{$\sim$SmaccPublisherClient}!smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}}
+\doxysubsubsection{\texorpdfstring{$\sim$SmaccPublisherClient()}{~SmaccPublisherClient()}}
+{\footnotesize\ttfamily virtual smacc\+::client\+\_\+bases\+::\+Smacc\+Publisher\+Client\+::$\sim$\+Smacc\+Publisher\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__publisher__client_8h_source_l00027}{27}} of file \mbox{\hyperlink{smacc__publisher__client_8h_source}{smacc\+\_\+publisher\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028   \{}
+\DoxyCodeLine{00029     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_af39f498e73e8f956aae312065a4fd093}{pub\_}}.shutdown();}
+\DoxyCodeLine{00030   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__publisher__client_8h_source_l00061}{pub\+\_\+}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccPublisherClient_ade7a2549ada725b8342633137eb6ad53}\label{classsmacc_1_1client__bases_1_1SmaccPublisherClient_ade7a2549ada725b8342633137eb6ad53}} 
+\index{smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}!configure@{configure}}
+\index{configure@{configure}!smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+void smacc\+::client\+\_\+bases\+::\+Smacc\+Publisher\+Client\+::configure (\begin{DoxyParamCaption}\item[{std\+::string}]{topic\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__publisher__client_8h_source_l00033}{33}} of file \mbox{\hyperlink{smacc__publisher__client_8h_source}{smacc\+\_\+publisher\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034   \{}
+\DoxyCodeLine{00035     this-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}{topicName}} = \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}{topicName}};}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_acb2fbd8b9797ce286d9ecc0419e2cc55}{initialized\_}})}
+\DoxyCodeLine{00037     \{}
+\DoxyCodeLine{00038       \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}{topicName}})}
+\DoxyCodeLine{00039       \{}
+\DoxyCodeLine{00040         ROS\_ERROR(\textcolor{stringliteral}{"{}topic publisher with no topic name set. Skipping advertising."{}});}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00042       \}}
+\DoxyCodeLine{00043       \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a1a9b98681b01953f134191799a029fd3}{queueSize}})}
+\DoxyCodeLine{00044         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a1a9b98681b01953f134191799a029fd3}{queueSize}} = 1;}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046       ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}["{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}() << \textcolor{stringliteral}{"{}] Client Publisher to topic: "{}} << \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}{topicName}});}
+\DoxyCodeLine{00047       \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_af39f498e73e8f956aae312065a4fd093}{pub\_}} = \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a83a44b5a1afd4d45140d4936f4011cc9}{nh\_}}.advertise<MessageType>(*(this-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}{topicName}}), *\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a1a9b98681b01953f134191799a029fd3}{queueSize}});}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049       this-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_acb2fbd8b9797ce286d9ecc0419e2cc55}{initialized\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00050     \}}
+\DoxyCodeLine{00051   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{client_8cpp_source_l00034}{smacc\+::\+ISmacc\+Client\+::get\+Name()}}, \mbox{\hyperlink{smacc__publisher__client_8h_source_l00064}{initialized\+\_\+}}, \mbox{\hyperlink{smacc__publisher__client_8h_source_l00060}{nh\+\_\+}}, \mbox{\hyperlink{smacc__publisher__client_8h_source_l00061}{pub\+\_\+}}, \mbox{\hyperlink{smacc__publisher__client_8h_source_l00020}{queue\+Size}}, and \mbox{\hyperlink{smacc__publisher__client_8h_source_l00019}{topic\+Name}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1client__bases_1_1SmaccPublisherClient_ade7a2549ada725b8342633137eb6ad53_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a083abb0f5c0f587f3381a58fe1fe3669}\label{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a083abb0f5c0f587f3381a58fe1fe3669}} 
+\index{smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}!publish@{publish}}
+\index{publish@{publish}!smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+void smacc\+::client\+\_\+bases\+::\+Smacc\+Publisher\+Client\+::publish (\begin{DoxyParamCaption}\item[{const Message\+Type \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__publisher__client_8h_source_l00054}{54}} of file \mbox{\hyperlink{smacc__publisher__client_8h_source}{smacc\+\_\+publisher\+\_\+client.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055   \{}
+\DoxyCodeLine{00056     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccPublisherClient_af39f498e73e8f956aae312065a4fd093}{pub\_}}.publish(msg);}
+\DoxyCodeLine{00057   \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{smacc__publisher__client_8h_source_l00061}{pub\+\_\+}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccPublisherClient_acb2fbd8b9797ce286d9ecc0419e2cc55}\label{classsmacc_1_1client__bases_1_1SmaccPublisherClient_acb2fbd8b9797ce286d9ecc0419e2cc55}} 
+\index{smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} smacc\+::client\+\_\+bases\+::\+Smacc\+Publisher\+Client\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__publisher__client_8h_source_l00064}{64}} of file \mbox{\hyperlink{smacc__publisher__client_8h_source}{smacc\+\_\+publisher\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__publisher__client_8h_source_l00033}{configure()}}, and \mbox{\hyperlink{smacc__publisher__client_8h_source_l00022}{Smacc\+Publisher\+Client()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a83a44b5a1afd4d45140d4936f4011cc9}\label{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a83a44b5a1afd4d45140d4936f4011cc9}} 
+\index{smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}!nh\_@{nh\_}}
+\index{nh\_@{nh\_}!smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}}
+\doxysubsubsection{\texorpdfstring{nh\_}{nh\_}}
+{\footnotesize\ttfamily ros\+::\+Node\+Handle smacc\+::client\+\_\+bases\+::\+Smacc\+Publisher\+Client\+::nh\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__publisher__client_8h_source_l00060}{60}} of file \mbox{\hyperlink{smacc__publisher__client_8h_source}{smacc\+\_\+publisher\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__publisher__client_8h_source_l00033}{configure()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccPublisherClient_af39f498e73e8f956aae312065a4fd093}\label{classsmacc_1_1client__bases_1_1SmaccPublisherClient_af39f498e73e8f956aae312065a4fd093}} 
+\index{smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}!pub\_@{pub\_}}
+\index{pub\_@{pub\_}!smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}}
+\doxysubsubsection{\texorpdfstring{pub\_}{pub\_}}
+{\footnotesize\ttfamily ros\+::\+Publisher smacc\+::client\+\_\+bases\+::\+Smacc\+Publisher\+Client\+::pub\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__publisher__client_8h_source_l00061}{61}} of file \mbox{\hyperlink{smacc__publisher__client_8h_source}{smacc\+\_\+publisher\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__publisher__client_8h_source_l00033}{configure()}}, \mbox{\hyperlink{smacc__publisher__client_8h_source_l00054}{publish()}}, and \mbox{\hyperlink{smacc__publisher__client_8h_source_l00027}{$\sim$\+Smacc\+Publisher\+Client()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a1a9b98681b01953f134191799a029fd3}\label{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a1a9b98681b01953f134191799a029fd3}} 
+\index{smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}!queueSize@{queueSize}}
+\index{queueSize@{queueSize}!smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}}
+\doxysubsubsection{\texorpdfstring{queueSize}{queueSize}}
+{\footnotesize\ttfamily boost\+::optional$<$int$>$ smacc\+::client\+\_\+bases\+::\+Smacc\+Publisher\+Client\+::queue\+Size}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__publisher__client_8h_source_l00020}{20}} of file \mbox{\hyperlink{smacc__publisher__client_8h_source}{smacc\+\_\+publisher\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__publisher__client_8h_source_l00033}{configure()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}\label{classsmacc_1_1client__bases_1_1SmaccPublisherClient_a8b8d98aef9b3b3a441005d2cb17b4fcc}} 
+\index{smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}!topicName@{topicName}}
+\index{topicName@{topicName}!smacc::client\_bases::SmaccPublisherClient@{smacc::client\_bases::SmaccPublisherClient}}
+\doxysubsubsection{\texorpdfstring{topicName}{topicName}}
+{\footnotesize\ttfamily boost\+::optional$<$std\+::string$>$ smacc\+::client\+\_\+bases\+::\+Smacc\+Publisher\+Client\+::topic\+Name}
+
+
+
+Definition at line \mbox{\hyperlink{smacc__publisher__client_8h_source_l00019}{19}} of file \mbox{\hyperlink{smacc__publisher__client_8h_source}{smacc\+\_\+publisher\+\_\+client.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{smacc__publisher__client_8h_source_l00033}{configure()}}, and \mbox{\hyperlink{cl__ros__publisher_8h_source_l00017}{cl\+\_\+ros\+\_\+publisher\+::\+Cl\+Ros\+Publisher\+::configure()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc/include/smacc/client\+\_\+bases/\mbox{\hyperlink{smacc__publisher__client_8h}{smacc\+\_\+publisher\+\_\+client.\+h}}\end{DoxyCompactItemize}

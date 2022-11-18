@@ -1,0 +1,64 @@
+\hypertarget{cl__ros__timer_8h_source}{}\doxysection{cl\+\_\+ros\+\_\+timer.\+h}
+\label{cl__ros__timer_8h_source}\index{smacc\_client\_library/ros\_timer\_client/include/ros\_timer\_client/cl\_ros\_timer.h@{smacc\_client\_library/ros\_timer\_client/include/ros\_timer\_client/cl\_ros\_timer.h}}
+\mbox{\hyperlink{cl__ros__timer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc_8h}{smacc/smacc.h}}>}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <boost/signals2.hpp>}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <boost/optional/optional\_io.hpp>}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00007}\mbox{\hyperlink{namespacecl__ros__timer}{00007}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__ros__timer}{cl\_ros\_timer}}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00009}00009 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TSource, \textcolor{keyword}{typename} TOrthogonal>}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00010}\mbox{\hyperlink{structcl__ros__timer_1_1EvTimer}{00010}} \textcolor{keyword}{struct }\mbox{\hyperlink{structcl__ros__timer_1_1EvTimer}{EvTimer}} : \mbox{\hyperlink{classboost_1_1statechart_1_1event}{sc::event}}<EvTimer<TSource, TOrthogonal>>}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00012}00012     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00013}00013 \textcolor{comment}{    ClRosTimer *sender;}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00014}00014 \textcolor{comment}{    ros::TimerEvent timedata;}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00015}00015 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00016}00016 \textcolor{comment}{    EvTimer(ClRosTimer *sender, const ros::TimerEvent \&timedata)}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00017}00017 \textcolor{comment}{    \{}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00018}00018 \textcolor{comment}{        this-\/>sender = sender;}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00019}00019 \textcolor{comment}{        this-\/>timedata = timedata;}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00020}00020 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00021}00021 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00022}00022 \};}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00024}\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer}{00024}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer}{ClRosTimer}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1ISmaccClient}{smacc::ISmaccClient}}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00025}00025 \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00026}00026 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00027}00027     \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_afd99658be9585d467a05238a2dd604da}{ClRosTimer}}(ros::Duration \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a39a5666044409eca94562fcceca8b0ea}{duration}}, \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a07ce4ac2560aa7ad4b5dee233f2d7733}{oneshot}} = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00029}00029     \textcolor{keyword}{virtual} \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a94a600197795e0235e86461a90c8cd7d}{\string~ClRosTimer}}();}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00031}00031     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a874e97a9e3e974966ac4999e0a293e73}{initialize}}();}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00033}00033     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00034}\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a7edcc057bfb5a25fe0892755137dd8da}{00034}}     boost::signals2::connection \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a7edcc057bfb5a25fe0892755137dd8da}{onTimerTick}}(\textcolor{keywordtype}{void} (T::*callback)(), T *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00036}00036         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a2fcaab287b6ee13f6cc689876c6d28fa}{onTimerTick\_}}, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00039}00039     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} TSourceObject>}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00040}\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a750d57fbbdb9db5a2382ee6180fd7700}{00040}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a750d57fbbdb9db5a2382ee6180fd7700}{onOrthogonalAllocation}}()}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00041}00041     \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00042}00042         this-\/>\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_af502ca54355f50d19d4aa6ca5f4e0c23}{postTimerEvent\_}} = [=]() \{}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00043}00043             this-\/>postEvent<EvTimer<TSourceObject, TOrthogonal>>();}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00044}00044         \};}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00045}00045     \}}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00047}00047 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00048}\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a37b156a2fc18f04891aa4cb63c8d41b9}{00048}}     ros::NodeHandle \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a37b156a2fc18f04891aa4cb63c8d41b9}{nh\_}};}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00050}\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a50237ecbf49b178b9d109b25ba768f5a}{00050}}     ros::Timer \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a50237ecbf49b178b9d109b25ba768f5a}{timer}};}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00051}\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a39a5666044409eca94562fcceca8b0ea}{00051}}     ros::Duration \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a39a5666044409eca94562fcceca8b0ea}{duration}};}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00052}\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a07ce4ac2560aa7ad4b5dee233f2d7733}{00052}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a07ce4ac2560aa7ad4b5dee233f2d7733}{oneshot}};}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00054}00054     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a047720c2f37e354e0867b148c85e18e3}{timerCallback}}(\textcolor{keyword}{const} ros::TimerEvent \&timedata);}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00055}\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_af502ca54355f50d19d4aa6ca5f4e0c23}{00055}}     std::function<void()> \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_af502ca54355f50d19d4aa6ca5f4e0c23}{postTimerEvent\_}};}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00056}\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a2fcaab287b6ee13f6cc689876c6d28fa}{00056}}     \mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc::SmaccSignal}}<void()> \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a2fcaab287b6ee13f6cc689876c6d28fa}{onTimerTick\_}};}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00057}00057 \};}
+\DoxyCodeLine{\Hypertarget{cl__ros__timer_8h_source_l00058}00058 \} \textcolor{comment}{// namespace cl\_ros\_timer}}
+
+\end{DoxyCode}

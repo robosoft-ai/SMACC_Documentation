@@ -66,9 +66,134 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">cl_move_base_z::odom_tracker Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html">OdomTracker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class track the required distance of the cord based on the external localization system.  <a href="classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl__move__base__z_1_1odom__tracker_1_1StackedPathEntry.html">StackedPathEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac46b05813b2791604f6cd0a39ace3ef8"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8">WorkingMode</a> : uint8_t { <a class="el" href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8a023bc3adf68871ef7a0c616765ac80a7">RECORD_PATH</a> = 0
+, <a class="el" href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8a68783989ae56d7f2f9496c66c417a192">CLEAR_PATH</a> = 1
+, <a class="el" href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8aa5daf7f2ebbba4975d61dab1c40188c7">IDLE</a> = 2
+ }</td></tr>
+<tr class="separator:ac46b05813b2791604f6cd0a39ace3ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a501582a760a02ce0069d95bfc67ca973"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl__move__base__z_1_1odom__tracker.html#a501582a760a02ce0069d95bfc67ca973">p2pDistance</a> (const geometry_msgs::Point &amp;p1, const geometry_msgs::Point &amp;p2)</td></tr>
+<tr class="separator:a501582a760a02ce0069d95bfc67ca973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ac46b05813b2791604f6cd0a39ace3ef8" name="ac46b05813b2791604f6cd0a39ace3ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46b05813b2791604f6cd0a39ace3ef8">&#9670;&nbsp;</a></span>WorkingMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8">cl_move_base_z::odom_tracker::WorkingMode</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac46b05813b2791604f6cd0a39ace3ef8a023bc3adf68871ef7a0c616765ac80a7" name="ac46b05813b2791604f6cd0a39ace3ef8a023bc3adf68871ef7a0c616765ac80a7"></a>RECORD_PATH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac46b05813b2791604f6cd0a39ace3ef8a68783989ae56d7f2f9496c66c417a192" name="ac46b05813b2791604f6cd0a39ace3ef8a68783989ae56d7f2f9496c66c417a192"></a>CLEAR_PATH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac46b05813b2791604f6cd0a39ace3ef8aa5daf7f2ebbba4975d61dab1c40188c7" name="ac46b05813b2791604f6cd0a39ace3ef8aa5daf7f2ebbba4975d61dab1c40188c7"></a>IDLE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="odom__tracker_8h_source.html#l00032">32</a> of file <a class="el" href="odom__tracker_8h_source.html">odom_tracker.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>{</div>
+<div class="line"><span class="lineno">   34</span>    <a class="code hl_enumvalue" href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8a023bc3adf68871ef7a0c616765ac80a7">RECORD_PATH</a> = 0,</div>
+<div class="line"><span class="lineno">   35</span>    <a class="code hl_enumvalue" href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8a68783989ae56d7f2f9496c66c417a192">CLEAR_PATH</a> = 1,</div>
+<div class="line"><span class="lineno">   36</span>    <a class="code hl_enumvalue" href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8aa5daf7f2ebbba4975d61dab1c40188c7">IDLE</a> = 2</div>
+<div class="line"><span class="lineno">   37</span>};</div>
+<div class="ttc" id="anamespacecl__move__base__z_1_1odom__tracker_html_ac46b05813b2791604f6cd0a39ace3ef8a023bc3adf68871ef7a0c616765ac80a7"><div class="ttname"><a href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8a023bc3adf68871ef7a0c616765ac80a7">cl_move_base_z::odom_tracker::WorkingMode::RECORD_PATH</a></div><div class="ttdeci">@ RECORD_PATH</div></div>
+<div class="ttc" id="anamespacecl__move__base__z_1_1odom__tracker_html_ac46b05813b2791604f6cd0a39ace3ef8a68783989ae56d7f2f9496c66c417a192"><div class="ttname"><a href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8a68783989ae56d7f2f9496c66c417a192">cl_move_base_z::odom_tracker::WorkingMode::CLEAR_PATH</a></div><div class="ttdeci">@ CLEAR_PATH</div></div>
+<div class="ttc" id="anamespacecl__move__base__z_1_1odom__tracker_html_ac46b05813b2791604f6cd0a39ace3ef8aa5daf7f2ebbba4975d61dab1c40188c7"><div class="ttname"><a href="namespacecl__move__base__z_1_1odom__tracker.html#ac46b05813b2791604f6cd0a39ace3ef8aa5daf7f2ebbba4975d61dab1c40188c7">cl_move_base_z::odom_tracker::WorkingMode::IDLE</a></div><div class="ttdeci">@ IDLE</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a501582a760a02ce0069d95bfc67ca973" name="a501582a760a02ce0069d95bfc67ca973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a501582a760a02ce0069d95bfc67ca973">&#9670;&nbsp;</a></span>p2pDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double cl_move_base_z::odom_tracker::p2pDistance </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const geometry_msgs::Point &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p ><a class="el" href="namespacecl__move__base__z_1_1odom__tracker.html#a501582a760a02ce0069d95bfc67ca973">p2pDistance()</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="odom__tracker_8h_source.html#l00158">158</a> of file <a class="el" href="odom__tracker_8h_source.html">odom_tracker.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>{</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordtype">double</span> dx = (p1.x - p2.x);</div>
+<div class="line"><span class="lineno">  161</span>    <span class="keywordtype">double</span> dy = (p1.y - p2.y);</div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordtype">double</span> dz = (p2.z - p2.z);</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordtype">double</span> dist = sqrt(dx * dx + dy * dy + dz * dz);</div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">return</span> dist;</div>
+<div class="line"><span class="lineno">  165</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="odom__tracker_8cpp_source.html#l00262">cl_move_base_z::odom_tracker::OdomTracker::updateClearPath()</a>, and <a class="el" href="odom__tracker_8cpp_source.html#l00333">cl_move_base_z::odom_tracker::OdomTracker::updateRecordPath()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacecl__move__base__z_1_1odom__tracker_a501582a760a02ce0069d95bfc67ca973_icgraph.png" border="0" usemap="#anamespacecl__move__base__z_1_1odom__tracker_a501582a760a02ce0069d95bfc67ca973_icgraph" alt=""/></div>
+<map name="anamespacecl__move__base__z_1_1odom__tracker_a501582a760a02ce0069d95bfc67ca973_icgraph" id="anamespacecl__move__base__z_1_1odom__tracker_a501582a760a02ce0069d95bfc67ca973_icgraph">
+<area shape="rect" title=" " alt="" coords="647,53,804,94"/>
+<area shape="rect" href="classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#abe7ba4dbf014e1f2c64b5806ce42c073" title=" " alt="" coords="441,5,599,61"/>
+<area shape="rect" href="classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#a77a66083573c6bef726d77447fb53349" title=" " alt="" coords="441,85,599,141"/>
+<area shape="rect" href="classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#a12c5a839cfde2e8f2f55a5e0c9647b18" title="odom callback: Updates the path &#45; this must be called periodically for each odometry message." alt="" coords="211,45,393,101"/>
+<area shape="rect" href="classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#a99e1f405d0b3ec3e9fc73e666793c409" title=" " alt="" coords="5,45,163,101"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

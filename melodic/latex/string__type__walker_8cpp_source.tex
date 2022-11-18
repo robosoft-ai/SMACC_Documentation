@@ -9,7 +9,7 @@
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00005}00005 \textcolor{comment}{ *}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00006}00006 \textcolor{comment}{ ******************************************************************************************************************/}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <smacc/introspection/string\_type\_walker.h>}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{string__type__walker_8h}{smacc/introspection/string\_type\_walker.h}}>}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00009}00009 }
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <regex>}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <memory>}}
@@ -22,7 +22,7 @@
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00018}00018 \textcolor{preprocessor}{\#include <algorithm>}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00019}00019 \textcolor{preprocessor}{\#include <boost/algorithm/string/trim.hpp>}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00020}00020 }
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00021}00021 \textcolor{preprocessor}{\#include <smacc/common.h>}}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00021}00021 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{common_8h}{smacc/common.h}}>}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00022}00022 }
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00023}00023 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00024}00024 \{}
@@ -63,19 +63,19 @@
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00059}00059   \textcolor{comment}{//     return roottype}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00060}00060 \}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00061}00061 }
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00062}00062 std::map<std::string, TypeInfo::Ptr> TypeInfo::typeInfoDatabase;}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00062}00062 std::map<std::string, TypeInfo::Ptr> \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ab780c03206b824aaf338135d16b0eff4}{TypeInfo::typeInfoDatabase}};}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00063}00063 }
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00064}00064 TypeInfo::Ptr TypeInfo::getFromStdTypeInfo(\textcolor{keyword}{const} std::type\_info\& tid)}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00064}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ada1e604cd8bf968a5f816fbace4af881}{00064}} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa6ffd9c39811d59f7c771941b7fad860}{TypeInfo::Ptr}} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ada1e604cd8bf968a5f816fbace4af881}{TypeInfo::getFromStdTypeInfo}}(\textcolor{keyword}{const} std::type\_info\& tid)}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00065}00065 \{}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00066}00066   \textcolor{keywordflow}{return} TypeInfo::getTypeInfoFromString(demangleSymbol(tid.name()));}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00066}00066   \textcolor{keywordflow}{return} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a47d65b6c61499d7ae8ab9f6325c84837}{TypeInfo::getTypeInfoFromString}}(\mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(tid.name()));}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00067}00067 \}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00068}00068 }
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00069}00069 TypeInfo::Ptr TypeInfo::getTypeInfoFromString(std::string inputtext)}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00069}\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a47d65b6c61499d7ae8ab9f6325c84837}{00069}} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa6ffd9c39811d59f7c771941b7fad860}{TypeInfo::Ptr}} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a47d65b6c61499d7ae8ab9f6325c84837}{TypeInfo::getTypeInfoFromString}}(std::string inputtext)}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00070}00070 \{}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00071}00071   \textcolor{keyword}{auto} it = typeInfoDatabase.find(inputtext);}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00071}00071   \textcolor{keyword}{auto} it = \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ab780c03206b824aaf338135d16b0eff4}{typeInfoDatabase}}.find(inputtext);}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00072}00072 }
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00073}00073   \textcolor{keywordflow}{if} (it != typeInfoDatabase.end())}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00074}00074     \textcolor{keywordflow}{return} typeInfoDatabase[inputtext];}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00073}00073   \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ab780c03206b824aaf338135d16b0eff4}{typeInfoDatabase}}.end())}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00074}00074     \textcolor{keywordflow}{return} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ab780c03206b824aaf338135d16b0eff4}{typeInfoDatabase}}[inputtext];}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00075}00075 }
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00076}00076   \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00077}00077   \textcolor{keywordtype}{int} typecount = 0;}
@@ -108,8 +108,8 @@
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00104}00104     \{}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00105}00105       \textcolor{keywordflow}{if} (typesdict.size() == 0)}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00106}00106       \{}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00107}00107         \textcolor{keyword}{auto} tkey = \textcolor{stringliteral}{"{}\$T"{}} + std::to\_string(typecount);}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00108}00108         typesdict[tkey] = inputtext;}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00107}00107         \textcolor{keyword}{auto} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}} = \textcolor{stringliteral}{"{}\$T"{}} + std::to\_string(typecount);}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00108}00108         typesdict[\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}}] = inputtext;}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00109}00109       \}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00110}00110       \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00111}00111     \}}
@@ -127,13 +127,13 @@
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00123}00123     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& m : matches)}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00124}00124     \{}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00125}00125       std::string tstr = m;}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00126}00126       \textcolor{keyword}{auto} tkey = \textcolor{stringliteral}{"{}\$T"{}} + std::to\_string(typecount);}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00127}00127       \mbox{\hyperlink{namespacesmacc_1_1introspection_a48571b9bf3b115d2a83cc0147c96d0bd}{replace}}(inputtext, tstr, tkey);}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00126}00126       \textcolor{keyword}{auto} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}} = \textcolor{stringliteral}{"{}\$T"{}} + std::to\_string(typecount);}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00127}00127       \mbox{\hyperlink{namespacesmacc_1_1introspection_a48571b9bf3b115d2a83cc0147c96d0bd}{replace}}(inputtext, tstr, \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}});}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00128}00128 }
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00129}00129       \textcolor{comment}{// std::cout << "{}updating input text:"{} << inputtext << std::endl;}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00130}00130 }
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00131}00131       typecount++;}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00132}00132       typesdict[tkey] = tstr;}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00132}00132       typesdict[\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}}] = tstr;}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00133}00133 }
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00134}00134       i++;}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00135}00135     \}}
@@ -227,17 +227,17 @@
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00223}00223   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} t : orderedTypedict)  \textcolor{comment}{// must be ordered. to avoid issue, ie: \$11 to be replaced in \$T14}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00224}00224   \{}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00225}00225     \textcolor{comment}{// auto t = *it;}}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00226}00226     \textcolor{keyword}{auto}\& tkey = t.first;}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00226}00226     \textcolor{keyword}{auto}\& \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}} = t.first;}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00227}00227     \textcolor{keyword}{auto}\& tval = t.second;}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00228}00228     \textcolor{keyword}{auto} finaltype = \mbox{\hyperlink{namespacesmacc_1_1introspection_a03d7d3379217139c51d5e7df81c7ccc2}{replace\_back}}(tval, orderedTypedict);}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00229}00229     \textcolor{keyword}{auto} tinfo = std::make\_shared<TypeInfo>(tkey, tval, finaltype);}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00228}00228     \textcolor{keyword}{auto} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa4010ed427e12db443e08ab16a3de243}{finaltype}} = \mbox{\hyperlink{namespacesmacc_1_1introspection_a03d7d3379217139c51d5e7df81c7ccc2}{replace\_back}}(tval, orderedTypedict);}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00229}00229     \textcolor{keyword}{auto} tinfo = std::make\_shared<TypeInfo>(\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}}, tval, \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa4010ed427e12db443e08ab16a3de243}{finaltype}});}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00230}00230     types.push\_back(tinfo);}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00231}00231     tokens.push\_back(tkey);}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00231}00231     tokens.push\_back(\mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_a697dd505119258dba1224d10eea5b2bd}{tkey}});}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00232}00232 }
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00233}00233     \textcolor{comment}{// std::cout << "{}replacing back: "{} << finaltype << std::endl;}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00234}00234   \}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00235}00235 }
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00236}00236   TypeInfo::Ptr roottype = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00236}00236   \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa6ffd9c39811d59f7c771941b7fad860}{TypeInfo::Ptr}} roottype = \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00237}00237   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& t : types)}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00238}00238   \{}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00239}00239     \textcolor{comment}{// std::cout << t-\/>finaltype << "{} vs "{} <<originalinputtext;}}
@@ -332,12 +332,12 @@
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00328}00328 }
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00329}00329   ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}ADDING TYPE TO DATABASE: "{}} << inputtext);}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00330}00330   ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}Current Database"{}});}
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00331}00331   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& en : typeInfoDatabase)}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00331}00331   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& en : \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ab780c03206b824aaf338135d16b0eff4}{typeInfoDatabase}})}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00332}00332   \{}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00333}00333     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}-\/ "{}} << en.first);}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00334}00334   \}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00335}00335 }
-\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00336}00336   typeInfoDatabase[originalinputtext] = roottype;}
+\DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00336}00336   \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_ab780c03206b824aaf338135d16b0eff4}{typeInfoDatabase}}[originalinputtext] = roottype;}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00337}00337   \textcolor{keywordflow}{return} roottype;}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00338}00338 \}}
 \DoxyCodeLine{\Hypertarget{string__type__walker_8cpp_source_l00339}00339 }

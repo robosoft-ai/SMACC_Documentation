@@ -8,46 +8,46 @@
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00004}00004 \textcolor{comment}{ *}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <move\_group\_interface\_client/client\_behaviors/cb\_move\_end\_effector.h>}}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__move__end__effector_8h}{move\_group\_interface\_client/client\_behaviors/cb\_move\_end\_effector.h}}>}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00008}00008 \textcolor{comment}{// \#include <moveit/kinematic\_constraints/kinematic\_constraint.h>}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <moveit/kinematic\_constraints/utils.h>}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <future>}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00011}00011 }
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__group__interface}{cl\_move\_group\_interface}}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00013}00013 \{}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00014}00014 CbMoveEndEffector::CbMoveEndEffector()}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00014}\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a5bcaaff082b7d8039a4f491b2797776e}{00014}} \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a5bcaaff082b7d8039a4f491b2797776e}{CbMoveEndEffector::CbMoveEndEffector}}()}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00015}00015 \{}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00016}00016 \}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00017}00017 }
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00018}00018 CbMoveEndEffector::CbMoveEndEffector(geometry\_msgs::PoseStamped target\_pose, std::string tip\_link)}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00018}\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a237d308fbeabd9c4bac82cf31b8fad33}{00018}} \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a5bcaaff082b7d8039a4f491b2797776e}{CbMoveEndEffector::CbMoveEndEffector}}(geometry\_msgs::PoseStamped target\_pose, std::string tip\_link)}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00019}00019   : targetPose(target\_pose)}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00020}00020 \{}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00021}00021   tip\_link\_ = tip\_link;}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00021}00021   \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a4b6f4468b2db565a07119ac90c067436}{tip\_link\_}} = tip\_link;}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00022}00022 \}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00023}00023 }
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00024}00024 \textcolor{keywordtype}{void} CbMoveEndEffector::onEntry()}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00024}\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a7e7c22ac6c5725bc95e9852c3f6d939d}{00024}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a7e7c22ac6c5725bc95e9852c3f6d939d}{CbMoveEndEffector::onEntry}}()}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00025}00025 \{}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00026}00026   this-\/>requiresClient(movegroupClient\_);}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00026}00026   this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a32b16e99e3b4cb289414203dc861a440}{requiresClient}}(\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a86583cb37788b461fc8bb38102a8c0ed}{movegroupClient\_}});}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00027}00027 }
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00028}00028   \textcolor{keywordflow}{if} (this-\/>group\_)}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00028}00028   \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a3060dbea1460d4d55ca73b95f4d17575}{group\_}})}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00029}00029   \{}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00030}00030       ROS\_DEBUG(\textcolor{stringliteral}{"{}[CbMoveEndEfector] new thread started to move absolute end effector"{}});}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00031}00031       moveit::planning\_interface::MoveGroupInterface move\_group(*(this-\/>group\_));}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00032}00032       this-\/>moveToAbsolutePose(move\_group, targetPose);}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00031}00031       moveit::planning\_interface::MoveGroupInterface move\_group(*(this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a3060dbea1460d4d55ca73b95f4d17575}{group\_}}));}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00032}00032       this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a533ec599a0e248f3cb024e9cdf148db2}{moveToAbsolutePose}}(move\_group, \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_ab0d0c060e52c6f09a6af727e6e954064}{targetPose}});}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00033}00033       ROS\_DEBUG(\textcolor{stringliteral}{"{}[CbMoveEndEfector] to move absolute end effector thread destroyed"{}});}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00034}00034   \}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00035}00035   \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00036}00036   \{}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00037}00037       ROS\_DEBUG(\textcolor{stringliteral}{"{}[CbMoveEndEfector] new thread started to move absolute end effector"{}});}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00038}00038       this-\/>moveToAbsolutePose(movegroupClient\_-\/>moveGroupClientInterface, targetPose);}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00038}00038       this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a533ec599a0e248f3cb024e9cdf148db2}{moveToAbsolutePose}}(\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a86583cb37788b461fc8bb38102a8c0ed}{movegroupClient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_a92922ea689e4e1b7b91512c56629c95b}{moveGroupClientInterface}}, \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_ab0d0c060e52c6f09a6af727e6e954064}{targetPose}});}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00039}00039       ROS\_DEBUG(\textcolor{stringliteral}{"{}[CbMoveEndEfector] to move absolute end effector thread destroyed"{}});}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00040}00040   \}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00041}00041 \}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00042}00042 }
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00043}00043 \textcolor{keywordtype}{bool} CbMoveEndEffector::moveToAbsolutePose(moveit::planning\_interface::MoveGroupInterface \&moveGroupInterface,}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00043}\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a533ec599a0e248f3cb024e9cdf148db2}{00043}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a533ec599a0e248f3cb024e9cdf148db2}{CbMoveEndEffector::moveToAbsolutePose}}(moveit::planning\_interface::MoveGroupInterface \&moveGroupInterface,}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00044}00044                                            geometry\_msgs::PoseStamped \&targetObjectPose)}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00045}00045 \{}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00046}00046   \textcolor{keyword}{auto}\& planningSceneInterface = movegroupClient\_-\/>planningSceneInterface;}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00046}00046   \textcolor{keyword}{auto}\& planningSceneInterface = \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a86583cb37788b461fc8bb38102a8c0ed}{movegroupClient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_a11bfab580f36e2ad32c9b37d6f58f44c}{planningSceneInterface}};}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00047}00047   ROS\_DEBUG(\textcolor{stringliteral}{"{}[CbMoveEndEffector] Synchronous sleep of 1 seconds"{}});}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00048}00048   ros::Duration(0.5).sleep();}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00049}00049 }
@@ -55,7 +55,7 @@
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00051}00051 }
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00052}00052   ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[CbMoveEndEffector] Target End efector Pose: "{}} << targetObjectPose);}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00053}00053 }
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00054}00054   moveGroupInterface.setPoseTarget(targetObjectPose, tip\_link\_);}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00054}00054   moveGroupInterface.setPoseTarget(targetObjectPose, \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a4b6f4468b2db565a07119ac90c067436}{tip\_link\_}});}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00055}00055   moveGroupInterface.setPoseReferenceFrame(targetObjectPose.header.frame\_id);}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00056}00056 }
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00057}00057   moveit::planning\_interface::MoveGroupInterface::Plan computedMotionPlan;}
@@ -69,22 +69,22 @@
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00065}00065     \textcolor{keywordflow}{if} (executionResult == moveit\_msgs::MoveItErrorCodes::SUCCESS)}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00066}00066     \{}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00067}00067       ROS\_INFO(\textcolor{stringliteral}{"{}[CbMoveEndEffector] motion execution succeeded"{}});}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00068}00068       movegroupClient\_-\/>postEventMotionExecutionSucceded();}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00069}00069       this-\/>postSuccessEvent();}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00068}00068       \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a86583cb37788b461fc8bb38102a8c0ed}{movegroupClient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_aebaf269db373d41837bae87651458e54}{postEventMotionExecutionSucceded}}();}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00069}00069       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_adf18efe1f0e4eacc1277b8865a8a94b1}{postSuccessEvent}}();}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00070}00070 }
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00071}00071     \}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00072}00072     \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00073}00073     \{}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00074}00074       ROS\_INFO(\textcolor{stringliteral}{"{}[CbMoveEndEffector] motion execution failed"{}});}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00075}00075       movegroupClient\_-\/>postEventMotionExecutionFailed();}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00076}00076       this-\/>postFailureEvent();}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00075}00075       \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a86583cb37788b461fc8bb38102a8c0ed}{movegroupClient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_a39dc3871d29b2af1ab739057f6ca6daa}{postEventMotionExecutionFailed}}();}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00076}00076       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_af6fa358cb1ab5ed16791a201f59260e0}{postFailureEvent}}();}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00077}00077     \}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00078}00078   \}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00079}00079   \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00080}00080   \{}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00081}00081     ROS\_INFO(\textcolor{stringliteral}{"{}[CbMoveEndEffector] motion execution failed"{}});}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00082}00082     movegroupClient\_-\/>postEventMotionExecutionFailed();}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00083}00083     this-\/>postFailureEvent();}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00082}00082     \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffector_a86583cb37788b461fc8bb38102a8c0ed}{movegroupClient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_a39dc3871d29b2af1ab739057f6ca6daa}{postEventMotionExecutionFailed}}();}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00083}00083     this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_af6fa358cb1ab5ed16791a201f59260e0}{postFailureEvent}}();}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00084}00084   \}}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00085}00085 }
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00086}00086   ROS\_DEBUG(\textcolor{stringliteral}{"{}[CbMoveEndEffector] Synchronous sleep of 1 seconds"{}});}

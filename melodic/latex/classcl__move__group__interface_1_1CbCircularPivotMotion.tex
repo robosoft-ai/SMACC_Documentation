@@ -1,0 +1,472 @@
+\hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion}{}\doxysection{cl\+\_\+move\+\_\+group\+\_\+interface\+::Cb\+Circular\+Pivot\+Motion Class Reference}
+\label{classcl__move__group__interface_1_1CbCircularPivotMotion}\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+
+
+{\ttfamily \#include $<$cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+h$>$}
+
+
+
+Inheritance diagram for cl\+\_\+move\+\_\+group\+\_\+interface\+::Cb\+Circular\+Pivot\+Motion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classcl__move__group__interface_1_1CbCircularPivotMotion__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cl\+\_\+move\+\_\+group\+\_\+interface\+::Cb\+Circular\+Pivot\+Motion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__group__interface_1_1CbCircularPivotMotion__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_adc0d93cb33df529d6a1e277fed25ceb1}{Cb\+Circular\+Pivot\+Motion}} (std\+::string tip\+Link=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_adff54e8098cab08fdf52839cd1e40dcb}{Cb\+Circular\+Pivot\+Motion}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&plane\+Pivot\+Pose, double delta\+Radians, std\+::string tip\+Link=\char`\"{}\char`\"{})
+\item 
+\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_ae2035c601c6eb32950dc1aba2aff5f3a}{Cb\+Circular\+Pivot\+Motion}} (const geometry\+\_\+msgs\+::\+Pose\+Stamped \&plane\+Pivot\+Pose, const geometry\+\_\+msgs\+::\+Pose \&relative\+Initial\+Pose, double delta\+Radians, std\+::string tip\+Link=\char`\"{}\char`\"{})
+\item 
+virtual void \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a8d019ec6b9b26a2af0740b915d441a40}{generate\+Trajectory}} () override
+\item 
+virtual void \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a48911ad62608cb00c04e979e2f6f644a}{create\+Markers}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::optional$<$ double $>$ \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a39fa383804d82285e07fa1c5a37cc587}{angular\+Speed\+\_\+rad\+\_\+s\+\_\+}}
+\item 
+boost\+::optional$<$ double $>$ \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_adf6f6bc7a7a55f5c3dff80475e33c2e3}{linear\+Speed\+\_\+m\+\_\+s\+\_\+}}
+\item 
+boost\+::optional$<$ geometry\+\_\+msgs\+::\+Pose $>$ \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relative\+Initial\+Pose\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+geometry\+\_\+msgs\+::\+Pose\+Stamped \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{plane\+Pivot\+Pose\+\_\+}}
+\item 
+double \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_afade33f1182615c64ea972075bfd2b95}{delta\+Radians\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a147d7113ed686709dc2d362e56a95ad9}{compute\+Current\+End\+Effector\+Pose\+Relative\+To\+Pivot}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00014}{14}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8h_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_adc0d93cb33df529d6a1e277fed25ceb1}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_adc0d93cb33df529d6a1e277fed25ceb1}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!CbCircularPivotMotion@{CbCircularPivotMotion}}
+\index{CbCircularPivotMotion@{CbCircularPivotMotion}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{CbCircularPivotMotion()}{CbCircularPivotMotion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::\+Cb\+Circular\+Pivot\+Motion (\begin{DoxyParamCaption}\item[{std\+::string}]{tip\+Link = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012         : \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_af7e718b0c53e912fd74968abbb0a4810}{CbMoveEndEffectorTrajectory}}(tipLink)}
+\DoxyCodeLine{00013     \{}
+\DoxyCodeLine{00014     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_adff54e8098cab08fdf52839cd1e40dcb}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_adff54e8098cab08fdf52839cd1e40dcb}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!CbCircularPivotMotion@{CbCircularPivotMotion}}
+\index{CbCircularPivotMotion@{CbCircularPivotMotion}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{CbCircularPivotMotion()}{CbCircularPivotMotion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::\+Cb\+Circular\+Pivot\+Motion (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{plane\+Pivot\+Pose,  }\item[{double}]{delta\+Radians,  }\item[{std\+::string}]{tip\+Link = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017         : \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}(planePivotPose), \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_afade33f1182615c64ea972075bfd2b95}{deltaRadians\_}}(deltaRadians), \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_af7e718b0c53e912fd74968abbb0a4810}{CbMoveEndEffectorTrajectory}}(tipLink)}
+\DoxyCodeLine{00018     \{}
+\DoxyCodeLine{00019     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_ae2035c601c6eb32950dc1aba2aff5f3a}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_ae2035c601c6eb32950dc1aba2aff5f3a}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!CbCircularPivotMotion@{CbCircularPivotMotion}}
+\index{CbCircularPivotMotion@{CbCircularPivotMotion}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{CbCircularPivotMotion()}{CbCircularPivotMotion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::\+Cb\+Circular\+Pivot\+Motion (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose\+Stamped \&}]{plane\+Pivot\+Pose,  }\item[{const geometry\+\_\+msgs\+::\+Pose \&}]{relative\+Initial\+Pose,  }\item[{double}]{delta\+Radians,  }\item[{std\+::string}]{tip\+Link = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022         : \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}(planePivotPose), \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relativeInitialPose\_}}(relativeInitialPose), \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_afade33f1182615c64ea972075bfd2b95}{deltaRadians\_}}(deltaRadians), \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_af7e718b0c53e912fd74968abbb0a4810}{CbMoveEndEffectorTrajectory}}(tipLink)}
+\DoxyCodeLine{00023     \{}
+\DoxyCodeLine{00024     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_a147d7113ed686709dc2d362e56a95ad9}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_a147d7113ed686709dc2d362e56a95ad9}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!computeCurrentEndEffectorPoseRelativeToPivot@{computeCurrentEndEffectorPoseRelativeToPivot}}
+\index{computeCurrentEndEffectorPoseRelativeToPivot@{computeCurrentEndEffectorPoseRelativeToPivot}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{computeCurrentEndEffectorPoseRelativeToPivot()}{computeCurrentEndEffectorPoseRelativeToPivot()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::compute\+Current\+End\+Effector\+Pose\+Relative\+To\+Pivot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122     \{}
+\DoxyCodeLine{00123         \textcolor{comment}{//auto currentRobotEndEffectorPose = this-\/>movegroupClient\_-\/>moveGroupClientInterface.getCurrentPose();}}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125         tf::TransformListener tfListener;}
+\DoxyCodeLine{00126         \textcolor{comment}{// tf::StampedTransform globalBaseLink;}}
+\DoxyCodeLine{00127         tf::StampedTransform endEffectorInPivotFrame;}
+\DoxyCodeLine{00128 }
+\DoxyCodeLine{00129         \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00130         \{}
+\DoxyCodeLine{00131             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a24c6c30b9b0761a61fa002d947bd3e11}{tipLink\_}} || *\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a24c6c30b9b0761a61fa002d947bd3e11}{tipLink\_}} == \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00132             \{}
+\DoxyCodeLine{00133                 \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a24c6c30b9b0761a61fa002d947bd3e11}{tipLink\_}} = this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_aea650d3e7836125b32be97392b71a7f3}{movegroupClient\_}}-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1ClMoveGroup_a92922ea689e4e1b7b91512c56629c95b}{moveGroupClientInterface}}.getEndEffectorLink();}
+\DoxyCodeLine{00134             \}}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136             tfListener.waitForTransform(\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.header.frame\_id, *\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a24c6c30b9b0761a61fa002d947bd3e11}{tipLink\_}}, ros::Time(0), ros::Duration(10));}
+\DoxyCodeLine{00137             tfListener.lookupTransform(\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.header.frame\_id, *\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a24c6c30b9b0761a61fa002d947bd3e11}{tipLink\_}}, ros::Time(0), endEffectorInPivotFrame);}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139             \textcolor{comment}{// we define here the global frame as the pivot frame id}}
+\DoxyCodeLine{00140             \textcolor{comment}{// tfListener.waitForTransform(currentRobotEndEffectorPose.header.frame\_id, planePivotPose\_.header.frame\_id, ros::Time(0), ros::Duration(10));}}
+\DoxyCodeLine{00141             \textcolor{comment}{// tfListener.lookupTransform(currentRobotEndEffectorPose.header.frame\_id, planePivotPose\_.header.frame\_id, ros::Time(0), globalBaseLink);}}
+\DoxyCodeLine{00142         \}}
+\DoxyCodeLine{00143         \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::exception \&e)}
+\DoxyCodeLine{00144         \{}
+\DoxyCodeLine{00145             std::cerr << e.what() << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00146         \}}
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148         \textcolor{comment}{// tf::Transform endEffectorInBaseLinkFrame;}}
+\DoxyCodeLine{00149         \textcolor{comment}{// tf::poseMsgToTF(currentRobotEndEffectorPose.pose, endEffectorInBaseLinkFrame);}}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151         \textcolor{comment}{// tf::Transform endEffectorInPivotFrame = globalBaseLink * endEffectorInBaseLinkFrame; // pose composition}}
+\DoxyCodeLine{00152 }
+\DoxyCodeLine{00153         \textcolor{comment}{// now pivot and EndEffector share a common reference frame (let say map)}}
+\DoxyCodeLine{00154         \textcolor{comment}{// now get the current pose from the pivot reference frame with inverse composition}}
+\DoxyCodeLine{00155         tf::Transform pivotTransform;}
+\DoxyCodeLine{00156         tf::poseMsgToTF(\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.pose, pivotTransform);}
+\DoxyCodeLine{00157         tf::Transform invertedNewReferenceFrame = pivotTransform.inverse();}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{00159         tf::Transform currentPoseRelativeToPivot = invertedNewReferenceFrame * endEffectorInPivotFrame;}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161         geometry\_msgs::Pose finalEndEffectorRelativePose;}
+\DoxyCodeLine{00162         tf::poseTFToMsg(currentPoseRelativeToPivot, finalEndEffectorRelativePose);}
+\DoxyCodeLine{00163         \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relativeInitialPose\_}} = finalEndEffectorRelativePose;}
+\DoxyCodeLine{00164     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__move__end__effector__trajectory_8h_source_l00093}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Move\+End\+Effector\+Trajectory\+::movegroup\+Client\+\_\+}}, \mbox{\hyperlink{cl__movegroup_8h_source_l00074}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cl\+Move\+Group\+::move\+Group\+Client\+Interface}}, \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00034}{plane\+Pivot\+Pose\+\_\+}}, \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00021}{relative\+Initial\+Pose\+\_\+}}, and \mbox{\hyperlink{cb__move__end__effector__trajectory_8h_source_l00042}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Move\+End\+Effector\+Trajectory\+::tip\+Link\+\_\+}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00026}{generate\+Trajectory()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__group__interface_1_1CbCircularPivotMotion_a147d7113ed686709dc2d362e56a95ad9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_a48911ad62608cb00c04e979e2f6f644a}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_a48911ad62608cb00c04e979e2f6f644a}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!createMarkers@{createMarkers}}
+\index{createMarkers@{createMarkers}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{createMarkers()}{createMarkers()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::create\+Markers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a442efa1d5bc9e9a16f74ecd31b13d9b5}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Move\+End\+Effector\+Trajectory}}.
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00166}{166}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00167     \{}
+\DoxyCodeLine{00168         \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a442efa1d5bc9e9a16f74ecd31b13d9b5}{CbMoveEndEffectorTrajectory::createMarkers}}();}
+\DoxyCodeLine{00169 }
+\DoxyCodeLine{00170         tf::Transform localdirection;}
+\DoxyCodeLine{00171         localdirection.setIdentity();}
+\DoxyCodeLine{00172         localdirection.setOrigin(tf::Vector3(0.12, 0, 0));}
+\DoxyCodeLine{00173         \textcolor{keyword}{auto} frameid = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.header.frame\_id;}
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{00175         visualization\_msgs::Marker marker;}
+\DoxyCodeLine{00176         marker.header.frame\_id = frameid;}
+\DoxyCodeLine{00177         marker.header.stamp = ros::Time::now();}
+\DoxyCodeLine{00178         marker.ns = \textcolor{stringliteral}{"{}trajectory"{}};}
+\DoxyCodeLine{00179         marker.id = \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a809fb5385adf27c0a1c8f8136566949c}{beahiorMarkers\_}}.markers.size();}
+\DoxyCodeLine{00180         marker.type = visualization\_msgs::Marker::ARROW;}
+\DoxyCodeLine{00181         marker.action = visualization\_msgs::Marker::ADD;}
+\DoxyCodeLine{00182         marker.scale.x = 0.01;}
+\DoxyCodeLine{00183         marker.scale.y = 0.02;}
+\DoxyCodeLine{00184         marker.scale.z = 0.02;}
+\DoxyCodeLine{00185         marker.color.a = 1.0;}
+\DoxyCodeLine{00186         marker.color.r = 0.0;}
+\DoxyCodeLine{00187         marker.color.g = 0;}
+\DoxyCodeLine{00188         marker.color.b = 1.0;}
+\DoxyCodeLine{00189 }
+\DoxyCodeLine{00190         geometry\_msgs::Point start, end;}
+\DoxyCodeLine{00191         start.x = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.pose.position.x;}
+\DoxyCodeLine{00192         start.y = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.pose.position.y;}
+\DoxyCodeLine{00193         start.z = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.pose.position.z;}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{00195         tf::Transform basetransform;}
+\DoxyCodeLine{00196         tf::poseMsgToTF(\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.pose, basetransform);}
+\DoxyCodeLine{00197         tf::Transform endarrow = localdirection * basetransform;}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199         end.x = endarrow.getOrigin().x();}
+\DoxyCodeLine{00200         end.y = endarrow.getOrigin().y();}
+\DoxyCodeLine{00201         end.z = endarrow.getOrigin().z();}
+\DoxyCodeLine{00202 }
+\DoxyCodeLine{00203         marker.pose.orientation.w = 1;}
+\DoxyCodeLine{00204         marker.points.push\_back(start);}
+\DoxyCodeLine{00205         marker.points.push\_back(end);}
+\DoxyCodeLine{00206 }
+\DoxyCodeLine{00207         \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a809fb5385adf27c0a1c8f8136566949c}{beahiorMarkers\_}}.markers.push\_back(marker);}
+\DoxyCodeLine{00208     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__move__end__effector__trajectory_8h_source_l00095}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Move\+End\+Effector\+Trajectory\+::beahior\+Markers\+\_\+}}, \mbox{\hyperlink{cb__move__end__effector__trajectory_8cpp_source_l00337}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Move\+End\+Effector\+Trajectory\+::create\+Markers()}}, and \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00034}{plane\+Pivot\+Pose\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__group__interface_1_1CbCircularPivotMotion_a48911ad62608cb00c04e979e2f6f644a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_a8d019ec6b9b26a2af0740b915d441a40}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_a8d019ec6b9b26a2af0740b915d441a40}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!generateTrajectory@{generateTrajectory}}
+\index{generateTrajectory@{generateTrajectory}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{generateTrajectory()}{generateTrajectory()}}
+{\footnotesize\ttfamily void cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::generate\+Trajectory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_aeae938ab66e18ab7d2fb2427bc83647b}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Move\+End\+Effector\+Trajectory}}.
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027     \{}
+\DoxyCodeLine{00028         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relativeInitialPose\_}})}
+\DoxyCodeLine{00029         \{}
+\DoxyCodeLine{00030             this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a147d7113ed686709dc2d362e56a95ad9}{computeCurrentEndEffectorPoseRelativeToPivot}}();}
+\DoxyCodeLine{00031         \}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033         \textcolor{comment}{// project offset into the xy-\/plane}}
+\DoxyCodeLine{00034         \textcolor{comment}{// get the radius}}
+\DoxyCodeLine{00035         \textcolor{keywordtype}{double} radius = sqrt(\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relativeInitialPose\_}}-\/>position.z * \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relativeInitialPose\_}}-\/>position.z + \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relativeInitialPose\_}}-\/>position.y * \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relativeInitialPose\_}}-\/>position.y);}
+\DoxyCodeLine{00036         \textcolor{keywordtype}{double} initialAngle = atan2(\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relativeInitialPose\_}}-\/>position.z, \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relativeInitialPose\_}}-\/>position.y);}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038         \textcolor{keywordtype}{double} totallineardist = fabs(radius * \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_afade33f1182615c64ea972075bfd2b95}{deltaRadians\_}});}
+\DoxyCodeLine{00039         \textcolor{keywordtype}{double} totalangulardist = fabs(\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_afade33f1182615c64ea972075bfd2b95}{deltaRadians\_}});}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041         \textcolor{comment}{// at least 1 sample per centimeter (average)}}
+\DoxyCodeLine{00042         \textcolor{comment}{// at least 1 sample per \string~1.1 degrees (average)}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044         \textcolor{keyword}{const} \textcolor{keywordtype}{double} RADS\_PER\_SAMPLE = 0.02;}
+\DoxyCodeLine{00045         \textcolor{keyword}{const} \textcolor{keywordtype}{double} METERS\_PER\_SAMPLE = 0.01;}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047         \textcolor{keywordtype}{int} totalSamplesCount = std::max(totallineardist / METERS\_PER\_SAMPLE, totalangulardist / RADS\_PER\_SAMPLE);}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049         \textcolor{keywordtype}{double} linearSecondsPerSample;}
+\DoxyCodeLine{00050         \textcolor{keywordtype}{double} angularSecondsPerSamples;}
+\DoxyCodeLine{00051         \textcolor{keywordtype}{double} secondsPerSample;}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_adf6f6bc7a7a55f5c3dff80475e33c2e3}{linearSpeed\_m\_s\_}})}
+\DoxyCodeLine{00054         \{}
+\DoxyCodeLine{00055             linearSecondsPerSample = METERS\_PER\_SAMPLE / (*linearSpeed\_m\_s\_);}
+\DoxyCodeLine{00056         \}}
+\DoxyCodeLine{00057         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00058         \{}
+\DoxyCodeLine{00059             linearSecondsPerSample = std::numeric\_limits<double>::max();}
+\DoxyCodeLine{00060         \}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a39fa383804d82285e07fa1c5a37cc587}{angularSpeed\_rad\_s\_}})}
+\DoxyCodeLine{00063         \{}
+\DoxyCodeLine{00064             angularSecondsPerSamples = RADS\_PER\_SAMPLE / (*angularSpeed\_rad\_s\_);}
+\DoxyCodeLine{00065         \}}
+\DoxyCodeLine{00066         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00067         \{}
+\DoxyCodeLine{00068             angularSecondsPerSamples = std::numeric\_limits<double>::max();}
+\DoxyCodeLine{00069         \}}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_adf6f6bc7a7a55f5c3dff80475e33c2e3}{linearSpeed\_m\_s\_}} \&\& !\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a39fa383804d82285e07fa1c5a37cc587}{angularSpeed\_rad\_s\_}})}
+\DoxyCodeLine{00072         \{}
+\DoxyCodeLine{00073             secondsPerSample = 0.5;}
+\DoxyCodeLine{00074         \}}
+\DoxyCodeLine{00075         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00076         \{}
+\DoxyCodeLine{00077             secondsPerSample = std::min(linearSecondsPerSample, angularSecondsPerSamples);}
+\DoxyCodeLine{00078         \}}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         \textcolor{keywordtype}{double} currentAngle = initialAngle;}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082         \textcolor{keywordtype}{double} angleStep = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_afade33f1182615c64ea972075bfd2b95}{deltaRadians\_}} / (double)totalSamplesCount;}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084         tf::Transform tfBasePose;}
+\DoxyCodeLine{00085         tf::poseMsgToTF(\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.pose, tfBasePose);}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < totalSamplesCount; i++)}
+\DoxyCodeLine{00088         \{}
+\DoxyCodeLine{00089             \textcolor{comment}{// relativePose i}}
+\DoxyCodeLine{00090             currentAngle += angleStep;}
+\DoxyCodeLine{00091             \textcolor{keywordtype}{double} y = radius * cos(currentAngle);}
+\DoxyCodeLine{00092             \textcolor{keywordtype}{double} z = radius * sin(currentAngle);}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094             geometry\_msgs::Pose relativeCurrentPose;}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096             relativeCurrentPose.position.x = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}{relativeInitialPose\_}}-\/>position.x;}
+\DoxyCodeLine{00097             relativeCurrentPose.position.y = y;}
+\DoxyCodeLine{00098             relativeCurrentPose.position.z = z;}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100             \textcolor{keyword}{auto} localquat = tf::createQuaternionFromRPY(currentAngle, 0, 0);}
+\DoxyCodeLine{00101             \textcolor{comment}{//relativeCurrentPose.orientation = relativeInitialPose\_.orientation;}}
+\DoxyCodeLine{00102             \textcolor{comment}{//tf::quaternionTFToMsg(localquat, relativeCurrentPose.orientation);}}
+\DoxyCodeLine{00103             relativeCurrentPose.orientation.w = 1;}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{00105             tf::Transform tfRelativeCurrentPose;}
+\DoxyCodeLine{00106             tf::poseMsgToTF(relativeCurrentPose, tfRelativeCurrentPose);}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108             tf::Transform tfGlobalPose = tfRelativeCurrentPose * tfBasePose;}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110             tfGlobalPose.setRotation(tfGlobalPose.getRotation() * localquat);}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112             geometry\_msgs::PoseStamped globalPose;}
+\DoxyCodeLine{00113             tf::poseTFToMsg(tfGlobalPose, globalPose.pose);}
+\DoxyCodeLine{00114             globalPose.header.frame\_id = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.header.frame\_id;}
+\DoxyCodeLine{00115             globalPose.header.stamp = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}{planePivotPose\_}}.header.stamp + ros::Duration(i * secondsPerSample);}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117             this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_ae13dfd31ea3660646e03882f0c2c29f0}{endEffectorTrajectory\_}}.push\_back(globalPose);}
+\DoxyCodeLine{00118         \}}
+\DoxyCodeLine{00119     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00017}{angular\+Speed\+\_\+rad\+\_\+s\+\_\+}}, \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00121}{compute\+Current\+End\+Effector\+Pose\+Relative\+To\+Pivot()}}, \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00036}{delta\+Radians\+\_\+}}, \mbox{\hyperlink{cb__move__end__effector__trajectory_8h_source_l00091}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Move\+End\+Effector\+Trajectory\+::end\+Effector\+Trajectory\+\_\+}}, \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00018}{linear\+Speed\+\_\+m\+\_\+s\+\_\+}}, \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00034}{plane\+Pivot\+Pose\+\_\+}}, and \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00021}{relative\+Initial\+Pose\+\_\+}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__move__group__interface_1_1CbCircularPivotMotion_a8d019ec6b9b26a2af0740b915d441a40_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_a39fa383804d82285e07fa1c5a37cc587}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_a39fa383804d82285e07fa1c5a37cc587}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!angularSpeed\_rad\_s\_@{angularSpeed\_rad\_s\_}}
+\index{angularSpeed\_rad\_s\_@{angularSpeed\_rad\_s\_}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{angularSpeed\_rad\_s\_}{angularSpeed\_rad\_s\_}}
+{\footnotesize\ttfamily boost\+::optional$<$double$>$ cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::angular\+Speed\+\_\+rad\+\_\+s\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00017}{17}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8h_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00026}{generate\+Trajectory()}}.
+
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_afade33f1182615c64ea972075bfd2b95}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_afade33f1182615c64ea972075bfd2b95}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!deltaRadians\_@{deltaRadians\_}}
+\index{deltaRadians\_@{deltaRadians\_}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{deltaRadians\_}{deltaRadians\_}}
+{\footnotesize\ttfamily double cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::delta\+Radians\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00036}{36}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8h_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__end__effector__rotate_8cpp_source_l00005}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+End\+Effector\+Rotate\+::\+Cb\+End\+Effector\+Rotate()}}, and \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00026}{generate\+Trajectory()}}.
+
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_adf6f6bc7a7a55f5c3dff80475e33c2e3}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_adf6f6bc7a7a55f5c3dff80475e33c2e3}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!linearSpeed\_m\_s\_@{linearSpeed\_m\_s\_}}
+\index{linearSpeed\_m\_s\_@{linearSpeed\_m\_s\_}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{linearSpeed\_m\_s\_}{linearSpeed\_m\_s\_}}
+{\footnotesize\ttfamily boost\+::optional$<$double$>$ cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::linear\+Speed\+\_\+m\+\_\+s\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00018}{18}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8h_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00026}{generate\+Trajectory()}}.
+
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_a0994efbe93b9f9a61fcf3703c360cda2}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!planePivotPose\_@{planePivotPose\_}}
+\index{planePivotPose\_@{planePivotPose\_}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{planePivotPose\_}{planePivotPose\_}}
+{\footnotesize\ttfamily geometry\+\_\+msgs\+::\+Pose\+Stamped cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::plane\+Pivot\+Pose\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00034}{34}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8h_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00121}{compute\+Current\+End\+Effector\+Pose\+Relative\+To\+Pivot()}}, \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00166}{create\+Markers()}}, \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00026}{generate\+Trajectory()}}, and \mbox{\hyperlink{cb__end__effector__rotate_8cpp_source_l00016}{cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+End\+Effector\+Rotate\+::on\+Entry()}}.
+
+\mbox{\Hypertarget{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}\label{classcl__move__group__interface_1_1CbCircularPivotMotion_a1b2cc65d2f27a4dec54c20f1f00d4bb8}} 
+\index{cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}!relativeInitialPose\_@{relativeInitialPose\_}}
+\index{relativeInitialPose\_@{relativeInitialPose\_}!cl\_move\_group\_interface::CbCircularPivotMotion@{cl\_move\_group\_interface::CbCircularPivotMotion}}
+\doxysubsubsection{\texorpdfstring{relativeInitialPose\_}{relativeInitialPose\_}}
+{\footnotesize\ttfamily boost\+::optional$<$geometry\+\_\+msgs\+::\+Pose$>$ cl\+\_\+move\+\_\+group\+\_\+interface\+::\+Cb\+Circular\+Pivot\+Motion\+::relative\+Initial\+Pose\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{cb__circular__pivot__motion_8h_source_l00021}{21}} of file \mbox{\hyperlink{cb__circular__pivot__motion_8h_source}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00121}{compute\+Current\+End\+Effector\+Pose\+Relative\+To\+Pivot()}}, and \mbox{\hyperlink{cb__circular__pivot__motion_8cpp_source_l00026}{generate\+Trajectory()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+client\+\_\+library/move\+\_\+group\+\_\+interface\+\_\+client/include/move\+\_\+group\+\_\+interface\+\_\+client/client\+\_\+behaviors/\mbox{\hyperlink{cb__circular__pivot__motion_8h}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+h}}\item 
+smacc\+\_\+client\+\_\+library/move\+\_\+group\+\_\+interface\+\_\+client/src/move\+\_\+group\+\_\+interface\+\_\+client/client\+\_\+behaviors/\mbox{\hyperlink{cb__circular__pivot__motion_8cpp}{cb\+\_\+circular\+\_\+pivot\+\_\+motion.\+cpp}}\end{DoxyCompactItemize}

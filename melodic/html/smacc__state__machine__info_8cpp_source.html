@@ -69,23 +69,23 @@ $(function() {
   <div class="headertitle"><div class="title">smacc_state_machine_info.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="smacc__state__machine__info_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;smacc/introspection/introspection.h&gt;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;smacc/smacc_state_machine.h&gt;</span></div>
+<a href="smacc__state__machine__info_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;<a class="code" href="introspection_8h.html">smacc/introspection/introspection.h</a>&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;<a class="code" href="smacc__state__machine_8h.html">smacc/smacc_state_machine.h</a>&gt;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesmacc.html">smacc</a></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keywordtype">void</span> SmaccStateMachineInfo::assembleSMStructureMessage(ISmaccStateMachine *sm)</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#a6758065a8d1faaa7c3688cf0dffe9334">    6</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#a6758065a8d1faaa7c3688cf0dffe9334">SmaccStateMachineInfo::assembleSMStructureMessage</a>(<a class="code hl_class" href="classsmacc_1_1ISmaccStateMachine.html">ISmaccStateMachine</a> *sm)</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        ROS_INFO(<span class="stringliteral">&quot;----------- PRINT STATE MACHINE STRUCTURE -------------------&quot;</span>);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        stateMsgs.clear();</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;val : this-&gt;states)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#a48e3ff7bbe2673d23e6942234446ebee">stateMsgs</a>.clear();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;val : this-&gt;<a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#aef31d74ad3669f0b0f57fe0e008cd2f8">states</a>)</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            smacc_msgs::SmaccState stateMsg;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            <span class="keyword">auto</span> state = val.second;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            stateMsg.index = state-&gt;stateIndex_;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            std::stringstream ss;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            ss &lt;&lt; <span class="stringliteral">&quot;**** State: &quot;</span> &lt;&lt; demangleSymbol(val.first.c_str()) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            ss &lt;&lt; <span class="stringliteral">&quot;**** State: &quot;</span> &lt;&lt; <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302">demangleSymbol</a>(val.first.c_str()) &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            stateMsg.name = state-&gt;getDemangledFullName();</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            stateMsg.level = (int)state-&gt;getStateLevel();</div>
@@ -135,9 +135,9 @@ $(function() {
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            std::map&lt;const std::type_info *, std::vector&lt;smacc::ClientBehaviorInfoEntry *&gt;&gt; smaccBehaviorInfoMappingByOrthogonalType;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            ss &lt;&lt; <span class="stringliteral">&quot; Orthogonals:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (SmaccStateInfo::staticBehaviorInfo.count(statetid) &gt; 0)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateInfo.html#ad3d8b3450060cb0b91f38fb2fe0a7678">SmaccStateInfo::staticBehaviorInfo</a>.count(statetid) &gt; 0)</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bhinfo : SmaccStateInfo::staticBehaviorInfo[statetid])</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bhinfo : <a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateInfo.html#ad3d8b3450060cb0b91f38fb2fe0a7678">SmaccStateInfo::staticBehaviorInfo</a>[statetid])</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    <span class="keywordflow">if</span> (smaccBehaviorInfoMappingByOrthogonalType.count(bhinfo.orthogonalType) == 0)</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    {</div>
@@ -148,14 +148,14 @@ $(function() {
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keyword">auto</span> &amp;runtimeOrthogonals = sm-&gt;getOrthogonals();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keyword">auto</span> &amp;runtimeOrthogonals = sm-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccStateMachine.html#a7f5b2882dbd077584767cb2533ed3c49">getOrthogonals</a>();</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;orthogonal : runtimeOrthogonals)</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                smacc_msgs::SmaccOrthogonal orthogonalMsg;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keyword">const</span> <span class="keyword">auto</span> *orthogonaltid = &amp;<span class="keyword">typeid</span>(*(orthogonal.second));</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                orthogonalMsg.name = demangleSymbol(orthogonaltid-&gt;name());</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                orthogonalMsg.name = <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302">demangleSymbol</a>(orthogonaltid-&gt;name());</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                ss &lt;&lt; <span class="stringliteral">&quot; - orthogonal: &quot;</span> &lt;&lt; orthogonalMsg.name &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
@@ -164,7 +164,7 @@ $(function() {
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    <span class="keyword">auto</span> &amp;behaviors = smaccBehaviorInfoMappingByOrthogonalType[orthogonaltid];</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;bhinfo : behaviors)</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                    {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                        <span class="keyword">auto</span> ClientBehaviorName = demangleSymbol(bhinfo-&gt;behaviorType-&gt;name());</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                        <span class="keyword">auto</span> ClientBehaviorName = <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302">demangleSymbol</a>(bhinfo-&gt;behaviorType-&gt;name());</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                        orthogonalMsg.client_behavior_names.push_back(ClientBehaviorName);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                        ss &lt;&lt; <span class="stringliteral">&quot;          - client behavior: &quot;</span> &lt;&lt; ClientBehaviorName &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                    }</div>
@@ -193,14 +193,14 @@ $(function() {
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            ss &lt;&lt; <span class="stringliteral">&quot; State event generators:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">if</span> (SmaccStateInfo::eventGeneratorsInfo.count(statetid) &gt; 0)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateInfo.html#ae38b8c98fb7808cc67b67e1f97ddbf74">SmaccStateInfo::eventGeneratorsInfo</a>.count(statetid) &gt; 0)</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            {</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                <span class="keywordtype">int</span> k = 0;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;eginfo : SmaccStateInfo::eventGeneratorsInfo[statetid])</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;eginfo : <a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateInfo.html#ae38b8c98fb7808cc67b67e1f97ddbf74">SmaccStateInfo::eventGeneratorsInfo</a>[statetid])</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                {</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    smacc_msgs::SmaccEventGenerator eventGeneratorMsg;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    eventGeneratorMsg.index = k++;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    eventGeneratorMsg.type_name = demangleSymbol(eginfo-&gt;eventGeneratorType-&gt;name());</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    eventGeneratorMsg.type_name = <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302">demangleSymbol</a>(eginfo-&gt;eventGeneratorType-&gt;name());</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                    ss &lt;&lt; <span class="stringliteral">&quot; - event generator: &quot;</span> &lt;&lt; eventGeneratorMsg.type_name &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                    <span class="keywordflow">if</span> (eginfo-&gt;objectTagType != <span class="keyword">nullptr</span>)</div>
@@ -213,14 +213,14 @@ $(function() {
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            }</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            ss &lt;&lt; <span class="stringliteral">&quot; State reactors:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">if</span> (SmaccStateInfo::stateReactorsInfo.count(statetid) &gt; 0)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateInfo.html#abd1d6ca5060c87f6bd11fde3e5b2ac4d">SmaccStateInfo::stateReactorsInfo</a>.count(statetid) &gt; 0)</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                <span class="keywordtype">int</span> k = 0;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;srinfo : SmaccStateInfo::stateReactorsInfo[statetid])</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;srinfo : <a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateInfo.html#abd1d6ca5060c87f6bd11fde3e5b2ac4d">SmaccStateInfo::stateReactorsInfo</a>[statetid])</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                {</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                    smacc_msgs::SmaccStateReactor stateReactorMsg;</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    stateReactorMsg.index = k++;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                    stateReactorMsg.type_name = demangleSymbol(srinfo-&gt;stateReactorType-&gt;name());</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                    stateReactorMsg.type_name = <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302">demangleSymbol</a>(srinfo-&gt;stateReactorType-&gt;name());</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                    ss &lt;&lt; <span class="stringliteral">&quot; - state reactor: &quot;</span> &lt;&lt; stateReactorMsg.type_name &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                    <span class="keywordflow">if</span> (srinfo-&gt;objectTagType != <span class="keyword">nullptr</span>)</div>
@@ -259,16 +259,27 @@ $(function() {
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            }</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            ROS_INFO_STREAM(ss.str());</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            stateMsgs.push_back(stateMsg);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#a48e3ff7bbe2673d23e6942234446ebee">stateMsgs</a>.push_back(stateMsg);</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        }</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        std::sort(stateMsgs.begin(), stateMsgs.end(), [](<span class="keyword">auto</span> &amp;a, <span class="keyword">auto</span> &amp;b) {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        std::sort(<a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#a48e3ff7bbe2673d23e6942234446ebee">stateMsgs</a>.begin(), <a class="code hl_variable" href="classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#a48e3ff7bbe2673d23e6942234446ebee">stateMsgs</a>.end(), [](<span class="keyword">auto</span> &amp;a, <span class="keyword">auto</span> &amp;b) {</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            return a.index &gt; b.index;</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        });</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    }</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>} <span class="comment">// namespace smacc</span></div>
+<div class="ttc" id="aclasssmacc_1_1ISmaccStateMachine_html"><div class="ttname"><a href="classsmacc_1_1ISmaccStateMachine.html">smacc::ISmaccStateMachine</a></div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine_8h_source.html#l00049">smacc_state_machine.h:50</a></div></div>
+<div class="ttc" id="aclasssmacc_1_1ISmaccStateMachine_html_a7f5b2882dbd077584767cb2533ed3c49"><div class="ttname"><a href="classsmacc_1_1ISmaccStateMachine.html#a7f5b2882dbd077584767cb2533ed3c49">smacc::ISmaccStateMachine::getOrthogonals</a></div><div class="ttdeci">const std::map&lt; std::string, std::shared_ptr&lt; smacc::ISmaccOrthogonal &gt; &gt; &amp; getOrthogonals() const</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine_8cpp_source.html#l00061">smacc_state_machine.cpp:61</a></div></div>
+<div class="ttc" id="aclasssmacc_1_1introspection_1_1SmaccStateInfo_html_abd1d6ca5060c87f6bd11fde3e5b2ac4d"><div class="ttname"><a href="classsmacc_1_1introspection_1_1SmaccStateInfo.html#abd1d6ca5060c87f6bd11fde3e5b2ac4d">smacc::introspection::SmaccStateInfo::stateReactorsInfo</a></div><div class="ttdeci">static std::map&lt; const std::type_info *, std::vector&lt; std::shared_ptr&lt; SmaccStateReactorInfo &gt; &gt; &gt; stateReactorsInfo</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__info_8h_source.html#l00143">smacc_state_info.h:143</a></div></div>
+<div class="ttc" id="aclasssmacc_1_1introspection_1_1SmaccStateInfo_html_ad3d8b3450060cb0b91f38fb2fe0a7678"><div class="ttname"><a href="classsmacc_1_1introspection_1_1SmaccStateInfo.html#ad3d8b3450060cb0b91f38fb2fe0a7678">smacc::introspection::SmaccStateInfo::staticBehaviorInfo</a></div><div class="ttdeci">static std::map&lt; const std::type_info *, std::vector&lt; ClientBehaviorInfoEntry &gt; &gt; staticBehaviorInfo</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__info_8h_source.html#l00142">smacc_state_info.h:142</a></div></div>
+<div class="ttc" id="aclasssmacc_1_1introspection_1_1SmaccStateInfo_html_ae38b8c98fb7808cc67b67e1f97ddbf74"><div class="ttname"><a href="classsmacc_1_1introspection_1_1SmaccStateInfo.html#ae38b8c98fb7808cc67b67e1f97ddbf74">smacc::introspection::SmaccStateInfo::eventGeneratorsInfo</a></div><div class="ttdeci">static std::map&lt; const std::type_info *, std::vector&lt; std::shared_ptr&lt; SmaccEventGeneratorInfo &gt; &gt; &gt; eventGeneratorsInfo</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__info_8h_source.html#l00144">smacc_state_info.h:144</a></div></div>
+<div class="ttc" id="aclasssmacc_1_1introspection_1_1SmaccStateMachineInfo_html_a48e3ff7bbe2673d23e6942234446ebee"><div class="ttname"><a href="classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#a48e3ff7bbe2673d23e6942234446ebee">smacc::introspection::SmaccStateMachineInfo::stateMsgs</a></div><div class="ttdeci">std::vector&lt; smacc_msgs::SmaccState &gt; stateMsgs</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine__info_8h_source.html#l00028">smacc_state_machine_info.h:28</a></div></div>
+<div class="ttc" id="aclasssmacc_1_1introspection_1_1SmaccStateMachineInfo_html_a6758065a8d1faaa7c3688cf0dffe9334"><div class="ttname"><a href="classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#a6758065a8d1faaa7c3688cf0dffe9334">smacc::introspection::SmaccStateMachineInfo::assembleSMStructureMessage</a></div><div class="ttdeci">void assembleSMStructureMessage(ISmaccStateMachine *sm)</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine__info_8cpp_source.html#l00006">smacc_state_machine_info.cpp:6</a></div></div>
+<div class="ttc" id="aclasssmacc_1_1introspection_1_1SmaccStateMachineInfo_html_aef31d74ad3669f0b0f57fe0e008cd2f8"><div class="ttname"><a href="classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#aef31d74ad3669f0b0f57fe0e008cd2f8">smacc::introspection::SmaccStateMachineInfo::states</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; SmaccStateInfo &gt; &gt; states</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine__info_8h_source.html#l00026">smacc_state_machine_info.h:26</a></div></div>
+<div class="ttc" id="aintrospection_8h_html"><div class="ttname"><a href="introspection_8h.html">introspection.h</a></div></div>
+<div class="ttc" id="anamespacesmacc_1_1introspection_html_a2f495108db3e57604d8d3ff5ef030302"><div class="ttname"><a href="namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302">smacc::introspection::demangleSymbol</a></div><div class="ttdeci">std::string demangleSymbol(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="introspection_8h_source.html#l00051">introspection.h:51</a></div></div>
 <div class="ttc" id="anamespacesmacc_1_1introspection_html_a6c1b51c4d44fd5e41fe218f1ee150681"><div class="ttname"><a href="namespacesmacc_1_1introspection.html#a6c1b51c4d44fd5e41fe218f1ee150681">smacc::introspection::transitionInfoToMsg</a></div><div class="ttdeci">void transitionInfoToMsg(const SmaccTransitionInfo &amp;transition, smacc_msgs::SmaccTransition &amp;transitionMsg)</div><div class="ttdef"><b>Definition:</b> <a href="reflection_8cpp_source.html#l00009">reflection.cpp:9</a></div></div>
-<div class="ttc" id="anamespacesmacc_html"><div class="ttname"><a href="namespacesmacc.html">smacc</a></div><div class="ttdef"><b>Definition:</b> <a href="client_8cpp_source.html#l00011">client.cpp:12</a></div></div>
+<div class="ttc" id="anamespacesmacc_html"><div class="ttname"><a href="namespacesmacc.html">smacc</a></div><div class="ttdef"><b>Definition:</b> <a href="cp__ros__control__interface_8h_source.html#l00005">cp_ros_control_interface.h:6</a></div></div>
+<div class="ttc" id="asmacc__state__machine_8h_html"><div class="ttname"><a href="smacc__state__machine_8h.html">smacc_state_machine.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

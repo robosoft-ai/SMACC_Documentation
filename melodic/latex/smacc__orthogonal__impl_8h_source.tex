@@ -1,0 +1,175 @@
+\hypertarget{smacc__orthogonal__impl_8h_source}{}\doxysection{smacc\+\_\+orthogonal\+\_\+impl.\+h}
+\label{smacc__orthogonal__impl_8h_source}\index{smacc/include/smacc/impl/smacc\_orthogonal\_impl.h@{smacc/include/smacc/impl/smacc\_orthogonal\_impl.h}}
+\mbox{\hyperlink{smacc__orthogonal__impl_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__orthogonal_8h}{smacc/smacc\_orthogonal.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__client_8h}{smacc/smacc\_client.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00015}00015 \textcolor{keyword}{template} <\textcolor{keyword}{typename} SmaccClientType>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00016}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a602e16b09f8a1b3de889f2f3d90a3211}{00016}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a602e16b09f8a1b3de889f2f3d90a3211}{ISmaccOrthogonal::requiresClient}}(SmaccClientType *\&storage)}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00018}00018     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&client : \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a0f270e9c8c126198f6bce542ab4e04ba}{clients\_}})}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00020}00020         storage = \textcolor{keyword}{dynamic\_cast<}SmaccClientType *\textcolor{keyword}{>}(client.get());}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00021}00021         \textcolor{keywordflow}{if} (storage != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00022}00022             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00023}00023     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00025}00025     \textcolor{keyword}{auto} requiredClientName = demangledTypeName<SmaccClientType>();}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00026}00026     ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}Required client ["{}}<< requiredClientName<< \textcolor{stringliteral}{"{}] not found in current orthogonal. Searching in other orthogonals."{}});}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00028}00028     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&orthoentry : this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_aae265ec480b8ed552ddc79afd2d93a62}{getStateMachine}}()-\/>getOrthogonals())}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00029}00029     \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00030}00030         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&client : orthoentry.second-\/>getClients())}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00031}00031         \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00032}00032             storage = \textcolor{keyword}{dynamic\_cast<}SmaccClientType *\textcolor{keyword}{>}(client.get());}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00033}00033             \textcolor{keywordflow}{if} (storage != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00034}00034             \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00035}00035                 ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}Required client  ["{}}<< requiredClientName<<\textcolor{stringliteral}{"{}] found in other orthogonal."{}});}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00036}00036                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00037}00037             \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00038}00038         \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00039}00039     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00041}00041     ROS\_ERROR\_STREAM(\textcolor{stringliteral}{"{}Required client ["{}}<< requiredClientName<< \textcolor{stringliteral}{"{}] not found even in other orthogonals. Returning null pointer. If the requested client is used may result in a segmentation fault."{}});}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00042}00042     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00045}00045 \textcolor{keyword}{template} <\textcolor{keyword}{typename} SmaccComponentType>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00046}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a3f66cf4680e3026a6789769c8ea1aa83}{00046}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a3f66cf4680e3026a6789769c8ea1aa83}{ISmaccOrthogonal::requiresComponent}}(SmaccComponentType *\&storage)}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00047}00047 \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00048}00048     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a418b2e094a65013444ec1fca7e94f28d}{stateMachine\_}} == \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00049}00049     \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00050}00050         ROS\_ERROR(\textcolor{stringliteral}{"{}Cannot use the requiresComponent funcionality from an orthogonal before onInitialize"{}});}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00051}00051     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00052}00052     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00053}00053     \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00054}00054         \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a418b2e094a65013444ec1fca7e94f28d}{stateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_aa6b25e28f3bce24c4b356dc865a9eb7b}{requiresComponent}}(storage);}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00056}00056 \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00058}00058 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} TClient>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00059}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a2241e4d2018f5bd74bd1925f19791606}{00059}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a2241e4d2018f5bd74bd1925f19791606}{ISmaccOrthogonal::assignClientToOrthogonal}}(\mbox{\hyperlink{classTClient}{TClient}}* client)}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00060}00060 \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00061}00061     client-\/>setStateMachine(\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_aae265ec480b8ed552ddc79afd2d93a62}{getStateMachine}}());}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00062}00062     client-\/>setOrthogonal(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00064}00064     client-\/>template onOrthogonalAllocation<TOrthogonal, TClient>();}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00065}00065 \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00067}00067 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TClientBehavior>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00068}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a463bb235217511954feb4133394c4c61}{00068}} TClientBehavior *\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a463bb235217511954feb4133394c4c61}{ISmaccOrthogonal::getClientBehavior}}()}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00069}00069 \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00070}00070     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&cb : this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a02df51ab34a478841c54cbbba1b161c3}{clientBehaviors\_}})}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00071}00071     \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00072}00072         \textcolor{keyword}{auto} *ret = \textcolor{keyword}{dynamic\_cast<}TClientBehavior *\textcolor{keyword}{>}(cb.get());}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00073}00073         \textcolor{keywordflow}{if} (ret != \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00074}00074         \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00075}00075             \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00076}00076         \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00077}00077     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00079}00079     \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00080}00080 \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00082}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a83f1d5390ec41d91566e6f034b25b7d9}{00082}} \textcolor{keyword}{inline} \textcolor{keyword}{const} std::vector<std::shared\_ptr<smacc::ISmaccClient>> \&\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a83f1d5390ec41d91566e6f034b25b7d9}{ISmaccOrthogonal::getClients}}()}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00083}00083 \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00084}00084     \textcolor{keywordflow}{return} \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a0f270e9c8c126198f6bce542ab4e04ba}{clients\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00085}00085 \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00087}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_adf67a263e149fc2e96591484b5e9c7aa}{00087}} \textcolor{keyword}{inline} \textcolor{keyword}{const} std::vector<std::shared\_ptr<smacc::ISmaccClientBehavior>> \&\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_adf67a263e149fc2e96591484b5e9c7aa}{ISmaccOrthogonal::getClientBehaviors}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00088}00088 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00089}00089     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a02df51ab34a478841c54cbbba1b161c3}{clientBehaviors\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00090}00090 \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00092}00092 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00093}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a2b5b15907fa6c7c6882717246f0633ab}{00093}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a2b5b15907fa6c7c6882717246f0633ab}{ISmaccOrthogonal::setGlobalSMData}}(std::string name, T value)}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00094}00094 \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00095}00095     this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_aae265ec480b8ed552ddc79afd2d93a62}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a8588f9e580fbb95b53e2bd2ca3ff1f98}{setGlobalSMData}}(name, value);}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00096}00096 \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00098}00098 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00099}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_aa763280bc6980811744c8e8f11b2dcd0}{00099}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_aa763280bc6980811744c8e8f11b2dcd0}{ISmaccOrthogonal::getGlobalSMData}}(std::string name, T \&ret)}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00100}00100 \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00101}00101     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_aae265ec480b8ed552ddc79afd2d93a62}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_aeda2d6813c6c428bf318a5792e014b61}{getGlobalSMData}}(name, ret);}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00102}00102 \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00104}00104 \textcolor{comment}{//inline}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00105}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_aae265ec480b8ed552ddc79afd2d93a62}{00105}} \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmaccStateMachine}} *\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_aae265ec480b8ed552ddc79afd2d93a62}{ISmaccOrthogonal::getStateMachine}}() \{ \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a418b2e094a65013444ec1fca7e94f28d}{stateMachine\_}}; \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00107}00107 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} TClient>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00108}\mbox{\hyperlink{classsmacc_1_1ClientHandler}{00108}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1ClientHandler}{ClientHandler}} : \textcolor{keyword}{public} \mbox{\hyperlink{classTClient}{TClient}}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00109}00109 \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00110}00110 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00111}00111     \textcolor{keyword}{template} <\textcolor{keyword}{typename}... TArgs>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00112}\mbox{\hyperlink{classsmacc_1_1ClientHandler_a5f92ec0fcc8bf24d2d5ef6eb60e987d7}{00112}}     \mbox{\hyperlink{classsmacc_1_1ClientHandler_a5f92ec0fcc8bf24d2d5ef6eb60e987d7}{ClientHandler}}(TArgs... args)}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00113}00113         : \mbox{\hyperlink{classTClient}{TClient}}(args...)}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00114}00114     \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00115}00115     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00117}\mbox{\hyperlink{classsmacc_1_1ClientHandler_a73f354900b489edacad7ccb411c272da}{00117}}     \mbox{\hyperlink{classsmacc_1_1ClientHandler_a73f354900b489edacad7ccb411c272da}{ClientHandler}}()}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00118}00118         : \mbox{\hyperlink{classTClient}{TClient}}()}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00119}00119     \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00120}00120     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00122}00122     \textcolor{keyword}{template} <\textcolor{keyword}{typename} SmaccComponentType, \textcolor{keyword}{typename}... TArgs>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00123}\mbox{\hyperlink{classsmacc_1_1ClientHandler_af4772a8d618b863855b1d4dabda900af}{00123}}     SmaccComponentType *\mbox{\hyperlink{classsmacc_1_1ClientHandler_af4772a8d618b863855b1d4dabda900af}{createComponent}}(TArgs... targs)}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00124}00124     \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00125}00125         \textcolor{keywordflow}{return} \mbox{\hyperlink{classsmacc_1_1ISmaccClient_a5c1c8eb5e91a3b399662a52cb0ca86aa}{ISmaccClient::createComponent}}<SmaccComponentType, TOrthogonal, \mbox{\hyperlink{classTClient}{TClient}}, TArgs...>(targs...);}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00126}00126     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00128}00128     \textcolor{keyword}{template} <\textcolor{keyword}{typename} SmaccComponentType, \textcolor{keyword}{typename}... TArgs>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00129}\mbox{\hyperlink{classsmacc_1_1ClientHandler_a084c1275072ac07e182a2e0f054f3a7b}{00129}}     SmaccComponentType *\mbox{\hyperlink{classsmacc_1_1ClientHandler_a084c1275072ac07e182a2e0f054f3a7b}{createNamedComponent}}(std::string name, TArgs... targs)}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00130}00130     \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00131}00131         \textcolor{keywordflow}{return} \mbox{\hyperlink{classsmacc_1_1ISmaccClient_affcc2f95bc993b5f07ef0d6ab6eec8f1}{ISmaccClient::createNamedComponent}}<SmaccComponentType, TOrthogonal, \mbox{\hyperlink{classTClient}{TClient}}, TArgs...>(name, targs...);}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00132}00132     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00134}\mbox{\hyperlink{classsmacc_1_1ClientHandler_a018a50262de782c479414cf18daddac9}{00134}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa6ffd9c39811d59f7c771941b7fad860}{smacc::introspection::TypeInfo::Ptr}} \mbox{\hyperlink{classsmacc_1_1ClientHandler_a018a50262de782c479414cf18daddac9}{getType}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00135}00135 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00136}00136         \textcolor{keywordflow}{return} smacc::introspection::TypeInfo::getTypeInfoFromType<TClient>();}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00137}00137     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00138}00138 \};}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00140}00140 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00141}\mbox{\hyperlink{classsmacc_1_1Orthogonal}{00141}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1Orthogonal}{Orthogonal}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal}{ISmaccOrthogonal}}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00142}00142 \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00143}00143 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00144}00144     \textcolor{keyword}{template} <\textcolor{keyword}{typename} \mbox{\hyperlink{classTClient}{TClient}}, \textcolor{keyword}{typename}... TArgs>}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00145}\mbox{\hyperlink{classsmacc_1_1Orthogonal_afda12e614a3b6e918a3d2ebc901f9321}{00145}}     std::shared\_ptr<ClientHandler<TOrthogonal, TClient>> \mbox{\hyperlink{classsmacc_1_1Orthogonal_afda12e614a3b6e918a3d2ebc901f9321}{createClient}}(TArgs... args)}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00146}00146     \{}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00147}00147         \textcolor{comment}{//static\_assert(std::is\_base\_of<ISmaccOrthogonal, TOrthogonal>::value, "{}The object Tag must be the orthogonal type where the client was created"{});}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00148}00148         \textcolor{comment}{// if (typeid(*this) != typeid(TOrthogonal))}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00149}00149         \textcolor{comment}{// \{}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00150}00150         \textcolor{comment}{//     ROS\_ERROR\_STREAM("{}Error creating client. The object Tag must be the type of the orthogonal where the client was created:"{} << demangleType(typeid(*this)) << "{}. The object creation was skipped and a nullptr was returned"{});}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00151}00151         \textcolor{comment}{//     return nullptr;}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00152}00152         \textcolor{comment}{// \}}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00154}00154         ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] creates a client of type '\%s' and object tag '\%s'"{}},}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00155}00155                     \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(*\textcolor{keyword}{this})).c\_str(),}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00156}00156                     demangledTypeName<TClient>().c\_str(),}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00157}00157                     demangledTypeName<TOrthogonal>().c\_str()}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00158}00158                 );}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00160}00160         \textcolor{keyword}{auto} client = std::make\_shared<ClientHandler<TOrthogonal, TClient>>(args...);}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00161}00161         this-\/>\textcolor{keyword}{template} assignClientToOrthogonal<TOrthogonal, TClient>(client.get());}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00163}00163         \textcolor{comment}{// it is stored the client (not the client handler)}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00164}00164         \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a0f270e9c8c126198f6bce542ab4e04ba}{clients\_}}.push\_back(client);}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00166}00166         \textcolor{keywordflow}{return} client;}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00167}00167     \}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00168}00168 \};}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00169}00169 \}; \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}
