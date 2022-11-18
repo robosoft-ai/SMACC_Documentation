@@ -2,7 +2,7 @@
 \label{cb__pouring__motion_8cpp_source}\index{smacc\_client\_library/move\_group\_interface\_client/src/move\_group\_interface\_client/client\_behaviors/cb\_pouring\_motion.cpp@{smacc\_client\_library/move\_group\_interface\_client/src/move\_group\_interface\_client/client\_behaviors/cb\_pouring\_motion.cpp}}
 \mbox{\hyperlink{cb__pouring__motion_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__pouring__motion_8h}{move\_group\_interface\_client/client\_behaviors/cb\_pouring\_motion.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <move\_group\_interface\_client/client\_behaviors/cb\_pouring\_motion.h>}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00002}00002 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00003}00003 \textcolor{comment}{/*****************************************************************************************************************}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00004}00004 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018-\/2020}}
@@ -10,25 +10,25 @@
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00006}00006 \textcolor{comment}{ *}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00007}00007 \textcolor{comment}{ ******************************************************************************************************************/}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00008}00008 }
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cb__circular__pivot__motion_8h}{move\_group\_interface\_client/client\_behaviors/cb\_circular\_pivot\_motion.h}}>}}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <move\_group\_interface\_client/client\_behaviors/cb\_circular\_pivot\_motion.h>}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00010}00010 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__group__interface}{cl\_move\_group\_interface}}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00012}00012 \{}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00013}\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_ae5d136014f6e9cacc5270c0b35b71b18}{00013}}     \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_ae5d136014f6e9cacc5270c0b35b71b18}{CbCircularPouringMotion::CbCircularPouringMotion}}(\textcolor{keyword}{const} geometry\_msgs::Point \&relativePivotPoint, \textcolor{keywordtype}{double} deltaHeight, std::string tipLink, std::string globalFrame)}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00013}00013     CbCircularPouringMotion::CbCircularPouringMotion(\textcolor{keyword}{const} geometry\_msgs::Point \&relativePivotPoint, \textcolor{keywordtype}{double} deltaHeight, std::string tipLink, std::string globalFrame)}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00014}00014         : relativePivotPoint\_(relativePivotPoint)}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00015}00015         , deltaHeight\_(deltaHeight)}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00016}00016         , \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory}{CbMoveEndEffectorTrajectory}}(tipLink)}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00016}00016         , CbMoveEndEffectorTrajectory(tipLink)}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00017}00017         , globalFrame\_(globalFrame)}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00018}00018     \{}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00019}00019     \}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00020}00020 }
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00021}\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a9150bb3731082aad3af2d7d6e067a344}{00021}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a9150bb3731082aad3af2d7d6e067a344}{CbCircularPouringMotion::generateTrajectory}}()}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00021}00021     \textcolor{keywordtype}{void} CbCircularPouringMotion::generateTrajectory()}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00022}00022     \{}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00023}00023         \textcolor{comment}{// at least 1 sample per centimeter (average)}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00024}00024         \textcolor{keyword}{const} \textcolor{keywordtype}{double} METERS\_PER\_SAMPLE = 0.001;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00025}00025 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00026}00026         \textcolor{keywordtype}{float} dist\_meters =0;}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00027}00027         \textcolor{keywordtype}{float} totallineardist = fabs(this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a7009d617bcd8ac1fba49100444434f3c}{deltaHeight\_}});}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00027}00027         \textcolor{keywordtype}{float} totallineardist = fabs(this-\/>deltaHeight\_);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00028}00028 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00029}00029         \textcolor{keywordtype}{int} totalSamplesCount = totallineardist / METERS\_PER\_SAMPLE;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00030}00030         \textcolor{keywordtype}{int} steps = totallineardist/ METERS\_PER\_SAMPLE;}
@@ -37,7 +37,7 @@
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00033}00033 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00034}00034         \textcolor{keywordtype}{double} secondsPerSample;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00035}00035 }
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00036}00036         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_ac78ce543451cbb78c95862dd4273deb7}{linearSpeed\_m\_s\_}})}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00036}00036         \textcolor{keywordflow}{if} (linearSpeed\_m\_s\_)}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00037}00037         \{}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00038}00038             secondsPerSample = METERS\_PER\_SAMPLE / (*linearSpeed\_m\_s\_);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00039}00039         \}}
@@ -48,22 +48,22 @@
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00044}00044 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00045}00045         tf::StampedTransform currentEndEffectorTransform;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00046}00046 }
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00047}00047         this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a56945ccfff51e3eb9ec9c2edcfa132af}{getCurrentEndEffectorPose}}(\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a1d54253dc370bce8dd413e08b4bf8c43}{globalFrame\_}}, currentEndEffectorTransform);}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00047}00047         this-\/>getCurrentEndEffectorPose(globalFrame\_, currentEndEffectorTransform);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00048}00048 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00049}00049         tf::Transform lidEndEffectorTransform;}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00050}00050         tf::poseMsgToTF(this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a5ebef44cab4cb3dec5148232ef0eb2f8}{pointerRelativePose\_}}, lidEndEffectorTransform);}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00050}00050         tf::poseMsgToTF(this-\/>pointerRelativePose\_, lidEndEffectorTransform);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00051}00051 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00052}00052         tf::Vector3 v0, v1;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00053}00053         v0 = (currentEndEffectorTransform * lidEndEffectorTransform).getOrigin();}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00054}00054 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00055}00055         tf::Point pivotPoint;}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00056}00056         tf::pointMsgToTF(this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a686d15e252dc8e503985e97014690cc6}{relativePivotPoint\_}}, pivotPoint);}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00056}00056         tf::pointMsgToTF(this-\/>relativePivotPoint\_, pivotPoint);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00057}00057 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00058}00058         tf::Vector3 pivot = (currentEndEffectorTransform * pivotPoint);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00059}00059 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00060}00060         v0 = v0 -\/ pivot;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00061}00061         v1 = v0;}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00062}00062         v1.setZ(v1.z() + this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a7009d617bcd8ac1fba49100444434f3c}{deltaHeight\_}});}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00062}00062         v1.setZ(v1.z() + this-\/>deltaHeight\_);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00063}00063 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00064}00064         tf::Vector3 vp1(v1);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00065}00065         tf::Vector3 vp0(v0);}
@@ -80,7 +80,7 @@
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00076}00076         v0+=pivot;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00077}00077         v1+=pivot;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00078}00078 }
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00079}00079         \textcolor{keywordtype}{float} linc = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a7009d617bcd8ac1fba49100444434f3c}{deltaHeight\_}}/steps;\textcolor{comment}{// METERS\_PER\_SAMPLE with sign}}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00079}00079         \textcolor{keywordtype}{float} linc = deltaHeight\_/steps;\textcolor{comment}{// METERS\_PER\_SAMPLE with sign}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00080}00080         \textcolor{keywordtype}{float} interpolation\_factor = 0;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00081}00081         tf::Vector3 vi = v0;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00082}00082 }
@@ -104,36 +104,36 @@
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00100}00100 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00101}00101             geometry\_msgs::PoseStamped pointerPose;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00102}00102             tf::poseTFToMsg(pose, pointerPose.pose);}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00103}00103             pointerPose.header.frame\_id = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a1d54253dc370bce8dd413e08b4bf8c43}{globalFrame\_}};}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00103}00103             pointerPose.header.frame\_id = globalFrame\_;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00104}00104             pointerPose.header.stamp = startTime + ros::Duration(i * secondsPerSample);}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00105}00105             this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a6f53442c47cf9280d8be72ea1c35546f}{pointerTrajectory\_}}.push\_back(pointerPose);}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00105}00105             this-\/>pointerTrajectory\_.push\_back(pointerPose);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00106}00106 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00107}00107             tf::Transform poseEndEffector = pose * invertedLidTransform;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00108}00108 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00109}00109             geometry\_msgs::PoseStamped globalEndEffectorPose;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00110}00110             tf::poseTFToMsg(poseEndEffector, globalEndEffectorPose.pose);}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00111}00111             globalEndEffectorPose.header.frame\_id = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a1d54253dc370bce8dd413e08b4bf8c43}{globalFrame\_}};}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00111}00111             globalEndEffectorPose.header.frame\_id = globalFrame\_;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00112}00112             globalEndEffectorPose.header.stamp = startTime + ros::Duration(i * secondsPerSample);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00113}00113 }
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00114}00114             this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_ae13dfd31ea3660646e03882f0c2c29f0}{endEffectorTrajectory\_}}.push\_back(globalEndEffectorPose);}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00114}00114             this-\/>endEffectorTrajectory\_.push\_back(globalEndEffectorPose);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00115}00115         \}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00116}00116     \}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00117}00117 }
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00118}\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a26d603b1d9bdbf5b71da6c1c4af2c322}{00118}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a26d603b1d9bdbf5b71da6c1c4af2c322}{CbCircularPouringMotion::createMarkers}}()}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00118}00118     \textcolor{keywordtype}{void} CbCircularPouringMotion::createMarkers()}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00119}00119     \{}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00120}00120         \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a442efa1d5bc9e9a16f74ecd31b13d9b5}{CbMoveEndEffectorTrajectory::createMarkers}}();}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00120}00120         CbMoveEndEffectorTrajectory::createMarkers();}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00121}00121 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00122}00122         tf::StampedTransform currentEndEffectorTransform;}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00123}00123         this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a56945ccfff51e3eb9ec9c2edcfa132af}{getCurrentEndEffectorPose}}(\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a1d54253dc370bce8dd413e08b4bf8c43}{globalFrame\_}}, currentEndEffectorTransform);}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00123}00123         this-\/>getCurrentEndEffectorPose(globalFrame\_, currentEndEffectorTransform);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00124}00124         tf::Point pivotPoint;}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00125}00125         tf::pointMsgToTF(this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a686d15e252dc8e503985e97014690cc6}{relativePivotPoint\_}}, pivotPoint);}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00125}00125         tf::pointMsgToTF(this-\/>relativePivotPoint\_, pivotPoint);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00126}00126         tf::Vector3 pivot = (currentEndEffectorTransform * pivotPoint);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00127}00127 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00128}00128 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00129}00129         visualization\_msgs::Marker marker;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00130}00130 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00131}00131         marker.ns = \textcolor{stringliteral}{"{}trajectory"{}};}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00132}00132         marker.id = \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a809fb5385adf27c0a1c8f8136566949c}{beahiorMarkers\_}}.markers.size();}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00132}00132         marker.id = beahiorMarkers\_.markers.size();}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00133}00133         marker.type = visualization\_msgs::Marker::SPHERE;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00134}00134         marker.action = visualization\_msgs::Marker::ADD;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00135}00135         marker.scale.x = 0.01;}
@@ -146,23 +146,23 @@
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00142}00142         marker.color.b = 1.0;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00143}00143 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00144}00144         tf::pointTFToMsg(pivot, marker.pose.position);}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00145}00145         marker.header.frame\_id = \mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a1d54253dc370bce8dd413e08b4bf8c43}{globalFrame\_}};}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00145}00145         marker.header.frame\_id = globalFrame\_;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00146}00146         marker.header.stamp = ros::Time::now();}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00147}00147 }
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00148}00148         \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a809fb5385adf27c0a1c8f8136566949c}{beahiorMarkers\_}}.markers.push\_back(marker);}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00148}00148         beahiorMarkers\_.markers.push\_back(marker);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00149}00149 }
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00150}00150         tf::Transform localdirection;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00151}00151         localdirection.setIdentity();}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00152}00152         localdirection.setOrigin(tf::Vector3(0.05, 0, 0));}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00153}00153         \textcolor{keyword}{auto} frameid = this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a6f53442c47cf9280d8be72ea1c35546f}{pointerTrajectory\_}}.front().header.frame\_id;}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00153}00153         \textcolor{keyword}{auto} frameid = this-\/>pointerTrajectory\_.front().header.frame\_id;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00154}00154 }
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00155}00155         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&pose : this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbCircularPouringMotion_a6f53442c47cf9280d8be72ea1c35546f}{pointerTrajectory\_}})}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00155}00155         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&pose : this-\/>pointerTrajectory\_)}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00156}00156         \{}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00157}00157             visualization\_msgs::Marker marker;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00158}00158             marker.header.frame\_id = frameid;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00159}00159             marker.header.stamp = ros::Time::now();}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00160}00160             marker.ns = \textcolor{stringliteral}{"{}trajectory"{}};}
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00161}00161             marker.id = this-\/>\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a809fb5385adf27c0a1c8f8136566949c}{beahiorMarkers\_}}.markers.size();}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00161}00161             marker.id = this-\/>beahiorMarkers\_.markers.size();}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00162}00162             marker.type = visualization\_msgs::Marker::ARROW;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00163}00163             marker.action = visualization\_msgs::Marker::ADD;}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00164}00164             marker.scale.x = 0.005;}
@@ -191,7 +191,7 @@
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00187}00187             marker.points.push\_back(start);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00188}00188             marker.points.push\_back(end);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00189}00189 }
-\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00190}00190             \mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveEndEffectorTrajectory_a809fb5385adf27c0a1c8f8136566949c}{beahiorMarkers\_}}.markers.push\_back(marker);}
+\DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00190}00190             beahiorMarkers\_.markers.push\_back(marker);}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00191}00191         \}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00192}00192     \}}
 \DoxyCodeLine{\Hypertarget{cb__pouring__motion_8cpp_source_l00193}00193 }

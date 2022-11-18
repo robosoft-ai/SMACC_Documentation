@@ -69,55 +69,48 @@ $(function() {
   <div class="headertitle"><div class="title">smacc_updatable.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="smacc__updatable_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;<a class="code" href="smacc__updatable_8h.html">smacc/smacc_updatable.h</a>&gt;</span></div>
+<a href="smacc__updatable_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;smacc/smacc_updatable.h&gt;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesmacc.html">smacc</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classsmacc_1_1ISmaccUpdatable.html#a263ef476c6965fa1fe147d953c6806d0">    6</a></span><a class="code hl_function" href="classsmacc_1_1ISmaccUpdatable.html#a263ef476c6965fa1fe147d953c6806d0">ISmaccUpdatable::ISmaccUpdatable</a>()</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>ISmaccUpdatable::ISmaccUpdatable()</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    : lastUpdate_(0)</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classsmacc_1_1ISmaccUpdatable.html#a0ed931f9d51ca4701abf3f82b6221c6f">   11</a></span><a class="code hl_function" href="classsmacc_1_1ISmaccUpdatable.html#a263ef476c6965fa1fe147d953c6806d0">ISmaccUpdatable::ISmaccUpdatable</a>(ros::Duration duration)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>ISmaccUpdatable::ISmaccUpdatable(ros::Duration duration)</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    : lastUpdate_(0),</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>      periodDuration_(duration)</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classsmacc_1_1ISmaccUpdatable.html#aa420568b0c1bced80d797e9ee6d79d5f">   17</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classsmacc_1_1ISmaccUpdatable.html#aa420568b0c1bced80d797e9ee6d79d5f">ISmaccUpdatable::setUpdatePeriod</a>(ros::Duration duration)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> ISmaccUpdatable::setUpdatePeriod(ros::Duration duration)</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_variable" href="classsmacc_1_1ISmaccUpdatable.html#ad02d9798ac5609f3ecb9fb8a46febc18">periodDuration_</a> = duration;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    periodDuration_ = duration;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classsmacc_1_1ISmaccUpdatable.html#a766b2aefcb70ba9b2784e94b97dd7704">   22</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classsmacc_1_1ISmaccUpdatable.html#a766b2aefcb70ba9b2784e94b97dd7704">ISmaccUpdatable::executeUpdate</a>()</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> ISmaccUpdatable::executeUpdate()</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classsmacc_1_1ISmaccUpdatable.html#a84ee0520cbefdb1d412bed54650b028e">update</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classsmacc_1_1ISmaccUpdatable.html#ad02d9798ac5609f3ecb9fb8a46febc18">periodDuration_</a>)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">bool</span> update = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">if</span> (periodDuration_)</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">auto</span> now = ros::Time::now();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">auto</span> elapsed = now - this-&gt;<a class="code hl_variable" href="classsmacc_1_1ISmaccUpdatable.html#ad58f7e1cd26d3fe8c3a3fccecc57feac">lastUpdate_</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        update = elapsed &gt; *<a class="code hl_variable" href="classsmacc_1_1ISmaccUpdatable.html#ad02d9798ac5609f3ecb9fb8a46febc18">periodDuration_</a>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="classsmacc_1_1ISmaccUpdatable.html#a84ee0520cbefdb1d412bed54650b028e">update</a>)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">auto</span> elapsed = now - this-&gt;lastUpdate_;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        update = elapsed &gt; *periodDuration_;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">if</span>(update)</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            this-&gt;lastUpdate_ = now;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classsmacc_1_1ISmaccUpdatable.html#a84ee0520cbefdb1d412bed54650b028e">update</a>)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> (update)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        this-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccUpdatable.html#a84ee0520cbefdb1d412bed54650b028e">update</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        this-&gt;update();</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
-<div class="ttc" id="aclasssmacc_1_1ISmaccUpdatable_html_a263ef476c6965fa1fe147d953c6806d0"><div class="ttname"><a href="classsmacc_1_1ISmaccUpdatable.html#a263ef476c6965fa1fe147d953c6806d0">smacc::ISmaccUpdatable::ISmaccUpdatable</a></div><div class="ttdeci">ISmaccUpdatable()</div><div class="ttdef"><b>Definition:</b> <a href="smacc__updatable_8cpp_source.html#l00006">smacc_updatable.cpp:6</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1ISmaccUpdatable_html_a766b2aefcb70ba9b2784e94b97dd7704"><div class="ttname"><a href="classsmacc_1_1ISmaccUpdatable.html#a766b2aefcb70ba9b2784e94b97dd7704">smacc::ISmaccUpdatable::executeUpdate</a></div><div class="ttdeci">void executeUpdate()</div><div class="ttdef"><b>Definition:</b> <a href="smacc__updatable_8cpp_source.html#l00022">smacc_updatable.cpp:22</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1ISmaccUpdatable_html_a84ee0520cbefdb1d412bed54650b028e"><div class="ttname"><a href="classsmacc_1_1ISmaccUpdatable.html#a84ee0520cbefdb1d412bed54650b028e">smacc::ISmaccUpdatable::update</a></div><div class="ttdeci">virtual void update()=0</div></div>
-<div class="ttc" id="aclasssmacc_1_1ISmaccUpdatable_html_aa420568b0c1bced80d797e9ee6d79d5f"><div class="ttname"><a href="classsmacc_1_1ISmaccUpdatable.html#aa420568b0c1bced80d797e9ee6d79d5f">smacc::ISmaccUpdatable::setUpdatePeriod</a></div><div class="ttdeci">void setUpdatePeriod(ros::Duration duration)</div><div class="ttdef"><b>Definition:</b> <a href="smacc__updatable_8cpp_source.html#l00017">smacc_updatable.cpp:17</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1ISmaccUpdatable_html_ad02d9798ac5609f3ecb9fb8a46febc18"><div class="ttname"><a href="classsmacc_1_1ISmaccUpdatable.html#ad02d9798ac5609f3ecb9fb8a46febc18">smacc::ISmaccUpdatable::periodDuration_</a></div><div class="ttdeci">boost::optional&lt; ros::Duration &gt; periodDuration_</div><div class="ttdef"><b>Definition:</b> <a href="smacc__updatable_8h_source.html#l00028">smacc_updatable.h:28</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1ISmaccUpdatable_html_ad58f7e1cd26d3fe8c3a3fccecc57feac"><div class="ttname"><a href="classsmacc_1_1ISmaccUpdatable.html#ad58f7e1cd26d3fe8c3a3fccecc57feac">smacc::ISmaccUpdatable::lastUpdate_</a></div><div class="ttdeci">ros::Time lastUpdate_</div><div class="ttdef"><b>Definition:</b> <a href="smacc__updatable_8h_source.html#l00029">smacc_updatable.h:29</a></div></div>
-<div class="ttc" id="anamespacesmacc_html"><div class="ttname"><a href="namespacesmacc.html">smacc</a></div><div class="ttdef"><b>Definition:</b> <a href="cp__ros__control__interface_8h_source.html#l00005">cp_ros_control_interface.h:6</a></div></div>
-<div class="ttc" id="asmacc__updatable_8h_html"><div class="ttname"><a href="smacc__updatable_8h.html">smacc_updatable.h</a></div></div>
+<div class="ttc" id="anamespacesmacc_html"><div class="ttname"><a href="namespacesmacc.html">smacc</a></div><div class="ttdef"><b>Definition:</b> <a href="client_8cpp_source.html#l00011">client.cpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

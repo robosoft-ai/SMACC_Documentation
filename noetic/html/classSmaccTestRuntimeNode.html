@@ -146,13 +146,10 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="smacc__runtime__test__node_8cpp_source.html#l00105">105</a> of file <a class="el" href="smacc__runtime__test__node_8cpp_source.html">smacc_runtime_test_node.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  106</span>  {</div>
-<div class="line"><span class="lineno">  107</span>    ROS_FATAL_STREAM(<span class="stringliteral">&quot;SmaccRuntimeTestNode policy thrown failure exit: &quot;</span> &lt;&lt; <a class="code hl_variable" href="namespacebattery__monitor__node.html#ab1920c64448816edd4064e494275fdff">msg</a>);</div>
+<div class="line"><span class="lineno">  107</span>    ROS_FATAL_STREAM(<span class="stringliteral">&quot;SmaccRuntimeTestNode policy thrown failure exit: &quot;</span> &lt;&lt; msg);</div>
 <div class="line"><span class="lineno">  108</span>    exit(-1);</div>
 <div class="line"><span class="lineno">  109</span>  }</div>
-<div class="ttc" id="anamespacebattery__monitor__node_html_ab1920c64448816edd4064e494275fdff"><div class="ttname"><a href="namespacebattery__monitor__node.html#ab1920c64448816edd4064e494275fdff">battery_monitor_node.msg</a></div><div class="ttdeci">msg</div><div class="ttdef"><b>Definition:</b> <a href="battery__monitor__node_8py_source.html#l00015">battery_monitor_node.py:15</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="battery__monitor__node_8py_source.html#l00015">battery_monitor_node::msg</a>.</p>
-
 <p class="reference">Referenced by <a class="el" href="smacc__runtime__test__node_8cpp_source.html#l00145">TimeoutFailureTestPolicy::update()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -284,7 +281,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="smacc__runtime__test__node_8cpp_source.html#l00119">119</a> of file <a class="el" href="smacc__runtime__test__node_8cpp_source.html">smacc_runtime_test_node.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  120</span>  {</div>
-<div class="line"><span class="lineno">  121</span>      this-&gt;<a class="code hl_variable" href="classSmaccTestRuntimeNode.html#a9b544f3ca3684171cbb56d97aadeac17">onRosOutMsg</a>(<a class="code hl_variable" href="namespacebattery__monitor__node.html#ab1920c64448816edd4064e494275fdff">msg</a>);</div>
+<div class="line"><span class="lineno">  121</span>      this-&gt;<a class="code hl_variable" href="classSmaccTestRuntimeNode.html#a9b544f3ca3684171cbb56d97aadeac17">onRosOutMsg</a>(msg);</div>
 <div class="line"><span class="lineno">  122</span>  }</div>
 <div class="ttc" id="aclassSmaccTestRuntimeNode_html_a9b544f3ca3684171cbb56d97aadeac17"><div class="ttname"><a href="classSmaccTestRuntimeNode.html#a9b544f3ca3684171cbb56d97aadeac17">SmaccTestRuntimeNode::onRosOutMsg</a></div><div class="ttdeci">boost::signals2::signal&lt; void(const rosgraph_msgs::Log &amp;)&gt; onRosOutMsg</div><div class="ttdef"><b>Definition:</b> <a href="smacc__runtime__test__node_8cpp_source.html#l00037">smacc_runtime_test_node.cpp:37</a></div></div>
 </div><!-- fragment -->
@@ -330,7 +327,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="smacc__runtime__test__node_8cpp_source.html#l00124">124</a> of file <a class="el" href="smacc__runtime__test__node_8cpp_source.html">smacc_runtime_test_node.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  125</span>  {</div>
-<div class="line"><span class="lineno">  126</span>      this-&gt;<a class="code hl_variable" href="classSmaccTestRuntimeNode.html#aaaedcb5c8a4cca432b5138bb1dfb0a6c">onSmaccTransition</a>(<a class="code hl_variable" href="namespacebattery__monitor__node.html#ab1920c64448816edd4064e494275fdff">msg</a>);</div>
+<div class="line"><span class="lineno">  126</span>      this-&gt;<a class="code hl_variable" href="classSmaccTestRuntimeNode.html#aaaedcb5c8a4cca432b5138bb1dfb0a6c">onSmaccTransition</a>(msg);</div>
 <div class="line"><span class="lineno">  127</span>  }</div>
 <div class="ttc" id="aclassSmaccTestRuntimeNode_html_aaaedcb5c8a4cca432b5138bb1dfb0a6c"><div class="ttname"><a href="classSmaccTestRuntimeNode.html#aaaedcb5c8a4cca432b5138bb1dfb0a6c">SmaccTestRuntimeNode::onSmaccTransition</a></div><div class="ttdeci">boost::signals2::signal&lt; void(const smacc_msgs::SmaccTransitionLogEntry &amp;)&gt; onSmaccTransition</div><div class="ttdef"><b>Definition:</b> <a href="smacc__runtime__test__node_8cpp_source.html#l00038">smacc_runtime_test_node.cpp:38</a></div></div>
 </div><!-- fragment -->
@@ -376,12 +373,10 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="smacc__runtime__test__node_8cpp_source.html#l00099">99</a> of file <a class="el" href="smacc__runtime__test__node_8cpp_source.html">smacc_runtime_test_node.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  100</span>  {</div>
-<div class="line"><span class="lineno">  101</span>    ROS_INFO_STREAM(<span class="stringliteral">&quot;SmaccRuntimeTestNode policy thrown success exit: &quot;</span> &lt;&lt; <a class="code hl_variable" href="namespacebattery__monitor__node.html#ab1920c64448816edd4064e494275fdff">msg</a>);</div>
+<div class="line"><span class="lineno">  101</span>    ROS_INFO_STREAM(<span class="stringliteral">&quot;SmaccRuntimeTestNode policy thrown success exit: &quot;</span> &lt;&lt; msg);</div>
 <div class="line"><span class="lineno">  102</span>    exit(-1);</div>
 <div class="line"><span class="lineno">  103</span>  }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="battery__monitor__node_8py_source.html#l00015">battery_monitor_node::msg</a>.</p>
-
 <p class="reference">Referenced by <a class="el" href="smacc__runtime__test__node_8cpp_source.html#l00161">ReachedStateSuccessTestPolicy::init()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -436,9 +431,9 @@ template&lt;typename T &gt; </div>
 <div class="line"><span class="lineno">   43</span>    std::shared_ptr&lt;TestPolicy&gt; policy = <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   44</span>    ROS_INFO_STREAM(initXmlRpcValue);</div>
 <div class="line"><span class="lineno">   45</span> </div>
-<div class="line"><span class="lineno">   46</span>    <span class="keyword">auto</span> <a class="code hl_variable" href="namespacegenerate__debs.html#a50bc9a7ecac9584553e089a448bcde58">type</a> = (std::string)initXmlRpcValue[<span class="stringliteral">&quot;type&quot;</span>];</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keyword">auto</span> type = (std::string)initXmlRpcValue[<span class="stringliteral">&quot;type&quot;</span>];</div>
 <div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacegenerate__debs.html#a50bc9a7ecac9584553e089a448bcde58">type</a> == matchname)</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">if</span> (type == matchname)</div>
 <div class="line"><span class="lineno">   49</span>    {</div>
 <div class="line"><span class="lineno">   50</span>      <span class="keyword">auto</span> specificPolicy = std::make_shared&lt;T&gt;();</div>
 <div class="line"><span class="lineno">   51</span>      policy = std::dynamic_pointer_cast&lt;TestPolicy&gt;(specificPolicy);</div>
@@ -451,9 +446,8 @@ template&lt;typename T &gt; </div>
 <div class="line"><span class="lineno">   58</span>    <span class="keywordflow">return</span> policy;</div>
 <div class="line"><span class="lineno">   59</span>  }</div>
 <div class="ttc" id="aclassSmaccTestRuntimeNode_html_a099952c0249a6f4f94469d991a644b69"><div class="ttname"><a href="classSmaccTestRuntimeNode.html#a099952c0249a6f4f94469d991a644b69">SmaccTestRuntimeNode::testPolicies</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; TestPolicy &gt; &gt; testPolicies</div><div class="ttdef"><b>Definition:</b> <a href="smacc__runtime__test__node_8cpp_source.html#l00036">smacc_runtime_test_node.cpp:36</a></div></div>
-<div class="ttc" id="anamespacegenerate__debs_html_a50bc9a7ecac9584553e089a448bcde58"><div class="ttname"><a href="namespacegenerate__debs.html#a50bc9a7ecac9584553e089a448bcde58">generate_debs.type</a></div><div class="ttdeci">type</div><div class="ttdef"><b>Definition:</b> <a href="generate__debs_8py_source.html#l00285">generate_debs.py:285</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="smacc__runtime__test__node_8cpp_source.html#l00036">testPolicies</a>, and <a class="el" href="generate__debs_8py_source.html#l00285">generate_debs::type</a>.</p>
+<p class="reference">References <a class="el" href="smacc__runtime__test__node_8cpp_source.html#l00036">testPolicies</a>.</p>
 
 </div>
 </div>
