@@ -9,7 +9,7 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <angles/angles.h>}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <pluginlib/class\_list\_macros.h>}}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <forward\_local\_planner/forward\_local\_planner.h>}}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{forward__local__planner_8h}{forward\_local\_planner/forward\_local\_planner.h}}>}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <visualization\_msgs/MarkerArray.h>}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include <boost/intrusive\_ptr.hpp>}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <angles/angles.h>}}
@@ -17,62 +17,62 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include <base\_local\_planner/simple\_trajectory\_generator.h>}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00014}00014 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00015}00015 \textcolor{comment}{//register this planner as a BaseLocalPlanner plugin}}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00016}00016 \mbox{\hyperlink{backward__global__planner_8cpp_a51f582fb30166d23ef7d096df52bdb13}{PLUGINLIB\_EXPORT\_CLASS}}(cl\_move\_base\_z::forward\_local\_planner::ForwardLocalPlanner, nav\_core::BaseLocalPlanner)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00016}00016 \mbox{\hyperlink{backward__global__planner_8cpp_a51f582fb30166d23ef7d096df52bdb13}{PLUGINLIB\_EXPORT\_CLASS}}(\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner}{cl\_move\_base\_z::forward\_local\_planner::ForwardLocalPlanner}}, nav\_core::BaseLocalPlanner)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00017}00017 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00018}00018 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00019}00019 \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00020}\mbox{\hyperlink{namespacecl__move__base__z_1_1forward__local__planner}{00020}} \textcolor{keyword}{namespace }forward\_local\_planner}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00020}00020 \textcolor{keyword}{namespace }forward\_local\_planner}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00021}00021 \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00027}00027 ForwardLocalPlanner::ForwardLocalPlanner()}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00027}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a864c600e6485886702a5d284f8ef4d4b}{00027}} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a864c600e6485886702a5d284f8ef4d4b}{ForwardLocalPlanner::ForwardLocalPlanner}}()}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00028}00028 \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00029}00029 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00030}00030 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00036}00036 ForwardLocalPlanner::\string~ForwardLocalPlanner()}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00036}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a75fa72309f991772b56a6bc0f6b6b43f}{00036}} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a75fa72309f991772b56a6bc0f6b6b43f}{ForwardLocalPlanner::\string~ForwardLocalPlanner}}()}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00037}00037 \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00038}00038 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00039}00039 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00040}00040 \textcolor{keywordtype}{void} ForwardLocalPlanner::initialize()}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00040}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab455a974d5dcffda7e9772023840c7e6}{00040}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab455a974d5dcffda7e9772023840c7e6}{ForwardLocalPlanner::initialize}}()}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00041}00041 \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00042}00042     k\_rho\_ = 1.0;}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00043}00043     k\_alpha\_ = -\/0.4;}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00044}00044     k\_betta\_ = -\/1.0; \textcolor{comment}{// set to zero means that orientation is not important}}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00042}00042     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a8ad1b04b0bdaa8a7bb878f5e5cebd4f8}{k\_rho\_}} = 1.0;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00043}00043     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a530117a51f06e426b6aacc08bbd38fff}{k\_alpha\_}} = -\/0.4;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00044}00044     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a7b89ccccd288e5384154e7d5b64b4014}{k\_betta\_}} = -\/1.0; \textcolor{comment}{// set to zero means that orientation is not important}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00045}00045     \textcolor{comment}{//k\_betta\_ = 1.0;}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00046}00046     \textcolor{comment}{//betta\_offset\_=0;}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00047}00047 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00048}00048     goalReached\_ = \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00049}00049     carrot\_distance\_ = 0.4;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00048}00048     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a9d51ad6f0eb364ebd830526280bdf4fc}{goalReached\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00049}00049     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a4101afebb7e2a5eb0a2144a5fb553a92}{carrot\_distance\_}} = 0.4;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00050}00050 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00051}00051     ros::NodeHandle private\_nh(\textcolor{stringliteral}{"{}\string~"{}});}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00052}00052 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00053}00053     currentPoseIndex\_ = 0;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00053}00053     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_af4019077a7661d10957cca16222547c2}{currentPoseIndex\_}} = 0;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00054}00054 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00055}00055     ros::NodeHandle nh(\textcolor{stringliteral}{"{}\string~/ForwardLocalPlanner"{}});}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00056}00056 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00057}00057     nh.param(\textcolor{stringliteral}{"{}k\_rho"{}}, k\_rho\_, k\_rho\_);}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00058}00058     nh.param(\textcolor{stringliteral}{"{}k\_alpha"{}}, k\_alpha\_, k\_alpha\_);}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00059}00059     nh.param(\textcolor{stringliteral}{"{}k\_betta"{}}, k\_betta\_, k\_betta\_);}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00060}00060     nh.param(\textcolor{stringliteral}{"{}carrot\_distance"{}}, carrot\_distance\_, carrot\_distance\_);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00057}00057     nh.param(\textcolor{stringliteral}{"{}k\_rho"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a8ad1b04b0bdaa8a7bb878f5e5cebd4f8}{k\_rho\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a8ad1b04b0bdaa8a7bb878f5e5cebd4f8}{k\_rho\_}});}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00058}00058     nh.param(\textcolor{stringliteral}{"{}k\_alpha"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a530117a51f06e426b6aacc08bbd38fff}{k\_alpha\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a530117a51f06e426b6aacc08bbd38fff}{k\_alpha\_}});}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00059}00059     nh.param(\textcolor{stringliteral}{"{}k\_betta"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a7b89ccccd288e5384154e7d5b64b4014}{k\_betta\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a7b89ccccd288e5384154e7d5b64b4014}{k\_betta\_}});}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00060}00060     nh.param(\textcolor{stringliteral}{"{}carrot\_distance"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a4101afebb7e2a5eb0a2144a5fb553a92}{carrot\_distance\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a4101afebb7e2a5eb0a2144a5fb553a92}{carrot\_distance\_}});}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00061}00061 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00062}00062     nh.param(\textcolor{stringliteral}{"{}yaw\_goal\_tolerance"{}}, yaw\_goal\_tolerance\_, 0.05);}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00063}00063     nh.param(\textcolor{stringliteral}{"{}xy\_goal\_tolerance"{}}, xy\_goal\_tolerance\_, 0.10);}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00064}00064     nh.param(\textcolor{stringliteral}{"{}max\_linear\_x\_speed"{}}, max\_linear\_x\_speed\_, 1.0);}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00065}00065     nh.param(\textcolor{stringliteral}{"{}max\_angular\_z\_speed"{}}, max\_angular\_z\_speed\_, 2.0);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00062}00062     nh.param(\textcolor{stringliteral}{"{}yaw\_goal\_tolerance"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a7ea1ca266850c7b847a2355f489e6041}{yaw\_goal\_tolerance\_}}, 0.05);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00063}00063     nh.param(\textcolor{stringliteral}{"{}xy\_goal\_tolerance"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_acd2ed91ee166f03faeeb9d6a4b91084b}{xy\_goal\_tolerance\_}}, 0.10);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00064}00064     nh.param(\textcolor{stringliteral}{"{}max\_linear\_x\_speed"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab2e354dca208a2df60e905c9ee1fcd75}{max\_linear\_x\_speed\_}}, 1.0);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00065}00065     nh.param(\textcolor{stringliteral}{"{}max\_angular\_z\_speed"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a198154e40443d46292d8eba1d81ad34f}{max\_angular\_z\_speed\_}}, 2.0);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00066}00066 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00067}00067     ROS\_INFO(\textcolor{stringliteral}{"{}[ForwardLocalPlanner] max linear speed: \%lf, max angular speed: \%lf, k\_rho: \%lf, carrot\_distance: \%lf, "{}}, max\_linear\_x\_speed\_, max\_angular\_z\_speed\_, k\_rho\_, carrot\_distance\_);}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00068}00068     goalMarkerPublisher\_ = nh.advertise<visualization\_msgs::MarkerArray>(\textcolor{stringliteral}{"{}goal\_marker"{}}, 1);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00067}00067     ROS\_INFO(\textcolor{stringliteral}{"{}[ForwardLocalPlanner] max linear speed: \%lf, max angular speed: \%lf, k\_rho: \%lf, carrot\_distance: \%lf, "{}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab2e354dca208a2df60e905c9ee1fcd75}{max\_linear\_x\_speed\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a198154e40443d46292d8eba1d81ad34f}{max\_angular\_z\_speed\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a8ad1b04b0bdaa8a7bb878f5e5cebd4f8}{k\_rho\_}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a4101afebb7e2a5eb0a2144a5fb553a92}{carrot\_distance\_}});}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00068}00068     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a0d94f4e35c44faacd9d795a303193369}{goalMarkerPublisher\_}} = nh.advertise<visualization\_msgs::MarkerArray>(\textcolor{stringliteral}{"{}goal\_marker"{}}, 1);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00069}00069 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00070}00070     waiting\_ = \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00071}00071     waitingTimeout\_ = ros::Duration(10);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00070}00070     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a5061c2aa0d8d2309f1669e402741f0fa}{waiting\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00071}00071     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_aaac5a8ee9921d71ada7061df5180de4b}{waitingTimeout\_}} = ros::Duration(10);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00072}00072     ROS\_INFO(\textcolor{stringliteral}{"{}[ForwardLocalPlanner] initialized"{}});}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00073}00073 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00074}00074 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00075}00075 \textcolor{keywordtype}{void} ForwardLocalPlanner::initialize(std::string name, tf2\_ros::Buffer *tf, costmap\_2d::Costmap2DROS *costmap\_ros)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00075}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a5ef0a220f6ff05f7cd9128c6b5d4d165}{00075}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab455a974d5dcffda7e9772023840c7e6}{ForwardLocalPlanner::initialize}}(std::string name, tf2\_ros::Buffer *tf, costmap\_2d::Costmap2DROS *costmap\_ros)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00076}00076 \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00077}00077     costmapRos\_ = costmap\_ros;}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00078}00078     this-\/>initialize();}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00077}00077     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a37791fea67ce92c6e38e3727311e533b}{costmapRos\_}} = costmap\_ros;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00078}00078     this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab455a974d5dcffda7e9772023840c7e6}{initialize}}();}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00079}00079 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00080}00080 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00081}00081 \textcolor{keywordtype}{void} ForwardLocalPlanner::generateTrajectory(\textcolor{keyword}{const} Eigen::Vector3f \&pos, \textcolor{keyword}{const} Eigen::Vector3f \&vel, \textcolor{keywordtype}{float} maxdist, \textcolor{keywordtype}{float} maxanglediff, \textcolor{keywordtype}{float} maxtime, \textcolor{keywordtype}{float} dt, std::vector<Eigen::Vector3f> \&outtraj)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00081}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a3e852f81ccae82c56d7f25e56def899c}{00081}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a3e852f81ccae82c56d7f25e56def899c}{ForwardLocalPlanner::generateTrajectory}}(\textcolor{keyword}{const} Eigen::Vector3f \&pos, \textcolor{keyword}{const} Eigen::Vector3f \&vel, \textcolor{keywordtype}{float} maxdist, \textcolor{keywordtype}{float} maxanglediff, \textcolor{keywordtype}{float} maxtime, \textcolor{keywordtype}{float} dt, std::vector<Eigen::Vector3f> \&outtraj)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00082}00082 \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00083}00083     \textcolor{comment}{//simulate the trajectory and check for collisions, updating costs along the way}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00084}00084     \textcolor{keywordtype}{bool} end = \textcolor{keyword}{false};}
@@ -92,7 +92,7 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00098}00098 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00099}00099         \textcolor{keyword}{auto} loop\_vel = vel;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00100}00100         \textcolor{comment}{//update the position of the robot using the velocities passed in}}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00101}00101         \textcolor{keyword}{auto} newpos = computeNewPositions(currentpos, loop\_vel, dt);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00101}00101         \textcolor{keyword}{auto} newpos = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a07074f6a5a6cc1de035e09822d647158}{computeNewPositions}}(currentpos, loop\_vel, dt);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00102}00102 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00103}00103         \textcolor{keyword}{auto} dx = newpos[0] -\/ currentpos[0];}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00104}00104         \textcolor{keyword}{auto} dy = newpos[1] -\/ currentpos[1];}
@@ -134,7 +134,7 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00140}00140     \} \textcolor{comment}{// end for simulation steps}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00141}00141 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00142}00142 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00143}00143 Eigen::Vector3f ForwardLocalPlanner::computeNewPositions(\textcolor{keyword}{const} Eigen::Vector3f \&pos, \textcolor{keyword}{const} Eigen::Vector3f \&vel, \textcolor{keywordtype}{double} dt)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00143}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a07074f6a5a6cc1de035e09822d647158}{00143}} Eigen::Vector3f \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a07074f6a5a6cc1de035e09822d647158}{ForwardLocalPlanner::computeNewPositions}}(\textcolor{keyword}{const} Eigen::Vector3f \&pos, \textcolor{keyword}{const} Eigen::Vector3f \&vel, \textcolor{keywordtype}{double} dt)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00144}00144 \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00145}00145     Eigen::Vector3f new\_pos = Eigen::Vector3f::Zero();}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00146}00146     new\_pos[0] = pos[0] + (vel[0] * cos(pos[2]) + vel[1] * cos(M\_PI\_2 + pos[2])) * dt;}
@@ -143,17 +143,17 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00149}00149     \textcolor{keywordflow}{return} new\_pos;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00150}00150 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00151}00151 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00157}00157 \textcolor{keywordtype}{void} ForwardLocalPlanner::initialize(std::string name, tf::TransformListener *tf, costmap\_2d::Costmap2DROS *costmap\_ros)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00157}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ac2a9a9eb71d7f2db81da407581fa545e}{00157}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab455a974d5dcffda7e9772023840c7e6}{ForwardLocalPlanner::initialize}}(std::string name, tf::TransformListener *tf, costmap\_2d::Costmap2DROS *costmap\_ros)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00158}00158 \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00159}00159     costmapRos\_ = costmap\_ros;}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00160}00160     this-\/>initialize();}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00159}00159     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a37791fea67ce92c6e38e3727311e533b}{costmapRos\_}} = costmap\_ros;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00160}00160     this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab455a974d5dcffda7e9772023840c7e6}{initialize}}();}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00161}00161 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00162}00162 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00168}00168 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacecl__move__base__z_1_1pure__spinning__local__planner_ab6a498d3454059055f0aebf49c7b82cf}{ForwardLocalPlanner::publishGoalMarker}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double} phi)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00168}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ae2ef5a1d00495eb7a6c22ec35ab8baf2}{00168}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ae2ef5a1d00495eb7a6c22ec35ab8baf2}{ForwardLocalPlanner::publishGoalMarker}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} y, \textcolor{keywordtype}{double} phi)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00169}00169 \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00170}00170     visualization\_msgs::Marker marker;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00171}00171 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00172}00172     marker.header.frame\_id = this-\/>costmapRos\_-\/>getGlobalFrameID();}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00172}00172     marker.header.frame\_id = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a37791fea67ce92c6e38e3727311e533b}{costmapRos\_}}-\/>getGlobalFrameID();}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00173}00173     marker.header.stamp = ros::Time::now();}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00174}00174     marker.ns = \textcolor{stringliteral}{"{}my\_namespace2"{}};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00175}00175     marker.id = 0;}
@@ -182,7 +182,7 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00198}00198     visualization\_msgs::MarkerArray ma;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00199}00199     ma.markers.push\_back(marker);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00200}00200 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00201}00201     this-\/>goalMarkerPublisher\_.publish(ma);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00201}00201     this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a0d94f4e35c44faacd9d795a303193369}{goalMarkerPublisher\_}}.publish(ma);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00202}00202 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00203}00203 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00204}00204 \textcolor{comment}{// MELODIC}}
@@ -237,12 +237,12 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00253}00253     \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00254}00254 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00255}00255 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00261}00261 \textcolor{keywordtype}{bool} ForwardLocalPlanner::computeVelocityCommands(geometry\_msgs::Twist \&cmd\_vel)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00261}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a1b87a4f9f107c7727c155c4afcb90700}{00261}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a1b87a4f9f107c7727c155c4afcb90700}{ForwardLocalPlanner::computeVelocityCommands}}(geometry\_msgs::Twist \&cmd\_vel)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00262}00262 \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00263}00263     goalReached\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00263}00263     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a9d51ad6f0eb364ebd830526280bdf4fc}{goalReached\_}} = \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00264}00264     ROS\_DEBUG(\textcolor{stringliteral}{"{}[ForwardLocalPlanner] -\/-\/-\/-\/-\/ COMPUTE VELOCITY COMMAND LOCAL PLANNER -\/-\/-\/"{}});}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00265}00265 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00266}00266     tf::Stamped<tf::Pose> tfpose = \mbox{\hyperlink{namespacecl__move__base__z_1_1forward__local__planner_ae53fc7ce4e13850b348d96134c44c912}{optionalRobotPose}}(costmapRos\_);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00266}00266     tf::Stamped<tf::Pose> tfpose = \mbox{\hyperlink{namespacecl__move__base__z_1_1forward__local__planner_ae53fc7ce4e13850b348d96134c44c912}{optionalRobotPose}}(\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a37791fea67ce92c6e38e3727311e533b}{costmapRos\_}});}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00267}00267 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00268}00268     geometry\_msgs::PoseStamped currentPose;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00269}00269     tf::poseStampedTFToMsg(tfpose,currentPose);}
@@ -253,9 +253,9 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00274}00274     \textcolor{keywordflow}{while} (!ok)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00275}00275     \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00276}00276         \textcolor{comment}{// iterate the point from the current position and ahead until reaching a new goal point in the path}}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00277}00277         \textcolor{keywordflow}{while} (!ok \&\& currentPoseIndex\_ < plan\_.size())}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00277}00277         \textcolor{keywordflow}{while} (!ok \&\& \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_af4019077a7661d10957cca16222547c2}{currentPoseIndex\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a929e5d0a9db3027810beb658a2343560}{plan\_}}.size())}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00278}00278         \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00279}00279             \textcolor{keyword}{auto} \&pose = plan\_[currentPoseIndex\_];}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00279}00279             \textcolor{keyword}{auto} \&pose = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a929e5d0a9db3027810beb658a2343560}{plan\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_af4019077a7661d10957cca16222547c2}{currentPoseIndex\_}}];}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00280}00280             \textcolor{keyword}{const} geometry\_msgs::Point \&p = pose.pose.position;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00281}00281             tf::Quaternion q;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00282}00282             tf::quaternionMsgToTF(pose.pose.orientation, q);}
@@ -269,36 +269,36 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00290}00290             \textcolor{keywordtype}{double} angle = tf::getYaw(tfpose.getRotation());}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00291}00291             \textcolor{keywordtype}{double} angular\_error = angles::shortest\_angular\_distance(pangle, angle);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00292}00292 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00293}00293             \textcolor{keywordflow}{if} (dist >= carrot\_distance\_ || fabs(angular\_error) > 0.1)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00293}00293             \textcolor{keywordflow}{if} (dist >= \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a4101afebb7e2a5eb0a2144a5fb553a92}{carrot\_distance\_}} || fabs(angular\_error) > 0.1)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00294}00294             \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00295}00295                 \textcolor{comment}{// the target pose is enough different to be defined as a target}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00296}00296                 ok = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00297}00297                 ROS\_DEBUG(\textcolor{stringliteral}{"{}current index: \%d, carrot goal percentaje: \%lf, dist: \%lf, maxdist: \%lf, angle\_error: \%lf"{}}, currentPoseIndex\_, 100.0 * currentPoseIndex\_ / plan\_.size(), dist, carrot\_distance\_, angular\_error);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00297}00297                 ROS\_DEBUG(\textcolor{stringliteral}{"{}current index: \%d, carrot goal percentaje: \%lf, dist: \%lf, maxdist: \%lf, angle\_error: \%lf"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_af4019077a7661d10957cca16222547c2}{currentPoseIndex\_}}, 100.0 * \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_af4019077a7661d10957cca16222547c2}{currentPoseIndex\_}} / \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a929e5d0a9db3027810beb658a2343560}{plan\_}}.size(), dist, \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a4101afebb7e2a5eb0a2144a5fb553a92}{carrot\_distance\_}}, angular\_error);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00298}00298             \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00299}00299             \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00300}00300             \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00301}00301                 currentPoseIndex\_++;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00301}00301                 \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_af4019077a7661d10957cca16222547c2}{currentPoseIndex\_}}++;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00302}00302             \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00303}00303         \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00304}00304 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00305}00305         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[ForwardLocalPlanner] selected carrot pose index "{}} << currentPoseIndex\_ << \textcolor{stringliteral}{"{}/"{}} << plan\_.size());}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00305}00305         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[ForwardLocalPlanner] selected carrot pose index "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_af4019077a7661d10957cca16222547c2}{currentPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a929e5d0a9db3027810beb658a2343560}{plan\_}}.size());}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00306}00306 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00307}00307         \textcolor{keywordflow}{if} (currentPoseIndex\_ >= plan\_.size())}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00307}00307         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_af4019077a7661d10957cca16222547c2}{currentPoseIndex\_}} >= \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a929e5d0a9db3027810beb658a2343560}{plan\_}}.size())}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00308}00308         \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00309}00309             \textcolor{comment}{// even the latest point is quite similar, then take the last since it is the final goal}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00310}00310             cmd\_vel.linear.x = 0;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00311}00311             cmd\_vel.angular.z = 0;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00312}00312             \textcolor{comment}{//ROS\_INFO("{}End Local planner"{});}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00313}00313             ok = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00314}00314             currentPoseIndex\_ = plan\_.size() -\/ 1;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00314}00314             \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_af4019077a7661d10957cca16222547c2}{currentPoseIndex\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a929e5d0a9db3027810beb658a2343560}{plan\_}}.size() -\/ 1;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00315}00315             \textcolor{comment}{//return true;}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00316}00316         \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00317}00317     \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00318}00318 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00319}00319     \textcolor{comment}{//ROS\_INFO("{}pose control algorithm"{});}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00320}00320 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00321}00321     \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&finalgoalpose = plan\_.back();}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00322}00322     \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&carrot\_goalpose = plan\_[currentPoseIndex\_];}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00321}00321     \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&finalgoalpose = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a929e5d0a9db3027810beb658a2343560}{plan\_}}.back();}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00322}00322     \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&carrot\_goalpose = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a929e5d0a9db3027810beb658a2343560}{plan\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_af4019077a7661d10957cca16222547c2}{currentPoseIndex\_}}];}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00323}00323     \textcolor{keyword}{const} geometry\_msgs::Point \&goalposition = carrot\_goalpose.pose.position;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00324}00324 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00325}00325     tf::Quaternion carrotGoalQ;}
@@ -306,7 +306,7 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00327}00327     \textcolor{comment}{//ROS\_INFO\_STREAM("{}Plan goal quaternion at "{}<< goalpose.pose.orientation);}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00328}00328 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00329}00329     \textcolor{comment}{//goal orientation (global frame)}}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00330}00330     \textcolor{keywordtype}{double} betta = tf::getYaw(carrot\_goalpose.pose.orientation) + betta\_offset\_;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00330}00330     \textcolor{keywordtype}{double} betta = tf::getYaw(carrot\_goalpose.pose.orientation) + \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a935db3e785e3276d42b34d58011e793c}{betta\_offset\_}};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00331}00331 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00332}00332     \textcolor{keywordtype}{double} dx = goalposition.x -\/ tfpose.getOrigin().x();}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00333}00333     \textcolor{keywordtype}{double} dy = goalposition.y -\/ tfpose.getOrigin().y();}
@@ -318,7 +318,7 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00339}00339     tf::Quaternion currentOrientation = tfpose.getRotation();}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00340}00340     \textcolor{keywordtype}{double} theta = tf::getYaw(currentOrientation);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00341}00341     \textcolor{keywordtype}{double} alpha = atan2(dy, dx);}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00342}00342     alpha = alpha + alpha\_offset\_;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00342}00342     alpha = alpha + \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a3d1b7e2ddf54efd67e4935875c7b6a67}{alpha\_offset\_}};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00343}00343 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00344}00344     \textcolor{keywordtype}{double} alpha\_error = angles::shortest\_angular\_distance(alpha, theta);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00345}00345     \textcolor{keywordtype}{double} betta\_error = angles::shortest\_angular\_distance(betta, theta);}
@@ -326,42 +326,42 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00347}00347     \textcolor{keywordtype}{double} vetta; \textcolor{comment}{// = k\_rho\_ * rho\_error;}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00348}00348     \textcolor{keywordtype}{double} gamma; \textcolor{comment}{//= k\_alpha\_ * alpha\_error + k\_betta\_ * betta\_error;}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00349}00349 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00350}00350     \textcolor{keywordflow}{if} (rho\_error > xy\_goal\_tolerance\_) \textcolor{comment}{// reguular control rule, be careful, rho error is with the carrot not with the final goal (this is something to improve like the backwards planner)}}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00350}00350     \textcolor{keywordflow}{if} (rho\_error > \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_acd2ed91ee166f03faeeb9d6a4b91084b}{xy\_goal\_tolerance\_}}) \textcolor{comment}{// reguular control rule, be careful, rho error is with the carrot not with the final goal (this is something to improve like the backwards planner)}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00351}00351     \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00352}00352         vetta = k\_rho\_ * rho\_error;}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00353}00353         gamma = k\_alpha\_ * alpha\_error;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00352}00352         vetta = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a8ad1b04b0bdaa8a7bb878f5e5cebd4f8}{k\_rho\_}} * rho\_error;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00353}00353         gamma = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a530117a51f06e426b6aacc08bbd38fff}{k\_alpha\_}} * alpha\_error;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00354}00354     \}}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00355}00355     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (fabs(betta\_error) >= yaw\_goal\_tolerance\_) \textcolor{comment}{// pureSpining}}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00355}00355     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (fabs(betta\_error) >= \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a7ea1ca266850c7b847a2355f489e6041}{yaw\_goal\_tolerance\_}}) \textcolor{comment}{// pureSpining}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00356}00356     \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00357}00357         vetta = 0;}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00358}00358         gamma = k\_betta\_ * betta\_error;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00358}00358         gamma = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a7b89ccccd288e5384154e7d5b64b4014}{k\_betta\_}} * betta\_error;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00359}00359     \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00360}00360     \textcolor{keywordflow}{else} \textcolor{comment}{// goal reached}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00361}00361     \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00362}00362         ROS\_DEBUG(\textcolor{stringliteral}{"{}GOAL REACHED"{}});}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00363}00363         vetta = 0;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00364}00364         gamma = 0;}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00365}00365         goalReached\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00365}00365         \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a9d51ad6f0eb364ebd830526280bdf4fc}{goalReached\_}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00366}00366     \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00367}00367 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00368}00368     \textcolor{comment}{// linear speed clamp}}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00369}00369     \textcolor{keywordflow}{if} (vetta > max\_linear\_x\_speed\_)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00369}00369     \textcolor{keywordflow}{if} (vetta > \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab2e354dca208a2df60e905c9ee1fcd75}{max\_linear\_x\_speed\_}})}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00370}00370     \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00371}00371         vetta = max\_linear\_x\_speed\_;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00371}00371         vetta = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab2e354dca208a2df60e905c9ee1fcd75}{max\_linear\_x\_speed\_}};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00372}00372     \}}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00373}00373     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vetta < -\/max\_linear\_x\_speed\_)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00373}00373     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (vetta < -\/\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab2e354dca208a2df60e905c9ee1fcd75}{max\_linear\_x\_speed\_}})}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00374}00374     \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00375}00375         vetta = -\/max\_linear\_x\_speed\_;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00375}00375         vetta = -\/\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ab2e354dca208a2df60e905c9ee1fcd75}{max\_linear\_x\_speed\_}};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00376}00376     \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00377}00377 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00378}00378     \textcolor{comment}{// angular speed clamp}}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00379}00379     \textcolor{keywordflow}{if} (gamma > max\_angular\_z\_speed\_)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00379}00379     \textcolor{keywordflow}{if} (gamma > \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a198154e40443d46292d8eba1d81ad34f}{max\_angular\_z\_speed\_}})}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00380}00380     \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00381}00381         gamma = max\_angular\_z\_speed\_;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00381}00381         gamma = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a198154e40443d46292d8eba1d81ad34f}{max\_angular\_z\_speed\_}};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00382}00382     \}}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00383}00383     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (gamma < -\/max\_angular\_z\_speed\_)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00383}00383     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (gamma < -\/\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a198154e40443d46292d8eba1d81ad34f}{max\_angular\_z\_speed\_}})}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00384}00384     \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00385}00385         gamma = -\/max\_angular\_z\_speed\_;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00385}00385         gamma = -\/\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a198154e40443d46292d8eba1d81ad34f}{max\_angular\_z\_speed\_}};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00386}00386     \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00387}00387 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00388}00388     cmd\_vel.linear.x = vetta;}
@@ -371,7 +371,7 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00392}00392 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00393}00393     \textcolor{comment}{//ROS\_INFO\_STREAM("{}Local planner: "{}<< cmd\_vel);}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00394}00394 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00395}00395     \mbox{\hyperlink{namespacecl__move__base__z_1_1pure__spinning__local__planner_ab6a498d3454059055f0aebf49c7b82cf}{publishGoalMarker}}(goalposition.x, goalposition.y, betta);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00395}00395     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_ae2ef5a1d00495eb7a6c22ec35ab8baf2}{publishGoalMarker}}(goalposition.x, goalposition.y, betta);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00396}00396 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00397}00397     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}Forward local planner,"{}} << std::endl}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00398}00398                                               << \textcolor{stringliteral}{"{} theta: "{}} << theta << std::endl}
@@ -383,8 +383,8 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00404}00404                                               << \textcolor{stringliteral}{"{} betta\_error:"{}} << betta\_error << std::endl}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00405}00405                                               << \textcolor{stringliteral}{"{} vetta:"{}} << vetta << std::endl}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00406}00406                                               << \textcolor{stringliteral}{"{} gamma:"{}} << gamma << std::endl}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00407}00407                                               << \textcolor{stringliteral}{"{} xy\_goal\_tolerance:"{}} << xy\_goal\_tolerance\_ << std::endl}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00408}00408                                               << \textcolor{stringliteral}{"{} yaw\_goal\_tolerance:"{}} << yaw\_goal\_tolerance\_ << std::endl);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00407}00407                                               << \textcolor{stringliteral}{"{} xy\_goal\_tolerance:"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_acd2ed91ee166f03faeeb9d6a4b91084b}{xy\_goal\_tolerance\_}} << std::endl}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00408}00408                                               << \textcolor{stringliteral}{"{} yaw\_goal\_tolerance:"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a7ea1ca266850c7b847a2355f489e6041}{yaw\_goal\_tolerance\_}} << std::endl);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00409}00409 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00410}00410     \textcolor{comment}{//if(cmd\_vel.linear.x==0 \&\& cmd\_vel.angular.z == 0 )}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00411}00411     \textcolor{comment}{//\{}}
@@ -392,11 +392,11 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00413}00413 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00414}00414     \textcolor{comment}{//integrate trajectory and check collision}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00415}00415 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00416}00416     tf::Stamped<tf::Pose> global\_pose = \mbox{\hyperlink{namespacecl__move__base__z_1_1forward__local__planner_ae53fc7ce4e13850b348d96134c44c912}{optionalRobotPose}}(costmapRos\_);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00416}00416     tf::Stamped<tf::Pose> global\_pose = \mbox{\hyperlink{namespacecl__move__base__z_1_1forward__local__planner_ae53fc7ce4e13850b348d96134c44c912}{optionalRobotPose}}(\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a37791fea67ce92c6e38e3727311e533b}{costmapRos\_}});}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00417}00417 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00418}00418     \textcolor{comment}{//-\/>getRobotPose(global\_pose);}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00419}00419 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00420}00420     \textcolor{keyword}{auto} *costmap2d = costmapRos\_-\/>getCostmap();}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00420}00420     \textcolor{keyword}{auto} *costmap2d = \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a37791fea67ce92c6e38e3727311e533b}{costmapRos\_}}-\/>getCostmap();}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00421}00421     \textcolor{keyword}{auto} yaw = tf::getYaw(global\_pose.getRotation());}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00422}00422 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00423}00423     \textcolor{keyword}{auto} \&pos = global\_pose.getOrigin();}
@@ -404,7 +404,7 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00425}00425     Eigen::Vector3f currentpose(pos.x(), pos.y(), yaw);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00426}00426     Eigen::Vector3f currentvel(cmd\_vel.linear.x, cmd\_vel.linear.y, cmd\_vel.angular.z);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00427}00427     std::vector<Eigen::Vector3f> trajectory;}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00428}00428     this-\/>generateTrajectory(currentpose, currentvel, 0.8 \textcolor{comment}{/*meters*/}, M\_PI / 8 \textcolor{comment}{/*rads*/}, 3.0 \textcolor{comment}{/*seconds*/}, 0.05 \textcolor{comment}{/*seconds*/}, trajectory);}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00428}00428     this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a3e852f81ccae82c56d7f25e56def899c}{generateTrajectory}}(currentpose, currentvel, 0.8 \textcolor{comment}{/*meters*/}, M\_PI / 8 \textcolor{comment}{/*rads*/}, 3.0 \textcolor{comment}{/*seconds*/}, 0.05 \textcolor{comment}{/*seconds*/}, trajectory);}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00429}00429 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00430}00430     \textcolor{comment}{// check plan rejection}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00431}00431     \textcolor{keywordtype}{bool} aceptedplan = \textcolor{keyword}{true};}
@@ -419,7 +419,7 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00440}00440         \textcolor{keywordtype}{float} dy = p[1] -\/ finalgoalpose.pose.position.y;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00441}00441 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00442}00442         \textcolor{keywordtype}{float} dst = sqrt(dx * dx + dy * dy);}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00443}00443         \textcolor{keywordflow}{if} (dst < xy\_goal\_tolerance\_)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00443}00443         \textcolor{keywordflow}{if} (dst < \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_acd2ed91ee166f03faeeb9d6a4b91084b}{xy\_goal\_tolerance\_}})}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00444}00444         \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00445}00445             \textcolor{comment}{//  ROS\_INFO("{}trajectory checking skipped, goal reached"{});}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00446}00446             \textcolor{keywordflow}{break};}
@@ -447,7 +447,7 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00468}00468 }
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00469}00469     \textcolor{keywordflow}{if} (aceptedplan)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00470}00470     \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00471}00471         waiting\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00471}00471         \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a5061c2aa0d8d2309f1669e402741f0fa}{waiting\_}} = \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00472}00472         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00473}00473     \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00474}00474     \textcolor{keywordflow}{else}}
@@ -456,16 +456,16 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00477}00477         cmd\_vel.linear.x = 0;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00478}00478         cmd\_vel.angular.z = 0;}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00479}00479 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00480}00480         \textcolor{keywordflow}{if} (waiting\_ == \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00480}00480         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a5061c2aa0d8d2309f1669e402741f0fa}{waiting\_}} == \textcolor{keyword}{false})}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00481}00481         \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00482}00482             waiting\_ = \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00483}00483             waitingStamp\_ = ros::Time::now();}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00482}00482             \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a5061c2aa0d8d2309f1669e402741f0fa}{waiting\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00483}00483             \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a85799b3050ae9125ee74c46c38cb2267}{waitingStamp\_}} = ros::Time::now();}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00484}00484         \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00485}00485         \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00486}00486         \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00487}00487             \textcolor{keyword}{auto} waitingduration = ros::Time::now() -\/ waitingStamp\_;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00487}00487             \textcolor{keyword}{auto} waitingduration = ros::Time::now() -\/ \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a85799b3050ae9125ee74c46c38cb2267}{waitingStamp\_}};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00488}00488 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00489}00489             \textcolor{keywordflow}{if} (waitingduration > this-\/>waitingTimeout\_)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00489}00489             \textcolor{keywordflow}{if} (waitingduration > this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_aaac5a8ee9921d71ada7061df5180de4b}{waitingTimeout\_}})}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00490}00490             \{}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00491}00491                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00492}00492             \}}
@@ -475,15 +475,15 @@
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00496}00496     \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00497}00497 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00498}00498 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00504}00504 \textcolor{keywordtype}{bool} ForwardLocalPlanner::isGoalReached()}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00504}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_aafab1572c86c2e9d0b003e36fe9bfb88}{00504}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_aafab1572c86c2e9d0b003e36fe9bfb88}{ForwardLocalPlanner::isGoalReached}}()}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00505}00505 \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00506}00506     \textcolor{keywordflow}{return} goalReached\_;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00506}00506     \textcolor{keywordflow}{return} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a9d51ad6f0eb364ebd830526280bdf4fc}{goalReached\_}};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00507}00507 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00508}00508 }
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00514}00514 \textcolor{keywordtype}{bool} ForwardLocalPlanner::setPlan(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped> \&plan)}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00514}\mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_aac2e1031779520d47a4864acbc312939}{00514}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_aac2e1031779520d47a4864acbc312939}{ForwardLocalPlanner::setPlan}}(\textcolor{keyword}{const} std::vector<geometry\_msgs::PoseStamped> \&plan)}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00515}00515 \{}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00516}00516     plan\_ = plan;}
-\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00517}00517     goalReached\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00516}00516     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a929e5d0a9db3027810beb658a2343560}{plan\_}} = plan;}
+\DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00517}00517     \mbox{\hyperlink{classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner_a9d51ad6f0eb364ebd830526280bdf4fc}{goalReached\_}} = \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00518}00518     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00519}00519 \}}
 \DoxyCodeLine{\Hypertarget{forward__local__planner_8cpp_source_l00520}00520 \} \textcolor{comment}{// namespace forward\_local\_planner}}

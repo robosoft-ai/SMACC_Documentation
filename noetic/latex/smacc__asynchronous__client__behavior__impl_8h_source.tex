@@ -1,0 +1,56 @@
+\hypertarget{smacc__asynchronous__client__behavior__impl_8h_source}{}\doxysection{smacc\+\_\+asynchronous\+\_\+client\+\_\+behavior\+\_\+impl.\+h}
+\label{smacc__asynchronous__client__behavior__impl_8h_source}\index{smacc/include/smacc/impl/smacc\_asynchronous\_client\_behavior\_impl.h@{smacc/include/smacc/impl/smacc\_asynchronous\_client\_behavior\_impl.h}}
+\mbox{\hyperlink{smacc__asynchronous__client__behavior__impl_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__asynchronous__client__behavior_8h}{smacc/smacc\_asynchronous\_client\_behavior.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__state__machine_8h}{smacc/smacc\_state\_machine.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00011}00011 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00014}00014     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} TSourceObject>}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00015}\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a85bf707ed4fc349e0e35d89c9e78bc54}{00015}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a85bf707ed4fc349e0e35d89c9e78bc54}{SmaccAsyncClientBehavior::onOrthogonalAllocation}}()}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00017}00017         \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_af7a9ee952ba3fb8629aa55491606a7b2}{postFinishEventFn\_}} = [=] \{}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00018}00018             this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a3b4f8bbacabffb8a37934407bc79ed80}{onFinished\_}}();}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00019}00019             this-\/>postEvent<EvCbFinished<TSourceObject, TOrthogonal>>();}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00020}00020         \};}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00022}00022         \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a944ed10880796d53649bee39dc1299c0}{postSuccessEventFn\_}} = [=] \{}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00023}00023             this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a31d8bdfa46fe70aea9adf0958806462b}{onSuccess\_}}();}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00024}00024             this-\/>postEvent<EvCbSuccess<TSourceObject, TOrthogonal>>();}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00025}00025         \};}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00027}00027         \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a8041c43a0381f18fae6470a98eb9273d}{postFailureEventFn\_}} = [=] \{}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00028}00028             this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a34e6262de21b9fbbabbc466d3180cc18}{onFailure\_}}();}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00029}00029             this-\/>postEvent<EvCbFailure<TSourceObject, TOrthogonal>>();}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00030}00030         \};}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00033}00033     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TCallback, \textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00034}\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a48d8a07e7fc65220f1eeee49af02a82a}{00034}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a48d8a07e7fc65220f1eeee49af02a82a}{SmaccAsyncClientBehavior::onSuccess}}(TCallback callback, T *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00036}00036         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a31d8bdfa46fe70aea9adf0958806462b}{onSuccess\_}}, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00039}00039     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TCallback, \textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00040}\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_aae9e2dd0d8e3ff25503f0908f040a221}{00040}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_aae9e2dd0d8e3ff25503f0908f040a221}{SmaccAsyncClientBehavior::onFinished}}(TCallback callback, T *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00041}00041     \{}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00042}00042         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a3b4f8bbacabffb8a37934407bc79ed80}{onFinished\_}}, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00045}00045     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TCallback, \textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00046}\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a34d7ba8f590393e4cd7d2f742f04189a}{00046}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a34d7ba8f590393e4cd7d2f742f04189a}{SmaccAsyncClientBehavior::onFailure}}(TCallback callback, T *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00047}00047     \{}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00048}00048         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a34e6262de21b9fbbabbc466d3180cc18}{onFailure\_}}, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{smacc__asynchronous__client__behavior__impl_8h_source_l00050}00050 \}}
+
+\end{DoxyCode}

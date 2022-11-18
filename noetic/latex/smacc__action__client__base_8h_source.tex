@@ -1,0 +1,250 @@
+\hypertarget{smacc__action__client__base_8h_source}{}\doxysection{smacc\+\_\+action\+\_\+client\+\_\+base.\+h}
+\label{smacc__action__client__base_8h_source}\index{smacc/include/smacc/client\_bases/smacc\_action\_client\_base.h@{smacc/include/smacc/client\_bases/smacc\_action\_client\_base.h}}
+\mbox{\hyperlink{smacc__action__client__base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__action__client_8h}{smacc/client\_bases/smacc\_action\_client.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__signal_8h}{smacc/smacc\_signal.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <boost/optional/optional\_io.hpp>}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00014}00014 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00016}00016 \textcolor{keyword}{namespace }client\_bases}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00018}00018 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacesmacc_1_1default__events}{smacc::default\_events}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00020}00020 \textcolor{keyword}{template} <\textcolor{keyword}{typename} ActionType>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00021}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase}{00021}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase}{SmaccActionClientBase}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1ISmaccActionClient}{ISmaccActionClient}}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00022}00022 \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00023}00023 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00024}00024     \textcolor{comment}{// Inside this macro you can find the typedefs for Goal and other types}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00025}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a2936b800b46ac557550cbeda563209b3}{00025}}     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a2936b800b46ac557550cbeda563209b3}{ACTION\_DEFINITION}}(ActionType);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00026}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ab4cb0717885b95d577f82f4133db7f5f}{00026}}     \textcolor{keyword}{typedef} actionlib::SimpleActionClient<ActionType> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ab4cb0717885b95d577f82f4133db7f5f}{ActionClient}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00027}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a43e1a844615218b95151d456eb32b835}{00027}}     \textcolor{keyword}{typedef} actionlib::SimpleActionClient<ActionType> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a43e1a844615218b95151d456eb32b835}{GoalHandle}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00029}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a56eb842a85c65248fda43909b1aaeac1}{00029}}     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} ActionClient::SimpleDoneCallback \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a56eb842a85c65248fda43909b1aaeac1}{SimpleDoneCallback}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00030}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_acfd06f7c33418c03a340e74b00a4dddc}{00030}}     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} ActionClient::SimpleActiveCallback \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_acfd06f7c33418c03a340e74b00a4dddc}{SimpleActiveCallback}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00031}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a207f1655464affc35459f47a35d04069}{00031}}     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} ActionClient::SimpleFeedbackCallback \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a207f1655464affc35459f47a35d04069}{SimpleFeedbackCallback}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00033}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_af38f27dd26f8a87fea6b3eaa4a84e604}{00033}}     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_af38f27dd26f8a87fea6b3eaa4a84e604}{SmaccActionClientBase}}(std::string actionServerName)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00034}00034         : \mbox{\hyperlink{classsmacc_1_1client__bases_1_1ISmaccActionClient}{ISmaccActionClient}}(),}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00035}00035           \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a7f2e1834e915bdf7ae9db8b90b4597e6}{name\_}}(actionServerName)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00036}00036     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00039}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a942113f29871c3e2c3fff9e951500805}{00039}}     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a942113f29871c3e2c3fff9e951500805}{SmaccActionClientBase}}()}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00040}00040         : \mbox{\hyperlink{classsmacc_1_1client__bases_1_1ISmaccActionClient}{ISmaccActionClient}}(),}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00041}00041           \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a7f2e1834e915bdf7ae9db8b90b4597e6}{name\_}}(\textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00042}00042     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00045}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a283e68df89e8f40d2f3251cbdbff1430}{00045}}     \textcolor{keyword}{static} std::string \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a283e68df89e8f40d2f3251cbdbff1430}{getEventLabel}}()}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00046}00046     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00047}00047         \textcolor{keyword}{auto} type = TypeInfo::getTypeInfoFromType<ActionType>();}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00048}00048         \textcolor{keywordflow}{return} type-\/>getNonTemplatedTypeName();}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00051}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_aa6daf2d88aa6254e5a5c10b2c2152fad}{00051}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_aa6daf2d88aa6254e5a5c10b2c2152fad}{\string~SmaccActionClientBase}}()}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00052}00052     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00053}00053     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00056}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a7f2e1834e915bdf7ae9db8b90b4597e6}{00056}}     std::string \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a7f2e1834e915bdf7ae9db8b90b4597e6}{name\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00058}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a72967f255f85e35718a1e1b0b48c38ff}{00058}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a72967f255f85e35718a1e1b0b48c38ff}{initialize}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00059}00059 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00060}00060         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac0c1dd56420ecb53cf0c90cd8bef1b4c}{client\_}} = std::make\_shared<ActionClient>(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a7f2e1834e915bdf7ae9db8b90b4597e6}{name\_}});}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00061}00061     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00063}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_afa1d615e16c9e825d815a3a3ccaa61df}{00063}}     \mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc::SmaccSignal}}<void(\textcolor{keyword}{const} ResultConstPtr \&)> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_afa1d615e16c9e825d815a3a3ccaa61df}{onSucceeded\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00064}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_adc33748ca4fcef9730f8039b75d496d0}{00064}}     \mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc::SmaccSignal}}<void(\textcolor{keyword}{const} ResultConstPtr \&)> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_adc33748ca4fcef9730f8039b75d496d0}{onAborted\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00065}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a23846f928b48b5da809690883044b14b}{00065}}     \mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc::SmaccSignal}}<void(\textcolor{keyword}{const} ResultConstPtr \&)> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a23846f928b48b5da809690883044b14b}{onPreempted\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00066}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a4c878cbf2684701323e2b36668f7d721}{00066}}     \mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc::SmaccSignal}}<void(\textcolor{keyword}{const} ResultConstPtr \&)> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a4c878cbf2684701323e2b36668f7d721}{onRejected\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00068}00068     \textcolor{comment}{// event creation/posting factory functions}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00069}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_afb4f82508cd653d496392f321e84a783}{00069}}     std::function<void(ResultConstPtr)> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_afb4f82508cd653d496392f321e84a783}{postSuccessEvent}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00070}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9ca2952ededeec233ee6d8a9a39c680b}{00070}}     std::function<void(ResultConstPtr)> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9ca2952ededeec233ee6d8a9a39c680b}{postAbortedEvent}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00071}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9513e302d447b04aafbca574d37a9ecc}{00071}}     std::function<void(ResultConstPtr)> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9513e302d447b04aafbca574d37a9ecc}{postPreemptedEvent}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00072}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a04cb60c48127e5534c1ce7045fb5abdc}{00072}}     std::function<void(ResultConstPtr)> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a04cb60c48127e5534c1ce7045fb5abdc}{postRejectedEvent}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00074}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac754fb0adfc982fe1adde0d92842a33b}{00074}}     std::function<void(FeedbackConstPtr)> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac754fb0adfc982fe1adde0d92842a33b}{postFeedbackEvent}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00076}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a39fc5030e98f1e30e9919a9d9737b78a}{00076}}     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a56eb842a85c65248fda43909b1aaeac1}{SimpleDoneCallback}} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a39fc5030e98f1e30e9919a9d9737b78a}{done\_cb}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00077}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a8aada706b9b8ca50792b48c2f990394a}{00077}}     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_acfd06f7c33418c03a340e74b00a4dddc}{SimpleActiveCallback}} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a8aada706b9b8ca50792b48c2f990394a}{active\_cb}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00078}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a978629b407530f1b7d266a009eff664b}{00078}}     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a207f1655464affc35459f47a35d04069}{SimpleFeedbackCallback}} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a978629b407530f1b7d266a009eff664b}{feedback\_cb}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00080}00080     \textcolor{keyword}{template} <\textcolor{keyword}{typename} EvType>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00081}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ad84470e029cc996685f44ad0d4062c29}{00081}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ad84470e029cc996685f44ad0d4062c29}{postResultEvent}}(ResultConstPtr result)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00082}00082     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00083}00083         \textcolor{keyword}{auto} *ev = \textcolor{keyword}{new} EvType();}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00084}00084         \textcolor{comment}{//ev-\/>client = this;}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00085}00085         ev-\/>resultMessage = *result;}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00086}00086         ROS\_INFO(\textcolor{stringliteral}{"{}Posting EVENT \%s"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(ev).name()).c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00087}00087         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a21a79203cb44fc717d4d977c190327c6}{postEvent}}(ev);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00090}00090     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} TSourceObject>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00091}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a925a611bc8035a0f70248c6ab11f4221}{00091}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a925a611bc8035a0f70248c6ab11f4221}{onOrthogonalAllocation}}()}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00092}00092     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00093}00093         \textcolor{comment}{// we create here all the event factory functions capturing the TOrthogonal}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00094}00094         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_afb4f82508cd653d496392f321e84a783}{postSuccessEvent}} = [=](\textcolor{keyword}{auto} msg) \{ this-\/>postResultEvent<EvActionSucceeded<TSourceObject, TOrthogonal>>(msg); \};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00095}00095         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9ca2952ededeec233ee6d8a9a39c680b}{postAbortedEvent}} = [=](\textcolor{keyword}{auto} msg) \{ this-\/>postResultEvent<EvActionAborted<TSourceObject, TOrthogonal>>(msg); \};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00096}00096         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9513e302d447b04aafbca574d37a9ecc}{postPreemptedEvent}} = [=](\textcolor{keyword}{auto} msg) \{ this-\/>postResultEvent<EvActionPreempted<TSourceObject, TOrthogonal>>(msg); \};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00097}00097         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a04cb60c48127e5534c1ce7045fb5abdc}{postRejectedEvent}} = [=](\textcolor{keyword}{auto} msg) \{ this-\/>postResultEvent<EvActionRejected<TSourceObject, TOrthogonal>>(msg); \};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00098}00098         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac754fb0adfc982fe1adde0d92842a33b}{postFeedbackEvent}} = [=](\textcolor{keyword}{auto} msg) \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00099}00099             \textcolor{keyword}{auto} actionFeedbackEvent = \textcolor{keyword}{new} \mbox{\hyperlink{structsmacc_1_1default__events_1_1EvActionFeedback}{EvActionFeedback<Feedback, TOrthogonal>}}();}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00100}00100             actionFeedbackEvent-\/>client = \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00101}00101             actionFeedbackEvent-\/>feedbackMessage = *msg;}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00102}00102             this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a21a79203cb44fc717d4d977c190327c6}{postEvent}}(actionFeedbackEvent);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00103}00103             ROS\_DEBUG(\textcolor{stringliteral}{"{}[\%s] FEEDBACK EVENT"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(*\textcolor{keyword}{this})).c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00104}00104         \};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00106}00106         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a39fc5030e98f1e30e9919a9d9737b78a}{done\_cb}} = boost::bind(\&\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase}{SmaccActionClientBase<ActionType>::onResult}}, \textcolor{keyword}{this}, \_1, \_2);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00107}00107         \textcolor{comment}{//active\_cb;}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00108}00108         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a978629b407530f1b7d266a009eff664b}{feedback\_cb}} = boost::bind(\&\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase}{SmaccActionClientBase<ActionType>::onFeedback}}, \textcolor{keyword}{this}, \_1);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00109}00109     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00111}00111     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00112}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_af6d77c27d21b2e4f621f53c5f1df088b}{00112}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_af6d77c27d21b2e4f621f53c5f1df088b}{onSucceeded}}(\textcolor{keywordtype}{void} (T::*callback)(ResultConstPtr \&), T *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00113}00113     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00114}00114         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(onSucceeded\_, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00115}00115     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00117}00117     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00118}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a92053df4ebfd0e49bbbd4ba191bf3975}{00118}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a92053df4ebfd0e49bbbd4ba191bf3975}{onSucceeded}}(std::function<\textcolor{keywordtype}{void}(ResultConstPtr \&)> callback)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00119}00119     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00120}00120         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(onSucceeded\_, callback);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00121}00121     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00123}00123     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00124}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a75c58162621a705bfd11efdf068eb06b}{00124}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a75c58162621a705bfd11efdf068eb06b}{onAborted}}(\textcolor{keywordtype}{void} (T::*callback)(ResultConstPtr \&), T *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00125}00125     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00126}00126         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(onAborted\_, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00127}00127     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00129}00129     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00130}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a67661e9415e2f2c2a1fede92a1b3dd1d}{00130}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a67661e9415e2f2c2a1fede92a1b3dd1d}{onAborted}}(std::function<\textcolor{keywordtype}{void}(ResultConstPtr \&)> callback)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00131}00131     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00132}00132         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(onAborted\_, callback);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00133}00133     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00135}00135     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00136}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a7b11af8b2fe1cf75dead6c3a90baefe2}{00136}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a7b11af8b2fe1cf75dead6c3a90baefe2}{onPreempted}}(\textcolor{keywordtype}{void} (T::*callback)(ResultConstPtr \&), T *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00137}00137     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00138}00138         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(onPreempted\_, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00139}00139     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00141}00141     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00142}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a2941fe4e9a24a7862fd1cfbc63cbfcfa}{00142}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a2941fe4e9a24a7862fd1cfbc63cbfcfa}{onPreempted}}(std::function<\textcolor{keywordtype}{void}(ResultConstPtr \&)> callback)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00143}00143     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00144}00144         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(onPreempted\_, callback);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00145}00145     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00147}00147     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00148}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a4a0f2dc95e6fbc7f25821f57e23b7905}{00148}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a4a0f2dc95e6fbc7f25821f57e23b7905}{onRejected}}(\textcolor{keywordtype}{void} (T::*callback)(ResultConstPtr \&), T *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00149}00149     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00150}00150         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(onRejected\_, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00151}00151     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00153}00153     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00154}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_af6f191d1b1612d57082aa278db1f7be4}{00154}}     boost::signals2::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_af6f191d1b1612d57082aa278db1f7be4}{onRejected}}(std::function<\textcolor{keywordtype}{void}(ResultConstPtr \&)> callback)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00155}00155     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00156}00156         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(onRejected\_, callback);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00157}00157     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00159}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_aedeaf9704b73bf05b5522f7250416c9a}{00159}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_aedeaf9704b73bf05b5522f7250416c9a}{cancelGoal}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00160}00160 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00161}00161         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac0c1dd56420ecb53cf0c90cd8bef1b4c}{client\_}}-\/>isServerConnected())}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00162}00162         \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00163}00163             ROS\_INFO(\textcolor{stringliteral}{"{}Cancelling goal of \%s"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00164}00164             \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac0c1dd56420ecb53cf0c90cd8bef1b4c}{client\_}}-\/>cancelGoal();}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00165}00165         \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00166}00166         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00167}00167         \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00168}00168             ROS\_ERROR(\textcolor{stringliteral}{"{}\%s [at \%s]: not connected with actionserver, skipping cancel goal ..."{}}, \mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}().c\_str(), \mbox{\hyperlink{classsmacc_1_1client__bases_1_1ISmaccActionClient_af7e68149691fe6c9284f6f80c19932d8}{getNamespace}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00169}00169         \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00170}00170     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00171}00171 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00172}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a97192acd7bb7cac5de0191e700ab72ee}{00172}}     \textcolor{keyword}{virtual} SimpleClientGoalState \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a97192acd7bb7cac5de0191e700ab72ee}{getState}}()\textcolor{keyword}{ override}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00173}00173 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00174}00174         \textcolor{keywordflow}{return} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac0c1dd56420ecb53cf0c90cd8bef1b4c}{client\_}}-\/>getState();}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00175}00175     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00177}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9c47a5094ac8afb01680307fe5eca922}{00177}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9c47a5094ac8afb01680307fe5eca922}{sendGoal}}(Goal \&goal)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00178}00178     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00179}00179         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[ActionClient<"{}}<< demangledTypeName<ActionType>() <<\textcolor{stringliteral}{"{}>] Sending goal to actionserver located in "{}} << this-\/>name\_ << \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}});}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00181}00181         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac0c1dd56420ecb53cf0c90cd8bef1b4c}{client\_}}-\/>isServerConnected())}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00182}00182         \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00183}00183             ROS\_INFO\_STREAM(\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}() << \textcolor{stringliteral}{"{}: Goal Value: "{}} << std::endl}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00184}00184                                       << goal);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00185}00185             \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac0c1dd56420ecb53cf0c90cd8bef1b4c}{client\_}}-\/>sendGoal(goal, \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a39fc5030e98f1e30e9919a9d9737b78a}{done\_cb}}, \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a8aada706b9b8ca50792b48c2f990394a}{active\_cb}}, \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a978629b407530f1b7d266a009eff664b}{feedback\_cb}});}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00186}00186         \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00187}00187         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00188}00188         \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00189}00189             ROS\_ERROR(\textcolor{stringliteral}{"{}\%s [at \%s]: not connected with actionserver, skipping goal request ..."{}}, \mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}().c\_str(), \mbox{\hyperlink{classsmacc_1_1client__bases_1_1ISmaccActionClient_af7e68149691fe6c9284f6f80c19932d8}{getNamespace}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00190}00190             \textcolor{comment}{//client\_-\/>waitForServer();}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00191}00191         \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00192}00192     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00194}00194 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00195}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac0c1dd56420ecb53cf0c90cd8bef1b4c}{00195}}     std::shared\_ptr<ActionClient> \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac0c1dd56420ecb53cf0c90cd8bef1b4c}{client\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00197}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a5a88fd084076729e9cb864e45338af47}{00197}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a5a88fd084076729e9cb864e45338af47}{onFeedback}}(\textcolor{keyword}{const} FeedbackConstPtr \&feedback\_msg)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00198}00198     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00199}00199         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_ac754fb0adfc982fe1adde0d92842a33b}{postFeedbackEvent}}(feedback\_msg);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00200}00200     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00201}00201 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00202}\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a39b897cf72ee070e4172cf76cdd53d5e}{00202}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a39b897cf72ee070e4172cf76cdd53d5e}{onResult}}(\textcolor{keyword}{const} SimpleClientGoalState \&state, \textcolor{keyword}{const} ResultConstPtr \&result\_msg)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00203}00203     \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00204}00204         \textcolor{comment}{// auto *actionResultEvent = new EvActionResult<TDerived>();}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00205}00205         \textcolor{comment}{// actionResultEvent-\/>client = this;}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00206}00206         \textcolor{comment}{// actionResultEvent-\/>resultMessage = *result\_msg;}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00208}00208         \textcolor{keyword}{const} \textcolor{keyword}{auto} \&resultType = this-\/>\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a97192acd7bb7cac5de0191e700ab72ee}{getState}}();}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00209}00209         ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] request result: \%s"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}().c\_str(), resultType.toString().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00210}00210 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00211}00211         \textcolor{keywordflow}{if} (resultType == actionlib::SimpleClientGoalState::SUCCEEDED)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00212}00212         \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00213}00213             ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] request result: Success"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00214}00214             \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_afa1d615e16c9e825d815a3a3ccaa61df}{onSucceeded\_}}(result\_msg);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00215}00215             \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_afb4f82508cd653d496392f321e84a783}{postSuccessEvent}}(result\_msg);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00216}00216         \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00217}00217         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (resultType == actionlib::SimpleClientGoalState::ABORTED)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00218}00218         \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00219}00219             ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] request result: Aborted"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00220}00220             \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_adc33748ca4fcef9730f8039b75d496d0}{onAborted\_}}(result\_msg);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00221}00221             \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9ca2952ededeec233ee6d8a9a39c680b}{postAbortedEvent}}(result\_msg);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00222}00222         \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00223}00223         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (resultType == actionlib::SimpleClientGoalState::REJECTED)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00224}00224         \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00225}00225             ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] request result: Rejected"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00226}00226             \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a4c878cbf2684701323e2b36668f7d721}{onRejected\_}}(result\_msg);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00227}00227             \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a04cb60c48127e5534c1ce7045fb5abdc}{postRejectedEvent}}(result\_msg);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00228}00228         \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00229}00229         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (resultType == actionlib::SimpleClientGoalState::PREEMPTED)}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00230}00230         \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00231}00231             ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] request result: Preempted"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00232}00232             \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a23846f928b48b5da809690883044b14b}{onPreempted\_}}(result\_msg);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00233}00233             \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccActionClientBase_a9513e302d447b04aafbca574d37a9ecc}{postPreemptedEvent}}(result\_msg);}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00234}00234         \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00235}00235         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00236}00236         \{}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00237}00237             ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] request result: NOT HANDLED TYPE: \%s"{}}, this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a8c3ce19f182e71909c5dc6263d25be69}{getName}}().c\_str(), resultType.toString().c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00238}00238         \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00239}00239     \}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00240}00240 \};}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00241}00241 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00242}\mbox{\hyperlink{smacc__action__client__base_8h_a2f7b218da8ed393458556e0401ffc419}{00242}} \textcolor{preprocessor}{\#define SMACC\_ACTION\_CLIENT\_DEFINITION(ActionType) ACTION\_DEFINITION(ActionType); typedef smacc::client\_bases::SmaccActionClientBase<ActionType> Base;}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00243}00243 \} \textcolor{comment}{// namespace client\_bases}}
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{smacc__action__client__base_8h_source_l00245}00245 \} \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

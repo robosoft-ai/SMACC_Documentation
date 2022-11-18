@@ -1,0 +1,22 @@
+<map id="smacc::ISmaccClient::getName" name="smacc::ISmaccClient::getName">
+<area shape="rect" id="node1" title=" " alt="" coords="725,253,871,294"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#aedeaf9704b73bf05b5522f7250416c9a" title=" " alt="" coords="501,5,670,61"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1client__bases_1_1SmaccPublisherClient.html#ade7a2549ada725b8342633137eb6ad53" title=" " alt="" coords="507,85,663,141"/>
+<area shape="rect" id="node5" href="$classsmacc_1_1client__bases_1_1SmaccSubscriberClient.html#af188f0f5e89de26a07e1f964cdd23a70" title=" " alt="" coords="503,165,667,221"/>
+<area shape="rect" id="node7" href="$classsmacc_1_1client__bases_1_1SmaccServiceClient.html#aa51b80828e4ab19627210440ae15b6f3" title=" " alt="" coords="512,245,659,301"/>
+<area shape="rect" id="node8" href="$classsmacc_1_1client__bases_1_1SmaccServiceServerClient.html#ab05e6e4f2125dde4aa9eaa1f6be536fa" title=" " alt="" coords="493,325,677,381"/>
+<area shape="rect" id="node9" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#a39b897cf72ee070e4172cf76cdd53d5e" title=" " alt="" coords="501,405,670,461"/>
+<area shape="rect" id="node10" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#a9c47a5094ac8afb01680307fe5eca922" title=" " alt="" coords="501,485,670,541"/>
+<area shape="rect" id="node3" href="$classcl__move__base__z_1_1CbUndoPathBackwards2.html#a62f0d53fc341ca6d241637cc0e4b2e30" title=" " alt="" coords="247,13,445,54"/>
+<area shape="rect" id="node6" href="$classcl__multirole__sensor_1_1ClMultiroleSensor.html#a3847e19f925f65dd034964eb2d0b3594" title=" " alt="" coords="279,165,413,221"/>
+<area shape="rect" id="node11" href="$classcl__move__base__z_1_1CbNavigateGlobalPosition.html#a0b8525ea9e4388b27cb1f9b1e06a3b63" title=" " alt="" coords="249,270,443,311"/>
+<area shape="rect" id="node13" href="$classcl__move__base__z_1_1CbAbsoluteRotate.html#a10418ea360809fa649d295716b152b2b" title=" " alt="" coords="250,335,442,377"/>
+<area shape="rect" id="node14" href="$classcl__move__base__z_1_1CbNavigateBackwards.html#a545a5282f0ef6b0080b46002d6037567" title=" " alt="" coords="249,401,443,442"/>
+<area shape="rect" id="node15" href="$classcl__move__base__z_1_1CbNavigateForward.html#af9a2e49071de287922c3f5963a079b95" title=" " alt="" coords="249,466,443,507"/>
+<area shape="rect" id="node16" href="$classcl__move__base__z_1_1CbRotate.html#a316ee51ecfd3f10fd1edae0d7d3b26c0" title=" " alt="" coords="257,531,435,573"/>
+<area shape="rect" id="node17" href="$classcl__move__base__z_1_1CbUndoPathBackwards.html#a32e680530375b62c7053bf173f6b2b1b" title=" " alt="" coords="247,597,445,638"/>
+<area shape="rect" id="node18" href="$classcl__move__base__z_1_1CbUndoPathBackwards2.html#a1b96187df9be6ce0fbdb5511147685d3" title=" " alt="" coords="247,662,445,703"/>
+<area shape="rect" id="node19" href="$classcl__move__base__z_1_1WaypointNavigator.html#a1e0a8ff536d2d01a01063fd903029347" title=" " alt="" coords="257,727,435,769"/>
+<area shape="rect" id="node12" href="$classcl__move__base__z_1_1CbNavigateGlobalPosition.html#a66d8b0555ef2945bc108dcd5171be292" title=" " alt="" coords="5,270,199,311"/>
+<area shape="rect" id="node20" href="$classcl__move__base__z_1_1CbNavigateNextWaypoint.html#a04913ef24344363669c1916b5df28493" title=" " alt="" coords="5,727,199,769"/>
+</map>

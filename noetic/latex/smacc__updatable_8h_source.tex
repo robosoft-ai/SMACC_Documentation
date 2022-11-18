@@ -1,0 +1,37 @@
+\hypertarget{smacc__updatable_8h_source}{}\doxysection{smacc\+\_\+updatable.\+h}
+\label{smacc__updatable_8h_source}\index{smacc/include/smacc/smacc\_updatable.h@{smacc/include/smacc/smacc\_updatable.h}}
+\mbox{\hyperlink{smacc__updatable_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <boost/optional.hpp>}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <ros/duration.h>}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <ros/time.h>}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00013}00013 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00014}00014 \{}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00015}\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{00015}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmaccUpdatable}}}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00017}00017 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00018}00018     \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_a263ef476c6965fa1fe147d953c6806d0}{ISmaccUpdatable}}();}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00019}00019     \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_a263ef476c6965fa1fe147d953c6806d0}{ISmaccUpdatable}}(ros::Duration duration);}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00021}00021     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_a766b2aefcb70ba9b2784e94b97dd7704}{executeUpdate}}();}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00022}00022     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_aa420568b0c1bced80d797e9ee6d79d5f}{setUpdatePeriod}}(ros::Duration duration);}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00024}00024 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00025}\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_a84ee0520cbefdb1d412bed54650b028e}{00025}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_a84ee0520cbefdb1d412bed54650b028e}{update}}() = 0;}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00027}00027 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00028}\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_ad02d9798ac5609f3ecb9fb8a46febc18}{00028}}     boost::optional<ros::Duration> \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_ad02d9798ac5609f3ecb9fb8a46febc18}{periodDuration\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00029}\mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_ad58f7e1cd26d3fe8c3a3fccecc57feac}{00029}}     ros::Time \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable_ad58f7e1cd26d3fe8c3a3fccecc57feac}{lastUpdate\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00030}00030 \};}
+\DoxyCodeLine{\Hypertarget{smacc__updatable_8h_source_l00031}00031 \} \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

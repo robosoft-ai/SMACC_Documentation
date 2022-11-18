@@ -2,50 +2,50 @@
 \label{eg__conditional__generator_8cpp_source}\index{smacc\_event\_generator\_library/eg\_conditional\_generator/src/eg\_conditional\_generator/eg\_conditional\_generator.cpp@{smacc\_event\_generator\_library/eg\_conditional\_generator/src/eg\_conditional\_generator/eg\_conditional\_generator.cpp}}
 \mbox{\hyperlink{eg__conditional__generator_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <eg\_conditional\_generator/eg\_conditional\_generator.h>}}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{eg__conditional__generator_8h}{eg\_conditional\_generator/eg\_conditional\_generator.h}}>}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00002}00002 }
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00004}00004 \{}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00005}\mbox{\hyperlink{namespacesmacc_1_1event__generators}{00005}}     \textcolor{keyword}{namespace }event\_generators}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00005}00005     \textcolor{keyword}{namespace }event\_generators}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00006}00006     \{}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00007}00007         EgConditionalGenerator::EgConditionalGenerator(ConditionalGeneratorMode mode, std::function <\textcolor{keywordtype}{bool}()> updatePredicate)}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00007}\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_aa21daec9774431387845be23fbcdfaa2}{00007}}         \mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_aa21daec9774431387845be23fbcdfaa2}{EgConditionalGenerator::EgConditionalGenerator}}(\mbox{\hyperlink{namespacesmacc_1_1event__generators_a1a57548759d7458f91c299f4fc2c5ea4}{ConditionalGeneratorMode}} mode, std::function <\textcolor{keywordtype}{bool}()> updatePredicate)}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00008}00008             :mode\_(mode),}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00009}00009             updatePredicate\_(updatePredicate)}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00010}00010         \{}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00011}00011 }
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00012}00012         \}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00013}00013 }
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00014}00014         \textcolor{keywordtype}{void} EgConditionalGenerator::checkPredicateAndPost()}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00014}\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a2a7e8a3818ffd1899682be9bbb8ae339}{00014}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a2a7e8a3818ffd1899682be9bbb8ae339}{EgConditionalGenerator::checkPredicateAndPost}}()}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00015}00015         \{}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00016}00016             \textcolor{keywordflow}{if}(this-\/>updatePredicate\_())}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00016}00016             \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a4e4092ecfa7278deda39e8ade6455362}{updatePredicate\_}}())}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00017}00017             \{}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00018}00018                 this-\/>postEventTrue();}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00018}00018                 this-\/>\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a888c44b5585274947b57143611a8670d}{postEventTrue}}();}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00019}00019             \}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00020}00020             \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00021}00021             \{}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00022}00022                 this-\/>postEventFalse();}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00022}00022                 this-\/>\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_ac45d7b197cc4cf361602c72dc85ed62a}{postEventFalse}}();}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00023}00023             \}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00024}00024         \}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00025}00025 }
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00026}00026         \textcolor{keywordtype}{void} EgConditionalGenerator::onEntry()}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00026}\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_ae3413453dceeabdf20cba6f1f19fc40c}{00026}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_ae3413453dceeabdf20cba6f1f19fc40c}{EgConditionalGenerator::onEntry}}()}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00027}00027         \{}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00028}00028             \textcolor{keywordflow}{if} (mode\_ == ConditionalGeneratorMode::ONE\_SHOT)}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00028}00028             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a5f3e7b602c4d250c54bec0d681d2cb80}{mode\_}} == \mbox{\hyperlink{namespacesmacc_1_1event__generators_a1a57548759d7458f91c299f4fc2c5ea4a5bc2964599423c796ecf0aaecdc5be9d}{ConditionalGeneratorMode::ONE\_SHOT}})}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00029}00029             \{}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00030}00030                 this-\/>checkPredicateAndPost();}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00030}00030                 this-\/>\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a2a7e8a3818ffd1899682be9bbb8ae339}{checkPredicateAndPost}}();}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00031}00031             \}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00032}00032         \}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00033}00033 }
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00034}00034         \textcolor{keywordtype}{void} EgConditionalGenerator::update()}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00034}\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_ab5e500fd01fb21a7e6b836405431c6f2}{00034}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_ab5e500fd01fb21a7e6b836405431c6f2}{EgConditionalGenerator::update}}()}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00035}00035         \{}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00036}00036             \textcolor{keywordflow}{if} (mode\_ == ConditionalGeneratorMode::ON\_UPDATE)}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00036}00036             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a5f3e7b602c4d250c54bec0d681d2cb80}{mode\_}} == \mbox{\hyperlink{namespacesmacc_1_1event__generators_a1a57548759d7458f91c299f4fc2c5ea4a4a6be4c8602d150038b100a35556d3d7}{ConditionalGeneratorMode::ON\_UPDATE}})}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00037}00037             \{}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00038}00038                 this-\/>checkPredicateAndPost();}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00038}00038                 this-\/>\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a2a7e8a3818ffd1899682be9bbb8ae339}{checkPredicateAndPost}}();}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00039}00039             \}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00040}00040         \}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00041}00041 }
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00042}00042         \textcolor{keywordtype}{void} EgConditionalGenerator::setPredicateFunction(std::function <\textcolor{keywordtype}{bool}()> updatePredicate)}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00042}\mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a511e3afee28721cf1bd632bf9140003d}{00042}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a511e3afee28721cf1bd632bf9140003d}{EgConditionalGenerator::setPredicateFunction}}(std::function <\textcolor{keywordtype}{bool}()> updatePredicate)}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00043}00043         \{}
-\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00044}00044             updatePredicate\_ = updatePredicate;}
+\DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00044}00044             \mbox{\hyperlink{classsmacc_1_1event__generators_1_1EgConditionalGenerator_a4e4092ecfa7278deda39e8ade6455362}{updatePredicate\_}} = updatePredicate;}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00045}00045         \}}
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00046}00046 }
 \DoxyCodeLine{\Hypertarget{eg__conditional__generator_8cpp_source_l00047}00047     \} \textcolor{comment}{// namespace state\_reactors}}

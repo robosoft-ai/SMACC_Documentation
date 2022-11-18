@@ -1,0 +1,261 @@
+\hypertarget{classcl__keyboard_1_1CbDefaultKeyboardBehavior}{}\doxysection{cl\+\_\+keyboard\+::Cb\+Default\+Keyboard\+Behavior Class Reference}
+\label{classcl__keyboard_1_1CbDefaultKeyboardBehavior}\index{cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}}
+
+
+{\ttfamily \#include $<$cb\+\_\+default\+\_\+keyboard\+\_\+behavior.\+h$>$}
+
+
+
+Inheritance diagram for cl\+\_\+keyboard\+::Cb\+Default\+Keyboard\+Behavior\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classcl__keyboard_1_1CbDefaultKeyboardBehavior__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cl\+\_\+keyboard\+::Cb\+Default\+Keyboard\+Behavior\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__keyboard_1_1CbDefaultKeyboardBehavior__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_a06e49d8c78aeffecf74c27b05f529a3a}{on\+Entry}} ()
+\item 
+{\footnotesize template$<$typename TOrthogonal , typename TSource\+Object $>$ }\\void \mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_af6cae1d7ce3f51e6843d3ac5da7966dc}{on\+Orthogonal\+Allocation}} ()
+\item 
+void \mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_aa834f8e626a306920e536e7535041ac3}{On\+Key\+Press}} (char character)
+\item 
+{\footnotesize template$<$typename TEv $>$ }\\void \mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_afe6105db2d58fee99754cb4a47835988}{post\+Key\+Event}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcl__keyboard_1_1ClKeyboard}{Cl\+Keyboard}} $\ast$ \mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_a482e94248b8e6fbac0973d3dec0cc20b}{Cl\+Keyboard\+\_\+}}
+\item 
+std\+::function$<$ void(char)$>$ \mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_abd29833a0f94aa1d5aa1834d15ab1281}{post\+Event\+Key\+Press}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00010}{10}} of file \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source}{cb\+\_\+default\+\_\+keyboard\+\_\+behavior.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcl__keyboard_1_1CbDefaultKeyboardBehavior_a06e49d8c78aeffecf74c27b05f529a3a}\label{classcl__keyboard_1_1CbDefaultKeyboardBehavior_a06e49d8c78aeffecf74c27b05f529a3a}} 
+\index{cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}!onEntry@{onEntry}}
+\index{onEntry@{onEntry}!cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}}
+\doxysubsubsection{\texorpdfstring{onEntry()}{onEntry()}}
+{\footnotesize\ttfamily void cl\+\_\+keyboard\+::\+Cb\+Default\+Keyboard\+Behavior\+::on\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classsmacc_1_1SmaccClientBehavior_ad5d3e1f1697c3cfe66c94cadba948493}{smacc\+::\+Smacc\+Client\+Behavior}}.
+
+
+
+Definition at line \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00016}{16}} of file \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source}{cb\+\_\+default\+\_\+keyboard\+\_\+behavior.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017     \{}
+\DoxyCodeLine{00018         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a32b16e99e3b4cb289414203dc861a440}{requiresClient}}(\mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_a482e94248b8e6fbac0973d3dec0cc20b}{ClKeyboard\_}});}
+\DoxyCodeLine{00019         this-\/>\mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_a482e94248b8e6fbac0973d3dec0cc20b}{ClKeyboard\_}}-\/>\mbox{\hyperlink{classcl__keyboard_1_1ClKeyboard_ae9f4a6dc1ce18397394a432826970baa}{OnKeyPress}}(\&\mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_aa834f8e626a306920e536e7535041ac3}{CbDefaultKeyboardBehavior::OnKeyPress}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{00020     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00081}{On\+Key\+Press()}}, \mbox{\hyperlink{cl__keyboard_8h_source_l00154}{cl\+\_\+keyboard\+::\+Cl\+Keyboard\+::\+On\+Key\+Press()}}, and \mbox{\hyperlink{smacc__client__behavior__impl_8h_source_l00054}{smacc\+::\+ISmacc\+Client\+Behavior\+::requires\+Client()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__keyboard_1_1CbDefaultKeyboardBehavior_a06e49d8c78aeffecf74c27b05f529a3a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcl__keyboard_1_1CbDefaultKeyboardBehavior_aa834f8e626a306920e536e7535041ac3}\label{classcl__keyboard_1_1CbDefaultKeyboardBehavior_aa834f8e626a306920e536e7535041ac3}} 
+\index{cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}!OnKeyPress@{OnKeyPress}}
+\index{OnKeyPress@{OnKeyPress}!cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}}
+\doxysubsubsection{\texorpdfstring{OnKeyPress()}{OnKeyPress()}}
+{\footnotesize\ttfamily void cl\+\_\+keyboard\+::\+Cb\+Default\+Keyboard\+Behavior\+::\+On\+Key\+Press (\begin{DoxyParamCaption}\item[{char}]{character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00081}{81}} of file \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source}{cb\+\_\+default\+\_\+keyboard\+\_\+behavior.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082     \{}
+\DoxyCodeLine{00083         \mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_abd29833a0f94aa1d5aa1834d15ab1281}{postEventKeyPress}}(character);}
+\DoxyCodeLine{00084     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00014}{post\+Event\+Key\+Press}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00016}{on\+Entry()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__keyboard_1_1CbDefaultKeyboardBehavior_aa834f8e626a306920e536e7535041ac3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classcl__keyboard_1_1CbDefaultKeyboardBehavior_af6cae1d7ce3f51e6843d3ac5da7966dc}\label{classcl__keyboard_1_1CbDefaultKeyboardBehavior_af6cae1d7ce3f51e6843d3ac5da7966dc}} 
+\index{cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}!onOrthogonalAllocation@{onOrthogonalAllocation}}
+\index{onOrthogonalAllocation@{onOrthogonalAllocation}!cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}}
+\doxysubsubsection{\texorpdfstring{onOrthogonalAllocation()}{onOrthogonalAllocation()}}
+{\footnotesize\ttfamily template$<$typename TOrthogonal , typename TSource\+Object $>$ \\
+void cl\+\_\+keyboard\+::\+Cb\+Default\+Keyboard\+Behavior\+::on\+Orthogonal\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00023}{23}} of file \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source}{cb\+\_\+default\+\_\+keyboard\+\_\+behavior.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024     \{}
+\DoxyCodeLine{00025         \mbox{\hyperlink{classcl__keyboard_1_1CbDefaultKeyboardBehavior_abd29833a0f94aa1d5aa1834d15ab1281}{postEventKeyPress}} = [=](\textcolor{keywordtype}{char} character) \{}
+\DoxyCodeLine{00026             \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'a'})}
+\DoxyCodeLine{00027                 postKeyEvent<EvKeyPressA<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00028             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'b'})}
+\DoxyCodeLine{00029                 postKeyEvent<EvKeyPressB<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00030             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'c'})}
+\DoxyCodeLine{00031                 postKeyEvent<EvKeyPressC<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00032             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'d'})}
+\DoxyCodeLine{00033                 postKeyEvent<EvKeyPressD<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00034             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'e'})}
+\DoxyCodeLine{00035                 postKeyEvent<EvKeyPressE<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00036             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'f'})}
+\DoxyCodeLine{00037                 postKeyEvent<EvKeyPressF<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00038             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'g'})}
+\DoxyCodeLine{00039                 postKeyEvent<EvKeyPressG<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00040             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'h'})}
+\DoxyCodeLine{00041                 postKeyEvent<EvKeyPressH<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00042             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'i'})}
+\DoxyCodeLine{00043                 postKeyEvent<EvKeyPressI<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00044             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'j'})}
+\DoxyCodeLine{00045                 postKeyEvent<EvKeyPressJ<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00046             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'k'})}
+\DoxyCodeLine{00047                 postKeyEvent<EvKeyPressK<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00048             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'l'})}
+\DoxyCodeLine{00049                 postKeyEvent<EvKeyPressL<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00050             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'m'})}
+\DoxyCodeLine{00051                 postKeyEvent<EvKeyPressM<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00052             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'n'})}
+\DoxyCodeLine{00053                 postKeyEvent<EvKeyPressN<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00054             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'o'})}
+\DoxyCodeLine{00055                 postKeyEvent<EvKeyPressO<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00056             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'p'})}
+\DoxyCodeLine{00057                 postKeyEvent<EvKeyPressP<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00058             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'q'})}
+\DoxyCodeLine{00059                 postKeyEvent<EvKeyPressQ<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00060             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'r'})}
+\DoxyCodeLine{00061                 postKeyEvent<EvKeyPressR<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00062             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'s'})}
+\DoxyCodeLine{00063                 postKeyEvent<EvKeyPressS<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00064             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'t'})}
+\DoxyCodeLine{00065                 postKeyEvent<EvKeyPressT<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00066             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'u'})}
+\DoxyCodeLine{00067                 postKeyEvent<EvKeyPressU<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00068             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'v'})}
+\DoxyCodeLine{00069                 postKeyEvent<EvKeyPressV<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00070             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'w'})}
+\DoxyCodeLine{00071                 postKeyEvent<EvKeyPressW<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00072             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'x'})}
+\DoxyCodeLine{00073                 postKeyEvent<EvKeyPressX<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00074             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'y'})}
+\DoxyCodeLine{00075                 postKeyEvent<EvKeyPressY<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00076             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (character == \textcolor{charliteral}{'z'})}
+\DoxyCodeLine{00077                 postKeyEvent<EvKeyPressZ<CbDefaultKeyboardBehavior, TOrthogonal>>();}
+\DoxyCodeLine{00078         \};}
+\DoxyCodeLine{00079     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00014}{post\+Event\+Key\+Press}}.
+
+\mbox{\Hypertarget{classcl__keyboard_1_1CbDefaultKeyboardBehavior_afe6105db2d58fee99754cb4a47835988}\label{classcl__keyboard_1_1CbDefaultKeyboardBehavior_afe6105db2d58fee99754cb4a47835988}} 
+\index{cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}!postKeyEvent@{postKeyEvent}}
+\index{postKeyEvent@{postKeyEvent}!cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}}
+\doxysubsubsection{\texorpdfstring{postKeyEvent()}{postKeyEvent()}}
+{\footnotesize\ttfamily template$<$typename TEv $>$ \\
+void cl\+\_\+keyboard\+::\+Cb\+Default\+Keyboard\+Behavior\+::post\+Key\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00087}{87}} of file \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source}{cb\+\_\+default\+\_\+keyboard\+\_\+behavior.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088     \{}
+\DoxyCodeLine{00089         ROS\_WARN(\textcolor{stringliteral}{"{}CbDefaultKeyboardBehavior \%ld ev: \%s"{}}, (\textcolor{keywordtype}{long})(\textcolor{keywordtype}{void} *)\textcolor{keyword}{this}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{smacc::demangleSymbol}}(\textcolor{keyword}{typeid}(TEv).name()).c\_str());}
+\DoxyCodeLine{00090         \textcolor{keyword}{auto} \textcolor{keyword}{event} = \textcolor{keyword}{new} TEv();}
+\DoxyCodeLine{00091         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a5db577c585935114058770f2b7242f8a}{postEvent}}(event);}
+\DoxyCodeLine{00092     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{introspection_8h_source_l00051}{smacc\+::introspection\+::demangle\+Symbol()}}, and \mbox{\hyperlink{smacc__client__behavior__impl_8h_source_l00028}{smacc\+::\+ISmacc\+Client\+Behavior\+::post\+Event()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcl__keyboard_1_1CbDefaultKeyboardBehavior_afe6105db2d58fee99754cb4a47835988_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcl__keyboard_1_1CbDefaultKeyboardBehavior_a482e94248b8e6fbac0973d3dec0cc20b}\label{classcl__keyboard_1_1CbDefaultKeyboardBehavior_a482e94248b8e6fbac0973d3dec0cc20b}} 
+\index{cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}!ClKeyboard\_@{ClKeyboard\_}}
+\index{ClKeyboard\_@{ClKeyboard\_}!cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}}
+\doxysubsubsection{\texorpdfstring{ClKeyboard\_}{ClKeyboard\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcl__keyboard_1_1ClKeyboard}{Cl\+Keyboard}}$\ast$ cl\+\_\+keyboard\+::\+Cb\+Default\+Keyboard\+Behavior\+::\+Cl\+Keyboard\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00013}{13}} of file \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source}{cb\+\_\+default\+\_\+keyboard\+\_\+behavior.\+h}}.
+
+\mbox{\Hypertarget{classcl__keyboard_1_1CbDefaultKeyboardBehavior_abd29833a0f94aa1d5aa1834d15ab1281}\label{classcl__keyboard_1_1CbDefaultKeyboardBehavior_abd29833a0f94aa1d5aa1834d15ab1281}} 
+\index{cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}!postEventKeyPress@{postEventKeyPress}}
+\index{postEventKeyPress@{postEventKeyPress}!cl\_keyboard::CbDefaultKeyboardBehavior@{cl\_keyboard::CbDefaultKeyboardBehavior}}
+\doxysubsubsection{\texorpdfstring{postEventKeyPress}{postEventKeyPress}}
+{\footnotesize\ttfamily std\+::function$<$void(char)$>$ cl\+\_\+keyboard\+::\+Cb\+Default\+Keyboard\+Behavior\+::post\+Event\+Key\+Press}
+
+
+
+Definition at line \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00014}{14}} of file \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source}{cb\+\_\+default\+\_\+keyboard\+\_\+behavior.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00081}{On\+Key\+Press()}}, and \mbox{\hyperlink{cb__default__keyboard__behavior_8h_source_l00023}{on\+Orthogonal\+Allocation()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc\+\_\+client\+\_\+library/keyboard\+\_\+client/include/keyboard\+\_\+client/client\+\_\+behaviors/\mbox{\hyperlink{cb__default__keyboard__behavior_8h}{cb\+\_\+default\+\_\+keyboard\+\_\+behavior.\+h}}\end{DoxyCompactItemize}
