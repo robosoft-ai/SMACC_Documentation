@@ -1,0 +1,68 @@
+\hypertarget{cp__pose_8h_source}{}\doxysection{cp\+\_\+pose.\+h}
+\label{cp__pose_8h_source}\index{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/components/pose/cp\_pose.h@{smacc\_client\_library/move\_base\_z\_client/move\_base\_z\_client\_plugin/include/move\_base\_z\_client\_plugin/components/pose/cp\_pose.h}}
+\mbox{\hyperlink{cp__pose_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018-\/2020}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00006}00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{component_8h}{smacc/component.h}}>}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__updatable_8h}{smacc/smacc\_updatable.h}}>}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <geometry\_msgs/Pose.h>}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <tf/transform\_listener.h>}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <tf/transform\_datatypes.h>}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00016}00016 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__move__base__z}{cl\_move\_base\_z}}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00018}\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{classcl__move__base__z_1_1Pose}{Pose}} : \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1ISmaccComponent}{smacc::ISmaccComponent}}, \textcolor{keyword}{public} \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{smacc::ISmaccUpdatable}}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00020}00020 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00021}00021     \mbox{\hyperlink{classcl__move__base__z_1_1Pose_aa361cd1347cfead0f244045fe183c600}{Pose}}(std::string poseFrameName = \textcolor{stringliteral}{"{}base\_link"{}}, std::string referenceFrame = \textcolor{stringliteral}{"{}odom"{}});}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00023}00023     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1Pose_abf99d1127cf51a93f97ada2031196114}{update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00025}00025     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a5f8576c3dacfb2f2e7f9df5105c480ea}{waitTransformUpdate}}(ros::Rate r = ros::Rate(20));}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00027}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{00027}}     \textcolor{keyword}{inline} geometry\_msgs::Pose \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9faf8c6b437ff6b19c8bddd692908dca}{toPoseMsg}}()}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00028}00028     \{}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00029}00029         std::lock\_guard<std::mutex> guard(\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a73ed2daba3e473e156cab751fb37b58f}{m\_mutex\_}});}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00030}00030         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9da7acf880968a3c220b8436fd0bb6ef}{pose\_}}.pose;}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00033}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a63887a88c1ac6e9a4a71b8d7d11aed6c}{00033}}     \textcolor{keyword}{inline} geometry\_msgs::PoseStamped \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a63887a88c1ac6e9a4a71b8d7d11aed6c}{toPoseStampedMsg}}()}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00034}00034     \{}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00035}00035         std::lock\_guard<std::mutex> guard(\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a73ed2daba3e473e156cab751fb37b58f}{m\_mutex\_}});}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00036}00036         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9da7acf880968a3c220b8436fd0bb6ef}{pose\_}};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00039}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_aec469af8ca846ae14e108d74fef93b4f}{00039}}     \textcolor{keyword}{inline} \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classcl__move__base__z_1_1Pose_aec469af8ca846ae14e108d74fef93b4f}{getReferenceFrame}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00040}00040 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00041}00041         \textcolor{keywordflow}{return} \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a6a7a593232b6edaf99103d48ad8da9d3}{referenceFrame\_}};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00044}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a716c8e12a35ea1c7f6ae16bced6c6894}{00044}}     \textcolor{keyword}{inline} \textcolor{keyword}{const} std::string \&\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a716c8e12a35ea1c7f6ae16bced6c6894}{getFrameId}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00045}00045 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00046}00046         \textcolor{keywordflow}{return} \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a4f45be8e2fd73e618d815582a4ca8efe}{poseFrameName\_}};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00049}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a49df3a978021edb71a48ef5e6d8e75a8}{00049}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a49df3a978021edb71a48ef5e6d8e75a8}{isInitialized}};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00051}00051 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00052}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9da7acf880968a3c220b8436fd0bb6ef}{00052}}     geometry\_msgs::PoseStamped \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a9da7acf880968a3c220b8436fd0bb6ef}{pose\_}};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00054}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a188a5ac62d5424c1eacd667868049962}{00054}}     \textcolor{keyword}{static} std::shared\_ptr<tf::TransformListener> \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a188a5ac62d5424c1eacd667868049962}{tfListener\_}};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00055}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_ae1b5ee53f49d74926e04a477d792f1d0}{00055}}     \textcolor{keyword}{static} std::mutex \mbox{\hyperlink{classcl__move__base__z_1_1Pose_ae1b5ee53f49d74926e04a477d792f1d0}{listenerMutex\_}};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00057}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a4f45be8e2fd73e618d815582a4ca8efe}{00057}}     std::string \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a4f45be8e2fd73e618d815582a4ca8efe}{poseFrameName\_}};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00058}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a6a7a593232b6edaf99103d48ad8da9d3}{00058}}     std::string \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a6a7a593232b6edaf99103d48ad8da9d3}{referenceFrame\_}};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00060}\mbox{\hyperlink{classcl__move__base__z_1_1Pose_a73ed2daba3e473e156cab751fb37b58f}{00060}}     std::mutex \mbox{\hyperlink{classcl__move__base__z_1_1Pose_a73ed2daba3e473e156cab751fb37b58f}{m\_mutex\_}};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00061}00061 \};}
+\DoxyCodeLine{\Hypertarget{cp__pose_8h_source_l00062}00062 \} \textcolor{comment}{// namespace cl\_move\_base\_z}}
+
+\end{DoxyCode}

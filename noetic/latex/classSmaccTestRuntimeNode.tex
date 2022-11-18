@@ -65,11 +65,15 @@ Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l0010
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00106   \{}
-\DoxyCodeLine{00107     ROS\_FATAL\_STREAM(\textcolor{stringliteral}{"{}SmaccRuntimeTestNode policy thrown failure exit: "{}} << msg);}
+\DoxyCodeLine{00107     ROS\_FATAL\_STREAM(\textcolor{stringliteral}{"{}SmaccRuntimeTestNode policy thrown failure exit: "{}} << \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
 \DoxyCodeLine{00108     exit(-\/1);}
 \DoxyCodeLine{00109   \}}
 
 \end{DoxyCode}
+
+
+References \mbox{\hyperlink{battery__monitor__node_8py_source_l00015}{battery\+\_\+monitor\+\_\+node\+::msg}}.
+
 
 
 Referenced by \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00145}{Timeout\+Failure\+Test\+Policy\+::update()}}.
@@ -170,7 +174,7 @@ Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l0011
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00120   \{}
-\DoxyCodeLine{00121       this-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_a9b544f3ca3684171cbb56d97aadeac17}{onRosOutMsg}}(msg);}
+\DoxyCodeLine{00121       this-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_a9b544f3ca3684171cbb56d97aadeac17}{onRosOutMsg}}(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
 \DoxyCodeLine{00122   \}}
 
 \end{DoxyCode}
@@ -203,7 +207,7 @@ Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l0012
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00125   \{}
-\DoxyCodeLine{00126       this-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_aaaedcb5c8a4cca432b5138bb1dfb0a6c}{onSmaccTransition}}(msg);}
+\DoxyCodeLine{00126       this-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_aaaedcb5c8a4cca432b5138bb1dfb0a6c}{onSmaccTransition}}(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
 \DoxyCodeLine{00127   \}}
 
 \end{DoxyCode}
@@ -236,11 +240,15 @@ Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l0009
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00100   \{}
-\DoxyCodeLine{00101     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}SmaccRuntimeTestNode policy thrown success exit: "{}} << msg);}
+\DoxyCodeLine{00101     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}SmaccRuntimeTestNode policy thrown success exit: "{}} << \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
 \DoxyCodeLine{00102     exit(-\/1);}
 \DoxyCodeLine{00103   \}}
 
 \end{DoxyCode}
+
+
+References \mbox{\hyperlink{battery__monitor__node_8py_source_l00015}{battery\+\_\+monitor\+\_\+node\+::msg}}.
+
 
 
 Referenced by \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00161}{Reached\+State\+Success\+Test\+Policy\+::init()}}.
@@ -270,9 +278,9 @@ Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l0004
 \DoxyCodeLine{00043     std::shared\_ptr<TestPolicy> policy = \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{00044     ROS\_INFO\_STREAM(initXmlRpcValue);}
 \DoxyCodeLine{00045 }
-\DoxyCodeLine{00046     \textcolor{keyword}{auto} type = (std::string)initXmlRpcValue[\textcolor{stringliteral}{"{}type"{}}];}
+\DoxyCodeLine{00046     \textcolor{keyword}{auto} \mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{type}} = (std::string)initXmlRpcValue[\textcolor{stringliteral}{"{}type"{}}];}
 \DoxyCodeLine{00047 }
-\DoxyCodeLine{00048     \textcolor{keywordflow}{if} (type == matchname)}
+\DoxyCodeLine{00048     \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{type}} == matchname)}
 \DoxyCodeLine{00049     \{}
 \DoxyCodeLine{00050       \textcolor{keyword}{auto} specificPolicy = std::make\_shared<T>();}
 \DoxyCodeLine{00051       policy = std::dynamic\_pointer\_cast<TestPolicy>(specificPolicy);}
@@ -288,7 +296,7 @@ Definition at line \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l0004
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00036}{test\+Policies}}.
+References \mbox{\hyperlink{smacc__runtime__test__node_8cpp_source_l00036}{test\+Policies}}, and \mbox{\hyperlink{generate__debs_8py_source_l00285}{generate\+\_\+debs\+::type}}.
 
 \mbox{\Hypertarget{classSmaccTestRuntimeNode_a0cdde5c108219ca3d7db941676fc1dcf}\label{classSmaccTestRuntimeNode_a0cdde5c108219ca3d7db941676fc1dcf}} 
 \index{SmaccTestRuntimeNode@{SmaccTestRuntimeNode}!update@{update}}

@@ -42,9 +42,9 @@
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00038}00038 \textcolor{preprocessor}{\#include <rviz/properties/int\_property.h>}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00039}00039 \textcolor{preprocessor}{\#include <rviz/frame\_manager.h>}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00040}00040 }
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00041}00041 \textcolor{preprocessor}{\#include "{}imu\_visual.h"{}}}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00041}00041 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{imu__visual_8h}{imu\_visual.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00042}00042 }
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00043}00043 \textcolor{preprocessor}{\#include "{}smacc\_rviz\_display.h"{}}}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00043}00043 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{smacc__rviz__display_8h}{smacc\_rviz\_display.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00044}00044 }
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00045}00045 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc__rviz__plugin}{smacc\_rviz\_plugin}}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00046}00046 \{}
@@ -52,7 +52,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00048}00048 \textcolor{comment}{// BEGIN\_TUTORIAL}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00049}00049 \textcolor{comment}{// The constructor must have no arguments, so we can't give the}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00050}00050 \textcolor{comment}{// constructor the parameters it needs to fully initialize.}}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00051}00051 SmaccRvizDisplay::SmaccRvizDisplay()}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00051}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a57d912b6eeec19a0654546bb011fb593}{00051}} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a57d912b6eeec19a0654546bb011fb593}{SmaccRvizDisplay::SmaccRvizDisplay}}()}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00052}00052 \{}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00053}00053 }
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00054}00054   \textcolor{comment}{/*}}
@@ -69,42 +69,42 @@
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00065}00065 \textcolor{comment}{                                                    this, SLOT( updateHistoryLength() ));}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00066}00066 \textcolor{comment}{                                                    */}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00067}00067 }
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00068}00068   current\_state\_ = \textcolor{keyword}{new} rviz::StringProperty( \textcolor{stringliteral}{"{}CurrentState"{}}, \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00068}00068   \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a342ff238c1dfaa427f09ee205a9e92d5}{current\_state\_}} = \textcolor{keyword}{new} rviz::StringProperty( \textcolor{stringliteral}{"{}CurrentState"{}}, \textcolor{stringliteral}{"{}"{}},}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00069}00069                                                     \textcolor{stringliteral}{"{}current smacc state"{}},}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00070}00070                                                     \textcolor{keyword}{this}, SLOT( updateCurrentState() ));}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00070}00070                                                     \textcolor{keyword}{this}, SLOT( \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a6031090e46077a5e95754b5f70ea639a}{updateCurrentState}}() ));}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00071}00071 }
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00072}00072 }
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00073}00073   topic\_property\_ = \textcolor{keyword}{new} rviz::RosTopicProperty( \textcolor{stringliteral}{"{}Topic"{}}, \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00073}00073   \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_ad81e5239e1343b2ba01ee16d1f010932}{topic\_property\_}} = \textcolor{keyword}{new} rviz::RosTopicProperty( \textcolor{stringliteral}{"{}Topic"{}}, \textcolor{stringliteral}{"{}"{}},}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00074}00074                                             \textcolor{stringliteral}{"{}"{}}, \textcolor{stringliteral}{"{}"{}},}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00075}00075                                             \textcolor{keyword}{this}, SLOT( updateTopic() ));}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00075}00075                                             \textcolor{keyword}{this}, SLOT( \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_adf332ae95bd83969b33ba713a60832fd}{updateTopic}}() ));}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00076}00076 }
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00077}00077   QString message\_type = QString::fromStdString( ros::message\_traits::datatype<smacc\_msgs::SmaccStatus>() );}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00078}00078       topic\_property\_-\/>setMessageType( message\_type );}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00079}00079       topic\_property\_-\/>setDescription( message\_type + \textcolor{stringliteral}{"{} topic to subscribe to."{}} );}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00078}00078       \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_ad81e5239e1343b2ba01ee16d1f010932}{topic\_property\_}}-\/>setMessageType( message\_type );}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00079}00079       \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_ad81e5239e1343b2ba01ee16d1f010932}{topic\_property\_}}-\/>setDescription( message\_type + \textcolor{stringliteral}{"{} topic to subscribe to."{}} );}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00080}00080 }
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00081}00081 }
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00082}00082   \textcolor{comment}{//history\_length\_property\_-\/>setMin( 1 );}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00083}00083   \textcolor{comment}{//history\_length\_property\_-\/>setMax( 100000 );}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00084}00084 \}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00085}00085 }
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00086}00086   \textcolor{keywordtype}{void} SmaccRvizDisplay::updateTopic()}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00086}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_adf332ae95bd83969b33ba713a60832fd}{00086}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_adf332ae95bd83969b33ba713a60832fd}{SmaccRvizDisplay::updateTopic}}()}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00087}00087   \{}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00088}00088     unsubscribe();}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00089}00089     reset();}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00090}00090     subscribe();}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00088}00088     \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a49a35acd10a664a8335ef5852f8c115c}{unsubscribe}}();}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00089}00089     \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_af9cf4f5ef4f5fdb2fcb1bf1a81cdac4d}{reset}}();}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00090}00090     \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_ad774027ba3eda277c991619332495cbb}{subscribe}}();}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00091}00091     context\_-\/>queueRender();}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00092}00092   \}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00093}00093 }
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00094}00094   \textcolor{keywordtype}{void} SmaccRvizDisplay::subscribe()}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00094}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_ad774027ba3eda277c991619332495cbb}{00094}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_ad774027ba3eda277c991619332495cbb}{SmaccRvizDisplay::subscribe}}()}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00095}00095   \{}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00096}00096       current\_state\_-\/>setValue(QString(\textcolor{stringliteral}{"{}"{}}));}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00097}00097       sub\_ = nh\_.subscribe<smacc\_msgs::SmaccStatus>(topic\_property\_-\/>getTopic().toStdString(), 1, \&SmaccRvizDisplay::processMessage , \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00096}00096       \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a342ff238c1dfaa427f09ee205a9e92d5}{current\_state\_}}-\/>setValue(QString(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00097}00097       \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_abae6e8df8428a072d1de2c59dd4f9cd4}{sub\_}} = \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a077ef80f5698d21376b2d211f95ab73d}{nh\_}}.subscribe<smacc\_msgs::SmaccStatus>(\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_ad81e5239e1343b2ba01ee16d1f010932}{topic\_property\_}}-\/>getTopic().toStdString(), 1, \&\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_acc7281b99c92fa89f7494f6ca53e4905}{SmaccRvizDisplay::processMessage}} , \textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00098}00098   \}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00099}00099 }
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00100}00100   \textcolor{keywordtype}{void} SmaccRvizDisplay::unsubscribe()}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00100}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a49a35acd10a664a8335ef5852f8c115c}{00100}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a49a35acd10a664a8335ef5852f8c115c}{SmaccRvizDisplay::unsubscribe}}()}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00101}00101   \{}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00102}00102     current\_state\_-\/>setValue(QString(\textcolor{stringliteral}{"{}"{}}));}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00103}00103     sub\_.shutdown();}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00102}00102     \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a342ff238c1dfaa427f09ee205a9e92d5}{current\_state\_}}-\/>setValue(QString(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00103}00103     \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_abae6e8df8428a072d1de2c59dd4f9cd4}{sub\_}}.shutdown();}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00104}00104 }
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00105}00105   \}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00106}00106 \textcolor{comment}{// After the top-\/level rviz::Display::initialize() does its own setup,}}
@@ -117,40 +117,40 @@
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00113}00113 \textcolor{comment}{// ``MessageFilterDisplay<message type>``, to save typing that long}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00114}00114 \textcolor{comment}{// templated class name every time you need to refer to the}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00115}00115 \textcolor{comment}{// superclass.}}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00116}00116 \textcolor{keywordtype}{void} SmaccRvizDisplay::onInitialize()}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00116}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a8a041fe0d0e88fa0219204c85831d10e}{00116}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a8a041fe0d0e88fa0219204c85831d10e}{SmaccRvizDisplay::onInitialize}}()}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00117}00117 \{}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00118}00118   \textcolor{comment}{//MFDClass::onInitialize();}}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00119}00119   current\_state\_-\/>setValue(QString(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00119}00119   \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a342ff238c1dfaa427f09ee205a9e92d5}{current\_state\_}}-\/>setValue(QString(\textcolor{stringliteral}{"{}"{}}));}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00120}00120 \}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00121}00121 }
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00122}00122 SmaccRvizDisplay::\string~SmaccRvizDisplay()}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00122}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_aebda19712c75b75a31e90272f472a7e3}{00122}} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_aebda19712c75b75a31e90272f472a7e3}{SmaccRvizDisplay::\string~SmaccRvizDisplay}}()}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00123}00123 \{}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00124}00124 \}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00125}00125 }
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00126}00126 \textcolor{comment}{// Clear the visuals by deleting their objects.}}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00127}00127 \textcolor{keywordtype}{void} SmaccRvizDisplay::reset()}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00127}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_af9cf4f5ef4f5fdb2fcb1bf1a81cdac4d}{00127}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_af9cf4f5ef4f5fdb2fcb1bf1a81cdac4d}{SmaccRvizDisplay::reset}}()}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00128}00128 \{}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00129}00129   \textcolor{comment}{//MFDClass::reset();}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00130}00130   \textcolor{comment}{//visuals\_.clear();}}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00131}00131   current\_state\_-\/>setValue(QString(\textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00131}00131   \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a342ff238c1dfaa427f09ee205a9e92d5}{current\_state\_}}-\/>setValue(QString(\textcolor{stringliteral}{"{}"{}}));}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00132}00132 \}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00133}00133 }
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00134}00134 \textcolor{keywordtype}{void} SmaccRvizDisplay::updateCurrentState()}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00134}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a6031090e46077a5e95754b5f70ea639a}{00134}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a6031090e46077a5e95754b5f70ea639a}{SmaccRvizDisplay::updateCurrentState}}()}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00135}00135 \{}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00136}00136 \}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00137}00137 }
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00138}00138 \textcolor{comment}{// This is our callback to handle an incoming message.}}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00139}00139 \textcolor{keywordtype}{void} SmaccRvizDisplay::processMessage( \textcolor{keyword}{const} smacc\_msgs::SmaccStatus::ConstPtr\& msg )}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00139}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_acc7281b99c92fa89f7494f6ca53e4905}{00139}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_acc7281b99c92fa89f7494f6ca53e4905}{SmaccRvizDisplay::processMessage}}( \textcolor{keyword}{const} smacc\_msgs::SmaccStatus::ConstPtr\& \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}} )}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00140}00140 \{}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00141}00141   std::string concatenated;}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00142}00142 }
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00143}00143   \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& state: msg-\/>current\_states)}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00143}00143   \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\& state: \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}-\/>current\_states)}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00144}00144   \{}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00145}00145     concatenated = concatenated + std::string(\textcolor{stringliteral}{"{}/"{}})+ state;}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00146}00146   \}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00147}00147 }
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00148}00148   ROS\_DEBUG(\textcolor{stringliteral}{"{}current state: \%s"{}}, concatenated.c\_str());}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00149}00149   current\_state\_-\/>setValue(QString(concatenated.c\_str()));}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00149}00149   \mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay_a342ff238c1dfaa427f09ee205a9e92d5}{current\_state\_}}-\/>setValue(QString(concatenated.c\_str()));}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00150}00150   \textcolor{comment}{// Here we call the rviz::FrameManager to get the transform from the}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00151}00151   \textcolor{comment}{// fixed frame to the frame in the header of this Imu message.  If}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00152}00152   \textcolor{comment}{// it fails, we can't do anything else so we return.}}
@@ -198,7 +198,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00194}00194 \textcolor{comment}{// Tell pluginlib about this class.  It is important to do this in}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00195}00195 \textcolor{comment}{// global scope, outside our package's namespace.}}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00196}00196 \textcolor{preprocessor}{\#include <pluginlib/class\_list\_macros.h>}}
-\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00197}00197 \mbox{\hyperlink{backward__global__planner_8cpp_a51f582fb30166d23ef7d096df52bdb13}{PLUGINLIB\_EXPORT\_CLASS}}(smacc\_rviz\_plugin::SmaccRvizDisplay,rviz::Display )}
+\DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00197}00197 \mbox{\hyperlink{backward__global__planner_8cpp_a51f582fb30166d23ef7d096df52bdb13}{PLUGINLIB\_EXPORT\_CLASS}}(\mbox{\hyperlink{classsmacc__rviz__plugin_1_1SmaccRvizDisplay}{smacc\_rviz\_plugin::SmaccRvizDisplay}},rviz::Display )}
 \DoxyCodeLine{\Hypertarget{smacc__rviz__display_8cpp_source_l00198}00198 \textcolor{comment}{// END\_TUTORIAL}}
 
 \end{DoxyCode}

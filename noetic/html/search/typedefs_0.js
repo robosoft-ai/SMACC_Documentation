@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['server_0',['Server',['../odom__tracker__node_8cpp.html#a9884574d0480319430f628f79afc0500',1,'odom_tracker_node.cpp']]]
+  ['actionclient_0',['ActionClient',['../classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#ab4cb0717885b95d577f82f4133db7f5f',1,'smacc::client_bases::SmaccActionClientBase']]]
 ];

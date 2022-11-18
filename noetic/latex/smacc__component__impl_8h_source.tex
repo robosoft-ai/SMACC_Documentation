@@ -1,0 +1,50 @@
+\hypertarget{smacc__component__impl_8h_source}{}\doxysection{smacc\+\_\+component\+\_\+impl.\+h}
+\label{smacc__component__impl_8h_source}\index{smacc/include/smacc/impl/smacc\_component\_impl.h@{smacc/include/smacc/impl/smacc\_component\_impl.h}}
+\mbox{\hyperlink{smacc__component__impl_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00001}00001 \textcolor{comment}{/*****************************************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00002}00002 \textcolor{comment}{ * ReelRobotix Inc. -\/ Software License Agreement      Copyright (c) 2018}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00003}00003 \textcolor{comment}{ *   Authors: Pablo Inigo Blasco, Brett Aldrich}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00005}00005 \textcolor{comment}{ ******************************************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{component_8h}{smacc/component.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{smacc__state__machine__impl_8h}{smacc/impl/smacc\_state\_machine\_impl.h}}>}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00012}00012 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00014}00014     \textcolor{keyword}{template} <\textcolor{keyword}{typename} EventType>}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00015}\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a687dead5b87a3b9781b9bf6ab0b7afa5}{00015}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a84455564c2c4b90be58e900050232722}{ISmaccComponent::postEvent}}(\textcolor{keyword}{const} EventType \&ev)}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00017}00017         \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_ae3f37acc1679f79299b86872d4b1f80f}{stateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_afcb6a216441aeaea2cba4e1ab12c366b}{postEvent}}(ev);}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00018}00018     \}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00020}00020     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TComponent>}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00021}\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_aa06d58b1dcec3c513ca2edddfd3847ec}{00021}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_aa06d58b1dcec3c513ca2edddfd3847ec}{ISmaccComponent::requiresComponent}}(TComponent *\&requiredComponentStorage)}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00023}00023         requiredComponentStorage = this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_adef78db601749ca63c19e74a27cb88cc}{getComponent}}<TComponent>();}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00024}00024     \}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00026}00026     \textcolor{keyword}{template} <\textcolor{keyword}{typename} TClient>}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00027}\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a36c085d906fbae0fcaee817aaeafebf4}{00027}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a36c085d906fbae0fcaee817aaeafebf4}{ISmaccComponent::requiresClient}}(\mbox{\hyperlink{classTClient}{TClient}} *\&requiredClientStorage)}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00028}00028     \{}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00029}00029         this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a7a9990a2f3e35d547671188d69fee520}{requiresClient}}(requiredClientStorage);}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00032}00032     \textcolor{keyword}{template} <\textcolor{keyword}{typename} SmaccComponentType, \textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} \mbox{\hyperlink{classTClient}{TClient}}, \textcolor{keyword}{typename}... TArgs>}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00033}\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a85a3f70369d18176aa0a28c3ba31b945}{00033}}     SmaccComponentType *\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a85a3f70369d18176aa0a28c3ba31b945}{ISmaccComponent::createSiblingComponent}}(TArgs... targs)}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00034}00034     \{}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00035}00035         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_a5c1c8eb5e91a3b399662a52cb0ca86aa}{createComponent}}<SmaccComponentType, TOrthogonal, \mbox{\hyperlink{classTClient}{TClient}}>(targs...);}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00038}00038     \textcolor{keyword}{template} <\textcolor{keyword}{typename} SmaccComponentType, \textcolor{keyword}{typename} TOrthogonal, \textcolor{keyword}{typename} \mbox{\hyperlink{classTClient}{TClient}}, \textcolor{keyword}{typename}... TArgs>}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00039}\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a86afd97c9eaed89073def7c51a3c86ab}{00039}}     SmaccComponentType *\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a86afd97c9eaed89073def7c51a3c86ab}{ISmaccComponent::createSiblingNamedComponent}}(std::string name, TArgs... targs)}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00040}00040     \{}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00041}00041         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a909590e672450ce0eb0d8facb45c737a}{owner\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_affcc2f95bc993b5f07ef0d6ab6eec8f1}{createNamedComponent}}<SmaccComponentType, TOrthogonal, \mbox{\hyperlink{classTClient}{TClient}}>(name, targs...);}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{smacc__component__impl_8h_source_l00044}00044 \} \textcolor{comment}{// namespace smacc}}
+
+\end{DoxyCode}

@@ -1,0 +1,96 @@
+\hypertarget{imu__visual_8h_source}{}\doxysection{imu\+\_\+visual.\+h}
+\label{imu__visual_8h_source}\index{smacc\_diagnostics/smacc\_rviz\_plugin/src/imu\_visual.h@{smacc\_diagnostics/smacc\_rviz\_plugin/src/imu\_visual.h}}
+\mbox{\hyperlink{imu__visual_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00002}00002 \textcolor{comment}{ * Copyright (c) 2012, Willow Garage, Inc.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00003}00003 \textcolor{comment}{ * All rights reserved.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00005}00005 \textcolor{comment}{ * Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00006}00006 \textcolor{comment}{ * modification, are permitted provided that the following conditions are met:}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00007}00007 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00008}00008 \textcolor{comment}{ *     * Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00009}00009 \textcolor{comment}{ *       notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00010}00010 \textcolor{comment}{ *     * Redistributions in binary form must reproduce the above copyright}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00011}00011 \textcolor{comment}{ *       notice, this list of conditions and the following disclaimer in the}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00012}00012 \textcolor{comment}{ *       documentation and/or other materials provided with the distribution.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00013}00013 \textcolor{comment}{ *     * Neither the name of the Willow Garage, Inc. nor the names of its}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00014}00014 \textcolor{comment}{ *       contributors may be used to endorse or promote products derived from}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00015}00015 \textcolor{comment}{ *       this software without specific prior written permission.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00016}00016 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00017}00017 \textcolor{comment}{ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS IS"{}}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00018}00018 \textcolor{comment}{ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00019}00019 \textcolor{comment}{ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00020}00020 \textcolor{comment}{ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00021}00021 \textcolor{comment}{ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00022}00022 \textcolor{comment}{ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00023}00023 \textcolor{comment}{ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00024}00024 \textcolor{comment}{ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00025}00025 \textcolor{comment}{ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00026}00026 \textcolor{comment}{ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00027}00027 \textcolor{comment}{ * POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00028}00028 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00030}00030 \textcolor{preprocessor}{\#ifndef IMU\_VISUAL\_H}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00031}00031 \textcolor{preprocessor}{\#define IMU\_VISUAL\_H}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00033}00033 \textcolor{preprocessor}{\#include <sensor\_msgs/Imu.h>}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00034}00034 \textcolor{preprocessor}{\#include <rviz/ogre\_helpers/arrow.h>}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00036}00036 \textcolor{keyword}{using namespace }rviz;}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00037}00037 \textcolor{keyword}{using namespace }Ogre;}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00039}00039 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc__rviz__plugin}{smacc\_rviz\_plugin}}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00040}00040 \{}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00042}00042 \textcolor{comment}{// BEGIN\_TUTORIAL}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00043}00043 \textcolor{comment}{// Declare the visual class for this display.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00044}00044 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00045}00045 \textcolor{comment}{// Each instance of ImuVisual represents the visualization of a single}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00046}00046 \textcolor{comment}{// sensor\_msgs::Imu message.  Currently it just shows an arrow with}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00047}00047 \textcolor{comment}{// the direction and magnitude of the acceleration vector, but could}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00048}00048 \textcolor{comment}{// easily be expanded to include more of the message data.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00049}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual}{00049}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual}{ImuVisual}}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00050}00050 \{}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00051}00051 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00052}00052   \textcolor{comment}{// Constructor.  Creates the visual stuff and puts it into the}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00053}00053   \textcolor{comment}{// scene, but in an unconfigured state.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00054}00054   \mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_a3963b29a785b0b95e56ac860cb58b000}{ImuVisual}}( Ogre::SceneManager* scene\_manager, Ogre::SceneNode* parent\_node );}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00056}00056   \textcolor{comment}{// Destructor.  Removes the visual stuff from the scene.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00057}00057   \textcolor{keyword}{virtual} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_acabcd6898e61f77c5353205539457db1}{\string~ImuVisual}}();}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00059}00059   \textcolor{comment}{// Configure the visual to show the data in the message.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00060}00060   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_a69589c7845b2e29e092460b1ee8a8275}{setMessage}}( \textcolor{keyword}{const} sensor\_msgs::Imu::ConstPtr\& \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}} );}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00062}00062   \textcolor{comment}{// Set the pose of the coordinate frame the message refers to.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00063}00063   \textcolor{comment}{// These could be done inside setMessage(), but that would require}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00064}00064   \textcolor{comment}{// calls to FrameManager and error handling inside setMessage(),}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00065}00065   \textcolor{comment}{// which doesn't seem as clean.  This way ImuVisual is only}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00066}00066   \textcolor{comment}{// responsible for visualization.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00067}00067   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_a405f4e15692f2443f202bc55d989d669}{setFramePosition}}( \textcolor{keyword}{const} Ogre::Vector3\& position );}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00068}00068   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_ac308baf22f4bfb15b69b18776d22f181}{setFrameOrientation}}( \textcolor{keyword}{const} Ogre::Quaternion\& orientation );}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00070}00070   \textcolor{comment}{// Set the color and alpha of the visual, which are user-\/editable}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00071}00071   \textcolor{comment}{// parameters and therefore don't come from the Imu message.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00072}00072   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_a6b5973fedfb8620c1e1493840ae7c76b}{setColor}}( \textcolor{keywordtype}{float} r, \textcolor{keywordtype}{float} g, \textcolor{keywordtype}{float} b, \textcolor{keywordtype}{float} a );}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00074}00074 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00075}00075   \textcolor{comment}{// The object implementing the actual arrow shape}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00076}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_abead7d3f3c66b20bba8123a145b121b0}{00076}}   boost::shared\_ptr<rviz::Arrow> \mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_abead7d3f3c66b20bba8123a145b121b0}{acceleration\_arrow\_}};}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00078}00078   \textcolor{comment}{// A SceneNode whose pose is set to match the coordinate frame of}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00079}00079   \textcolor{comment}{// the Imu message header.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00080}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_ae41316c00ac89e1e0ee0adf62da10841}{00080}}   Ogre::SceneNode* \mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_ae41316c00ac89e1e0ee0adf62da10841}{frame\_node\_}};}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00082}00082   \textcolor{comment}{// The SceneManager, kept here only so the destructor can ask it to}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00083}00083   \textcolor{comment}{// destroy the ``frame\_node\_``.}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00084}\mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_acef4dba58d14224192bbed7eabbd6cbb}{00084}}   Ogre::SceneManager* \mbox{\hyperlink{classsmacc__rviz__plugin_1_1ImuVisual_acef4dba58d14224192bbed7eabbd6cbb}{scene\_manager\_}};}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00085}00085 \};}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00086}00086 \textcolor{comment}{// END\_TUTORIAL}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00088}00088 \} \textcolor{comment}{// end namespace rviz\_plugin\_tutorials}}
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{imu__visual_8h_source_l00090}00090 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// IMU\_VISUAL\_H}}
+
+\end{DoxyCode}

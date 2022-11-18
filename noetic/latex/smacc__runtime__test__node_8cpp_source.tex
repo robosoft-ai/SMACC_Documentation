@@ -47,9 +47,9 @@
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00043}00043     std::shared\_ptr<TestPolicy> policy = \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00044}00044     ROS\_INFO\_STREAM(initXmlRpcValue);}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00045}00045 }
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00046}00046     \textcolor{keyword}{auto} type = (std::string)initXmlRpcValue[\textcolor{stringliteral}{"{}type"{}}];}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00046}00046     \textcolor{keyword}{auto} \mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{type}} = (std::string)initXmlRpcValue[\textcolor{stringliteral}{"{}type"{}}];}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00047}00047 }
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00048}00048     \textcolor{keywordflow}{if} (type == matchname)}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00048}00048     \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespacegenerate__debs_a50bc9a7ecac9584553e089a448bcde58}{type}} == matchname)}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00049}00049     \{}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00050}00050       \textcolor{keyword}{auto} specificPolicy = std::make\_shared<T>();}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00051}00051       policy = std::dynamic\_pointer\_cast<TestPolicy>(specificPolicy);}
@@ -100,15 +100,15 @@
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00096}00096         \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00097}00097     \}}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00098}00098   \}}
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00099}\mbox{\hyperlink{classSmaccTestRuntimeNode_a47f93f7fe74e3fc416a2655e92c8dd2d}{00099}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classSmaccTestRuntimeNode_a47f93f7fe74e3fc416a2655e92c8dd2d}{success}}(std::string msg)}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00099}\mbox{\hyperlink{classSmaccTestRuntimeNode_a47f93f7fe74e3fc416a2655e92c8dd2d}{00099}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classSmaccTestRuntimeNode_a47f93f7fe74e3fc416a2655e92c8dd2d}{success}}(std::string \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}})}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00100}00100   \{}
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00101}00101     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}SmaccRuntimeTestNode policy thrown success exit: "{}} << msg);}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00101}00101     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}SmaccRuntimeTestNode policy thrown success exit: "{}} << \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00102}00102     exit(-\/1);}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00103}00103   \}}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00104}00104 }
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00105}\mbox{\hyperlink{classSmaccTestRuntimeNode_a58254eca6e6a5f2bde6417a1cccc932a}{00105}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classSmaccTestRuntimeNode_a58254eca6e6a5f2bde6417a1cccc932a}{failure}}(std::string msg)}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00105}\mbox{\hyperlink{classSmaccTestRuntimeNode_a58254eca6e6a5f2bde6417a1cccc932a}{00105}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classSmaccTestRuntimeNode_a58254eca6e6a5f2bde6417a1cccc932a}{failure}}(std::string \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}})}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00106}00106   \{}
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00107}00107     ROS\_FATAL\_STREAM(\textcolor{stringliteral}{"{}SmaccRuntimeTestNode policy thrown failure exit: "{}} << msg);}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00107}00107     ROS\_FATAL\_STREAM(\textcolor{stringliteral}{"{}SmaccRuntimeTestNode policy thrown failure exit: "{}} << \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00108}00108     exit(-\/1);}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00109}00109   \}}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00110}00110 }
@@ -120,12 +120,12 @@
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00116}00116     \}}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00117}00117   \}}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00118}00118 }
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00119}\mbox{\hyperlink{classSmaccTestRuntimeNode_a9d03a2f6a41e75c488f932b7efcb1292}{00119}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classSmaccTestRuntimeNode_a9d03a2f6a41e75c488f932b7efcb1292}{onRosOutCallback}}(\textcolor{keyword}{const} rosgraph\_msgs::Log\& msg)}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00119}\mbox{\hyperlink{classSmaccTestRuntimeNode_a9d03a2f6a41e75c488f932b7efcb1292}{00119}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classSmaccTestRuntimeNode_a9d03a2f6a41e75c488f932b7efcb1292}{onRosOutCallback}}(\textcolor{keyword}{const} rosgraph\_msgs::Log\& \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}})}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00120}00120   \{}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00121}00121       this-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_a9b544f3ca3684171cbb56d97aadeac17}{onRosOutMsg}}(msg);}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00122}00122   \}}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00123}00123 }
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00124}\mbox{\hyperlink{classSmaccTestRuntimeNode_a09b21826547d6ac7de6049611bb1cde8}{00124}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classSmaccTestRuntimeNode_a09b21826547d6ac7de6049611bb1cde8}{onSmaccTransitionCallback}}(\textcolor{keyword}{const} smacc\_msgs::SmaccTransitionLogEntry\& msg)}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00124}\mbox{\hyperlink{classSmaccTestRuntimeNode_a09b21826547d6ac7de6049611bb1cde8}{00124}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classSmaccTestRuntimeNode_a09b21826547d6ac7de6049611bb1cde8}{onSmaccTransitionCallback}}(\textcolor{keyword}{const} smacc\_msgs::SmaccTransitionLogEntry\& \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}})}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00125}00125   \{}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00126}00126       this-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_aaaedcb5c8a4cca432b5138bb1dfb0a6c}{onSmaccTransition}}(msg);}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00127}00127   \}}
@@ -168,11 +168,11 @@
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00164}00164     \mbox{\hyperlink{classReachedStateSuccessTestPolicy_a2dc3e3fae4d136b61ca9499eebb06ba2}{targetStateName\_}} = ((std::string)initXmlRpcValue[\textcolor{stringliteral}{"{}state\_name"{}}]);}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00165}00165     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[ReachedStateSuccessTestPolicy] success state: "{}} << \mbox{\hyperlink{classReachedStateSuccessTestPolicy_a2dc3e3fae4d136b61ca9499eebb06ba2}{targetStateName\_}});}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00166}00166     this-\/>\mbox{\hyperlink{classTestPolicy_a717c3e59e35216a175398b85575aec43}{owner\_}}-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_aaaedcb5c8a4cca432b5138bb1dfb0a6c}{onSmaccTransition}}.connect(}
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00167}00167     [=](\textcolor{keyword}{auto}\& msg)}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00167}00167     [=](\textcolor{keyword}{auto}\& \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}})}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00168}00168     \{}
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00169}00169         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[ReachedStateSuccessTestPolicy] received state: "{}} << msg.transition.destiny\_state\_name);}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00169}00169         ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[ReachedStateSuccessTestPolicy] received state: "{}} << \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}.transition.destiny\_state\_name);}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00170}00170 }
-\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00171}00171         \textcolor{keywordflow}{if}(msg.transition.destiny\_state\_name == \mbox{\hyperlink{classReachedStateSuccessTestPolicy_a2dc3e3fae4d136b61ca9499eebb06ba2}{targetStateName\_}})}
+\DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00171}00171         \textcolor{keywordflow}{if}(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}.transition.destiny\_state\_name == \mbox{\hyperlink{classReachedStateSuccessTestPolicy_a2dc3e3fae4d136b61ca9499eebb06ba2}{targetStateName\_}})}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00172}00172         \{}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00173}00173             this-\/>\mbox{\hyperlink{classTestPolicy_a717c3e59e35216a175398b85575aec43}{owner\_}}-\/>\mbox{\hyperlink{classSmaccTestRuntimeNode_a47f93f7fe74e3fc416a2655e92c8dd2d}{success}}(std::string(\textcolor{stringliteral}{"{}success destiny state "{}}) + \mbox{\hyperlink{classReachedStateSuccessTestPolicy_a2dc3e3fae4d136b61ca9499eebb06ba2}{targetStateName\_}});}
 \DoxyCodeLine{\Hypertarget{smacc__runtime__test__node_8cpp_source_l00174}00174         \}}

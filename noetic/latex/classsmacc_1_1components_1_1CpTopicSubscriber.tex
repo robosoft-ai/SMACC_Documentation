@@ -1,0 +1,501 @@
+\hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber}{}\doxysection{smacc\+::components\+::Cp\+Topic\+Subscriber\texorpdfstring{$<$}{<} Message\+Type \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classsmacc_1_1components_1_1CpTopicSubscriber}\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+
+
+{\ttfamily \#include $<$cp\+\_\+topic\+\_\+subscriber.\+h$>$}
+
+
+
+Inheritance diagram for smacc\+::components\+::Cp\+Topic\+Subscriber\texorpdfstring{$<$}{<} Message\+Type \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classsmacc_1_1components_1_1CpTopicSubscriber__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for smacc\+::components\+::Cp\+Topic\+Subscriber\texorpdfstring{$<$}{<} Message\+Type \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1components_1_1CpTopicSubscriber__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Message\+Type \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_acdc1cefead832fd249b0fceb2c3b28b0}{TMessage\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_aeb25b3a5d149c6256e35bc4049cc0b6f}{Cp\+Topic\+Subscriber}} ()
+\item 
+\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a331fb12e76c4c9e26f88a6cbb5c6f8cd}{Cp\+Topic\+Subscriber}} (std\+::string topicname)
+\item 
+virtual \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a82118e72ea660b4f651dd02f8caf51a5}{$\sim$\+Cp\+Topic\+Subscriber}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_af8f626a4ef4aa6ff699359f136372292}{on\+Message\+Received}} (void(T\+::$\ast$callback)(const Message\+Type \&), T $\ast$object)
+\item 
+{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_ac7b226871cec5c4358cc635e02f56bf2}{on\+First\+Message\+Received}} (void(T\+::$\ast$callback)(const Message\+Type \&), T $\ast$object)
+\item 
+{\footnotesize template$<$typename TOrthogonal , typename TSource\+Object $>$ }\\void \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a7ed50caff06e266a4df299a58fdf5ba0}{on\+Orthogonal\+Allocation}} ()
+\item 
+virtual void \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a12a86f96d939cfa509181865d6ec85e9}{initialize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a90e61b81d9bb33b886162eb41051fe1c}{topic\+Name}}
+\item 
+boost\+::optional$<$ int $>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_ad8775c1e5773a2c58d63ad2d64d28580}{queue\+Size}}
+\item 
+\mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc\+::\+Smacc\+Signal}}$<$ void(const Message\+Type \&)$>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_ab8e319857951489298faefa4882e49cc}{on\+First\+Message\+Received\+\_\+}}
+\item 
+\mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc\+::\+Smacc\+Signal}}$<$ void(const Message\+Type \&)$>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_aeec04e64cad880bd49d401c2a474c6e9}{on\+Message\+Received\+\_\+}}
+\item 
+std\+::function$<$ void(const Message\+Type \&)$>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a002ca59f74f784f14597d1c0e057d298}{post\+Message\+Event}}
+\item 
+std\+::function$<$ void(const Message\+Type \&)$>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a9e1c210ebc8d5ef0c837e8bd9b83f754}{post\+Initial\+Message\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Node\+Handle \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_aee3369aec5cf88918bf1e812b3d68dd6}{nh\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_af1b8b4e1c2fe22ac3ea2968a9a957d8f}{message\+Callback}} (const Message\+Type \&msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Subscriber \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a87f9c87f6b7c0801dff4fcc7519dbe0e}{sub\+\_\+}}
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_aadbaf8c0f0a2a5bea38f41356528f41c}{first\+Message\+\_\+}}
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a666e60629820ef146ade691a36c41e0a}{initialized\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Message\+Type$>$\newline
+class smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$}
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00015}{15}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_acdc1cefead832fd249b0fceb2c3b28b0}\label{classsmacc_1_1components_1_1CpTopicSubscriber_acdc1cefead832fd249b0fceb2c3b28b0}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!TMessageType@{TMessageType}}
+\index{TMessageType@{TMessageType}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{TMessageType}{TMessageType}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+typedef Message\+Type \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::\+TMessage\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00021}{21}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_aeb25b3a5d149c6256e35bc4049cc0b6f}\label{classsmacc_1_1components_1_1CpTopicSubscriber_aeb25b3a5d149c6256e35bc4049cc0b6f}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!CpTopicSubscriber@{CpTopicSubscriber}}
+\index{CpTopicSubscriber@{CpTopicSubscriber}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{CpTopicSubscriber()}{CpTopicSubscriber()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::\+Cp\+Topic\+Subscriber (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00023}{23}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024     \{}
+\DoxyCodeLine{00025         \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a666e60629820ef146ade691a36c41e0a}{initialized\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00026     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00101}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::initialized\+\_\+}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_a331fb12e76c4c9e26f88a6cbb5c6f8cd}\label{classsmacc_1_1components_1_1CpTopicSubscriber_a331fb12e76c4c9e26f88a6cbb5c6f8cd}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!CpTopicSubscriber@{CpTopicSubscriber}}
+\index{CpTopicSubscriber@{CpTopicSubscriber}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{CpTopicSubscriber()}{CpTopicSubscriber()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::\+Cp\+Topic\+Subscriber (\begin{DoxyParamCaption}\item[{std\+::string}]{topicname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00028}{28}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029     \{}
+\DoxyCodeLine{00030         \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a90e61b81d9bb33b886162eb41051fe1c}{topicName}} = topicname;}
+\DoxyCodeLine{00031     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00018}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::topic\+Name}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_a82118e72ea660b4f651dd02f8caf51a5}\label{classsmacc_1_1components_1_1CpTopicSubscriber_a82118e72ea660b4f651dd02f8caf51a5}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!````~CpTopicSubscriber@{$\sim$CpTopicSubscriber}}
+\index{````~CpTopicSubscriber@{$\sim$CpTopicSubscriber}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$CpTopicSubscriber()}{~CpTopicSubscriber()}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+virtual \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::$\sim$\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{Cp\+Topic\+Subscriber}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00033}{33}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034     \{}
+\DoxyCodeLine{00035         \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a87f9c87f6b7c0801dff4fcc7519dbe0e}{sub\_}}.shutdown();}
+\DoxyCodeLine{00036     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00099}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::sub\+\_\+}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_a12a86f96d939cfa509181865d6ec85e9}\label{classsmacc_1_1components_1_1CpTopicSubscriber_a12a86f96d939cfa509181865d6ec85e9}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!initialize@{initialize}}
+\index{initialize@{initialize}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+virtual void \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00072}{72}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073     \{}
+\DoxyCodeLine{00074         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a666e60629820ef146ade691a36c41e0a}{initialized\_}})}
+\DoxyCodeLine{00075         \{}
+\DoxyCodeLine{00076             \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_aadbaf8c0f0a2a5bea38f41356528f41c}{firstMessage\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_ad8775c1e5773a2c58d63ad2d64d28580}{queueSize}})}
+\DoxyCodeLine{00079                 \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_ad8775c1e5773a2c58d63ad2d64d28580}{queueSize}} = 1;}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a90e61b81d9bb33b886162eb41051fe1c}{topicName}})}
+\DoxyCodeLine{00082             \{}
+\DoxyCodeLine{00083                 ROS\_ERROR(\textcolor{stringliteral}{"{}topic client with no topic name set. Skipping subscribing"{}});}
+\DoxyCodeLine{00084             \}}
+\DoxyCodeLine{00085             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00086             \{}
+\DoxyCodeLine{00087                 ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}["{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a8bfa94b1b1c616d55837ebba1b426c6e}{getName}}() << \textcolor{stringliteral}{"{}] Subscribing to topic: "{}} << \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a90e61b81d9bb33b886162eb41051fe1c}{topicName}});}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089                 \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a87f9c87f6b7c0801dff4fcc7519dbe0e}{sub\_}} = \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_aee3369aec5cf88918bf1e812b3d68dd6}{nh\_}}.subscribe(*\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a90e61b81d9bb33b886162eb41051fe1c}{topicName}}, *\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_ad8775c1e5773a2c58d63ad2d64d28580}{queueSize}}, \&\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_af1b8b4e1c2fe22ac3ea2968a9a957d8f}{CpTopicSubscriber<MessageType>::messageCallback}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{00090                 this-\/>\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a666e60629820ef146ade691a36c41e0a}{initialized\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00091             \}}
+\DoxyCodeLine{00092         \}}
+\DoxyCodeLine{00093     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00100}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::first\+Message\+\_\+}}, \mbox{\hyperlink{smacc__component_8cpp_source_l00036}{smacc\+::\+ISmacc\+Component\+::get\+Name()}}, \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00101}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::initialized\+\_\+}}, \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00096}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::nh\+\_\+}}, \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00019}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::queue\+Size}}, \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00099}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::sub\+\_\+}}, and \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00018}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::topic\+Name}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1components_1_1CpTopicSubscriber_a12a86f96d939cfa509181865d6ec85e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_af1b8b4e1c2fe22ac3ea2968a9a957d8f}\label{classsmacc_1_1components_1_1CpTopicSubscriber_af1b8b4e1c2fe22ac3ea2968a9a957d8f}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!messageCallback@{messageCallback}}
+\index{messageCallback@{messageCallback}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{messageCallback()}{messageCallback()}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+void \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::message\+Callback (\begin{DoxyParamCaption}\item[{const Message\+Type \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00103}{103}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104     \{}
+\DoxyCodeLine{00105         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_aadbaf8c0f0a2a5bea38f41356528f41c}{firstMessage\_}})}
+\DoxyCodeLine{00106         \{}
+\DoxyCodeLine{00107             \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a9e1c210ebc8d5ef0c837e8bd9b83f754}{postInitialMessageEvent}}(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
+\DoxyCodeLine{00108             \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_ab8e319857951489298faefa4882e49cc}{onFirstMessageReceived\_}}(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
+\DoxyCodeLine{00109             \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_aadbaf8c0f0a2a5bea38f41356528f41c}{firstMessage\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00110         \}}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112         \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a002ca59f74f784f14597d1c0e057d298}{postMessageEvent}}(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
+\DoxyCodeLine{00113         \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_aeec04e64cad880bd49d401c2a474c6e9}{onMessageReceived\_}}(\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}});}
+\DoxyCodeLine{00114     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00100}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::first\+Message\+\_\+}}, \mbox{\hyperlink{battery__monitor__node_8py_source_l00015}{battery\+\_\+monitor\+\_\+node\+::msg}}, \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00038}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::on\+First\+Message\+Received\+\_\+}}, \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00039}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::on\+Message\+Received\+\_\+}}, \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00042}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::post\+Initial\+Message\+Event}}, and \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00041}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::post\+Message\+Event}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_ac7b226871cec5c4358cc635e02f56bf2}\label{classsmacc_1_1components_1_1CpTopicSubscriber_ac7b226871cec5c4358cc635e02f56bf2}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!onFirstMessageReceived@{onFirstMessageReceived}}
+\index{onFirstMessageReceived@{onFirstMessageReceived}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{onFirstMessageReceived()}{onFirstMessageReceived()}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+template$<$typename T $>$ \\
+boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::on\+First\+Message\+Received (\begin{DoxyParamCaption}\item[{void(T\+::$\ast$)(const Message\+Type \&)}]{callback,  }\item[{T $\ast$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00051}{51}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052     \{}
+\DoxyCodeLine{00053         \textcolor{keywordflow}{return} this-\/>getStateMachine()-\/>createSignalConnection(\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_ab8e319857951489298faefa4882e49cc}{onFirstMessageReceived\_}}, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00054     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00038}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::on\+First\+Message\+Received\+\_\+}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_af8f626a4ef4aa6ff699359f136372292}\label{classsmacc_1_1components_1_1CpTopicSubscriber_af8f626a4ef4aa6ff699359f136372292}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!onMessageReceived@{onMessageReceived}}
+\index{onMessageReceived@{onMessageReceived}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{onMessageReceived()}{onMessageReceived()}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+template$<$typename T $>$ \\
+boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::on\+Message\+Received (\begin{DoxyParamCaption}\item[{void(T\+::$\ast$)(const Message\+Type \&)}]{callback,  }\item[{T $\ast$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00045}{45}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046     \{}
+\DoxyCodeLine{00047         \textcolor{keywordflow}{return} this-\/>getStateMachine()-\/>createSignalConnection(\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_aeec04e64cad880bd49d401c2a474c6e9}{onMessageReceived\_}}, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00048     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00039}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::on\+Message\+Received\+\_\+}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_a7ed50caff06e266a4df299a58fdf5ba0}\label{classsmacc_1_1components_1_1CpTopicSubscriber_a7ed50caff06e266a4df299a58fdf5ba0}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!onOrthogonalAllocation@{onOrthogonalAllocation}}
+\index{onOrthogonalAllocation@{onOrthogonalAllocation}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{onOrthogonalAllocation()}{onOrthogonalAllocation()}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+template$<$typename TOrthogonal , typename TSource\+Object $>$ \\
+void \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::on\+Orthogonal\+Allocation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00057}{57}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058     \{}
+\DoxyCodeLine{00059         this-\/>\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a002ca59f74f784f14597d1c0e057d298}{postMessageEvent}} = [=](\textcolor{keyword}{auto} \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}) \{}
+\DoxyCodeLine{00060             \textcolor{keyword}{auto} \textcolor{keyword}{event} = \textcolor{keyword}{new} EvTopicMessage<TSourceObject, TOrthogonal>();}
+\DoxyCodeLine{00061             \textcolor{keyword}{event}-\/>msgData = \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}};}
+\DoxyCodeLine{00062             this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a84455564c2c4b90be58e900050232722}{postEvent}}(event);}
+\DoxyCodeLine{00063         \};}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065         this-\/>\mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber_a9e1c210ebc8d5ef0c837e8bd9b83f754}{postInitialMessageEvent}} = [=](\textcolor{keyword}{auto} \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}) \{}
+\DoxyCodeLine{00066             \textcolor{keyword}{auto} \textcolor{keyword}{event} = \textcolor{keyword}{new} EvTopicInitialMessage<TSourceObject, TOrthogonal>();}
+\DoxyCodeLine{00067             \textcolor{keyword}{event}-\/>msgData = \mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}};}
+\DoxyCodeLine{00068             this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a84455564c2c4b90be58e900050232722}{postEvent}}(event);}
+\DoxyCodeLine{00069         \};}
+\DoxyCodeLine{00070     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{battery__monitor__node_8py_source_l00015}{battery\+\_\+monitor\+\_\+node\+::msg}}, and \mbox{\hyperlink{classsmacc_1_1ISmaccComponent_a84455564c2c4b90be58e900050232722}{smacc\+::\+ISmacc\+Component\+::post\+Event()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsmacc_1_1components_1_1CpTopicSubscriber_a7ed50caff06e266a4df299a58fdf5ba0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_aadbaf8c0f0a2a5bea38f41356528f41c}\label{classsmacc_1_1components_1_1CpTopicSubscriber_aadbaf8c0f0a2a5bea38f41356528f41c}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!firstMessage\_@{firstMessage\_}}
+\index{firstMessage\_@{firstMessage\_}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{firstMessage\_}{firstMessage\_}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::first\+Message\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00100}{100}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00072}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::initialize()}}, and \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00103}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::message\+Callback()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_a666e60629820ef146ade691a36c41e0a}\label{classsmacc_1_1components_1_1CpTopicSubscriber_a666e60629820ef146ade691a36c41e0a}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!initialized\_@{initialized\_}}
+\index{initialized\_@{initialized\_}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{initialized\_}{initialized\_}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::initialized\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00101}{101}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00023}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::\+Cp\+Topic\+Subscriber()}}, and \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00072}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::initialize()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_aee3369aec5cf88918bf1e812b3d68dd6}\label{classsmacc_1_1components_1_1CpTopicSubscriber_aee3369aec5cf88918bf1e812b3d68dd6}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!nh\_@{nh\_}}
+\index{nh\_@{nh\_}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{nh\_}{nh\_}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+ros\+::\+Node\+Handle \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::nh\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00096}{96}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00072}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::initialize()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_ab8e319857951489298faefa4882e49cc}\label{classsmacc_1_1components_1_1CpTopicSubscriber_ab8e319857951489298faefa4882e49cc}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!onFirstMessageReceived\_@{onFirstMessageReceived\_}}
+\index{onFirstMessageReceived\_@{onFirstMessageReceived\_}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{onFirstMessageReceived\_}{onFirstMessageReceived\_}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+\mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc\+::\+Smacc\+Signal}}$<$void(const Message\+Type \&)$>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::on\+First\+Message\+Received\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00038}{38}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00103}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::message\+Callback()}}, and \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00051}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::on\+First\+Message\+Received()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_aeec04e64cad880bd49d401c2a474c6e9}\label{classsmacc_1_1components_1_1CpTopicSubscriber_aeec04e64cad880bd49d401c2a474c6e9}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!onMessageReceived\_@{onMessageReceived\_}}
+\index{onMessageReceived\_@{onMessageReceived\_}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{onMessageReceived\_}{onMessageReceived\_}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+\mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc\+::\+Smacc\+Signal}}$<$void(const Message\+Type \&)$>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::on\+Message\+Received\+\_\+}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00039}{39}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00103}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::message\+Callback()}}, and \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00045}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::on\+Message\+Received()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_a9e1c210ebc8d5ef0c837e8bd9b83f754}\label{classsmacc_1_1components_1_1CpTopicSubscriber_a9e1c210ebc8d5ef0c837e8bd9b83f754}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!postInitialMessageEvent@{postInitialMessageEvent}}
+\index{postInitialMessageEvent@{postInitialMessageEvent}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{postInitialMessageEvent}{postInitialMessageEvent}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+std\+::function$<$void(const Message\+Type \&)$>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::post\+Initial\+Message\+Event}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00042}{42}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00103}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::message\+Callback()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_a002ca59f74f784f14597d1c0e057d298}\label{classsmacc_1_1components_1_1CpTopicSubscriber_a002ca59f74f784f14597d1c0e057d298}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!postMessageEvent@{postMessageEvent}}
+\index{postMessageEvent@{postMessageEvent}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{postMessageEvent}{postMessageEvent}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+std\+::function$<$void(const Message\+Type \&)$>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::post\+Message\+Event}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00041}{41}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00103}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::message\+Callback()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_ad8775c1e5773a2c58d63ad2d64d28580}\label{classsmacc_1_1components_1_1CpTopicSubscriber_ad8775c1e5773a2c58d63ad2d64d28580}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!queueSize@{queueSize}}
+\index{queueSize@{queueSize}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{queueSize}{queueSize}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+boost\+::optional$<$int$>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::queue\+Size}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00019}{19}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00072}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::initialize()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_a87f9c87f6b7c0801dff4fcc7519dbe0e}\label{classsmacc_1_1components_1_1CpTopicSubscriber_a87f9c87f6b7c0801dff4fcc7519dbe0e}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!sub\_@{sub\_}}
+\index{sub\_@{sub\_}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{sub\_}{sub\_}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+ros\+::\+Subscriber \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00099}{99}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00072}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::initialize()}}, and \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00033}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::$\sim$\+Cp\+Topic\+Subscriber()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1components_1_1CpTopicSubscriber_a90e61b81d9bb33b886162eb41051fe1c}\label{classsmacc_1_1components_1_1CpTopicSubscriber_a90e61b81d9bb33b886162eb41051fe1c}} 
+\index{smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}!topicName@{topicName}}
+\index{topicName@{topicName}!smacc::components::CpTopicSubscriber$<$ MessageType $>$@{smacc::components::CpTopicSubscriber$<$ MessageType $>$}}
+\doxysubsubsection{\texorpdfstring{topicName}{topicName}}
+{\footnotesize\ttfamily template$<$typename Message\+Type $>$ \\
+boost\+::optional$<$std\+::string$>$ \mbox{\hyperlink{classsmacc_1_1components_1_1CpTopicSubscriber}{smacc\+::components\+::\+Cp\+Topic\+Subscriber}}$<$ Message\+Type $>$\+::topic\+Name}
+
+
+
+Definition at line \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00018}{18}} of file \mbox{\hyperlink{cp__topic__subscriber_8h_source}{cp\+\_\+topic\+\_\+subscriber.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00028}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::\+Cp\+Topic\+Subscriber()}}, and \mbox{\hyperlink{cp__topic__subscriber_8h_source_l00072}{smacc\+::components\+::\+Cp\+Topic\+Subscriber$<$ Message\+Type $>$\+::initialize()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+smacc/include/smacc/client\+\_\+base\+\_\+components/\mbox{\hyperlink{cp__topic__subscriber_8h}{cp\+\_\+topic\+\_\+subscriber.\+h}}\end{DoxyCompactItemize}
