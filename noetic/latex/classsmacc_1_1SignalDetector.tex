@@ -127,7 +127,7 @@ Definition at line \mbox{\hyperlink{signal__detector_8cpp_source_l00042}{42}} of
 \DoxyCodeLine{00050     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&client : clients)}
 \DoxyCodeLine{00051     \{}
 \DoxyCodeLine{00052       \textcolor{comment}{// updatable client components}}
-\DoxyCodeLine{00053       \textcolor{keyword}{auto} updatableClient = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(client.get());}
+\DoxyCodeLine{00053       \textcolor{keyword}{auto} updatableClient = \textcolor{keyword}{dynamic\_cast<}ISmaccUpdatable *\textcolor{keyword}{>}(client.get());}
 \DoxyCodeLine{00054 }
 \DoxyCodeLine{00055       \textcolor{keywordflow}{if} (updatableClient != \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00056       \{}
@@ -140,7 +140,7 @@ Definition at line \mbox{\hyperlink{signal__detector_8cpp_source_l00042}{42}} of
 \DoxyCodeLine{00063       client-\/>getComponents(components);}
 \DoxyCodeLine{00064       \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&componententry : components)}
 \DoxyCodeLine{00065       \{}
-\DoxyCodeLine{00066         \textcolor{keyword}{auto} updatableComponent = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(componententry.get());}
+\DoxyCodeLine{00066         \textcolor{keyword}{auto} updatableComponent = \textcolor{keyword}{dynamic\_cast<}ISmaccUpdatable *\textcolor{keyword}{>}(componententry.get());}
 \DoxyCodeLine{00067         \textcolor{keywordflow}{if} (updatableComponent != \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00068         \{}
 \DoxyCodeLine{00069           ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}Adding updatable component: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(*updatableComponent)));}
@@ -197,7 +197,7 @@ Definition at line \mbox{\hyperlink{signal__detector_8cpp_source_l00082}{82}} of
 \DoxyCodeLine{00089 }
 \DoxyCodeLine{00090     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&currentBehavior : behaviors)}
 \DoxyCodeLine{00091     \{}
-\DoxyCodeLine{00092       \mbox{\hyperlink{classISmaccUpdatable}{ISmaccUpdatable}} *updatableClientBehavior = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(currentBehavior.get());}
+\DoxyCodeLine{00092       ISmaccUpdatable *updatableClientBehavior = \textcolor{keyword}{dynamic\_cast<}ISmaccUpdatable *\textcolor{keyword}{>}(currentBehavior.get());}
 \DoxyCodeLine{00093 }
 \DoxyCodeLine{00094       \textcolor{keywordflow}{if} (updatableClientBehavior != \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00095       \{}
@@ -207,7 +207,7 @@ Definition at line \mbox{\hyperlink{signal__detector_8cpp_source_l00082}{82}} of
 \DoxyCodeLine{00099     \}}
 \DoxyCodeLine{00100   \}}
 \DoxyCodeLine{00101 }
-\DoxyCodeLine{00102   \textcolor{keyword}{auto} updatableState = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(currentState);}
+\DoxyCodeLine{00102   \textcolor{keyword}{auto} updatableState = \textcolor{keyword}{dynamic\_cast<}ISmaccUpdatable *\textcolor{keyword}{>}(currentState);}
 \DoxyCodeLine{00103   \textcolor{keywordflow}{if} (updatableState != \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00104   \{}
 \DoxyCodeLine{00105     this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a07a5e7bb00c348435d954e22682fa610}{updatableStateElements\_}}.push\_back(updatableState);}
@@ -216,7 +216,7 @@ Definition at line \mbox{\hyperlink{signal__detector_8cpp_source_l00082}{82}} of
 \DoxyCodeLine{00108   \textcolor{keyword}{auto} statereactors = currentState-\/>getStateReactors();}
 \DoxyCodeLine{00109   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&sr : statereactors)}
 \DoxyCodeLine{00110   \{}
-\DoxyCodeLine{00111     \mbox{\hyperlink{classISmaccUpdatable}{ISmaccUpdatable}} *updatableStateReactor = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(sr.get());}
+\DoxyCodeLine{00111     ISmaccUpdatable *updatableStateReactor = \textcolor{keyword}{dynamic\_cast<}ISmaccUpdatable *\textcolor{keyword}{>}(sr.get());}
 \DoxyCodeLine{00112     \textcolor{keywordflow}{if} (updatableStateReactor != \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00113     \{}
 \DoxyCodeLine{00114       ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}Adding updatable stateReactorr: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(updatableStateReactor)));}
@@ -227,7 +227,7 @@ Definition at line \mbox{\hyperlink{signal__detector_8cpp_source_l00082}{82}} of
 \DoxyCodeLine{00119   \textcolor{keyword}{auto} eventgenerators = currentState-\/>getEventGenerators();}
 \DoxyCodeLine{00120   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&eg : eventgenerators)}
 \DoxyCodeLine{00121   \{}
-\DoxyCodeLine{00122     \mbox{\hyperlink{classISmaccUpdatable}{ISmaccUpdatable}} *updatableEventGenerator = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classISmaccUpdatable}{ISmaccUpdatable}} *\textcolor{keyword}{>}(eg.get());}
+\DoxyCodeLine{00122     ISmaccUpdatable *updatableEventGenerator = \textcolor{keyword}{dynamic\_cast<}ISmaccUpdatable *\textcolor{keyword}{>}(eg.get());}
 \DoxyCodeLine{00123     \textcolor{keywordflow}{if} (updatableEventGenerator != \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00124     \{}
 \DoxyCodeLine{00125       ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}Adding updatable eventGenerator: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{typeid}(updatableEventGenerator)));}

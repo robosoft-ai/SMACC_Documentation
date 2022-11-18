@@ -1,7 +1,0 @@
-<map id="sm_subscriber::CbPrintMessageNumber" name="sm_subscriber::CbPrintMessageNumber">
-<area shape="rect" id="node1" title=" " alt="" coords="5,863,215,955"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1CbSubscriptionCallbackBase.html" title=" " alt="" coords="7,707,213,813"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1SmaccClientBehavior.html" title=" " alt="" coords="9,396,201,488"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1CbSubscriptionCallbackBase.html" title=" " alt="" coords="126,537,331,644"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClientBehavior.html" title=" " alt="" coords="7,5,203,347"/>
-</map>

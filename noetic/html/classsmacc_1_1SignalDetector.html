@@ -249,7 +249,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   50</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;client : clients)</div>
 <div class="line"><span class="lineno">   51</span>    {</div>
 <div class="line"><span class="lineno">   52</span>      <span class="comment">// updatable client components</span></div>
-<div class="line"><span class="lineno">   53</span>      <span class="keyword">auto</span> updatableClient = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="classISmaccUpdatable.html">ISmaccUpdatable</a> *<span class="keyword">&gt;</span>(client.get());</div>
+<div class="line"><span class="lineno">   53</span>      <span class="keyword">auto</span> updatableClient = <span class="keyword">dynamic_cast&lt;</span>ISmaccUpdatable *<span class="keyword">&gt;</span>(client.get());</div>
 <div class="line"><span class="lineno">   54</span> </div>
 <div class="line"><span class="lineno">   55</span>      <span class="keywordflow">if</span> (updatableClient != <span class="keyword">nullptr</span>)</div>
 <div class="line"><span class="lineno">   56</span>      {</div>
@@ -262,7 +262,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   63</span>      client-&gt;getComponents(components);</div>
 <div class="line"><span class="lineno">   64</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;componententry : components)</div>
 <div class="line"><span class="lineno">   65</span>      {</div>
-<div class="line"><span class="lineno">   66</span>        <span class="keyword">auto</span> updatableComponent = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="classISmaccUpdatable.html">ISmaccUpdatable</a> *<span class="keyword">&gt;</span>(componententry.get());</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keyword">auto</span> updatableComponent = <span class="keyword">dynamic_cast&lt;</span>ISmaccUpdatable *<span class="keyword">&gt;</span>(componententry.get());</div>
 <div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (updatableComponent != <span class="keyword">nullptr</span>)</div>
 <div class="line"><span class="lineno">   68</span>        {</div>
 <div class="line"><span class="lineno">   69</span>          ROS_DEBUG_STREAM(<span class="stringliteral">&quot;Adding updatable component: &quot;</span> &lt;&lt; <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a670e39ccea29952859df4e2d0e45077b">demangleType</a>(<span class="keyword">typeid</span>(*updatableComponent)));</div>
@@ -272,7 +272,6 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   73</span>    }</div>
 <div class="line"><span class="lineno">   74</span>  }</div>
 <div class="line"><span class="lineno">   75</span>}</div>
-<div class="ttc" id="aclassISmaccUpdatable_html"><div class="ttname"><a href="classISmaccUpdatable.html">ISmaccUpdatable</a></div></div>
 <div class="ttc" id="aclasssmacc_1_1ISmaccStateMachine_html_a7f5b2882dbd077584767cb2533ed3c49"><div class="ttname"><a href="classsmacc_1_1ISmaccStateMachine.html#a7f5b2882dbd077584767cb2533ed3c49">smacc::ISmaccStateMachine::getOrthogonals</a></div><div class="ttdeci">const std::map&lt; std::string, std::shared_ptr&lt; smacc::ISmaccOrthogonal &gt; &gt; &amp; getOrthogonals() const</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine_8cpp_source.html#l00061">smacc_state_machine.cpp:61</a></div></div>
 <div class="ttc" id="aclasssmacc_1_1SignalDetector_html_a01a457b4ec935473d6426efb7b87e683"><div class="ttname"><a href="classsmacc_1_1SignalDetector.html#a01a457b4ec935473d6426efb7b87e683">smacc::SignalDetector::updatableClients_</a></div><div class="ttdeci">std::vector&lt; ISmaccUpdatable * &gt; updatableClients_</div><div class="ttdef"><b>Definition:</b> <a href="smacc__signal__detector_8h_source.html#l00045">smacc_signal_detector.h:45</a></div></div>
 <div class="ttc" id="aclasssmacc_1_1SignalDetector_html_a46025de6ac7b5980e22144f9703236a4"><div class="ttname"><a href="classsmacc_1_1SignalDetector.html#a46025de6ac7b5980e22144f9703236a4">smacc::SignalDetector::smaccStateMachine_</a></div><div class="ttdeci">ISmaccStateMachine * smaccStateMachine_</div><div class="ttdef"><b>Definition:</b> <a href="smacc__signal__detector_8h_source.html#l00043">smacc_signal_detector.h:43</a></div></div>
@@ -344,7 +343,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   89</span> </div>
 <div class="line"><span class="lineno">   90</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;currentBehavior : behaviors)</div>
 <div class="line"><span class="lineno">   91</span>    {</div>
-<div class="line"><span class="lineno">   92</span>      <a class="code hl_class" href="classISmaccUpdatable.html">ISmaccUpdatable</a> *updatableClientBehavior = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="classISmaccUpdatable.html">ISmaccUpdatable</a> *<span class="keyword">&gt;</span>(currentBehavior.get());</div>
+<div class="line"><span class="lineno">   92</span>      ISmaccUpdatable *updatableClientBehavior = <span class="keyword">dynamic_cast&lt;</span>ISmaccUpdatable *<span class="keyword">&gt;</span>(currentBehavior.get());</div>
 <div class="line"><span class="lineno">   93</span> </div>
 <div class="line"><span class="lineno">   94</span>      <span class="keywordflow">if</span> (updatableClientBehavior != <span class="keyword">nullptr</span>)</div>
 <div class="line"><span class="lineno">   95</span>      {</div>
@@ -354,7 +353,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   99</span>    }</div>
 <div class="line"><span class="lineno">  100</span>  }</div>
 <div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>  <span class="keyword">auto</span> updatableState = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="classISmaccUpdatable.html">ISmaccUpdatable</a> *<span class="keyword">&gt;</span>(currentState);</div>
+<div class="line"><span class="lineno">  102</span>  <span class="keyword">auto</span> updatableState = <span class="keyword">dynamic_cast&lt;</span>ISmaccUpdatable *<span class="keyword">&gt;</span>(currentState);</div>
 <div class="line"><span class="lineno">  103</span>  <span class="keywordflow">if</span> (updatableState != <span class="keyword">nullptr</span>)</div>
 <div class="line"><span class="lineno">  104</span>  {</div>
 <div class="line"><span class="lineno">  105</span>    this-&gt;<a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#a07a5e7bb00c348435d954e22682fa610">updatableStateElements_</a>.push_back(updatableState);</div>
@@ -363,7 +362,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  108</span>  <span class="keyword">auto</span> statereactors = currentState-&gt;getStateReactors();</div>
 <div class="line"><span class="lineno">  109</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;sr : statereactors)</div>
 <div class="line"><span class="lineno">  110</span>  {</div>
-<div class="line"><span class="lineno">  111</span>    <a class="code hl_class" href="classISmaccUpdatable.html">ISmaccUpdatable</a> *updatableStateReactor = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="classISmaccUpdatable.html">ISmaccUpdatable</a> *<span class="keyword">&gt;</span>(sr.get());</div>
+<div class="line"><span class="lineno">  111</span>    ISmaccUpdatable *updatableStateReactor = <span class="keyword">dynamic_cast&lt;</span>ISmaccUpdatable *<span class="keyword">&gt;</span>(sr.get());</div>
 <div class="line"><span class="lineno">  112</span>    <span class="keywordflow">if</span> (updatableStateReactor != <span class="keyword">nullptr</span>)</div>
 <div class="line"><span class="lineno">  113</span>    {</div>
 <div class="line"><span class="lineno">  114</span>      ROS_DEBUG_STREAM(<span class="stringliteral">&quot;Adding updatable stateReactorr: &quot;</span> &lt;&lt; <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a670e39ccea29952859df4e2d0e45077b">demangleType</a>(<span class="keyword">typeid</span>(updatableStateReactor)));</div>
@@ -374,7 +373,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  119</span>  <span class="keyword">auto</span> eventgenerators = currentState-&gt;getEventGenerators();</div>
 <div class="line"><span class="lineno">  120</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;eg : eventgenerators)</div>
 <div class="line"><span class="lineno">  121</span>  {</div>
-<div class="line"><span class="lineno">  122</span>    <a class="code hl_class" href="classISmaccUpdatable.html">ISmaccUpdatable</a> *updatableEventGenerator = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="classISmaccUpdatable.html">ISmaccUpdatable</a> *<span class="keyword">&gt;</span>(eg.get());</div>
+<div class="line"><span class="lineno">  122</span>    ISmaccUpdatable *updatableEventGenerator = <span class="keyword">dynamic_cast&lt;</span>ISmaccUpdatable *<span class="keyword">&gt;</span>(eg.get());</div>
 <div class="line"><span class="lineno">  123</span>    <span class="keywordflow">if</span> (updatableEventGenerator != <span class="keyword">nullptr</span>)</div>
 <div class="line"><span class="lineno">  124</span>    {</div>
 <div class="line"><span class="lineno">  125</span>      ROS_DEBUG_STREAM(<span class="stringliteral">&quot;Adding updatable eventGenerator: &quot;</span> &lt;&lt; <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a670e39ccea29952859df4e2d0e45077b">demangleType</a>(<span class="keyword">typeid</span>(updatableEventGenerator)));</div>
@@ -768,9 +767,8 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classsmacc_1_1ISmaccState.html#acef404ab3766ddf2892e8dad14a4a7cf" title=" " alt="" coords="279,201,421,243"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a7a68162b2cadb10e51ab0d28d7aed307" title=" " alt="" coords="254,267,446,308"/>
 <area shape="rect" href="classsmacc_1_1StateReactor.html#ae9d0dd0c8cdcc57f8881f0962040c8ed" title=" " alt="" coords="279,332,421,373"/>
-<area shape="rect" href="namespacesm__viewer__sim.html#a19b5db17983d5b9bbf21e96ecf9ab5c8" title=" " alt="" coords="9,136,200,177"/>
-<area shape="rect" href="classsmacc_1_1SmaccEventGenerator.html#a0bc8c90df39c07d36f74e3dd60ad5c8d" title=" " alt="" coords="5,201,204,243"/>
-<area shape="rect" href="classsmacc_1_1StateReactor.html#a06303bdf908d04d5a6eb5f63131e68bd" title=" " alt="" coords="33,267,176,308"/>
+<area shape="rect" href="classsmacc_1_1SmaccEventGenerator.html#a0bc8c90df39c07d36f74e3dd60ad5c8d" title=" " alt="" coords="5,169,204,211"/>
+<area shape="rect" href="classsmacc_1_1StateReactor.html#a06303bdf908d04d5a6eb5f63131e68bd" title=" " alt="" coords="33,235,176,276"/>
 </map>
 </div>
 

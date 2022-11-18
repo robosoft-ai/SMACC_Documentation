@@ -163,10 +163,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a82118e72ea660b4f651dd02f8caf51a5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmacc_1_1components_1_1CpTopicSubscriber.html#a82118e72ea660b4f651dd02f8caf51a5">~CpTopicSubscriber</a> ()</td></tr>
 <tr class="separator:a82118e72ea660b4f651dd02f8caf51a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f626a4ef4aa6ff699359f136372292"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:af8f626a4ef4aa6ff699359f136372292"><td class="memTemplItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1components_1_1CpTopicSubscriber.html#af8f626a4ef4aa6ff699359f136372292">onMessageReceived</a> (void(T::*<a class="el" href="sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>)(const MessageType &amp;), T *object)</td></tr>
+<tr class="memitem:af8f626a4ef4aa6ff699359f136372292"><td class="memTemplItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1components_1_1CpTopicSubscriber.html#af8f626a4ef4aa6ff699359f136372292">onMessageReceived</a> (void(T::*callback)(const MessageType &amp;), T *object)</td></tr>
 <tr class="separator:af8f626a4ef4aa6ff699359f136372292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7b226871cec5c4358cc635e02f56bf2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac7b226871cec5c4358cc635e02f56bf2"><td class="memTemplItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1components_1_1CpTopicSubscriber.html#ac7b226871cec5c4358cc635e02f56bf2">onFirstMessageReceived</a> (void(T::*<a class="el" href="sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>)(const MessageType &amp;), T *object)</td></tr>
+<tr class="memitem:ac7b226871cec5c4358cc635e02f56bf2"><td class="memTemplItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1components_1_1CpTopicSubscriber.html#ac7b226871cec5c4358cc635e02f56bf2">onFirstMessageReceived</a> (void(T::*callback)(const MessageType &amp;), T *object)</td></tr>
 <tr class="separator:ac7b226871cec5c4358cc635e02f56bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ed50caff06e266a4df299a58fdf5ba0"><td class="memTemplParams" colspan="2">template&lt;typename TOrthogonal , typename TSourceObject &gt; </td></tr>
 <tr class="memitem:a7ed50caff06e266a4df299a58fdf5ba0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1components_1_1CpTopicSubscriber.html#a7ed50caff06e266a4df299a58fdf5ba0">onOrthogonalAllocation</a> ()</td></tr>
@@ -537,25 +537,10 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="cp__topic__subscriber_8h_source.html#l00051">51</a> of file <a class="el" href="cp__topic__subscriber_8h_source.html">cp_topic_subscriber.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   52</span>    {</div>
-<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> this-&gt;getStateMachine()-&gt;createSignalConnection(<a class="code hl_variable" href="classsmacc_1_1components_1_1CpTopicSubscriber.html#ab8e319857951489298faefa4882e49cc">onFirstMessageReceived_</a>, <a class="code hl_function" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>, <span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">return</span> this-&gt;getStateMachine()-&gt;createSignalConnection(<a class="code hl_variable" href="classsmacc_1_1components_1_1CpTopicSubscriber.html#ab8e319857951489298faefa4882e49cc">onFirstMessageReceived_</a>, callback, <span class="keywordtype">object</span>);</div>
 <div class="line"><span class="lineno">   54</span>    }</div>
-<div class="ttc" id="asm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_html_a050e697bd654facce10ea3f6549669b3"><div class="ttname"><a href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a></div><div class="ttdeci">void callback(const sensor_msgs::Image &amp;img)</div><div class="ttdef"><b>Definition:</b> <a href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source.html#l00104">opencv_perception_node.cpp:104</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source.html#l00104">callback()</a>, and <a class="el" href="cp__topic__subscriber_8h_source.html#l00038">smacc::components::CpTopicSubscriber&lt; MessageType &gt;::onFirstMessageReceived_</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsmacc_1_1components_1_1CpTopicSubscriber_ac7b226871cec5c4358cc635e02f56bf2_cgraph.png" border="0" usemap="#aclasssmacc_1_1components_1_1CpTopicSubscriber_ac7b226871cec5c4358cc635e02f56bf2_cgraph" alt=""/></div>
-<map name="aclasssmacc_1_1components_1_1CpTopicSubscriber_ac7b226871cec5c4358cc635e02f56bf2_cgraph" id="aclasssmacc_1_1components_1_1CpTopicSubscriber_ac7b226871cec5c4358cc635e02f56bf2_cgraph">
-<area shape="rect" title=" " alt="" coords="5,41,184,97"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3" title=" " alt="" coords="232,56,303,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a1fa01e06b7bc85d9a3f2f5c29829978d" title=" " alt="" coords="355,5,425,32"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a63b8f2427ed7ea7fd23e6db392dd4838" title=" " alt="" coords="351,56,429,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a9bf2df48cb6b85ffe7173b65640b69e3" title=" " alt="" coords="357,107,423,133"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#ad246f945adbcf477432e6857f1062e52" title=" " alt="" coords="477,56,557,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#aa483d0ec97a846bd4bfa13d793f5c1e1" title=" " alt="" coords="605,56,708,83"/>
-</map>
-</div>
+<p class="reference">References <a class="el" href="cp__topic__subscriber_8h_source.html#l00038">smacc::components::CpTopicSubscriber&lt; MessageType &gt;::onFirstMessageReceived_</a>.</p>
 
 </div>
 </div>
@@ -599,24 +584,10 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="cp__topic__subscriber_8h_source.html#l00045">45</a> of file <a class="el" href="cp__topic__subscriber_8h_source.html">cp_topic_subscriber.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   46</span>    {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> this-&gt;getStateMachine()-&gt;createSignalConnection(<a class="code hl_variable" href="classsmacc_1_1components_1_1CpTopicSubscriber.html#aeec04e64cad880bd49d401c2a474c6e9">onMessageReceived_</a>, <a class="code hl_function" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>, <span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span> this-&gt;getStateMachine()-&gt;createSignalConnection(<a class="code hl_variable" href="classsmacc_1_1components_1_1CpTopicSubscriber.html#aeec04e64cad880bd49d401c2a474c6e9">onMessageReceived_</a>, callback, <span class="keywordtype">object</span>);</div>
 <div class="line"><span class="lineno">   48</span>    }</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source.html#l00104">callback()</a>, and <a class="el" href="cp__topic__subscriber_8h_source.html#l00039">smacc::components::CpTopicSubscriber&lt; MessageType &gt;::onMessageReceived_</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsmacc_1_1components_1_1CpTopicSubscriber_af8f626a4ef4aa6ff699359f136372292_cgraph.png" border="0" usemap="#aclasssmacc_1_1components_1_1CpTopicSubscriber_af8f626a4ef4aa6ff699359f136372292_cgraph" alt=""/></div>
-<map name="aclasssmacc_1_1components_1_1CpTopicSubscriber_af8f626a4ef4aa6ff699359f136372292_cgraph" id="aclasssmacc_1_1components_1_1CpTopicSubscriber_af8f626a4ef4aa6ff699359f136372292_cgraph">
-<area shape="rect" title=" " alt="" coords="5,41,211,97"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3" title=" " alt="" coords="259,56,329,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a1fa01e06b7bc85d9a3f2f5c29829978d" title=" " alt="" coords="381,5,452,32"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a63b8f2427ed7ea7fd23e6db392dd4838" title=" " alt="" coords="377,56,456,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a9bf2df48cb6b85ffe7173b65640b69e3" title=" " alt="" coords="383,107,450,133"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#ad246f945adbcf477432e6857f1062e52" title=" " alt="" coords="504,56,584,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#aa483d0ec97a846bd4bfa13d793f5c1e1" title=" " alt="" coords="632,56,735,83"/>
-</map>
-</div>
+<p class="reference">References <a class="el" href="cp__topic__subscriber_8h_source.html#l00039">smacc::components::CpTopicSubscriber&lt; MessageType &gt;::onMessageReceived_</a>.</p>
 
 </div>
 </div>

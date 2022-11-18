@@ -33,7 +33,7 @@ virtual \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a94a600197795e0235e86
 \item 
 virtual void \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a874e97a9e3e974966ac4999e0a293e73}{initialize}} ()
 \item 
-{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a7edcc057bfb5a25fe0892755137dd8da}{on\+Timer\+Tick}} (void(T\+::$\ast$\mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(), T $\ast$object)
+{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a7edcc057bfb5a25fe0892755137dd8da}{on\+Timer\+Tick}} (void(T\+::$\ast$callback)(), T $\ast$object)
 \item 
 {\footnotesize template$<$typename TOrthogonal , typename TSource\+Object $>$ }\\void \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a750d57fbbdb9db5a2382ee6180fd7700}{on\+Orthogonal\+Allocation}} ()
 \end{DoxyCompactItemize}
@@ -184,7 +184,7 @@ Definition at line \mbox{\hyperlink{cl__ros__timer_8h_source_l00034}{34}} of fil
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00035     \{}
-\DoxyCodeLine{00036         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a2fcaab287b6ee13f6cc689876c6d28fa}{onTimerTick\_}}, \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00036         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer_a2fcaab287b6ee13f6cc689876c6d28fa}{onTimerTick\_}}, callback, \textcolor{keywordtype}{object});}
 \DoxyCodeLine{00037     \}}
 
 \end{DoxyCode}
@@ -194,7 +194,7 @@ References \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00298}{smacc\
 
 
 
-Referenced by \mbox{\hyperlink{cb__timer_8cpp_source_l00005}{cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+::on\+Entry()}}, \mbox{\hyperlink{cb__timer__countdown__loop_8cpp_source_l00023}{cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+Countdown\+Loop\+::on\+Entry()}}, \mbox{\hyperlink{cb__timer__countdown__once_8cpp_source_l00023}{cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+Countdown\+Once\+::on\+Entry()}}, \mbox{\hyperlink{sm__atomic__cb_2include_2sm__atomic__cb_2states_2st__state__1_8h_source_l00028}{sm\+\_\+atomic\+\_\+cb\+::\+State1\+::runtime\+Configure()}}, and \mbox{\hyperlink{sm__atomic__cb_2include_2sm__atomic__cb_2states_2st__state__2_8h_source_l00024}{sm\+\_\+atomic\+\_\+cb\+::\+State2\+::runtime\+Configure()}}.
+Referenced by \mbox{\hyperlink{cb__timer_8cpp_source_l00005}{cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+::on\+Entry()}}, \mbox{\hyperlink{cb__timer__countdown__loop_8cpp_source_l00023}{cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+Countdown\+Loop\+::on\+Entry()}}, and \mbox{\hyperlink{cb__timer__countdown__once_8cpp_source_l00023}{cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+Countdown\+Once\+::on\+Entry()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

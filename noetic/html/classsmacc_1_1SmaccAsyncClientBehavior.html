@@ -172,13 +172,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0028345c409db6fdead7a16b23b9f0aa"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a0028345c409db6fdead7a16b23b9f0aa">~SmaccAsyncClientBehavior</a> ()</td></tr>
 <tr class="separator:a0028345c409db6fdead7a16b23b9f0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d8a07e7fc65220f1eeee49af02a82a"><td class="memTemplParams" colspan="2">template&lt;typename TCallback , typename T &gt; </td></tr>
-<tr class="memitem:a48d8a07e7fc65220f1eeee49af02a82a"><td class="memTemplItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a48d8a07e7fc65220f1eeee49af02a82a">onSuccess</a> (TCallback <a class="el" href="sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>, T *object)</td></tr>
+<tr class="memitem:a48d8a07e7fc65220f1eeee49af02a82a"><td class="memTemplItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a48d8a07e7fc65220f1eeee49af02a82a">onSuccess</a> (TCallback callback, T *object)</td></tr>
 <tr class="separator:a48d8a07e7fc65220f1eeee49af02a82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae9e2dd0d8e3ff25503f0908f040a221"><td class="memTemplParams" colspan="2">template&lt;typename TCallback , typename T &gt; </td></tr>
-<tr class="memitem:aae9e2dd0d8e3ff25503f0908f040a221"><td class="memTemplItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SmaccAsyncClientBehavior.html#aae9e2dd0d8e3ff25503f0908f040a221">onFinished</a> (TCallback <a class="el" href="sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>, T *object)</td></tr>
+<tr class="memitem:aae9e2dd0d8e3ff25503f0908f040a221"><td class="memTemplItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SmaccAsyncClientBehavior.html#aae9e2dd0d8e3ff25503f0908f040a221">onFinished</a> (TCallback callback, T *object)</td></tr>
 <tr class="separator:aae9e2dd0d8e3ff25503f0908f040a221"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34d7ba8f590393e4cd7d2f742f04189a"><td class="memTemplParams" colspan="2">template&lt;typename TCallback , typename T &gt; </td></tr>
-<tr class="memitem:a34d7ba8f590393e4cd7d2f742f04189a"><td class="memTemplItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a34d7ba8f590393e4cd7d2f742f04189a">onFailure</a> (TCallback <a class="el" href="sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>, T *object)</td></tr>
+<tr class="memitem:a34d7ba8f590393e4cd7d2f742f04189a"><td class="memTemplItemLeft" align="right" valign="top">boost::signals2::connection&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a34d7ba8f590393e4cd7d2f742f04189a">onFailure</a> (TCallback callback, T *object)</td></tr>
 <tr class="separator:a34d7ba8f590393e4cd7d2f742f04189a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classsmacc_1_1ISmaccClientBehavior"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsmacc_1_1ISmaccClientBehavior')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsmacc_1_1ISmaccClientBehavior.html">smacc::ISmaccClientBehavior</a></td></tr>
 <tr class="memitem:a12fe603a4b66efe6c190c63da422c7d7 inherit pub_methods_classsmacc_1_1ISmaccClientBehavior"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmacc_1_1ISmaccClientBehavior.html#a12fe603a4b66efe6c190c63da422c7d7">ISmaccClientBehavior</a> ()</td></tr>
@@ -504,12 +504,11 @@ template&lt;typename TCallback , typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="smacc__asynchronous__client__behavior__impl_8h_source.html#l00046">46</a> of file <a class="el" href="smacc__asynchronous__client__behavior__impl_8h_source.html">smacc_asynchronous_client_behavior_impl.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   47</span>    {</div>
-<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019">getStateMachine</a>()-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2">createSignalConnection</a>(<a class="code hl_variable" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a34e6262de21b9fbbabbc466d3180cc18">onFailure_</a>, <a class="code hl_function" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>, <span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019">getStateMachine</a>()-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2">createSignalConnection</a>(<a class="code hl_variable" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a34e6262de21b9fbbabbc466d3180cc18">onFailure_</a>, callback, <span class="keywordtype">object</span>);</div>
 <div class="line"><span class="lineno">   49</span>    }</div>
 <div class="ttc" id="aclasssmacc_1_1ISmaccClientBehavior_html_a9d55a85bf0a920033805a3c050de2019"><div class="ttname"><a href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019">smacc::ISmaccClientBehavior::getStateMachine</a></div><div class="ttdeci">ISmaccStateMachine * getStateMachine()</div><div class="ttdef"><b>Definition:</b> <a href="smacc__client__behavior__impl_8h_source.html#l00042">smacc_client_behavior_impl.h:42</a></div></div>
 <div class="ttc" id="aclasssmacc_1_1ISmaccStateMachine_html_adf0f42ade0c65cc471960fe2a7c42da2"><div class="ttname"><a href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2">smacc::ISmaccStateMachine::createSignalConnection</a></div><div class="ttdeci">boost::signals2::connection createSignalConnection(TSmaccSignal &amp;signal, TMemberFunctionPrototype callback, TSmaccObjectType *object)</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine__impl_8h_source.html#l00298">smacc_state_machine_impl.h:298</a></div></div>
 <div class="ttc" id="aclasssmacc_1_1SmaccAsyncClientBehavior_html_a34e6262de21b9fbbabbc466d3180cc18"><div class="ttname"><a href="classsmacc_1_1SmaccAsyncClientBehavior.html#a34e6262de21b9fbbabbc466d3180cc18">smacc::SmaccAsyncClientBehavior::onFailure_</a></div><div class="ttdeci">SmaccSignal&lt; void()&gt; onFailure_</div><div class="ttdef"><b>Definition:</b> <a href="smacc__asynchronous__client__behavior_8h_source.html#l00078">smacc_asynchronous_client_behavior.h:78</a></div></div>
-<div class="ttc" id="asm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_html_a050e697bd654facce10ea3f6549669b3"><div class="ttname"><a href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a></div><div class="ttdeci">void callback(const sensor_msgs::Image &amp;img)</div><div class="ttdef"><b>Definition:</b> <a href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source.html#l00104">opencv_perception_node.cpp:104</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="smacc__state__machine__impl_8h_source.html#l00298">smacc::ISmaccStateMachine::createSignalConnection()</a>, <a class="el" href="smacc__client__behavior__impl_8h_source.html#l00042">smacc::ISmaccClientBehavior::getStateMachine()</a>, and <a class="el" href="smacc__asynchronous__client__behavior_8h_source.html#l00078">onFailure_</a>.</p>
 <div class="dynheader">
@@ -517,16 +516,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsmacc_1_1SmaccAsyncClientBehavior_a34d7ba8f590393e4cd7d2f742f04189a_cgraph.png" border="0" usemap="#aclasssmacc_1_1SmaccAsyncClientBehavior_a34d7ba8f590393e4cd7d2f742f04189a_cgraph" alt=""/></div>
 <map name="aclasssmacc_1_1SmaccAsyncClientBehavior_a34d7ba8f590393e4cd7d2f742f04189a_cgraph" id="aclasssmacc_1_1SmaccAsyncClientBehavior_a34d7ba8f590393e4cd7d2f742f04189a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,68,233,109"/>
-<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " alt="" coords="283,35,475,76"/>
-<area shape="rect" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019" title=" " alt="" coords="281,100,477,141"/>
+<area shape="rect" title=" " alt="" coords="5,39,233,80"/>
+<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " alt="" coords="283,5,475,47"/>
+<area shape="rect" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019" title=" " alt="" coords="281,71,477,112"/>
 <area shape="rect" href="structsmacc_1_1utils_1_1Bind.html#aa0f4ba76fbd5fdb865df51b61d4269f3" title=" " alt="" coords="525,5,648,47"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3" title=" " alt="" coords="551,71,622,98"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a1fa01e06b7bc85d9a3f2f5c29829978d" title=" " alt="" coords="700,21,771,47"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a63b8f2427ed7ea7fd23e6db392dd4838" title=" " alt="" coords="696,71,775,98"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a9bf2df48cb6b85ffe7173b65640b69e3" title=" " alt="" coords="702,122,769,149"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#ad246f945adbcf477432e6857f1062e52" title=" " alt="" coords="823,71,903,98"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#aa483d0ec97a846bd4bfa13d793f5c1e1" title=" " alt="" coords="951,71,1053,98"/>
 </map>
 </div>
 
@@ -562,7 +555,7 @@ template&lt;typename TCallback , typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="smacc__asynchronous__client__behavior__impl_8h_source.html#l00040">40</a> of file <a class="el" href="smacc__asynchronous__client__behavior__impl_8h_source.html">smacc_asynchronous_client_behavior_impl.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
-<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019">getStateMachine</a>()-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2">createSignalConnection</a>(<a class="code hl_variable" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a3b4f8bbacabffb8a37934407bc79ed80">onFinished_</a>, <a class="code hl_function" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>, <span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019">getStateMachine</a>()-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2">createSignalConnection</a>(<a class="code hl_variable" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a3b4f8bbacabffb8a37934407bc79ed80">onFinished_</a>, callback, <span class="keywordtype">object</span>);</div>
 <div class="line"><span class="lineno">   43</span>    }</div>
 <div class="ttc" id="aclasssmacc_1_1SmaccAsyncClientBehavior_html_a3b4f8bbacabffb8a37934407bc79ed80"><div class="ttname"><a href="classsmacc_1_1SmaccAsyncClientBehavior.html#a3b4f8bbacabffb8a37934407bc79ed80">smacc::SmaccAsyncClientBehavior::onFinished_</a></div><div class="ttdeci">SmaccSignal&lt; void()&gt; onFinished_</div><div class="ttdef"><b>Definition:</b> <a href="smacc__asynchronous__client__behavior_8h_source.html#l00076">smacc_asynchronous_client_behavior.h:76</a></div></div>
 </div><!-- fragment -->
@@ -572,16 +565,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsmacc_1_1SmaccAsyncClientBehavior_aae9e2dd0d8e3ff25503f0908f040a221_cgraph.png" border="0" usemap="#aclasssmacc_1_1SmaccAsyncClientBehavior_aae9e2dd0d8e3ff25503f0908f040a221_cgraph" alt=""/></div>
 <map name="aclasssmacc_1_1SmaccAsyncClientBehavior_aae9e2dd0d8e3ff25503f0908f040a221_cgraph" id="aclasssmacc_1_1SmaccAsyncClientBehavior_aae9e2dd0d8e3ff25503f0908f040a221_cgraph">
-<area shape="rect" title=" " alt="" coords="5,68,233,109"/>
-<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " alt="" coords="283,35,475,76"/>
-<area shape="rect" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019" title=" " alt="" coords="281,100,477,141"/>
+<area shape="rect" title=" " alt="" coords="5,39,233,80"/>
+<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " alt="" coords="283,5,475,47"/>
+<area shape="rect" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019" title=" " alt="" coords="281,71,477,112"/>
 <area shape="rect" href="structsmacc_1_1utils_1_1Bind.html#aa0f4ba76fbd5fdb865df51b61d4269f3" title=" " alt="" coords="525,5,648,47"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3" title=" " alt="" coords="551,71,622,98"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a1fa01e06b7bc85d9a3f2f5c29829978d" title=" " alt="" coords="700,21,771,47"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a63b8f2427ed7ea7fd23e6db392dd4838" title=" " alt="" coords="696,71,775,98"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a9bf2df48cb6b85ffe7173b65640b69e3" title=" " alt="" coords="702,122,769,149"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#ad246f945adbcf477432e6857f1062e52" title=" " alt="" coords="823,71,903,98"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#aa483d0ec97a846bd4bfa13d793f5c1e1" title=" " alt="" coords="951,71,1053,98"/>
 </map>
 </div>
 
@@ -656,7 +643,7 @@ template&lt;typename TCallback , typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="smacc__asynchronous__client__behavior__impl_8h_source.html#l00034">34</a> of file <a class="el" href="smacc__asynchronous__client__behavior__impl_8h_source.html">smacc_asynchronous_client_behavior_impl.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019">getStateMachine</a>()-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2">createSignalConnection</a>(<a class="code hl_variable" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a31d8bdfa46fe70aea9adf0958806462b">onSuccess_</a>, <a class="code hl_function" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>, <span class="keywordtype">object</span>);</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordflow">return</span> this-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019">getStateMachine</a>()-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2">createSignalConnection</a>(<a class="code hl_variable" href="classsmacc_1_1SmaccAsyncClientBehavior.html#a31d8bdfa46fe70aea9adf0958806462b">onSuccess_</a>, callback, <span class="keywordtype">object</span>);</div>
 <div class="line"><span class="lineno">   37</span>    }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="smacc__state__machine__impl_8h_source.html#l00298">smacc::ISmaccStateMachine::createSignalConnection()</a>, <a class="el" href="smacc__client__behavior__impl_8h_source.html#l00042">smacc::ISmaccClientBehavior::getStateMachine()</a>, and <a class="el" href="smacc__asynchronous__client__behavior_8h_source.html#l00077">onSuccess_</a>.</p>
@@ -665,16 +652,10 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsmacc_1_1SmaccAsyncClientBehavior_a48d8a07e7fc65220f1eeee49af02a82a_cgraph.png" border="0" usemap="#aclasssmacc_1_1SmaccAsyncClientBehavior_a48d8a07e7fc65220f1eeee49af02a82a_cgraph" alt=""/></div>
 <map name="aclasssmacc_1_1SmaccAsyncClientBehavior_a48d8a07e7fc65220f1eeee49af02a82a_cgraph" id="aclasssmacc_1_1SmaccAsyncClientBehavior_a48d8a07e7fc65220f1eeee49af02a82a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,68,233,109"/>
-<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " alt="" coords="283,35,475,76"/>
-<area shape="rect" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019" title=" " alt="" coords="281,100,477,141"/>
+<area shape="rect" title=" " alt="" coords="5,39,233,80"/>
+<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " alt="" coords="283,5,475,47"/>
+<area shape="rect" href="classsmacc_1_1ISmaccClientBehavior.html#a9d55a85bf0a920033805a3c050de2019" title=" " alt="" coords="281,71,477,112"/>
 <area shape="rect" href="structsmacc_1_1utils_1_1Bind.html#aa0f4ba76fbd5fdb865df51b61d4269f3" title=" " alt="" coords="525,5,648,47"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3" title=" " alt="" coords="551,71,622,98"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a1fa01e06b7bc85d9a3f2f5c29829978d" title=" " alt="" coords="700,21,771,47"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a63b8f2427ed7ea7fd23e6db392dd4838" title=" " alt="" coords="696,71,775,98"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a9bf2df48cb6b85ffe7173b65640b69e3" title=" " alt="" coords="702,122,769,149"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#ad246f945adbcf477432e6857f1062e52" title=" " alt="" coords="823,71,903,98"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#aa483d0ec97a846bd4bfa13d793f5c1e1" title=" " alt="" coords="951,71,1053,98"/>
 </map>
 </div>
 

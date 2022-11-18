@@ -1,7 +1,0 @@
-<map id="sm_dance_bot::cl_temperature_sensor::CbConditionTemperatureSensor" name="sm_dance_bot::cl_temperature_sensor::CbConditionTemperatureSensor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1127,264,1233"/>
-<area shape="rect" id="node2" href="$classcl__multirole__sensor_1_1CbDefaultMultiRoleSensorBehavior.html" title=" " alt="" coords="24,839,245,1077"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1SmaccClientBehavior.html" title=" " alt="" coords="33,396,225,488"/>
-<area shape="rect" id="node5" href="$classcl__multirole__sensor_1_1CbDefaultMultiRoleSensorBehavior.html" title=" " alt="" coords="151,537,337,776"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClientBehavior.html" title=" " alt="" coords="31,5,227,347"/>
-</map>

@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['led_5faction_5fserver_5fnode_2ecpp_0',['led_action_server_node.cpp',['../servers_2led__action__server_2src_2led__action__server__node_8cpp.html',1,'(Global Namespace)'],['../2_2servers_2led__action__server_2src_2led__action__server__node_8cpp.html',1,'(Global Namespace)'],['../strikes__back_2servers_2led__action__server_2src_2led__action__server__node_8cpp.html',1,'(Global Namespace)']]],
-  ['lidar_5fnode_2ecpp_1',['lidar_node.cpp',['../servers_2lidar__node_2src_2lidar__node_8cpp.html',1,'(Global Namespace)'],['../2_2servers_2lidar__node_2src_2lidar__node_8cpp.html',1,'(Global Namespace)'],['../strikes__back_2servers_2lidar__node_2src_2lidar__node_8cpp.html',1,'(Global Namespace)']]]
+  ['path_5ftools_2ecpp_0',['path_tools.cpp',['../path__tools_8cpp.html',1,'']]],
+  ['planner_5fswitcher_2ecpp_1',['planner_switcher.cpp',['../planner__switcher_8cpp.html',1,'']]],
+  ['planner_5fswitcher_2eh_2',['planner_switcher.h',['../planner__switcher_8h.html',1,'']]],
+  ['pure_5fspinning_5flocal_5fplanner_2ecpp_3',['pure_spinning_local_planner.cpp',['../pure__spinning__local__planner_8cpp.html',1,'']]],
+  ['pure_5fspinning_5flocal_5fplanner_2eh_4',['pure_spinning_local_planner.h',['../pure__spinning__local__planner_8h.html',1,'']]]
 ];

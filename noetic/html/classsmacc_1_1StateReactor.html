@@ -136,10 +136,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d149851c5540110a29e9a7b3228239d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1StateReactor.html#a3d149851c5540110a29e9a7b3228239d">postEvent</a> ()</td></tr>
 <tr class="separator:a3d149851c5540110a29e9a7b3228239d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68482e08f6449694a0bcda843b14b376"><td class="memTemplParams" colspan="2">template&lt;typename T , typename TClass &gt; </td></tr>
-<tr class="memitem:a68482e08f6449694a0bcda843b14b376"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1StateReactor.html#a68482e08f6449694a0bcda843b14b376">createEventCallback</a> (void(TClass::*<a class="el" href="sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>)(T *), TClass *object)</td></tr>
+<tr class="memitem:a68482e08f6449694a0bcda843b14b376"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1StateReactor.html#a68482e08f6449694a0bcda843b14b376">createEventCallback</a> (void(TClass::*callback)(T *), TClass *object)</td></tr>
 <tr class="separator:a68482e08f6449694a0bcda843b14b376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6b3a604009e5a68123aed27e70cf2be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ac6b3a604009e5a68123aed27e70cf2be"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1StateReactor.html#ac6b3a604009e5a68123aed27e70cf2be">createEventCallback</a> (std::function&lt; void(T *)&gt; <a class="el" href="sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>)</td></tr>
+<tr class="memitem:ac6b3a604009e5a68123aed27e70cf2be"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classsmacc_1_1StateReactor.html#ac6b3a604009e5a68123aed27e70cf2be">createEventCallback</a> (std::function&lt; void(T *)&gt; callback)</td></tr>
 <tr class="separator:ac6b3a604009e5a68123aed27e70cf2be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5d4f7af06532272db55943b7810a43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmacc_1_1StateReactor.html#aca5d4f7af06532272db55943b7810a43">update</a> ()</td></tr>
 <tr class="separator:aca5d4f7af06532272db55943b7810a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,28 +260,13 @@ template&lt;typename T &gt; </div>
 <div class="line"><span class="lineno">   55</span>    <span class="keyword">const</span> <span class="keyword">auto</span> *eventtype = &amp;<span class="keyword">typeid</span>(T);</div>
 <div class="line"><span class="lineno">   56</span>    this-&gt;<a class="code hl_variable" href="classsmacc_1_1StateReactor.html#a63cce05c412f3699cc1b15af9aeaf8af">eventCallbacks_</a>[eventtype] = [=](<span class="keywordtype">void</span> *<a class="code hl_variable" href="namespacebattery__monitor__node.html#ab1920c64448816edd4064e494275fdff">msg</a>) {</div>
 <div class="line"><span class="lineno">   57</span>        T *evptr = (T *)<a class="code hl_variable" href="namespacebattery__monitor__node.html#ab1920c64448816edd4064e494275fdff">msg</a>;</div>
-<div class="line"><span class="lineno">   58</span>        <a class="code hl_function" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>(evptr);</div>
+<div class="line"><span class="lineno">   58</span>        callback(evptr);</div>
 <div class="line"><span class="lineno">   59</span>    };</div>
 <div class="line"><span class="lineno">   60</span>}</div>
 <div class="ttc" id="aclasssmacc_1_1StateReactor_html_a63cce05c412f3699cc1b15af9aeaf8af"><div class="ttname"><a href="classsmacc_1_1StateReactor.html#a63cce05c412f3699cc1b15af9aeaf8af">smacc::StateReactor::eventCallbacks_</a></div><div class="ttdeci">std::map&lt; const std::type_info *, std::function&lt; void(void *)&gt; &gt; eventCallbacks_</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__reactor_8h_source.html#l00035">smacc_state_reactor.h:35</a></div></div>
 <div class="ttc" id="anamespacebattery__monitor__node_html_ab1920c64448816edd4064e494275fdff"><div class="ttname"><a href="namespacebattery__monitor__node.html#ab1920c64448816edd4064e494275fdff">battery_monitor_node.msg</a></div><div class="ttdeci">msg</div><div class="ttdef"><b>Definition:</b> <a href="battery__monitor__node_8py_source.html#l00015">battery_monitor_node.py:15</a></div></div>
-<div class="ttc" id="asm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_html_a050e697bd654facce10ea3f6549669b3"><div class="ttname"><a href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a></div><div class="ttdeci">void callback(const sensor_msgs::Image &amp;img)</div><div class="ttdef"><b>Definition:</b> <a href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source.html#l00104">opencv_perception_node.cpp:104</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source.html#l00104">callback()</a>, <a class="el" href="smacc__state__reactor_8h_source.html#l00035">eventCallbacks_</a>, and <a class="el" href="battery__monitor__node_8py_source.html#l00015">battery_monitor_node::msg</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsmacc_1_1StateReactor_ac6b3a604009e5a68123aed27e70cf2be_cgraph.png" border="0" usemap="#aclasssmacc_1_1StateReactor_ac6b3a604009e5a68123aed27e70cf2be_cgraph" alt=""/></div>
-<map name="aclasssmacc_1_1StateReactor_ac6b3a604009e5a68123aed27e70cf2be_cgraph" id="aclasssmacc_1_1StateReactor_ac6b3a604009e5a68123aed27e70cf2be_cgraph">
-<area shape="rect" title=" " alt="" coords="5,49,152,90"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3" title=" " alt="" coords="200,56,271,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a1fa01e06b7bc85d9a3f2f5c29829978d" title=" " alt="" coords="323,5,393,32"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a63b8f2427ed7ea7fd23e6db392dd4838" title=" " alt="" coords="319,56,397,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a9bf2df48cb6b85ffe7173b65640b69e3" title=" " alt="" coords="325,107,391,133"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#ad246f945adbcf477432e6857f1062e52" title=" " alt="" coords="445,56,525,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#aa483d0ec97a846bd4bfa13d793f5c1e1" title=" " alt="" coords="573,56,676,83"/>
-</map>
-</div>
+<p class="reference">References <a class="el" href="smacc__state__reactor_8h_source.html#l00035">eventCallbacks_</a>, and <a class="el" href="battery__monitor__node_8py_source.html#l00015">battery_monitor_node::msg</a>.</p>
 
 </div>
 </div>
@@ -318,27 +303,13 @@ template&lt;typename T , typename TClass &gt; </div>
 <div class="line"><span class="lineno">   45</span>    <span class="keyword">const</span> <span class="keyword">auto</span> *eventtype = &amp;<span class="keyword">typeid</span>(T);</div>
 <div class="line"><span class="lineno">   46</span>    this-&gt;<a class="code hl_variable" href="classsmacc_1_1StateReactor.html#a63cce05c412f3699cc1b15af9aeaf8af">eventCallbacks_</a>[eventtype] = [=](<span class="keywordtype">void</span> *<a class="code hl_variable" href="namespacebattery__monitor__node.html#ab1920c64448816edd4064e494275fdff">msg</a>) {</div>
 <div class="line"><span class="lineno">   47</span>        T *evptr = (T *)<a class="code hl_variable" href="namespacebattery__monitor__node.html#ab1920c64448816edd4064e494275fdff">msg</a>;</div>
-<div class="line"><span class="lineno">   48</span>        (<span class="keywordtype">object</span>-&gt;*<a class="code hl_function" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3">callback</a>)(evptr);</div>
+<div class="line"><span class="lineno">   48</span>        (<span class="keywordtype">object</span>-&gt;*callback)(evptr);</div>
 <div class="line"><span class="lineno">   49</span>    };</div>
 <div class="line"><span class="lineno">   50</span>}</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source.html#l00104">callback()</a>, <a class="el" href="smacc__state__reactor_8h_source.html#l00035">eventCallbacks_</a>, and <a class="el" href="battery__monitor__node_8py_source.html#l00015">battery_monitor_node::msg</a>.</p>
+<p class="reference">References <a class="el" href="smacc__state__reactor_8h_source.html#l00035">eventCallbacks_</a>, and <a class="el" href="battery__monitor__node_8py_source.html#l00015">battery_monitor_node::msg</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="sr__conditional_8h_source.html#l00026">smacc::state_reactors::Srsr_conditional::Srsr_conditional()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classsmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376_cgraph.png" border="0" usemap="#aclasssmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376_cgraph" alt=""/></div>
-<map name="aclasssmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376_cgraph" id="aclasssmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376_cgraph">
-<area shape="rect" title=" " alt="" coords="5,49,152,90"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a050e697bd654facce10ea3f6549669b3" title=" " alt="" coords="200,56,271,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a1fa01e06b7bc85d9a3f2f5c29829978d" title=" " alt="" coords="323,5,393,32"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a63b8f2427ed7ea7fd23e6db392dd4838" title=" " alt="" coords="319,56,397,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#a9bf2df48cb6b85ffe7173b65640b69e3" title=" " alt="" coords="325,107,391,133"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#ad246f945adbcf477432e6857f1062e52" title=" " alt="" coords="445,56,525,83"/>
-<area shape="rect" href="sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp.html#aa483d0ec97a846bd4bfa13d793f5c1e1" title=" " alt="" coords="573,56,676,83"/>
-</map>
-</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

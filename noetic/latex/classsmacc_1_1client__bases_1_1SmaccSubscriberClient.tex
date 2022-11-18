@@ -11,7 +11,7 @@ Inheritance diagram for smacc\+::client\+\_\+bases\+::Smacc\+Subscriber\+Client\
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classsmacc_1_1client__bases_1_1SmaccSubscriberClient__inherit__graph}
+\includegraphics[height=550pt]{classsmacc_1_1client__bases_1_1SmaccSubscriberClient__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -38,9 +38,9 @@ typedef Message\+Type \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubsc
 \item 
 virtual \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a91b9206c97b4acc76d4202639d24a53b}{$\sim$\+Smacc\+Subscriber\+Client}} ()
 \item 
-{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a4f02251e3a161fb6d802b154b1081f18}{on\+Message\+Received}} (void(T\+::$\ast$\mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(const Message\+Type \&), T $\ast$object)
+{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a4f02251e3a161fb6d802b154b1081f18}{on\+Message\+Received}} (void(T\+::$\ast$callback)(const Message\+Type \&), T $\ast$object)
 \item 
-{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a3f6dc8ef86f21f401204182778cc584d}{on\+First\+Message\+Received}} (void(T\+::$\ast$\mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(const Message\+Type \&), T $\ast$object)
+{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a3f6dc8ef86f21f401204182778cc584d}{on\+First\+Message\+Received}} (void(T\+::$\ast$callback)(const Message\+Type \&), T $\ast$object)
 \item 
 {\footnotesize template$<$typename TOrthogonal , typename TSource\+Object $>$ }\\void \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a8843bd148887523698b6d01dae740a97}{on\+Orthogonal\+Allocation}} ()
 \item 
@@ -189,7 +189,7 @@ Reimplemented from \mbox{\hyperlink{classsmacc_1_1ISmaccClient_a974ebb6ad6cf812e
 
 
 
-Reimplemented in \mbox{\hyperlink{classcl__keyboard_1_1ClKeyboard_af7f7fd9871ef5fcca400cd59d7b60775}{cl\+\_\+keyboard\+::\+Cl\+Keyboard}}, \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a3847e19f925f65dd034964eb2d0b3594}{cl\+\_\+multirole\+\_\+sensor\+::\+Cl\+Multirole\+Sensor$<$ Message\+Type $>$}}, \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a3847e19f925f65dd034964eb2d0b3594}{cl\+\_\+multirole\+\_\+sensor\+::\+Cl\+Multirole\+Sensor$<$ sensor\+\_\+msgs\+::\+Laser\+Scan $>$}}, and \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a3847e19f925f65dd034964eb2d0b3594}{cl\+\_\+multirole\+\_\+sensor\+::\+Cl\+Multirole\+Sensor$<$ sensor\+\_\+msgs\+::\+Temperature $>$}}.
+Reimplemented in \mbox{\hyperlink{classcl__keyboard_1_1ClKeyboard_af7f7fd9871ef5fcca400cd59d7b60775}{cl\+\_\+keyboard\+::\+Cl\+Keyboard}}, and \mbox{\hyperlink{classcl__multirole__sensor_1_1ClMultiroleSensor_a3847e19f925f65dd034964eb2d0b3594}{cl\+\_\+multirole\+\_\+sensor\+::\+Cl\+Multirole\+Sensor$<$ Message\+Type $>$}}.
 
 
 
@@ -289,13 +289,13 @@ Definition at line \mbox{\hyperlink{smacc__subscriber__client_8h_source_l00058}{
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00059   \{}
-\DoxyCodeLine{00060     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_af1ec022065a2df3faabe40768f8b2e22}{onFirstMessageReceived\_}}, \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00060     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_af1ec022065a2df3faabe40768f8b2e22}{onFirstMessageReceived\_}}, callback, \textcolor{keywordtype}{object});}
 \DoxyCodeLine{00061   \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source_l00104}{callback()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00298}{smacc\+::\+ISmacc\+State\+Machine\+::create\+Signal\+Connection()}}, and \mbox{\hyperlink{smacc__client__impl_8h_source_l00051}{smacc\+::\+ISmacc\+Client\+::get\+State\+Machine()}}.
+References \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00298}{smacc\+::\+ISmacc\+State\+Machine\+::create\+Signal\+Connection()}}, and \mbox{\hyperlink{smacc__client__impl_8h_source_l00051}{smacc\+::\+ISmacc\+Client\+::get\+State\+Machine()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -320,17 +320,17 @@ Definition at line \mbox{\hyperlink{smacc__subscriber__client_8h_source_l00052}{
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00053   \{}
-\DoxyCodeLine{00054     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a04469577ec95e2f6c04cd4dca87dfc08}{onMessageReceived\_}}, \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00054     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSubscriberClient_a04469577ec95e2f6c04cd4dca87dfc08}{onMessageReceived\_}}, callback, \textcolor{keywordtype}{object});}
 \DoxyCodeLine{00055   \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source_l00104}{callback()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00298}{smacc\+::\+ISmacc\+State\+Machine\+::create\+Signal\+Connection()}}, and \mbox{\hyperlink{smacc__client__impl_8h_source_l00051}{smacc\+::\+ISmacc\+Client\+::get\+State\+Machine()}}.
+References \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00298}{smacc\+::\+ISmacc\+State\+Machine\+::create\+Signal\+Connection()}}, and \mbox{\hyperlink{smacc__client__impl_8h_source_l00051}{smacc\+::\+ISmacc\+Client\+::get\+State\+Machine()}}.
 
 
 
-Referenced by \mbox{\hyperlink{cl__multirole__sensor_8h_source_l00060}{cl\+\_\+multirole\+\_\+sensor\+::\+Cl\+Multirole\+Sensor$<$ Message\+Type $>$\+::initialize()}}, \mbox{\hyperlink{cb__my__subscriber__behavior_8h_source_l00019}{sm\+\_\+ferrari\+::cl\+\_\+subscriber\+::\+Cb\+My\+Subscriber\+Behavior\+::on\+Entry()}}, \mbox{\hyperlink{cb__subscription__callback__base_8h_source_l00015}{smacc\+::\+Cb\+Subscription\+Callback\+Base$<$ TMsg $>$\+::on\+Entry()}}, and \mbox{\hyperlink{cp__lidar__data_8h_source_l00016}{sm\+\_\+dance\+\_\+bot\+\_\+strikes\+\_\+back\+::cl\+\_\+lidar\+::\+Cp\+Lidar\+Sensor\+Data\+::on\+Initialize()}}.
+Referenced by \mbox{\hyperlink{cl__multirole__sensor_8h_source_l00060}{cl\+\_\+multirole\+\_\+sensor\+::\+Cl\+Multirole\+Sensor$<$ Message\+Type $>$\+::initialize()}}, and \mbox{\hyperlink{cb__subscription__callback__base_8h_source_l00015}{smacc\+::\+Cb\+Subscription\+Callback\+Base$<$ TMsg $>$\+::on\+Entry()}}.
 
 Here is the call graph for this function\+:
 \nopagebreak

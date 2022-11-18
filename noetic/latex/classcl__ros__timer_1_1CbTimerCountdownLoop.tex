@@ -35,7 +35,7 @@ virtual void \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a5623e
 \item 
 {\footnotesize template$<$typename TOrthogonal , typename TSource\+Object $>$ }\\void \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a17ca92a8d78d823b217b0418fa3b09d7}{on\+Orthogonal\+Allocation}} ()
 \item 
-{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_ad251cc8444ca7070f64658bbb77e1275}{on\+Timer\+Tick}} (void(T\+::$\ast$\mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(), T $\ast$object)
+{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_ad251cc8444ca7070f64658bbb77e1275}{on\+Timer\+Tick}} (void(T\+::$\ast$callback)(), T $\ast$object)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -218,7 +218,7 @@ Definition at line \mbox{\hyperlink{cb__timer__countdown__loop_8h_source_l00026}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00027     \{}
-\DoxyCodeLine{00028         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a9df6547f8ddf45107d8850d8a1a92cf4}{onTimerTick\_}}, \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00028         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a9df6547f8ddf45107d8850d8a1a92cf4}{onTimerTick\_}}, callback, \textcolor{keywordtype}{object});}
 \DoxyCodeLine{00029     \}}
 
 \end{DoxyCode}
@@ -226,24 +226,12 @@ Definition at line \mbox{\hyperlink{cb__timer__countdown__loop_8h_source_l00026}
 
 References \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00298}{smacc\+::\+ISmacc\+State\+Machine\+::create\+Signal\+Connection()}}, \mbox{\hyperlink{smacc__client__behavior__impl_8h_source_l00042}{smacc\+::\+ISmacc\+Client\+Behavior\+::get\+State\+Machine()}}, and \mbox{\hyperlink{cb__timer__countdown__loop_8h_source_l00037}{on\+Timer\+Tick\+\_\+}}.
 
-
-
-Referenced by \mbox{\hyperlink{sm__atomic__cb_2include_2sm__atomic__cb_2states_2st__state__1_8h_source_l00028}{sm\+\_\+atomic\+\_\+cb\+::\+State1\+::runtime\+Configure()}}.
-
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classcl__ros__timer_1_1CbTimerCountdownLoop_ad251cc8444ca7070f64658bbb77e1275_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classcl__ros__timer_1_1CbTimerCountdownLoop_ad251cc8444ca7070f64658bbb77e1275_icgraph}
 \end{center}
 \end{figure}
 

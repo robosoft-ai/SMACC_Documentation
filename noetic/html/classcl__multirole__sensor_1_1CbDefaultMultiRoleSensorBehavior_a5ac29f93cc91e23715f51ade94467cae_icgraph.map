@@ -1,6 +1,0 @@
-<map id="cl_multirole_sensor::CbDefaultMultiRoleSensorBehavior::onEntry" name="cl_multirole_sensor::CbDefaultMultiRoleSensorBehavior::onEntry">
-<area shape="rect" id="node1" title=" " alt="" coords="249,70,429,126"/>
-<area shape="rect" id="node2" href="$structsm__dance__bot_1_1cl__lidar_1_1CbLidarSensor.html#aad3468a6ae78999c9fd01bdb81b42a49" title=" " alt="" coords="22,5,185,47"/>
-<area shape="rect" id="node3" href="$structsm__dance__bot__2_1_1cl__lidar_1_1CbLidarSensor.html#aad4085c114dd98c5e857d1a71c0309f8" title=" " alt="" coords="31,70,176,126"/>
-<area shape="rect" id="node4" href="$structsm__dance__bot__strikes__back_1_1cl__lidar_1_1CbLidarSensor.html#a82d0250dcf2d4e9b12ccd528a5d87002" title=" " alt="" coords="5,150,201,206"/>
-</map>

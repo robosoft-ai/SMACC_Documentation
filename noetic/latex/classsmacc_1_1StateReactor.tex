@@ -41,9 +41,9 @@ virtual void \mbox{\hyperlink{classsmacc_1_1StateReactor_a17646b3c68a6d80d1e4da8
 \item 
 {\footnotesize template$<$typename Event\+Type $>$ }\\void \mbox{\hyperlink{classsmacc_1_1StateReactor_a3d149851c5540110a29e9a7b3228239d}{post\+Event}} ()
 \item 
-{\footnotesize template$<$typename T , typename TClass $>$ }\\void \mbox{\hyperlink{classsmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376}{create\+Event\+Callback}} (void(TClass\+::$\ast$\mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(T $\ast$), TClass $\ast$object)
+{\footnotesize template$<$typename T , typename TClass $>$ }\\void \mbox{\hyperlink{classsmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376}{create\+Event\+Callback}} (void(TClass\+::$\ast$callback)(T $\ast$), TClass $\ast$object)
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classsmacc_1_1StateReactor_ac6b3a604009e5a68123aed27e70cf2be}{create\+Event\+Callback}} (std\+::function$<$ void(T $\ast$)$>$ \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classsmacc_1_1StateReactor_ac6b3a604009e5a68123aed27e70cf2be}{create\+Event\+Callback}} (std\+::function$<$ void(T $\ast$)$>$ callback)
 \item 
 void \mbox{\hyperlink{classsmacc_1_1StateReactor_aca5d4f7af06532272db55943b7810a43}{update}} ()
 \item 
@@ -156,23 +156,15 @@ Definition at line \mbox{\hyperlink{smacc__state__reactor__impl_8h_source_l00053
 \DoxyCodeLine{00055     \textcolor{keyword}{const} \textcolor{keyword}{auto} *eventtype = \&\textcolor{keyword}{typeid}(T);}
 \DoxyCodeLine{00056     this-\/>\mbox{\hyperlink{classsmacc_1_1StateReactor_a63cce05c412f3699cc1b15af9aeaf8af}{eventCallbacks\_}}[eventtype] = [=](\textcolor{keywordtype}{void} *\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}) \{}
 \DoxyCodeLine{00057         T *evptr = (T *)\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}};}
-\DoxyCodeLine{00058         \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}(evptr);}
+\DoxyCodeLine{00058         callback(evptr);}
 \DoxyCodeLine{00059     \};}
 \DoxyCodeLine{00060 \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source_l00104}{callback()}}, \mbox{\hyperlink{smacc__state__reactor_8h_source_l00035}{event\+Callbacks\+\_\+}}, and \mbox{\hyperlink{battery__monitor__node_8py_source_l00015}{battery\+\_\+monitor\+\_\+node\+::msg}}.
+References \mbox{\hyperlink{smacc__state__reactor_8h_source_l00035}{event\+Callbacks\+\_\+}}, and \mbox{\hyperlink{battery__monitor__node_8py_source_l00015}{battery\+\_\+monitor\+\_\+node\+::msg}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classsmacc_1_1StateReactor_ac6b3a604009e5a68123aed27e70cf2be_cgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classsmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376}\label{classsmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376}} 
 \index{smacc::StateReactor@{smacc::StateReactor}!createEventCallback@{createEventCallback}}
 \index{createEventCallback@{createEventCallback}!smacc::StateReactor@{smacc::StateReactor}}
@@ -190,27 +182,19 @@ Definition at line \mbox{\hyperlink{smacc__state__reactor__impl_8h_source_l00043
 \DoxyCodeLine{00045     \textcolor{keyword}{const} \textcolor{keyword}{auto} *eventtype = \&\textcolor{keyword}{typeid}(T);}
 \DoxyCodeLine{00046     this-\/>\mbox{\hyperlink{classsmacc_1_1StateReactor_a63cce05c412f3699cc1b15af9aeaf8af}{eventCallbacks\_}}[eventtype] = [=](\textcolor{keywordtype}{void} *\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}}) \{}
 \DoxyCodeLine{00047         T *evptr = (T *)\mbox{\hyperlink{namespacebattery__monitor__node_ab1920c64448816edd4064e494275fdff}{msg}};}
-\DoxyCodeLine{00048         (\textcolor{keywordtype}{object}-\/>*\mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(evptr);}
+\DoxyCodeLine{00048         (\textcolor{keywordtype}{object}-\/>*callback)(evptr);}
 \DoxyCodeLine{00049     \};}
 \DoxyCodeLine{00050 \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source_l00104}{callback()}}, \mbox{\hyperlink{smacc__state__reactor_8h_source_l00035}{event\+Callbacks\+\_\+}}, and \mbox{\hyperlink{battery__monitor__node_8py_source_l00015}{battery\+\_\+monitor\+\_\+node\+::msg}}.
+References \mbox{\hyperlink{smacc__state__reactor_8h_source_l00035}{event\+Callbacks\+\_\+}}, and \mbox{\hyperlink{battery__monitor__node_8py_source_l00015}{battery\+\_\+monitor\+\_\+node\+::msg}}.
 
 
 
 Referenced by \mbox{\hyperlink{sr__conditional_8h_source_l00026}{smacc\+::state\+\_\+reactors\+::\+Srsr\+\_\+conditional\+::\+Srsr\+\_\+conditional()}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classsmacc_1_1StateReactor_a68482e08f6449694a0bcda843b14b376_cgraph}
-\end{center}
-\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]

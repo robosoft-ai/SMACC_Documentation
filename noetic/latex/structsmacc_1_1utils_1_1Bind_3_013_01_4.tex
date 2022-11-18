@@ -17,7 +17,7 @@ Collaboration diagram for smacc\+::utils\+::Bind\texorpdfstring{$<$}{<} 3 \texor
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename TSmacc\+Signal , typename TMember\+Function\+Prototype , typename TSmacc\+Object\+Type $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{structsmacc_1_1utils_1_1Bind_3_013_01_4_a8958f16a2a40b187e6500a76cfaeed63}{bindaux}} (TSmacc\+Signal \&signal, TMember\+Function\+Prototype \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, TSmacc\+Object\+Type $\ast$object)
+{\footnotesize template$<$typename TSmacc\+Signal , typename TMember\+Function\+Prototype , typename TSmacc\+Object\+Type $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{structsmacc_1_1utils_1_1Bind_3_013_01_4_a8958f16a2a40b187e6500a76cfaeed63}{bindaux}} (TSmacc\+Signal \&signal, TMember\+Function\+Prototype callback, TSmacc\+Object\+Type $\ast$object)
 \end{DoxyCompactItemize}
 
 
@@ -43,22 +43,10 @@ Definition at line \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00279
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00280       \{}
-\DoxyCodeLine{00281         \textcolor{keywordflow}{return} signal.connect([=](\textcolor{keyword}{auto} a1, \textcolor{keyword}{auto} a2) \{ \textcolor{keywordflow}{return} (object-\/>*\mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(a1, a2); \});}
+\DoxyCodeLine{00281         \textcolor{keywordflow}{return} signal.connect([=](\textcolor{keyword}{auto} a1, \textcolor{keyword}{auto} a2) \{ \textcolor{keywordflow}{return} (object-\/>*callback)(a1, a2); \});}
 \DoxyCodeLine{00282       \}}
 
 \end{DoxyCode}
-
-
-References \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source_l00104}{callback()}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{structsmacc_1_1utils_1_1Bind_3_013_01_4_a8958f16a2a40b187e6500a76cfaeed63_cgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}

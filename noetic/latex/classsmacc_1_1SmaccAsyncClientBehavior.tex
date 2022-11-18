@@ -31,11 +31,11 @@ Collaboration diagram for smacc\+::Smacc\+Async\+Client\+Behavior\+:
 \item 
 virtual \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a0028345c409db6fdead7a16b23b9f0aa}{$\sim$\+Smacc\+Async\+Client\+Behavior}} ()
 \item 
-{\footnotesize template$<$typename TCallback , typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a48d8a07e7fc65220f1eeee49af02a82a}{on\+Success}} (TCallback \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, T $\ast$object)
+{\footnotesize template$<$typename TCallback , typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a48d8a07e7fc65220f1eeee49af02a82a}{on\+Success}} (TCallback callback, T $\ast$object)
 \item 
-{\footnotesize template$<$typename TCallback , typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_aae9e2dd0d8e3ff25503f0908f040a221}{on\+Finished}} (TCallback \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, T $\ast$object)
+{\footnotesize template$<$typename TCallback , typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_aae9e2dd0d8e3ff25503f0908f040a221}{on\+Finished}} (TCallback callback, T $\ast$object)
 \item 
-{\footnotesize template$<$typename TCallback , typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a34d7ba8f590393e4cd7d2f742f04189a}{on\+Failure}} (TCallback \mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, T $\ast$object)
+{\footnotesize template$<$typename TCallback , typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a34d7ba8f590393e4cd7d2f742f04189a}{on\+Failure}} (TCallback callback, T $\ast$object)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -260,7 +260,7 @@ Definition at line \mbox{\hyperlink{smacc__asynchronous__client__behavior__impl_
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00047     \{}
-\DoxyCodeLine{00048         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a34e6262de21b9fbbabbc466d3180cc18}{onFailure\_}}, \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00048         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a34e6262de21b9fbbabbc466d3180cc18}{onFailure\_}}, callback, \textcolor{keywordtype}{object});}
 \DoxyCodeLine{00049     \}}
 
 \end{DoxyCode}
@@ -290,7 +290,7 @@ Definition at line \mbox{\hyperlink{smacc__asynchronous__client__behavior__impl_
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00041     \{}
-\DoxyCodeLine{00042         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a3b4f8bbacabffb8a37934407bc79ed80}{onFinished\_}}, \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a3b4f8bbacabffb8a37934407bc79ed80}{onFinished\_}}, callback, \textcolor{keywordtype}{object});}
 \DoxyCodeLine{00043     \}}
 
 \end{DoxyCode}
@@ -355,7 +355,7 @@ Definition at line \mbox{\hyperlink{smacc__asynchronous__client__behavior__impl_
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00035     \{}
-\DoxyCodeLine{00036         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a31d8bdfa46fe70aea9adf0958806462b}{onSuccess\_}}, \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00036         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classsmacc_1_1SmaccAsyncClientBehavior_a31d8bdfa46fe70aea9adf0958806462b}{onSuccess\_}}, callback, \textcolor{keywordtype}{object});}
 \DoxyCodeLine{00037     \}}
 
 \end{DoxyCode}

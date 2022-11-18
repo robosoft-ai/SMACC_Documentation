@@ -35,7 +35,7 @@ virtual void \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_ab602b
 \item 
 {\footnotesize template$<$typename TOrthogonal , typename TSource\+Object $>$ }\\void \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_abbc5d0f2e8bc5d89bf02ff80ef37319a}{on\+Orthogonal\+Allocation}} ()
 \item 
-{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a1e20a8c9a9907db8a1d7dacf8c60ad27}{on\+Timer\+Tick}} (void(T\+::$\ast$\mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(), T $\ast$object)
+{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_a1e20a8c9a9907db8a1d7dacf8c60ad27}{on\+Timer\+Tick}} (void(T\+::$\ast$callback)(), T $\ast$object)
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -218,7 +218,7 @@ Definition at line \mbox{\hyperlink{cb__timer__countdown__once_8h_source_l00025}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00026     \{}
-\DoxyCodeLine{00027         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_ac948b5efd5c9a397319668378463eadd}{onTimerTick\_}}, \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00027         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a9d55a85bf0a920033805a3c050de2019}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownOnce_ac948b5efd5c9a397319668378463eadd}{onTimerTick\_}}, callback, \textcolor{keywordtype}{object});}
 \DoxyCodeLine{00028     \}}
 
 \end{DoxyCode}
@@ -226,24 +226,12 @@ Definition at line \mbox{\hyperlink{cb__timer__countdown__once_8h_source_l00025}
 
 References \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00298}{smacc\+::\+ISmacc\+State\+Machine\+::create\+Signal\+Connection()}}, \mbox{\hyperlink{smacc__client__behavior__impl_8h_source_l00042}{smacc\+::\+ISmacc\+Client\+Behavior\+::get\+State\+Machine()}}, and \mbox{\hyperlink{cb__timer__countdown__once_8h_source_l00036}{on\+Timer\+Tick\+\_\+}}.
 
-
-
-Referenced by \mbox{\hyperlink{sm__atomic__cb_2include_2sm__atomic__cb_2states_2st__state__1_8h_source_l00028}{sm\+\_\+atomic\+\_\+cb\+::\+State1\+::runtime\+Configure()}}, and \mbox{\hyperlink{sm__atomic__cb_2include_2sm__atomic__cb_2states_2st__state__2_8h_source_l00024}{sm\+\_\+atomic\+\_\+cb\+::\+State2\+::runtime\+Configure()}}.
-
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classcl__ros__timer_1_1CbTimerCountdownOnce_a1e20a8c9a9907db8a1d7dacf8c60ad27_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classcl__ros__timer_1_1CbTimerCountdownOnce_a1e20a8c9a9907db8a1d7dacf8c60ad27_icgraph}
 \end{center}
 \end{figure}
 

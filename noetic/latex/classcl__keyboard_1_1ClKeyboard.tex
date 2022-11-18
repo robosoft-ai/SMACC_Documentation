@@ -27,7 +27,7 @@ Collaboration diagram for cl\+\_\+keyboard\+::Cl\+Keyboard\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classcl__keyboard_1_1ClKeyboard_ae9f4a6dc1ce18397394a432826970baa}{On\+Key\+Press}} (void(T\+::$\ast$\mbox{\hyperlink{sm__ridgeback__barrel__search__2_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}})(char keypress), T $\ast$object)
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classcl__keyboard_1_1ClKeyboard_ae9f4a6dc1ce18397394a432826970baa}{On\+Key\+Press}} (void(T\+::$\ast$callback)(char keypress), T $\ast$object)
 \item 
 \mbox{\hyperlink{classcl__keyboard_1_1ClKeyboard_aadf021c18ad32c50bd8b02f62293a47e}{Cl\+Keyboard}} ()
 \item 
@@ -194,13 +194,13 @@ Definition at line \mbox{\hyperlink{cl__keyboard_8h_source_l00154}{154}} of file
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00155         \{}
 \DoxyCodeLine{00156                 \textcolor{comment}{//this-\/>connectSignal(OnKeyPress\_, callback, object);}}
-\DoxyCodeLine{00157                 this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classcl__keyboard_1_1ClKeyboard_ae7fb61a86ed9cdd313f0cc1b2661c63c}{OnKeyPress\_}}, \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_a050e697bd654facce10ea3f6549669b3}{callback}}, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00157                 this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(\mbox{\hyperlink{classcl__keyboard_1_1ClKeyboard_ae7fb61a86ed9cdd313f0cc1b2661c63c}{OnKeyPress\_}}, callback, \textcolor{keywordtype}{object});}
 \DoxyCodeLine{00158         \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{sm__ridgeback__barrel__search__1_2servers_2opencv__perception__node_2opencv__perception__node_8cpp_source_l00104}{callback()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00298}{smacc\+::\+ISmacc\+State\+Machine\+::create\+Signal\+Connection()}}, and \mbox{\hyperlink{smacc__client__impl_8h_source_l00051}{smacc\+::\+ISmacc\+Client\+::get\+State\+Machine()}}.
+References \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00298}{smacc\+::\+ISmacc\+State\+Machine\+::create\+Signal\+Connection()}}, and \mbox{\hyperlink{smacc__client__impl_8h_source_l00051}{smacc\+::\+ISmacc\+Client\+::get\+State\+Machine()}}.
 
 
 
