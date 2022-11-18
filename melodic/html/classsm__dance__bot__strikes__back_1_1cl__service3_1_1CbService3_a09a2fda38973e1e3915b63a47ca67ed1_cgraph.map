@@ -1,7 +1,0 @@
-<map id="sm_dance_bot_strikes_back::cl_service3::CbService3::onEntry" name="sm_dance_bot_strikes_back::cl_service3::CbService3::onEntry">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,208,87"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccServiceClient.html#a0e9914f45f1091c38bb9ad6187d07977" title=" " alt="" coords="268,5,440,47"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClientBehavior.html#a32b16e99e3b4cb289414203dc861a440" title=" " alt="" coords="256,71,452,112"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccOrthogonal.html#a602e16b09f8a1b3de889f2f3d90a3211" title=" " alt="" coords="500,71,675,112"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1ISmaccOrthogonal.html#aae265ec480b8ed552ddc79afd2d93a62" title=" " alt="" coords="723,71,897,112"/>
-</map>

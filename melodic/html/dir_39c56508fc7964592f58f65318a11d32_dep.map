@@ -1,9 +1,5 @@
 <map id="smacc_event_generator_library/eg_conditional_generator" name="smacc_event_generator_library/eg_conditional_generator">
-<area shape="rect" id="node2" href="dir_c40cba49d957e3293869a45ab1ee2b83.html" title="include" alt="" coords="37,159,109,207"/>
-<area shape="rect" id="node4" href="dir_6e3e4532ae0db906acb0c92fce514b9e.html" title="smacc" alt="" coords="37,255,109,303"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000159_000360.html" title="3" alt="" coords="78,229,86,244"/>
-<area shape="rect" id="node3" href="dir_00ccdb03b0169d7e20be7031f1e1d316.html" title="src" alt="" coords="37,63,109,111"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000396_000159.html" title="1" alt="" coords="78,133,86,148"/>
-<area shape="rect" id="clust2" href="dir_39c56508fc7964592f58f65318a11d32.html" alt="" coords="27,52,312,217"/>
-<area shape="rect" id="clust1" href="dir_d07572346bb6050e40a095bdefa174fb.html" title="smacc_event_generator_library" alt="" coords="16,16,323,228"/>
+<area shape="rect" id="node2" href="dir_00ccdb03b0169d7e20be7031f1e1d316.html" title="src" alt="" coords="37,63,109,111"/>
+<area shape="rect" id="clust2" href="dir_39c56508fc7964592f58f65318a11d32.html" alt="" coords="27,52,312,121"/>
+<area shape="rect" id="clust1" href="dir_d07572346bb6050e40a095bdefa174fb.html" title="smacc_event_generator_library" alt="" coords="16,16,323,132"/>
 </map>

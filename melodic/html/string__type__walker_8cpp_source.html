@@ -76,7 +76,7 @@ $(function() {
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> ******************************************************************************************************************/</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="string__type__walker_8h.html">smacc/introspection/string_type_walker.h</a>&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;smacc/introspection/string_type_walker.h&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;regex&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
@@ -89,7 +89,7 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;boost/algorithm/string/trim.hpp&gt;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;<a class="code" href="common_8h.html">smacc/common.h</a>&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;smacc/common.h&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacesmacc.html">smacc</a></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
@@ -108,10 +108,10 @@ $(function() {
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordflow">while</span> (roottype.find(<span class="stringliteral">&quot;$&quot;</span>) != std::string::npos)</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a> : orderedtypesdict)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; t : orderedtypesdict)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keyword">auto</span>&amp; tkey = <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a>.first;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keyword">auto</span>&amp; tval = <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a>.second;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keyword">auto</span>&amp; tkey = t.first;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keyword">auto</span>&amp; tval = t.second;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a48571b9bf3b115d2a83cc0147c96d0bd">replace</a>(roottype, tkey, tval);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
@@ -130,19 +130,19 @@ $(function() {
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">//     return roottype</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>std::map&lt;std::string, TypeInfo::Ptr&gt; <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#ab780c03206b824aaf338135d16b0eff4">TypeInfo::typeInfoDatabase</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>std::map&lt;std::string, TypeInfo::Ptr&gt; TypeInfo::typeInfoDatabase;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classsmacc_1_1introspection_1_1TypeInfo.html#ada1e604cd8bf968a5f816fbace4af881">   64</a></span><a class="code hl_typedef" href="classsmacc_1_1introspection_1_1TypeInfo.html#aa6ffd9c39811d59f7c771941b7fad860">TypeInfo::Ptr</a> <a class="code hl_function" href="classsmacc_1_1introspection_1_1TypeInfo.html#ada1e604cd8bf968a5f816fbace4af881">TypeInfo::getFromStdTypeInfo</a>(<span class="keyword">const</span> std::type_info&amp; tid)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>TypeInfo::Ptr TypeInfo::getFromStdTypeInfo(<span class="keyword">const</span> std::type_info&amp; tid)</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classsmacc_1_1introspection_1_1TypeInfo.html#a47d65b6c61499d7ae8ab9f6325c84837">TypeInfo::getTypeInfoFromString</a>(<a class="code hl_function" href="namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302">demangleSymbol</a>(tid.name()));</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordflow">return</span> TypeInfo::getTypeInfoFromString(demangleSymbol(tid.name()));</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classsmacc_1_1introspection_1_1TypeInfo.html#a47d65b6c61499d7ae8ab9f6325c84837">   69</a></span><a class="code hl_typedef" href="classsmacc_1_1introspection_1_1TypeInfo.html#aa6ffd9c39811d59f7c771941b7fad860">TypeInfo::Ptr</a> <a class="code hl_function" href="classsmacc_1_1introspection_1_1TypeInfo.html#a47d65b6c61499d7ae8ab9f6325c84837">TypeInfo::getTypeInfoFromString</a>(std::string inputtext)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>TypeInfo::Ptr TypeInfo::getTypeInfoFromString(std::string inputtext)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keyword">auto</span> it = <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#ab780c03206b824aaf338135d16b0eff4">typeInfoDatabase</a>.find(inputtext);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keyword">auto</span> it = typeInfoDatabase.find(inputtext);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#ab780c03206b824aaf338135d16b0eff4">typeInfoDatabase</a>.end())</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#ab780c03206b824aaf338135d16b0eff4">typeInfoDatabase</a>[inputtext];</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">if</span> (it != typeInfoDatabase.end())</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> typeInfoDatabase[inputtext];</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordtype">int</span> typecount = 0;</div>
@@ -175,8 +175,8 @@ $(function() {
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    {</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <span class="keywordflow">if</span> (typesdict.size() == 0)</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">auto</span> <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#a697dd505119258dba1224d10eea5b2bd">tkey</a> = <span class="stringliteral">&quot;$T&quot;</span> + std::to_string(typecount);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        typesdict[<a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#a697dd505119258dba1224d10eea5b2bd">tkey</a>] = inputtext;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">auto</span> tkey = <span class="stringliteral">&quot;$T&quot;</span> + std::to_string(typecount);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        typesdict[tkey] = inputtext;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      }</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
@@ -194,13 +194,13 @@ $(function() {
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; m : matches)</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    {</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      std::string tstr = m;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <span class="keyword">auto</span> <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#a697dd505119258dba1224d10eea5b2bd">tkey</a> = <span class="stringliteral">&quot;$T&quot;</span> + std::to_string(typecount);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a48571b9bf3b115d2a83cc0147c96d0bd">replace</a>(inputtext, tstr, <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#a697dd505119258dba1224d10eea5b2bd">tkey</a>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <span class="keyword">auto</span> tkey = <span class="stringliteral">&quot;$T&quot;</span> + std::to_string(typecount);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a48571b9bf3b115d2a83cc0147c96d0bd">replace</a>(inputtext, tstr, tkey);</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="comment">// std::cout &lt;&lt; &quot;updating input text:&quot; &lt;&lt; inputtext &lt;&lt; std::endl;</span></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      typecount++;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      typesdict[<a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#a697dd505119258dba1224d10eea5b2bd">tkey</a>] = tstr;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      typesdict[tkey] = tstr;</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>      i++;</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
@@ -291,26 +291,26 @@ $(function() {
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  std::vector&lt;TypeInfo::Ptr&gt; types;</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  std::vector&lt;std::string&gt; tokens;</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a> : orderedTypedict)  <span class="comment">// must be ordered. to avoid issue, ie: $11 to be replaced in $T14</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> t : orderedTypedict)  <span class="comment">// must be ordered. to avoid issue, ie: $11 to be replaced in $T14</span></div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  {</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="comment">// auto t = *it;</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#a697dd505119258dba1224d10eea5b2bd">tkey</a> = <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a>.first;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keyword">auto</span>&amp; tval = <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a>.second;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">auto</span> <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#aa4010ed427e12db443e08ab16a3de243">finaltype</a> = <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a03d7d3379217139c51d5e7df81c7ccc2">replace_back</a>(tval, orderedTypedict);</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keyword">auto</span> tinfo = std::make_shared&lt;TypeInfo&gt;(<a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#a697dd505119258dba1224d10eea5b2bd">tkey</a>, tval, <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#aa4010ed427e12db443e08ab16a3de243">finaltype</a>);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keyword">auto</span>&amp; tkey = t.first;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keyword">auto</span>&amp; tval = t.second;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">auto</span> finaltype = <a class="code hl_function" href="namespacesmacc_1_1introspection.html#a03d7d3379217139c51d5e7df81c7ccc2">replace_back</a>(tval, orderedTypedict);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keyword">auto</span> tinfo = std::make_shared&lt;TypeInfo&gt;(tkey, tval, finaltype);</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    types.push_back(tinfo);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    tokens.push_back(<a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#a697dd505119258dba1224d10eea5b2bd">tkey</a>);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    tokens.push_back(tkey);</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="comment">// std::cout &lt;&lt; &quot;replacing back: &quot; &lt;&lt; finaltype &lt;&lt; std::endl;</span></div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  }</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <a class="code hl_typedef" href="classsmacc_1_1introspection_1_1TypeInfo.html#aa6ffd9c39811d59f7c771941b7fad860">TypeInfo::Ptr</a> roottype = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a> : types)</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  TypeInfo::Ptr roottype = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; t : types)</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  {</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="comment">// std::cout &lt;&lt; t-&gt;finaltype &lt;&lt; &quot; vs &quot; &lt;&lt;originalinputtext;</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a>-&gt;finaltype == originalinputtext)</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">if</span> (t-&gt;finaltype == originalinputtext)</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      roottype = <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a>;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      roottype = t;</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  }</div>
@@ -338,7 +338,7 @@ $(function() {
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; types.size(); i++)</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  {</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keyword">auto</span> <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a> = types[i];</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keyword">auto</span> t = types[i];</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keyword">auto</span> ttoken = tokens[i];</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="comment">// auto t = types[it1];</span></div>
@@ -368,7 +368,7 @@ $(function() {
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      <span class="comment">// std::cout &lt;&lt; it2 &lt;&lt; std::endl;</span></div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      <span class="comment">// auto t2 = types[it2];</span></div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>      <span class="comment">// std::cout &lt;&lt; t2-&gt;getFullName() &lt;&lt; std::endl;</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a> == t2)</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>      <span class="keywordflow">if</span> (t == t2)</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>      <span class="keyword">auto</span> index = codedtypecopy.find(t2-&gt;tkey);</div>
@@ -387,24 +387,24 @@ $(function() {
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>              [](<span class="keyword">auto</span>&amp; a, <span class="keyword">auto</span>&amp; b) -&gt; <span class="keywordtype">bool</span> { return a.first &lt;= b.first; });</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    ROS_DEBUG_STREAM(<span class="stringliteral">&quot;------------------&quot;</span>);</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    ROS_DEBUG_STREAM(<span class="stringliteral">&quot;CREATING TYPE:&quot;</span> &lt;&lt; <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a>-&gt;getFullName());</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    ROS_DEBUG_STREAM(<span class="stringliteral">&quot;CREATING TYPE:&quot;</span> &lt;&lt; t-&gt;getFullName());</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; item : unorderedTemplateParameters)</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    {</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>      ROS_DEBUG_STREAM(<span class="stringliteral">&quot; - template parameter: &quot;</span> &lt;&lt; item.second-&gt;getFullName());</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      <a class="code hl_variable" href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">t</a>-&gt;templateParameters.push_back(item.second);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      t-&gt;templateParameters.push_back(item.second);</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    }</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    ROS_DEBUG_STREAM(<span class="stringliteral">&quot;------------------&quot;</span>);</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  }</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>  ROS_DEBUG_STREAM(<span class="stringliteral">&quot;ADDING TYPE TO DATABASE: &quot;</span> &lt;&lt; inputtext);</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>  ROS_DEBUG_STREAM(<span class="stringliteral">&quot;Current Database&quot;</span>);</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; en : <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#ab780c03206b824aaf338135d16b0eff4">typeInfoDatabase</a>)</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; en : typeInfoDatabase)</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>  {</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    ROS_DEBUG_STREAM(<span class="stringliteral">&quot;- &quot;</span> &lt;&lt; en.first);</div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  }</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>  <a class="code hl_variable" href="classsmacc_1_1introspection_1_1TypeInfo.html#ab780c03206b824aaf338135d16b0eff4">typeInfoDatabase</a>[originalinputtext] = roottype;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>  typeInfoDatabase[originalinputtext] = roottype;</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>  <span class="keywordflow">return</span> roottype;</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>}</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
@@ -432,19 +432,9 @@ $(function() {
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>}  <span class="comment">// namespace introspection</span></div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>}  <span class="comment">// namespace smacc</span></div>
-<div class="ttc" id="aclasssmacc_1_1introspection_1_1TypeInfo_html_a47d65b6c61499d7ae8ab9f6325c84837"><div class="ttname"><a href="classsmacc_1_1introspection_1_1TypeInfo.html#a47d65b6c61499d7ae8ab9f6325c84837">smacc::introspection::TypeInfo::getTypeInfoFromString</a></div><div class="ttdeci">static TypeInfo::Ptr getTypeInfoFromString(std::string inputtext)</div><div class="ttdef"><b>Definition:</b> <a href="string__type__walker_8cpp_source.html#l00069">string_type_walker.cpp:69</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1introspection_1_1TypeInfo_html_a697dd505119258dba1224d10eea5b2bd"><div class="ttname"><a href="classsmacc_1_1introspection_1_1TypeInfo.html#a697dd505119258dba1224d10eea5b2bd">smacc::introspection::TypeInfo::tkey</a></div><div class="ttdeci">std::string tkey</div><div class="ttdef"><b>Definition:</b> <a href="string__type__walker_8h_source.html#l00063">string_type_walker.h:63</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1introspection_1_1TypeInfo_html_aa4010ed427e12db443e08ab16a3de243"><div class="ttname"><a href="classsmacc_1_1introspection_1_1TypeInfo.html#aa4010ed427e12db443e08ab16a3de243">smacc::introspection::TypeInfo::finaltype</a></div><div class="ttdeci">std::string finaltype</div><div class="ttdef"><b>Definition:</b> <a href="string__type__walker_8h_source.html#l00065">string_type_walker.h:65</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1introspection_1_1TypeInfo_html_aa6ffd9c39811d59f7c771941b7fad860"><div class="ttname"><a href="classsmacc_1_1introspection_1_1TypeInfo.html#aa6ffd9c39811d59f7c771941b7fad860">smacc::introspection::TypeInfo::Ptr</a></div><div class="ttdeci">std::shared_ptr&lt; TypeInfo &gt; Ptr</div><div class="ttdef"><b>Definition:</b> <a href="string__type__walker_8h_source.html#l00021">string_type_walker.h:21</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1introspection_1_1TypeInfo_html_ab780c03206b824aaf338135d16b0eff4"><div class="ttname"><a href="classsmacc_1_1introspection_1_1TypeInfo.html#ab780c03206b824aaf338135d16b0eff4">smacc::introspection::TypeInfo::typeInfoDatabase</a></div><div class="ttdeci">static std::map&lt; std::string, Ptr &gt; typeInfoDatabase</div><div class="ttdef"><b>Definition:</b> <a href="string__type__walker_8h_source.html#l00060">string_type_walker.h:60</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1introspection_1_1TypeInfo_html_ada1e604cd8bf968a5f816fbace4af881"><div class="ttname"><a href="classsmacc_1_1introspection_1_1TypeInfo.html#ada1e604cd8bf968a5f816fbace4af881">smacc::introspection::TypeInfo::getFromStdTypeInfo</a></div><div class="ttdeci">static TypeInfo::Ptr getFromStdTypeInfo(const std::type_info &amp;tid)</div><div class="ttdef"><b>Definition:</b> <a href="string__type__walker_8cpp_source.html#l00064">string_type_walker.cpp:64</a></div></div>
-<div class="ttc" id="acommon_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
-<div class="ttc" id="anamespacebattery__monitor__node_html_a7a63d20d1ea461e280f4eb5b47f925cd"><div class="ttname"><a href="namespacebattery__monitor__node.html#a7a63d20d1ea461e280f4eb5b47f925cd">battery_monitor_node.t</a></div><div class="ttdeci">t</div><div class="ttdef"><b>Definition:</b> <a href="battery__monitor__node_8py_source.html#l00019">battery_monitor_node.py:19</a></div></div>
 <div class="ttc" id="anamespacesmacc_1_1introspection_html_a03d7d3379217139c51d5e7df81c7ccc2"><div class="ttname"><a href="namespacesmacc_1_1introspection.html#a03d7d3379217139c51d5e7df81c7ccc2">smacc::introspection::replace_back</a></div><div class="ttdeci">std::string replace_back(std::string roottype, std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt; &amp;orderedtypesdict)</div><div class="ttdef"><b>Definition:</b> <a href="string__type__walker_8cpp_source.html#l00036">string_type_walker.cpp:36</a></div></div>
-<div class="ttc" id="anamespacesmacc_1_1introspection_html_a2f495108db3e57604d8d3ff5ef030302"><div class="ttname"><a href="namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302">smacc::introspection::demangleSymbol</a></div><div class="ttdeci">std::string demangleSymbol(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="introspection_8h_source.html#l00051">introspection.h:51</a></div></div>
 <div class="ttc" id="anamespacesmacc_1_1introspection_html_a48571b9bf3b115d2a83cc0147c96d0bd"><div class="ttname"><a href="namespacesmacc_1_1introspection.html#a48571b9bf3b115d2a83cc0147c96d0bd">smacc::introspection::replace</a></div><div class="ttdeci">bool replace(std::string &amp;str, const std::string &amp;from, const std::string &amp;to)</div><div class="ttdef"><b>Definition:</b> <a href="string__type__walker_8cpp_source.html#l00027">string_type_walker.cpp:27</a></div></div>
-<div class="ttc" id="anamespacesmacc_html"><div class="ttname"><a href="namespacesmacc.html">smacc</a></div><div class="ttdef"><b>Definition:</b> <a href="cp__ros__control__interface_8h_source.html#l00005">cp_ros_control_interface.h:6</a></div></div>
-<div class="ttc" id="astring__type__walker_8h_html"><div class="ttname"><a href="string__type__walker_8h.html">string_type_walker.h</a></div></div>
+<div class="ttc" id="anamespacesmacc_html"><div class="ttname"><a href="namespacesmacc.html">smacc</a></div><div class="ttdef"><b>Definition:</b> <a href="client_8cpp_source.html#l00011">client.cpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

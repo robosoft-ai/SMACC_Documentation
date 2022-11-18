@@ -77,12 +77,12 @@
 \DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00073}00073         plan.push\_back(startOrientedPose);}
 \DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00074}00074 }
 \DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00075}00075         \textcolor{comment}{//ROS\_INFO\_STREAM("{}Pure straight, start: "{} << startOrientedPose << std::endl << "{}end: "{} << goal);}}
-\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00076}00076         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{double} \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}}=0; \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}} <=1.0; \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}}+=dt)}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00076}00076         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{double} t=0; t <=1.0; t+=dt)}
 \DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00077}00077         \{}
 \DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00078}00078             geometry\_msgs::PoseStamped p = startOrientedPose;}
 \DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00079}00079 }
-\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00080}00080             p.pose.position.x =  startOrientedPose.pose.position.x *(1 -\/ \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}}) + goal.x * \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}};}
-\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00081}00081             p.pose.position.y =  startOrientedPose.pose.position.y *(1 -\/ \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}}) + goal.y * \mbox{\hyperlink{namespacebattery__monitor__node_a7a63d20d1ea461e280f4eb5b47f925cd}{t}};}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00080}00080             p.pose.position.x =  startOrientedPose.pose.position.x *(1 -\/ t) + goal.x * t;}
+\DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00081}00081             p.pose.position.y =  startOrientedPose.pose.position.y *(1 -\/ t) + goal.y * t;}
 \DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00082}00082             p.pose.orientation = startOrientedPose.pose.orientation;}
 \DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00083}00083 }
 \DoxyCodeLine{\Hypertarget{path__tools_8cpp_source_l00084}00084             plan.push\_back(p);}

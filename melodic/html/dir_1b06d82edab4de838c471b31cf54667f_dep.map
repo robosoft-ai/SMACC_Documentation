@@ -1,7 +1,0 @@
-<map id="smacc_sm_reference_library/sm_starcraft_ai/include/sm_starcraft_ai/states" name="smacc_sm_reference_library/sm_starcraft_ai/include/sm_starcraft_ai/states">
-<area shape="rect" id="node2" href="dir_ed55677110a630dd327da50853782137.html" title="attack_inner_states" alt="" coords="345,63,481,111"/>
-<area shape="rect" id="node3" href="dir_b2bf3ab7d178b4d292d058c45e4769ce.html" title="build_inner_states" alt="" coords="194,63,321,111"/>
-<area shape="rect" id="node4" href="dir_d9784f0961dfed09da3072b3937adf43.html" title="move_inner_states" alt="" coords="38,63,170,111"/>
-<area shape="rect" id="clust2" href="dir_1b06d82edab4de838c471b31cf54667f.html" alt="" coords="27,52,588,121"/>
-<area shape="rect" id="clust1" href="dir_3043ceb1055a980903f53d50ed8265dd.html" title="sm_starcraft_ai" alt="" coords="16,16,599,132"/>
-</map>

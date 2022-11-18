@@ -1,8 +1,0 @@
-<map id="sm_starcraft_ai::MsRun" name="sm_starcraft_ai::MsRun">
-<area shape="rect" id="node1" title=" " alt="" coords="145,1865,303,1943"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1SmaccState.html" title=" " alt="" coords="117,1225,331,1816"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,792,187,913"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccState.html" title=" " alt="" coords="120,5,328,508"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1SmaccState.html" title=" " alt="" coords="261,557,475,1148"/>
-<area shape="rect" id="node6" title=" " alt="" coords="352,196,536,317"/>
-</map>

@@ -2,7 +2,7 @@
 \label{cp__ros__control__interface_8cpp_source}\index{smacc/src/smacc/components/cp\_ros\_control\_interface.cpp@{smacc/src/smacc/components/cp\_ros\_control\_interface.cpp}}
 \mbox{\hyperlink{cp__ros__control__interface_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{cp__ros__control__interface_8h}{smacc/client\_base\_components/cp\_ros\_control\_interface.h}}>}}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <smacc/client\_base\_components/cp\_ros\_control\_interface.h>}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00002}00002 }
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <controller\_manager\_msgs/ListControllerTypes.h>}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <controller\_manager\_msgs/ListControllers.h>}}
@@ -13,50 +13,50 @@
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00009}00009 }
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesmacc}{smacc}}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00011}00011 \{}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00012}00012 \textcolor{keyword}{namespace }components}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00012}\mbox{\hyperlink{namespacesmacc_1_1components}{00012}} \textcolor{keyword}{namespace }components}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00013}00013 \{}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00014}00014 \textcolor{keyword}{using namespace }controller\_manager\_msgs;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00015}00015 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00016}\mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a0748ed325fd16e4ce28650a4c4851337}{00016}} \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a0748ed325fd16e4ce28650a4c4851337}{CpRosControlInterface::CpRosControlInterface}}()}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00016}00016 CpRosControlInterface::CpRosControlInterface()}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00017}00017 \{}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00018}00018 \}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00020}\mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a85ab7c698b5a1c0b0064775b2779daa8}{00020}} \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a85ab7c698b5a1c0b0064775b2779daa8}{CpRosControlInterface::\string~CpRosControlInterface}}()}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00020}00020 CpRosControlInterface::\string~CpRosControlInterface()}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00021}00021 \{}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00022}00022 \}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00023}00023 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00024}\mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a469bdb5723a9ab66d6b0a7908d5891bf}{00024}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a469bdb5723a9ab66d6b0a7908d5891bf}{CpRosControlInterface::onInitialize}}()}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00024}00024 \textcolor{keywordtype}{void} CpRosControlInterface::onInitialize()}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00025}00025 \{}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00026}00026     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_aec2d2eb63ad4f04741493329e6c33696}{srvListControllers}} = \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a58b15bd11d13cb02813232c6e50adbd2}{nh\_}}.serviceClient<ListControllers>(*serviceName\_);}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00027}00027     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a5a4983fca48da646b5fc94ce1f0e4114}{srvListControllersTypes}} = \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a58b15bd11d13cb02813232c6e50adbd2}{nh\_}}.serviceClient<ListControllerTypes>(*serviceName\_);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00026}00026     srvListControllers = nh\_.serviceClient<ListControllers>(*serviceName\_);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00027}00027     srvListControllersTypes = nh\_.serviceClient<ListControllerTypes>(*serviceName\_);}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00028}00028 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00029}00029     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_aa6c1440534d6a825644f0c3620461b72}{srvLoadController}} = \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a58b15bd11d13cb02813232c6e50adbd2}{nh\_}}.serviceClient<LoadController>(*serviceName\_);}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00030}00030     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a0515a2a86bfcd0fdec08fabd3070723c}{srvUnloadController}} = \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a58b15bd11d13cb02813232c6e50adbd2}{nh\_}}.serviceClient<UnloadController>(*serviceName\_);}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00031}00031     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_afdfece75d6aa438fae728e72add50e16}{srvReloadControllerLibraries}} = \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a58b15bd11d13cb02813232c6e50adbd2}{nh\_}}.serviceClient<ReloadControllerLibraries>(*serviceName\_);}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00032}00032     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a78e45e68567c23ca5c19df0de257c20f}{srvSwitchControllers}} = \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a58b15bd11d13cb02813232c6e50adbd2}{nh\_}}.serviceClient<SwitchController>(*serviceName\_);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00029}00029     srvLoadController = nh\_.serviceClient<LoadController>(*serviceName\_);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00030}00030     srvUnloadController = nh\_.serviceClient<UnloadController>(*serviceName\_);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00031}00031     srvReloadControllerLibraries = nh\_.serviceClient<ReloadControllerLibraries>(*serviceName\_);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00032}00032     srvSwitchControllers = nh\_.serviceClient<SwitchController>(*serviceName\_);}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00033}00033 \}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00034}00034 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00035}\mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_ab5666d2b888f63fd6aeb1056ffec10cb}{00035}} std::vector<controller\_manager\_msgs::ControllerState> \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_ab5666d2b888f63fd6aeb1056ffec10cb}{CpRosControlInterface::listControllers}}()}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00035}00035 std::vector<controller\_manager\_msgs::ControllerState> CpRosControlInterface::listControllers()}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00036}00036 \{}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00037}00037     ListControllers::Request req;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00038}00038     ListControllers::Response res;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00039}00039 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00040}00040     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_aec2d2eb63ad4f04741493329e6c33696}{srvListControllers}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00040}00040     srvListControllers.call(req, res);}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00041}00041     \textcolor{keywordflow}{return} res.controller;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00042}00042 \}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00043}00043 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00044}\mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_ae900aa88dff13169cdb22c68a7e5d539}{00044}} std::vector<ControllerTypeInfo> \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_ae900aa88dff13169cdb22c68a7e5d539}{CpRosControlInterface::listControllerTypes}}()}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00044}00044 std::vector<ControllerTypeInfo> CpRosControlInterface::listControllerTypes()}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00045}00045 \{}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00046}00046     ListControllerTypes::Request req;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00047}00047     ListControllerTypes::Response res;}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00048}00048     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a5a4983fca48da646b5fc94ce1f0e4114}{srvListControllersTypes}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00048}00048     srvListControllersTypes.call(req, res);}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00049}00049 }
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00050}00050     std::vector<ControllerTypeInfo> ret;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00051}00051     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < res.types.size(); i++)}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00052}00052     \{}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00053}00053         \mbox{\hyperlink{structsmacc_1_1components_1_1ControllerTypeInfo}{ControllerTypeInfo}} entry;}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00054}00054         entry.\mbox{\hyperlink{structsmacc_1_1components_1_1ControllerTypeInfo_a8b66de0e92b5b6b913d6b802a0495637}{type}} = res.types[i];}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00055}00055         entry.\mbox{\hyperlink{structsmacc_1_1components_1_1ControllerTypeInfo_a4506855fc728c39046bdb4f98a6a61f3}{baseClass}} = res.base\_classes[i];}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00053}00053         ControllerTypeInfo entry;}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00054}00054         entry.type = res.types[i];}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00055}00055         entry.baseClass = res.base\_classes[i];}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00056}00056 }
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00057}00057         ret.push\_back(entry);}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00058}00058     \}}
@@ -64,41 +64,41 @@
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00060}00060     \textcolor{keywordflow}{return} ret;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00061}00061 \}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00062}00062 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00063}\mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_ab810c680f5429731c9c83345f9821016}{00063}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_ab810c680f5429731c9c83345f9821016}{CpRosControlInterface::loadController}}(std::string name)}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00063}00063 \textcolor{keywordtype}{bool} CpRosControlInterface::loadController(std::string name)}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00064}00064 \{}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00065}00065     LoadController::Request req;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00066}00066     LoadController::Response res;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00067}00067     req.name = name;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00068}00068 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00069}00069     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_aa6c1440534d6a825644f0c3620461b72}{srvLoadController}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00069}00069     srvLoadController.call(req, res);}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00070}00070     \textcolor{keywordflow}{return} res.ok;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00071}00071 \}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00072}00072 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00073}\mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a0c65acff40f36a15c67fab7c77ca23c8}{00073}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a0c65acff40f36a15c67fab7c77ca23c8}{CpRosControlInterface::unloadController}}(std::string name)}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00073}00073 \textcolor{keywordtype}{bool} CpRosControlInterface::unloadController(std::string name)}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00074}00074 \{}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00075}00075     UnloadController::Request req;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00076}00076     UnloadController::Response res;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00077}00077 }
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00078}00078     req.name = name;}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00079}00079     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a0515a2a86bfcd0fdec08fabd3070723c}{srvUnloadController}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00079}00079     srvUnloadController.call(req, res);}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00080}00080     \textcolor{keywordflow}{return} res.ok;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00081}00081 \}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00082}00082 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00083}\mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_acd3534897ecf6b28ee3804dcbefedae9}{00083}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_acd3534897ecf6b28ee3804dcbefedae9}{CpRosControlInterface::reloadControllerLibraries}}(\textcolor{keywordtype}{bool} forceKill)}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00083}00083 \textcolor{keywordtype}{bool} CpRosControlInterface::reloadControllerLibraries(\textcolor{keywordtype}{bool} forceKill)}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00084}00084 \{}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00085}00085     ReloadControllerLibraries::Request req;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00086}00086     ReloadControllerLibraries::Response res;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00087}00087     req.force\_kill = forceKill;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00088}00088 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00089}00089     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_afdfece75d6aa438fae728e72add50e16}{srvReloadControllerLibraries}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00089}00089     srvReloadControllerLibraries.call(req, res);}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00090}00090 }
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00091}00091     \textcolor{keywordflow}{return} res.ok;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00092}00092     \textcolor{comment}{//srvReloadControllerLibraries}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00093}00093 \}}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00094}00094 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00095}\mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a1cdb86924bbc0ab5f932d5504a943cbb}{00095}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a1cdb86924bbc0ab5f932d5504a943cbb}{CpRosControlInterface::switchControllers}}(std::vector<std::string> start\_controllers,}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00095}00095 \textcolor{keywordtype}{bool} CpRosControlInterface::switchControllers(std::vector<std::string> start\_controllers,}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00096}00096                                               std::vector<std::string> stop\_controllers,}
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00097}00097                                               \mbox{\hyperlink{namespacesmacc_1_1components_a18117d6a71feb2471fb4e07f47674e4c}{Strictness}} strictness)}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00097}00097                                               Strictness strictness)}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00098}00098 \{}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00099}00099     SwitchController::Request req;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00100}00100     SwitchController::Response res;}
@@ -107,7 +107,7 @@
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00103}00103     req.stop\_controllers = stop\_controllers;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00104}00104     req.strictness = strictness;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00105}00105 }
-\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00106}00106     \mbox{\hyperlink{classsmacc_1_1components_1_1CpRosControlInterface_a78e45e68567c23ca5c19df0de257c20f}{srvSwitchControllers}}.call(req, res);}
+\DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00106}00106     srvSwitchControllers.call(req, res);}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00107}00107 }
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00108}00108     \textcolor{keywordflow}{return} res.ok;}
 \DoxyCodeLine{\Hypertarget{cp__ros__control__interface_8cpp_source_l00109}00109 \}}

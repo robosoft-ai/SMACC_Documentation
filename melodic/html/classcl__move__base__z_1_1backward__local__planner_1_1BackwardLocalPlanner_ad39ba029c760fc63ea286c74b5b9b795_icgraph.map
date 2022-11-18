@@ -1,8 +1,0 @@
-<map id="cl_move_base_z::backward_local_planner::BackwardLocalPlanner::computeCurrentEuclideanAndAngularErrorsToCarrotGoal" name="cl_move_base_z::backward_local_planner::BackwardLocalPlanner::computeCurrentEuclideanAndAngularErrorsToCarrotGoal">
-<area shape="rect" id="node1" title=" " alt="" coords="592,78,869,149"/>
-<area shape="rect" id="node2" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#ab1b01ecdb27641dde60661362d75465b" title=" " alt="" coords="299,5,544,61"/>
-<area shape="rect" id="node4" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a0025cd3ffaa04a6a02492a33673a78a1" title=" " alt="" coords="299,85,544,141"/>
-<area shape="rect" id="node5" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a16e79a1b4c0f18879f6f0a8ba67103fd" title=" " alt="" coords="299,165,544,221"/>
-<area shape="rect" id="node3" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#ab11a0eec45f24b5a5a3987a50427eed4" title="Set the plan that the local planner is following." alt="" coords="5,45,251,101"/>
-<area shape="rect" id="node6" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a25437208766366ca22f967fe72e80988" title="Given the current position, orientation, and velocity of the robot: compute velocity commands to send..." alt="" coords="5,165,251,221"/>
-</map>

@@ -21,7 +21,7 @@
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00017}00017 \{}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00018}00018 \textcolor{keyword}{public}:}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00019}\mbox{\hyperlink{classOdomTrackerActionServer_a28bed1d95003d837b2b47053dbc66878}{00019}}   std::shared\_ptr<Server> \mbox{\hyperlink{classOdomTrackerActionServer_a28bed1d95003d837b2b47053dbc66878}{as\_}};}
-\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00020}\mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{00020}}   \mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker}{OdomTracker}} \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}};}
+\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00020}\mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{00020}}   OdomTracker \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}};}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00021}00021 }
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00022}\mbox{\hyperlink{classOdomTrackerActionServer_a98b7fba6da04e1afcf1000f937be7fef}{00022}}   \mbox{\hyperlink{classOdomTrackerActionServer_a98b7fba6da04e1afcf1000f937be7fef}{OdomTrackerActionServer}}()}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00023}00023       : \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}(\textcolor{stringliteral}{"{}move\_base"{}})}
@@ -35,31 +35,31 @@
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00036}00036       \textcolor{keywordflow}{switch} (goal-\/>command)}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00037}00037       \{}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00038}00038       \textcolor{keywordflow}{case} OdomTrackerGoal::RECORD\_PATH:}
-\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00039}00039         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_aeed01bdefd9a1cc709b0b3e4eed285ed}{setWorkingMode}}(WorkingMode::RECORD\_PATH);}
+\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00039}00039         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.setWorkingMode(WorkingMode::RECORD\_PATH);}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00040}00040         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00041}00041 }
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00042}00042       \textcolor{keywordflow}{case} OdomTrackerGoal::CLEAR\_PATH:}
-\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00043}00043         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_aeed01bdefd9a1cc709b0b3e4eed285ed}{setWorkingMode}}(WorkingMode::CLEAR\_PATH);}
+\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00043}00043         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.setWorkingMode(WorkingMode::CLEAR\_PATH);}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00044}00044         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00045}00045 }
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00046}00046       \textcolor{keywordflow}{case} OdomTrackerGoal::IDLE:}
-\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00047}00047         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_aeed01bdefd9a1cc709b0b3e4eed285ed}{setWorkingMode}}(WorkingMode::IDLE);}
+\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00047}00047         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.setWorkingMode(WorkingMode::IDLE);}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00048}00048         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00049}00049 }
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00050}00050       \textcolor{keywordflow}{case} OdomTrackerGoal::START\_BROADCAST\_PATH:}
-\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00051}00051         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_a3b3cf9010e4e4fe4f96cfafd5a529517}{setPublishMessages}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00051}00051         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.setPublishMessages(\textcolor{keyword}{true});}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00052}00052         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00053}00053 }
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00054}00054       \textcolor{keywordflow}{case} OdomTrackerGoal::STOP\_BROADCAST\_PATH:}
-\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00055}00055         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_a3b3cf9010e4e4fe4f96cfafd5a529517}{setPublishMessages}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00055}00055         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.setPublishMessages(\textcolor{keyword}{false});}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00056}00056         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00057}00057 }
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00058}00058       \textcolor{keywordflow}{case} OdomTrackerGoal::PUSH\_PATH:}
-\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00059}00059         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_ab92735db58cfdf8d0055e3f01be124d3}{pushPath}}();}
+\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00059}00059         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.pushPath();}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00060}00060         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00061}00061 }
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00062}00062       \textcolor{keywordflow}{case} OdomTrackerGoal::POP\_PATH:}
-\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00063}00063         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.\mbox{\hyperlink{classcl__move__base__z_1_1odom__tracker_1_1OdomTracker_a2749e5cd0443423d50864a0166b078b9}{popPath}}();}
+\DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00063}00063         \mbox{\hyperlink{classOdomTrackerActionServer_a3e5c4328d3206fbd2fd2708f0aefe651}{odomTracker}}.popPath();}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00064}00064         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00065}00065 }
 \DoxyCodeLine{\Hypertarget{odom__tracker__node_8cpp_source_l00066}00066       \textcolor{keywordflow}{default}:}
