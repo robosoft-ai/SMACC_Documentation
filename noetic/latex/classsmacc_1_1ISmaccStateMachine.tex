@@ -81,7 +81,7 @@ virtual void \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ac2982c6c8283663e
 \item 
 {\footnotesize template$<$typename State\+Type $>$ }\\void \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a0a561ebd12c874a9fa85ba75b740871b}{notify\+On\+Runtime\+Configuration\+Finished}} (State\+Type $\ast$state)
 \item 
-uint64\+\_\+tt \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a66ba5509a3f927ac32c1bde248c92265}{get\+Current\+State\+Counter}} () const
+uint64\+\_\+t \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a8d06ceb80aa405ffc74f5ce519f09d75}{get\+Current\+State\+Counter}} () const
 \item 
 \mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmacc\+State}} $\ast$ \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a610d09dc5341fb63732be713c21fbe86}{get\+Current\+State}} () const
 \item 
@@ -163,7 +163,7 @@ std\+::vector$<$ smacc\+\_\+msgs\+::\+Smacc\+Transition\+Log\+Entry $>$ \mbox{\h
 \item 
 \mbox{\hyperlink{classsmacc_1_1SignalDetector}{Signal\+Detector}} $\ast$ \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a3982eb671f5f001cb047d3a467789986}{signal\+Detector\+\_\+}}
 \item 
-uint64\+\_\+tt \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7b1b896c5a8002a5b081fea19c803778}{state\+Seq\+Counter\+\_\+}}
+uint64\+\_\+t \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ae6ce5c65a7f49b6aca61f46be53e9cc5}{state\+Seq\+Counter\+\_\+}}
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateMachineInfo}{Smacc\+State\+Machine\+Info}} $>$ \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a0914aa27c3f51374c338d89a32b135d1}{state\+Machine\+Info\+\_\+}}
 \end{DoxyCompactItemize}
@@ -196,7 +196,7 @@ Definition at line \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00015}{15
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00016     : \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a9c6a5c647ecca6599589c12fdcd53bfc}{private\_nh\_}}(\textcolor{stringliteral}{"{}\string~"{}}), \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a9c6e7745205bcce80a301f2fbe8f7e99}{currentState\_}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7b1b896c5a8002a5b081fea19c803778}{stateSeqCounter\_}}(0)}
+\DoxyCodeLine{00016     : \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a9c6a5c647ecca6599589c12fdcd53bfc}{private\_nh\_}}(\textcolor{stringliteral}{"{}\string~"{}}), \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a9c6e7745205bcce80a301f2fbe8f7e99}{currentState\_}}(\textcolor{keyword}{nullptr}), \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ae6ce5c65a7f49b6aca61f46be53e9cc5}{stateSeqCounter\_}}(0)}
 \DoxyCodeLine{00017 \{}
 \DoxyCodeLine{00018     ROS\_INFO(\textcolor{stringliteral}{"{}Creating State Machine Base"{}});}
 \DoxyCodeLine{00019     \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a3982eb671f5f001cb047d3a467789986}{signalDetector\_}} = signalDetector;}
@@ -557,11 +557,11 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{classsmacc_1_1ISmaccStateMachine_a610d09dc5341fb63732be713c21fbe86_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classsmacc_1_1ISmaccStateMachine_a66ba5509a3f927ac32c1bde248c92265}\label{classsmacc_1_1ISmaccStateMachine_a66ba5509a3f927ac32c1bde248c92265}} 
+\mbox{\Hypertarget{classsmacc_1_1ISmaccStateMachine_a8d06ceb80aa405ffc74f5ce519f09d75}\label{classsmacc_1_1ISmaccStateMachine_a8d06ceb80aa405ffc74f5ce519f09d75}} 
 \index{smacc::ISmaccStateMachine@{smacc::ISmaccStateMachine}!getCurrentStateCounter@{getCurrentStateCounter}}
 \index{getCurrentStateCounter@{getCurrentStateCounter}!smacc::ISmaccStateMachine@{smacc::ISmaccStateMachine}}
 \doxysubsubsection{\texorpdfstring{getCurrentStateCounter()}{getCurrentStateCounter()}}
-{\footnotesize\ttfamily uint64\+\_\+tt smacc\+::\+ISmacc\+State\+Machine\+::get\+Current\+State\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily uint64\+\_\+t smacc\+::\+ISmacc\+State\+Machine\+::get\+Current\+State\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -570,7 +570,7 @@ Definition at line \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00556
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00557   \{}
-\DoxyCodeLine{00558     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7b1b896c5a8002a5b081fea19c803778}{stateSeqCounter\_}};}
+\DoxyCodeLine{00558     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ae6ce5c65a7f49b6aca61f46be53e9cc5}{stateSeqCounter\_}};}
 \DoxyCodeLine{00559   \}}
 
 \end{DoxyCode}
@@ -587,7 +587,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classsmacc_1_1ISmaccStateMachine_a66ba5509a3f927ac32c1bde248c92265_icgraph}
+\includegraphics[width=350pt]{classsmacc_1_1ISmaccStateMachine_a8d06ceb80aa405ffc74f5ce519f09d75_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classsmacc_1_1ISmaccStateMachine_a155225cfa87fa3a77831a2c3a7aeaae7}\label{classsmacc_1_1ISmaccStateMachine_a155225cfa87fa3a77831a2c3a7aeaae7}} 
@@ -1241,7 +1241,7 @@ Definition at line \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00366
 \DoxyCodeLine{00369 }
 \DoxyCodeLine{00370     ROS\_DEBUG(\textcolor{stringliteral}{"{}[State Machne] Initializating a new state '\%s' and updating current state. Getting state meta-\/information. number of orthogonals: \%ld"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateType).name()).c\_str(), this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_acc5944f313bc6ce1637c632243a511f2}{orthogonals\_}}.size());}
 \DoxyCodeLine{00371 }
-\DoxyCodeLine{00372     \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7b1b896c5a8002a5b081fea19c803778}{stateSeqCounter\_}}++;}
+\DoxyCodeLine{00372     \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ae6ce5c65a7f49b6aca61f46be53e9cc5}{stateSeqCounter\_}}++;}
 \DoxyCodeLine{00373     \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a9c6e7745205bcce80a301f2fbe8f7e99}{currentState\_}} = state;}
 \DoxyCodeLine{00374     \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a95e42f735cecdc231ad5372bf9fe7eaf}{currentStateInfo\_}} = \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a0914aa27c3f51374c338d89a32b135d1}{stateMachineInfo\_}}-\/>getState<StateType>();}
 \DoxyCodeLine{00375   \}}
@@ -2301,11 +2301,11 @@ Definition at line \mbox{\hyperlink{smacc__state__machine_8h_source_l00166}{166}
 
 Referenced by \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00121}{initialize\+ROS()}}, \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00140}{state\+\_\+machine\+\_\+visualization()}}, and \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00066}{update\+Status\+Message()}}.
 
-\mbox{\Hypertarget{classsmacc_1_1ISmaccStateMachine_a7b1b896c5a8002a5b081fea19c803778}\label{classsmacc_1_1ISmaccStateMachine_a7b1b896c5a8002a5b081fea19c803778}} 
+\mbox{\Hypertarget{classsmacc_1_1ISmaccStateMachine_ae6ce5c65a7f49b6aca61f46be53e9cc5}\label{classsmacc_1_1ISmaccStateMachine_ae6ce5c65a7f49b6aca61f46be53e9cc5}} 
 \index{smacc::ISmaccStateMachine@{smacc::ISmaccStateMachine}!stateSeqCounter\_@{stateSeqCounter\_}}
 \index{stateSeqCounter\_@{stateSeqCounter\_}!smacc::ISmaccStateMachine@{smacc::ISmaccStateMachine}}
 \doxysubsubsection{\texorpdfstring{stateSeqCounter\_}{stateSeqCounter\_}}
-{\footnotesize\ttfamily uint64\+\_\+tt smacc\+::\+ISmacc\+State\+Machine\+::state\+Seq\+Counter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily uint64\+\_\+t smacc\+::\+ISmacc\+State\+Machine\+::state\+Seq\+Counter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -51,7 +51,7 @@ std\+::vector$<$ \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmacc\+Updatab
 \item 
 std\+::vector$<$ \mbox{\hyperlink{classsmacc_1_1ISmaccUpdatable}{ISmacc\+Updatable}} $\ast$ $>$ \mbox{\hyperlink{classsmacc_1_1SignalDetector_a07a5e7bb00c348435d954e22682fa610}{updatable\+State\+Elements\+\_\+}}
 \item 
-std\+::atomic$<$ uint64\+\_\+tt $>$ \mbox{\hyperlink{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}{last\+State\+\_\+}}
+std\+::atomic$<$ uint64\+\_\+t $>$ \mbox{\hyperlink{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}{last\+State\+\_\+}}
 \item 
 double \mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{loop\+\_\+rate\+\_\+hz}}
 \item 
@@ -275,7 +275,7 @@ Definition at line \mbox{\hyperlink{signal__detector_8cpp_source_l00029}{29}} of
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00030 \{}
 \DoxyCodeLine{00031   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}} = stateMachine;}
-\DoxyCodeLine{00032   \mbox{\hyperlink{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}{lastState\_}} = std::numeric\_limits<uint64\_tt>::quiet\_NaN();}
+\DoxyCodeLine{00032   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}{lastState\_}} = std::numeric\_limits<uint64\_t>::quiet\_NaN();}
 \DoxyCodeLine{00033   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a47ec2df560e2e33758ce3975bece9385}{findUpdatableClients}}();}
 \DoxyCodeLine{00034   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a1b3c54963799b538078619906edd5302}{initialized\_}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{00035 \}}
@@ -438,7 +438,7 @@ Definition at line \mbox{\hyperlink{signal__detector_8cpp_source_l00176}{176}} o
 \DoxyCodeLine{00200         this-\/>smaccStateMachine\_-\/>stateMachineCurrentAction != \mbox{\hyperlink{namespacesmacc_a0889aff43c93fe5285109819d2898144aef27ae3e54b805b81e1efacea3c02575}{StateMachineInternalAction::STATE\_ENTERING}})}
 \DoxyCodeLine{00201     \{}
 \DoxyCodeLine{00202       \textcolor{comment}{// we do not update updatable elements during trasitioning or configuration of states}}
-\DoxyCodeLine{00203       \textcolor{keywordtype}{long} currentStateIndex = \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a66ba5509a3f927ac32c1bde248c92265}{getCurrentStateCounter}}();}
+\DoxyCodeLine{00203       \textcolor{keywordtype}{long} currentStateIndex = \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a8d06ceb80aa405ffc74f5ce519f09d75}{getCurrentStateCounter}}();}
 \DoxyCodeLine{00204 }
 \DoxyCodeLine{00205       ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] update behaviors. checking current state"{}});}
 \DoxyCodeLine{00206 }
@@ -446,15 +446,15 @@ Definition at line \mbox{\hyperlink{signal__detector_8cpp_source_l00176}{176}} o
 \DoxyCodeLine{00208       \textcolor{keywordflow}{if} (currentState != \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00209       \{}
 \DoxyCodeLine{00210         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] current state: "{}} << currentStateIndex);}
-\DoxyCodeLine{00211         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] last state: "{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}{lastState\_}});}
+\DoxyCodeLine{00211         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] last state: "{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}{lastState\_}});}
 \DoxyCodeLine{00212 }
 \DoxyCodeLine{00213         \textcolor{keywordflow}{if} (currentStateIndex != 0)}
 \DoxyCodeLine{00214         \{}
-\DoxyCodeLine{00215           \textcolor{keywordflow}{if} (currentStateIndex != this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}{lastState\_}})}
+\DoxyCodeLine{00215           \textcolor{keywordflow}{if} (currentStateIndex != this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}{lastState\_}})}
 \DoxyCodeLine{00216           \{}
 \DoxyCodeLine{00217             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] detected new state, refreshing updatable client behavior table"{}});}
 \DoxyCodeLine{00218             \textcolor{comment}{// we are in a new state, refresh the updatable client behaviors table}}
-\DoxyCodeLine{00219             this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}{lastState\_}} = currentStateIndex;}
+\DoxyCodeLine{00219             this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}{lastState\_}} = currentStateIndex;}
 \DoxyCodeLine{00220             this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a443234ebdf8cedd45cde725e64639dfe}{findUpdatableStateElements}}(currentState);}
 \DoxyCodeLine{00221           \}}
 \DoxyCodeLine{00222 }
@@ -650,11 +650,11 @@ Definition at line \mbox{\hyperlink{smacc__signal__detector_8h_source_l00059}{59
 
 Referenced by \mbox{\hyperlink{signal__detector_8cpp_source_l00029}{initialize()}}, and \mbox{\hyperlink{signal__detector_8cpp_source_l00246}{polling\+Loop()}}.
 
-\mbox{\Hypertarget{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}\label{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}} 
+\mbox{\Hypertarget{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}\label{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}} 
 \index{smacc::SignalDetector@{smacc::SignalDetector}!lastState\_@{lastState\_}}
 \index{lastState\_@{lastState\_}!smacc::SignalDetector@{smacc::SignalDetector}}
 \doxysubsubsection{\texorpdfstring{lastState\_}{lastState\_}}
-{\footnotesize\ttfamily std\+::atomic$<$uint64\+\_\+tt$>$ smacc\+::\+Signal\+Detector\+::last\+State\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::atomic$<$uint64\+\_\+t$>$ smacc\+::\+Signal\+Detector\+::last\+State\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

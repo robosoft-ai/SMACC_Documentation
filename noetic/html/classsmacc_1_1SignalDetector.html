@@ -86,7 +86,7 @@ Collaboration diagram for smacc::SignalDetector:</div>
 <area shape="rect" title=" " alt="" coords="577,285,672,362"/>
 <area shape="rect" href="classsmacc_1_1ISmaccState.html" title=" " alt="" coords="942,505,1150,935"/>
 <area shape="rect" title=" " alt="" coords="2091,681,2145,759"/>
-<area shape="rect" title=" " alt="" coords="1901,285,1977,362"/>
+<area shape="rect" title=" " alt="" coords="1903,285,1979,362"/>
 <area shape="rect" title=" " alt="" coords="2395,681,2499,759"/>
 <area shape="rect" title=" " alt="" coords="696,277,895,369"/>
 <area shape="rect" title=" " alt="" coords="919,277,1173,369"/>
@@ -110,14 +110,14 @@ Collaboration diagram for smacc::SignalDetector:</div>
 <area shape="rect" title=" " alt="" coords="3334,659,3478,781"/>
 <area shape="rect" title=" " alt="" coords="3503,674,3691,766"/>
 <area shape="rect" title=" " alt="" coords="3715,681,3812,759"/>
-<area shape="rect" title=" " alt="" coords="3837,681,3909,759"/>
-<area shape="rect" title=" " alt="" coords="2091,285,2329,362"/>
-<area shape="rect" title=" " alt="" coords="2353,285,2486,362"/>
-<area shape="rect" title=" " alt="" coords="2511,285,2571,362"/>
-<area shape="rect" title=" " alt="" coords="2595,285,2702,362"/>
-<area shape="rect" title=" " alt="" coords="2727,285,2877,362"/>
-<area shape="rect" title=" " alt="" coords="2901,285,3025,362"/>
-<area shape="rect" title=" " alt="" coords="2009,285,2067,362"/>
+<area shape="rect" title=" " alt="" coords="3836,681,3904,759"/>
+<area shape="rect" title=" " alt="" coords="2094,285,2331,362"/>
+<area shape="rect" title=" " alt="" coords="2355,285,2484,362"/>
+<area shape="rect" title=" " alt="" coords="2508,285,2568,362"/>
+<area shape="rect" title=" " alt="" coords="2593,285,2699,362"/>
+<area shape="rect" title=" " alt="" coords="2724,285,2875,362"/>
+<area shape="rect" title=" " alt="" coords="2899,285,3023,362"/>
+<area shape="rect" title=" " alt="" coords="2011,285,2070,362"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -158,8 +158,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a01a457b4ec935473d6426efb7b87e683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07a5e7bb00c348435d954e22682fa610"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classsmacc_1_1ISmaccUpdatable.html">ISmaccUpdatable</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SignalDetector.html#a07a5e7bb00c348435d954e22682fa610">updatableStateElements_</a></td></tr>
 <tr class="separator:a07a5e7bb00c348435d954e22682fa610"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0eca5c35855217d255ce93c6c9e3382"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; uint64_tt &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SignalDetector.html#af0eca5c35855217d255ce93c6c9e3382">lastState_</a></td></tr>
-<tr class="separator:af0eca5c35855217d255ce93c6c9e3382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b974907a1f1ff139952f56238bb27ce"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SignalDetector.html#a3b974907a1f1ff139952f56238bb27ce">lastState_</a></td></tr>
+<tr class="separator:a3b974907a1f1ff139952f56238bb27ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a2ae4262ed350f46d8b886bdc1dfa5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SignalDetector.html#a41a2ae4262ed350f46d8b886bdc1dfa5">loop_rate_hz</a></td></tr>
 <tr class="separator:a41a2ae4262ed350f46d8b886bdc1dfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaee266393c01693528a2d74b1f2354a2"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="classbool.html">bool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmacc_1_1SignalDetector.html#aaee266393c01693528a2d74b1f2354a2">end_</a></td></tr>
@@ -434,12 +434,12 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="signal__detector_8cpp_source.html#l00029">29</a> of file <a class="el" href="signal__detector_8cpp_source.html">signal_detector.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   30</span>{</div>
 <div class="line"><span class="lineno">   31</span>  <a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#a46025de6ac7b5980e22144f9703236a4">smaccStateMachine_</a> = stateMachine;</div>
-<div class="line"><span class="lineno">   32</span>  <a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#af0eca5c35855217d255ce93c6c9e3382">lastState_</a> = std::numeric_limits&lt;uint64_tt&gt;::quiet_NaN();</div>
+<div class="line"><span class="lineno">   32</span>  <a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#a3b974907a1f1ff139952f56238bb27ce">lastState_</a> = std::numeric_limits&lt;uint64_t&gt;::quiet_NaN();</div>
 <div class="line"><span class="lineno">   33</span>  <a class="code hl_function" href="classsmacc_1_1SignalDetector.html#a47ec2df560e2e33758ce3975bece9385">findUpdatableClients</a>();</div>
 <div class="line"><span class="lineno">   34</span>  <a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#a1b3c54963799b538078619906edd5302">initialized_</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   35</span>}</div>
+<div class="ttc" id="aclasssmacc_1_1SignalDetector_html_a3b974907a1f1ff139952f56238bb27ce"><div class="ttname"><a href="classsmacc_1_1SignalDetector.html#a3b974907a1f1ff139952f56238bb27ce">smacc::SignalDetector::lastState_</a></div><div class="ttdeci">std::atomic&lt; uint64_t &gt; lastState_</div><div class="ttdef"><b>Definition:</b> <a href="smacc__signal__detector_8h_source.html#l00049">smacc_signal_detector.h:49</a></div></div>
 <div class="ttc" id="aclasssmacc_1_1SignalDetector_html_a47ec2df560e2e33758ce3975bece9385"><div class="ttname"><a href="classsmacc_1_1SignalDetector.html#a47ec2df560e2e33758ce3975bece9385">smacc::SignalDetector::findUpdatableClients</a></div><div class="ttdeci">void findUpdatableClients()</div><div class="ttdef"><b>Definition:</b> <a href="signal__detector_8cpp_source.html#l00042">signal_detector.cpp:42</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1SignalDetector_html_af0eca5c35855217d255ce93c6c9e3382"><div class="ttname"><a href="classsmacc_1_1SignalDetector.html#af0eca5c35855217d255ce93c6c9e3382">smacc::SignalDetector::lastState_</a></div><div class="ttdeci">std::atomic&lt; uint64_tt &gt; lastState_</div><div class="ttdef"><b>Definition:</b> <a href="smacc__signal__detector_8h_source.html#l00049">smacc_signal_detector.h:49</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="signal__detector_8cpp_source.html#l00042">findUpdatableClients()</a>, <a class="el" href="smacc__signal__detector_8h_source.html#l00059">initialized_</a>, <a class="el" href="smacc__signal__detector_8h_source.html#l00049">lastState_</a>, and <a class="el" href="smacc__signal__detector_8h_source.html#l00043">smaccStateMachine_</a>.</p>
 
@@ -570,7 +570,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classsmacc_1_1SignalDetector.html#a47ec2df560e2e33758ce3975bece9385" title=" " alt="" coords="437,348,589,389"/>
 <area shape="rect" href="classsmacc_1_1SignalDetector.html#a443234ebdf8cedd45cde725e64639dfe" title=" " alt="" coords="417,413,609,455"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a610d09dc5341fb63732be713c21fbe86" title=" " alt="" coords="417,479,609,520"/>
-<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a66ba5509a3f927ac32c1bde248c92265" title=" " alt="" coords="417,100,609,141"/>
+<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a8d06ceb80aa405ffc74f5ce519f09d75" title=" " alt="" coords="417,100,609,141"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a5c8d4c9a4b11c7950266a00e48080ce3" title=" " alt="" coords="417,165,609,207"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#ae2e3ceb87bfe3f9d8bf320e36071fdc7" title=" " alt="" coords="417,231,609,272"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a7f5b2882dbd077584767cb2533ed3c49" title=" " alt="" coords="663,352,855,393"/>
@@ -634,7 +634,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  200</span>        this-&gt;smaccStateMachine_-&gt;stateMachineCurrentAction != <a class="code hl_enumvalue" href="namespacesmacc.html#a0889aff43c93fe5285109819d2898144aef27ae3e54b805b81e1efacea3c02575">StateMachineInternalAction::STATE_ENTERING</a>)</div>
 <div class="line"><span class="lineno">  201</span>    {</div>
 <div class="line"><span class="lineno">  202</span>      <span class="comment">// we do not update updatable elements during trasitioning or configuration of states</span></div>
-<div class="line"><span class="lineno">  203</span>      <span class="keywordtype">long</span> currentStateIndex = <a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#a46025de6ac7b5980e22144f9703236a4">smaccStateMachine_</a>-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccStateMachine.html#a66ba5509a3f927ac32c1bde248c92265">getCurrentStateCounter</a>();</div>
+<div class="line"><span class="lineno">  203</span>      <span class="keywordtype">long</span> currentStateIndex = <a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#a46025de6ac7b5980e22144f9703236a4">smaccStateMachine_</a>-&gt;<a class="code hl_function" href="classsmacc_1_1ISmaccStateMachine.html#a8d06ceb80aa405ffc74f5ce519f09d75">getCurrentStateCounter</a>();</div>
 <div class="line"><span class="lineno">  204</span> </div>
 <div class="line"><span class="lineno">  205</span>      ROS_DEBUG_STREAM(<span class="stringliteral">&quot;[PollOnce] update behaviors. checking current state&quot;</span>);</div>
 <div class="line"><span class="lineno">  206</span> </div>
@@ -642,15 +642,15 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  208</span>      <span class="keywordflow">if</span> (currentState != <span class="keyword">nullptr</span>)</div>
 <div class="line"><span class="lineno">  209</span>      {</div>
 <div class="line"><span class="lineno">  210</span>        ROS_DEBUG_STREAM(<span class="stringliteral">&quot;[PollOnce] current state: &quot;</span> &lt;&lt; currentStateIndex);</div>
-<div class="line"><span class="lineno">  211</span>        ROS_DEBUG_STREAM(<span class="stringliteral">&quot;[PollOnce] last state: &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#af0eca5c35855217d255ce93c6c9e3382">lastState_</a>);</div>
+<div class="line"><span class="lineno">  211</span>        ROS_DEBUG_STREAM(<span class="stringliteral">&quot;[PollOnce] last state: &quot;</span> &lt;&lt; this-&gt;<a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#a3b974907a1f1ff139952f56238bb27ce">lastState_</a>);</div>
 <div class="line"><span class="lineno">  212</span> </div>
 <div class="line"><span class="lineno">  213</span>        <span class="keywordflow">if</span> (currentStateIndex != 0)</div>
 <div class="line"><span class="lineno">  214</span>        {</div>
-<div class="line"><span class="lineno">  215</span>          <span class="keywordflow">if</span> (currentStateIndex != this-&gt;<a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#af0eca5c35855217d255ce93c6c9e3382">lastState_</a>)</div>
+<div class="line"><span class="lineno">  215</span>          <span class="keywordflow">if</span> (currentStateIndex != this-&gt;<a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#a3b974907a1f1ff139952f56238bb27ce">lastState_</a>)</div>
 <div class="line"><span class="lineno">  216</span>          {</div>
 <div class="line"><span class="lineno">  217</span>            ROS_DEBUG_STREAM(<span class="stringliteral">&quot;[PollOnce] detected new state, refreshing updatable client behavior table&quot;</span>);</div>
 <div class="line"><span class="lineno">  218</span>            <span class="comment">// we are in a new state, refresh the updatable client behaviors table</span></div>
-<div class="line"><span class="lineno">  219</span>            this-&gt;<a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#af0eca5c35855217d255ce93c6c9e3382">lastState_</a> = currentStateIndex;</div>
+<div class="line"><span class="lineno">  219</span>            this-&gt;<a class="code hl_variable" href="classsmacc_1_1SignalDetector.html#a3b974907a1f1ff139952f56238bb27ce">lastState_</a> = currentStateIndex;</div>
 <div class="line"><span class="lineno">  220</span>            this-&gt;<a class="code hl_function" href="classsmacc_1_1SignalDetector.html#a443234ebdf8cedd45cde725e64639dfe">findUpdatableStateElements</a>(currentState);</div>
 <div class="line"><span class="lineno">  221</span>          }</div>
 <div class="line"><span class="lineno">  222</span> </div>
@@ -674,7 +674,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aclasssmacc_1_1ISmaccStateMachine_html_a5c8d4c9a4b11c7950266a00e48080ce3"><div class="ttname"><a href="classsmacc_1_1ISmaccStateMachine.html#a5c8d4c9a4b11c7950266a00e48080ce3">smacc::ISmaccStateMachine::lockStateMachine</a></div><div class="ttdeci">void lockStateMachine(std::string msg)</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine_8cpp_source.html#l00152">smacc_state_machine.cpp:152</a></div></div>
 <div class="ttc" id="aclasssmacc_1_1ISmaccStateMachine_html_a610d09dc5341fb63732be713c21fbe86"><div class="ttname"><a href="classsmacc_1_1ISmaccStateMachine.html#a610d09dc5341fb63732be713c21fbe86">smacc::ISmaccStateMachine::getCurrentState</a></div><div class="ttdeci">ISmaccState * getCurrentState() const</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine__impl_8h_source.html#l00561">smacc_state_machine_impl.h:561</a></div></div>
 <div class="ttc" id="aclasssmacc_1_1ISmaccStateMachine_html_a654a98ba86c4c1013ac3c371f293d950"><div class="ttname"><a href="classsmacc_1_1ISmaccStateMachine.html#a654a98ba86c4c1013ac3c371f293d950">smacc::ISmaccStateMachine::stateMachineCurrentAction</a></div><div class="ttdeci">StateMachineInternalAction stateMachineCurrentAction</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine_8h_source.html#l00185">smacc_state_machine.h:185</a></div></div>
-<div class="ttc" id="aclasssmacc_1_1ISmaccStateMachine_html_a66ba5509a3f927ac32c1bde248c92265"><div class="ttname"><a href="classsmacc_1_1ISmaccStateMachine.html#a66ba5509a3f927ac32c1bde248c92265">smacc::ISmaccStateMachine::getCurrentStateCounter</a></div><div class="ttdeci">uint64_tt getCurrentStateCounter() const</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine__impl_8h_source.html#l00556">smacc_state_machine_impl.h:556</a></div></div>
+<div class="ttc" id="aclasssmacc_1_1ISmaccStateMachine_html_a8d06ceb80aa405ffc74f5ce519f09d75"><div class="ttname"><a href="classsmacc_1_1ISmaccStateMachine.html#a8d06ceb80aa405ffc74f5ce519f09d75">smacc::ISmaccStateMachine::getCurrentStateCounter</a></div><div class="ttdeci">uint64_t getCurrentStateCounter() const</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine__impl_8h_source.html#l00556">smacc_state_machine_impl.h:556</a></div></div>
 <div class="ttc" id="aclasssmacc_1_1ISmaccStateMachine_html_ae2e3ceb87bfe3f9d8bf320e36071fdc7"><div class="ttname"><a href="classsmacc_1_1ISmaccStateMachine.html#ae2e3ceb87bfe3f9d8bf320e36071fdc7">smacc::ISmaccStateMachine::unlockStateMachine</a></div><div class="ttdeci">void unlockStateMachine(std::string msg)</div><div class="ttdef"><b>Definition:</b> <a href="smacc__state__machine_8cpp_source.html#l00158">smacc_state_machine.cpp:158</a></div></div>
 <div class="ttc" id="aclasssmacc_1_1SignalDetector_html_a443234ebdf8cedd45cde725e64639dfe"><div class="ttname"><a href="classsmacc_1_1SignalDetector.html#a443234ebdf8cedd45cde725e64639dfe">smacc::SignalDetector::findUpdatableStateElements</a></div><div class="ttdeci">void findUpdatableStateElements(ISmaccState *currentState)</div><div class="ttdef"><b>Definition:</b> <a href="signal__detector_8cpp_source.html#l00082">signal_detector.cpp:82</a></div></div>
 <div class="ttc" id="anamespacesmacc_html_a0889aff43c93fe5285109819d2898144a22bd5bb7935dd66f181d92efc273951e"><div class="ttname"><a href="namespacesmacc.html#a0889aff43c93fe5285109819d2898144a22bd5bb7935dd66f181d92efc273951e">smacc::StateMachineInternalAction::STATE_EXITING</a></div><div class="ttdeci">@ STATE_EXITING</div></div>
@@ -695,7 +695,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classsmacc_1_1SignalDetector.html#a47ec2df560e2e33758ce3975bece9385" title=" " alt="" coords="225,88,377,129"/>
 <area shape="rect" href="classsmacc_1_1SignalDetector.html#a443234ebdf8cedd45cde725e64639dfe" title=" " alt="" coords="205,153,397,195"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a610d09dc5341fb63732be713c21fbe86" title=" " alt="" coords="205,219,397,260"/>
-<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a66ba5509a3f927ac32c1bde248c92265" title=" " alt="" coords="205,284,397,325"/>
+<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a8d06ceb80aa405ffc74f5ce519f09d75" title=" " alt="" coords="205,284,397,325"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a5c8d4c9a4b11c7950266a00e48080ce3" title=" " alt="" coords="205,349,397,391"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#ae2e3ceb87bfe3f9d8bf320e36071fdc7" title=" " alt="" coords="205,415,397,456"/>
 <area shape="rect" href="namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302" title=" " alt="" coords="685,29,827,71"/>
@@ -815,7 +815,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="classsmacc_1_1SignalDetector.html#a47ec2df560e2e33758ce3975bece9385" title=" " alt="" coords="637,348,789,389"/>
 <area shape="rect" href="classsmacc_1_1SignalDetector.html#a443234ebdf8cedd45cde725e64639dfe" title=" " alt="" coords="617,413,809,455"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a610d09dc5341fb63732be713c21fbe86" title=" " alt="" coords="617,479,809,520"/>
-<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a66ba5509a3f927ac32c1bde248c92265" title=" " alt="" coords="617,100,809,141"/>
+<area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a8d06ceb80aa405ffc74f5ce519f09d75" title=" " alt="" coords="617,100,809,141"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a5c8d4c9a4b11c7950266a00e48080ce3" title=" " alt="" coords="617,165,809,207"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#ae2e3ceb87bfe3f9d8bf320e36071fdc7" title=" " alt="" coords="617,231,809,272"/>
 <area shape="rect" href="classsmacc_1_1ISmaccStateMachine.html#a7f5b2882dbd077584767cb2533ed3c49" title=" " alt="" coords="863,352,1055,393"/>
@@ -941,8 +941,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="af0eca5c35855217d255ce93c6c9e3382" name="af0eca5c35855217d255ce93c6c9e3382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0eca5c35855217d255ce93c6c9e3382">&#9670;&nbsp;</a></span>lastState_</h2>
+<a id="a3b974907a1f1ff139952f56238bb27ce" name="a3b974907a1f1ff139952f56238bb27ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b974907a1f1ff139952f56238bb27ce">&#9670;&nbsp;</a></span>lastState_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -951,7 +951,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::atomic&lt;uint64_tt&gt; smacc::SignalDetector::lastState_</td>
+          <td class="memname">std::atomic&lt;uint64_t&gt; smacc::SignalDetector::lastState_</td>
         </tr>
       </table>
   </td>
