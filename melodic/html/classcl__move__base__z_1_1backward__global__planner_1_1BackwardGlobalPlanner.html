@@ -428,7 +428,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  179</span>    costmap_2d::Costmap2D *costmap2d = this-&gt;<a class="code hl_variable" href="classcl__move__base__z_1_1backward__global__planner_1_1BackwardGlobalPlanner.html#a7103c15e6540a514acd421c3c6e194a4">costmap_ros_</a>-&gt;getCostmap();</div>
 <div class="line"><span class="lineno">  180</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;p : plan)</div>
 <div class="line"><span class="lineno">  181</span>    {</div>
-<div class="line"><span class="lineno">  182</span>        uint64_t mx, my;</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mx, my;</div>
 <div class="line"><span class="lineno">  183</span>        costmap2d-&gt;worldToMap(p.pose.position.x, p.pose.position.y, mx, my);</div>
 <div class="line"><span class="lineno">  184</span>        <span class="keyword">auto</span> cost = costmap2d-&gt;getCost(mx, my);</div>
 <div class="line"><span class="lineno">  185</span> </div>

@@ -170,7 +170,7 @@ Definition at line \mbox{\hyperlink{forward__global__planner_8cpp_source_l00048}
 \DoxyCodeLine{00096     costmap\_2d::Costmap2D *costmap2d = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1forward__global__planner_1_1ForwardGlobalPlanner_a711d4a0d92a216eb8cab3b42f18eb795}{costmap\_ros\_}}-\/>getCostmap();}
 \DoxyCodeLine{00097     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&p : plan)}
 \DoxyCodeLine{00098     \{}
-\DoxyCodeLine{00099         uint64\_t mx, my;}
+\DoxyCodeLine{00099         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, my;}
 \DoxyCodeLine{00100         costmap2d-\/>worldToMap(p.pose.position.x, p.pose.position.y, mx, my);}
 \DoxyCodeLine{00101         \textcolor{keyword}{auto} cost = costmap2d-\/>getCost(mx, my);}
 \DoxyCodeLine{00102 }
