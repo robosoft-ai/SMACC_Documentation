@@ -27,7 +27,7 @@ Collaboration diagram for cl\+\_\+ros\+\_\+timer\+::Cb\+Timer\+Countdown\+Loop\+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a8cdfe250d9469ea019b61051be123195}{Cb\+Timer\+Countdown\+Loop}} (unsigned long trigger\+Tick\+Count)
+\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_af2190e04608f841f2f7d8ad842daa2d9}{Cb\+Timer\+Countdown\+Loop}} (uint64\+\_\+tt trigger\+Tick\+Count)
 \item 
 virtual void \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aa088f15db4fb2c307c86b30b2e1f7744}{on\+Entry}} () override
 \item 
@@ -45,9 +45,9 @@ void \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_acb16f3448ad59
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-unsigned long \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a2b2d192bae0da3d26c6e3011583f9a6a}{tick\+Counter\+\_\+}}
+uint64\+\_\+tt \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aadb60d58e3c4254271bbd156cd4d6a65}{tick\+Counter\+\_\+}}
 \item 
-unsigned long \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_af377585c3d4499a4eec4668549181ae1}{tick\+Trigger\+Count\+\_\+}}
+uint64\+\_\+tt \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aaf57ea975711b07dc53840c9f88ca4f0}{tick\+Trigger\+Count\+\_\+}}
 \item 
 \mbox{\hyperlink{classcl__ros__timer_1_1ClRosTimer}{Cl\+Ros\+Timer}} $\ast$ \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_acca81b8f1807f8e8faf692fb3f9e4dbd}{timer\+Client\+\_\+}}
 \item 
@@ -66,11 +66,11 @@ Definition at line \mbox{\hyperlink{cb__timer__countdown__loop_8h_source_l00009}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classcl__ros__timer_1_1CbTimerCountdownLoop_a8cdfe250d9469ea019b61051be123195}\label{classcl__ros__timer_1_1CbTimerCountdownLoop_a8cdfe250d9469ea019b61051be123195}} 
+\mbox{\Hypertarget{classcl__ros__timer_1_1CbTimerCountdownLoop_af2190e04608f841f2f7d8ad842daa2d9}\label{classcl__ros__timer_1_1CbTimerCountdownLoop_af2190e04608f841f2f7d8ad842daa2d9}} 
 \index{cl\_ros\_timer::CbTimerCountdownLoop@{cl\_ros\_timer::CbTimerCountdownLoop}!CbTimerCountdownLoop@{CbTimerCountdownLoop}}
 \index{CbTimerCountdownLoop@{CbTimerCountdownLoop}!cl\_ros\_timer::CbTimerCountdownLoop@{cl\_ros\_timer::CbTimerCountdownLoop}}
 \doxysubsubsection{\texorpdfstring{CbTimerCountdownLoop()}{CbTimerCountdownLoop()}}
-{\footnotesize\ttfamily cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+Countdown\+Loop\+::\+Cb\+Timer\+Countdown\+Loop (\begin{DoxyParamCaption}\item[{unsigned long}]{trigger\+Tick\+Count }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+Countdown\+Loop\+::\+Cb\+Timer\+Countdown\+Loop (\begin{DoxyParamCaption}\item[{uint64\+\_\+tt}]{trigger\+Tick\+Count }\end{DoxyParamCaption})}
 
 
 
@@ -78,8 +78,8 @@ Definition at line \mbox{\hyperlink{cb__timer__countdown__loop_8cpp_source_l0000
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00007     : \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_af377585c3d4499a4eec4668549181ae1}{tickTriggerCount\_}}(triggerTickCount),}
-\DoxyCodeLine{00008       \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a2b2d192bae0da3d26c6e3011583f9a6a}{tickCounter\_}}(0)}
+\DoxyCodeLine{00007     : \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aaf57ea975711b07dc53840c9f88ca4f0}{tickTriggerCount\_}}(triggerTickCount),}
+\DoxyCodeLine{00008       \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aadb60d58e3c4254271bbd156cd4d6a65}{tickCounter\_}}(0)}
 \DoxyCodeLine{00009 \{}
 \DoxyCodeLine{00010 \}}
 
@@ -100,9 +100,9 @@ Definition at line \mbox{\hyperlink{cb__timer__countdown__loop_8cpp_source_l0001
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00013 \{}
-\DoxyCodeLine{00014     \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a2b2d192bae0da3d26c6e3011583f9a6a}{tickCounter\_}}++;}
+\DoxyCodeLine{00014     \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aadb60d58e3c4254271bbd156cd4d6a65}{tickCounter\_}}++;}
 \DoxyCodeLine{00015 }
-\DoxyCodeLine{00016     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a2b2d192bae0da3d26c6e3011583f9a6a}{tickCounter\_}} \% \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_af377585c3d4499a4eec4668549181ae1}{tickTriggerCount\_}} == 0)}
+\DoxyCodeLine{00016     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aadb60d58e3c4254271bbd156cd4d6a65}{tickCounter\_}} \% \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aaf57ea975711b07dc53840c9f88ca4f0}{tickTriggerCount\_}} == 0)}
 \DoxyCodeLine{00017     \{}
 \DoxyCodeLine{00018         \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a9df6547f8ddf45107d8850d8a1a92cf4}{onTimerTick\_}}();}
 \DoxyCodeLine{00019         \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aafc2594c2923e4a355394ffb339d1800}{postCountDownEvent\_}}();}
@@ -265,11 +265,11 @@ Definition at line \mbox{\hyperlink{cb__timer__countdown__loop_8h_source_l00036}
 
 Referenced by \mbox{\hyperlink{cb__timer__countdown__loop_8cpp_source_l00012}{on\+Client\+Timer\+Tick\+Callback()}}, and \mbox{\hyperlink{cb__timer__countdown__loop_8h_source_l00018}{on\+Orthogonal\+Allocation()}}.
 
-\mbox{\Hypertarget{classcl__ros__timer_1_1CbTimerCountdownLoop_a2b2d192bae0da3d26c6e3011583f9a6a}\label{classcl__ros__timer_1_1CbTimerCountdownLoop_a2b2d192bae0da3d26c6e3011583f9a6a}} 
+\mbox{\Hypertarget{classcl__ros__timer_1_1CbTimerCountdownLoop_aadb60d58e3c4254271bbd156cd4d6a65}\label{classcl__ros__timer_1_1CbTimerCountdownLoop_aadb60d58e3c4254271bbd156cd4d6a65}} 
 \index{cl\_ros\_timer::CbTimerCountdownLoop@{cl\_ros\_timer::CbTimerCountdownLoop}!tickCounter\_@{tickCounter\_}}
 \index{tickCounter\_@{tickCounter\_}!cl\_ros\_timer::CbTimerCountdownLoop@{cl\_ros\_timer::CbTimerCountdownLoop}}
 \doxysubsubsection{\texorpdfstring{tickCounter\_}{tickCounter\_}}
-{\footnotesize\ttfamily unsigned long cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+Countdown\+Loop\+::tick\+Counter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily uint64\+\_\+tt cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+Countdown\+Loop\+::tick\+Counter\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -279,11 +279,11 @@ Definition at line \mbox{\hyperlink{cb__timer__countdown__loop_8h_source_l00032}
 
 Referenced by \mbox{\hyperlink{cb__timer__countdown__loop_8cpp_source_l00012}{on\+Client\+Timer\+Tick\+Callback()}}.
 
-\mbox{\Hypertarget{classcl__ros__timer_1_1CbTimerCountdownLoop_af377585c3d4499a4eec4668549181ae1}\label{classcl__ros__timer_1_1CbTimerCountdownLoop_af377585c3d4499a4eec4668549181ae1}} 
+\mbox{\Hypertarget{classcl__ros__timer_1_1CbTimerCountdownLoop_aaf57ea975711b07dc53840c9f88ca4f0}\label{classcl__ros__timer_1_1CbTimerCountdownLoop_aaf57ea975711b07dc53840c9f88ca4f0}} 
 \index{cl\_ros\_timer::CbTimerCountdownLoop@{cl\_ros\_timer::CbTimerCountdownLoop}!tickTriggerCount\_@{tickTriggerCount\_}}
 \index{tickTriggerCount\_@{tickTriggerCount\_}!cl\_ros\_timer::CbTimerCountdownLoop@{cl\_ros\_timer::CbTimerCountdownLoop}}
 \doxysubsubsection{\texorpdfstring{tickTriggerCount\_}{tickTriggerCount\_}}
-{\footnotesize\ttfamily unsigned long cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+Countdown\+Loop\+::tick\+Trigger\+Count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily uint64\+\_\+tt cl\+\_\+ros\+\_\+timer\+::\+Cb\+Timer\+Countdown\+Loop\+::tick\+Trigger\+Count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

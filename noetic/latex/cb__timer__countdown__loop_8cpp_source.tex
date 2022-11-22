@@ -7,7 +7,7 @@
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00003}00003 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacecl__ros__timer}{cl\_ros\_timer}}}
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00004}00004 \{}
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00005}00005 }
-\DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00006}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a8cdfe250d9469ea019b61051be123195}{00006}} \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a8cdfe250d9469ea019b61051be123195}{CbTimerCountdownLoop::CbTimerCountdownLoop}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} triggerTickCount)}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00006}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_af2190e04608f841f2f7d8ad842daa2d9}{00006}} \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_af2190e04608f841f2f7d8ad842daa2d9}{CbTimerCountdownLoop::CbTimerCountdownLoop}}(uint64\_tt triggerTickCount)}
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00007}00007     : tickTriggerCount\_(triggerTickCount),}
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00008}00008       tickCounter\_(0)}
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00009}00009 \{}
@@ -15,9 +15,9 @@
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00011}00011 }
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00012}\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_acb16f3448ad5955bf36e7c2cfd9f691c}{00012}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_acb16f3448ad5955bf36e7c2cfd9f691c}{CbTimerCountdownLoop::onClientTimerTickCallback}}()}
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00013}00013 \{}
-\DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00014}00014     \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a2b2d192bae0da3d26c6e3011583f9a6a}{tickCounter\_}}++;}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00014}00014     \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aadb60d58e3c4254271bbd156cd4d6a65}{tickCounter\_}}++;}
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00015}00015 }
-\DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00016}00016     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a2b2d192bae0da3d26c6e3011583f9a6a}{tickCounter\_}} \% \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_af377585c3d4499a4eec4668549181ae1}{tickTriggerCount\_}} == 0)}
+\DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00016}00016     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aadb60d58e3c4254271bbd156cd4d6a65}{tickCounter\_}} \% \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aaf57ea975711b07dc53840c9f88ca4f0}{tickTriggerCount\_}} == 0)}
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00017}00017     \{}
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00018}00018         \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_a9df6547f8ddf45107d8850d8a1a92cf4}{onTimerTick\_}}();}
 \DoxyCodeLine{\Hypertarget{cb__timer__countdown__loop_8cpp_source_l00019}00019         \mbox{\hyperlink{classcl__ros__timer_1_1CbTimerCountdownLoop_aafc2594c2923e4a355394ffb339d1800}{postCountDownEvent\_}}();}

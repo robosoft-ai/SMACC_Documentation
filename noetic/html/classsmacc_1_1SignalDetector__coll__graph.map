@@ -1,11 +1,11 @@
 <map id="smacc::SignalDetector" name="smacc::SignalDetector">
-<area shape="rect" id="node1" title=" " alt="" coords="2156,608,2357,832"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccStateMachine.html" title=" " alt="" coords="2414,1012,2641,1720"/>
+<area shape="rect" id="node1" title=" " alt="" coords="2169,608,2371,832"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccStateMachine.html" title=" " alt="" coords="2427,1012,2654,1720"/>
 <area shape="rect" id="node3" title=" " alt="" coords="577,285,672,362"/>
 <area shape="rect" id="node7" href="$classsmacc_1_1ISmaccState.html" title=" " alt="" coords="942,505,1150,935"/>
-<area shape="rect" id="node4" title=" " alt="" coords="2077,681,2132,759"/>
-<area shape="rect" id="node5" title=" " alt="" coords="1875,285,1951,362"/>
-<area shape="rect" id="node6" title=" " alt="" coords="2382,681,2486,759"/>
+<area shape="rect" id="node4" title=" " alt="" coords="2091,681,2145,759"/>
+<area shape="rect" id="node5" title=" " alt="" coords="1901,285,1977,362"/>
+<area shape="rect" id="node6" title=" " alt="" coords="2395,681,2499,759"/>
 <area shape="rect" id="node8" title=" " alt="" coords="696,277,895,369"/>
 <area shape="rect" id="node9" title=" " alt="" coords="919,277,1173,369"/>
 <area shape="rect" id="node10" href="$classsmacc_1_1introspection_1_1SmaccStateInfo.html" title=" " alt="" coords="1197,219,1377,428"/>
@@ -20,20 +20,20 @@
 <area shape="rect" id="node19" title=" " alt="" coords="1091,27,1279,119"/>
 <area shape="rect" id="node20" title=" " alt="" coords="1303,20,1477,127"/>
 <area shape="rect" id="node21" title=" " alt="" coords="1749,35,1831,112"/>
-<area shape="rect" id="node22" title=" " alt="" coords="2510,681,2611,759"/>
-<area shape="rect" id="node23" title=" " alt="" coords="2635,667,2787,773"/>
-<area shape="rect" id="node24" title=" " alt="" coords="2811,681,2929,759"/>
-<area shape="rect" id="node25" title=" " alt="" coords="2953,681,3136,759"/>
-<area shape="rect" id="node26" title=" " alt="" coords="3161,674,3297,766"/>
-<area shape="rect" id="node27" title=" " alt="" coords="3321,659,3465,781"/>
-<area shape="rect" id="node28" title=" " alt="" coords="3489,674,3677,766"/>
-<area shape="rect" id="node29" title=" " alt="" coords="3701,681,3799,759"/>
-<area shape="rect" id="node30" title=" " alt="" coords="3823,681,3925,759"/>
-<area shape="rect" id="node31" title=" " alt="" coords="2063,285,2301,362"/>
-<area shape="rect" id="node32" title=" " alt="" coords="2325,285,2487,362"/>
-<area shape="rect" id="node33" title=" " alt="" coords="2512,285,2572,362"/>
-<area shape="rect" id="node34" title=" " alt="" coords="2597,285,2703,362"/>
-<area shape="rect" id="node35" title=" " alt="" coords="2728,285,2879,362"/>
-<area shape="rect" id="node36" title=" " alt="" coords="2903,285,3027,362"/>
-<area shape="rect" id="node37" title=" " alt="" coords="1981,285,2039,362"/>
+<area shape="rect" id="node22" title=" " alt="" coords="2523,681,2625,759"/>
+<area shape="rect" id="node23" title=" " alt="" coords="2649,667,2801,773"/>
+<area shape="rect" id="node24" title=" " alt="" coords="2825,681,2942,759"/>
+<area shape="rect" id="node25" title=" " alt="" coords="2967,681,3149,759"/>
+<area shape="rect" id="node26" title=" " alt="" coords="3174,674,3310,766"/>
+<area shape="rect" id="node27" title=" " alt="" coords="3334,659,3478,781"/>
+<area shape="rect" id="node28" title=" " alt="" coords="3503,674,3691,766"/>
+<area shape="rect" id="node29" title=" " alt="" coords="3715,681,3812,759"/>
+<area shape="rect" id="node30" title=" " alt="" coords="3837,681,3909,759"/>
+<area shape="rect" id="node31" title=" " alt="" coords="2091,285,2329,362"/>
+<area shape="rect" id="node32" title=" " alt="" coords="2353,285,2486,362"/>
+<area shape="rect" id="node33" title=" " alt="" coords="2511,285,2571,362"/>
+<area shape="rect" id="node34" title=" " alt="" coords="2595,285,2702,362"/>
+<area shape="rect" id="node35" title=" " alt="" coords="2727,285,2877,362"/>
+<area shape="rect" id="node36" title=" " alt="" coords="2901,285,3025,362"/>
+<area shape="rect" id="node37" title=" " alt="" coords="2009,285,2067,362"/>
 </map>

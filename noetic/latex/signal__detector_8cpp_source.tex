@@ -23,7 +23,7 @@
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00029}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a91ab3cd92d8095cdaf8610b50731f04b}{00029}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a91ab3cd92d8095cdaf8610b50731f04b}{SignalDetector::initialize}}(\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmaccStateMachine}} *stateMachine)}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00030}00030 \{}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00031}00031   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}} = stateMachine;}
-\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00032}00032   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a72293ed0e98f4200fbe75b53f1e41eab}{lastState\_}} = std::numeric\_limits<unsigned long>::quiet\_NaN();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00032}00032   \mbox{\hyperlink{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}{lastState\_}} = std::numeric\_limits<uint64\_tt>::quiet\_NaN();}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00033}00033   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a47ec2df560e2e33758ce3975bece9385}{findUpdatableClients}}();}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00034}00034   \mbox{\hyperlink{classsmacc_1_1SignalDetector_a1b3c54963799b538078619906edd5302}{initialized\_}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00035}00035 \}}
@@ -159,7 +159,7 @@
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00200}00200         this-\/>smaccStateMachine\_-\/>stateMachineCurrentAction != \mbox{\hyperlink{namespacesmacc_a0889aff43c93fe5285109819d2898144aef27ae3e54b805b81e1efacea3c02575}{StateMachineInternalAction::STATE\_ENTERING}})}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00201}00201     \{}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00202}00202       \textcolor{comment}{// we do not update updatable elements during trasitioning or configuration of states}}
-\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00203}00203       \textcolor{keywordtype}{long} currentStateIndex = \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_aad27c0182b53245d0aded22e63cd83bd}{getCurrentStateCounter}}();}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00203}00203       \textcolor{keywordtype}{long} currentStateIndex = \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a66ba5509a3f927ac32c1bde248c92265}{getCurrentStateCounter}}();}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00204}00204 }
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00205}00205       ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] update behaviors. checking current state"{}});}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00206}00206 }
@@ -167,15 +167,15 @@
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00208}00208       \textcolor{keywordflow}{if} (currentState != \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00209}00209       \{}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00210}00210         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] current state: "{}} << currentStateIndex);}
-\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00211}00211         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] last state: "{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a72293ed0e98f4200fbe75b53f1e41eab}{lastState\_}});}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00211}00211         ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] last state: "{}} << this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}{lastState\_}});}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00212}00212 }
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00213}00213         \textcolor{keywordflow}{if} (currentStateIndex != 0)}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00214}00214         \{}
-\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00215}00215           \textcolor{keywordflow}{if} (currentStateIndex != this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a72293ed0e98f4200fbe75b53f1e41eab}{lastState\_}})}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00215}00215           \textcolor{keywordflow}{if} (currentStateIndex != this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}{lastState\_}})}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00216}00216           \{}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00217}00217             ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[PollOnce] detected new state, refreshing updatable client behavior table"{}});}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00218}00218             \textcolor{comment}{// we are in a new state, refresh the updatable client behaviors table}}
-\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00219}00219             this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a72293ed0e98f4200fbe75b53f1e41eab}{lastState\_}} = currentStateIndex;}
+\DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00219}00219             this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_af0eca5c35855217d255ce93c6c9e3382}{lastState\_}} = currentStateIndex;}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00220}00220             this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_a443234ebdf8cedd45cde725e64639dfe}{findUpdatableStateElements}}(currentState);}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00221}00221           \}}
 \DoxyCodeLine{\Hypertarget{signal__detector_8cpp_source_l00222}00222 }
