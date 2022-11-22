@@ -366,7 +366,7 @@ Definition at line \mbox{\hyperlink{forward__local__planner_8cpp_source_l00261}{
 \DoxyCodeLine{00430     \textcolor{comment}{// check plan rejection}}
 \DoxyCodeLine{00431     \textcolor{keywordtype}{bool} aceptedplan = \textcolor{keyword}{true};}
 \DoxyCodeLine{00432 }
-\DoxyCodeLine{00433     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, my;}
+\DoxyCodeLine{00433     uint64\_t mx, my;}
 \DoxyCodeLine{00434 }
 \DoxyCodeLine{00435     \textcolor{keywordtype}{int} i = 0;}
 \DoxyCodeLine{00436     \textcolor{comment}{// ROS\_INFO\_STREAM("{}lplanner goal: "{} << finalgoalpose.pose.position);}}
@@ -383,7 +383,7 @@ Definition at line \mbox{\hyperlink{forward__local__planner_8cpp_source_l00261}{
 \DoxyCodeLine{00447         \}}
 \DoxyCodeLine{00448 }
 \DoxyCodeLine{00449         costmap2d-\/>worldToMap(p[0], p[1], mx, my);}
-\DoxyCodeLine{00450         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cost = costmap2d-\/>getCost(mx, my);}
+\DoxyCodeLine{00450         uint64\_t cost = costmap2d-\/>getCost(mx, my);}
 \DoxyCodeLine{00451 }
 \DoxyCodeLine{00452         \textcolor{comment}{// ROS\_INFO("{}checking cost pt \%d [\%lf, \%lf] cell[\%d,\%d] = \%d"{}, i, p[0], p[1], mx, my, cost);}}
 \DoxyCodeLine{00453         \textcolor{comment}{// ROS\_INFO\_STREAM("{}cost: "{} << cost);}}

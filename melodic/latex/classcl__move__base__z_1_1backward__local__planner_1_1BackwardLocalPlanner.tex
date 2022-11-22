@@ -567,7 +567,7 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00331}
 \DoxyCodeLine{00499             \textcolor{comment}{// check plan rejection}}
 \DoxyCodeLine{00500             \textcolor{keywordtype}{bool} acceptedLocalTrajectoryFreeOfObstacles = \textcolor{keyword}{true};}
 \DoxyCodeLine{00501 }
-\DoxyCodeLine{00502             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, my;}
+\DoxyCodeLine{00502             uint64\_t mx, my;}
 \DoxyCodeLine{00503 }
 \DoxyCodeLine{00504             \textcolor{keywordflow}{if} (this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a154043366660cc02ec758dda32817511}{enable\_obstacle\_checking\_}})}
 \DoxyCodeLine{00505             \{}
@@ -590,7 +590,7 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00331}
 \DoxyCodeLine{00522                         \}}
 \DoxyCodeLine{00523 }
 \DoxyCodeLine{00524                         costmap2d-\/>worldToMap(p[0], p[1], mx, my);}
-\DoxyCodeLine{00525                         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cost = costmap2d-\/>getCost(mx, my);}
+\DoxyCodeLine{00525                         uint64\_t cost = costmap2d-\/>getCost(mx, my);}
 \DoxyCodeLine{00526 }
 \DoxyCodeLine{00527                         \textcolor{comment}{// ROS\_DEBUG("{}[BackwardLocalPlanner] checking cost pt \%d [\%lf, \%lf] cell[\%d,\%d] = \%d"{}, i, p[0], p[1], mx, my, cost);}}
 \DoxyCodeLine{00528                         \textcolor{comment}{// ROS\_DEBUG\_STREAM("{}[BackwardLocalPlanner] cost: "{} << cost);}}
