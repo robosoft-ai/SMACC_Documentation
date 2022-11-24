@@ -158,7 +158,7 @@
 \DoxyCodeLine{\Hypertarget{backward__global__planner_8cpp_source_l00179}00179     costmap\_2d::Costmap2D *costmap2d = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__global__planner_1_1BackwardGlobalPlanner_a7103c15e6540a514acd421c3c6e194a4}{costmap\_ros\_}}-\/>getCostmap();}
 \DoxyCodeLine{\Hypertarget{backward__global__planner_8cpp_source_l00180}00180     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&p : plan)}
 \DoxyCodeLine{\Hypertarget{backward__global__planner_8cpp_source_l00181}00181     \{}
-\DoxyCodeLine{\Hypertarget{backward__global__planner_8cpp_source_l00182}00182         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, my;}
+\DoxyCodeLine{\Hypertarget{backward__global__planner_8cpp_source_l00182}00182         uint32\_t mx, my;}
 \DoxyCodeLine{\Hypertarget{backward__global__planner_8cpp_source_l00183}00183         costmap2d-\/>worldToMap(p.pose.position.x, p.pose.position.y, mx, my);}
 \DoxyCodeLine{\Hypertarget{backward__global__planner_8cpp_source_l00184}00184         \textcolor{keyword}{auto} cost = costmap2d-\/>getCost(mx, my);}
 \DoxyCodeLine{\Hypertarget{backward__global__planner_8cpp_source_l00185}00185 }

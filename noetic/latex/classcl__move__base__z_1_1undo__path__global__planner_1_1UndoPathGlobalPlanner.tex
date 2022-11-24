@@ -364,7 +364,7 @@ Definition at line \mbox{\hyperlink{undo__path__global__planner_8cpp_source_l002
 \DoxyCodeLine{00286             costmap\_2d::Costmap2D *costmap2d = this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner_ab63eeb465e3ae989a6edcc4d059cf8f0}{costmap\_ros\_}}-\/>getCostmap();}
 \DoxyCodeLine{00287             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&p : plan)}
 \DoxyCodeLine{00288             \{}
-\DoxyCodeLine{00289                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mx, my;}
+\DoxyCodeLine{00289                 uint32\_t mx, my;}
 \DoxyCodeLine{00290                 costmap2d-\/>worldToMap(p.pose.position.x, p.pose.position.y, mx, my);}
 \DoxyCodeLine{00291                 \textcolor{keyword}{auto} cost = costmap2d-\/>getCost(mx, my);}
 \DoxyCodeLine{00292 }
