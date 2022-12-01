@@ -1,0 +1,13 @@
+digraph "smacc::client_bases::SmaccSubscriberClient::onMessageReceived"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="smacc::client_bases\l::SmaccSubscriberClient\l::onMessageReceived",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="cl_multirole_sensor\l::ClMultiroleSensor\l::initialize",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__multirole__sensor_1_1ClMultiroleSensor.html#a3847e19f925f65dd034964eb2d0b3594",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="smacc::CbSubscriptionCallback\lBase::onEntry",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1CbSubscriptionCallbackBase.html#a1092b6c0d6fd428be86939559bed1e16",tooltip=" "];
+}

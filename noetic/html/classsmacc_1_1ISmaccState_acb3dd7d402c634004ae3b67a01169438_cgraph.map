@@ -1,6 +1,6 @@
 <map id="smacc::ISmaccState::notifyTransitionFromTransitionTypeInfo" name="smacc::ISmaccState::notifyTransitionFromTransitionTypeInfo">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,208,87"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccState.html#a99ccacd52b422f9ee53cf892f6204618" title=" " alt="" coords="281,5,423,47"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccStateMachine.html#a06cc53c282c93692829b6efd28e315f4" title=" " alt="" coords="256,71,448,112"/>
-<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#a6c1b51c4d44fd5e41fe218f1ee150681" title=" " alt="" coords="496,71,639,112"/>
+<area shape="rect" id="node1" title=" " coords="5,30,208,85"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccState.html#a99ccacd52b422f9ee53cf892f6204618" title=" " coords="281,5,423,45"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccStateMachine.html#a06cc53c282c93692829b6efd28e315f4" title=" " coords="256,69,448,109"/>
+<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#a6c1b51c4d44fd5e41fe218f1ee150681" title=" " coords="496,69,639,109"/>
 </map>

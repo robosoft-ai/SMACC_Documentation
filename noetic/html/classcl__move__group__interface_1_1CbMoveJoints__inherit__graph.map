@@ -1,7 +1,7 @@
 <map id="cl_move_group_interface::CbMoveJoints" name="cl_move_group_interface::CbMoveJoints">
-<area shape="rect" id="node1" title=" " alt="" coords="123,755,290,949"/>
-<area shape="rect" id="node4" href="$classcl__move__group__interface_1_1CbMoveKnownState.html" title=" " alt="" coords="5,1027,184,1148"/>
-<area shape="rect" id="node5" href="$classcl__move__group__interface_1_1CbMoveLastTrajectoryInitialState.html" title=" " alt="" coords="208,997,429,1177"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1SmaccAsyncClientBehavior.html" title=" " alt="" coords="93,395,321,707"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClientBehavior.html" title=" " alt="" coords="109,5,305,347"/>
+<area shape="rect" id="node1" title=" " coords="121,739,292,925"/>
+<area shape="rect" id="node4" href="$classcl__move__group__interface_1_1CbMoveKnownState.html" title=" " coords="5,1010,184,1109"/>
+<area shape="rect" id="node5" href="$classcl__move__group__interface_1_1CbMoveLastTrajectoryInitialState.html" title=" " coords="208,973,429,1145"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1SmaccAsyncClientBehavior.html" title=" " coords="91,387,323,691"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClientBehavior.html" title=" " coords="107,5,307,339"/>
 </map>

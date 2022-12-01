@@ -1,5 +1,5 @@
 <map id="smacc::event_generators::EgConditionalGenerator" name="smacc::event_generators::EgConditionalGenerator">
-<area shape="rect" id="node1" title=" " alt="" coords="120,263,297,472"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1SmaccEventGenerator.html" title=" " alt="" coords="5,5,204,215"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccUpdatable.html" title=" " alt="" coords="229,35,399,185"/>
+<area shape="rect" id="node1" title=" " coords="123,255,303,456"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1SmaccEventGenerator.html" title=" " coords="5,5,208,207"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccUpdatable.html" title=" " coords="233,35,407,177"/>
 </map>

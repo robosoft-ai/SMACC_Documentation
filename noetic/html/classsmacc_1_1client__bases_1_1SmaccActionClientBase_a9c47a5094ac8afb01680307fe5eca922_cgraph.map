@@ -1,6 +1,6 @@
 <map id="smacc::client_bases::SmaccActionClientBase::sendGoal" name="smacc::client_bases::SmaccActionClientBase::sendGoal">
-<area shape="rect" id="node1" title=" " alt="" coords="5,58,175,114"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccClient.html#a8c3ce19f182e71909c5dc6263d25be69" title=" " alt="" coords="223,29,368,71"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1client__bases_1_1ISmaccActionClient.html#af7e68149691fe6c9284f6f80c19932d8" title=" " alt="" coords="224,94,367,150"/>
-<area shape="rect" id="node3" href="$namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302" title=" " alt="" coords="416,29,557,71"/>
+<area shape="rect" id="node1" title=" " coords="5,58,175,113"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccClient.html#a8c3ce19f182e71909c5dc6263d25be69" title=" " coords="223,29,368,69"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1client__bases_1_1ISmaccActionClient.html#af7e68149691fe6c9284f6f80c19932d8" title=" " coords="224,94,367,149"/>
+<area shape="rect" id="node3" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " coords="416,29,557,69"/>
 </map>

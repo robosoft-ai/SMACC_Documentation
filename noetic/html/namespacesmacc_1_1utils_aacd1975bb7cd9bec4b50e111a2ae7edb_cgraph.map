@@ -1,8 +1,8 @@
 <map id="smacc::utils::cleanShortTypeName" name="smacc::utils::cleanShortTypeName">
-<area shape="rect" id="node1" title=" " alt="" coords="5,65,164,107"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1introspection_1_1TypeInfo.html#ada1e604cd8bf968a5f816fbace4af881" title=" " alt="" coords="212,65,415,107"/>
-<area shape="rect" id="node3" href="$namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302" title=" " alt="" coords="483,29,625,71"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1introspection_1_1TypeInfo.html#a47d65b6c61499d7ae8ab9f6325c84837" title=" " alt="" coords="463,94,645,150"/>
-<area shape="rect" id="node5" href="$namespacesmacc_1_1introspection.html#a48571b9bf3b115d2a83cc0147c96d0bd" title=" " alt="" coords="883,101,1024,143"/>
-<area shape="rect" id="node6" href="$namespacesmacc_1_1introspection.html#a03d7d3379217139c51d5e7df81c7ccc2" title=" " alt="" coords="693,131,835,172"/>
+<area shape="rect" id="node1" title=" " coords="5,65,164,105"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1introspection_1_1TypeInfo.html#ada1e604cd8bf968a5f816fbace4af881" title=" " coords="212,65,415,105"/>
+<area shape="rect" id="node3" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " coords="483,29,625,69"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1introspection_1_1TypeInfo.html#a47d65b6c61499d7ae8ab9f6325c84837" title=" " coords="463,94,645,149"/>
+<area shape="rect" id="node5" href="$namespacesmacc_1_1introspection.html#a48571b9bf3b115d2a83cc0147c96d0bd" title=" " coords="883,101,1024,141"/>
+<area shape="rect" id="node6" href="$namespacesmacc_1_1introspection.html#a03d7d3379217139c51d5e7df81c7ccc2" title=" " coords="693,129,835,169"/>
 </map>

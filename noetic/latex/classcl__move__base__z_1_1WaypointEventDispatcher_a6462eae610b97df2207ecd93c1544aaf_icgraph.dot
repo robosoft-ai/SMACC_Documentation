@@ -1,0 +1,15 @@
+digraph "cl_move_base_z::WaypointEventDispatcher::postWaypointEvent"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="cl_move_base_z::Waypoint\lEventDispatcher::postWaypointEvent",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="cl_move_base_z::Waypoint\lNavigator::onGoalReached",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1WaypointNavigator.html#ae10ba80b7e46b62096cac96609f66893",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="cl_move_base_z::Waypoint\lNavigator::sendNextGoal",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1WaypointNavigator.html#a1e0a8ff536d2d01a01063fd903029347",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="cl_move_base_z::CbNavigate\lNextWaypoint::onEntry",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1CbNavigateNextWaypoint.html#a04913ef24344363669c1916b5df28493",tooltip=" "];
+}

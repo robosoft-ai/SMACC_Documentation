@@ -1,6 +1,6 @@
 <map id="smacc::client_bases::SmaccActionClientBase::onSucceeded" name="smacc::client_bases::SmaccActionClientBase::onSucceeded">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,175,87"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " alt="" coords="223,5,415,47"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClient.html#aec51d4712404cb9882b86e4c854bb93a" title=" " alt="" coords="246,71,391,112"/>
-<area shape="rect" id="node3" href="$structsmacc_1_1utils_1_1Bind.html#aa0f4ba76fbd5fdb865df51b61d4269f3" title=" " alt="" coords="463,5,585,47"/>
+<area shape="rect" id="node1" title=" " coords="5,30,175,85"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " coords="223,5,415,45"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClient.html#aec51d4712404cb9882b86e4c854bb93a" title=" " coords="246,69,391,109"/>
+<area shape="rect" id="node3" href="$structsmacc_1_1utils_1_1Bind.html#aa0f4ba76fbd5fdb865df51b61d4269f3" title=" " coords="463,5,585,45"/>
 </map>

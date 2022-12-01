@@ -1,7 +1,7 @@
 <map id="smacc/include/smacc/client_bases/smacc_publisher_client.h" name="smacc/include/smacc/client_bases/smacc_publisher_client.h">
-<area shape="rect" id="node1" title=" " alt="" coords="209,5,358,61"/>
-<area shape="rect" id="node2" href="$cl__ros__publisher_8h.html" title=" " alt="" coords="199,109,367,180"/>
-<area shape="rect" id="node3" href="$cb__default__publish__loop_8h.html" title=" " alt="" coords="5,228,180,313"/>
-<area shape="rect" id="node4" href="$cb__muted__behavior_8h.html" title=" " alt="" coords="204,228,363,313"/>
-<area shape="rect" id="node5" href="$cb__publish__once_8h.html" title=" " alt="" coords="387,228,545,313"/>
+<area shape="rect" id="node1" title=" " coords="209,5,358,60"/>
+<area shape="rect" id="node2" href="$cl__ros__publisher_8h.html" title=" " coords="199,108,367,177"/>
+<area shape="rect" id="node3" href="$cb__default__publish__loop_8h.html" title=" " coords="5,225,180,309"/>
+<area shape="rect" id="node4" href="$cb__muted__behavior_8h.html" title=" " coords="204,225,363,309"/>
+<area shape="rect" id="node5" href="$cb__publish__once_8h.html" title=" " coords="387,225,545,309"/>
 </map>

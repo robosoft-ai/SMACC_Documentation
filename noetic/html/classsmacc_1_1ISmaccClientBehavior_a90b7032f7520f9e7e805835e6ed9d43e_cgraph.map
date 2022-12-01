@@ -1,6 +1,6 @@
 <map id="smacc::ISmaccClientBehavior::executeOnEntry" name="smacc::ISmaccClientBehavior::executeOnEntry">
-<area shape="rect" id="node1" title=" " alt="" coords="5,63,201,104"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccClientBehavior.html#a18e4bec9460b010f2894c0f7e7064a34" title=" " alt="" coords="249,29,445,71"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClientBehavior.html#a9877684b1954429719826e2d0924d980" title=" " alt="" coords="249,95,445,136"/>
-<area shape="rect" id="node3" href="$namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302" title=" " alt="" coords="493,29,635,71"/>
+<area shape="rect" id="node1" title=" " coords="5,61,201,101"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccClientBehavior.html#a18e4bec9460b010f2894c0f7e7064a34" title=" " coords="249,29,445,69"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClientBehavior.html#a9877684b1954429719826e2d0924d980" title=" " coords="249,93,445,133"/>
+<area shape="rect" id="node3" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " coords="493,29,635,69"/>
 </map>

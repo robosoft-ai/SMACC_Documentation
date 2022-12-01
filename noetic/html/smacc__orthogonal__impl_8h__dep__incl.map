@@ -1,115 +1,115 @@
 <map id="smacc/include/smacc/impl/smacc_orthogonal_impl.h" name="smacc/include/smacc/impl/smacc_orthogonal_impl.h">
-<area shape="rect" id="node1" title=" " alt="" coords="4369,5,4529,61"/>
-<area shape="rect" id="node2" href="$smacc__state__machine_8h.html" title=" " alt="" coords="4365,109,4532,151"/>
-<area shape="rect" id="node3" href="$smacc__action__client_8h.html" title=" " alt="" coords="2603,199,2753,255"/>
-<area shape="rect" id="node6" href="$signal__detector_8cpp.html" title=" " alt="" coords="5,458,169,499"/>
-<area shape="rect" id="node36" href="$smacc__state__machine_8cpp.html" title=" " alt="" coords="3151,325,3320,366"/>
-<area shape="rect" id="node38" href="$smacc__asynchronous__client__behavior__impl_8h.html" title=" " alt="" coords="5401,317,5581,373"/>
-<area shape="rect" id="node69" href="$smacc__client__behavior__impl_8h.html" title=" " alt="" coords="3490,199,3677,255"/>
-<area shape="rect" id="node73" href="$smacc__state__impl_8h.html" title=" " alt="" coords="4541,458,4711,499"/>
-<area shape="rect" id="node89" href="$smacc__state__machine__impl_8h.html" title=" " alt="" coords="4225,199,4411,255"/>
-<area shape="rect" id="node94" href="$smacc__state__machine__base_8h.html" title=" " alt="" coords="4663,199,4821,255"/>
-<area shape="rect" id="node112" href="$smacc__state_8cpp.html" title=" " alt="" coords="4845,206,5015,247"/>
-<area shape="rect" id="node113" href="$smacc__state__machine__info_8cpp.html" title=" " alt="" coords="5039,206,5208,247"/>
-<area shape="rect" id="node4" href="$smacc__action__client__base_8h.html" title=" " alt="" coords="1366,317,1515,373"/>
-<area shape="rect" id="node35" href="$smacc__action__client_8cpp.html" title=" " alt="" coords="2573,325,2783,366"/>
-<area shape="rect" id="node37" href="$planner__switcher_8h.html" title=" " alt="" coords="1980,303,2240,388"/>
-<area shape="rect" id="node5" href="$common_8cpp.html" title=" " alt="" coords="193,465,397,492"/>
-<area shape="rect" id="node7" href="$move__base__z__client__plugin_8h.html" title=" " alt="" coords="2085,436,2306,521"/>
-<area shape="rect" id="node8" href="$cb__move__base__client__behavior__base_8h.html" title=" " alt="" coords="1841,577,2157,662"/>
-<area shape="rect" id="node18" href="$cb__navigate__next__waypoint_8h.html" title=" " alt="" coords="2649,725,2907,810"/>
-<area shape="rect" id="node27" href="$cp__costmap__switch_8h.html" title=" " alt="" coords="2517,577,2777,662"/>
-<area shape="rect" id="node29" href="$waypoints__event__dispatcher_8h.html" title=" " alt="" coords="3412,569,3672,669"/>
-<area shape="rect" id="node30" href="$waypoints__navigator_8h.html" title=" " alt="" coords="3152,725,3428,810"/>
-<area shape="rect" id="node31" href="$waypoints__navigator_8cpp.html" title=" " alt="" coords="3519,873,3738,958"/>
-<area shape="rect" id="node33" href="$planner__switcher_8cpp.html" title=" " alt="" coords="2801,577,3000,662"/>
-<area shape="rect" id="node34" href="$move__base__z__client__plugin_8cpp.html" title=" " alt="" coords="2284,584,2493,655"/>
-<area shape="rect" id="node9" href="$cb__absolute__rotate_8h.html" title=" " alt="" coords="1897,725,2117,810"/>
-<area shape="rect" id="node12" href="$cb__navigate__backwards_8h.html" title=" " alt="" coords="2385,725,2624,810"/>
-<area shape="rect" id="node14" href="$cb__navigate__forward_8h.html" title=" " alt="" coords="1653,725,1873,810"/>
-<area shape="rect" id="node16" href="$cb__navigate__global__position_8h.html" title=" " alt="" coords="849,725,1112,810"/>
-<area shape="rect" id="node20" href="$cb__rotate_8h.html" title=" " alt="" coords="2141,725,2361,810"/>
-<area shape="rect" id="node22" href="$cb__undo__path__backwards_8h.html" title=" " alt="" coords="574,725,825,810"/>
-<area shape="rect" id="node24" href="$cb__undo__path__backwards2_8h.html" title=" " alt="" coords="1372,725,1629,810"/>
-<area shape="rect" id="node26" href="$cb__move__base__client__behavior__base_8cpp.html" title=" " alt="" coords="1137,725,1347,810"/>
-<area shape="rect" id="node10" href="$move__base__z__client_2move__base__z__client__plugin_2include_2move__base__z__client__plugin_2client__behaviors_8h.html" title=" " alt="" coords="1676,873,1896,958"/>
-<area shape="rect" id="node11" href="$cb__absolute__rotate_8cpp.html" title=" " alt="" coords="1921,873,2115,958"/>
-<area shape="rect" id="node13" href="$cb__navigate__backward_8cpp.html" title=" " alt="" coords="2407,873,2602,958"/>
-<area shape="rect" id="node15" href="$cb__navigate__forward_8cpp.html" title=" " alt="" coords="1457,873,1651,958"/>
-<area shape="rect" id="node17" href="$cb__navigate__global__position_8cpp.html" title=" " alt="" coords="849,873,1043,958"/>
-<area shape="rect" id="node19" href="$cb__navigate__next__waypoint_8cpp.html" title=" " alt="" coords="2937,873,3131,958"/>
-<area shape="rect" id="node21" href="$cb__rotate_8cpp.html" title=" " alt="" coords="2150,880,2353,951"/>
-<area shape="rect" id="node23" href="$cb__undo__path__backwards_8cpp.html" title=" " alt="" coords="477,873,657,958"/>
-<area shape="rect" id="node25" href="$cb__undo__path__backwards2_8cpp.html" title=" " alt="" coords="1155,873,1335,958"/>
-<area shape="rect" id="node28" href="$cp__costmap__switch_8cpp.html" title=" " alt="" coords="2932,725,3128,810"/>
-<area shape="rect" id="node32" href="$waypoints__event__dispatcher_8cpp.html" title=" " alt="" coords="3453,725,3671,810"/>
-<area shape="rect" id="node39" href="$smacc__asynchronous__client__behavior_8h.html" title=" " alt="" coords="5415,451,5567,507"/>
-<area shape="rect" id="node40" href="$smacc__client__async__behavior_8cpp.html" title=" " alt="" coords="4938,599,5119,640"/>
-<area shape="rect" id="node41" href="$cb__move__cartesian__relative_8h.html" title=" " alt="" coords="6007,569,6210,669"/>
-<area shape="rect" id="node44" href="$cb__move__cartesian__relative2_8h.html" title=" " alt="" coords="6234,569,6437,669"/>
-<area shape="rect" id="node45" href="$cb__move__end__effector_8h.html" title=" " alt="" coords="5752,577,5983,662"/>
-<area shape="rect" id="node47" href="$cb__move__end__effector__relative_8h.html" title=" " alt="" coords="5508,569,5728,669"/>
-<area shape="rect" id="node49" href="$cb__move__end__effector__trajectory_8h.html" title=" " alt="" coords="6461,569,6681,669"/>
-<area shape="rect" id="node61" href="$cb__move__joints_8h.html" title=" " alt="" coords="4811,725,5001,810"/>
-<area shape="rect" id="node67" href="$cb__move__named__target_8h.html" title=" " alt="" coords="5245,577,5484,662"/>
-<area shape="rect" id="node42" href="$move__group__interface__client_2include_2move__group__interface__client_2client__behaviors_8h.html" title=" " alt="" coords="6099,1021,6279,1106"/>
-<area shape="rect" id="node43" href="$cb__move__cartesian__relative_8cpp.html" title=" " alt="" coords="5905,717,6107,817"/>
-<area shape="rect" id="node46" href="$cb__move__end__effector_8cpp.html" title=" " alt="" coords="5585,725,5829,810"/>
-<area shape="rect" id="node48" href="$cb__move__end__effector__relative_8cpp.html" title=" " alt="" coords="5289,717,5509,817"/>
-<area shape="rect" id="node50" href="$cb__circular__pivot__motion_8h.html" title=" " alt="" coords="6945,717,7131,817"/>
-<area shape="rect" id="node55" href="$cb__execute__last__trajectory_8h.html" title=" " alt="" coords="6477,717,6660,817"/>
-<area shape="rect" id="node57" href="$cb__pouring__motion_8h.html" title=" " alt="" coords="7155,725,7363,810"/>
-<area shape="rect" id="node58" href="$cb__undo__last__trajectory_8h.html" title=" " alt="" coords="6684,725,6920,810"/>
-<area shape="rect" id="node60" href="$cb__move__end__effector__trajectory_8cpp.html" title=" " alt="" coords="6233,717,6453,817"/>
-<area shape="rect" id="node51" href="$cb__end__effector__rotate_8h.html" title=" " alt="" coords="6942,865,7123,965"/>
-<area shape="rect" id="node53" href="$cb__circular__pivot__motion_8cpp.html" title=" " alt="" coords="6731,865,6918,965"/>
-<area shape="rect" id="node54" href="$cb__pouring__motion_8cpp.html" title=" " alt="" coords="7148,873,7371,958"/>
-<area shape="rect" id="node52" href="$cb__end__effector__rotate_8cpp.html" title=" " alt="" coords="6942,1013,7123,1113"/>
-<area shape="rect" id="node56" href="$cb__execute__last__trajectory_8cpp.html" title=" " alt="" coords="6097,865,6280,965"/>
-<area shape="rect" id="node59" href="$cb__undo__last__trajectory_8cpp.html" title=" " alt="" coords="6355,873,6606,958"/>
-<area shape="rect" id="node62" href="$cb__move__known__state_8h.html" title=" " alt="" coords="4692,873,4925,958"/>
-<area shape="rect" id="node64" href="$cb__move__last__trajectory__initial__state_8h.html" title=" " alt="" coords="4949,865,5180,965"/>
-<area shape="rect" id="node66" href="$cb__move__joints_8cpp.html" title=" " alt="" coords="5204,873,5408,958"/>
-<area shape="rect" id="node63" href="$cb__move__known__state_8cpp.html" title=" " alt="" coords="4715,1013,4902,1113"/>
-<area shape="rect" id="node65" href="$cb__move__last__trajectory__initial__state_8cpp.html" title=" " alt="" coords="4949,1013,5180,1113"/>
-<area shape="rect" id="node68" href="$cb__move__named__target_8cpp.html" title=" " alt="" coords="5025,717,5213,817"/>
-<area shape="rect" id="node70" href="$smacc__client__behavior_8h.html" title=" " alt="" coords="3499,325,3668,366"/>
-<area shape="rect" id="node71" href="$cb__service__server__callback__base_8h.html" title=" " alt="" coords="3389,443,3575,514"/>
-<area shape="rect" id="node72" href="$cb__subscription__callback__base_8h.html" title=" " alt="" coords="3600,443,3772,514"/>
-<area shape="rect" id="node79" href="$cb__default__keyboard__behavior_8h.html" title=" " alt="" coords="4023,873,4231,958"/>
-<area shape="rect" id="node82" href="$cb__default__multirole__sensor__behavior_8h.html" title=" " alt="" coords="3763,873,3999,958"/>
-<area shape="rect" id="node83" href="$orthogonal_8cpp.html" title=" " alt="" coords="3899,465,4113,492"/>
-<area shape="rect" id="node84" href="$smacc__client__behavior_8cpp.html" title=" " alt="" coords="2432,458,2601,499"/>
-<area shape="rect" id="node85" href="$smacc__client__behavior__base_8cpp.html" title=" " alt="" coords="2625,458,2800,499"/>
-<area shape="rect" id="node86" href="$cb__default__publish__loop_8h.html" title=" " alt="" coords="2824,436,2999,521"/>
-<area shape="rect" id="node87" href="$cb__muted__behavior_8h.html" title=" " alt="" coords="3023,436,3181,521"/>
-<area shape="rect" id="node88" href="$cb__publish__once_8h.html" title=" " alt="" coords="3205,436,3364,521"/>
-<area shape="rect" id="node74" href="$smacc__subscriber__client_8h.html" title=" " alt="" coords="4329,591,4478,647"/>
-<area shape="rect" id="node75" href="$cp__topic__subscriber_8h.html" title=" " alt="" coords="4109,739,4279,795"/>
-<area shape="rect" id="node76" href="$cl__battery__monitor_8h.html" title=" " alt="" coords="4527,732,4707,803"/>
-<area shape="rect" id="node78" href="$cl__keyboard_8h.html" title=" " alt="" coords="4304,739,4503,795"/>
-<area shape="rect" id="node81" href="$cl__multirole__sensor_8h.html" title=" " alt="" coords="3847,732,4034,803"/>
-<area shape="rect" id="node77" href="$cl__battery__monitor_8cpp.html" title=" " alt="" coords="4493,880,4668,951"/>
-<area shape="rect" id="node80" href="$cl__keyboard_8cpp.html" title=" " alt="" coords="4255,887,4469,943"/>
-<area shape="rect" id="node90" href="$smacc__client__impl_8h.html" title=" " alt="" coords="4101,325,4273,366"/>
-<area shape="rect" id="node92" href="$smacc__component__impl_8h.html" title=" " alt="" coords="4349,317,4513,373"/>
-<area shape="rect" id="node91" href="$client_8cpp.html" title=" " alt="" coords="4137,465,4323,492"/>
-<area shape="rect" id="node93" href="$smacc__component_8cpp.html" title=" " alt="" coords="4347,458,4516,499"/>
-<area shape="rect" id="node95" href="$smacc_8h.html" title=" " alt="" coords="6603,325,6753,366"/>
-<area shape="rect" id="node96" href="$cl__movegroup_8h.html" title=" " alt="" coords="6344,443,6556,514"/>
-<area shape="rect" id="node97" href="$cb__attach__object_8h.html" title=" " alt="" coords="7007,577,7205,662"/>
-<area shape="rect" id="node99" href="$cb__detach__object_8h.html" title=" " alt="" coords="7229,577,7431,662"/>
-<area shape="rect" id="node102" href="$cp__grasping__objects_8h.html" title=" " alt="" coords="7345,436,7537,521"/>
-<area shape="rect" id="node104" href="$cl__ros__timer_8h.html" title=" " alt="" coords="7966,443,8129,514"/>
-<area shape="rect" id="node105" href="$cb__ros__timer_8h.html" title=" " alt="" coords="7723,584,7897,655"/>
-<area shape="rect" id="node107" href="$cb__timer__countdown__loop_8h.html" title=" " alt="" coords="7922,584,8173,655"/>
-<area shape="rect" id="node109" href="$cb__timer__countdown__once_8h.html" title=" " alt="" coords="8372,584,8627,655"/>
-<area shape="rect" id="node100" href="$cb__detach__object_8cpp.html" title=" " alt="" coords="7489,725,7704,810"/>
-<area shape="rect" id="node101" href="$cl__movegroup_8cpp.html" title=" " alt="" coords="6706,584,6933,655"/>
-<area shape="rect" id="node98" href="$cb__attach__object_8cpp.html" title=" " alt="" coords="7728,725,7940,810"/>
-<area shape="rect" id="node103" href="$cp__grasping__objects_8cpp.html" title=" " alt="" coords="7455,577,7647,662"/>
-<area shape="rect" id="node111" href="$timer__client_8cpp.html" title=" " alt="" coords="8197,584,8348,655"/>
-<area shape="rect" id="node106" href="$cb__timer_8cpp.html" title=" " alt="" coords="8015,739,8211,795"/>
-<area shape="rect" id="node108" href="$cb__timer__countdown__loop_8cpp.html" title=" " alt="" coords="8235,732,8407,803"/>
-<area shape="rect" id="node110" href="$cb__timer__countdown__once_8cpp.html" title=" " alt="" coords="8431,732,8603,803"/>
+<area shape="rect" id="node1" title=" " coords="4369,5,4529,60"/>
+<area shape="rect" id="node2" href="$smacc__state__machine_8h.html" title=" " coords="4365,108,4532,148"/>
+<area shape="rect" id="node3" href="$smacc__action__client_8h.html" title=" " coords="2605,196,2754,251"/>
+<area shape="rect" id="node6" href="$signal__detector_8cpp.html" title=" " coords="5,453,169,493"/>
+<area shape="rect" id="node36" href="$smacc__state__machine_8cpp.html" title=" " coords="3151,321,3320,361"/>
+<area shape="rect" id="node38" href="$smacc__asynchronous__client__behavior__impl_8h.html" title=" " coords="5401,313,5581,368"/>
+<area shape="rect" id="node69" href="$smacc__client__behavior__impl_8h.html" title=" " coords="3490,196,3677,251"/>
+<area shape="rect" id="node73" href="$smacc__state__impl_8h.html" title=" " coords="4541,453,4711,493"/>
+<area shape="rect" id="node89" href="$smacc__state__machine__impl_8h.html" title=" " coords="4225,196,4411,251"/>
+<area shape="rect" id="node94" href="$smacc__state__machine__base_8h.html" title=" " coords="4663,196,4821,251"/>
+<area shape="rect" id="node112" href="$smacc__state_8cpp.html" title=" " coords="4845,203,5015,243"/>
+<area shape="rect" id="node113" href="$smacc__state__machine__info_8cpp.html" title=" " coords="5039,203,5208,243"/>
+<area shape="rect" id="node4" href="$smacc__action__client__base_8h.html" title=" " coords="1365,313,1514,368"/>
+<area shape="rect" id="node35" href="$smacc__action__client_8cpp.html" title=" " coords="2574,321,2785,361"/>
+<area shape="rect" id="node37" href="$planner__switcher_8h.html" title=" " coords="1980,299,2240,383"/>
+<area shape="rect" id="node5" href="$common_8cpp.html" title=" " coords="193,460,397,485"/>
+<area shape="rect" id="node7" href="$move__base__z__client__plugin_8h.html" title=" " coords="2085,431,2306,515"/>
+<area shape="rect" id="node8" href="$cb__move__base__client__behavior__base_8h.html" title=" " coords="1841,570,2157,654"/>
+<area shape="rect" id="node18" href="$cb__navigate__next__waypoint_8h.html" title=" " coords="2649,717,2907,801"/>
+<area shape="rect" id="node27" href="$cp__costmap__switch_8h.html" title=" " coords="2517,570,2777,654"/>
+<area shape="rect" id="node29" href="$waypoints__event__dispatcher_8h.html" title=" " coords="3411,563,3671,661"/>
+<area shape="rect" id="node30" href="$waypoints__navigator_8h.html" title=" " coords="3152,717,3428,801"/>
+<area shape="rect" id="node31" href="$waypoints__navigator_8cpp.html" title=" " coords="3519,863,3738,947"/>
+<area shape="rect" id="node33" href="$planner__switcher_8cpp.html" title=" " coords="2801,570,3000,654"/>
+<area shape="rect" id="node34" href="$move__base__z__client__plugin_8cpp.html" title=" " coords="2284,577,2493,647"/>
+<area shape="rect" id="node9" href="$cb__absolute__rotate_8h.html" title=" " coords="1897,717,2117,801"/>
+<area shape="rect" id="node12" href="$cb__navigate__backwards_8h.html" title=" " coords="2385,717,2624,801"/>
+<area shape="rect" id="node14" href="$cb__navigate__forward_8h.html" title=" " coords="1653,717,1873,801"/>
+<area shape="rect" id="node16" href="$cb__navigate__global__position_8h.html" title=" " coords="849,717,1112,801"/>
+<area shape="rect" id="node20" href="$cb__rotate_8h.html" title=" " coords="2141,717,2361,801"/>
+<area shape="rect" id="node22" href="$cb__undo__path__backwards_8h.html" title=" " coords="574,717,825,801"/>
+<area shape="rect" id="node24" href="$cb__undo__path__backwards2_8h.html" title=" " coords="1372,717,1629,801"/>
+<area shape="rect" id="node26" href="$cb__move__base__client__behavior__base_8cpp.html" title=" " coords="1137,717,1347,801"/>
+<area shape="rect" id="node10" href="$move__base__z__client_2move__base__z__client__plugin_2include_2move__base__z__client__plugin_2client__behaviors_8h.html" title=" " coords="1676,863,1896,947"/>
+<area shape="rect" id="node11" href="$cb__absolute__rotate_8cpp.html" title=" " coords="1921,863,2115,947"/>
+<area shape="rect" id="node13" href="$cb__navigate__backward_8cpp.html" title=" " coords="2407,863,2602,947"/>
+<area shape="rect" id="node15" href="$cb__navigate__forward_8cpp.html" title=" " coords="1457,863,1651,947"/>
+<area shape="rect" id="node17" href="$cb__navigate__global__position_8cpp.html" title=" " coords="849,863,1043,947"/>
+<area shape="rect" id="node19" href="$cb__navigate__next__waypoint_8cpp.html" title=" " coords="2937,863,3131,947"/>
+<area shape="rect" id="node21" href="$cb__rotate_8cpp.html" title=" " coords="2150,871,2353,940"/>
+<area shape="rect" id="node23" href="$cb__undo__path__backwards_8cpp.html" title=" " coords="477,863,657,947"/>
+<area shape="rect" id="node25" href="$cb__undo__path__backwards2_8cpp.html" title=" " coords="1155,863,1335,947"/>
+<area shape="rect" id="node28" href="$cp__costmap__switch_8cpp.html" title=" " coords="2932,717,3128,801"/>
+<area shape="rect" id="node32" href="$waypoints__event__dispatcher_8cpp.html" title=" " coords="3453,717,3671,801"/>
+<area shape="rect" id="node39" href="$smacc__asynchronous__client__behavior_8h.html" title=" " coords="5415,445,5567,500"/>
+<area shape="rect" id="node40" href="$smacc__client__async__behavior_8cpp.html" title=" " coords="4938,592,5119,632"/>
+<area shape="rect" id="node41" href="$cb__move__cartesian__relative_8h.html" title=" " coords="6007,563,6210,661"/>
+<area shape="rect" id="node44" href="$cb__move__cartesian__relative2_8h.html" title=" " coords="6234,563,6437,661"/>
+<area shape="rect" id="node45" href="$cb__move__end__effector_8h.html" title=" " coords="5752,570,5983,654"/>
+<area shape="rect" id="node47" href="$cb__move__end__effector__relative_8h.html" title=" " coords="5508,563,5728,661"/>
+<area shape="rect" id="node49" href="$cb__move__end__effector__trajectory_8h.html" title=" " coords="6461,563,6681,661"/>
+<area shape="rect" id="node61" href="$cb__move__joints_8h.html" title=" " coords="4811,717,5001,801"/>
+<area shape="rect" id="node67" href="$cb__move__named__target_8h.html" title=" " coords="5245,570,5484,654"/>
+<area shape="rect" id="node42" href="$move__group__interface__client_2include_2move__group__interface__client_2client__behaviors_8h.html" title=" " coords="6099,1010,6279,1094"/>
+<area shape="rect" id="node43" href="$cb__move__cartesian__relative_8cpp.html" title=" " coords="5905,709,6107,808"/>
+<area shape="rect" id="node46" href="$cb__move__end__effector_8cpp.html" title=" " coords="5585,717,5829,801"/>
+<area shape="rect" id="node48" href="$cb__move__end__effector__relative_8cpp.html" title=" " coords="5289,709,5509,808"/>
+<area shape="rect" id="node50" href="$cb__circular__pivot__motion_8h.html" title=" " coords="6945,709,7131,808"/>
+<area shape="rect" id="node55" href="$cb__execute__last__trajectory_8h.html" title=" " coords="6477,709,6660,808"/>
+<area shape="rect" id="node57" href="$cb__pouring__motion_8h.html" title=" " coords="7155,717,7363,801"/>
+<area shape="rect" id="node58" href="$cb__undo__last__trajectory_8h.html" title=" " coords="6684,717,6920,801"/>
+<area shape="rect" id="node60" href="$cb__move__end__effector__trajectory_8cpp.html" title=" " coords="6233,709,6453,808"/>
+<area shape="rect" id="node51" href="$cb__end__effector__rotate_8h.html" title=" " coords="6942,856,7123,955"/>
+<area shape="rect" id="node53" href="$cb__circular__pivot__motion_8cpp.html" title=" " coords="6731,856,6918,955"/>
+<area shape="rect" id="node54" href="$cb__pouring__motion_8cpp.html" title=" " coords="7148,863,7371,947"/>
+<area shape="rect" id="node52" href="$cb__end__effector__rotate_8cpp.html" title=" " coords="6942,1003,7123,1101"/>
+<area shape="rect" id="node56" href="$cb__execute__last__trajectory_8cpp.html" title=" " coords="6097,856,6280,955"/>
+<area shape="rect" id="node59" href="$cb__undo__last__trajectory_8cpp.html" title=" " coords="6355,863,6606,947"/>
+<area shape="rect" id="node62" href="$cb__move__known__state_8h.html" title=" " coords="4692,863,4925,947"/>
+<area shape="rect" id="node64" href="$cb__move__last__trajectory__initial__state_8h.html" title=" " coords="4949,856,5180,955"/>
+<area shape="rect" id="node66" href="$cb__move__joints_8cpp.html" title=" " coords="5204,863,5408,947"/>
+<area shape="rect" id="node63" href="$cb__move__known__state_8cpp.html" title=" " coords="4715,1003,4902,1101"/>
+<area shape="rect" id="node65" href="$cb__move__last__trajectory__initial__state_8cpp.html" title=" " coords="4949,1003,5180,1101"/>
+<area shape="rect" id="node68" href="$cb__move__named__target_8cpp.html" title=" " coords="5025,709,5213,808"/>
+<area shape="rect" id="node70" href="$smacc__client__behavior_8h.html" title=" " coords="3499,321,3668,361"/>
+<area shape="rect" id="node71" href="$cb__service__server__callback__base_8h.html" title=" " coords="3389,438,3575,507"/>
+<area shape="rect" id="node72" href="$cb__subscription__callback__base_8h.html" title=" " coords="3600,438,3772,507"/>
+<area shape="rect" id="node79" href="$cb__default__keyboard__behavior_8h.html" title=" " coords="4023,863,4231,947"/>
+<area shape="rect" id="node82" href="$cb__default__multirole__sensor__behavior_8h.html" title=" " coords="3763,863,3999,947"/>
+<area shape="rect" id="node83" href="$orthogonal_8cpp.html" title=" " coords="3899,460,4113,485"/>
+<area shape="rect" id="node84" href="$smacc__client__behavior_8cpp.html" title=" " coords="2432,453,2601,493"/>
+<area shape="rect" id="node85" href="$smacc__client__behavior__base_8cpp.html" title=" " coords="2625,453,2800,493"/>
+<area shape="rect" id="node86" href="$cb__default__publish__loop_8h.html" title=" " coords="2824,431,2999,515"/>
+<area shape="rect" id="node87" href="$cb__muted__behavior_8h.html" title=" " coords="3023,431,3181,515"/>
+<area shape="rect" id="node88" href="$cb__publish__once_8h.html" title=" " coords="3205,431,3364,515"/>
+<area shape="rect" id="node74" href="$smacc__subscriber__client_8h.html" title=" " coords="4329,585,4478,639"/>
+<area shape="rect" id="node75" href="$cp__topic__subscriber_8h.html" title=" " coords="4109,731,4279,786"/>
+<area shape="rect" id="node76" href="$cl__battery__monitor_8h.html" title=" " coords="4527,724,4707,793"/>
+<area shape="rect" id="node78" href="$cl__keyboard_8h.html" title=" " coords="4304,731,4503,786"/>
+<area shape="rect" id="node81" href="$cl__multirole__sensor_8h.html" title=" " coords="3847,724,4034,793"/>
+<area shape="rect" id="node77" href="$cl__battery__monitor_8cpp.html" title=" " coords="4493,871,4668,940"/>
+<area shape="rect" id="node80" href="$cl__keyboard_8cpp.html" title=" " coords="4255,878,4469,933"/>
+<area shape="rect" id="node90" href="$smacc__client__impl_8h.html" title=" " coords="4101,321,4273,361"/>
+<area shape="rect" id="node92" href="$smacc__component__impl_8h.html" title=" " coords="4349,313,4513,368"/>
+<area shape="rect" id="node91" href="$client_8cpp.html" title=" " coords="4137,460,4323,485"/>
+<area shape="rect" id="node93" href="$smacc__component_8cpp.html" title=" " coords="4347,453,4516,493"/>
+<area shape="rect" id="node95" href="$smacc_8h.html" title=" " coords="6605,321,6754,361"/>
+<area shape="rect" id="node96" href="$cl__movegroup_8h.html" title=" " coords="6344,438,6556,507"/>
+<area shape="rect" id="node97" href="$cb__attach__object_8h.html" title=" " coords="7008,570,7207,654"/>
+<area shape="rect" id="node99" href="$cb__detach__object_8h.html" title=" " coords="7231,570,7432,654"/>
+<area shape="rect" id="node102" href="$cp__grasping__objects_8h.html" title=" " coords="7346,431,7538,515"/>
+<area shape="rect" id="node104" href="$cl__ros__timer_8h.html" title=" " coords="7967,438,8130,507"/>
+<area shape="rect" id="node105" href="$cb__ros__timer_8h.html" title=" " coords="7724,577,7899,647"/>
+<area shape="rect" id="node107" href="$cb__timer__countdown__loop_8h.html" title=" " coords="7923,577,8174,647"/>
+<area shape="rect" id="node109" href="$cb__timer__countdown__once_8h.html" title=" " coords="8373,577,8628,647"/>
+<area shape="rect" id="node100" href="$cb__detach__object_8cpp.html" title=" " coords="7489,717,7704,801"/>
+<area shape="rect" id="node101" href="$cl__movegroup_8cpp.html" title=" " coords="6706,577,6933,647"/>
+<area shape="rect" id="node98" href="$cb__attach__object_8cpp.html" title=" " coords="7728,717,7940,801"/>
+<area shape="rect" id="node103" href="$cp__grasping__objects_8cpp.html" title=" " coords="7457,570,7649,654"/>
+<area shape="rect" id="node111" href="$timer__client_8cpp.html" title=" " coords="8199,577,8349,647"/>
+<area shape="rect" id="node106" href="$cb__timer_8cpp.html" title=" " coords="8016,731,8212,786"/>
+<area shape="rect" id="node108" href="$cb__timer__countdown__loop_8cpp.html" title=" " coords="8236,724,8408,793"/>
+<area shape="rect" id="node110" href="$cb__timer__countdown__once_8cpp.html" title=" " coords="8432,724,8604,793"/>
 </map>

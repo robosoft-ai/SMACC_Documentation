@@ -158,7 +158,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00154}00154 \textcolor{keyword}{template} <\textcolor{keyword}{typename} Ev, \textcolor{keyword}{typename} Dst, \textcolor{keyword}{typename} Tag>}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00155}\mbox{\hyperlink{namespacesmacc_1_1introspection_a208cd71dc5579090d40b3d3b9efb28a6}{00155}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacesmacc_1_1introspection_a208cd71dc5579090d40b3d3b9efb28a6}{processTransitionAux}}(\mbox{\hyperlink{classsmacc_1_1Transition}{smacc::Transition<Ev, Dst, Tag>}} *, std::shared\_ptr<SmaccStateInfo> \&sourceState, \textcolor{keywordtype}{bool} history, \mbox{\hyperlink{classsmacc_1_1introspection_1_1TypeInfo_aa6ffd9c39811d59f7c771941b7fad860}{TypeInfo::Ptr}} \&transitionTypeInfo)}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00156}00156 \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00157}00157     ROS\_INFO(\textcolor{stringliteral}{"{}State \%s Walker transition: \%s"{}}, sourceState-\/>toShortName().c\_str(), \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(Ev).name()).c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00157}00157     ROS\_INFO(\textcolor{stringliteral}{"{}State \%s Walker transition: \%s"{}}, sourceState-\/>toShortName().c\_str(), \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(Ev).name()).c\_str());}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00158}00158     std::string transitionTag;}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00159}00159     std::string transitionType;}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00160}00160 }
@@ -348,7 +348,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00344}\mbox{\hyperlink{namespacesmacc_1_1introspection_a2e0429a906360e0f0313d7ed55e02d23}{00344}} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2e0429a906360e0f0313d7ed55e02d23}{CallOnDefinition}}()}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00345}00345 \{}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00346}00346     \textcolor{comment}{/* something when T has toString ... */}}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00347}00347     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}EXECUTING ONDEFINITION: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(T).name()));}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00347}00347     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}EXECUTING ONDEFINITION: "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(T).name()));}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00348}00348     T::staticConfigure();}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00349}00349 \}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00350}00350 }
@@ -356,7 +356,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00352}00352 \textcolor{keyword}{typename} std::enable\_if<!HasOnDefinition<T>::value, \textcolor{keywordtype}{void}>::type}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00353}\mbox{\hyperlink{namespacesmacc_1_1introspection_a2df8d207ed78091ca01ee1242158c261}{00353}} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2e0429a906360e0f0313d7ed55e02d23}{CallOnDefinition}}()}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00354}00354 \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00355}00355     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}static OnDefinition: dont exist for "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(T).name()));}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00355}00355     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}static OnDefinition: dont exist for "{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(T).name()));}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00356}00356     \textcolor{comment}{/* something when T has toString ... */}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00357}00357 \}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__info_8h_source_l00358}00358 }

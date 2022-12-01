@@ -1,10 +1,10 @@
 <map id="cl_multirole_sensor::ClMultiroleSensor::initialize" name="cl_multirole_sensor::ClMultiroleSensor::initialize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,62,140,118"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccSubscriberClient.html#af188f0f5e89de26a07e1f964cdd23a70" title=" " alt="" coords="188,22,352,78"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1client__bases_1_1SmaccSubscriberClient.html#a4f02251e3a161fb6d802b154b1081f18" title=" " alt="" coords="188,102,352,158"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClient.html#a8c3ce19f182e71909c5dc6263d25be69" title=" " alt="" coords="423,29,569,71"/>
-<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302" title=" " alt="" coords="640,29,781,71"/>
-<area shape="rect" id="node6" href="$classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " alt="" coords="400,101,592,143"/>
-<area shape="rect" id="node8" href="$classsmacc_1_1ISmaccClient.html#aec51d4712404cb9882b86e4c854bb93a" title=" " alt="" coords="423,167,569,208"/>
-<area shape="rect" id="node7" href="$structsmacc_1_1utils_1_1Bind.html#aa0f4ba76fbd5fdb865df51b61d4269f3" title=" " alt="" coords="649,101,772,143"/>
+<area shape="rect" id="node1" title=" " coords="5,62,140,117"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccSubscriberClient.html#af188f0f5e89de26a07e1f964cdd23a70" title=" " coords="188,22,352,77"/>
+<area shape="rect" id="node5" href="$classsmacc_1_1client__bases_1_1SmaccSubscriberClient.html#a4f02251e3a161fb6d802b154b1081f18" title=" " coords="188,101,352,155"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClient.html#a8c3ce19f182e71909c5dc6263d25be69" title=" " coords="423,29,569,69"/>
+<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " coords="640,29,781,69"/>
+<area shape="rect" id="node6" href="$classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " coords="400,100,592,140"/>
+<area shape="rect" id="node8" href="$classsmacc_1_1ISmaccClient.html#aec51d4712404cb9882b86e4c854bb93a" title=" " coords="423,164,569,204"/>
+<area shape="rect" id="node7" href="$structsmacc_1_1utils_1_1Bind.html#aa0f4ba76fbd5fdb865df51b61d4269f3" title=" " coords="649,100,772,140"/>
 </map>

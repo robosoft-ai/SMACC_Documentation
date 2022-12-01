@@ -1,8 +1,8 @@
 <map id="smacc::ISmaccStateMachine::ISmaccStateMachine" name="smacc::ISmaccStateMachine::ISmaccStateMachine">
-<area shape="rect" id="node1" title=" " alt="" coords="5,63,197,104"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1SignalDetector.html#a91ab3cd92d8095cdaf8610b50731f04b" title=" " alt="" coords="245,63,397,104"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1SignalDetector.html#a47ec2df560e2e33758ce3975bece9385" title=" " alt="" coords="445,63,597,104"/>
-<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#a670e39ccea29952859df4e2d0e45077b" title=" " alt="" coords="671,29,812,71"/>
-<area shape="rect" id="node6" href="$classsmacc_1_1ISmaccStateMachine.html#a7f5b2882dbd077584767cb2533ed3c49" title=" " alt="" coords="645,95,837,136"/>
-<area shape="rect" id="node5" href="$namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302" title=" " alt="" coords="885,29,1027,71"/>
+<area shape="rect" id="node1" title=" " coords="5,61,197,101"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1SignalDetector.html#a91ab3cd92d8095cdaf8610b50731f04b" title=" " coords="245,61,397,101"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1SignalDetector.html#a47ec2df560e2e33758ce3975bece9385" title=" " coords="445,61,597,101"/>
+<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#a670e39ccea29952859df4e2d0e45077b" title=" " coords="671,29,812,69"/>
+<area shape="rect" id="node6" href="$classsmacc_1_1ISmaccStateMachine.html#a7f5b2882dbd077584767cb2533ed3c49" title=" " coords="645,93,837,133"/>
+<area shape="rect" id="node5" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " coords="885,29,1027,69"/>
 </map>

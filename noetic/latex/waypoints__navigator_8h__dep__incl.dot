@@ -1,0 +1,12 @@
+digraph "smacc_client_library/move_base_z_client/move_base_z_client_plugin/include/move_base_z_client_plugin/components/waypoints_navigator/waypoints_navigator.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="smacc_client_library\l/move_base_z_client/move\l_base_z_client_plugin/include\l/move_base_z_client_plugin/components\l/waypoints_navigator/waypoints_navigator.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="smacc_client_library\l/move_base_z_client/move\l_base_z_client_plugin/src\l/client_behaviors/cb_navigate\l_next_waypoint.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cb__navigate__next__waypoint_8cpp.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="smacc_client_library\l/move_base_z_client/move\l_base_z_client_plugin/src\l/components/waypoints_navigator\l/waypoints_navigator.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$waypoints__navigator_8cpp.html",tooltip=" "];
+}

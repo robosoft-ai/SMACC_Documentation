@@ -1,9 +1,9 @@
 <map id="smacc::introspection::SmaccEventGeneratorInfo" name="smacc::introspection::SmaccEventGeneratorInfo">
-<area shape="rect" id="node1" title=" " alt="" coords="434,175,615,267"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,13,212,105"/>
-<area shape="rect" id="node3" title=" " alt="" coords="237,13,383,105"/>
-<area shape="rect" id="node4" title=" " alt="" coords="407,20,490,97"/>
-<area shape="rect" id="node5" title=" " alt="" coords="517,13,679,105"/>
-<area shape="rect" id="node6" title=" " alt="" coords="704,5,879,112"/>
-<area shape="rect" id="node7" title=" " alt="" coords="903,5,1095,112"/>
+<area shape="rect" id="node1" title=" " coords="441,137,622,192"/>
+<area shape="rect" id="node2" title=" " coords="5,13,212,67"/>
+<area shape="rect" id="node3" title=" " coords="236,13,387,67"/>
+<area shape="rect" id="node4" title=" " coords="411,20,497,60"/>
+<area shape="rect" id="node5" title=" " coords="527,13,690,67"/>
+<area shape="rect" id="node6" title=" " coords="715,5,889,75"/>
+<area shape="rect" id="node7" title=" " coords="914,5,1106,75"/>
 </map>

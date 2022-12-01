@@ -1,5 +1,5 @@
 <map id="smacc::SmaccEventGenerator" name="smacc::SmaccEventGenerator">
-<area shape="rect" id="node1" title=" " alt="" coords="91,5,289,215"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1event__generators_1_1EgConditionalGenerator.html" title=" " alt="" coords="5,314,183,523"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1state__reactors_1_1EgRandomGenerator.html" title=" " alt="" coords="207,263,368,575"/>
+<area shape="rect" id="node1" title=" " coords="91,5,294,207"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1event__generators_1_1EgConditionalGenerator.html" title=" " coords="5,306,185,507"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1state__reactors_1_1EgRandomGenerator.html" title=" " coords="209,255,373,559"/>
 </map>

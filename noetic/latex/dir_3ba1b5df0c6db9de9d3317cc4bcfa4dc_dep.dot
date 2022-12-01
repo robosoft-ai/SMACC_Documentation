@@ -1,0 +1,16 @@
+digraph "smacc_client_library/move_base_z_client/custom_planners/undo_path_global_planner/include"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_de979fa96ccde5590f4b04f246af86b6 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="undo_path_global_planner", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_de979fa96ccde5590f4b04f246af86b6.html",tooltip=""]
+  subgraph clusterdir_3ba1b5df0c6db9de9d3317cc4bcfa4dc {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_3ba1b5df0c6db9de9d3317cc4bcfa4dc.html",tooltip=""]
+    dir_3ba1b5df0c6db9de9d3317cc4bcfa4dc [shape=plaintext, label="include"];
+  dir_609588ffe8a0c4d2b19eb3eb111d3c20 [label="undo_path_global_planner", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_609588ffe8a0c4d2b19eb3eb111d3c20.html",tooltip=""];
+  }
+  }
+}

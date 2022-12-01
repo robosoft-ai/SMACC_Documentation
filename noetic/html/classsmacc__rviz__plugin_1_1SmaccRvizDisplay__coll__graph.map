@@ -1,8 +1,8 @@
 <map id="smacc_rviz_plugin::SmaccRvizDisplay" name="smacc_rviz_plugin::SmaccRvizDisplay">
-<area shape="rect" id="node1" title=" " alt="" coords="245,145,401,355"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,96,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="120,5,232,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="256,5,389,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="414,5,509,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="533,5,617,83"/>
+<area shape="rect" id="node1" title=" " coords="255,108,411,295"/>
+<area shape="rect" id="node2" title=" " coords="5,5,100,45"/>
+<area shape="rect" id="node3" title=" " coords="124,5,240,45"/>
+<area shape="rect" id="node4" title=" " coords="264,5,401,45"/>
+<area shape="rect" id="node5" title=" " coords="426,5,525,45"/>
+<area shape="rect" id="node6" title=" " coords="549,5,637,45"/>
 </map>

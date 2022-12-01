@@ -1,5 +1,5 @@
 <map id="cl_move_base_z::forward_global_planner::ForwardGlobalPlanner::makePlan" name="cl_move_base_z::forward_global_planner::ForwardGlobalPlanner::makePlan">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,208,87"/>
-<area shape="rect" id="node2" href="$namespacecl__move__base__z.html#ac774e138510eb7b5e0015be1f7709e19" title=" " alt="" coords="256,5,440,47"/>
-<area shape="rect" id="node3" href="$namespacecl__move__base__z.html#a84f0875e9e553c2795894cc9c21b2b3c" title=" " alt="" coords="256,71,440,112"/>
+<area shape="rect" id="node1" title=" " coords="5,30,208,85"/>
+<area shape="rect" id="node2" href="$namespacecl__move__base__z.html#ac774e138510eb7b5e0015be1f7709e19" title=" " coords="256,5,440,45"/>
+<area shape="rect" id="node3" href="$namespacecl__move__base__z.html#a84f0875e9e553c2795894cc9c21b2b3c" title=" " coords="256,69,440,109"/>
 </map>

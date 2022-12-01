@@ -1,6 +1,6 @@
 <map id="cl_multirole_sensor::ClMultiroleSensor::onMessageTimeout" name="cl_multirole_sensor::ClMultiroleSensor::onMessageTimeout">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,148,87"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " alt="" coords="196,5,388,47"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClient.html#aec51d4712404cb9882b86e4c854bb93a" title=" " alt="" coords="219,71,365,112"/>
-<area shape="rect" id="node3" href="$structsmacc_1_1utils_1_1Bind.html#aa0f4ba76fbd5fdb865df51b61d4269f3" title=" " alt="" coords="436,5,559,47"/>
+<area shape="rect" id="node1" title=" " coords="5,30,148,85"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2" title=" " coords="196,5,388,45"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClient.html#aec51d4712404cb9882b86e4c854bb93a" title=" " coords="219,69,365,109"/>
+<area shape="rect" id="node3" href="$structsmacc_1_1utils_1_1Bind.html#aa0f4ba76fbd5fdb865df51b61d4269f3" title=" " coords="436,5,559,45"/>
 </map>

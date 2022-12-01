@@ -1,7 +1,7 @@
 <map id="smacc_client_library/move_base_z_client/custom_planners/forward_global_planner/include/forward_global_planner/forward_global_planner.h" name="smacc_client_library/move_base_z_client/custom_planners/forward_global_planner/include/forward_global_planner/forward_global_planner.h">
-<area shape="rect" id="node1" title=" " alt="" coords="218,5,437,91"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,139,153,180"/>
-<area shape="rect" id="node3" title=" " alt="" coords="177,146,320,173"/>
-<area shape="rect" id="node4" title=" " alt="" coords="345,146,467,173"/>
-<area shape="rect" id="node5" title=" " alt="" coords="491,146,563,173"/>
+<area shape="rect" id="node1" title=" " coords="218,5,437,89"/>
+<area shape="rect" id="node2" title=" " coords="5,137,153,177"/>
+<area shape="rect" id="node3" title=" " coords="177,145,320,170"/>
+<area shape="rect" id="node4" title=" " coords="345,145,467,170"/>
+<area shape="rect" id="node5" title=" " coords="491,145,563,170"/>
 </map>

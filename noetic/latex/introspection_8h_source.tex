@@ -52,12 +52,12 @@
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00048}00048     \textcolor{keywordflow}{return} ros::NodeHandle(\textcolor{stringliteral}{"{}"{}});}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00049}00049 \}}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00050}00050 }
-\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00051}\mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{00051}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{const} std::string \&name)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00051}\mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{00051}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{const} std::string \&name)}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00052}00052 \{}
-\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00053}00053     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(name.c\_str());}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00053}00053     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(name.c\_str());}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00054}00054 \}}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00055}00055 }
-\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00056}\mbox{\hyperlink{namespacesmacc_1_1introspection_af32c671351d958213f8031bb90767922}{00056}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name)}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00056}\mbox{\hyperlink{namespacesmacc_1_1introspection_af32c671351d958213f8031bb90767922}{00056}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *name)}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00057}00057 \{}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00058}00058 \textcolor{preprocessor}{\#if (\_\_GNUC\_\_ \&\& \_\_cplusplus \&\& \_\_GNUC\_\_ >= 3)}}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00059}00059     \textcolor{keywordtype}{int} status;}
@@ -76,25 +76,25 @@
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00072}00072 \}}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00073}00073 }
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00074}00074 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00075}\mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{00075}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}()}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00075}\mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{00075}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}()}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00076}00076 \{}
-\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00077}00077     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(T).name());}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00077}00077     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(T).name());}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00078}00078 \}}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00079}00079 }
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00080}00080 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00081}\mbox{\hyperlink{namespacesmacc_1_1introspection_af1b3277706c3299b589c3fa801169286}{00081}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_af1b3277706c3299b589c3fa801169286}{demangledTypeName}}()}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00082}00082 \{}
-\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00083}00083     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(T).name());}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00083}00083     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(T).name());}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00084}00084 \}}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00085}00085 }
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00086}\mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{00086}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{const} std::type\_info* tinfo)}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00087}00087 \{}
-\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00088}00088     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(tinfo-\/>name());}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00088}00088     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(tinfo-\/>name());}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00089}00089 \}}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00090}00090 }
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00091}\mbox{\hyperlink{namespacesmacc_1_1introspection_a81ad2fc77a0262640d4b1bd273938603}{00091}} \textcolor{keyword}{inline} std::string \mbox{\hyperlink{namespacesmacc_1_1introspection_a670e39ccea29952859df4e2d0e45077b}{demangleType}}(\textcolor{keyword}{const} std::type\_info \&tinfo)}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00092}00092 \{}
-\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00093}00093     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(tinfo.name());}
+\DoxyCodeLine{\Hypertarget{introspection_8h_source_l00093}00093     \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(tinfo.name());}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00094}00094 \}}
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00095}00095 }
 \DoxyCodeLine{\Hypertarget{introspection_8h_source_l00096}00096 \textcolor{keyword}{template} <\textcolor{keyword}{typename}...>}

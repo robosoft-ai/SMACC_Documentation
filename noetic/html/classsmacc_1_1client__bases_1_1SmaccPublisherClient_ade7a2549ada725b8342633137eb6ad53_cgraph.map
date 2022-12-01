@@ -1,5 +1,5 @@
 <map id="smacc::client_bases::SmaccPublisherClient::configure" name="smacc::client_bases::SmaccPublisherClient::configure">
-<area shape="rect" id="node1" title=" " alt="" coords="5,22,161,78"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccClient.html#a8c3ce19f182e71909c5dc6263d25be69" title=" " alt="" coords="209,29,355,71"/>
-<area shape="rect" id="node3" href="$namespacesmacc_1_1introspection.html#a2f495108db3e57604d8d3ff5ef030302" title=" " alt="" coords="403,29,544,71"/>
+<area shape="rect" id="node1" title=" " coords="5,22,161,77"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccClient.html#a8c3ce19f182e71909c5dc6263d25be69" title=" " coords="209,29,355,69"/>
+<area shape="rect" id="node3" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " coords="403,29,544,69"/>
 </map>
