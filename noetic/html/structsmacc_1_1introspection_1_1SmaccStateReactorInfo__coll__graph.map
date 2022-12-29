@@ -1,9 +1,9 @@
 <map id="smacc::introspection::SmaccStateReactorInfo" name="smacc::introspection::SmaccStateReactorInfo">
-<area shape="rect" id="node1" title=" " coords="445,137,612,192"/>
-<area shape="rect" id="node2" title=" " coords="5,13,212,67"/>
-<area shape="rect" id="node3" title=" " coords="236,13,387,67"/>
-<area shape="rect" id="node4" title=" " coords="411,20,497,60"/>
-<area shape="rect" id="node5" title=" " coords="522,13,685,67"/>
-<area shape="rect" id="node6" title=" " coords="709,5,884,75"/>
-<area shape="rect" id="node7" title=" " coords="909,5,1087,75"/>
+<area shape="rect" id="node1" title=" " alt="" coords="445,137,612,192"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,13,212,67"/>
+<area shape="rect" id="node3" title=" " alt="" coords="236,13,387,67"/>
+<area shape="rect" id="node4" title=" " alt="" coords="411,20,497,60"/>
+<area shape="rect" id="node5" title=" " alt="" coords="522,13,685,67"/>
+<area shape="rect" id="node6" title=" " alt="" coords="709,5,884,75"/>
+<area shape="rect" id="node7" title=" " alt="" coords="909,5,1087,75"/>
 </map>

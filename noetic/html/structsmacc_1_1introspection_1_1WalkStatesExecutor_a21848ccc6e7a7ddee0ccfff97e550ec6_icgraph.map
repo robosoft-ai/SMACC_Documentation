@@ -1,9 +1,9 @@
 <map id="smacc::introspection::WalkStatesExecutor::walkStates" name="smacc::introspection::WalkStatesExecutor::walkStates">
-<area shape="rect" id="node1" title=" " coords="603,109,748,164"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#a1482f3d6b3aff8a2702331bd3049987a" title=" " coords="384,5,555,60"/>
-<area shape="rect" id="node3" href="$structsmacc_1_1introspection_1_1AddSubState.html#aa7c4d53de4a64ef0873bde700ed7317f" title=" " coords="386,85,553,125"/>
-<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#adf6613226dae9f9849fd452d680f8a22" title=" " coords="399,149,540,189"/>
-<area shape="rect" id="node5" href="$namespacesmacc_1_1introspection.html#a208cd71dc5579090d40b3d3b9efb28a6" title=" " coords="393,213,546,253"/>
-<area shape="rect" id="node6" href="$namespacesmacc_1_1introspection.html#a91f7cda900e7002c923494db5afce63f" title=" " coords="195,213,336,253"/>
-<area shape="rect" id="node7" href="$namespacesmacc_1_1introspection.html#ad8ce7eb57a96ab04858df527c5dce9a0" title=" " coords="5,213,147,253"/>
+<area shape="rect" id="node1" title=" " alt="" coords="603,109,748,164"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1introspection_1_1SmaccStateMachineInfo.html#a1482f3d6b3aff8a2702331bd3049987a" title=" " alt="" coords="384,5,555,60"/>
+<area shape="rect" id="node3" href="$structsmacc_1_1introspection_1_1AddSubState.html#aa7c4d53de4a64ef0873bde700ed7317f" title=" " alt="" coords="386,85,553,125"/>
+<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#adf6613226dae9f9849fd452d680f8a22" title=" " alt="" coords="399,149,540,189"/>
+<area shape="rect" id="node5" href="$namespacesmacc_1_1introspection.html#a208cd71dc5579090d40b3d3b9efb28a6" title=" " alt="" coords="393,213,546,253"/>
+<area shape="rect" id="node6" href="$namespacesmacc_1_1introspection.html#a91f7cda900e7002c923494db5afce63f" title=" " alt="" coords="195,213,336,253"/>
+<area shape="rect" id="node7" href="$namespacesmacc_1_1introspection.html#ad8ce7eb57a96ab04858df527c5dce9a0" title=" " alt="" coords="5,213,147,253"/>
 </map>

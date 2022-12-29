@@ -1,7 +1,7 @@
 <map id="smacc_client_library/move_base_z_client/move_base_z_client_plugin/include/move_base_z_client_plugin/components/waypoints_navigator/waypoints_event_dispatcher.h" name="smacc_client_library/move_base_z_client/move_base_z_client_plugin/include/move_base_z_client_plugin/components/waypoints_navigator/waypoints_event_dispatcher.h">
-<area shape="rect" id="node1" title=" " coords="223,5,483,104"/>
-<area shape="rect" id="node2" href="$waypoints__navigator_8h.html" title=" " coords="79,152,355,236"/>
-<area shape="rect" id="node5" href="$waypoints__event__dispatcher_8cpp.html" title=" " coords="380,152,599,236"/>
-<area shape="rect" id="node3" href="$cb__navigate__next__waypoint_8cpp.html" title=" " coords="5,284,200,368"/>
-<area shape="rect" id="node4" href="$waypoints__navigator_8cpp.html" title=" " coords="224,284,443,368"/>
+<area shape="rect" id="node1" title=" " alt="" coords="223,5,483,104"/>
+<area shape="rect" id="node2" href="$waypoints__navigator_8h.html" title=" " alt="" coords="79,152,355,236"/>
+<area shape="rect" id="node5" href="$waypoints__event__dispatcher_8cpp.html" title=" " alt="" coords="380,152,599,236"/>
+<area shape="rect" id="node3" href="$cb__navigate__next__waypoint_8cpp.html" title=" " alt="" coords="5,284,200,368"/>
+<area shape="rect" id="node4" href="$waypoints__navigator_8cpp.html" title=" " alt="" coords="224,284,443,368"/>
 </map>

@@ -1,11 +1,11 @@
 <map id="cl_move_base_z::undo_path_global_planner::UndoPathGlobalPlanner" name="cl_move_base_z::undo_path_global_planner::UndoPathGlobalPlanner">
-<area shape="rect" id="node1" title=" " coords="471,152,674,339"/>
-<area shape="rect" id="node2" title=" " coords="5,5,201,45"/>
-<area shape="rect" id="node3" title=" " coords="226,5,325,45"/>
-<area shape="rect" id="node4" title=" " coords="349,5,437,45"/>
-<area shape="rect" id="node5" title=" " coords="475,5,555,45"/>
-<area shape="rect" id="node6" title=" " coords="605,5,658,45"/>
-<area shape="rect" id="node7" title=" " coords="719,5,850,45"/>
-<area shape="rect" id="node8" title=" " coords="875,5,983,45"/>
-<area shape="rect" id="node9" title=" " coords="1009,5,1073,45"/>
+<area shape="rect" id="node1" title=" " alt="" coords="471,152,674,339"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,201,45"/>
+<area shape="rect" id="node3" title=" " alt="" coords="226,5,325,45"/>
+<area shape="rect" id="node4" title=" " alt="" coords="349,5,437,45"/>
+<area shape="rect" id="node5" title=" " alt="" coords="475,5,555,45"/>
+<area shape="rect" id="node6" title=" " alt="" coords="605,5,658,45"/>
+<area shape="rect" id="node7" title=" " alt="" coords="719,5,850,45"/>
+<area shape="rect" id="node8" title=" " alt="" coords="875,5,983,45"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1009,5,1073,45"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="cl_move_base_z::undo_path_global_planner::UndoPathGlobalPlanner::makePlan" name="cl_move_base_z::undo_path_global_planner::UndoPathGlobalPlanner::makePlan">
-<area shape="rect" id="node1" title=" " coords="5,52,172,121"/>
-<area shape="rect" id="node2" href="$classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner.html#a46034d27c0811abae440009457a7f8b0" title=" " coords="220,52,387,121"/>
-<area shape="rect" id="node3" href="$classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner.html#a659c16f439d33ac7026a54bb65c26ca8" title=" " coords="435,5,624,75"/>
-<area shape="rect" id="node4" href="$classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner.html#a37a85e1cd57173902d8302cb8cb9b933" title=" " coords="446,99,613,168"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,52,172,121"/>
+<area shape="rect" id="node2" href="$classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner.html#a46034d27c0811abae440009457a7f8b0" title=" " alt="" coords="220,52,387,121"/>
+<area shape="rect" id="node3" href="$classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner.html#a659c16f439d33ac7026a54bb65c26ca8" title=" " alt="" coords="435,5,624,75"/>
+<area shape="rect" id="node4" href="$classcl__move__base__z_1_1undo__path__global__planner_1_1UndoPathGlobalPlanner.html#a37a85e1cd57173902d8302cb8cb9b933" title=" " alt="" coords="446,99,613,168"/>
 </map>

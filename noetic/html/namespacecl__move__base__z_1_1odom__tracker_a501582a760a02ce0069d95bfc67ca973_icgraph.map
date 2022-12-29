@@ -1,7 +1,7 @@
 <map id="cl_move_base_z::odom_tracker::p2pDistance" name="cl_move_base_z::odom_tracker::p2pDistance">
-<area shape="rect" id="node1" title=" " coords="647,53,804,93"/>
-<area shape="rect" id="node2" href="$classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#abe7ba4dbf014e1f2c64b5806ce42c073" title=" " coords="441,5,599,60"/>
-<area shape="rect" id="node5" href="$classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#a77a66083573c6bef726d77447fb53349" title=" " coords="441,84,599,139"/>
-<area shape="rect" id="node3" href="$classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#a12c5a839cfde2e8f2f55a5e0c9647b18" title="odom callback: Updates the path &#45; this must be called periodically for each odometry message." coords="211,45,393,100"/>
-<area shape="rect" id="node4" href="$classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#a99e1f405d0b3ec3e9fc73e666793c409" title=" " coords="5,45,163,100"/>
+<area shape="rect" id="node1" title=" " alt="" coords="647,53,804,93"/>
+<area shape="rect" id="node2" href="$classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#abe7ba4dbf014e1f2c64b5806ce42c073" title=" " alt="" coords="441,5,599,60"/>
+<area shape="rect" id="node5" href="$classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#a77a66083573c6bef726d77447fb53349" title=" " alt="" coords="441,84,599,139"/>
+<area shape="rect" id="node3" href="$classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#a12c5a839cfde2e8f2f55a5e0c9647b18" title="odom callback: Updates the path &#45; this must be called periodically for each odometry message." alt="" coords="211,45,393,100"/>
+<area shape="rect" id="node4" href="$classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#a99e1f405d0b3ec3e9fc73e666793c409" title=" " alt="" coords="5,45,163,100"/>
 </map>

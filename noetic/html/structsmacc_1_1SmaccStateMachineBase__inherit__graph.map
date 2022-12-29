@@ -1,5 +1,5 @@
 <map id="smacc::SmaccStateMachineBase&lt; DerivedStateMachine, InitialStateType &gt;" name="smacc::SmaccStateMachineBase&lt; DerivedStateMachine, InitialStateType &gt;">
-<area shape="rect" id="node1" title="State Machine." coords="150,1047,349,1204"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccStateMachine.html" title=" " coords="5,5,232,999"/>
-<area shape="rect" id="node3" href="$classboost_1_1statechart_1_1asynchronous__state__machine.html" title=" " coords="257,460,503,544"/>
+<area shape="rect" id="node1" title="State Machine." alt="" coords="150,1047,349,1204"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccStateMachine.html" title=" " alt="" coords="5,5,232,999"/>
+<area shape="rect" id="node3" href="$classboost_1_1statechart_1_1asynchronous__state__machine.html" title=" " alt="" coords="257,460,503,544"/>
 </map>

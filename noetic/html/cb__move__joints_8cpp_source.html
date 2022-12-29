@@ -145,7 +145,7 @@ $(function() {
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      moveGroupInterface.setJointValueTarget(<a class="code hl_variable" href="classcl__move__group__interface_1_1CbMoveJoints.html#a8103f7c923a34d9bf5a2c374ff88a277">jointValueTarget_</a>);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <span class="comment">//moveGroupInterface.setGoalJointTolerance(0.01);</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      success = (moveGroupInterface.plan(computedMotionPlan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      success = (moveGroupInterface.plan(computedMotionPlan) == moveit::core::MoveItErrorCode::SUCCESS);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      ROS_INFO_NAMED(<span class="stringliteral">&quot;CbMoveJoints&quot;</span>, <span class="stringliteral">&quot;Success Visualizing plan 1 (pose goal) %s&quot;</span>, success ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;FAILED&quot;</span>);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>

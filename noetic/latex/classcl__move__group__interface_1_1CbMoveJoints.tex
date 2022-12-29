@@ -116,7 +116,7 @@ Definition at line \mbox{\hyperlink{cb__move__joints_8cpp_source_l00053}{53}} of
 \DoxyCodeLine{00067     \{}
 \DoxyCodeLine{00068       moveGroupInterface.setJointValueTarget(\mbox{\hyperlink{classcl__move__group__interface_1_1CbMoveJoints_a8103f7c923a34d9bf5a2c374ff88a277}{jointValueTarget\_}});}
 \DoxyCodeLine{00069       \textcolor{comment}{//moveGroupInterface.setGoalJointTolerance(0.01);}}
-\DoxyCodeLine{00070       success = (moveGroupInterface.plan(computedMotionPlan) == moveit::planning\_interface::MoveItErrorCode::SUCCESS);}
+\DoxyCodeLine{00070       success = (moveGroupInterface.plan(computedMotionPlan) == moveit::core::MoveItErrorCode::SUCCESS);}
 \DoxyCodeLine{00071       ROS\_INFO\_NAMED(\textcolor{stringliteral}{"{}CbMoveJoints"{}}, \textcolor{stringliteral}{"{}Success Visualizing plan 1 (pose goal) \%s"{}}, success ? \textcolor{stringliteral}{"{}"{}} : \textcolor{stringliteral}{"{}FAILED"{}});}
 \DoxyCodeLine{00072     \}}
 \DoxyCodeLine{00073 }

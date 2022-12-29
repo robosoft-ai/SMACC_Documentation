@@ -127,7 +127,7 @@ Definition at line \mbox{\hyperlink{cb__move__end__effector__relative_8cpp_sourc
 \DoxyCodeLine{00067         moveGroupInterface.setPoseReferenceFrame(\textcolor{stringliteral}{"{}map"{}});}
 \DoxyCodeLine{00068 }
 \DoxyCodeLine{00069         moveit::planning\_interface::MoveGroupInterface::Plan computedMotionPlan;}
-\DoxyCodeLine{00070         \textcolor{keywordtype}{bool} success = (moveGroupInterface.plan(computedMotionPlan) == moveit::planning\_interface::MoveItErrorCode::SUCCESS);}
+\DoxyCodeLine{00070         \textcolor{keywordtype}{bool} success = (moveGroupInterface.plan(computedMotionPlan) == moveit::core::MoveItErrorCode::SUCCESS);}
 \DoxyCodeLine{00071         ROS\_INFO\_NAMED(\textcolor{stringliteral}{"{}CbMoveEndEffectorRelative"{}}, \textcolor{stringliteral}{"{}Success Visualizing plan 1 (pose goal) \%s"{}}, success ? \textcolor{stringliteral}{"{}"{}} : \textcolor{stringliteral}{"{}FAILED"{}});}
 \DoxyCodeLine{00072 }
 \DoxyCodeLine{00073         \textcolor{keywordflow}{if} (success)}

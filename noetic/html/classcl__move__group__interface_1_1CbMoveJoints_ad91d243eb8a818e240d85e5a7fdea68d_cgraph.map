@@ -1,10 +1,10 @@
 <map id="cl_move_group_interface::CbMoveJoints::moveJoints" name="cl_move_group_interface::CbMoveJoints::moveJoints">
-<area shape="rect" id="node1" title=" " coords="5,181,189,221"/>
-<area shape="rect" id="node2" href="$namespacecl__move__group__interface.html#aad71400738b3e25d9fa9ac924670de5d" title=" " coords="260,5,443,45"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClientBehavior.html#a18e4bec9460b010f2894c0f7e7064a34" title=" " coords="253,69,449,109"/>
-<area shape="rect" id="node5" href="$classcl__move__group__interface_1_1ClMoveGroup.html#a39dc3871d29b2af1ab739057f6ca6daa" title=" " coords="246,134,457,189"/>
-<area shape="rect" id="node6" href="$classcl__move__group__interface_1_1ClMoveGroup.html#aebaf269db373d41837bae87651458e54" title=" " coords="246,213,457,267"/>
-<area shape="rect" id="node7" href="$classsmacc_1_1SmaccAsyncClientBehavior.html#af6fa358cb1ab5ed16791a201f59260e0" title=" " coords="237,292,465,332"/>
-<area shape="rect" id="node8" href="$classsmacc_1_1SmaccAsyncClientBehavior.html#adf18efe1f0e4eacc1277b8865a8a94b1" title=" " coords="237,356,465,396"/>
-<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " coords="513,69,655,109"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,181,189,221"/>
+<area shape="rect" id="node2" href="$namespacecl__move__group__interface.html#aad71400738b3e25d9fa9ac924670de5d" title=" " alt="" coords="260,5,443,45"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClientBehavior.html#a18e4bec9460b010f2894c0f7e7064a34" title=" " alt="" coords="253,69,449,109"/>
+<area shape="rect" id="node5" href="$classcl__move__group__interface_1_1ClMoveGroup.html#a39dc3871d29b2af1ab739057f6ca6daa" title=" " alt="" coords="246,134,457,189"/>
+<area shape="rect" id="node6" href="$classcl__move__group__interface_1_1ClMoveGroup.html#aebaf269db373d41837bae87651458e54" title=" " alt="" coords="246,213,457,267"/>
+<area shape="rect" id="node7" href="$classsmacc_1_1SmaccAsyncClientBehavior.html#af6fa358cb1ab5ed16791a201f59260e0" title=" " alt="" coords="237,292,465,332"/>
+<area shape="rect" id="node8" href="$classsmacc_1_1SmaccAsyncClientBehavior.html#adf18efe1f0e4eacc1277b8865a8a94b1" title=" " alt="" coords="237,356,465,396"/>
+<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " alt="" coords="513,69,655,109"/>
 </map>

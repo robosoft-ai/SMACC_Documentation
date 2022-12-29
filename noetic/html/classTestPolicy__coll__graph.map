@@ -1,9 +1,9 @@
 <map id="TestPolicy" name="TestPolicy">
-<area shape="rect" id="node1" title=" " coords="294,357,381,427"/>
-<area shape="rect" id="node2" href="$classSmaccTestRuntimeNode.html" title=" " coords="236,152,439,295"/>
-<area shape="rect" id="node3" title=" " coords="5,20,104,60"/>
-<area shape="rect" id="node4" title=" " coords="128,20,216,60"/>
-<area shape="rect" id="node5" title=" " coords="255,13,393,67"/>
-<area shape="rect" id="node6" title=" " coords="418,13,585,67"/>
-<area shape="rect" id="node7" title=" " coords="609,5,815,75"/>
+<area shape="rect" id="node1" title=" " alt="" coords="294,357,381,427"/>
+<area shape="rect" id="node2" href="$classSmaccTestRuntimeNode.html" title=" " alt="" coords="236,152,439,295"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,20,104,60"/>
+<area shape="rect" id="node4" title=" " alt="" coords="128,20,216,60"/>
+<area shape="rect" id="node5" title=" " alt="" coords="255,13,393,67"/>
+<area shape="rect" id="node6" title=" " alt="" coords="418,13,585,67"/>
+<area shape="rect" id="node7" title=" " alt="" coords="609,5,815,75"/>
 </map>

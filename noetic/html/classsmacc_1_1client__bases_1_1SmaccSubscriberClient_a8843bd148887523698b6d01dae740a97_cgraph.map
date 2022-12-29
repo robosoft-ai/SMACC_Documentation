@@ -1,11 +1,11 @@
 <map id="smacc::client_bases::SmaccSubscriberClient::onOrthogonalAllocation" name="smacc::client_bases::SmaccSubscriberClient::onOrthogonalAllocation">
-<area shape="rect" id="node1" title=" " coords="5,42,169,97"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccClient.html#a21a79203cb44fc717d4d977c190327c6" title=" " coords="217,49,363,89"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccStateMachine.html#afcb6a216441aeaea2cba4e1ab12c366b" title=" " coords="411,49,603,89"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1SignalDetector.html#a6ab99d99cef8d101e39797a72daeb2b7" title=" " coords="683,5,835,45"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1ISmaccStateMachine.html#a3d369c7cff22632ca85a8656000ba19c" title=" " coords="651,93,867,133"/>
-<area shape="rect" id="node6" href="$classsmacc_1_1ISmaccState.html#a5bf0b49d5ea6b9e8f45c26fa155b2664" title=" " coords="915,29,1057,69"/>
-<area shape="rect" id="node8" href="$classsmacc_1_1ISmaccState.html#a1f3df5c6bcd928d99c0b1e5aa1799202" title=" " coords="915,93,1057,133"/>
-<area shape="rect" id="node9" href="$classsmacc_1_1ISmaccState.html#a758fea49c0c8b60f940e5708495f5c8a" title=" " coords="915,157,1057,197"/>
-<area shape="rect" id="node7" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " coords="1105,29,1247,69"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,42,169,97"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccClient.html#a21a79203cb44fc717d4d977c190327c6" title=" " alt="" coords="217,49,363,89"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccStateMachine.html#afcb6a216441aeaea2cba4e1ab12c366b" title=" " alt="" coords="411,49,603,89"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1SignalDetector.html#a6ab99d99cef8d101e39797a72daeb2b7" title=" " alt="" coords="683,5,835,45"/>
+<area shape="rect" id="node5" href="$classsmacc_1_1ISmaccStateMachine.html#a3d369c7cff22632ca85a8656000ba19c" title=" " alt="" coords="651,93,867,133"/>
+<area shape="rect" id="node6" href="$classsmacc_1_1ISmaccState.html#a5bf0b49d5ea6b9e8f45c26fa155b2664" title=" " alt="" coords="915,29,1057,69"/>
+<area shape="rect" id="node8" href="$classsmacc_1_1ISmaccState.html#a1f3df5c6bcd928d99c0b1e5aa1799202" title=" " alt="" coords="915,93,1057,133"/>
+<area shape="rect" id="node9" href="$classsmacc_1_1ISmaccState.html#a758fea49c0c8b60f940e5708495f5c8a" title=" " alt="" coords="915,157,1057,197"/>
+<area shape="rect" id="node7" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " alt="" coords="1105,29,1247,69"/>
 </map>

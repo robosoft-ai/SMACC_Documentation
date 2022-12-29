@@ -1,7 +1,7 @@
 <map id="cl_move_base_z::ClMoveBaseZ" name="cl_move_base_z::ClMoveBaseZ">
-<area shape="rect" id="node1" title=" " coords="27,1887,238,1985"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html" title=" " coords="5,1255,260,1837"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1client__bases_1_1ISmaccActionClient.html" title=" " coords="46,403,209,545"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html" title=" " coords="149,595,338,1177"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClient.html" title=" " coords="35,5,219,353"/>
+<area shape="rect" id="node1" title=" " alt="" coords="27,1887,238,1985"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html" title=" " alt="" coords="5,1255,260,1837"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1client__bases_1_1ISmaccActionClient.html" title=" " alt="" coords="46,403,209,545"/>
+<area shape="rect" id="node5" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html" title=" " alt="" coords="149,595,338,1177"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClient.html" title=" " alt="" coords="35,5,219,353"/>
 </map>

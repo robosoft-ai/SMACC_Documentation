@@ -158,11 +158,11 @@ $(function() {
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                                                          0.00,  <span class="comment">// jump_threshold</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                                                          trajectory);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  moveit::planning_interface::MoveItErrorCode behaviorResult;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  moveit::core::MoveItErrorCode behaviorResult;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">if</span> (fraction != 1.0 || fraction == -1)</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    ROS_WARN_STREAM(<span class="stringliteral">&quot;[CbMoveCartesianRelative] Cartesian plan joint-continuity percentaje. Execution skipped because not 100% of cartesian motion: &quot;</span> &lt;&lt; fraction*100&lt;&lt;<span class="stringliteral">&quot;%&quot;</span>);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    behaviorResult = moveit::planning_interface::MoveItErrorCode::PLANNING_FAILED;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    behaviorResult = moveit::core::MoveItErrorCode::PLANNING_FAILED;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  {</div>

@@ -1,7 +1,7 @@
 <map id="cl_move_group_interface::CbMoveEndEffector::moveToAbsolutePose" name="cl_move_group_interface::CbMoveEndEffector::moveToAbsolutePose">
-<area shape="rect" id="node1" title=" " coords="5,127,281,167"/>
-<area shape="rect" id="node2" href="$classcl__move__group__interface_1_1ClMoveGroup.html#a39dc3871d29b2af1ab739057f6ca6daa" title=" " coords="338,5,549,60"/>
-<area shape="rect" id="node3" href="$classcl__move__group__interface_1_1ClMoveGroup.html#aebaf269db373d41837bae87651458e54" title=" " coords="338,84,549,139"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1SmaccAsyncClientBehavior.html#af6fa358cb1ab5ed16791a201f59260e0" title=" " coords="329,163,557,203"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1SmaccAsyncClientBehavior.html#adf18efe1f0e4eacc1277b8865a8a94b1" title=" " coords="329,227,557,267"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,127,281,167"/>
+<area shape="rect" id="node2" href="$classcl__move__group__interface_1_1ClMoveGroup.html#a39dc3871d29b2af1ab739057f6ca6daa" title=" " alt="" coords="338,5,549,60"/>
+<area shape="rect" id="node3" href="$classcl__move__group__interface_1_1ClMoveGroup.html#aebaf269db373d41837bae87651458e54" title=" " alt="" coords="338,84,549,139"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1SmaccAsyncClientBehavior.html#af6fa358cb1ab5ed16791a201f59260e0" title=" " alt="" coords="329,163,557,203"/>
+<area shape="rect" id="node5" href="$classsmacc_1_1SmaccAsyncClientBehavior.html#adf18efe1f0e4eacc1277b8865a8a94b1" title=" " alt="" coords="329,227,557,267"/>
 </map>

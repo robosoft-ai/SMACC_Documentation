@@ -1,9 +1,9 @@
 <map id="cl_move_base_z::backward_local_planner::BackwardLocalPlanner::setPlan" name="cl_move_base_z::backward_local_planner::BackwardLocalPlanner::setPlan">
-<area shape="rect" id="node1" title="Set the plan that the local planner is following." coords="5,156,251,211"/>
-<area shape="rect" id="node2" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#ab1b01ecdb27641dde60661362d75465b" title=" " coords="299,5,544,60"/>
-<area shape="rect" id="node4" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a0025cd3ffaa04a6a02492a33673a78a1" title=" " coords="299,84,544,139"/>
-<area shape="rect" id="node5" href="$namespacecl__move__base__z_1_1backward__local__planner.html#a59f03ead7377eb9c22b83f84f0215127" title=" " coords="311,163,531,203"/>
-<area shape="rect" id="node6" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a100fe8bdaaf89b0fa54ecf2aef0966ed" title=" " coords="299,228,544,283"/>
-<area shape="rect" id="node7" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a35832ebefc43e5977e1222389244c8d3" title=" " coords="299,307,544,361"/>
-<area shape="rect" id="node3" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#ad39ba029c760fc63ea286c74b5b9b795" title=" " coords="592,38,869,107"/>
+<area shape="rect" id="node1" title="Set the plan that the local planner is following." alt="" coords="5,156,251,211"/>
+<area shape="rect" id="node2" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#ab1b01ecdb27641dde60661362d75465b" title=" " alt="" coords="299,5,544,60"/>
+<area shape="rect" id="node4" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a0025cd3ffaa04a6a02492a33673a78a1" title=" " alt="" coords="299,84,544,139"/>
+<area shape="rect" id="node5" href="$namespacecl__move__base__z_1_1backward__local__planner.html#a59f03ead7377eb9c22b83f84f0215127" title=" " alt="" coords="311,163,531,203"/>
+<area shape="rect" id="node6" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a100fe8bdaaf89b0fa54ecf2aef0966ed" title=" " alt="" coords="299,228,544,283"/>
+<area shape="rect" id="node7" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a35832ebefc43e5977e1222389244c8d3" title=" " alt="" coords="299,307,544,361"/>
+<area shape="rect" id="node3" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#ad39ba029c760fc63ea286c74b5b9b795" title=" " alt="" coords="592,38,869,107"/>
 </map>

@@ -1,12 +1,12 @@
 <map id="cl_move_group_interface::CbMoveEndEffectorTrajectory" name="cl_move_group_interface::CbMoveEndEffectorTrajectory">
-<area shape="rect" id="node1" title=" " coords="417,739,631,1219"/>
-<area shape="rect" id="node5" href="$classcl__move__group__interface_1_1CbCircularPivotMotion.html" title=" " coords="5,1274,192,1505"/>
-<area shape="rect" id="node7" href="$classcl__move__group__interface_1_1CbCircularPouringMotion.html" title=" " coords="216,1267,403,1512"/>
-<area shape="rect" id="node8" href="$classcl__move__group__interface_1_1CbExecuteLastTrajectory.html" title=" " coords="427,1340,621,1439"/>
-<area shape="rect" id="node9" href="$classcl__move__group__interface_1_1CbMoveCartesianRelative2.html" title=" " coords="645,1318,846,1461"/>
-<area shape="rect" id="node10" href="$classcl__move__group__interface_1_1CbUndoLastTrajectory.html" title=" " coords="871,1311,1049,1468"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1SmaccAsyncClientBehavior.html" title=" " coords="295,387,527,691"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClientBehavior.html" title=" " coords="311,5,511,339"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccUpdatable.html" title=" " coords="551,467,726,610"/>
-<area shape="rect" id="node6" href="$classcl__move__group__interface_1_1CbEndEffectorRotate.html" title=" " coords="13,1560,184,1659"/>
+<area shape="rect" id="node1" title=" " alt="" coords="417,739,631,1219"/>
+<area shape="rect" id="node5" href="$classcl__move__group__interface_1_1CbCircularPivotMotion.html" title=" " alt="" coords="5,1274,192,1505"/>
+<area shape="rect" id="node7" href="$classcl__move__group__interface_1_1CbCircularPouringMotion.html" title=" " alt="" coords="216,1267,403,1512"/>
+<area shape="rect" id="node8" href="$classcl__move__group__interface_1_1CbExecuteLastTrajectory.html" title=" " alt="" coords="427,1340,621,1439"/>
+<area shape="rect" id="node9" href="$classcl__move__group__interface_1_1CbMoveCartesianRelative2.html" title=" " alt="" coords="645,1318,846,1461"/>
+<area shape="rect" id="node10" href="$classcl__move__group__interface_1_1CbUndoLastTrajectory.html" title=" " alt="" coords="871,1311,1049,1468"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1SmaccAsyncClientBehavior.html" title=" " alt="" coords="295,387,527,691"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClientBehavior.html" title=" " alt="" coords="311,5,511,339"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccUpdatable.html" title=" " alt="" coords="551,467,726,610"/>
+<area shape="rect" id="node6" href="$classcl__move__group__interface_1_1CbEndEffectorRotate.html" title=" " alt="" coords="13,1560,184,1659"/>
 </map>

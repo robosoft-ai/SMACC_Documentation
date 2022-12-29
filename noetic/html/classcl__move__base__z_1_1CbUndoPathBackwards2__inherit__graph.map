@@ -1,7 +1,7 @@
 <map id="cl_move_base_z::CbUndoPathBackwards2" name="cl_move_base_z::CbUndoPathBackwards2">
-<area shape="rect" id="node1" title=" " coords="127,929,329,1204"/>
-<area shape="rect" id="node2" href="$classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase.html" title=" " coords="18,746,225,874"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1SmaccAsyncClientBehavior.html" title=" " coords="5,387,237,691"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClientBehavior.html" title=" " coords="21,5,221,339"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1ISmaccUpdatable.html" title=" " coords="249,739,423,881"/>
+<area shape="rect" id="node1" title=" " alt="" coords="127,929,329,1204"/>
+<area shape="rect" id="node2" href="$classcl__move__base__z_1_1CbMoveBaseClientBehaviorBase.html" title=" " alt="" coords="18,746,225,874"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1SmaccAsyncClientBehavior.html" title=" " alt="" coords="5,387,237,691"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1ISmaccClientBehavior.html" title=" " alt="" coords="21,5,221,339"/>
+<area shape="rect" id="node5" href="$classsmacc_1_1ISmaccUpdatable.html" title=" " alt="" coords="249,739,423,881"/>
 </map>

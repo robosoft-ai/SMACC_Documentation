@@ -1,7 +1,7 @@
 <map id="cl_move_base_z::forward_local_planner::ForwardLocalPlanner::computeVelocityCommands" name="cl_move_base_z::forward_local_planner::ForwardLocalPlanner::computeVelocityCommands">
-<area shape="rect" id="node1" title="Given the current position, orientation, and velocity of the robot: compute velocity commands to send..." coords="5,77,240,132"/>
-<area shape="rect" id="node2" href="$classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner.html#a3e852f81ccae82c56d7f25e56def899c" title=" " coords="303,5,493,60"/>
-<area shape="rect" id="node4" href="$namespacecl__move__base__z_1_1forward__local__planner.html#ae53fc7ce4e13850b348d96134c44c912" title=" " coords="288,85,508,125"/>
-<area shape="rect" id="node5" href="$classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner.html#ae2ef5a1d00495eb7a6c22ec35ab8baf2" title=" " coords="303,149,493,204"/>
-<area shape="rect" id="node3" href="$classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner.html#a07074f6a5a6cc1de035e09822d647158" title=" " coords="556,5,759,60"/>
+<area shape="rect" id="node1" title="Given the current position, orientation, and velocity of the robot: compute velocity commands to send..." alt="" coords="5,77,240,132"/>
+<area shape="rect" id="node2" href="$classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner.html#a3e852f81ccae82c56d7f25e56def899c" title=" " alt="" coords="303,5,493,60"/>
+<area shape="rect" id="node4" href="$namespacecl__move__base__z_1_1forward__local__planner.html#ae53fc7ce4e13850b348d96134c44c912" title=" " alt="" coords="288,85,508,125"/>
+<area shape="rect" id="node5" href="$classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner.html#ae2ef5a1d00495eb7a6c22ec35ab8baf2" title=" " alt="" coords="303,149,493,204"/>
+<area shape="rect" id="node3" href="$classcl__move__base__z_1_1forward__local__planner_1_1ForwardLocalPlanner.html#a07074f6a5a6cc1de035e09822d647158" title=" " alt="" coords="556,5,759,60"/>
 </map>

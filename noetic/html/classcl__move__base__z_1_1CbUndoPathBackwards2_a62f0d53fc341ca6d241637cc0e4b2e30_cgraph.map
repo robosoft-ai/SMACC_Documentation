@@ -1,10 +1,10 @@
 <map id="cl_move_base_z::CbUndoPathBackwards2::update" name="cl_move_base_z::CbUndoPathBackwards2::update">
-<area shape="rect" id="node1" title=" " coords="5,167,204,207"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#aedeaf9704b73bf05b5522f7250416c9a" title=" " coords="267,58,436,113"/>
-<area shape="rect" id="node6" href="$classcl__move__base__z_1_1CbUndoPathBackwards2.html#a20b9a6799b0484810b0319f5a97d020e" title=" " coords="252,137,451,177"/>
-<area shape="rect" id="node7" href="$namespacecl__move__base__z.html#ae144a2fabd00ba70fdc8099878cb3dac" title=" " coords="278,202,425,227"/>
-<area shape="rect" id="node8" href="$classcl__move__base__z_1_1Pose.html#a9faf8c6b437ff6b19c8bddd692908dca" title=" " coords="274,252,429,292"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClient.html#a8c3ce19f182e71909c5dc6263d25be69" title=" " coords="499,29,644,69"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1client__bases_1_1ISmaccActionClient.html#af7e68149691fe6c9284f6f80c19932d8" title=" " coords="500,94,643,149"/>
-<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " coords="692,29,833,69"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,167,204,207"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#aedeaf9704b73bf05b5522f7250416c9a" title=" " alt="" coords="267,58,436,113"/>
+<area shape="rect" id="node6" href="$classcl__move__base__z_1_1CbUndoPathBackwards2.html#a20b9a6799b0484810b0319f5a97d020e" title=" " alt="" coords="252,137,451,177"/>
+<area shape="rect" id="node7" href="$namespacecl__move__base__z.html#ae144a2fabd00ba70fdc8099878cb3dac" title=" " alt="" coords="278,202,425,227"/>
+<area shape="rect" id="node8" href="$classcl__move__base__z_1_1Pose.html#a9faf8c6b437ff6b19c8bddd692908dca" title=" " alt="" coords="274,252,429,292"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClient.html#a8c3ce19f182e71909c5dc6263d25be69" title=" " alt="" coords="499,29,644,69"/>
+<area shape="rect" id="node5" href="$classsmacc_1_1client__bases_1_1ISmaccActionClient.html#af7e68149691fe6c9284f6f80c19932d8" title=" " alt="" coords="500,94,643,149"/>
+<area shape="rect" id="node4" href="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873" title=" " alt="" coords="692,29,833,69"/>
 </map>

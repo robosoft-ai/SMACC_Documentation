@@ -1,5 +1,5 @@
 <map id="cl_move_base_z::Pose" name="cl_move_base_z::Pose">
-<area shape="rect" id="node1" title=" " coords="144,313,311,559"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccComponent.html" title=" " coords="5,5,228,265"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccUpdatable.html" title=" " coords="252,64,427,207"/>
+<area shape="rect" id="node1" title=" " alt="" coords="144,313,311,559"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccComponent.html" title=" " alt="" coords="5,5,228,265"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccUpdatable.html" title=" " alt="" coords="252,64,427,207"/>
 </map>
