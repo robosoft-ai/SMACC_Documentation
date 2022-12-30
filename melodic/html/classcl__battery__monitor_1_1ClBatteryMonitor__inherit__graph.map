@@ -1,6 +1,6 @@
 <map id="cl_battery_monitor::ClBatteryMonitor" name="cl_battery_monitor::ClBatteryMonitor">
-<area shape="rect" id="node1" title=" " alt="" coords="18,1205,193,1341"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccSubscriberClient.html" title=" " alt="" coords="5,815,205,1156"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClient.html" title=" " alt="" coords="8,5,192,361"/>
-<area shape="rect" id="node4" href="$classsmacc_1_1client__bases_1_1SmaccSubscriberClient.html" title=" " alt="" coords="122,411,310,752"/>
+<area shape="rect" id="node1" title=" " alt="" coords="18,1181,193,1295"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1client__bases_1_1SmaccSubscriberClient.html" title=" " alt="" coords="5,799,205,1132"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccClient.html" title=" " alt="" coords="8,5,192,353"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1client__bases_1_1SmaccSubscriberClient.html" title=" " alt="" coords="122,403,310,736"/>
 </map>

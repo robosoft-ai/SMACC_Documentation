@@ -1,5 +1,5 @@
 <map id="cl_move_base_z::CostmapSwitch::onInitialize" name="cl_move_base_z::CostmapSwitch::onInitialize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,41,223,83"/>
-<area shape="rect" id="node2" href="$classcl__move__base__z_1_1CostmapSwitch.html#ac46796874242fdaa7efef86b66a55102" title=" " alt="" coords="287,5,505,47"/>
-<area shape="rect" id="node3" href="$classcl__move__base__z_1_1CostmapSwitch.html#a0d04ca7b655f850ba3107393f1c437cb" title=" " alt="" coords="271,70,521,126"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,41,223,81"/>
+<area shape="rect" id="node2" href="$classcl__move__base__z_1_1CostmapSwitch.html#ac46796874242fdaa7efef86b66a55102" title=" " alt="" coords="287,5,505,45"/>
+<area shape="rect" id="node3" href="$classcl__move__base__z_1_1CostmapSwitch.html#a0d04ca7b655f850ba3107393f1c437cb" title=" " alt="" coords="271,70,521,125"/>
 </map>

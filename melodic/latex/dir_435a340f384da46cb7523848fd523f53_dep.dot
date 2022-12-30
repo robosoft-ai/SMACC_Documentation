@@ -1,0 +1,14 @@
+digraph "smacc_client_library/multirole_sensor_client/include/multirole_sensor_client/client_behaviors"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_c8c3747fbb068852747505467f59918b {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="multirole_sensor_client", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_c8c3747fbb068852747505467f59918b.html",tooltip=""]
+  dir_435a340f384da46cb7523848fd523f53 [label="client_behaviors", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_435a340f384da46cb7523848fd523f53.html",tooltip=""];
+  }
+  dir_6e3e4532ae0db906acb0c92fce514b9e [label="smacc", fillcolor="#edf0f7", color="red", style="filled", URL="dir_6e3e4532ae0db906acb0c92fce514b9e.html",tooltip=""];
+  dir_435a340f384da46cb7523848fd523f53->dir_6e3e4532ae0db906acb0c92fce514b9e [headlabel="1", labeldistance=1.5 headhref="dir_000016_000090.html" color="steelblue1" fontcolor="steelblue1"];
+}

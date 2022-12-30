@@ -1,0 +1,22 @@
+digraph "cl_move_base_z::backward_local_planner::BackwardLocalPlanner::setPlan"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::setPlan",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Set the plan that the local planner is following."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::divergenceDetectionUpdate",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#ab1b01ecdb27641dde60661362d75465b",tooltip=" "];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::computeCurrentEuclideanAndAngularErrors\lToCarrotGoal",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#ad39ba029c760fc63ea286c74b5b9b795",tooltip=" "];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::findInitialCarrotGoal",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a0025cd3ffaa04a6a02492a33673a78a1",tooltip=" "];
+  Node4 -> Node3 [color="steelblue1",style="solid"];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="cl_move_base_z::backward\l_local_planner::optionalRobotPose",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacecl__move__base__z_1_1backward__local__planner.html#a59f03ead7377eb9c22b83f84f0215127",tooltip=" "];
+  Node1 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::resamplePrecisePlan",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a100fe8bdaaf89b0fa54ecf2aef0966ed",tooltip=" "];
+  Node1 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::resetDivergenceDetection",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a35832ebefc43e5977e1222389244c8d3",tooltip=" "];
+}

@@ -1,0 +1,12 @@
+digraph "smacc/include/smacc/client_base_components/cp_topic_subscriber.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="smacc/include/smacc\l/client_base_components\l/cp_topic_subscriber.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="smacc_client_library\l/microstrain_mips_client\l/include/microstrain_mips\l_client/microstrain_mips_client.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$microstrain__mips__client_8h.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="smacc_client_library\l/microstrain_mips_client\l/src/microstrain_mips_client\l/microstrain_mips_client.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$microstrain__mips__client_8cpp.html",tooltip=" "];
+}

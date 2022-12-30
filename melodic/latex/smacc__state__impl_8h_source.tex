@@ -81,7 +81,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__impl_8h_source_l00077}00077     \textcolor{keyword}{template} <\textcolor{keyword}{typename} SmaccClientType>}
 \DoxyCodeLine{\Hypertarget{smacc__state__impl_8h_source_l00078}\mbox{\hyperlink{classsmacc_1_1ISmaccState_a7f95c9f0a6ea2d6f18d1aec0519de4ac}{00078}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccState_a7f95c9f0a6ea2d6f18d1aec0519de4ac}{ISmaccState::requiresClient}}(SmaccClientType *\&storage)}
 \DoxyCodeLine{\Hypertarget{smacc__state__impl_8h_source_l00079}00079     \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__impl_8h_source_l00080}00080         \textcolor{keyword}{const} \textcolor{keywordtype}{char} *sname = (\mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(*this).name()).c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__state__impl_8h_source_l00080}00080         \textcolor{keyword}{const} \textcolor{keywordtype}{char} *sname = (\mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(*this).name()).c\_str());}
 \DoxyCodeLine{\Hypertarget{smacc__state__impl_8h_source_l00081}00081         storage = \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{\Hypertarget{smacc__state__impl_8h_source_l00082}00082         \textcolor{keyword}{auto} \&orthogonals = this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a99ccacd52b422f9ee53cf892f6204618}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7f5b2882dbd077584767cb2533ed3c49}{getOrthogonals}}();}
 \DoxyCodeLine{\Hypertarget{smacc__state__impl_8h_source_l00083}00083         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&ortho : orthogonals)}

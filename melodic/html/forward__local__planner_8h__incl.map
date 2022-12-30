@@ -1,10 +1,10 @@
 <map id="smacc_client_library/move_base_z_client/custom_planners/forward_local_planner/include/forward_local_planner/forward_local_planner.h" name="smacc_client_library/move_base_z_client/custom_planners/forward_local_planner/include/forward_local_planner/forward_local_planner.h">
-<area shape="rect" id="node1" title=" " alt="" coords="493,5,701,91"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,139,145,180"/>
-<area shape="rect" id="node3" title=" " alt="" coords="170,146,381,173"/>
-<area shape="rect" id="node4" title=" " alt="" coords="405,139,546,180"/>
-<area shape="rect" id="node5" title=" " alt="" coords="571,146,623,173"/>
-<area shape="rect" id="node6" title=" " alt="" coords="647,146,795,173"/>
-<area shape="rect" id="node7" title=" " alt="" coords="819,146,927,173"/>
-<area shape="rect" id="node8" title=" " alt="" coords="951,146,1042,173"/>
+<area shape="rect" id="node1" title=" " alt="" coords="493,5,701,89"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,137,145,177"/>
+<area shape="rect" id="node3" title=" " alt="" coords="170,145,381,170"/>
+<area shape="rect" id="node4" title=" " alt="" coords="405,137,546,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="571,145,623,170"/>
+<area shape="rect" id="node6" title=" " alt="" coords="647,145,795,170"/>
+<area shape="rect" id="node7" title=" " alt="" coords="819,145,927,170"/>
+<area shape="rect" id="node8" title=" " alt="" coords="951,145,1042,170"/>
 </map>

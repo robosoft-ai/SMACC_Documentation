@@ -1,4 +1,4 @@
 <map id="cl_move_base_z::backward_local_planner::BackwardLocalPlanner::defaultBackwardCmd" name="cl_move_base_z::backward_local_planner::BackwardLocalPlanner::defaultBackwardCmd">
-<area shape="rect" id="node1" title=" " alt="" coords="299,5,544,61"/>
-<area shape="rect" id="node2" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a25437208766366ca22f967fe72e80988" title="Given the current position, orientation, and velocity of the robot: compute velocity commands to send..." alt="" coords="5,5,251,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="299,5,544,60"/>
+<area shape="rect" id="node2" href="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a25437208766366ca22f967fe72e80988" title="Given the current position, orientation, and velocity of the robot: compute velocity commands to send..." alt="" coords="5,5,251,60"/>
 </map>

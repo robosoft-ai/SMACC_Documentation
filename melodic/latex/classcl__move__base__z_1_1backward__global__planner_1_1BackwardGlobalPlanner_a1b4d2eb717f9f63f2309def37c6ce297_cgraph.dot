@@ -1,0 +1,13 @@
+digraph "cl_move_base_z::backward_global_planner::BackwardGlobalPlanner::createDefaultBackwardPath"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="cl_move_base_z::backward\l_global_planner::BackwardGlobal\lPlanner::createDefaultBackwardPath",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="cl_move_base_z::makePure\lSpinningSubPlan",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacecl__move__base__z.html#ac774e138510eb7b5e0015be1f7709e19",tooltip=" "];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="cl_move_base_z::makePure\lStraightSubPlan",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacecl__move__base__z.html#a84f0875e9e553c2795894cc9c21b2b3c",tooltip=" "];
+}

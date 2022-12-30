@@ -1,0 +1,10 @@
+digraph "smacc_rviz_plugin::SmaccRvizDisplay"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="{smacc_rviz_plugin::\lSmaccRvizDisplay\n|- current_state_\l- topic_property_\l- nh_\l- sub_\l|+ SmaccRvizDisplay()\l+ ~SmaccRvizDisplay()\l+ subscribe()\l+ unsubscribe()\l# onInitialize()\l# reset()\l- processMessage()\l- updateCurrentState()\l- updateTopic()\l}",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="steelblue1",style="solid",arrowtail="onormal"];
+  Node2 [label="{rviz::Display\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+}

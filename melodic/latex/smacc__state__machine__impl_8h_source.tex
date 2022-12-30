@@ -97,7 +97,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00093}00093   \textcolor{keyword}{template} <\textcolor{keyword}{typename} SmaccComponentType>}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00094}\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_aa6b25e28f3bce24c4b356dc865a9eb7b}{00094}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_aa6b25e28f3bce24c4b356dc865a9eb7b}{ISmaccStateMachine::requiresComponent}}(SmaccComponentType *\&storage)}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00095}00095   \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00096}00096     ROS\_DEBUG(\textcolor{stringliteral}{"{}component \%s is required"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(SmaccComponentType).name()).c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00096}00096     ROS\_DEBUG(\textcolor{stringliteral}{"{}component \%s is required"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(SmaccComponentType).name()).c\_str());}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00097}00097     std::lock\_guard<std::recursive\_mutex> lock(\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_aac785541646e5c517273bf31072505a1}{m\_mutex\_}});}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00098}00098 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00099}00099     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} ortho : this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_acc5944f313bc6ce1637c632243a511f2}{orthogonals\_}})}
@@ -113,7 +113,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00109}00109       \}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00110}00110     \}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00111}00111 }
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00112}00112     ROS\_WARN(\textcolor{stringliteral}{"{}component \%s is required but it was not found in any orthogonal"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(SmaccComponentType).name()).c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00112}00112     ROS\_WARN(\textcolor{stringliteral}{"{}component \%s is required but it was not found in any orthogonal"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(SmaccComponentType).name()).c\_str());}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00113}00113 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00114}00114     \textcolor{comment}{// std::string componentkey = demangledTypeName<SmaccComponentType>();}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00115}00115     \textcolor{comment}{// SmaccComponentType *ret;}}
@@ -230,8 +230,8 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00226}00226   \textcolor{keyword}{template} <\textcolor{keyword}{typename} StateField, \textcolor{keyword}{typename} BehaviorType>}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00227}\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_acfb75233b79062cc7769ea751b7f320d}{00227}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_acfb75233b79062cc7769ea751b7f320d}{ISmaccStateMachine::mapBehavior}}()}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00228}00228   \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00229}00229     std::string stateFieldName = \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateField).name());}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00230}00230     std::string behaviorType = \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(BehaviorType).name());}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00229}00229     std::string stateFieldName = \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateField).name());}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00230}00230     std::string behaviorType = \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(BehaviorType).name());}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00231}00231     ROS\_INFO(\textcolor{stringliteral}{"{}Mapping state field '\%s' to stateReactor '\%s'"{}}, stateFieldName.c\_str(), behaviorType.c\_str());}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00232}00232     \mbox{\hyperlink{classsmacc_1_1SmaccClientBehavior}{SmaccClientBehavior}} *globalreference;}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00233}00233     \textcolor{keywordflow}{if} (!this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_aeda2d6813c6c428bf318a5792e014b61}{getGlobalSMData}}(stateFieldName, globalreference))}
@@ -371,7 +371,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00367}00367   \{}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00368}00368     std::lock\_guard<std::recursive\_mutex> lock(\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_aac785541646e5c517273bf31072505a1}{m\_mutex\_}});}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00369}00369 }
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00370}00370     ROS\_DEBUG(\textcolor{stringliteral}{"{}[State Machne] Initializating a new state '\%s' and updating current state. Getting state meta-\/information. number of orthogonals: \%ld"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateType).name()).c\_str(), this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_acc5944f313bc6ce1637c632243a511f2}{orthogonals\_}}.size());}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00370}00370     ROS\_DEBUG(\textcolor{stringliteral}{"{}[State Machne] Initializating a new state '\%s' and updating current state. Getting state meta-\/information. number of orthogonals: \%ld"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateType).name()).c\_str(), this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_acc5944f313bc6ce1637c632243a511f2}{orthogonals\_}}.size());}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00371}00371 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00372}00372     \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ae6ce5c65a7f49b6aca61f46be53e9cc5}{stateSeqCounter\_}}++;}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00373}00373     \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a9c6e7745205bcce80a301f2fbe8f7e99}{currentState\_}} = state;}
@@ -381,7 +381,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00377}00377   \textcolor{keyword}{template} <\textcolor{keyword}{typename} StateType>}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00378}\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a856cf2d25d84659b974cccfbf44aeec9}{00378}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a856cf2d25d84659b974cccfbf44aeec9}{ISmaccStateMachine::notifyOnStateEntryEnd}}(StateType *state)}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00379}00379   \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00380}00380     ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] State OnEntry code finished"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateType).name()).c\_str());}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00380}00380     ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] State OnEntry code finished"{}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateType).name()).c\_str());}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00381}00381 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00382}00382     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} pair : this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_acc5944f313bc6ce1637c632243a511f2}{orthogonals\_}})}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00383}00383     \{}
@@ -400,7 +400,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00396}00396 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00397}00397     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&sr : this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a9c6e7745205bcce80a301f2fbe8f7e99}{currentState\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a758fea49c0c8b60f940e5708495f5c8a}{getStateReactors}}())}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00398}00398     \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00399}00399       \textcolor{keyword}{auto} srname = \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{smacc::demangleSymbol}}(\textcolor{keyword}{typeid}(*sr).name()).c\_str();}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00399}00399       \textcolor{keyword}{auto} srname = \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{smacc::demangleSymbol}}(\textcolor{keyword}{typeid}(*sr).name()).c\_str();}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00400}00400       ROS\_INFO(\textcolor{stringliteral}{"{}state reactor onEntry: \%s"{}}, srname);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00401}00401       \textcolor{keywordflow}{try}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00402}00402       \{}
@@ -415,7 +415,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00411}00411 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00412}00412     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&eg : this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a9c6e7745205bcce80a301f2fbe8f7e99}{currentState\_}}-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccState_a1da272d8ebbdee1757de8a1feba907f7}{getEventGenerators}}())}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00413}00413     \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00414}00414       \textcolor{keyword}{auto} egname = \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{smacc::demangleSymbol}}(\textcolor{keyword}{typeid}(*eg).name()).c\_str();}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00414}00414       \textcolor{keyword}{auto} egname = \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{smacc::demangleSymbol}}(\textcolor{keyword}{typeid}(*eg).name()).c\_str();}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00415}00415       ROS\_INFO(\textcolor{stringliteral}{"{}state reactor onEntry: \%s"{}}, egname);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00416}00416       \textcolor{keywordflow}{try}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00417}00417       \{}
@@ -458,7 +458,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00454}00454   \{}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00455}00455     \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a654a98ba86c4c1013ac3c371f293d950}{stateMachineCurrentAction}} = \mbox{\hyperlink{namespacesmacc_a0889aff43c93fe5285109819d2898144a22bd5bb7935dd66f181d92efc273951e}{StateMachineInternalAction::STATE\_EXITING}};}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00456}00456 }
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00457}00457     \textcolor{keyword}{auto} fullname = \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateType).name());}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00457}00457     \textcolor{keyword}{auto} fullname = \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateType).name());}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00458}00458     ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}exiting state: "{}} << fullname);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00459}00459     \textcolor{comment}{//this-\/>setParam("{}destroyed"{}, true);}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00460}00460 }
@@ -479,7 +479,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00475}00475 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00476}00476     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&sr : state-\/>getStateReactors())}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00477}00477     \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00478}00478       \textcolor{keyword}{auto} srname = \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{smacc::demangleSymbol}}(\textcolor{keyword}{typeid}(*sr).name()).c\_str();}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00478}00478       \textcolor{keyword}{auto} srname = \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{smacc::demangleSymbol}}(\textcolor{keyword}{typeid}(*sr).name()).c\_str();}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00479}00479       ROS\_INFO(\textcolor{stringliteral}{"{}state reactor OnExit: \%s"{}}, srname);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00480}00480       \textcolor{keywordflow}{try}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00481}00481       \{}
@@ -494,7 +494,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00490}00490 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00491}00491     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&eg : state-\/>getEventGenerators())}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00492}00492     \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00493}00493       \textcolor{keyword}{auto} egname = \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{smacc::demangleSymbol}}(\textcolor{keyword}{typeid}(*eg).name()).c\_str();}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00493}00493       \textcolor{keyword}{auto} egname = \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{smacc::demangleSymbol}}(\textcolor{keyword}{typeid}(*eg).name()).c\_str();}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00494}00494       ROS\_INFO(\textcolor{stringliteral}{"{}state reactor OnExit: \%s"{}}, egname);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00495}00495       \textcolor{keywordflow}{try}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00496}00496       \{}
@@ -523,7 +523,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00519}00519   \textcolor{keyword}{template} <\textcolor{keyword}{typename} StateType>}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00520}\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ac352013a5df0dcce0594f1466b9a6f7b}{00520}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_ac352013a5df0dcce0594f1466b9a6f7b}{ISmaccStateMachine::notifyOnStateExited}}(StateType *state)}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00521}00521   \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00522}00522     \textcolor{keyword}{auto} fullname = \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateType).name());}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00522}00522     \textcolor{keyword}{auto} fullname = \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(StateType).name());}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00523}00523 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00524}00524     \textcolor{comment}{// then call exit state}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00525}00525     ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}state exit: "{}} << fullname);}

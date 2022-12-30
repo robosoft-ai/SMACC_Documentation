@@ -1,0 +1,10 @@
+digraph "smacc_client_library/move_base_z_client/move_base_z_client_plugin/include/move_base_z_client_plugin/components/costmap_switch/cp_costmap_switch.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="smacc_client_library\l/move_base_z_client/move\l_base_z_client_plugin/include\l/move_base_z_client_plugin/components\l/costmap_switch/cp_costmap_switch.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="smacc_client_library\l/move_base_z_client/move\l_base_z_client_plugin/src\l/components/costmap_switch\l/cp_costmap_switch.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cp__costmap__switch_8cpp.html",tooltip=" "];
+}

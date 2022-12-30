@@ -84,11 +84,11 @@
 \DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00080}00080                                                           0.00,  \textcolor{comment}{// jump\_threshold}}
 \DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00081}00081                                                           trajectory);}
 \DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00082}00082 }
-\DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00083}00083   moveit::planning\_interface::MoveItErrorCode behaviorResult;}
+\DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00083}00083   moveit::core::MoveItErrorCode behaviorResult;}
 \DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00084}00084   \textcolor{keywordflow}{if} (fraction != 1.0 || fraction == -\/1)}
 \DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00085}00085   \{}
 \DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00086}00086     ROS\_WARN\_STREAM(\textcolor{stringliteral}{"{}[CbMoveCartesianRelative] Cartesian plan joint-\/continuity percentaje. Execution skipped because not 100\% of cartesian motion: "{}} << fraction*100<<\textcolor{stringliteral}{"{}\%"{}});}
-\DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00087}00087     behaviorResult = moveit::planning\_interface::MoveItErrorCode::PLANNING\_FAILED;}
+\DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00087}00087     behaviorResult = moveit::core::MoveItErrorCode::PLANNING\_FAILED;}
 \DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00088}00088   \}}
 \DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00089}00089   \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{cb__move__cartesian__relative_8cpp_source_l00090}00090   \{}

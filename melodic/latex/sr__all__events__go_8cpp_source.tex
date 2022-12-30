@@ -22,12 +22,12 @@
 \DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00018}00018 }
 \DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00019}\mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_abd72dc79374c34111d24691c459850c2}{00019}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_abd72dc79374c34111d24691c459850c2}{SrAllEventsGo::onEventNotified}}(\textcolor{keyword}{const} std::type\_info *eventType)}
 \DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00020}00020 \{}
-\DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00021}00021     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}SB ALL RECEIVED EVENT OF TYPE:"{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(eventType-\/>name()));}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00021}00021     ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}SB ALL RECEIVED EVENT OF TYPE:"{}} << \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(eventType-\/>name()));}
 \DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00022}00022     \mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_a2c3d7c7e15ed155ae6e83fe49e7897e9}{triggeredEvents}}[eventType] = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00023}00023 }
 \DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00024}00024     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&entry : \mbox{\hyperlink{classsmacc_1_1state__reactors_1_1SrAllEventsGo_a2c3d7c7e15ed155ae6e83fe49e7897e9}{triggeredEvents}})}
 \DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00025}00025     \{}
-\DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00026}00026         ROS\_INFO\_STREAM(\mbox{\hyperlink{namespacesmacc_1_1introspection_a2f495108db3e57604d8d3ff5ef030302}{demangleSymbol}}(entry.first-\/>name()) << \textcolor{stringliteral}{"{} = "{}} << entry.second);}
+\DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00026}00026         ROS\_INFO\_STREAM(\mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(entry.first-\/>name()) << \textcolor{stringliteral}{"{} = "{}} << entry.second);}
 \DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00027}00027     \}}
 \DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00028}00028 \}}
 \DoxyCodeLine{\Hypertarget{sr__all__events__go_8cpp_source_l00029}00029 }

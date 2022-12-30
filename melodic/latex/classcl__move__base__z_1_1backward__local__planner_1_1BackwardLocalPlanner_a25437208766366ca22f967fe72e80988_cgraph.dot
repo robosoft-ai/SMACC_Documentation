@@ -1,0 +1,31 @@
+digraph "cl_move_base_z::backward_local_planner::BackwardLocalPlanner::computeVelocityCommands"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::computeVelocityCommands",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Given the current position, orientation, and velocity of the robot: compute velocity commands to send..."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::checkCarrotHalfPlainConstraint",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a22938e354a4ec489101295ed7f2539f6",tooltip=" "];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::checkCurrentPoseInGoalRange",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a8b84e3961a79317a9c978ec054e4a112",tooltip=" "];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::defaultBackwardCmd",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a1ebd69a028a22e3573e98f89d593f97d",tooltip=" "];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::generateTrajectory",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a9e8921ca8ce379ca8ba321f82ca23cdc",tooltip=" "];
+  Node5 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::computeNewPositions",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a0fe2ebd23fd79e8b574127e819ef0e14",tooltip=" "];
+  Node1 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="cl_move_base_z::backward\l_local_planner::optionalRobotPose",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacecl__move__base__z_1_1backward__local__planner.html#a59f03ead7377eb9c22b83f84f0215127",tooltip=" "];
+  Node1 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::publishGoalMarker",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a70eaeb6cf31fd3378d9fbf9bcb975995",tooltip=" "];
+  Node1 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::straightBackwardsAndPureSpinCmd",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a6069866b4a3150883de3212d8e43e8f8",tooltip=" "];
+  Node1 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::updateCarrotGoal",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a16e79a1b4c0f18879f6f0a8ba67103fd",tooltip=" "];
+  Node10 -> Node11 [color="steelblue1",style="solid"];
+  Node11 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::computeCurrentEuclideanAndAngularErrors\lToCarrotGoal",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#ad39ba029c760fc63ea286c74b5b9b795",tooltip=" "];
+  Node10 -> Node12 [color="steelblue1",style="solid"];
+  Node12 [label="cl_move_base_z::backward\l_local_planner::BackwardLocalPlanner\l::resetDivergenceDetection",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner.html#a35832ebefc43e5977e1222389244c8d3",tooltip=" "];
+}

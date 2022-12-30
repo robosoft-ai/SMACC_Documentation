@@ -59,7 +59,7 @@
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00055}00055   moveGroupInterface.setPoseReferenceFrame(targetObjectPose.header.frame\_id);}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00056}00056 }
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00057}00057   moveit::planning\_interface::MoveGroupInterface::Plan computedMotionPlan;}
-\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00058}00058   \textcolor{keywordtype}{bool} success = (moveGroupInterface.plan(computedMotionPlan) == moveit::planning\_interface::MoveItErrorCode::SUCCESS);}
+\DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00058}00058   \textcolor{keywordtype}{bool} success = (moveGroupInterface.plan(computedMotionPlan) == moveit::core::MoveItErrorCode::SUCCESS);}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00059}00059   ROS\_INFO\_NAMED(\textcolor{stringliteral}{"{}CbMoveEndEffector"{}}, \textcolor{stringliteral}{"{}Success Visualizing plan 1 (pose goal) \%s"{}}, success ? \textcolor{stringliteral}{"{}"{}} : \textcolor{stringliteral}{"{}FAILED"{}});}
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00060}00060 }
 \DoxyCodeLine{\Hypertarget{cb__move__end__effector_8cpp_source_l00061}00061   \textcolor{keywordflow}{if} (success)}

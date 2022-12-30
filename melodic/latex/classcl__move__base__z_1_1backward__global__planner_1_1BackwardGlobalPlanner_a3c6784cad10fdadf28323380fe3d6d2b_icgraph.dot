@@ -1,0 +1,13 @@
+digraph "cl_move_base_z::backward_global_planner::BackwardGlobalPlanner::publishGoalMarker"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="cl_move_base_z::backward\l_global_planner::BackwardGlobal\lPlanner::publishGoalMarker",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="cl_move_base_z::backward\l_global_planner::BackwardGlobal\lPlanner::makePlan",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__global__planner_1_1BackwardGlobalPlanner.html#a3f1f3c81e7c52c9305544fd793741a41",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="cl_move_base_z::backward\l_global_planner::BackwardGlobal\lPlanner::makePlan",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcl__move__base__z_1_1backward__global__planner_1_1BackwardGlobalPlanner.html#a2fe289017031d072f4ac32d017fe989d",tooltip=" "];
+}

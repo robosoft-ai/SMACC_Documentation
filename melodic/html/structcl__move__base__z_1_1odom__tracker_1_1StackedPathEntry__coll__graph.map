@@ -1,5 +1,5 @@
 <map id="cl_move_base_z::odom_tracker::StackedPathEntry" name="cl_move_base_z::odom_tracker::StackedPathEntry">
-<area shape="rect" id="node1" title=" " alt="" coords="5,145,184,237"/>
-<area shape="rect" id="node2" title=" " alt="" coords="33,5,82,83"/>
-<area shape="rect" id="node3" title=" " alt="" coords="106,5,161,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,108,184,163"/>
+<area shape="rect" id="node2" title=" " alt="" coords="28,5,81,45"/>
+<area shape="rect" id="node3" title=" " alt="" coords="105,5,164,45"/>
 </map>

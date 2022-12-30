@@ -1,0 +1,18 @@
+digraph "SmaccTestRuntimeNode"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="{SmaccTestRuntimeNode\n||+ tryTestPolicyFactory()\l+ init()\l+ success()\l+ failure()\l+ update()\l+ onRosOutCallback()\l+ onSmaccTransitionCallback()\l}",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [color="grey25",style="solid",label=" +nh_" ,arrowhead="odiamond"];
+  Node2 [label="{NodeHandle\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [color="grey25",style="solid",label=" +rosoutSub_\n+smaccTransitionSub_" ,arrowhead="odiamond"];
+  Node3 [label="{Subscriber\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [color="grey25",style="solid",label=" +testPolicies" ,arrowhead="odiamond"];
+  Node4 [label="{vector\< std::shared\l_ptr\< TestPolicy \> \>\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [color="grey25",style="solid",label=" +onRosOutMsg" ,arrowhead="odiamond"];
+  Node5 [label="{signal\< void(const\l rosgraph_msgs::Log &)\>\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node1 [color="grey25",style="solid",label=" +onSmaccTransition" ,arrowhead="odiamond"];
+  Node6 [label="{signal\< void(const\l smacc_msgs::SmaccTransition\lLogEntry &)\>\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+}
