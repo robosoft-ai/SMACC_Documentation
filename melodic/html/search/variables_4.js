@@ -21,5 +21,6 @@ var searchData=
   ['eventinfo_18',['eventInfo',['../structsmacc_1_1introspection_1_1SmaccTransitionInfo.html#a573be95bb6fdeeae46fc5ed56b260138',1,'smacc::introspection::SmaccTransitionInfo']]],
   ['eventqueuemutex_5f_19',['eventQueueMutex_',['../classsmacc_1_1ISmaccStateMachine.html#a492facb6acc13cf91c4eaf142abcd871',1,'smacc::ISmaccStateMachine']]],
   ['eventtype_20',['eventType',['../structsmacc_1_1introspection_1_1SmaccEventInfo.html#af3bdf1abf797864e681662d92a5515f9',1,'smacc::introspection::SmaccEventInfo']]],
-  ['eventtypes_21',['eventTypes',['../classsmacc_1_1StateReactor.html#a65c8ddfce40e7859e5c73fff1cf6c04b',1,'smacc::StateReactor']]]
+  ['eventtypes_21',['eventTypes',['../classsmacc_1_1StateReactor.html#a65c8ddfce40e7859e5c73fff1cf6c04b',1,'smacc::StateReactor']]],
+  ['executionmodel_5f_22',['executionModel_',['../classsmacc_1_1SignalDetector.html#a11c1fede2401c14a4b12d274be6bb1ab',1,'smacc::SignalDetector']]]
 ];

@@ -1,62 +1,63 @@
 <map id="cl_move_base_z::CostmapSwitch" name="cl_move_base_z::CostmapSwitch">
-<area shape="rect" id="node1" title=" " alt="" coords="2877,3820,3098,4007"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccComponent.html" title=" " alt="" coords="1461,2440,1684,2671"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccStateMachine.html" title=" " alt="" coords="1329,959,1555,1644"/>
-<area shape="rect" id="node31" href="$classsmacc_1_1SignalDetector.html" title=" " alt="" coords="2211,1758,2412,1959"/>
-<area shape="rect" id="node40" href="$classsmacc_1_1ISmaccClient.html" title=" " alt="" coords="1350,2059,1534,2363"/>
-<area shape="rect" id="node42" href="$classsmacc_1_1ISmaccOrthogonal.html" title=" " alt="" coords="981,1721,1170,1996"/>
-<area shape="rect" id="node4" title=" " alt="" coords="1601,255,1699,295"/>
-<area shape="rect" id="node8" href="$classsmacc_1_1ISmaccState.html" title=" " alt="" coords="1097,445,1305,852"/>
-<area shape="rect" id="node5" title=" " alt="" coords="1438,629,1497,669"/>
-<area shape="rect" id="node6" title=" " alt="" coords="2227,629,2307,669"/>
-<area shape="rect" id="node7" title=" " alt="" coords="835,629,943,669"/>
-<area shape="rect" id="node9" title=" " alt="" coords="1377,247,1576,302"/>
-<area shape="rect" id="node10" title=" " alt="" coords="895,247,1149,302"/>
-<area shape="rect" id="node11" href="$classsmacc_1_1introspection_1_1SmaccStateInfo.html" title=" " alt="" coords="1173,181,1353,368"/>
-<area shape="rect" id="node12" title=" " alt="" coords="1073,27,1272,82"/>
-<area shape="rect" id="node13" title=" " alt="" coords="1296,13,1481,97"/>
-<area shape="rect" id="node14" title=" " alt="" coords="1505,5,1731,104"/>
-<area shape="rect" id="node15" title=" " alt="" coords="745,5,984,104"/>
-<area shape="rect" id="node16" title=" " alt="" coords="1009,35,1049,75"/>
-<area shape="rect" id="node17" title=" " alt="" coords="3069,35,3127,75"/>
-<area shape="rect" id="node48" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html" title=" " alt="" coords="3403,3232,3657,3609"/>
-<area shape="rect" id="node49" href="$classsmacc_1_1client__bases_1_1ISmaccActionClient.html" title=" " alt="" coords="2758,2491,2921,2619"/>
-<area shape="rect" id="node60" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html" title=" " alt="" coords="3135,2777,3325,3155"/>
-<area shape="rect" id="node18" title=" " alt="" coords="2281,20,2504,89"/>
-<area shape="rect" id="node19" title=" " alt="" coords="515,27,721,82"/>
-<area shape="rect" id="node20" title=" " alt="" coords="1755,27,1947,82"/>
-<area shape="rect" id="node21" title=" " alt="" coords="1972,20,2147,89"/>
-<area shape="rect" id="node22" title=" " alt="" coords="2171,35,2257,75"/>
-<area shape="rect" id="node23" title=" " alt="" coords="967,629,1072,669"/>
-<area shape="rect" id="node24" title=" " alt="" coords="1643,614,1795,683"/>
-<area shape="rect" id="node25" title=" " alt="" coords="1820,629,1941,669"/>
-<area shape="rect" id="node26" title=" " alt="" coords="1966,629,2153,669"/>
-<area shape="rect" id="node27" title=" " alt="" coords="5,621,145,676"/>
-<area shape="rect" id="node28" title=" " alt="" coords="181,607,325,691"/>
-<area shape="rect" id="node29" title=" " alt="" coords="349,621,537,676"/>
-<area shape="rect" id="node30" title=" " alt="" coords="562,629,663,669"/>
-<area shape="rect" id="node32" title=" " alt="" coords="2383,1281,2624,1321"/>
-<area shape="rect" id="node33" title=" " alt="" coords="2649,1281,2782,1321"/>
-<area shape="rect" id="node34" title=" " alt="" coords="2806,1281,2870,1321"/>
-<area shape="rect" id="node35" title=" " alt="" coords="2895,1281,3005,1321"/>
-<area shape="rect" id="node36" title=" " alt="" coords="1779,1281,1934,1321"/>
-<area shape="rect" id="node37" title=" " alt="" coords="1958,1281,2086,1321"/>
-<area shape="rect" id="node38" title=" " alt="" coords="2123,1281,2185,1321"/>
-<area shape="rect" id="node39" title=" " alt="" coords="687,629,759,669"/>
-<area shape="rect" id="node41" title=" " alt="" coords="1195,1824,1393,1893"/>
-<area shape="rect" id="node43" title=" " alt="" coords="778,1274,978,1329"/>
-<area shape="rect" id="node44" title=" " alt="" coords="1002,1274,1253,1329"/>
-<area shape="rect" id="node45" title=" " alt="" coords="2999,3688,3146,3728"/>
-<area shape="rect" id="node46" title=" " alt="" coords="3171,3673,3353,3743"/>
-<area shape="rect" id="node47" href="$classcl__move__base__z_1_1ClMoveBaseZ.html" title=" " alt="" coords="2765,3659,2975,3757"/>
-<area shape="rect" id="node50" href="$classsmacc_1_1SmaccSignal.html" title=" " alt="" coords="3381,2528,3589,2583"/>
-<area shape="rect" id="node51" title=" " alt="" coords="3237,2117,3527,2304"/>
-<area shape="rect" id="node52" href="$classsmacc_1_1SmaccSignal.html" title=" " alt="" coords="3551,2161,3786,2260"/>
-<area shape="rect" id="node53" title=" " alt="" coords="3559,1773,3778,1945"/>
-<area shape="rect" id="node54" title=" " alt="" coords="2535,2528,2717,2583"/>
-<area shape="rect" id="node55" title=" " alt="" coords="3989,2528,4191,2583"/>
-<area shape="rect" id="node56" title=" " alt="" coords="2950,2535,3097,2575"/>
-<area shape="rect" id="node57" title=" " alt="" coords="3613,2535,3767,2575"/>
-<area shape="rect" id="node58" title=" " alt="" coords="3791,2535,3965,2575"/>
-<area shape="rect" id="node59" title=" " alt="" coords="3178,2535,3357,2575"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3211,3820,3433,4007"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1ISmaccComponent.html" title=" " alt="" coords="2043,2440,2265,2671"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccStateMachine.html" title=" " alt="" coords="1794,959,2021,1644"/>
+<area shape="rect" id="node31" href="$classsmacc_1_1SignalDetector.html" title=" " alt="" coords="2724,1758,2925,1959"/>
+<area shape="rect" id="node41" href="$classsmacc_1_1ISmaccClient.html" title=" " alt="" coords="2245,2059,2429,2363"/>
+<area shape="rect" id="node43" href="$classsmacc_1_1ISmaccOrthogonal.html" title=" " alt="" coords="1609,1721,1798,1996"/>
+<area shape="rect" id="node4" title=" " alt="" coords="1250,255,1349,295"/>
+<area shape="rect" id="node8" href="$classsmacc_1_1ISmaccState.html" title=" " alt="" coords="787,445,995,852"/>
+<area shape="rect" id="node5" title=" " alt="" coords="1251,629,1310,669"/>
+<area shape="rect" id="node6" title=" " alt="" coords="2949,629,3029,669"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1335,629,1443,669"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1027,247,1225,302"/>
+<area shape="rect" id="node10" title=" " alt="" coords="545,247,798,302"/>
+<area shape="rect" id="node11" href="$classsmacc_1_1introspection_1_1SmaccStateInfo.html" title=" " alt="" coords="823,181,1003,368"/>
+<area shape="rect" id="node12" title=" " alt="" coords="483,27,681,82"/>
+<area shape="rect" id="node13" title=" " alt="" coords="705,13,891,97"/>
+<area shape="rect" id="node14" title=" " alt="" coords="915,5,1140,104"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1691,5,1929,104"/>
+<area shape="rect" id="node16" title=" " alt="" coords="1954,35,1994,75"/>
+<area shape="rect" id="node17" title=" " alt="" coords="3733,35,3791,75"/>
+<area shape="rect" id="node49" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html" title=" " alt="" coords="3543,3232,3797,3609"/>
+<area shape="rect" id="node50" href="$classsmacc_1_1client__bases_1_1ISmaccActionClient.html" title=" " alt="" coords="3530,2491,3693,2619"/>
+<area shape="rect" id="node61" href="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html" title=" " alt="" coords="3639,2777,3829,3155"/>
+<area shape="rect" id="node18" title=" " alt="" coords="5,20,228,89"/>
+<area shape="rect" id="node19" title=" " alt="" coords="252,27,459,82"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1165,27,1357,82"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1381,20,1556,89"/>
+<area shape="rect" id="node22" title=" " alt="" coords="1580,35,1667,75"/>
+<area shape="rect" id="node23" title=" " alt="" coords="1467,629,1572,669"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1597,614,1749,683"/>
+<area shape="rect" id="node25" title=" " alt="" coords="1773,629,1895,669"/>
+<area shape="rect" id="node26" title=" " alt="" coords="1919,629,2106,669"/>
+<area shape="rect" id="node27" title=" " alt="" coords="2131,621,2271,676"/>
+<area shape="rect" id="node28" title=" " alt="" coords="2295,607,2439,691"/>
+<area shape="rect" id="node29" title=" " alt="" coords="2464,621,2652,676"/>
+<area shape="rect" id="node30" title=" " alt="" coords="2677,629,2778,669"/>
+<area shape="rect" id="node32" title=" " alt="" coords="3271,1281,3512,1321"/>
+<area shape="rect" id="node33" title=" " alt="" coords="3537,1281,3670,1321"/>
+<area shape="rect" id="node34" title=" " alt="" coords="2435,1281,2499,1321"/>
+<area shape="rect" id="node35" title=" " alt="" coords="2524,1281,2635,1321"/>
+<area shape="rect" id="node36" title=" " alt="" coords="2659,1281,2814,1321"/>
+<area shape="rect" id="node37" title=" " alt="" coords="2838,1281,2966,1321"/>
+<area shape="rect" id="node38" title=" " alt="" coords="2991,1281,3053,1321"/>
+<area shape="rect" id="node39" title=" " alt="" coords="3078,1281,3195,1321"/>
+<area shape="rect" id="node40" title=" " alt="" coords="2802,629,2874,669"/>
+<area shape="rect" id="node42" title=" " alt="" coords="1931,1824,2129,1893"/>
+<area shape="rect" id="node44" title=" " alt="" coords="1295,1274,1495,1329"/>
+<area shape="rect" id="node45" title=" " alt="" coords="1519,1274,1770,1329"/>
+<area shape="rect" id="node46" title=" " alt="" coords="3319,3688,3466,3728"/>
+<area shape="rect" id="node47" title=" " alt="" coords="3491,3673,3673,3743"/>
+<area shape="rect" id="node48" href="$classcl__move__base__z_1_1ClMoveBaseZ.html" title=" " alt="" coords="3085,3659,3295,3757"/>
+<area shape="rect" id="node51" href="$classsmacc_1_1SmaccSignal.html" title=" " alt="" coords="2793,2528,3001,2583"/>
+<area shape="rect" id="node52" title=" " alt="" coords="1930,2117,2221,2304"/>
+<area shape="rect" id="node53" href="$classsmacc_1_1SmaccSignal.html" title=" " alt="" coords="2545,2161,2779,2260"/>
+<area shape="rect" id="node54" title=" " alt="" coords="2481,1773,2699,1945"/>
+<area shape="rect" id="node55" title=" " alt="" coords="3096,2528,3279,2583"/>
+<area shape="rect" id="node56" title=" " alt="" coords="3303,2528,3506,2583"/>
+<area shape="rect" id="node57" title=" " alt="" coords="4167,2535,4314,2575"/>
+<area shape="rect" id="node58" title=" " alt="" coords="4339,2535,4492,2575"/>
+<area shape="rect" id="node59" title=" " alt="" coords="3767,2535,3941,2575"/>
+<area shape="rect" id="node60" title=" " alt="" coords="3965,2535,4143,2575"/>
 </map>
