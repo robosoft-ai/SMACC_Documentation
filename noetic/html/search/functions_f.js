@@ -30,7 +30,7 @@ var searchData=
   ['setworkingmode_27',['setWorkingMode',['../classcl__move__base__z_1_1odom__tracker_1_1OdomTracker.html#aeed01bdefd9a1cc709b0b3e4eed285ed',1,'cl_move_base_z::odom_tracker::OdomTracker']]],
   ['sgn_28',['sgn',['../namespacecl__move__base__z.html#ae144a2fabd00ba70fdc8099878cb3dac',1,'cl_move_base_z']]],
   ['shallow_5fconstruct_29',['shallow_construct',['../classsmacc_1_1SmaccState.html#a1dccb401e1a99031863a21a590d953e6',1,'smacc::SmaccState']]],
-  ['signaldetector_30',['SignalDetector',['../classsmacc_1_1SignalDetector.html#a24914014feb0ab01e2452af705ef2774',1,'smacc::SignalDetector']]],
+  ['signaldetector_30',['SignalDetector',['../classsmacc_1_1SignalDetector.html#a4299f20e8999e673d107a1e8b0ca461c',1,'smacc::SignalDetector']]],
   ['smaccactionclientbase_31',['SmaccActionClientBase',['../classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#a942113f29871c3e2c3fff9e951500805',1,'smacc::client_bases::SmaccActionClientBase::SmaccActionClientBase()'],['../classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#af38f27dd26f8a87fea6b3eaa4a84e604',1,'smacc::client_bases::SmaccActionClientBase::SmaccActionClientBase(std::string actionServerName)']]],
   ['smacceventgenerator_32',['SmaccEventGenerator',['../classsmacc_1_1SmaccEventGenerator.html#a26d17f3c1126a03107d452c95eef5136',1,'smacc::SmaccEventGenerator']]],
   ['smacceventinfo_33',['SmaccEventInfo',['../structsmacc_1_1introspection_1_1SmaccEventInfo.html#a322035851e387c9cb58bc1cfe4c68544',1,'smacc::introspection::SmaccEventInfo']]],

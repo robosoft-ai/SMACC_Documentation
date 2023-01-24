@@ -7,5 +7,5 @@ digraph "smacc::SignalDetector::setProcessorHandle"
   rankdir="RL";
   Node1 [label="smacc::SignalDetector\l::setProcessorHandle",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
-  Node2 [label="smacc::run",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesmacc.html#a47ac3b8d2968b1ba4152afd64ab66bd0",tooltip=" "];
+  Node2 [label="smacc::run",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesmacc.html#abb2d82c007c5d3b0d857d2f3c3771edd",tooltip=" "];
 }

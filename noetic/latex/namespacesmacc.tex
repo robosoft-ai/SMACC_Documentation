@@ -83,6 +83,10 @@ enum class \mbox{\hyperlink{namespacesmacc_a3e4f79486ea6ea6342dd3c712d16a4f6}{SM
 , \mbox{\hyperlink{namespacesmacc_a3e4f79486ea6ea6342dd3c712d16a4f6a7d649ef069df9885e382417c79f3d5cd}{RELEASE}}
  \}
 \item 
+enum class \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}{Execution\+Model}} \{ \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603cab4c3af830a31cbfd165e744c166b9ee7}{SINGLE\+\_\+\+THREAD\+\_\+\+SPINNER}}
+, \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603ca4cb37559636515471324e60b080a78e6}{ASYNCHRONOUS\+\_\+\+SPINNER}}
+ \}
+\item 
 enum class \mbox{\hyperlink{namespacesmacc_a5063f47926ad2fe25120ed4b1e7b2c7e}{Event\+Life\+Time}} \{ \mbox{\hyperlink{namespacesmacc_a5063f47926ad2fe25120ed4b1e7b2c7ea3a0bc063b6db8cae0361657958be836f}{ABSOLUTE}}
 , \mbox{\hyperlink{namespacesmacc_a5063f47926ad2fe25120ed4b1e7b2c7ea49b599d413671f16f08d0dd18243c294}{CURRENT\+\_\+\+STATE}}
  \}
@@ -99,8 +103,6 @@ enum class \mbox{\hyperlink{namespacesmacc_a0889aff43c93fe5285109819d2898144}{St
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename State\+Machine\+Type $>$ }\\void \mbox{\hyperlink{namespacesmacc_a47ac3b8d2968b1ba4152afd64ab66bd0}{run}} ()
-\item 
 {\footnotesize template$<$typename TState , typename TTransition\+Tag\+Name $>$ }\\void \mbox{\hyperlink{namespacesmacc_afd94fcb8f8c410a0ced7954bf76e845d}{specific\+Named\+On\+Exit}} (TState \&st, TTransition\+Tag\+Name tn, std\+::true\+\_\+type)
 \item 
 {\footnotesize template$<$typename TState , typename TTransition\+Tag\+Name $>$ }\\void \mbox{\hyperlink{namespacesmacc_ab1896cb023506b0a47d26d32cc078eb4}{specific\+Named\+On\+Exit}} (TState \&, TTransition\+Tag\+Name tn, std\+::false\+\_\+type)
@@ -112,6 +114,8 @@ enum class \mbox{\hyperlink{namespacesmacc_a0889aff43c93fe5285109819d2898144}{St
 {\footnotesize template$<$typename TState $>$ }\\void \mbox{\hyperlink{namespacesmacc_a17d9a98b5ae8bbeea7dc632105731e25}{standard\+On\+Exit}} (TState \&, std\+::false\+\_\+type)
 \item 
 {\footnotesize template$<$typename TState $>$ }\\void \mbox{\hyperlink{namespacesmacc_a1869b4edce2e6cf5023776b3ddaddf21}{standard\+On\+Exit}} (TState \&m)
+\item 
+{\footnotesize template$<$typename State\+Machine\+Type $>$ }\\void \mbox{\hyperlink{namespacesmacc_abb2d82c007c5d3b0d857d2f3c3771edd}{run}} (\mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}{Execution\+Model}} execution\+Model=\mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603cab4c3af830a31cbfd165e744c166b9ee7}{Execution\+Model\+::\+SINGLE\+\_\+\+THREAD\+\_\+\+SPINNER}})
 \end{DoxyCompactItemize}
 
 
@@ -142,6 +146,34 @@ Definition at line \mbox{\hyperlink{smacc__state__machine_8h_source_l00032}{32}}
 \DoxyCodeLine{00033     \mbox{\hyperlink{namespacesmacc_a5063f47926ad2fe25120ed4b1e7b2c7ea3a0bc063b6db8cae0361657958be836f}{ABSOLUTE}},}
 \DoxyCodeLine{00034     \mbox{\hyperlink{namespacesmacc_a5063f47926ad2fe25120ed4b1e7b2c7ea49b599d413671f16f08d0dd18243c294}{CURRENT\_STATE}} \textcolor{comment}{/*events are discarded if we are leaving the state it were created. I is used for client behaviors whose lifetime is associated to state*/}}
 \DoxyCodeLine{00035 \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}\label{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}} 
+\index{smacc@{smacc}!ExecutionModel@{ExecutionModel}}
+\index{ExecutionModel@{ExecutionModel}!smacc@{smacc}}
+\doxysubsubsection{\texorpdfstring{ExecutionModel}{ExecutionModel}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}{smacc\+::\+Execution\+Model}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SINGLE\_THREAD\_SPINNER@{SINGLE\_THREAD\_SPINNER}!smacc@{smacc}}\index{smacc@{smacc}!SINGLE\_THREAD\_SPINNER@{SINGLE\_THREAD\_SPINNER}}}\mbox{\Hypertarget{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603cab4c3af830a31cbfd165e744c166b9ee7}\label{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603cab4c3af830a31cbfd165e744c166b9ee7}} 
+SINGLE\+\_\+\+THREAD\+\_\+\+SPINNER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ASYNCHRONOUS\_SPINNER@{ASYNCHRONOUS\_SPINNER}!smacc@{smacc}}\index{smacc@{smacc}!ASYNCHRONOUS\_SPINNER@{ASYNCHRONOUS\_SPINNER}}}\mbox{\Hypertarget{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603ca4cb37559636515471324e60b080a78e6}\label{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603ca4cb37559636515471324e60b080a78e6}} 
+ASYNCHRONOUS\+\_\+\+SPINNER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{smacc__signal__detector_8h_source_l00014}{14}} of file \mbox{\hyperlink{smacc__signal__detector_8h_source}{smacc\+\_\+signal\+\_\+detector.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015 \{}
+\DoxyCodeLine{00016   \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603cab4c3af830a31cbfd165e744c166b9ee7}{SINGLE\_THREAD\_SPINNER}},}
+\DoxyCodeLine{00017   \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603ca4cb37559636515471324e60b080a78e6}{ASYNCHRONOUS\_SPINNER}}}
+\DoxyCodeLine{00018 \};}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{namespacesmacc_a3e4f79486ea6ea6342dd3c712d16a4f6}\label{namespacesmacc_a3e4f79486ea6ea6342dd3c712d16a4f6}} 
@@ -218,48 +250,47 @@ Definition at line \mbox{\hyperlink{smacc__state__machine_8h_source_l00037}{37}}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{namespacesmacc_a47ac3b8d2968b1ba4152afd64ab66bd0}\label{namespacesmacc_a47ac3b8d2968b1ba4152afd64ab66bd0}} 
+\mbox{\Hypertarget{namespacesmacc_abb2d82c007c5d3b0d857d2f3c3771edd}\label{namespacesmacc_abb2d82c007c5d3b0d857d2f3c3771edd}} 
 \index{smacc@{smacc}!run@{run}}
 \index{run@{run}!smacc@{smacc}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
 {\footnotesize\ttfamily template$<$typename State\+Machine\+Type $>$ \\
-void smacc\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+void smacc\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}{Execution\+Model}}}]{execution\+Model = {\ttfamily \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603cab4c3af830a31cbfd165e744c166b9ee7}{Execution\+Model\+::\+SINGLE\+\_\+\+THREAD\+\_\+\+SPINNER}}} }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{smacc__signal__detector_8h_source_l00080}{80}} of file \mbox{\hyperlink{smacc__signal__detector_8h_source}{smacc\+\_\+signal\+\_\+detector.\+h}}.
+Definition at line \mbox{\hyperlink{smacc__signal__detector_8h_source_l00088}{88}} of file \mbox{\hyperlink{smacc__signal__detector_8h_source}{smacc\+\_\+signal\+\_\+detector.\+h}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00081 \{}
-\DoxyCodeLine{00082     \textcolor{comment}{// create the asynchronous state machine scheduler}}
-\DoxyCodeLine{00083     \mbox{\hyperlink{smacc__fifo__scheduler_8h_a0063e275231c80d5f97df21d17257bf7}{SmaccFifoScheduler}} scheduler1(\textcolor{keyword}{true});}
-\DoxyCodeLine{00084 }
-\DoxyCodeLine{00085     \textcolor{comment}{// create the signalDetector component}}
-\DoxyCodeLine{00086     \mbox{\hyperlink{classsmacc_1_1SignalDetector}{SignalDetector}} signalDetector(\&scheduler1);}
-\DoxyCodeLine{00087 }
-\DoxyCodeLine{00088     \textcolor{comment}{// create the asynchronous state machine processor}}
-\DoxyCodeLine{00089     SmaccFifoScheduler::processor\_handle sm =}
-\DoxyCodeLine{00090         scheduler1.create\_processor<StateMachineType>(\&signalDetector);}
-\DoxyCodeLine{00091 }
-\DoxyCodeLine{00092     \textcolor{comment}{// initialize the asynchronous state machine processor}}
-\DoxyCodeLine{00093     signalDetector.setProcessorHandle(sm);}
-\DoxyCodeLine{00094 }
-\DoxyCodeLine{00095     scheduler1.initiate\_processor(sm);}
-\DoxyCodeLine{00096 }
-\DoxyCodeLine{00097     \textcolor{comment}{//create a thread for the asynchronous state machine processor execution}}
-\DoxyCodeLine{00098     boost::thread otherThread(boost::bind(\&sc::fifo\_scheduler<>::operator(), \&scheduler1, 0));}
-\DoxyCodeLine{00099 }
-\DoxyCodeLine{00100     \textcolor{comment}{// use the  main thread for the signal detector component (waiting actionclient requests)}}
-\DoxyCodeLine{00101     signalDetector.pollingLoop();}
-\DoxyCodeLine{00102     scheduler1.terminate();}
-\DoxyCodeLine{00103     otherThread.join();}
-\DoxyCodeLine{00104 \}}
+\DoxyCodeLine{00089 \{}
+\DoxyCodeLine{00090   \textcolor{comment}{// create the asynchronous state machine scheduler}}
+\DoxyCodeLine{00091   \mbox{\hyperlink{smacc__fifo__scheduler_8h_a0063e275231c80d5f97df21d17257bf7}{SmaccFifoScheduler}} scheduler1(\textcolor{keyword}{true});}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093   \textcolor{comment}{// create the signalDetector component}}
+\DoxyCodeLine{00094   \mbox{\hyperlink{classsmacc_1_1SignalDetector}{SignalDetector}} signalDetector(\&scheduler1, executionModel);}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096   \textcolor{comment}{// create the asynchronous state machine processor}}
+\DoxyCodeLine{00097   SmaccFifoScheduler::processor\_handle sm = scheduler1.create\_processor<StateMachineType>(\&signalDetector);}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099   \textcolor{comment}{// initialize the asynchronous state machine processor}}
+\DoxyCodeLine{00100   signalDetector.setProcessorHandle(sm);}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102   scheduler1.initiate\_processor(sm);}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{00104   \textcolor{comment}{// create a thread for the asynchronous state machine processor execution}}
+\DoxyCodeLine{00105   boost::thread otherThread(boost::bind(\&sc::fifo\_scheduler<>::operator(), \&scheduler1, 0));}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107   \textcolor{comment}{// use the  main thread for the signal detector component (waiting actionclient requests)}}
+\DoxyCodeLine{00108   signalDetector.pollingLoop();}
+\DoxyCodeLine{00109   scheduler1.terminate();}
+\DoxyCodeLine{00110   otherThread.join();}
+\DoxyCodeLine{00111 \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{signal__detector_8cpp_source_l00246}{smacc\+::\+Signal\+Detector\+::polling\+Loop()}}, and \mbox{\hyperlink{signal__detector_8cpp_source_l00136}{smacc\+::\+Signal\+Detector\+::set\+Processor\+Handle()}}.
+References \mbox{\hyperlink{signal__detector_8cpp_source_l00249}{smacc\+::\+Signal\+Detector\+::polling\+Loop()}}, and \mbox{\hyperlink{signal__detector_8cpp_source_l00139}{smacc\+::\+Signal\+Detector\+::set\+Processor\+Handle()}}.
 
 Here is the call graph for this function\+:
 % FIG 0
