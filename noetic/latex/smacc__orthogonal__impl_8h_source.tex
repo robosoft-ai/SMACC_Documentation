@@ -71,7 +71,7 @@
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00067}00067 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TClientBehavior>}
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00068}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a463bb235217511954feb4133394c4c61}{00068}} TClientBehavior *\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a463bb235217511954feb4133394c4c61}{ISmaccOrthogonal::getClientBehavior}}()}
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00069}00069 \{}
-\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00070}00070     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&cb : this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a02df51ab34a478841c54cbbba1b161c3}{clientBehaviors\_}})}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00070}00070     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&cb : this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a997000048254392ded76e94d6dcc3733}{clientBehaviors\_}}.back())}
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00071}00071     \{}
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00072}00072         \textcolor{keyword}{auto} *ret = \textcolor{keyword}{dynamic\_cast<}TClientBehavior *\textcolor{keyword}{>}(cb.get());}
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00073}00073         \textcolor{keywordflow}{if} (ret != \textcolor{keyword}{nullptr})}
@@ -88,9 +88,9 @@
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00084}00084     \textcolor{keywordflow}{return} \mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a0f270e9c8c126198f6bce542ab4e04ba}{clients\_}};}
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00085}00085 \}}
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00086}00086 }
-\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00087}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_adf67a263e149fc2e96591484b5e9c7aa}{00087}} \textcolor{keyword}{inline} \textcolor{keyword}{const} std::vector<std::shared\_ptr<smacc::ISmaccClientBehavior>> \&\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_adf67a263e149fc2e96591484b5e9c7aa}{ISmaccOrthogonal::getClientBehaviors}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00087}\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a6306decf7d23b4930649392b4823cbc8}{00087}} \textcolor{keyword}{inline} \textcolor{keyword}{const} std::vector<std::vector<std::shared\_ptr<smacc::ISmaccClientBehavior>>> \&\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a6306decf7d23b4930649392b4823cbc8}{ISmaccOrthogonal::getClientBehaviors}}()\textcolor{keyword}{ const}}
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00088}00088 \textcolor{keyword}{}\{}
-\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00089}00089     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a02df51ab34a478841c54cbbba1b161c3}{clientBehaviors\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00089}00089     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccOrthogonal_a997000048254392ded76e94d6dcc3733}{clientBehaviors\_}};}
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00090}00090 \}}
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00091}00091 }
 \DoxyCodeLine{\Hypertarget{smacc__orthogonal__impl_8h_source_l00092}00092 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}

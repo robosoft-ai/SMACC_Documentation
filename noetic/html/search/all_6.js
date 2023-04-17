@@ -4,7 +4,7 @@ var searchData=
   ['getancestors_1',['getAncestors',['../classsmacc_1_1introspection_1_1SmaccStateInfo.html#a3702387afa5f45d2df894113c71bac41',1,'smacc::introspection::SmaccStateInfo']]],
   ['getclassname_2',['getClassName',['../classsmacc_1_1ISmaccState.html#a5bf0b49d5ea6b9e8f45c26fa155b2664',1,'smacc::ISmaccState']]],
   ['getclientbehavior_3',['getClientBehavior',['../classsmacc_1_1ISmaccOrthogonal.html#a463bb235217511954feb4133394c4c61',1,'smacc::ISmaccOrthogonal']]],
-  ['getclientbehaviors_4',['getClientBehaviors',['../classsmacc_1_1ISmaccOrthogonal.html#adf67a263e149fc2e96591484b5e9c7aa',1,'smacc::ISmaccOrthogonal']]],
+  ['getclientbehaviors_4',['getClientBehaviors',['../classsmacc_1_1ISmaccOrthogonal.html#a6306decf7d23b4930649392b4823cbc8',1,'smacc::ISmaccOrthogonal']]],
   ['getclients_5',['getClients',['../classsmacc_1_1ISmaccOrthogonal.html#a83f1d5390ec41d91566e6f034b25b7d9',1,'smacc::ISmaccOrthogonal']]],
   ['getcomponent_6',['getComponent',['../classsmacc_1_1ISmaccClient.html#adef78db601749ca63c19e74a27cb88cc',1,'smacc::ISmaccClient::getComponent()'],['../classsmacc_1_1ISmaccClient.html#ad72cba3ce7c5b3bd3977747dc6d5fb69',1,'smacc::ISmaccClient::getComponent(std::string name)']]],
   ['getcomponents_7',['getComponents',['../classsmacc_1_1ISmaccClient.html#a18fa1c740da58ef42ead6afd89d4c4b3',1,'smacc::ISmaccClient']]],

@@ -9,7 +9,7 @@ digraph "smacc::ISmaccStateMachine::lockStateMachine"
   Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
   Node2 [label="smacc::ISmaccStateMachine\l::createOrthogonal",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#a9155cf3d1877255d70b0bd71648734a3",tooltip=" "];
   Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
-  Node3 [label="smacc::ISmaccStateMachine\l::notifyOnStateExitting",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#a707c36f8b02eeed1af624dd36a5a4957",tooltip=" "];
+  Node3 [label="smacc::ISmaccStateMachine\l::notifyOnStateExited",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#ac352013a5df0dcce0594f1466b9a6f7b",tooltip=" "];
   Node3 -> Node4 [dir="back",color="steelblue1",style="solid"];
   Node4 [label="smacc::SmaccState::exit",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1SmaccState.html#a34b22a3b1af1796f2bdc1383eeef3a74",tooltip=" "];
   Node1 -> Node5 [dir="back",color="steelblue1",style="solid"];

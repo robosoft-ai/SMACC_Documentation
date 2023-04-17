@@ -21,26 +21,26 @@
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00017}00017   \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603ca4cb37559636515471324e60b080a78e6}{ASYNCHRONOUS\_SPINNER}}}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00018}00018 \};}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00020}\mbox{\hyperlink{classsmacc_1_1SignalDetector}{00020}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1SignalDetector}{SignalDetector}}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00021}00021 \{}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00022}00022 \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00023}00023   \mbox{\hyperlink{classsmacc_1_1SignalDetector}{SignalDetector}}(\mbox{\hyperlink{smacc__fifo__scheduler_8h_a0063e275231c80d5f97df21d17257bf7}{SmaccFifoScheduler}}* scheduler, \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}{ExecutionModel}} executionModel = \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603cab4c3af830a31cbfd165e744c166b9ee7}{ExecutionModel::SINGLE\_THREAD\_SPINNER}});}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00024}00024 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00025}00025   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a91ab3cd92d8095cdaf8610b50731f04b}{initialize}}(\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmaccStateMachine}}* stateMachine);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00020}00020 \textcolor{comment}{// Mostly define the state machine ros thread and receive events state machine components (clients, state elements)}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00021}00021 \textcolor{comment}{// This class also contains the event queue of the state machine}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00022}\mbox{\hyperlink{classsmacc_1_1SignalDetector}{00022}} \textcolor{keyword}{class }\mbox{\hyperlink{classsmacc_1_1SignalDetector}{SignalDetector}}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00023}00023 \{}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00024}00024 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00025}00025   \mbox{\hyperlink{classsmacc_1_1SignalDetector}{SignalDetector}}(\mbox{\hyperlink{smacc__fifo__scheduler_8h_a0063e275231c80d5f97df21d17257bf7}{SmaccFifoScheduler}}* scheduler, \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}{ExecutionModel}} executionModel = \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603cab4c3af830a31cbfd165e744c166b9ee7}{ExecutionModel::SINGLE\_THREAD\_SPINNER}});}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00026}00026 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00027}00027   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_ac1197a77c32a3b817005391e550ce646}{setProcessorHandle}}(SmaccFifoScheduler::processor\_handle processorHandle);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00027}00027   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a91ab3cd92d8095cdaf8610b50731f04b}{initialize}}(\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmaccStateMachine}}* stateMachine);}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00028}00028 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00029}00029   \textcolor{comment}{// Runs the polling loop into a thread...}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00030}00030   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a48b3fee853ddcb25732408b22ecfcf39}{runThread}}();}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00031}00031 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00032}00032   \textcolor{comment}{// Waits for the polling thread to end...}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00033}00033   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a636f704e469bf74b4a9fdb15bd63d5be}{join}}();}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00034}00034 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00035}00035   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a536ea005ea4ef4632c0c9c1c62c557a3}{stop}}();}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00029}00029   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_ac1197a77c32a3b817005391e550ce646}{setProcessorHandle}}(SmaccFifoScheduler::processor\_handle processorHandle);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00031}00031   \textcolor{comment}{// Runs the polling loop into a thread...}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00032}00032   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a48b3fee853ddcb25732408b22ecfcf39}{runThread}}();}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00034}00034   \textcolor{comment}{// Waits for the polling thread to end...}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00035}00035   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a636f704e469bf74b4a9fdb15bd63d5be}{join}}();}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00036}00036 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00037}00037   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a2665e66cdae9f6533c64bbcecf3fa199}{pollingLoop}}();}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00037}00037   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a536ea005ea4ef4632c0c9c1c62c557a3}{stop}}();}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00038}00038 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00039}00039   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a116479e23259f3a5d5d4a47278afd5}{pollOnce}}();}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00039}00039   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a2665e66cdae9f6533c64bbcecf3fa199}{pollingLoop}}();}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00040}00040 }
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00041}00041   \textcolor{keyword}{template} <\textcolor{keyword}{typename} EventType>}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00042}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a6ab99d99cef8d101e39797a72daeb2b7}{00042}}   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a6ab99d99cef8d101e39797a72daeb2b7}{postEvent}}(EventType* ev)}
@@ -49,71 +49,77 @@
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00045}00045     this-\/>\mbox{\hyperlink{classsmacc_1_1SignalDetector_adaee5b9b91d0e6305dc1ab30f7ab566d}{scheduler\_}}-\/>queue\_event(\mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a77dc9f0e9f8f56dff5e76077abcb78}{processorHandle\_}}, weakPtrEvent);}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00046}00046   \}}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00047}00047 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00048}00048 \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00049}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{00049}}   \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmaccStateMachine}}* \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}};}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00050}00050 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00051}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a36a702afabbc335cbdb1e8699b669323}{00051}}   std::vector<ISmaccUpdatable*> \mbox{\hyperlink{classsmacc_1_1SignalDetector_a36a702afabbc335cbdb1e8699b669323}{updatableClients\_}};}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00052}00052 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00053}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a7e3aa7402f5eb1cde9278c4d48e5e089}{00053}}   std::vector<ISmaccUpdatable*> \mbox{\hyperlink{classsmacc_1_1SignalDetector_a7e3aa7402f5eb1cde9278c4d48e5e089}{updatableStateElements\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00048}00048   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a3e439c247b484cd190c42bd3493fd7d8}{notifyStateConfigured}}(\mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmaccState}}* currentState);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00050}00050   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_ad3f0613489d6194933d5d49e23f5db7d}{notifyStateExited}}(\mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmaccState}}* currentState);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00052}00052 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00053}00053   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a116479e23259f3a5d5d4a47278afd5}{pollOnce}}();}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00054}00054 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00055}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}{00055}}   std::atomic<uint64\_t> \mbox{\hyperlink{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}{lastState\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00055}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{00055}}   \mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine}{ISmaccStateMachine}}* \mbox{\hyperlink{classsmacc_1_1SignalDetector_a46025de6ac7b5980e22144f9703236a4}{smaccStateMachine\_}};}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00056}00056 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00057}00057   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a47ec2df560e2e33758ce3975bece9385}{findUpdatableClients}}();}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00058}00058   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a443234ebdf8cedd45cde725e64639dfe}{findUpdatableStateElements}}(\mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmaccState}}* currentState);}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00059}00059 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00060}00060   \textcolor{comment}{// Loop frequency of the signal detector (to check answers from actionservers)}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00061}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{00061}}   \textcolor{keywordtype}{double} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{loop\_rate\_hz}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00057}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a36a702afabbc335cbdb1e8699b669323}{00057}}   std::vector<ISmaccUpdatable*> \mbox{\hyperlink{classsmacc_1_1SignalDetector_a36a702afabbc335cbdb1e8699b669323}{updatableClients\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00059}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a1d86dfd3957db58997e0834787cd9b07}{00059}}   std::vector<std::vector<ISmaccUpdatable*>> \mbox{\hyperlink{classsmacc_1_1SignalDetector_a1d86dfd3957db58997e0834787cd9b07}{updatableStateElements\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00061}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}{00061}}   std::atomic<uint64\_t> \mbox{\hyperlink{classsmacc_1_1SignalDetector_a3b974907a1f1ff139952f56238bb27ce}{lastState\_}};}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00062}00062 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00063}\mbox{\hyperlink{classsmacc_1_1SignalDetector_aaee266393c01693528a2d74b1f2354a2}{00063}}   std::atomic<bool> \mbox{\hyperlink{classsmacc_1_1SignalDetector_aaee266393c01693528a2d74b1f2354a2}{end\_}};}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00064}00064 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00065}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a1b3c54963799b538078619906edd5302}{00065}}   std::atomic<bool> \mbox{\hyperlink{classsmacc_1_1SignalDetector_a1b3c54963799b538078619906edd5302}{initialized\_}};}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00066}00066 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00067}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a5c416677fd537afc79f2fbc2e68b2dee}{00067}}   ros::NodeHandle \mbox{\hyperlink{classsmacc_1_1SignalDetector_a5c416677fd537afc79f2fbc2e68b2dee}{nh\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00063}00063   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a47ec2df560e2e33758ce3975bece9385}{findUpdatableClients}}();}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00064}00064   \textcolor{keywordtype}{void} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a443234ebdf8cedd45cde725e64639dfe}{findUpdatableStateElements}}(\mbox{\hyperlink{classsmacc_1_1ISmaccState}{ISmaccState}}* currentState);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00066}00066   \textcolor{comment}{// Loop frequency of the signal detector (to check answers from actionservers)}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00067}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{00067}}   \textcolor{keywordtype}{double} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a41a2ae4262ed350f46d8b886bdc1dfa5}{loop\_rate\_hz}};}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00068}00068 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00069}\mbox{\hyperlink{classsmacc_1_1SignalDetector_ae065bbd4e699e5fce00fbc508dedd4c1}{00069}}   ros::Publisher \mbox{\hyperlink{classsmacc_1_1SignalDetector_ae065bbd4e699e5fce00fbc508dedd4c1}{statusPub\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00069}\mbox{\hyperlink{classsmacc_1_1SignalDetector_aaee266393c01693528a2d74b1f2354a2}{00069}}   std::atomic<bool> \mbox{\hyperlink{classsmacc_1_1SignalDetector_aaee266393c01693528a2d74b1f2354a2}{end\_}};}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00070}00070 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00071}00071   \textcolor{comment}{// -\/-\/-\/-\/ boost statechart related -\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00071}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a1b3c54963799b538078619906edd5302}{00071}}   std::atomic<bool> \mbox{\hyperlink{classsmacc_1_1SignalDetector_a1b3c54963799b538078619906edd5302}{initialized\_}};}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00072}00072 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00073}\mbox{\hyperlink{classsmacc_1_1SignalDetector_adaee5b9b91d0e6305dc1ab30f7ab566d}{00073}}   \mbox{\hyperlink{smacc__fifo__scheduler_8h_a0063e275231c80d5f97df21d17257bf7}{SmaccFifoScheduler}}* \mbox{\hyperlink{classsmacc_1_1SignalDetector_adaee5b9b91d0e6305dc1ab30f7ab566d}{scheduler\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00073}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a5c416677fd537afc79f2fbc2e68b2dee}{00073}}   ros::NodeHandle \mbox{\hyperlink{classsmacc_1_1SignalDetector_a5c416677fd537afc79f2fbc2e68b2dee}{nh\_}};}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00074}00074 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00075}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a77dc9f0e9f8f56dff5e76077abcb78}{00075}}   SmaccFifoScheduler::processor\_handle \mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a77dc9f0e9f8f56dff5e76077abcb78}{processorHandle\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00075}\mbox{\hyperlink{classsmacc_1_1SignalDetector_ae065bbd4e699e5fce00fbc508dedd4c1}{00075}}   ros::Publisher \mbox{\hyperlink{classsmacc_1_1SignalDetector_ae065bbd4e699e5fce00fbc508dedd4c1}{statusPub\_}};}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00076}00076 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00077}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a4346a400cd37eafc5d1d2e63d975785e}{00077}}   boost::thread \mbox{\hyperlink{classsmacc_1_1SignalDetector_a4346a400cd37eafc5d1d2e63d975785e}{signalDetectorThread\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00077}00077   \textcolor{comment}{// -\/-\/-\/-\/ boost statechart related -\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00078}00078 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00079}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a11c1fede2401c14a4b12d274be6bb1ab}{00079}}   \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}{ExecutionModel}} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a11c1fede2401c14a4b12d274be6bb1ab}{executionModel\_}};}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00080}00080 \};}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00081}00081 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00082}00082 \textcolor{comment}{// Main entry point for any SMACC state machine}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00083}00083 \textcolor{comment}{// It instantiates and starts the specified state machine type}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00084}00084 \textcolor{comment}{// it uses two threads: a new thread and the current one.}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00085}00085 \textcolor{comment}{// The created thread is for the state machine process}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00086}00086 \textcolor{comment}{// it locks the current thread to handle events of the state machine}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00087}00087 \textcolor{keyword}{template} <\textcolor{keyword}{typename} StateMachineType>}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00088}\mbox{\hyperlink{namespacesmacc_abb2d82c007c5d3b0d857d2f3c3771edd}{00088}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacesmacc_abb2d82c007c5d3b0d857d2f3c3771edd}{run}}(\mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}{ExecutionModel}} executionModel = \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603cab4c3af830a31cbfd165e744c166b9ee7}{ExecutionModel::SINGLE\_THREAD\_SPINNER}})}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00089}00089 \{}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00090}00090   \textcolor{comment}{// create the asynchronous state machine scheduler}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00091}00091   \mbox{\hyperlink{smacc__fifo__scheduler_8h_a0063e275231c80d5f97df21d17257bf7}{SmaccFifoScheduler}} scheduler1(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00092}00092 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00093}00093   \textcolor{comment}{// create the signalDetector component}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00094}00094   \mbox{\hyperlink{classsmacc_1_1SignalDetector}{SignalDetector}} signalDetector(\&scheduler1, executionModel);}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00095}00095 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00096}00096   \textcolor{comment}{// create the asynchronous state machine processor}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00097}00097   SmaccFifoScheduler::processor\_handle sm = scheduler1.create\_processor<StateMachineType>(\&signalDetector);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00079}\mbox{\hyperlink{classsmacc_1_1SignalDetector_adaee5b9b91d0e6305dc1ab30f7ab566d}{00079}}   \mbox{\hyperlink{smacc__fifo__scheduler_8h_a0063e275231c80d5f97df21d17257bf7}{SmaccFifoScheduler}}* \mbox{\hyperlink{classsmacc_1_1SignalDetector_adaee5b9b91d0e6305dc1ab30f7ab566d}{scheduler\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00081}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a77dc9f0e9f8f56dff5e76077abcb78}{00081}}   SmaccFifoScheduler::processor\_handle \mbox{\hyperlink{classsmacc_1_1SignalDetector_a9a77dc9f0e9f8f56dff5e76077abcb78}{processorHandle\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00083}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a4346a400cd37eafc5d1d2e63d975785e}{00083}}   boost::thread \mbox{\hyperlink{classsmacc_1_1SignalDetector_a4346a400cd37eafc5d1d2e63d975785e}{signalDetectorThread\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00085}\mbox{\hyperlink{classsmacc_1_1SignalDetector_a11c1fede2401c14a4b12d274be6bb1ab}{00085}}   \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}{ExecutionModel}} \mbox{\hyperlink{classsmacc_1_1SignalDetector_a11c1fede2401c14a4b12d274be6bb1ab}{executionModel\_}};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00086}00086 \};}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00088}00088 \textcolor{comment}{// Main entry point for any SMACC state machine}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00089}00089 \textcolor{comment}{// It instantiates and starts the specified state machine type}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00090}00090 \textcolor{comment}{// it uses two threads: a new thread and the current one.}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00091}00091 \textcolor{comment}{// The created thread is for the state machine process}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00092}00092 \textcolor{comment}{// it locks the current thread to handle events of the state machine}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00093}00093 \textcolor{keyword}{template} <\textcolor{keyword}{typename} StateMachineType>}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00094}\mbox{\hyperlink{namespacesmacc_abb2d82c007c5d3b0d857d2f3c3771edd}{00094}} \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacesmacc_abb2d82c007c5d3b0d857d2f3c3771edd}{run}}(\mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603c}{ExecutionModel}} executionModel = \mbox{\hyperlink{namespacesmacc_adb87e77f9fe537ebf7e46ea50ce8603cab4c3af830a31cbfd165e744c166b9ee7}{ExecutionModel::SINGLE\_THREAD\_SPINNER}})}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00095}00095 \{}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00096}00096   \textcolor{comment}{// create the asynchronous state machine scheduler}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00097}00097   \mbox{\hyperlink{smacc__fifo__scheduler_8h_a0063e275231c80d5f97df21d17257bf7}{SmaccFifoScheduler}} scheduler1(\textcolor{keyword}{true});}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00098}00098 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00099}00099   \textcolor{comment}{// initialize the asynchronous state machine processor}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00100}00100   signalDetector.\mbox{\hyperlink{classsmacc_1_1SignalDetector_ac1197a77c32a3b817005391e550ce646}{setProcessorHandle}}(sm);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00099}00099   \textcolor{comment}{// create the signalDetector component}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00100}00100   \mbox{\hyperlink{classsmacc_1_1SignalDetector}{SignalDetector}} signalDetector(\&scheduler1, executionModel);}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00101}00101 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00102}00102   scheduler1.initiate\_processor(sm);}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00103}00103 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00104}00104   \textcolor{comment}{// create a thread for the asynchronous state machine processor execution}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00105}00105   boost::thread otherThread(boost::bind(\&sc::fifo\_scheduler<>::operator(), \&scheduler1, 0));}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00106}00106 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00107}00107   \textcolor{comment}{// use the  main thread for the signal detector component (waiting actionclient requests)}}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00108}00108   signalDetector.\mbox{\hyperlink{classsmacc_1_1SignalDetector_a2665e66cdae9f6533c64bbcecf3fa199}{pollingLoop}}();}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00109}00109   scheduler1.terminate();}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00110}00110   otherThread.join();}
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00111}00111 \}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00102}00102   \textcolor{comment}{// create the asynchronous state machine processor}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00103}00103   SmaccFifoScheduler::processor\_handle sm = scheduler1.create\_processor<StateMachineType>(\&signalDetector);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00105}00105   \textcolor{comment}{// initialize the asynchronous state machine processor}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00106}00106   signalDetector.\mbox{\hyperlink{classsmacc_1_1SignalDetector_ac1197a77c32a3b817005391e550ce646}{setProcessorHandle}}(sm);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00108}00108   scheduler1.initiate\_processor(sm);}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00110}00110   \textcolor{comment}{// create a thread for the asynchronous state machine processor execution}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00111}00111   boost::thread otherThread(boost::bind(\&sc::fifo\_scheduler<>::operator(), \&scheduler1, 0));}
 \DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00112}00112 }
-\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00113}00113 \}  \textcolor{comment}{// namespace smacc}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00113}00113   \textcolor{comment}{// use the  main thread for the signal detector component (waiting actionclient requests)}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00114}00114   signalDetector.\mbox{\hyperlink{classsmacc_1_1SignalDetector_a2665e66cdae9f6533c64bbcecf3fa199}{pollingLoop}}();}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00115}00115   scheduler1.terminate();}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00116}00116   otherThread.join();}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00117}00117 \}}
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{smacc__signal__detector_8h_source_l00119}00119 \}  \textcolor{comment}{// namespace smacc}}
 
 \end{DoxyCode}

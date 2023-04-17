@@ -26,10 +26,15 @@ digraph "smacc::introspection::demangleType"
   Node10 [label="smacc::SignalDetector\l::runThread",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1SignalDetector.html#a48b3fee853ddcb25732408b22ecfcf39",tooltip=" "];
   Node1 -> Node11 [dir="back",color="steelblue1",style="solid"];
   Node11 [label="smacc::SignalDetector\l::findUpdatableStateElements",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1SignalDetector.html#a443234ebdf8cedd45cde725e64639dfe",tooltip=" "];
-  Node11 -> Node7 [dir="back",color="steelblue1",style="solid"];
-  Node1 -> Node12 [dir="back",color="steelblue1",style="solid"];
-  Node12 [label="smacc::client_bases\l::SmaccActionClientBase\l::onOrthogonalAllocation",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#a925a611bc8035a0f70248c6ab11f4221",tooltip=" "];
+  Node11 -> Node12 [dir="back",color="steelblue1",style="solid"];
+  Node12 [label="smacc::SignalDetector\l::notifyStateConfigured",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1SignalDetector.html#a3e439c247b484cd190c42bd3493fd7d8",tooltip=" "];
+  Node12 -> Node13 [dir="back",color="steelblue1",style="solid"];
+  Node13 [label="smacc::ISmaccStateMachine\l::notifyOnRuntimeConfiguration\lFinished",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#a0a561ebd12c874a9fa85ba75b740871b",tooltip=" "];
+  Node13 -> Node14 [dir="back",color="steelblue1",style="solid"];
+  Node14 [label="smacc::SmaccState::\lentryStateInternal",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1SmaccState.html#a084b95d0cb856d048fdb5ce81400eec7",tooltip=" "];
+  Node1 -> Node15 [dir="back",color="steelblue1",style="solid"];
+  Node15 [label="smacc::client_bases\l::SmaccActionClientBase\l::onOrthogonalAllocation",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#a925a611bc8035a0f70248c6ab11f4221",tooltip=" "];
   Node1 -> Node7 [dir="back",color="steelblue1",style="solid"];
-  Node1 -> Node13 [dir="back",color="steelblue1",style="solid"];
-  Node13 [label="smacc::introspection\l::StateReactorHandler\l::setOutputEvent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1introspection_1_1StateReactorHandler.html#a19af3db16879ed02048f08d9221d361a",tooltip=" "];
+  Node1 -> Node16 [dir="back",color="steelblue1",style="solid"];
+  Node16 [label="smacc::introspection\l::StateReactorHandler\l::setOutputEvent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1introspection_1_1StateReactorHandler.html#a19af3db16879ed02048f08d9221d361a",tooltip=" "];
 }

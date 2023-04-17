@@ -18,7 +18,7 @@ digraph "cl_multirole_sensor::ClMultiroleSensor::initialize"
   Node5 -> Node6 [color="steelblue1",style="solid"];
   Node6 [label="smacc::ISmaccStateMachine\l::createSignalConnection",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#adf0f42ade0c65cc471960fe2a7c42da2",tooltip=" "];
   Node6 -> Node7 [color="steelblue1",style="solid"];
-  Node7 [label="smacc::utils::Bind\l::bindaux",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structsmacc_1_1utils_1_1Bind.html#aa0f4ba76fbd5fdb865df51b61d4269f3",tooltip=" "];
+  Node7 [label="smacc::utils::Bind\l::bindaux",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structsmacc_1_1utils_1_1Bind.html#a4379a4589306c1e19510059f64bb738c",tooltip=" "];
   Node5 -> Node8 [color="steelblue1",style="solid"];
   Node8 [label="smacc::ISmaccClient\l::getStateMachine",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccClient.html#aec51d4712404cb9882b86e4c854bb93a",tooltip=" "];
 }

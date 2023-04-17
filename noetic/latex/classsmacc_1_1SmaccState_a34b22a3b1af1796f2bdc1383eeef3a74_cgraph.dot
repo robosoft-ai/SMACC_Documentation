@@ -14,12 +14,16 @@ digraph "smacc::SmaccState::exit"
   Node4 [label="smacc::introspection\l::demangleSymbol",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873",tooltip=" "];
   Node4 -> Node4 [color="steelblue1",style="solid"];
   Node3 -> Node5 [color="steelblue1",style="solid"];
-  Node5 [label="smacc::ISmaccStateMachine\l::unlockStateMachine",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#ae2e3ceb87bfe3f9d8bf320e36071fdc7",tooltip=" "];
-  Node1 -> Node6 [color="steelblue1",style="solid"];
-  Node6 [label="smacc::ISmaccStateMachine\l::notifyOnStateExitting",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#a707c36f8b02eeed1af624dd36a5a4957",tooltip=" "];
-  Node6 -> Node4 [color="steelblue1",style="solid"];
-  Node6 -> Node7 [color="steelblue1",style="solid"];
-  Node7 [label="smacc::ISmaccStateMachine\l::lockStateMachine",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#a5c8d4c9a4b11c7950266a00e48080ce3",tooltip=" "];
-  Node1 -> Node8 [color="steelblue1",style="solid"];
-  Node8 [label="smacc::standardOnExit",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesmacc.html#ab3aebd999834404be47a62ea03aacfc9",tooltip=" "];
+  Node5 [label="smacc::ISmaccStateMachine\l::disconnectSmaccSignalObject",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#ae319268f349ad13d81e94d7b34f1265a",tooltip=" "];
+  Node3 -> Node6 [color="steelblue1",style="solid"];
+  Node6 [label="smacc::ISmaccStateMachine\l::lockStateMachine",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#a5c8d4c9a4b11c7950266a00e48080ce3",tooltip=" "];
+  Node3 -> Node7 [color="steelblue1",style="solid"];
+  Node7 [label="smacc::SignalDetector\l::notifyStateExited",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1SignalDetector.html#ad3f0613489d6194933d5d49e23f5db7d",tooltip=" "];
+  Node3 -> Node8 [color="steelblue1",style="solid"];
+  Node8 [label="smacc::ISmaccStateMachine\l::unlockStateMachine",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#ae2e3ceb87bfe3f9d8bf320e36071fdc7",tooltip=" "];
+  Node1 -> Node9 [color="steelblue1",style="solid"];
+  Node9 [label="smacc::ISmaccStateMachine\l::notifyOnStateExitting",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#a707c36f8b02eeed1af624dd36a5a4957",tooltip=" "];
+  Node9 -> Node4 [color="steelblue1",style="solid"];
+  Node1 -> Node10 [color="steelblue1",style="solid"];
+  Node10 [label="smacc::standardOnExit",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesmacc.html#ab3aebd999834404be47a62ea03aacfc9",tooltip=" "];
 }
