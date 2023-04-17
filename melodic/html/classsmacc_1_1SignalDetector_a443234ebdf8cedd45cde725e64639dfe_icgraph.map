@@ -1,7 +1,6 @@
 <map id="smacc::SignalDetector::findUpdatableStateElements" name="smacc::SignalDetector::findUpdatableStateElements">
-<area shape="rect" id="node1" title=" " alt="" coords="605,27,797,67"/>
-<area shape="rect" id="node2" href="$classsmacc_1_1SignalDetector.html#a9a116479e23259f3a5d5d4a47278afd5" title=" " alt="" coords="405,27,557,67"/>
-<area shape="rect" id="node3" href="$classsmacc_1_1SignalDetector.html#a2665e66cdae9f6533c64bbcecf3fa199" title=" " alt="" coords="205,27,357,67"/>
-<area shape="rect" id="node4" href="$namespacesmacc.html#abb2d82c007c5d3b0d857d2f3c3771edd" title=" " alt="" coords="39,5,124,31"/>
-<area shape="rect" id="node5" href="$classsmacc_1_1SignalDetector.html#a48b3fee853ddcb25732408b22ecfcf39" title=" " alt="" coords="5,55,157,95"/>
+<area shape="rect" id="node1" title=" " alt="" coords="645,13,837,53"/>
+<area shape="rect" id="node2" href="$classsmacc_1_1SignalDetector.html#a3e439c247b484cd190c42bd3493fd7d8" title=" " alt="" coords="445,13,597,53"/>
+<area shape="rect" id="node3" href="$classsmacc_1_1ISmaccStateMachine.html#a0a561ebd12c874a9fa85ba75b740871b" title=" " alt="" coords="199,5,397,60"/>
+<area shape="rect" id="node4" href="$classsmacc_1_1SmaccState.html#a084b95d0cb856d048fdb5ce81400eec7" title=" " alt="" coords="5,13,151,53"/>
 </map>

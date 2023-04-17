@@ -536,52 +536,58 @@ Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00393}{393}} o
 \DoxyCodeLine{00419         \textcolor{keyword}{auto} \&staticDefinedStateReactors = \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_abd1d6ca5060c87f6bd11fde3e5b2ac4d}{SmaccStateInfo::stateReactorsInfo}}[tindex];}
 \DoxyCodeLine{00420         \textcolor{keyword}{auto} \&staticDefinedEventGenerators = \mbox{\hyperlink{classsmacc_1_1introspection_1_1SmaccStateInfo_ae38b8c98fb7808cc67b67e1f97ddbf74}{SmaccStateInfo::eventGeneratorsInfo}}[tindex];}
 \DoxyCodeLine{00421 }
-\DoxyCodeLine{00422         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&bhinfo : staticDefinedBehaviors)}
+\DoxyCodeLine{00422         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} \& ortho : this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7f5b2882dbd077584767cb2533ed3c49}{getOrthogonals}}())}
 \DoxyCodeLine{00423         \{}
-\DoxyCodeLine{00424           ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Creating static client behavior: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(bhinfo.behaviorType-\/>name()).c\_str());}
-\DoxyCodeLine{00425           bhinfo.factoryFunction(\textcolor{keyword}{this});}
+\DoxyCodeLine{00424           ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Initializing orthogonal: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(\textcolor{keyword}{typeid}(*ortho.second).name()).c\_str());}
+\DoxyCodeLine{00425           ortho.second-\/>initState(\textcolor{keyword}{this});}
 \DoxyCodeLine{00426         \}}
 \DoxyCodeLine{00427 }
-\DoxyCodeLine{00428         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&sr : staticDefinedStateReactors)}
+\DoxyCodeLine{00428         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&bhinfo : staticDefinedBehaviors)}
 \DoxyCodeLine{00429         \{}
-\DoxyCodeLine{00430           ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Creating static state reactor: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(sr-\/>stateReactorType-\/>name()).c\_str());}
-\DoxyCodeLine{00431           sr-\/>factoryFunction(\textcolor{keyword}{this});}
+\DoxyCodeLine{00430           ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Creating static client behavior: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(bhinfo.behaviorType-\/>name()).c\_str());}
+\DoxyCodeLine{00431           bhinfo.factoryFunction(\textcolor{keyword}{this});}
 \DoxyCodeLine{00432         \}}
 \DoxyCodeLine{00433 }
-\DoxyCodeLine{00434         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&eg : staticDefinedEventGenerators)}
+\DoxyCodeLine{00434         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&sr : staticDefinedStateReactors)}
 \DoxyCodeLine{00435         \{}
-\DoxyCodeLine{00436           ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Creating static event generator: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(eg-\/>eventGeneratorType-\/>name()).c\_str());}
-\DoxyCodeLine{00437           eg-\/>factoryFunction(\textcolor{keyword}{this});}
+\DoxyCodeLine{00436           ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Creating static state reactor: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(sr-\/>stateReactorType-\/>name()).c\_str());}
+\DoxyCodeLine{00437           sr-\/>factoryFunction(\textcolor{keyword}{this});}
 \DoxyCodeLine{00438         \}}
 \DoxyCodeLine{00439 }
-\DoxyCodeLine{00440         ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] -\/-\/-\/-\/ END STATIC DESCRIPTION"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
-\DoxyCodeLine{00441       \}}
-\DoxyCodeLine{00442 }
-\DoxyCodeLine{00443       ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] State runtime configuration"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
-\DoxyCodeLine{00444 }
-\DoxyCodeLine{00445       \textcolor{keyword}{auto} *derivedthis = \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this});}
-\DoxyCodeLine{00446 }
-\DoxyCodeLine{00447       \textcolor{comment}{// second the orthogonals are internally configured}}
-\DoxyCodeLine{00448       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7377ca0f79289fdc27f9ed3ff6e67263}{notifyOnRuntimeConfigured}}(derivedthis);}
-\DoxyCodeLine{00449 }
-\DoxyCodeLine{00450       \textcolor{comment}{// first we runtime configure the state, where we create client behaviors}}
-\DoxyCodeLine{00451       \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this})-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_a6995704a0232e24f4c38250302c0a01f}{runtimeConfigure}}();}
+\DoxyCodeLine{00440         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} \&eg : staticDefinedEventGenerators)}
+\DoxyCodeLine{00441         \{}
+\DoxyCodeLine{00442           ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] Creating static event generator: \%s"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}}, \mbox{\hyperlink{namespacesmacc_1_1introspection_aa9158a0ff0cfe83a59877e6af7d7f873}{demangleSymbol}}(eg-\/>eventGeneratorType-\/>name()).c\_str());}
+\DoxyCodeLine{00443           eg-\/>factoryFunction(\textcolor{keyword}{this});}
+\DoxyCodeLine{00444         \}}
+\DoxyCodeLine{00445 }
+\DoxyCodeLine{00446         ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] -\/-\/-\/-\/ END STATIC DESCRIPTION"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
+\DoxyCodeLine{00447       \}}
+\DoxyCodeLine{00448 }
+\DoxyCodeLine{00449       ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] State runtime configuration"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
+\DoxyCodeLine{00450 }
+\DoxyCodeLine{00451       \textcolor{keyword}{auto} *derivedthis = \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this});}
 \DoxyCodeLine{00452 }
-\DoxyCodeLine{00453       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a0a561ebd12c874a9fa85ba75b740871b}{notifyOnRuntimeConfigurationFinished}}(derivedthis);}
-\DoxyCodeLine{00454 }
-\DoxyCodeLine{00455       ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] State OnEntry"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
-\DoxyCodeLine{00456 }
-\DoxyCodeLine{00457       \textcolor{comment}{// finally we go to the derived state onEntry Function}}
-\DoxyCodeLine{00458       \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this})-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_a4a10a74fdbe51a798b8d651668b8ed9a}{onEntry}}();}
-\DoxyCodeLine{00459 }
-\DoxyCodeLine{00460       \textcolor{comment}{// here orthogonals and client behaviors are entered OnEntry}}
-\DoxyCodeLine{00461       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a856cf2d25d84659b974cccfbf44aeec9}{notifyOnStateEntryEnd}}(derivedthis);}
-\DoxyCodeLine{00462     \}}
+\DoxyCodeLine{00453       \textcolor{comment}{// second the orthogonals are internally configured}}
+\DoxyCodeLine{00454       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a7377ca0f79289fdc27f9ed3ff6e67263}{notifyOnRuntimeConfigured}}(derivedthis);}
+\DoxyCodeLine{00455 }
+\DoxyCodeLine{00456       \textcolor{comment}{// first we runtime configure the state, where we create client behaviors}}
+\DoxyCodeLine{00457       \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this})-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_a6995704a0232e24f4c38250302c0a01f}{runtimeConfigure}}();}
+\DoxyCodeLine{00458 }
+\DoxyCodeLine{00459       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a0a561ebd12c874a9fa85ba75b740871b}{notifyOnRuntimeConfigurationFinished}}(derivedthis);}
+\DoxyCodeLine{00460 }
+\DoxyCodeLine{00461       ROS\_INFO(\textcolor{stringliteral}{"{}[\%s] State OnEntry"{}}, \mbox{\hyperlink{smacc__state__base_8h_a0d7815723706a488b5bb65f7e3acf584}{STATE\_NAME}});}
+\DoxyCodeLine{00462 }
+\DoxyCodeLine{00463       \textcolor{comment}{// finally we go to the derived state onEntry Function}}
+\DoxyCodeLine{00464       \textcolor{keyword}{static\_cast<}MostDerived *\textcolor{keyword}{>}(\textcolor{keyword}{this})-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_a4a10a74fdbe51a798b8d651668b8ed9a}{onEntry}}();}
+\DoxyCodeLine{00465 }
+\DoxyCodeLine{00466       \textcolor{comment}{// here orthogonals and client behaviors are entered OnEntry}}
+\DoxyCodeLine{00467       this-\/>\mbox{\hyperlink{classsmacc_1_1SmaccState_af8decb1949138787a893f0c73ee307c9}{getStateMachine}}().\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_a856cf2d25d84659b974cccfbf44aeec9}{notifyOnStateEntryEnd}}(derivedthis);}
+\DoxyCodeLine{00468     \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{common_8cpp_source_l00014}{smacc\+::utils\+::clean\+Short\+Type\+Name()}}, \mbox{\hyperlink{smacc__state_8h_source_l00091}{smacc\+::\+ISmacc\+State\+::context\+Nh}}, \mbox{\hyperlink{introspection_8h_source_l00075}{smacc\+::introspection\+::demangle\+Symbol()}}, \mbox{\hyperlink{smacc__state__info_8h_source_l00144}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::event\+Generators\+Info}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00168}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Machine()}}, \mbox{\hyperlink{smacc__state_8h_source_l00089}{smacc\+::\+ISmacc\+State\+::nh}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00432}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+Runtime\+Configuration\+Finished()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00447}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+Runtime\+Configured()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00378}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Entry\+End()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00366}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Entry\+Start()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00139}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::on\+Entry()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00133}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::runtime\+Configure()}}, \mbox{\hyperlink{smacc__state__impl_8h_source_l00032}{smacc\+::\+ISmacc\+State\+::set\+Param()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00051}{STATE\+\_\+\+NAME}}, \mbox{\hyperlink{smacc__state__info_8h_source_l00143}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::state\+Reactors\+Info}}, and \mbox{\hyperlink{smacc__state__info_8h_source_l00142}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::static\+Behavior\+Info}}.
+References \mbox{\hyperlink{common_8cpp_source_l00014}{smacc\+::utils\+::clean\+Short\+Type\+Name()}}, \mbox{\hyperlink{smacc__state_8h_source_l00091}{smacc\+::\+ISmacc\+State\+::context\+Nh}}, \mbox{\hyperlink{introspection_8h_source_l00075}{smacc\+::introspection\+::demangle\+Symbol()}}, \mbox{\hyperlink{smacc__state__info_8h_source_l00144}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::event\+Generators\+Info}}, \mbox{\hyperlink{smacc__state__machine_8cpp_source_l00076}{smacc\+::\+ISmacc\+State\+Machine\+::get\+Orthogonals()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00168}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Machine()}}, \mbox{\hyperlink{smacc__state_8h_source_l00089}{smacc\+::\+ISmacc\+State\+::nh}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00495}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+Runtime\+Configuration\+Finished()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00514}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+Runtime\+Configured()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00437}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Entry\+End()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00425}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Entry\+Start()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00139}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::on\+Entry()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00133}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::runtime\+Configure()}}, \mbox{\hyperlink{smacc__state__impl_8h_source_l00032}{smacc\+::\+ISmacc\+State\+::set\+Param()}}, \mbox{\hyperlink{smacc__state__base_8h_source_l00051}{STATE\+\_\+\+NAME}}, \mbox{\hyperlink{smacc__state__info_8h_source_l00143}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::state\+Reactors\+Info}}, and \mbox{\hyperlink{smacc__state__info_8h_source_l00142}{smacc\+::introspection\+::\+Smacc\+State\+Info\+::static\+Behavior\+Info}}.
 
 Here is the call graph for this function\+:
 % FIG 9
@@ -614,7 +620,7 @@ Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00116}{116}} o
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{smacc__state__base_8h_source_l00168}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Machine()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00520}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Exited()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00453}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Exitting()}}, and \mbox{\hyperlink{state__traits_8h_source_l00062}{smacc\+::standard\+On\+Exit()}}.
+References \mbox{\hyperlink{smacc__state__base_8h_source_l00168}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Machine()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00575}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Exited()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00520}{smacc\+::\+ISmacc\+State\+Machine\+::notify\+On\+State\+Exitting()}}, and \mbox{\hyperlink{state__traits_8h_source_l00062}{smacc\+::standard\+On\+Exit()}}.
 
 Here is the call graph for this function\+:
 % FIG 10
@@ -739,7 +745,7 @@ Definition at line \mbox{\hyperlink{smacc__state__base_8h_source_l00083}{83}} of
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{smacc__state__base_8h_source_l00168}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Machine()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00566}{smacc\+::\+ISmacc\+State\+Machine\+::get\+State\+Machine\+Info()}}, and \mbox{\hyperlink{smacc__state__machine__info_8h_source_l00026}{smacc\+::introspection\+::\+Smacc\+State\+Machine\+Info\+::states}}.
+References \mbox{\hyperlink{smacc__state__base_8h_source_l00168}{smacc\+::\+Smacc\+State$<$ Most\+Derived, Context, Inner\+Initial, history\+Mode $>$\+::get\+State\+Machine()}}, \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00674}{smacc\+::\+ISmacc\+State\+Machine\+::get\+State\+Machine\+Info()}}, and \mbox{\hyperlink{smacc__state__machine__info_8h_source_l00026}{smacc\+::introspection\+::\+Smacc\+State\+Machine\+Info\+::states}}.
 
 
 

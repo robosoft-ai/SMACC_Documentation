@@ -10,9 +10,5 @@ digraph "smacc::ISmaccStateMachine::notifyOnStateEntryEnd"
   Node2 [label="smacc::introspection\l::demangleSymbol",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacesmacc_1_1introspection.html#aa9158a0ff0cfe83a59877e6af7d7f873",tooltip=" "];
   Node2 -> Node2 [color="steelblue1",style="solid"];
   Node1 -> Node3 [color="steelblue1",style="solid"];
-  Node3 [label="smacc::ISmaccState\l::getEventGenerators",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccState.html#a1da272d8ebbdee1757de8a1feba907f7",tooltip=" "];
-  Node1 -> Node4 [color="steelblue1",style="solid"];
-  Node4 [label="smacc::ISmaccState\l::getStateReactors",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccState.html#a758fea49c0c8b60f940e5708495f5c8a",tooltip=" "];
-  Node1 -> Node5 [color="steelblue1",style="solid"];
-  Node5 [label="smacc::ISmaccStateMachine\l::updateStatusMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#ad246a49015fadaeb0b1639d7ab99f7d0",tooltip=" "];
+  Node3 [label="smacc::ISmaccStateMachine\l::updateStatusMessage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1ISmaccStateMachine.html#ad246a49015fadaeb0b1639d7ab99f7d0",tooltip=" "];
 }

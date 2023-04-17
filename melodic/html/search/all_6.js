@@ -14,7 +14,7 @@ var searchData=
   ['getbasicstatussrv_11',['getBasicStatusSrv',['../classcl__microstrain__mips_1_1ClMicrostainMips.html#ab2d9efccc6237800a890135a4249eaf8',1,'cl_microstrain_mips::ClMicrostainMips']]],
   ['getclassname_12',['getClassName',['../classsmacc_1_1ISmaccState.html#a5bf0b49d5ea6b9e8f45c26fa155b2664',1,'smacc::ISmaccState']]],
   ['getclientbehavior_13',['getClientBehavior',['../classsmacc_1_1ISmaccOrthogonal.html#a463bb235217511954feb4133394c4c61',1,'smacc::ISmaccOrthogonal']]],
-  ['getclientbehaviors_14',['getClientBehaviors',['../classsmacc_1_1ISmaccOrthogonal.html#adf67a263e149fc2e96591484b5e9c7aa',1,'smacc::ISmaccOrthogonal']]],
+  ['getclientbehaviors_14',['getClientBehaviors',['../classsmacc_1_1ISmaccOrthogonal.html#a6306decf7d23b4930649392b4823cbc8',1,'smacc::ISmaccOrthogonal']]],
   ['getclients_15',['getClients',['../classsmacc_1_1ISmaccOrthogonal.html#a83f1d5390ec41d91566e6f034b25b7d9',1,'smacc::ISmaccOrthogonal']]],
   ['getcomplementaryfilter_16',['getComplementaryFilter',['../classcl__microstrain__mips_1_1ClMicrostainMips.html#aaff58eafdd41438a7af7c6adee3b2d5b',1,'cl_microstrain_mips::ClMicrostainMips']]],
   ['getcomplementaryfiltersrv_17',['getComplementaryFilterSrv',['../classcl__microstrain__mips_1_1ClMicrostainMips.html#a39aa3d9d1bbe86d90548f7422aa0b4a4',1,'cl_microstrain_mips::ClMicrostainMips']]],

@@ -7,6 +7,8 @@ var searchData=
   ['notifyonstateentrystart_4',['notifyOnStateEntryStart',['../classsmacc_1_1ISmaccStateMachine.html#aeec54e997d715b105ebfeb5caadc4fbf',1,'smacc::ISmaccStateMachine']]],
   ['notifyonstateexited_5',['notifyOnStateExited',['../classsmacc_1_1ISmaccStateMachine.html#ac352013a5df0dcce0594f1466b9a6f7b',1,'smacc::ISmaccStateMachine']]],
   ['notifyonstateexitting_6',['notifyOnStateExitting',['../classsmacc_1_1ISmaccStateMachine.html#a707c36f8b02eeed1af624dd36a5a4957',1,'smacc::ISmaccStateMachine']]],
-  ['notifytransition_7',['notifyTransition',['../classsmacc_1_1ISmaccState.html#a98df316afd79180d3c27a15a7d5dd1cf',1,'smacc::ISmaccState']]],
-  ['notifytransitionfromtransitiontypeinfo_8',['notifyTransitionFromTransitionTypeInfo',['../classsmacc_1_1ISmaccState.html#acb3dd7d402c634004ae3b67a01169438',1,'smacc::ISmaccState']]]
+  ['notifystateconfigured_7',['notifyStateConfigured',['../classsmacc_1_1SignalDetector.html#a3e439c247b484cd190c42bd3493fd7d8',1,'smacc::SignalDetector']]],
+  ['notifystateexited_8',['notifyStateExited',['../classsmacc_1_1SignalDetector.html#ad3f0613489d6194933d5d49e23f5db7d',1,'smacc::SignalDetector']]],
+  ['notifytransition_9',['notifyTransition',['../classsmacc_1_1ISmaccState.html#a98df316afd79180d3c27a15a7d5dd1cf',1,'smacc::ISmaccState']]],
+  ['notifytransitionfromtransitiontypeinfo_10',['notifyTransitionFromTransitionTypeInfo',['../classsmacc_1_1ISmaccState.html#acb3dd7d402c634004ae3b67a01169438',1,'smacc::ISmaccState']]]
 ];

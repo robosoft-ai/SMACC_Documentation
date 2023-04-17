@@ -1,93 +1,96 @@
 <map id="smacc_client_library/keyboard_client/include/keyboard_client/cl_keyboard.h" name="smacc_client_library/keyboard_client/include/keyboard_client/cl_keyboard.h">
-<area shape="rect" id="node1" title=" " alt="" coords="3942,5,4141,60"/>
-<area shape="rect" id="node2" href="$smacc_8h.html" title=" " alt="" coords="2415,115,2529,141"/>
-<area shape="rect" id="node85" href="$smacc__subscriber__client_8h.html" title=" " alt="" coords="3333,445,3513,485"/>
-<area shape="rect" id="node87" title=" " alt="" coords="3804,108,3964,148"/>
-<area shape="rect" id="node88" title=" " alt="" coords="3988,115,4095,141"/>
-<area shape="rect" id="node89" title=" " alt="" coords="4119,115,4191,141"/>
-<area shape="rect" id="node90" title=" " alt="" coords="4215,115,4273,141"/>
-<area shape="rect" id="node91" title=" " alt="" coords="4298,115,4430,141"/>
-<area shape="rect" id="node3" href="$common_8h.html" title=" " alt="" coords="1316,717,1441,742"/>
-<area shape="rect" id="node44" href="$smacc__default__events_8h.html" title=" " alt="" coords="2639,885,2790,925"/>
-<area shape="rect" id="node47" href="$smacc__state__machine__base_8h.html" title=" " alt="" coords="2374,196,2570,236"/>
-<area shape="rect" id="node75" href="$smacc__signal__detector_8h.html" title=" " alt="" coords="687,533,833,573"/>
-<area shape="rect" id="node4" title=" " alt="" coords="2220,988,2393,1013"/>
-<area shape="rect" id="node5" title=" " alt="" coords="1042,981,1201,1021"/>
-<area shape="rect" id="node6" title=" " alt="" coords="3151,988,3327,1013"/>
-<area shape="rect" id="node7" title=" " alt="" coords="1343,797,1543,837"/>
-<area shape="rect" id="node8" title=" " alt="" coords="1567,797,1729,837"/>
-<area shape="rect" id="node9" title=" " alt="" coords="1754,797,1902,837"/>
-<area shape="rect" id="node10" title=" " alt="" coords="43,805,159,830"/>
-<area shape="rect" id="node11" title=" " alt="" coords="183,805,337,830"/>
-<area shape="rect" id="node12" title=" " alt="" coords="361,805,489,830"/>
-<area shape="rect" id="node13" title=" " alt="" coords="513,805,644,830"/>
-<area shape="rect" id="node14" title=" " alt="" coords="1975,988,2099,1013"/>
-<area shape="rect" id="node15" title=" " alt="" coords="2767,805,2870,830"/>
-<area shape="rect" id="node16" title=" " alt="" coords="1047,805,1217,830"/>
-<area shape="rect" id="node17" title=" " alt="" coords="2634,805,2691,830"/>
-<area shape="rect" id="node18" title=" " alt="" coords="2124,988,2196,1013"/>
-<area shape="rect" id="node19" href="$smacc__fifo__scheduler_8h.html" title=" " alt="" coords="719,805,921,830"/>
-<area shape="rect" id="node23" href="$smacc__types_8h.html" title=" " alt="" coords="2573,1076,2725,1101"/>
-<area shape="rect" id="node25" href="$introspection_8h.html" title=" " alt="" coords="2476,885,2615,925"/>
-<area shape="rect" id="node45" href="$smacc__transition_8h.html" title=" " alt="" coords="2231,805,2406,830"/>
-<area shape="rect" id="node20" title=" " alt="" coords="590,885,727,925"/>
-<area shape="rect" id="node21" href="$smacc__fifo__worker_8h.html" title=" " alt="" coords="752,893,936,918"/>
-<area shape="rect" id="node22" title=" " alt="" coords="787,981,925,1021"/>
-<area shape="rect" id="node24" title=" " alt="" coords="2551,1149,2748,1175"/>
-<area shape="rect" id="node26" title=" " alt="" coords="2917,1076,2984,1101"/>
-<area shape="rect" id="node27" title=" " alt="" coords="2519,988,2676,1013"/>
-<area shape="rect" id="node28" title=" " alt="" coords="2700,988,2863,1013"/>
-<area shape="rect" id="node29" href="$string__type__walker_8h.html" title=" " alt="" coords="3585,981,3729,1021"/>
-<area shape="rect" id="node34" href="$smacc__state__info_8h.html" title=" " alt="" coords="2988,981,3127,1021"/>
-<area shape="rect" id="node36" title=" " alt="" coords="1950,1076,2162,1101"/>
-<area shape="rect" id="node37" href="$smacc__state__machine__info_8h.html" title=" " alt="" coords="605,973,763,1028"/>
-<area shape="rect" id="node30" title=" " alt="" coords="3630,1076,3685,1101"/>
-<area shape="rect" id="node31" title=" " alt="" coords="3721,1076,3789,1101"/>
-<area shape="rect" id="node32" title=" " alt="" coords="3473,1076,3532,1101"/>
-<area shape="rect" id="node33" title=" " alt="" coords="3870,1076,3917,1101"/>
-<area shape="rect" id="node35" title=" " alt="" coords="3325,1076,3403,1101"/>
-<area shape="rect" id="node38" href="$smacc__orthogonal_8h.html" title=" " alt="" coords="1164,1076,1345,1101"/>
-<area shape="rect" id="node40" title=" " alt="" coords="409,1076,596,1101"/>
-<area shape="rect" id="node41" title=" " alt="" coords="620,1076,839,1101"/>
-<area shape="rect" id="node42" title=" " alt="" coords="863,1076,1094,1101"/>
-<area shape="rect" id="node43" title=" " alt="" coords="140,1076,385,1101"/>
-<area shape="rect" id="node39" title=" " alt="" coords="1229,1149,1281,1175"/>
-<area shape="rect" id="node46" href="$state__traits_8h.html" title=" " alt="" coords="2256,885,2395,925"/>
-<area shape="rect" id="node48" href="$smacc__state__base_8h.html" title=" " alt="" coords="3645,541,3830,566"/>
-<area shape="rect" id="node53" href="$smacc__state__machine_8h.html" title=" " alt="" coords="2369,284,2575,309"/>
-<area shape="rect" id="node49" href="$smacc__state_8h.html" title=" " alt="" coords="1417,629,1567,654"/>
-<area shape="rect" id="node50" href="$smacc__state__reactor_8h.html" title=" " alt="" coords="3343,805,3540,830"/>
-<area shape="rect" id="node52" href="$smacc__event__generator_8h.html" title=" " alt="" coords="3565,805,3779,830"/>
-<area shape="rect" id="node51" title=" " alt="" coords="3553,893,3628,918"/>
-<area shape="rect" id="node54" href="$smacc__updatable_8h.html" title=" " alt="" coords="2611,365,2789,390"/>
-<area shape="rect" id="node59" href="$smacc__signal_8h.html" title=" " alt="" coords="2860,365,3015,390"/>
-<area shape="rect" id="node61" title=" " alt="" coords="3292,365,3527,390"/>
-<area shape="rect" id="node62" title=" " alt="" coords="1045,357,1248,397"/>
-<area shape="rect" id="node63" title=" " alt="" coords="1147,541,1341,566"/>
-<area shape="rect" id="node64" title=" " alt="" coords="1273,357,1495,397"/>
-<area shape="rect" id="node65" href="$smacc__state__impl_8h.html" title=" " alt="" coords="3159,533,3327,573"/>
-<area shape="rect" id="node71" href="$smacc__client__impl_8h.html" title=" " alt="" coords="2157,357,2328,397"/>
-<area shape="rect" id="node82" href="$smacc__component__impl_8h.html" title=" " alt="" coords="1931,357,2133,397"/>
-<area shape="rect" id="node83" href="$smacc__orthogonal__impl_8h.html" title=" " alt="" coords="2235,445,2434,485"/>
-<area shape="rect" id="node55" title=" " alt="" coords="2611,453,2672,478"/>
-<area shape="rect" id="node56" title=" " alt="" coords="2190,717,2317,742"/>
-<area shape="rect" id="node57" title=" " alt="" coords="2697,453,2797,478"/>
-<area shape="rect" id="node58" title=" " alt="" coords="2821,453,2899,478"/>
-<area shape="rect" id="node60" title=" " alt="" coords="2975,453,3143,478"/>
-<area shape="rect" id="node66" href="$smacc__client__behavior_8h.html" title=" " alt="" coords="3367,621,3510,661"/>
-<area shape="rect" id="node69" href="$smacc__state__reactor__impl_8h.html" title=" " alt="" coords="3097,709,3265,749"/>
-<area shape="rect" id="node70" href="$smacc__event__generator__impl_8h.html" title=" " alt="" coords="2903,709,3073,749"/>
-<area shape="rect" id="node67" title=" " alt="" coords="3341,709,3483,749"/>
-<area shape="rect" id="node68" href="$smacc__client__behavior__impl_8h.html" title=" " alt="" coords="3508,709,3679,749"/>
-<area shape="rect" id="node72" href="$smacc__client_8h.html" title=" " alt="" coords="2167,541,2319,566"/>
-<area shape="rect" id="node74" href="$smacc__state__machine__impl_8h.html" title=" " alt="" coords="1727,445,1895,485"/>
-<area shape="rect" id="node73" href="$component_8h.html" title=" " alt="" coords="2116,629,2255,654"/>
-<area shape="rect" id="node78" title=" " alt="" coords="1637,541,1707,566"/>
-<area shape="rect" id="node79" title=" " alt="" coords="1731,533,1874,573"/>
-<area shape="rect" id="node80" title=" " alt="" coords="1898,533,2041,573"/>
-<area shape="rect" id="node81" title=" " alt="" coords="1467,533,1613,573"/>
-<area shape="rect" id="node76" title=" " alt="" coords="701,629,819,654"/>
-<area shape="rect" id="node77" title=" " alt="" coords="615,629,676,654"/>
-<area shape="rect" id="node84" title=" " alt="" coords="2394,541,2459,566"/>
-<area shape="rect" id="node86" title=" " alt="" coords="3417,533,3569,573"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3669,5,3868,60"/>
+<area shape="rect" id="node2" href="$smacc_8h.html" title=" " alt="" coords="2769,115,2883,141"/>
+<area shape="rect" id="node67" title=" " alt="" coords="975,453,1047,478"/>
+<area shape="rect" id="node68" title=" " alt="" coords="1375,453,1434,478"/>
+<area shape="rect" id="node90" href="$smacc__subscriber__client_8h.html" title=" " alt="" coords="3527,445,3707,485"/>
+<area shape="rect" id="node92" title=" " alt="" coords="3806,108,3966,148"/>
+<area shape="rect" id="node93" title=" " alt="" coords="3990,115,4097,141"/>
+<area shape="rect" id="node94" title=" " alt="" coords="4121,115,4253,141"/>
+<area shape="rect" id="node3" href="$common_8h.html" title=" " alt="" coords="1846,717,1971,742"/>
+<area shape="rect" id="node44" href="$smacc__default__events_8h.html" title=" " alt="" coords="1693,885,1844,925"/>
+<area shape="rect" id="node47" href="$smacc__state__machine__base_8h.html" title=" " alt="" coords="2592,196,2788,236"/>
+<area shape="rect" id="node80" href="$smacc__signal__detector_8h.html" title=" " alt="" coords="2915,533,3060,573"/>
+<area shape="rect" id="node4" title=" " alt="" coords="1806,988,1979,1013"/>
+<area shape="rect" id="node5" title=" " alt="" coords="2483,981,2641,1021"/>
+<area shape="rect" id="node6" title=" " alt="" coords="3443,988,3619,1013"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1946,797,2146,837"/>
+<area shape="rect" id="node8" title=" " alt="" coords="2170,797,2333,837"/>
+<area shape="rect" id="node9" title=" " alt="" coords="2357,797,2505,837"/>
+<area shape="rect" id="node10" title=" " alt="" coords="2529,805,2645,830"/>
+<area shape="rect" id="node11" title=" " alt="" coords="2669,805,2823,830"/>
+<area shape="rect" id="node12" title=" " alt="" coords="2847,805,2975,830"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1007,805,1138,830"/>
+<area shape="rect" id="node14" title=" " alt="" coords="2297,988,2421,1013"/>
+<area shape="rect" id="node15" title=" " alt="" coords="5,805,108,830"/>
+<area shape="rect" id="node16" title=" " alt="" coords="2999,805,3170,830"/>
+<area shape="rect" id="node17" title=" " alt="" coords="773,805,831,830"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1642,988,1714,1013"/>
+<area shape="rect" id="node19" href="$smacc__fifo__scheduler_8h.html" title=" " alt="" coords="1315,805,1516,830"/>
+<area shape="rect" id="node23" href="$smacc__types_8h.html" title=" " alt="" coords="2727,1076,2879,1101"/>
+<area shape="rect" id="node25" href="$introspection_8h.html" title=" " alt="" coords="3163,885,3302,925"/>
+<area shape="rect" id="node45" href="$smacc__transition_8h.html" title=" " alt="" coords="3448,805,3623,830"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1429,885,1567,925"/>
+<area shape="rect" id="node21" href="$smacc__fifo__worker_8h.html" title=" " alt="" coords="1221,893,1405,918"/>
+<area shape="rect" id="node22" title=" " alt="" coords="1365,981,1503,1021"/>
+<area shape="rect" id="node24" title=" " alt="" coords="2705,1149,2902,1175"/>
+<area shape="rect" id="node26" title=" " alt="" coords="3623,1076,3690,1101"/>
+<area shape="rect" id="node27" title=" " alt="" coords="3075,988,3233,1013"/>
+<area shape="rect" id="node28" title=" " alt="" coords="3257,988,3419,1013"/>
+<area shape="rect" id="node29" href="$string__type__walker_8h.html" title=" " alt="" coords="4059,981,4203,1021"/>
+<area shape="rect" id="node34" href="$smacc__state__info_8h.html" title=" " alt="" coords="3745,981,3883,1021"/>
+<area shape="rect" id="node36" title=" " alt="" coords="2344,1076,2556,1101"/>
+<area shape="rect" id="node37" href="$smacc__state__machine__info_8h.html" title=" " alt="" coords="1183,973,1341,1028"/>
+<area shape="rect" id="node30" title=" " alt="" coords="4104,1076,4159,1101"/>
+<area shape="rect" id="node31" title=" " alt="" coords="4195,1076,4263,1101"/>
+<area shape="rect" id="node32" title=" " alt="" coords="3967,1076,4026,1101"/>
+<area shape="rect" id="node33" title=" " alt="" coords="4344,1076,4391,1101"/>
+<area shape="rect" id="node35" title=" " alt="" coords="3775,1076,3853,1101"/>
+<area shape="rect" id="node38" href="$smacc__orthogonal_8h.html" title=" " alt="" coords="829,1076,1010,1101"/>
+<area shape="rect" id="node40" title=" " alt="" coords="1034,1076,1221,1101"/>
+<area shape="rect" id="node41" title=" " alt="" coords="1245,1076,1463,1101"/>
+<area shape="rect" id="node42" title=" " alt="" coords="1488,1076,1719,1101"/>
+<area shape="rect" id="node43" title=" " alt="" coords="1743,1076,1989,1101"/>
+<area shape="rect" id="node39" title=" " alt="" coords="893,1149,945,1175"/>
+<area shape="rect" id="node46" href="$state__traits_8h.html" title=" " alt="" coords="3434,885,3573,925"/>
+<area shape="rect" id="node48" href="$smacc__state__base_8h.html" title=" " alt="" coords="4177,541,4363,566"/>
+<area shape="rect" id="node53" href="$smacc__state__machine_8h.html" title=" " alt="" coords="2144,284,2351,309"/>
+<area shape="rect" id="node49" href="$smacc__state_8h.html" title=" " alt="" coords="3073,629,3224,654"/>
+<area shape="rect" id="node50" href="$smacc__state__reactor_8h.html" title=" " alt="" coords="3902,805,4099,830"/>
+<area shape="rect" id="node52" href="$smacc__event__generator_8h.html" title=" " alt="" coords="4124,805,4339,830"/>
+<area shape="rect" id="node51" title=" " alt="" coords="4027,893,4102,918"/>
+<area shape="rect" id="node54" title=" " alt="" coords="925,365,980,390"/>
+<area shape="rect" id="node55" href="$smacc__updatable_8h.html" title=" " alt="" coords="456,365,633,390"/>
+<area shape="rect" id="node60" href="$smacc__signal_8h.html" title=" " alt="" coords="101,365,255,390"/>
+<area shape="rect" id="node62" title=" " alt="" coords="1349,365,1583,390"/>
+<area shape="rect" id="node63" title=" " alt="" coords="1607,357,1810,397"/>
+<area shape="rect" id="node64" title=" " alt="" coords="1717,541,1911,566"/>
+<area shape="rect" id="node65" title=" " alt="" coords="2061,357,2284,397"/>
+<area shape="rect" id="node66" href="$callback__counter__semaphore_8h.html" title=" " alt="" coords="1061,357,1223,397"/>
+<area shape="rect" id="node70" href="$smacc__state__impl_8h.html" title=" " alt="" coords="3451,533,3619,573"/>
+<area shape="rect" id="node76" href="$smacc__client__impl_8h.html" title=" " alt="" coords="2410,357,2581,397"/>
+<area shape="rect" id="node87" href="$smacc__component__impl_8h.html" title=" " alt="" coords="1834,357,2037,397"/>
+<area shape="rect" id="node88" href="$smacc__orthogonal__impl_8h.html" title=" " alt="" coords="651,445,849,485"/>
+<area shape="rect" id="node56" title=" " alt="" coords="514,453,575,478"/>
+<area shape="rect" id="node57" title=" " alt="" coords="924,717,1051,742"/>
+<area shape="rect" id="node58" title=" " alt="" coords="287,453,387,478"/>
+<area shape="rect" id="node59" title=" " alt="" coords="411,453,489,478"/>
+<area shape="rect" id="node61" title=" " alt="" coords="94,453,262,478"/>
+<area shape="rect" id="node69" title=" " alt="" coords="1173,453,1300,478"/>
+<area shape="rect" id="node71" href="$smacc__client__behavior_8h.html" title=" " alt="" coords="3503,621,3645,661"/>
+<area shape="rect" id="node74" href="$smacc__state__reactor__impl_8h.html" title=" " alt="" coords="3275,709,3443,749"/>
+<area shape="rect" id="node75" href="$smacc__event__generator__impl_8h.html" title=" " alt="" coords="3830,709,4001,749"/>
+<area shape="rect" id="node72" title=" " alt="" coords="3663,709,3805,749"/>
+<area shape="rect" id="node73" href="$smacc__client__behavior__impl_8h.html" title=" " alt="" coords="3467,709,3638,749"/>
+<area shape="rect" id="node77" href="$smacc__client_8h.html" title=" " alt="" coords="1986,541,2138,566"/>
+<area shape="rect" id="node79" href="$smacc__state__machine__impl_8h.html" title=" " alt="" coords="2461,445,2629,485"/>
+<area shape="rect" id="node78" href="$component_8h.html" title=" " alt="" coords="1559,629,1698,654"/>
+<area shape="rect" id="node83" title=" " alt="" coords="2501,541,2570,566"/>
+<area shape="rect" id="node84" title=" " alt="" coords="2595,533,2737,573"/>
+<area shape="rect" id="node85" title=" " alt="" coords="2163,533,2305,573"/>
+<area shape="rect" id="node86" title=" " alt="" coords="2330,533,2477,573"/>
+<area shape="rect" id="node81" title=" " alt="" coords="2931,629,3049,654"/>
+<area shape="rect" id="node82" title=" " alt="" coords="2845,629,2906,654"/>
+<area shape="rect" id="node89" title=" " alt="" coords="733,541,799,566"/>
+<area shape="rect" id="node91" title=" " alt="" coords="3950,533,4102,573"/>
 </map>

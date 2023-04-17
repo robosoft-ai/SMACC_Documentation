@@ -1,0 +1,281 @@
+\hypertarget{classsmacc_1_1CallbackCounterSemaphore}{}\doxysection{smacc\+::Callback\+Counter\+Semaphore Class Reference}
+\label{classsmacc_1_1CallbackCounterSemaphore}\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+
+
+{\ttfamily \#include $<$callback\+\_\+counter\+\_\+semaphore.\+h$>$}
+
+
+
+Collaboration diagram for smacc\+::Callback\+Counter\+Semaphore\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_ac5559c6cd6fb747e0c6a7e61634f092a}{Callback\+Counter\+Semaphore}} (std\+::string name, int count=0)
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a43eaef663648621bd516b021d651fd3d}{acquire}} ()
+\item 
+void \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_ada5a74a1bac30d8c7bf793e84d4160bf}{release}} ()
+\item 
+void \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a5f82db8d8df29562387ea834968c89fc}{finalize}} ()
+\item 
+void \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a49dbd8589284cc8d3b40cf4b8003c265}{add\+Connection}} (boost\+::signals2\+::connection conn)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a814328d8a4ad263b025361c2d01c607f}{count\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a594841ae057dd733e3ac97288e985a7d}{mutex\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a62e7da605a77e3c874144f55443d7001}{cv\+\_\+}}
+\item 
+std\+::vector$<$ boost\+::signals2\+::connection $>$ \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a619d90430bf4fad9922b8b5203907746}{connections\+\_\+}}
+\item 
+\mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a9c5fd39291963542b2ada77d3447c97c}{finalized}} = false
+\item 
+std\+::string \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_ab2eed89ae80f4434ee8d6fec7a374cd2}{name\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00018}{18}} of file \mbox{\hyperlink{callback__counter__semaphore_8h_source}{callback\+\_\+counter\+\_\+semaphore.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_ac5559c6cd6fb747e0c6a7e61634f092a}\label{classsmacc_1_1CallbackCounterSemaphore_ac5559c6cd6fb747e0c6a7e61634f092a}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!CallbackCounterSemaphore@{CallbackCounterSemaphore}}
+\index{CallbackCounterSemaphore@{CallbackCounterSemaphore}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{CallbackCounterSemaphore()}{CallbackCounterSemaphore()}}
+{\footnotesize\ttfamily smacc\+::\+Callback\+Counter\+Semaphore\+::\+Callback\+Counter\+Semaphore (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{count = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{callback__counter__semaphore_8cpp_source}{callback\+\_\+counter\+\_\+semaphore.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017 : \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a814328d8a4ad263b025361c2d01c607f}{count\_}}(count), \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_ab2eed89ae80f4434ee8d6fec7a374cd2}{name\_}}(name) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_a43eaef663648621bd516b021d651fd3d}\label{classsmacc_1_1CallbackCounterSemaphore_a43eaef663648621bd516b021d651fd3d}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!acquire@{acquire}}
+\index{acquire@{acquire}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{acquire()}{acquire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} smacc\+::\+Callback\+Counter\+Semaphore\+::acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{callback__counter__semaphore_8cpp_source}{callback\+\_\+counter\+\_\+semaphore.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019                                            \{}
+\DoxyCodeLine{00020         std::unique\_lock<std::mutex> lock(\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a594841ae057dd733e3ac97288e985a7d}{mutex\_}});}
+\DoxyCodeLine{00021         ROS\_DEBUG(\textcolor{stringliteral}{"{}[CallbackCounterSemaphore] acquire callback \%s \%ld"{}},\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_ab2eed89ae80f4434ee8d6fec7a374cd2}{name\_}}.c\_str(), (\textcolor{keywordtype}{long})\textcolor{keyword}{this});}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a9c5fd39291963542b2ada77d3447c97c}{finalized}})}
+\DoxyCodeLine{00024         \{}
+\DoxyCodeLine{00025             ROS\_DEBUG(\textcolor{stringliteral}{"{}[CallbackCounterSemaphore] callback rejected \%s \%ld"{}},\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_ab2eed89ae80f4434ee8d6fec7a374cd2}{name\_}}.c\_str(), (\textcolor{keywordtype}{long})\textcolor{keyword}{this});}
+\DoxyCodeLine{00026             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00027         \}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029         ++\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a814328d8a4ad263b025361c2d01c607f}{count\_}};}
+\DoxyCodeLine{00030         \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a62e7da605a77e3c874144f55443d7001}{cv\_}}.notify\_one();}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032         ROS\_DEBUG(\textcolor{stringliteral}{"{}[CallbackCounterSemaphore] callback accepted \%s \%ld"{}},\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_ab2eed89ae80f4434ee8d6fec7a374cd2}{name\_}}.c\_str(), (\textcolor{keywordtype}{long})\textcolor{keyword}{this});}
+\DoxyCodeLine{00033         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00034     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00030}{count\+\_\+}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00032}{cv\+\_\+}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00034}{finalized}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00031}{mutex\+\_\+}}, and \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00035}{name\+\_\+}}.
+
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_a49dbd8589284cc8d3b40cf4b8003c265}\label{classsmacc_1_1CallbackCounterSemaphore_a49dbd8589284cc8d3b40cf4b8003c265}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!addConnection@{addConnection}}
+\index{addConnection@{addConnection}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{addConnection()}{addConnection()}}
+{\footnotesize\ttfamily void smacc\+::\+Callback\+Counter\+Semaphore\+::add\+Connection (\begin{DoxyParamCaption}\item[{boost\+::signals2\+::connection}]{conn }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{callback__counter__semaphore_8cpp_source}{callback\+\_\+counter\+\_\+semaphore.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062     \{}
+\DoxyCodeLine{00063         std::unique\_lock<std::mutex> lock(\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a594841ae057dd733e3ac97288e985a7d}{mutex\_}});}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a9c5fd39291963542b2ada77d3447c97c}{finalized}})}
+\DoxyCodeLine{00066         \{}
+\DoxyCodeLine{00067             ROS\_DEBUG(\textcolor{stringliteral}{"{}[CallbackCounterSemaphore] ignoring adding callback, already finalized \%s \%ld"{}},\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_ab2eed89ae80f4434ee8d6fec7a374cd2}{name\_}}.c\_str(), (\textcolor{keywordtype}{long})\textcolor{keyword}{this});}
+\DoxyCodeLine{00068             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00069         \}}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071         \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a619d90430bf4fad9922b8b5203907746}{connections\_}}.push\_back(conn);}
+\DoxyCodeLine{00072     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00033}{connections\+\_\+}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00034}{finalized}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00031}{mutex\+\_\+}}, and \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00035}{name\+\_\+}}.
+
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_a5f82db8d8df29562387ea834968c89fc}\label{classsmacc_1_1CallbackCounterSemaphore_a5f82db8d8df29562387ea834968c89fc}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!finalize@{finalize}}
+\index{finalize@{finalize}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily void smacc\+::\+Callback\+Counter\+Semaphore\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{callback__counter__semaphore_8cpp_source}{callback\+\_\+counter\+\_\+semaphore.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044                                             \{}
+\DoxyCodeLine{00045         std::unique\_lock<std::mutex> lock(\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a594841ae057dd733e3ac97288e985a7d}{mutex\_}});}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047         \textcolor{keywordflow}{while} (\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a814328d8a4ad263b025361c2d01c607f}{count\_}} > 0) \{}
+\DoxyCodeLine{00048             \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a62e7da605a77e3c874144f55443d7001}{cv\_}}.wait(lock);}
+\DoxyCodeLine{00049         \}}
+\DoxyCodeLine{00050         \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a9c5fd39291963542b2ada77d3447c97c}{finalized}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052         \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} conn: \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a619d90430bf4fad9922b8b5203907746}{connections\_}})}
+\DoxyCodeLine{00053         \{}
+\DoxyCodeLine{00054             conn.disconnect();}
+\DoxyCodeLine{00055         \}}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057         \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a619d90430bf4fad9922b8b5203907746}{connections\_}}.clear();}
+\DoxyCodeLine{00058         ROS\_DEBUG(\textcolor{stringliteral}{"{}[CallbackCounterSemaphore] callbacks finalized \%s \%ld"{}},\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_ab2eed89ae80f4434ee8d6fec7a374cd2}{name\_}}.c\_str(), (\textcolor{keywordtype}{long})\textcolor{keyword}{this});}
+\DoxyCodeLine{00059     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00033}{connections\+\_\+}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00030}{count\+\_\+}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00032}{cv\+\_\+}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00034}{finalized}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00031}{mutex\+\_\+}}, and \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00035}{name\+\_\+}}.
+
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_ada5a74a1bac30d8c7bf793e84d4160bf}\label{classsmacc_1_1CallbackCounterSemaphore_ada5a74a1bac30d8c7bf793e84d4160bf}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!release@{release}}
+\index{release@{release}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily void smacc\+::\+Callback\+Counter\+Semaphore\+::release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{callback__counter__semaphore_8cpp_source}{callback\+\_\+counter\+\_\+semaphore.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036                                            \{}
+\DoxyCodeLine{00037         std::unique\_lock<std::mutex> lock(\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a594841ae057dd733e3ac97288e985a7d}{mutex\_}});}
+\DoxyCodeLine{00038         -\/-\/\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a814328d8a4ad263b025361c2d01c607f}{count\_}};}
+\DoxyCodeLine{00039         \mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_a62e7da605a77e3c874144f55443d7001}{cv\_}}.notify\_one();}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041         ROS\_DEBUG(\textcolor{stringliteral}{"{}[CallbackCounterSemaphore] callback finished \%s \%ld"{}},\mbox{\hyperlink{classsmacc_1_1CallbackCounterSemaphore_ab2eed89ae80f4434ee8d6fec7a374cd2}{name\_}}.c\_str(), (\textcolor{keywordtype}{long})\textcolor{keyword}{this});}
+\DoxyCodeLine{00042     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00030}{count\+\_\+}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00032}{cv\+\_\+}}, \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00031}{mutex\+\_\+}}, and \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00035}{name\+\_\+}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_a619d90430bf4fad9922b8b5203907746}\label{classsmacc_1_1CallbackCounterSemaphore_a619d90430bf4fad9922b8b5203907746}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!connections\_@{connections\_}}
+\index{connections\_@{connections\_}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{connections\_}{connections\_}}
+{\footnotesize\ttfamily std\+::vector$<$boost\+::signals2\+::connection$>$ smacc\+::\+Callback\+Counter\+Semaphore\+::connections\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00033}{33}} of file \mbox{\hyperlink{callback__counter__semaphore_8h_source}{callback\+\_\+counter\+\_\+semaphore.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00061}{add\+Connection()}}, and \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00044}{finalize()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_a814328d8a4ad263b025361c2d01c607f}\label{classsmacc_1_1CallbackCounterSemaphore_a814328d8a4ad263b025361c2d01c607f}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!count\_@{count\_}}
+\index{count\_@{count\_}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{count\_}{count\_}}
+{\footnotesize\ttfamily int smacc\+::\+Callback\+Counter\+Semaphore\+::count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00030}{30}} of file \mbox{\hyperlink{callback__counter__semaphore_8h_source}{callback\+\_\+counter\+\_\+semaphore.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00019}{acquire()}}, \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00044}{finalize()}}, and \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00036}{release()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_a62e7da605a77e3c874144f55443d7001}\label{classsmacc_1_1CallbackCounterSemaphore_a62e7da605a77e3c874144f55443d7001}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!cv\_@{cv\_}}
+\index{cv\_@{cv\_}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{cv\_}{cv\_}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable smacc\+::\+Callback\+Counter\+Semaphore\+::cv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00032}{32}} of file \mbox{\hyperlink{callback__counter__semaphore_8h_source}{callback\+\_\+counter\+\_\+semaphore.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00019}{acquire()}}, \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00044}{finalize()}}, and \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00036}{release()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_a9c5fd39291963542b2ada77d3447c97c}\label{classsmacc_1_1CallbackCounterSemaphore_a9c5fd39291963542b2ada77d3447c97c}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!finalized@{finalized}}
+\index{finalized@{finalized}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{finalized}{finalized}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbool}{bool}} smacc\+::\+Callback\+Counter\+Semaphore\+::finalized = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00034}{34}} of file \mbox{\hyperlink{callback__counter__semaphore_8h_source}{callback\+\_\+counter\+\_\+semaphore.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00019}{acquire()}}, \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00061}{add\+Connection()}}, and \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00044}{finalize()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_a594841ae057dd733e3ac97288e985a7d}\label{classsmacc_1_1CallbackCounterSemaphore_a594841ae057dd733e3ac97288e985a7d}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::mutex smacc\+::\+Callback\+Counter\+Semaphore\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00031}{31}} of file \mbox{\hyperlink{callback__counter__semaphore_8h_source}{callback\+\_\+counter\+\_\+semaphore.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00019}{acquire()}}, \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00061}{add\+Connection()}}, \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00044}{finalize()}}, and \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00036}{release()}}.
+
+\mbox{\Hypertarget{classsmacc_1_1CallbackCounterSemaphore_ab2eed89ae80f4434ee8d6fec7a374cd2}\label{classsmacc_1_1CallbackCounterSemaphore_ab2eed89ae80f4434ee8d6fec7a374cd2}} 
+\index{smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}!name\_@{name\_}}
+\index{name\_@{name\_}!smacc::CallbackCounterSemaphore@{smacc::CallbackCounterSemaphore}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily std\+::string smacc\+::\+Callback\+Counter\+Semaphore\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{callback__counter__semaphore_8h_source_l00035}{35}} of file \mbox{\hyperlink{callback__counter__semaphore_8h_source}{callback\+\_\+counter\+\_\+semaphore.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00019}{acquire()}}, \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00061}{add\+Connection()}}, \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00044}{finalize()}}, and \mbox{\hyperlink{callback__counter__semaphore_8cpp_source_l00036}{release()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+smacc/include/smacc/\mbox{\hyperlink{callback__counter__semaphore_8h}{callback\+\_\+counter\+\_\+semaphore.\+h}}\item 
+smacc/src/smacc/\mbox{\hyperlink{callback__counter__semaphore_8cpp}{callback\+\_\+counter\+\_\+semaphore.\+cpp}}\end{DoxyCompactItemize}
