@@ -22,7 +22,7 @@ digraph "cl_move_base_z::backward_local_planner::BackwardLocalPlanner"
   Node9 -> Node1 [color="grey25",style="solid",label=" -enable_obstacle_checking\l_\n-goalReached_\n-inGoalPureSpinningState\l_\n-initialPureSpinningStage\l_\n-straightBackwardsAndPure\lSpinningMode_\n-waiting_" ,arrowhead="odiamond"];
   Node9 [label="{bool\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classbool.html",tooltip=" "];
   Node10 -> Node1 [color="grey25",style="solid",label=" -currentCarrotPoseIndex_" ,arrowhead="odiamond"];
-  Node10 [label="{int\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
+  Node10 [label="{uint64_t\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node11 -> Node1 [color="grey25",style="solid",label=" -waitingTimeout_" ,arrowhead="odiamond"];
   Node11 [label="{Duration\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",tooltip=" "];
   Node12 -> Node1 [color="grey25",style="solid",label=" -waitingStamp_" ,arrowhead="odiamond"];

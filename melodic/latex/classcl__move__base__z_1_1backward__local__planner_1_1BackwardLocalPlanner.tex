@@ -113,7 +113,7 @@ double \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1Ba
 \item 
 double \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_af7e492339ee2d1c90c00f6dd4cf95551}{max\+\_\+angular\+\_\+z\+\_\+speed\+\_\+}}
 \item 
-int \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{current\+Carrot\+Pose\+Index\+\_\+}}
+uint64\+\_\+t \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{current\+Carrot\+Pose\+Index\+\_\+}}
 \item 
 \mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a00849266e4bdd9379c3717e8a41c303e}{waiting\+\_\+}}
 \item 
@@ -186,7 +186,7 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00212}
 \DoxyCodeLine{00217 }
 \DoxyCodeLine{00218             \textcolor{comment}{// only apply if the carrot is in goal position and also if we are not in a pure spinning behavior v!=0}}
 \DoxyCodeLine{00219 }
-\DoxyCodeLine{00220             \textcolor{keyword}{auto} \&carrot\_pose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}];}
+\DoxyCodeLine{00220             \textcolor{keyword}{auto} \&carrot\_pose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}}];}
 \DoxyCodeLine{00221             \textcolor{keyword}{const} geometry\_msgs::Point \&carrot\_point = carrot\_pose.pose.position;}
 \DoxyCodeLine{00222             \textcolor{keywordtype}{double} yaw = tf::getYaw(carrot\_pose.pose.orientation);}
 \DoxyCodeLine{00223 }
@@ -275,7 +275,7 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00099}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00100         \{}
 \DoxyCodeLine{00101             \textcolor{keywordtype}{double} angle = tf::getYaw(tfpose.getRotation());}
-\DoxyCodeLine{00102             \textcolor{keyword}{auto} \&carrot\_pose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}];}
+\DoxyCodeLine{00102             \textcolor{keyword}{auto} \&carrot\_pose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}}];}
 \DoxyCodeLine{00103             \textcolor{keyword}{const} geometry\_msgs::Point \&carrot\_point = carrot\_pose.pose.position;}
 \DoxyCodeLine{00104 }
 \DoxyCodeLine{00105             tf::Quaternion carrot\_orientation;}
@@ -394,9 +394,9 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00331}
 \DoxyCodeLine{00362 }
 \DoxyCodeLine{00363                 \textcolor{comment}{// getting carrot goal information}}
 \DoxyCodeLine{00364                 tf::Quaternion q = tfpose.getRotation();}
-\DoxyCodeLine{00365                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot goal: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
-\DoxyCodeLine{00366                 \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&carrotgoalpose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}];}
-\DoxyCodeLine{00367                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot goal pose current index: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() << \textcolor{stringliteral}{"{}: "{}} << carrotgoalpose);}
+\DoxyCodeLine{00365                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot goal: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
+\DoxyCodeLine{00366                 \textcolor{keyword}{const} geometry\_msgs::PoseStamped \&carrotgoalpose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}}];}
+\DoxyCodeLine{00367                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] carrot goal pose current index: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() << \textcolor{stringliteral}{"{}: "{}} << carrotgoalpose);}
 \DoxyCodeLine{00368                 \textcolor{keyword}{const} geometry\_msgs::Point \&carrotGoalPosition = carrotgoalpose.pose.position;}
 \DoxyCodeLine{00369 }
 \DoxyCodeLine{00370                 tf::Quaternion goalQ;}
@@ -425,7 +425,7 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00331}
 \DoxyCodeLine{00393             \textcolor{keywordtype}{bool} linearGoalReached;}
 \DoxyCodeLine{00394             \textcolor{keywordtype}{bool} currentPoseInGoal = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a8b84e3961a79317a9c978ec054e4a112}{checkCurrentPoseInGoalRange}}(tfpose,betta\_error, linearGoalReached);}
 \DoxyCodeLine{00395 }
-\DoxyCodeLine{00396             \textcolor{keywordtype}{bool} carrotInFinalGoal = carrotInLinearGoalRange \&\& \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} == \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() -\/ 1;}
+\DoxyCodeLine{00396             \textcolor{keywordtype}{bool} carrotInFinalGoal = carrotInLinearGoalRange \&\& \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} == \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() -\/ 1;}
 \DoxyCodeLine{00397 }
 \DoxyCodeLine{00398             \textcolor{keywordflow}{if}(currentPoseInGoal \&\& carrotInFinalGoal)}
 \DoxyCodeLine{00399             \{}
@@ -554,7 +554,7 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00331}
 \DoxyCodeLine{00522                         \}}
 \DoxyCodeLine{00523 }
 \DoxyCodeLine{00524                         costmap2d-\/>worldToMap(p[0], p[1], mx, my);}
-\DoxyCodeLine{00525                         uint64\_t cost = costmap2d-\/>getCost(mx, my);}
+\DoxyCodeLine{00525                         \textcolor{comment}{/*uint64\_t cost =*/} costmap2d-\/>getCost(mx, my);}
 \DoxyCodeLine{00526 }
 \DoxyCodeLine{00527                         \textcolor{comment}{// ROS\_DEBUG("{}[BackwardLocalPlanner] checking cost pt \%d [\%lf, \%lf] cell[\%d,\%d] = \%d"{}, i, p[0], p[1], mx, my, cost);}}
 \DoxyCodeLine{00528                         \textcolor{comment}{// ROS\_DEBUG\_STREAM("{}[BackwardLocalPlanner] cost: "{} << cost);}}
@@ -719,20 +719,20 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00633}
 \DoxyCodeLine{00638             \textcolor{comment}{// initial state check}}
 \DoxyCodeLine{00639             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{computeCurrentEuclideanAndAngularErrorsToCarrotGoal}}(tfpose, lineardisterr, angleerr);}
 \DoxyCodeLine{00640 }
-\DoxyCodeLine{00641             \textcolor{keywordtype}{int} closestIndex = -\/1;}
-\DoxyCodeLine{00642             \textcolor{keywordtype}{double} minpointdist = std::numeric\_limits<double>::max();}
+\DoxyCodeLine{00641             \textcolor{comment}{// int closestIndex = -\/1;}}
+\DoxyCodeLine{00642             \textcolor{comment}{// double minpointdist = std::numeric\_limits<double>::max();}}
 \DoxyCodeLine{00643 }
 \DoxyCodeLine{00644             \textcolor{comment}{// lets set the carrot-\/goal in the correct place with this loop}}
-\DoxyCodeLine{00645             \textcolor{keywordflow}{while} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() \&\& !inCarrotRange)}
+\DoxyCodeLine{00645             \textcolor{keywordflow}{while} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() \&\& !inCarrotRange)}
 \DoxyCodeLine{00646             \{}
 \DoxyCodeLine{00647                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{computeCurrentEuclideanAndAngularErrorsToCarrotGoal}}(tfpose, lineardisterr, angleerr);}
 \DoxyCodeLine{00648 }
-\DoxyCodeLine{00649                 ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%d -\/ error to carrot, linear = \%lf (\%lf), angular : \%lf (\%lf)"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}, lineardisterr, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}}, angleerr, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}});}
+\DoxyCodeLine{00649                 ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%ld -\/ error to carrot, linear = \%lf (\%lf), angular : \%lf (\%lf)"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}}, lineardisterr, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}}, angleerr, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}});}
 \DoxyCodeLine{00650 }
 \DoxyCodeLine{00651                 \textcolor{comment}{// current path point is inside the carrot distance range, goal carrot tries to escape!}}
 \DoxyCodeLine{00652                 \textcolor{keywordflow}{if} (lineardisterr < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} \&\& angleerr < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}})}
 \DoxyCodeLine{00653                 \{}
-\DoxyCodeLine{00654                     ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%d -\/ in carrot Range"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}});}
+\DoxyCodeLine{00654                     ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%ld -\/ in carrot Range"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}});}
 \DoxyCodeLine{00655                     inCarrotRange = \textcolor{keyword}{true};}
 \DoxyCodeLine{00656                     \textcolor{comment}{// we are inside the goal range}}
 \DoxyCodeLine{00657                 \}}
@@ -742,19 +742,19 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00633}
 \DoxyCodeLine{00661                     \textcolor{comment}{// unless we go out of the carrot range}}
 \DoxyCodeLine{00662 }
 \DoxyCodeLine{00663                     \textcolor{comment}{// but we rollback last index increment (to go back inside the carrot goal scope) and start motion with that carrot goal we found}}
-\DoxyCodeLine{00664                     \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}-\/-\/;}
+\DoxyCodeLine{00664                     \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}}-\/-\/;}
 \DoxyCodeLine{00665                     \textcolor{keywordflow}{break};}
 \DoxyCodeLine{00666                 \}}
 \DoxyCodeLine{00667                 \textcolor{keywordflow}{else}}
 \DoxyCodeLine{00668                 \{}
-\DoxyCodeLine{00669                     ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%d -\/ carrot out of range, searching coincidence..."{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}});}
+\DoxyCodeLine{00669                     ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] Finding initial carrot goal i=\%ld -\/ carrot out of range, searching coincidence..."{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}});}
 \DoxyCodeLine{00670                 \}}
 \DoxyCodeLine{00671 }
-\DoxyCodeLine{00672                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}++;}
-\DoxyCodeLine{00673                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] setPlan: fw"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}});}
+\DoxyCodeLine{00672                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}}++;}
+\DoxyCodeLine{00673                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] setPlan: fw"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}});}
 \DoxyCodeLine{00674             \}}
 \DoxyCodeLine{00675 }
-\DoxyCodeLine{00676             ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] setPlan: (found first carrot:"{}} << inCarrotRange << \textcolor{stringliteral}{"{}) initial carrot point index: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
+\DoxyCodeLine{00676             ROS\_INFO\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] setPlan: (found first carrot:"{}} << inCarrotRange << \textcolor{stringliteral}{"{}) initial carrot point index: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
 \DoxyCodeLine{00677 }
 \DoxyCodeLine{00678             \textcolor{keywordflow}{return} inCarrotRange;}
 \DoxyCodeLine{00679         \}}
@@ -879,7 +879,7 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00040}
 \DoxyCodeLine{00047 }
 \DoxyCodeLine{00048             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aebafa83dd5fced64dc2239919a3ab8d8}{f}} = boost::bind(\&\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a62e4783adae03ce92190d855a021b91d}{BackwardLocalPlanner::reconfigCB}}, \textcolor{keyword}{this}, \_1, \_2);}
 \DoxyCodeLine{00049             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_afb349461ce9c4edee018dbb822a8cd9a}{paramServer\_}}.setCallback(\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aebafa83dd5fced64dc2239919a3ab8d8}{f}});}
-\DoxyCodeLine{00050             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} = 0;}
+\DoxyCodeLine{00050             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} = 0;}
 \DoxyCodeLine{00051 }
 \DoxyCodeLine{00052             ros::NodeHandle nh(\textcolor{stringliteral}{"{}\string~/BackwardLocalPlanner"{}});}
 \DoxyCodeLine{00053             nh.param(\textcolor{stringliteral}{"{}pure\_spinning\_straight\_line\_mode"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a04febb67563add6f715051a94aed1b9b}{straightBackwardsAndPureSpinningMode\_}}, \textcolor{keyword}{true});}
@@ -1160,7 +1160,7 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00681}
 \DoxyCodeLine{00694             \textcolor{keywordtype}{double} maxallowedAngularError = 0.45 * this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}}; \textcolor{comment}{// nyquist}}
 \DoxyCodeLine{00695             \textcolor{keywordtype}{double} maxallowedLinearError = 0.45 * this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}};          \textcolor{comment}{// nyquist}}
 \DoxyCodeLine{00696 }
-\DoxyCodeLine{00697             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() -\/ 1; i++)}
+\DoxyCodeLine{00697             \textcolor{keywordflow}{for} (uint64\_t i = 0; i < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() -\/ 1; i++)}
 \DoxyCodeLine{00698             \{}
 \DoxyCodeLine{00699                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardLocalPlanner] resample precise, check: "{}} << i);}
 \DoxyCodeLine{00700                 \textcolor{keyword}{auto} \&currpose = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}[i];}
@@ -1298,7 +1298,7 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00760}
 \DoxyCodeLine{00774 }
 \DoxyCodeLine{00775             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a100fe8bdaaf89b0fa54ecf2aef0966ed}{resamplePrecisePlan}}();}
 \DoxyCodeLine{00776 }
-\DoxyCodeLine{00777             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} = 0;}
+\DoxyCodeLine{00777             \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} = 0;}
 \DoxyCodeLine{00778             this-\/>\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a35832ebefc43e5977e1222389244c8d3}{resetDivergenceDetection}}();}
 \DoxyCodeLine{00779 }
 \DoxyCodeLine{00780             \textcolor{keywordflow}{if} (plan.size() == 0)}
@@ -1397,19 +1397,19 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00131}
 \DoxyCodeLine{00135             \textcolor{comment}{// iterate the point from the current position and backward until reaching a new goal point in the path}}
 \DoxyCodeLine{00136             \textcolor{comment}{// this algorithm among other advantages has that skip the looping with an eager global planner}}
 \DoxyCodeLine{00137             \textcolor{comment}{// that recalls the same plan (the already performed part of the plan in the current pose is skipped)}}
-\DoxyCodeLine{00138             \textcolor{keywordflow}{while} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size())}
+\DoxyCodeLine{00138             \textcolor{keywordflow}{while} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size())}
 \DoxyCodeLine{00139             \{}
 \DoxyCodeLine{00140                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{computeCurrentEuclideanAndAngularErrorsToCarrotGoal}}(tfpose, disterr, angleerr);}
 \DoxyCodeLine{00141 }
-\DoxyCodeLine{00142                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] update carrot goal: Current index: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
+\DoxyCodeLine{00142                 ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] update carrot goal: Current index: "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
 \DoxyCodeLine{00143                 ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] update carrot goal: linear error \%lf, angular error: \%lf"{}}, disterr, angleerr);}
 \DoxyCodeLine{00144 }
 \DoxyCodeLine{00145                 \textcolor{comment}{// target pose found, goal carrot tries to escape!}}
 \DoxyCodeLine{00146                 \textcolor{keywordflow}{if} (disterr < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a0bbb80ce5bae865c4322869422803296}{carrot\_distance\_}} \&\& angleerr < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a63e30befa09c4a67cf55086923b760c7}{carrot\_angular\_distance\_}})}
 \DoxyCodeLine{00147                 \{}
-\DoxyCodeLine{00148                     \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}}++;}
+\DoxyCodeLine{00148                     \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}}++;}
 \DoxyCodeLine{00149                     \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a35832ebefc43e5977e1222389244c8d3}{resetDivergenceDetection}}();}
-\DoxyCodeLine{00150                     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] fw "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
+\DoxyCodeLine{00150                     ROS\_DEBUG\_STREAM(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] fw "{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} << \textcolor{stringliteral}{"{}/"{}} << \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size());}
 \DoxyCodeLine{00151                 \}}
 \DoxyCodeLine{00152                 \textcolor{keywordflow}{else}}
 \DoxyCodeLine{00153                 \{}
@@ -1417,13 +1417,13 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8cpp_source_l00131}
 \DoxyCodeLine{00155                 \}}
 \DoxyCodeLine{00156             \}}
 \DoxyCodeLine{00157             \textcolor{comment}{//ROS\_DEBUG("{}[BackwardsLocalPlanner] computing angular error"{});}}
-\DoxyCodeLine{00158             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} >= \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() \&\& \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() > 0)}
+\DoxyCodeLine{00158             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} >= \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() \&\& \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() > 0)}
 \DoxyCodeLine{00159             \{}
-\DoxyCodeLine{00160                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() -\/ 1;}
+\DoxyCodeLine{00160                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}} = \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad9cde5c85f782cab2ddb4030e3c3f2cf}{backwardsPlanPath\_}}.size() -\/ 1;}
 \DoxyCodeLine{00161                 \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_ad39ba029c760fc63ea286c74b5b9b795}{computeCurrentEuclideanAndAngularErrorsToCarrotGoal}}(tfpose, disterr, angleerr);}
 \DoxyCodeLine{00162             \}}
 \DoxyCodeLine{00163 }
-\DoxyCodeLine{00164             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] Current index carrot goal: \%d"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}{currentCarrotPoseIndex\_}});}
+\DoxyCodeLine{00164             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] Current index carrot goal: \%ld"{}}, \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}{currentCarrotPoseIndex\_}});}
 \DoxyCodeLine{00165             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] Update carrot goal: linear error  \%lf, angular error: \%lf"{}}, disterr, angleerr);}
 \DoxyCodeLine{00166             \textcolor{keywordtype}{bool} carrotInGoalLinear = disterr < \mbox{\hyperlink{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_aa4ec2c87947a3c08f8278eff052e7c8c}{xy\_goal\_tolerance\_}};}
 \DoxyCodeLine{00167             ROS\_DEBUG(\textcolor{stringliteral}{"{}[BackwardsLocalPlanner] carrot in goal radius: \%d"{}}, carrotInGoalLinear);}
@@ -1533,11 +1533,11 @@ Definition at line \mbox{\hyperlink{backward__local__planner_8h_source_l00097}{9
 
 Referenced by \mbox{\hyperlink{backward__local__planner_8cpp_source_l00331}{compute\+Velocity\+Commands()}}, \mbox{\hyperlink{backward__local__planner_8cpp_source_l00034}{initialize()}}, \mbox{\hyperlink{backward__local__planner_8cpp_source_l00876}{publish\+Goal\+Marker()}}, and \mbox{\hyperlink{backward__local__planner_8cpp_source_l00760}{set\+Plan()}}.
 
-\mbox{\Hypertarget{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}\label{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a2e8f2b78bc97f27c5fa431f3af2261ed}} 
+\mbox{\Hypertarget{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}\label{classcl__move__base__z_1_1backward__local__planner_1_1BackwardLocalPlanner_a74839d5293a479c4947c7a45c819f986}} 
 \index{cl\_move\_base\_z::backward\_local\_planner::BackwardLocalPlanner@{cl\_move\_base\_z::backward\_local\_planner::BackwardLocalPlanner}!currentCarrotPoseIndex\_@{currentCarrotPoseIndex\_}}
 \index{currentCarrotPoseIndex\_@{currentCarrotPoseIndex\_}!cl\_move\_base\_z::backward\_local\_planner::BackwardLocalPlanner@{cl\_move\_base\_z::backward\_local\_planner::BackwardLocalPlanner}}
 \doxysubsubsection{\texorpdfstring{currentCarrotPoseIndex\_}{currentCarrotPoseIndex\_}}
-{\footnotesize\ttfamily int cl\+\_\+move\+\_\+base\+\_\+z\+::backward\+\_\+local\+\_\+planner\+::\+Backward\+Local\+Planner\+::current\+Carrot\+Pose\+Index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily uint64\+\_\+t cl\+\_\+move\+\_\+base\+\_\+z\+::backward\+\_\+local\+\_\+planner\+::\+Backward\+Local\+Planner\+::current\+Carrot\+Pose\+Index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
