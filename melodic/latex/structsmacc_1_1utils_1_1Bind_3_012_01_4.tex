@@ -41,11 +41,11 @@ Definition at line \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00281
 \DoxyCodeLine{00284         \{}
 \DoxyCodeLine{00285             \textcolor{keywordflow}{if}(callbackCounter == \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00286           \{}
-\DoxyCodeLine{00287             \textcolor{keywordflow}{return} (object-\/>*callback)(a1);}
+\DoxyCodeLine{00287             (\textcolor{keywordtype}{object}-\/>*callback)(a1);}
 \DoxyCodeLine{00288           \}}
 \DoxyCodeLine{00289           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (callbackCounter-\/>acquire())}
 \DoxyCodeLine{00290           \{}
-\DoxyCodeLine{00291             (object-\/>*callback)(a1);}
+\DoxyCodeLine{00291             (\textcolor{keywordtype}{object}-\/>*callback)(a1);}
 \DoxyCodeLine{00292             callbackCounter-\/>release();}
 \DoxyCodeLine{00293 }
 \DoxyCodeLine{00294           \}}

@@ -153,11 +153,11 @@ template&lt;typename TSmaccSignal , typename TMemberFunctionPrototype , typename
 <div class="line"><span class="lineno">  305</span>        <span class="keywordflow">return</span> signal.connect([=](<span class="keyword">auto</span> a1, <span class="keyword">auto</span> a2) {</div>
 <div class="line"><span class="lineno">  306</span>           <span class="keywordflow">if</span>(callbackCounter == <span class="keyword">nullptr</span>)</div>
 <div class="line"><span class="lineno">  307</span>          {</div>
-<div class="line"><span class="lineno">  308</span>            <span class="keywordflow">return</span> (object-&gt;*callback)(a1,a2);</div>
+<div class="line"><span class="lineno">  308</span>            (<span class="keywordtype">object</span>-&gt;*callback)(a1,a2);</div>
 <div class="line"><span class="lineno">  309</span>          }</div>
 <div class="line"><span class="lineno">  310</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (callbackCounter-&gt;acquire())</div>
 <div class="line"><span class="lineno">  311</span>          {</div>
-<div class="line"><span class="lineno">  312</span>            (object-&gt;*callback)(a1,a2);</div>
+<div class="line"><span class="lineno">  312</span>            (<span class="keywordtype">object</span>-&gt;*callback)(a1,a2);</div>
 <div class="line"><span class="lineno">  313</span>            callbackCounter-&gt;release();</div>
 <div class="line"><span class="lineno">  314</span> </div>
 <div class="line"><span class="lineno">  315</span>          }</div>

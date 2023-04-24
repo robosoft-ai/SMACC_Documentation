@@ -288,11 +288,11 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00284}00284         \{}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00285}00285             \textcolor{keywordflow}{if}(callbackCounter == \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00286}00286           \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00287}00287             \textcolor{keywordflow}{return} (object-\/>*callback)(a1);}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00287}00287             (\textcolor{keywordtype}{object}-\/>*callback)(a1);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00288}00288           \}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00289}00289           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (callbackCounter-\/>acquire())}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00290}00290           \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00291}00291             (object-\/>*callback)(a1);}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00291}00291             (\textcolor{keywordtype}{object}-\/>*callback)(a1);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00292}00292             callbackCounter-\/>release();}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00293}00293 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00294}00294           \}}
@@ -309,11 +309,11 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00305}00305         \textcolor{keywordflow}{return} signal.connect([=](\textcolor{keyword}{auto} a1, \textcolor{keyword}{auto} a2) \{}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00306}00306            \textcolor{keywordflow}{if}(callbackCounter == \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00307}00307           \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00308}00308             \textcolor{keywordflow}{return} (object-\/>*callback)(a1,a2);}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00308}00308             (\textcolor{keywordtype}{object}-\/>*callback)(a1,a2);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00309}00309           \}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00310}00310           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (callbackCounter-\/>acquire())}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00311}00311           \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00312}00312             (object-\/>*callback)(a1,a2);}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00312}00312             (\textcolor{keywordtype}{object}-\/>*callback)(a1,a2);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00313}00313             callbackCounter-\/>release();}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00314}00314 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00315}00315           \}}
@@ -330,11 +330,11 @@
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00326}00326         \textcolor{keywordflow}{return} signal.connect([=](\textcolor{keyword}{auto} a1, \textcolor{keyword}{auto} a2, \textcolor{keyword}{auto} a3) \{}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00327}00327            \textcolor{keywordflow}{if}(callbackCounter == \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00328}00328           \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00329}00329             \textcolor{keywordflow}{return} (object-\/>*callback)(a1,a2,a3);}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00329}00329             (\textcolor{keywordtype}{object}-\/>*callback)(a1,a2,a3);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00330}00330           \}}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00331}00331           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (callbackCounter-\/>acquire())}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00332}00332           \{}
-\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00333}00333             (object-\/>*callback)(a1,a2,a3);}
+\DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00333}00333             (\textcolor{keywordtype}{object}-\/>*callback)(a1,a2,a3);}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00334}00334             callbackCounter-\/>release();}
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00335}00335 }
 \DoxyCodeLine{\Hypertarget{smacc__state__machine__impl_8h_source_l00336}00336           \}}

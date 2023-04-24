@@ -17,7 +17,7 @@ Collaboration diagram for smacc\+::Cb\+Service\+Server\+Callback\+Base\texorpdfs
 \item 
 virtual void \mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase_a71d73cbf92076f70c8e75b08aaaadb43}{on\+Entry}} () override
 \item 
-virtual \mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase_ae7574bd06256ea853cb4a986dca25890}{on\+Service\+Request\+Received}} (typename TService\+::\+Request \&req, std\+::shared\+\_\+ptr$<$ typename TService\+::\+Response $>$ res)=0
+virtual void \mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase_a4e365d59d2c0dd97afe2ce42de8e809f}{on\+Service\+Request\+Received}} (typename TService\+::\+Request \&req, std\+::shared\+\_\+ptr$<$ typename TService\+::\+Response $>$ res)=0
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -57,22 +57,22 @@ Definition at line \mbox{\hyperlink{cb__service__server__callback__base_8h_sourc
 \DoxyCodeLine{00008                                   \{}
 \DoxyCodeLine{00009     this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClientBehavior_a32b16e99e3b4cb289414203dc861a440}{requiresClient}}(\mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase_a0e9fe363bbe11098609a9745fc16844d}{attachedClient\_}});}
 \DoxyCodeLine{00010     \mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase_a0e9fe363bbe11098609a9745fc16844d}{attachedClient\_}}-\/>onServiceRequestReceived(}
-\DoxyCodeLine{00011         \&\mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase_ae7574bd06256ea853cb4a986dca25890}{CbServiceServerCallbackBase::onServiceRequestReceived}}, \textcolor{keyword}{this});}
+\DoxyCodeLine{00011         \&\mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase_a4e365d59d2c0dd97afe2ce42de8e809f}{CbServiceServerCallbackBase::onServiceRequestReceived}}, \textcolor{keyword}{this});}
 \DoxyCodeLine{00012   \}}
 
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{cb__service__server__callback__base_8h_source_l00018}{smacc\+::\+Cb\+Service\+Server\+Callback\+Base$<$ TService $>$\+::attached\+Client\+\_\+}}, \mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase_ae7574bd06256ea853cb4a986dca25890}{smacc\+::\+Cb\+Service\+Server\+Callback\+Base$<$ TService $>$\+::on\+Service\+Request\+Received()}}, and \mbox{\hyperlink{smacc__client__behavior__impl_8h_source_l00054}{smacc\+::\+ISmacc\+Client\+Behavior\+::requires\+Client()}}.
+References \mbox{\hyperlink{cb__service__server__callback__base_8h_source_l00018}{smacc\+::\+Cb\+Service\+Server\+Callback\+Base$<$ TService $>$\+::attached\+Client\+\_\+}}, \mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase_a4e365d59d2c0dd97afe2ce42de8e809f}{smacc\+::\+Cb\+Service\+Server\+Callback\+Base$<$ TService $>$\+::on\+Service\+Request\+Received()}}, and \mbox{\hyperlink{smacc__client__behavior__impl_8h_source_l00054}{smacc\+::\+ISmacc\+Client\+Behavior\+::requires\+Client()}}.
 
 Here is the call graph for this function\+:
 % FIG 2
-\mbox{\Hypertarget{classsmacc_1_1CbServiceServerCallbackBase_ae7574bd06256ea853cb4a986dca25890}\label{classsmacc_1_1CbServiceServerCallbackBase_ae7574bd06256ea853cb4a986dca25890}} 
+\mbox{\Hypertarget{classsmacc_1_1CbServiceServerCallbackBase_a4e365d59d2c0dd97afe2ce42de8e809f}\label{classsmacc_1_1CbServiceServerCallbackBase_a4e365d59d2c0dd97afe2ce42de8e809f}} 
 \index{smacc::CbServiceServerCallbackBase$<$ TService $>$@{smacc::CbServiceServerCallbackBase$<$ TService $>$}!onServiceRequestReceived@{onServiceRequestReceived}}
 \index{onServiceRequestReceived@{onServiceRequestReceived}!smacc::CbServiceServerCallbackBase$<$ TService $>$@{smacc::CbServiceServerCallbackBase$<$ TService $>$}}
 \doxysubsubsection{\texorpdfstring{onServiceRequestReceived()}{onServiceRequestReceived()}}
 {\footnotesize\ttfamily template$<$typename TService $>$ \\
-virtual \mbox{\hyperlink{classbool}{bool}} \mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase}{smacc\+::\+Cb\+Service\+Server\+Callback\+Base}}$<$ TService $>$\+::on\+Service\+Request\+Received (\begin{DoxyParamCaption}\item[{typename TService\+::\+Request \&}]{req,  }\item[{std\+::shared\+\_\+ptr$<$ typename TService\+::\+Response $>$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual void \mbox{\hyperlink{classsmacc_1_1CbServiceServerCallbackBase}{smacc\+::\+Cb\+Service\+Server\+Callback\+Base}}$<$ TService $>$\+::on\+Service\+Request\+Received (\begin{DoxyParamCaption}\item[{typename TService\+::\+Request \&}]{req,  }\item[{std\+::shared\+\_\+ptr$<$ typename TService\+::\+Response $>$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
