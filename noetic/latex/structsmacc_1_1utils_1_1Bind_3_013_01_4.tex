@@ -40,11 +40,11 @@ Definition at line \mbox{\hyperlink{smacc__state__machine__impl_8h_source_l00303
 \DoxyCodeLine{00305         \textcolor{keywordflow}{return} signal.connect([=](\textcolor{keyword}{auto} a1, \textcolor{keyword}{auto} a2) \{}
 \DoxyCodeLine{00306            \textcolor{keywordflow}{if}(callbackCounter == \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00307           \{}
-\DoxyCodeLine{00308             \textcolor{keywordflow}{return} (object-\/>*callback)(a1,a2);}
+\DoxyCodeLine{00308             (\textcolor{keywordtype}{object}-\/>*callback)(a1,a2);}
 \DoxyCodeLine{00309           \}}
 \DoxyCodeLine{00310           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (callbackCounter-\/>acquire())}
 \DoxyCodeLine{00311           \{}
-\DoxyCodeLine{00312             (object-\/>*callback)(a1,a2);}
+\DoxyCodeLine{00312             (\textcolor{keywordtype}{object}-\/>*callback)(a1,a2);}
 \DoxyCodeLine{00313             callbackCounter-\/>release();}
 \DoxyCodeLine{00314 }
 \DoxyCodeLine{00315           \}}

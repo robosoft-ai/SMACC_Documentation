@@ -154,11 +154,11 @@ template&lt;typename TSmaccSignal , typename TMemberFunctionPrototype , typename
 <div class="line"><span class="lineno">  284</span>        {</div>
 <div class="line"><span class="lineno">  285</span>            <span class="keywordflow">if</span>(callbackCounter == <span class="keyword">nullptr</span>)</div>
 <div class="line"><span class="lineno">  286</span>          {</div>
-<div class="line"><span class="lineno">  287</span>            <span class="keywordflow">return</span> (object-&gt;*callback)(a1);</div>
+<div class="line"><span class="lineno">  287</span>            (<span class="keywordtype">object</span>-&gt;*callback)(a1);</div>
 <div class="line"><span class="lineno">  288</span>          }</div>
 <div class="line"><span class="lineno">  289</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (callbackCounter-&gt;acquire())</div>
 <div class="line"><span class="lineno">  290</span>          {</div>
-<div class="line"><span class="lineno">  291</span>            (object-&gt;*callback)(a1);</div>
+<div class="line"><span class="lineno">  291</span>            (<span class="keywordtype">object</span>-&gt;*callback)(a1);</div>
 <div class="line"><span class="lineno">  292</span>            callbackCounter-&gt;release();</div>
 <div class="line"><span class="lineno">  293</span> </div>
 <div class="line"><span class="lineno">  294</span>          }</div>
