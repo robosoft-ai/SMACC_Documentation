@@ -39,7 +39,7 @@ digraph "smacc::ISmaccStateMachine::createSignalConnection"
   Node1 -> Node17 [dir="back",color="steelblue1",style="solid"];
   Node17 [label="smacc::client_bases\l::SmaccActionClientBase\l::onRejected",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#a4a0f2dc95e6fbc7f25821f57e23b7905",tooltip=" "];
   Node1 -> Node18 [dir="back",color="steelblue1",style="solid"];
-  Node18 [label="smacc::client_bases\l::SmaccServiceServerClient\l::onServiceRequestReceived",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1client__bases_1_1SmaccServiceServerClient.html#ad388351ce0f1e50ccce92b2abbdd77d4",tooltip=" "];
+  Node18 [label="smacc::client_bases\l::SmaccServiceServerClient\l::onServiceRequestReceived",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1client__bases_1_1SmaccServiceServerClient.html#ad57eabc5e0cbef07773e52fff5d1b404",tooltip=" "];
   Node1 -> Node19 [dir="back",color="steelblue1",style="solid"];
   Node19 [label="smacc::client_bases\l::SmaccActionClientBase\l::onSucceeded",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classsmacc_1_1client__bases_1_1SmaccActionClientBase.html#af6d77c27d21b2e4f621f53c5f1df088b",tooltip=" "];
   Node19 -> Node4 [dir="back",color="steelblue1",style="solid"];

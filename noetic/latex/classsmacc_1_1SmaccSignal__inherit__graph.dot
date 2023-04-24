@@ -21,8 +21,8 @@ digraph "smacc::SmaccSignal&lt; Signature, Combiner, Group, GroupCompare, SlotFu
   Node8 [label="{smacc::SmaccSignal\l\< void(const ros::TimerEvent &)\>\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classsmacc_1_1SmaccSignal.html",tooltip=" "];
   Node1 -> Node9 [dir="back",color="orange",style="solid",label=" \< void(const TMsg &)\>" ];
   Node9 [label="{smacc::SmaccSignal\l\< void(const TMsg &)\>\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classsmacc_1_1SmaccSignal.html",tooltip=" "];
-  Node1 -> Node10 [dir="back",color="orange",style="solid",label=" \< bool(TServiceRequest\l &, std::shared_ptr\< TService\lResponse \>)\>" ];
-  Node10 [label="{smacc::SmaccSignal\l\< bool(TServiceRequest\l &, std::shared_ptr\< TService\lResponse \>)\>\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classsmacc_1_1SmaccSignal.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="orange",style="solid",label=" \< void(TServiceRequest\l &, std::shared_ptr\< TService\lResponse \>)\>" ];
+  Node10 [label="{smacc::SmaccSignal\l\< void(TServiceRequest\l &, std::shared_ptr\< TService\lResponse \>)\>\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classsmacc_1_1SmaccSignal.html",tooltip=" "];
   Node1 -> Node11 [dir="back",color="orange",style="solid",label=" \< void(const MessageType &)\>" ];
   Node11 [label="{smacc::SmaccSignal\l\< void(const MessageType &)\>\n||}",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classsmacc_1_1SmaccSignal.html",tooltip=" "];
 }

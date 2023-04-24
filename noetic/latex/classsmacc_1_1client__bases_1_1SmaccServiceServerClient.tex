@@ -21,7 +21,7 @@ Collaboration diagram for smacc\+::client\+\_\+bases\+::Smacc\+Service\+Server\+
 \item 
 virtual \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_adcb98a63550ebf9852d3bd4b1b4655bd}{$\sim$\+Smacc\+Service\+Server\+Client}} ()
 \item 
-{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_ad388351ce0f1e50ccce92b2abbdd77d4}{on\+Service\+Request\+Received}} (\mbox{\hyperlink{classbool}{bool}}(T\+::$\ast$callback)(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a9778b3fc53f067a890e2731a52cd9f12}{TService\+Request}} \&, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a61f1cab2c65d38d5417183887f186dce}{TService\+Response}} $>$), T $\ast$object)
+{\footnotesize template$<$typename T $>$ }\\boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_ad57eabc5e0cbef07773e52fff5d1b404}{on\+Service\+Request\+Received}} (void(T\+::$\ast$callback)(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a9778b3fc53f067a890e2731a52cd9f12}{TService\+Request}} \&, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a61f1cab2c65d38d5417183887f186dce}{TService\+Response}} $>$), T $\ast$object)
 \item 
 virtual void \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_ab05e6e4f2125dde4aa9eaa1f6be536fa}{initialize}} () override
 \end{DoxyCompactItemize}
@@ -30,7 +30,7 @@ virtual void \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerC
 \item 
 boost\+::optional$<$ std\+::string $>$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_aea8173dcac027790112b7f42c3d2d224}{service\+Name\+\_\+}}
 \item 
-\mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc\+::\+Smacc\+Signal}}$<$ \mbox{\hyperlink{classbool}{bool}}(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a9778b3fc53f067a890e2731a52cd9f12}{TService\+Request}} \&, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a61f1cab2c65d38d5417183887f186dce}{TService\+Response}} $>$)$>$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_aaea4a2e28c8fda0381c830ca86550d99}{on\+Service\+Request\+Received\+\_\+}}
+\mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc\+::\+Smacc\+Signal}}$<$ void(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a9778b3fc53f067a890e2731a52cd9f12}{TService\+Request}} \&, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a61f1cab2c65d38d5417183887f186dce}{TService\+Response}} $>$)$>$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a4c29a1dd597d094e88ab0c2c5d5b577c}{on\+Service\+Request\+Received\+\_\+}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -112,7 +112,7 @@ Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{smacc__service__server__client_8h_source_l00071}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::initialized\+\_\+}}.
+References \mbox{\hyperlink{smacc__service__server__client_8h_source_l00065}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::initialized\+\_\+}}.
 
 \mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a157e35fc383b7d9bfc5ec6759dbcaa04}\label{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a157e35fc383b7d9bfc5ec6759dbcaa04}} 
 \index{smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$@{smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$}!SmaccServiceServerClient@{SmaccServiceServerClient}}
@@ -135,7 +135,7 @@ Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{smacc__service__server__client_8h_source_l00071}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::initialized\+\_\+}}, and \mbox{\hyperlink{smacc__service__server__client_8h_source_l00017}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::service\+Name\+\_\+}}.
+References \mbox{\hyperlink{smacc__service__server__client_8h_source_l00065}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::initialized\+\_\+}}, and \mbox{\hyperlink{smacc__service__server__client_8h_source_l00017}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::service\+Name\+\_\+}}.
 
 \mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_adcb98a63550ebf9852d3bd4b1b4655bd}\label{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_adcb98a63550ebf9852d3bd4b1b4655bd}} 
 \index{smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$@{smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$}!````~SmaccServiceServerClient@{$\sim$SmaccServiceServerClient}}
@@ -155,7 +155,7 @@ Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{smacc__service__server__client_8h_source_l00070}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::server\+\_\+}}.
+References \mbox{\hyperlink{smacc__service__server__client_8h_source_l00064}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::server\+\_\+}}.
 
 
 
@@ -196,17 +196,17 @@ Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{client_8cpp_source_l00034}{smacc\+::\+ISmacc\+Client\+::get\+Name()}}, \mbox{\hyperlink{smacc__service__server__client_8h_source_l00071}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::initialized\+\_\+}}, \mbox{\hyperlink{smacc__service__server__client_8h_source_l00054}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::nh\+\_\+}}, \mbox{\hyperlink{smacc__service__server__client_8h_source_l00070}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::server\+\_\+}}, and \mbox{\hyperlink{smacc__service__server__client_8h_source_l00017}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::service\+Name\+\_\+}}.
+References \mbox{\hyperlink{client_8cpp_source_l00034}{smacc\+::\+ISmacc\+Client\+::get\+Name()}}, \mbox{\hyperlink{smacc__service__server__client_8h_source_l00065}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::initialized\+\_\+}}, \mbox{\hyperlink{smacc__service__server__client_8h_source_l00054}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::nh\+\_\+}}, \mbox{\hyperlink{smacc__service__server__client_8h_source_l00064}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::server\+\_\+}}, and \mbox{\hyperlink{smacc__service__server__client_8h_source_l00017}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::service\+Name\+\_\+}}.
 
 Here is the call graph for this function\+:
 % FIG 2
-\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_ad388351ce0f1e50ccce92b2abbdd77d4}\label{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_ad388351ce0f1e50ccce92b2abbdd77d4}} 
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_ad57eabc5e0cbef07773e52fff5d1b404}\label{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_ad57eabc5e0cbef07773e52fff5d1b404}} 
 \index{smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$@{smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$}!onServiceRequestReceived@{onServiceRequestReceived}}
 \index{onServiceRequestReceived@{onServiceRequestReceived}!smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$@{smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$}}
 \doxysubsubsection{\texorpdfstring{onServiceRequestReceived()}{onServiceRequestReceived()}}
 {\footnotesize\ttfamily template$<$typename TService $>$ \\
 template$<$typename T $>$ \\
-boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client}}$<$ TService $>$\+::on\+Service\+Request\+Received (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbool}{bool}}(T\+::$\ast$)(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a9778b3fc53f067a890e2731a52cd9f12}{TService\+Request}} \&, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a61f1cab2c65d38d5417183887f186dce}{TService\+Response}} $>$)}]{callback,  }\item[{T $\ast$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+boost\+::signals2\+::connection \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client}}$<$ TService $>$\+::on\+Service\+Request\+Received (\begin{DoxyParamCaption}\item[{void(T\+::$\ast$)(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a9778b3fc53f067a890e2731a52cd9f12}{TService\+Request}} \&, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a61f1cab2c65d38d5417183887f186dce}{TService\+Response}} $>$)}]{callback,  }\item[{T $\ast$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -216,7 +216,7 @@ Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00032                  \{}
 \DoxyCodeLine{00033     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccClient_aec51d4712404cb9882b86e4c854bb93a}{getStateMachine}}()-\/>\mbox{\hyperlink{classsmacc_1_1ISmaccStateMachine_adf0f42ade0c65cc471960fe2a7c42da2}{createSignalConnection}}(}
-\DoxyCodeLine{00034         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_aaea4a2e28c8fda0381c830ca86550d99}{onServiceRequestReceived\_}}, callback, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00034         \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a4c29a1dd597d094e88ab0c2c5d5b577c}{onServiceRequestReceived\_}}, callback, \textcolor{keywordtype}{object});}
 \DoxyCodeLine{00035   \}}
 
 \end{DoxyCode}
@@ -241,17 +241,11 @@ Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00057                                                                     \{}
 \DoxyCodeLine{00058     std::shared\_ptr<TServiceResponse> response\{\textcolor{keyword}{new} \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a61f1cab2c65d38d5417183887f186dce}{TServiceResponse}}\};}
-\DoxyCodeLine{00059     \textcolor{keyword}{auto} ret\_val = \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_aaea4a2e28c8fda0381c830ca86550d99}{onServiceRequestReceived\_}}(req, response);}
-\DoxyCodeLine{00060     \textcolor{keywordflow}{if} (!ret\_val)  \textcolor{comment}{// Check if response is empty}}
-\DoxyCodeLine{00061     \{}
-\DoxyCodeLine{00062       ROS\_WARN(}
-\DoxyCodeLine{00063           \textcolor{stringliteral}{"{}No return value received from service call. Are you returning a "{}}}
-\DoxyCodeLine{00064           \textcolor{stringliteral}{"{}value?"{}});}
-\DoxyCodeLine{00065       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{00066     \}}
-\DoxyCodeLine{00067     res = *response;}
-\DoxyCodeLine{00068     \textcolor{keywordflow}{return} *ret\_val;}
-\DoxyCodeLine{00069   \}}
+\DoxyCodeLine{00059     \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a4c29a1dd597d094e88ab0c2c5d5b577c}{onServiceRequestReceived\_}}(req, response);}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061     res = *response;}
+\DoxyCodeLine{00062     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00063   \}}
 
 \end{DoxyCode}
 
@@ -270,7 +264,7 @@ References \mbox{\hyperlink{smacc__service__server__client_8h_source_l00027}{sma
 
 
 
-Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00071}{71}} of file \mbox{\hyperlink{smacc__service__server__client_8h_source}{smacc\+\_\+service\+\_\+server\+\_\+client.\+h}}.
+Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00065}{65}} of file \mbox{\hyperlink{smacc__service__server__client_8h_source}{smacc\+\_\+service\+\_\+server\+\_\+client.\+h}}.
 
 
 
@@ -291,12 +285,12 @@ Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00
 
 Referenced by \mbox{\hyperlink{smacc__service__server__client_8h_source_l00037}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client$<$ TService $>$\+::initialize()}}.
 
-\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_aaea4a2e28c8fda0381c830ca86550d99}\label{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_aaea4a2e28c8fda0381c830ca86550d99}} 
+\mbox{\Hypertarget{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a4c29a1dd597d094e88ab0c2c5d5b577c}\label{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a4c29a1dd597d094e88ab0c2c5d5b577c}} 
 \index{smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$@{smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$}!onServiceRequestReceived\_@{onServiceRequestReceived\_}}
 \index{onServiceRequestReceived\_@{onServiceRequestReceived\_}!smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$@{smacc::client\_bases::SmaccServiceServerClient$<$ TService $>$}}
 \doxysubsubsection{\texorpdfstring{onServiceRequestReceived\_}{onServiceRequestReceived\_}}
 {\footnotesize\ttfamily template$<$typename TService $>$ \\
-\mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc\+::\+Smacc\+Signal}}$<$\mbox{\hyperlink{classbool}{bool}}(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a9778b3fc53f067a890e2731a52cd9f12}{TService\+Request}}\&, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a61f1cab2c65d38d5417183887f186dce}{TService\+Response}}$>$)$>$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client}}$<$ TService $>$\+::on\+Service\+Request\+Received\+\_\+}
+\mbox{\hyperlink{classsmacc_1_1SmaccSignal}{smacc\+::\+Smacc\+Signal}}$<$void(\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a9778b3fc53f067a890e2731a52cd9f12}{TService\+Request}}\&, std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient_a61f1cab2c65d38d5417183887f186dce}{TService\+Response}}$>$)$>$ \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccServiceServerClient}{smacc\+::client\+\_\+bases\+::\+Smacc\+Service\+Server\+Client}}$<$ TService $>$\+::on\+Service\+Request\+Received\+\_\+}
 
 
 
@@ -315,7 +309,7 @@ ros\+::\+Service\+Server \mbox{\hyperlink{classsmacc_1_1client__bases_1_1SmaccSe
 
 
 
-Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00070}{70}} of file \mbox{\hyperlink{smacc__service__server__client_8h_source}{smacc\+\_\+service\+\_\+server\+\_\+client.\+h}}.
+Definition at line \mbox{\hyperlink{smacc__service__server__client_8h_source_l00064}{64}} of file \mbox{\hyperlink{smacc__service__server__client_8h_source}{smacc\+\_\+service\+\_\+server\+\_\+client.\+h}}.
 
 
 
